@@ -1,5 +1,5 @@
 # neodigm
-The Neodigm WASM GoLang Blog
+The Neodigm WASM GoLang Blog 💡
 #
 ![](https://neodigm.github.io/brand_logo_graphic_design/fantastic/discerning/22.jpg)
 #
