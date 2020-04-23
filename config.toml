@@ -1,4 +1,22 @@
-baseURL = "http://example.org/"
+baseURL = "https://thescottkrause.com/neodigm-wasm-golang/"
+title = "Scott C. Krause Neodigm"
 languageCode = "en-us"
-title = "My New Hugo Site"
 theme = "ananke"
+paginate = 5
+
+[params]
+  author = "Scott C. Krause"
+  description = "Interactive Designer | A creative blend of technical wizardry and business perspective. 🚀 Inspired Problem Solver 🪐 Visual Storyteller"
+[[params.social]]
+  name = "github"
+  url = "https://github.com/neodigm"
+  [[params.social]]
+    name = "twitter"
+    url = "https://twitter.com/neodigm24"
+  [[params.social]]
+    name = "linkedin"
+    url = "https://www.linkedin.com/in/neodigm24/"
+
+  [params.style]
+  darkestColor = "#82782a"
+   primaryColor = "#edba08"
