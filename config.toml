@@ -1,12 +1,12 @@
 baseURL = "https://thescottkrause.com/neodigm-wasm-golang/"
-title = "Scott C. Krause Neodigm"
+title = "Scott C. Krause"
 languageCode = "en-us"
-theme = "ananke"
+theme = "m10c"
 paginate = 5
 
 [params]
   author = "Scott C. Krause"
-  description = "Interactive Designer | A creative blend of technical wizardry and business perspective. 🚀 Inspired Problem Solver 🪐 Visual Storyteller"
+  description = "Interactive UX Designer"
 [[params.social]]
   name = "github"
   url = "https://github.com/neodigm"
