@@ -13,7 +13,7 @@ Here is the common scenario; Your client has a landing page with a 3rd party for
 
 Some 3rd party forms support a JavaScript facility known as Window.postMessage(). This allows the page to talk to an iFrame only if the iFrame is willing to listen. Meaning it has been designed to communicate with its parent the status of important events such as a form submission.
 
-If JavaScript integration is not supported then you still have one more option; listen for iFrame focus. Unfortunately this will not tell you when a form has been submitted only that it has been accessed. Not as good but, frankly you've exhausted your options. On the bright side the data collected can affirm the landing pages design, tone, and target. Meaning if nobody is clicking on the iFrame you might need to reconsider the user experience.
+If JavaScript integration is not supported then you still have one more option; listen for iFrame focus. Unfortunately this will not tell you when a form has been submitted only that it has been accessed. Not as good but, frankly you've exhausted all other options. On the bright side the data collected can affirm the landing pages design, tone, and target. Meaning if nobody is clicking on the iFrame you might need to reconsider the user experience.
 
 ![iFrame Diagram WASM GoLang](/neodigm-wasm-golang/img/browser_wasm_golang.png)
 
