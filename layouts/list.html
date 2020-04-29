@@ -42,7 +42,13 @@
     </head>
     <body>
         <main role="main">
-QQQQQQQQQQQQQQQQ
+QQQQQQQQQQQQQQQQ{{ .Title }}
+{{.TableOfContents}}
+<hr>
+{{- range first .Site.Params.SidebarRecentLimit .Site.Pages -}}
+<li><a href="{{.RelPermalink}}">{{.Title}}</a></li>
+{{- end -}}
+<hr>
         </main>
 
 <link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300,400|Roboto+Slab:300,400" rel="stylesheet" type="text/css">

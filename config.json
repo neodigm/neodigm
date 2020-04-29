@@ -1,0 +1,11 @@
+{
+    "baseURL": "http://example.org/",
+    "languageCode": "en-us",
+    "title": "Scott C. Krause",
+    "brand": "neodigm",
+    "params": {
+        "copyrighthtml": "Copyright \u0026#xA9; 2017 John Doe. All Rights Reserved.",
+        "sidebarrecentlimit": 5,
+        "twitteruser": "spf13"
+    }
+ }
