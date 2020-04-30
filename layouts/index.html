@@ -43,7 +43,7 @@
     <body>
         {{ partial "head.html" . }}
         <main role="main">
-LIST YO {{ .Title }}
+HOMEPAGE YO {{ .Title }}
 <hr>
 <ul>
     {{ range .Pages }}
@@ -53,6 +53,9 @@ LIST YO {{ .Title }}
     {{ end }}
     </ul>
 <hr>
+{{ range first 10 .Site.RegularPages }}
+{{ .Render "summary"}}
+{{ end }}
         </main>
 
 <link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300,400|Roboto+Slab:300,400" rel="stylesheet" type="text/css">
