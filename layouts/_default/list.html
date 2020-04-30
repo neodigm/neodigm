@@ -42,12 +42,16 @@
     </head>
     <body>
         <main role="main">
-QQQQQQQQQQQQQQQQ{{ .Title }}
-{{.TableOfContents}}
+LIST YO {{ .Title }}
 <hr>
-{{- range first .Site.Params.SidebarRecentLimit .Site.Pages -}}
-<li><a href="{{.RelPermalink}}">{{.Title}}</a></li>
-{{- end -}}
+<ul>
+    <!-- Ranges through content/posts/*.md -->
+    {{ range .Pages }}
+        <li>
+            <a href="{{.Permalink}}">{{.Date.Format "2006-01-02"}} | {{.Title}}</a>
+        </li>
+    {{ end }}
+    </ul>
 <hr>
         </main>
 
