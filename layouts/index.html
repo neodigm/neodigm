@@ -59,19 +59,10 @@ HOMEPAGE YO {{ .Title }}
 {{ .Render "summary"}}
 {{ end }}
 
-<section id="js-para-grid" class="para-grid">        
-    <article class="para-card n50bg">
-    QQQQ
-    </article>
-    <article class="para-card n50bg">
-    QQQQ
-    </article>
-    <article class="para-card n50bg">
-    QQQQ
-    </article>
-    <article class="para-card n50bg">
-    QQQQ
-    </article>
+<section id="js-para-grid" class="para-grid">
+    {{ range .Site.Pages }}
+        <article class="para-card n50bg">{{.Title}} {{.Date.Format "2006-01-02"}} {{ .Kind }}</article>
+    {{ end }}
 </section>
 
 

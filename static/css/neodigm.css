@@ -43,6 +43,32 @@ html
     background: #fff600;
     text-shadow: none;
 }
+/* mega-menu begin */
+.mega-menu {
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    padding: 0; margin: 0;
+    height: 96px;
+    overflow: hidden;
+    border: solid 1px #000;
+}
+.mega-menu .mega-menu__grd{
+    grid-area: box-content;
+    align-items: stretch;
+    align-content: start;
+    display: grid;
+    grid-gap: 4px;
+  
+    grid-template-columns: repeat(auto-fit, minmax(176px, 2fr));
+  
+    box-sizing: border-box;
+}
+.mega-menu .mega-menu__grd > * {
+    border: solid 1px #000;
+
+}
+/* mega-menu end */
 a.skip__main
 {
     position: absolute;
