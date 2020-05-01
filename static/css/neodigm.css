@@ -55,6 +55,7 @@ html
 }
 .megamenu .megamenu__grd--top{
     position: fixed; top: 0;
+    height: 96px; width: 100%;
 
     grid-area: box-content;
     align-items: stretch;
@@ -74,6 +75,7 @@ html
     text-align: center;
     border: solid 1px #000;
     margin: 96px 0 0 0;
+    z-index: 64;
 }
 /* megamenu end */
 a.skip__main
