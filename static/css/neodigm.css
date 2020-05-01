@@ -46,11 +46,12 @@ html
 /* megamenu begin */
 .megamenu {
 
-    background-color: #fff;
+    background-color: #edba08;
     padding: 0; margin: 0;
     height: 96px; width: 100%;
     overflow: hidden;
     border: solid 1px #000;
+    z-index: 32;
 }
 .megamenu .megamenu__grd--top{
     position: fixed; top: 0;
@@ -68,7 +69,11 @@ html
 .megamenu .megamenu__grd--top > * {
     text-align: center;
     border: solid 1px #000;
-
+}
+.megamenu .megamenu__grd--bottom > * {
+    text-align: center;
+    border: solid 1px #000;
+    margin: 96px 0 0 0;
 }
 /* megamenu end */
 a.skip__main
