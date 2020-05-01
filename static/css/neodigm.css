@@ -43,8 +43,8 @@ html
     background: #fff600;
     text-shadow: none;
 }
-/* mega-menu begin */
-.mega-menu {
+/* megamenu begin */
+.megamenu {
     position: fixed;
     top: 0;
     background-color: #fff;
@@ -53,7 +53,7 @@ html
     overflow: hidden;
     border: solid 1px #000;
 }
-.mega-menu .mega-menu__grd{
+.megamenu .megamenu__grd{
     grid-area: box-content;
     align-items: stretch;
     align-content: start;
@@ -64,11 +64,11 @@ html
   
     box-sizing: border-box;
 }
-.mega-menu .mega-menu__grd > * {
+.megamenu .megamenu__grd > * {
     border: solid 1px #000;
 
 }
-/* mega-menu end */
+/* megamenu end */
 a.skip__main
 {
     position: absolute;
