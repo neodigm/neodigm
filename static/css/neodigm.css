@@ -54,6 +54,7 @@ html
 }
 .megamenu .megamenu__grd--top {
     position: fixed; top: 0;
+    background-color: #fff;
     height: 56px; width: 100%;
 
     grid-area: box-content;
