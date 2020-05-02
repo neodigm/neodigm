@@ -78,6 +78,13 @@ html
     border: solid 1px #000;
     margin: 56px 0 0 0;
 }
+.megamenu a:link, .megamenu a:visited, .megamenu a:hover, .megamenu a:focus, .megamenu a:active
+{
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+    font-size: 18px;
+}
 /* megamenu end */
 a.skip__main
 {
