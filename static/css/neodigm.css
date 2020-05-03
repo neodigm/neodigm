@@ -58,18 +58,16 @@ html
     height: 56px; width: 100%;
 
     grid-area: box-content;
-    align-items: stretch;
-    align-content: start;
+    align-content: center;
     display: grid;
     grid-gap: 4px;
   
-    grid-template-columns: repeat(auto-fit, minmax(92px, 2fr));
+    grid-template-columns: 52px 1fr 96px;
   
     box-sizing: border-box;
 }
 .megamenu .megamenu__grd--top > * {
     text-align: center;
-    height: 56px;
     overflow: hidden;
     border: solid 1px #000;
 }
