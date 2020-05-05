@@ -22,14 +22,14 @@
         </footer>
 </section>
 <script>
-    var oSimpleMenuState = function(_d, _DOMq){
-        var aVect = [], eMM, bState = false;
+    var oSimpleMenuState = function(_d, _DOMqry){
+        var eMM, aVect; // megamenu and child SVGs
         return {
             init: function(){
-                eMM = _d.querySelector( _DOMq[0] );
-                if( eMM.dataset ){
+                eMM = _d.querySelector( _DOMqry[0] );
+                if( eMM && eMM.dataset ){
                     eMM = eMM.dataset;
-                    aVect = [].slice.call( _d.querySelectorAll( _DOMq[1] ) )
+                    aVect = [].slice.call( _d.querySelectorAll( _DOMqry[1] ) )
                     .filter(function(el){
                         el.addEventListener("click", function(){
                             eMM.expandState = (eMM.expandState == "true") ? "false" : "true";
