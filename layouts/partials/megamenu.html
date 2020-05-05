@@ -25,21 +25,21 @@
 </section>
 <script>
     var oSimpleMenuState = function(_d, _DOMq){
-        var aVect = [], bState = false;
+        var aVect = [], eMM, bState = false;
         return {
             init: function(){
-                aVect = [].slice.call( _d.querySelectorAll( _DOMq ) )
-                .filter(function(el){
-console.log( el );
-                    el.addEventListener("click", function(){
-                        oSimpleMenuState.changeState();
-                    }, true);
-                });
-            },
-            changeState: function(){
-
+                eMM = _d.querySelector( _DOMq[0] );
+                if( eMM.dataset ){
+                    eMM = eMM.dataset;
+                    aVect = [].slice.call( _d.querySelectorAll( _DOMq[1] ) )
+                    .filter(function(el){
+                        el.addEventListener("click", function(){
+                            eMM.expandState = (eMM.expandState == "true") ? "false" : "true";
+                        }, true);
+                    });                    
+                }
             }
         }
-    }(document, ".mm__vect");
+    }(document, [".megamenu", ".mm__vect"]);
     oSimpleMenuState.init();
 </script>

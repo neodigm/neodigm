@@ -76,6 +76,10 @@ html
     cursor: pointer;
     height: 24px; width: 24px;
 }
+[data-expand-state='true']  .mm__vect--open  { display: none;}
+[data-expand-state='false'] .mm__vect--open  { display: inline;}
+[data-expand-state='true']  .mm__vect--close { display: inline;}
+[data-expand-state='false'] .mm__vect--close { display: none;}
 .megamenu .megamenu__grd--bottom {
     text-align: center;
     border: solid 1px #000;
