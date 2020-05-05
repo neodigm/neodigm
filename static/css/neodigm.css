@@ -1792,4 +1792,10 @@ body
 
 
 
+@media only screen and (max-width:30em){}
+@media only screen and (max-width:48em){}
+@media only screen and (min-width:48.1em) and (max-width:62em){}
+@media only screen and (min-width:62.1em){}
+@media only screen and (min-width: 320px){}
+@media only screen and (min-width: 480px){}
     
