@@ -1,4 +1,4 @@
-<section class="megamenu">
+<section class="megamenu" data-expand-state="false">
         <header>
             <section class="megamenu__grd--top">
                 <nav>
@@ -23,3 +23,23 @@
             </section>
         </footer>
 </section>
+<script>
+    var oSimpleMenuState = function(_d, _DOMq){
+        var aVect = [], bState = false;
+        return {
+            init: function(){
+                aVect = [].slice.call( _d.querySelectorAll( _DOMq ) )
+                .filter(function(el){
+console.log( el );
+                    el.addEventListener("click", function(){
+                        oSimpleMenuState.changeState();
+                    }, true);
+                });
+            },
+            changeState: function(){
+
+            }
+        }
+    }(document, ".mm__vect");
+    oSimpleMenuState.init();
+</script>
