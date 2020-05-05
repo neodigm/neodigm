@@ -76,7 +76,7 @@ html{
     text-align: center;
     margin: 56px 0 0 0;
 
-    display: grid;
+    display: none;
     grid-area: box-content;
     align-content: center;
   
@@ -167,6 +167,10 @@ a.skip__main:active
     box-shadow: 0 0 8px #c2baa2;
 }
 
-@media only screen and (min-width:48.1em) and (max-width:62em){/* med */}
+@media only screen and (min-width:48.1em) and (max-width:62em){/* med */
+    .megamenu .megamenu__grd--bottom {
+        display: grid;
+    }
+}
 @media only screen and (min-width:62.1em){/* lg */}
     
