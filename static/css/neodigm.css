@@ -100,7 +100,10 @@ html
     font-size: 20px;
     line-height: 1.2;
 }
-.megamenu a:link, .megamenu a:visited, .megamenu a:hover, .megamenu a:focus, .megamenu a:active
+.megamenu .megamenu__grd--bottom BUTTON:hover {
+    background-color: #edba08;
+}
+    .megamenu a:link, .megamenu a:visited, .megamenu a:hover, .megamenu a:focus, .megamenu a:active
 {
     text-decoration: none;
     color: #000;
