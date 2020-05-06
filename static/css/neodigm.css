@@ -38,17 +38,17 @@ html{
 }
 /* megamenu begin */
 .megamenu {
-    background-color: #edba08;
+    background-color: #fff;
     padding: 0; margin: 0;
     width: 100%;
     overflow: hidden;
     z-index: 16;
     box-shadow: 0px 2px 6px 2px rgba(164,164,164,0.6);
 }
-.megamenu[data-expand-state='true']  .megamenu__grd--card, 
+.megamenu[data-expand-state='true']  .megamenu__grd--bottom, 
 .megamenu[data-expand-state='true']  .mm__vect--open,
 .megamenu[data-expand-state='false'] .mm__vect--close { display: none;}
-.megamenu[data-expand-state='true']  .megamenu__grd--card, 
+.megamenu[data-expand-state='false']  .megamenu__grd--bottomQQQQQ, 
 .megamenu[data-expand-state='false'] .mm__vect--open,
 .megamenu[data-expand-state='true']  .mm__vect--close { display: inline;}
 
@@ -97,7 +97,8 @@ html{
     letter-spacing: -.008em;
 }
 .megamenu .megamenu__grd--bottom BUTTON:hover {
-    background-color: #edba08;
+    color: #fff;
+    background-color: #000;
 }
 .megamenu a:link, .megamenu a:visited, .megamenu a:hover, .megamenu a:focus, .megamenu a:active
 {
