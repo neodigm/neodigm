@@ -99,7 +99,7 @@ html{
 .megamenu .megamenu__grd--bottom BUTTON:hover {
     background-color: #edba08;
 }
-    .megamenu a:link, .megamenu a:visited, .megamenu a:hover, .megamenu a:focus, .megamenu a:active
+.megamenu a:link, .megamenu a:visited, .megamenu a:hover, .megamenu a:focus, .megamenu a:active
 {
     text-decoration: none;
     color: #000;
@@ -175,5 +175,9 @@ a.skip__main:active
         display: grid;
     }
 }
-@media only screen and (min-width:62.1em){/* lg */}
+@media only screen and (min-width:62.1em){/* lg */
+    .megamenu .megamenu__grd--bottom {
+        display: grid;
+    }
+}
     
