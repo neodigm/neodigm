@@ -52,8 +52,6 @@ html{
 .megamenu[data-expand-state='true']  .mm__vect--close { display: inline;}
 .megamenu[data-expand-state='true']  .megamenu__grd--top { box-shadow: none !important;}
 
-
-
 .megamenu .megamenu__grd--top {
     position: fixed; top: 0;
     background-color: #fff;
