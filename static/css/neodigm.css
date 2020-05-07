@@ -35,6 +35,7 @@ html{
     background: #fff600;
     text-shadow: none;
 }
+
 /* megamenu begin */
 .megamenu {
     background-color: #fff;
@@ -104,7 +105,8 @@ html{
     box-sizing: border-box;
 }
 
-.megamenu A {
+.megamenu .megamenu__links A {
+    display: block;
     cursor: pointer;
     padding: 12px 10px 8px 10px;
     border-radius: 0%;
@@ -113,21 +115,21 @@ html{
     line-height: 1.2;
     letter-spacing: -.008em;
 }
-.megamenu A:hover {
+.megamenu .megamenu__links A:hover {
     color: #fff;
     background-color: #000;
 }
-.megamenu .megamenu__grd--cards A {
+.megamenu .megamenu__grd--cards .megamenu__links A {
     height: 256px;
 }
-.megamenu .megamenu__grd--cards A:nth-of-type(1) { background-color: #C74375; }
-.megamenu .megamenu__grd--cards A:nth-of-type(2) { background-color: #BF1932; }
-.megamenu .megamenu__grd--cards A:nth-of-type(3) { background-color: #88B04B; }
-.megamenu .megamenu__grd--cards A:nth-of-type(4) { background-color: #53B0AE; }
-.megamenu .megamenu__grd--cards A:nth-of-type(5) { background-color: #5A5B9F; }
-.megamenu .megamenu__grd--cards A:nth-of-type(6) { background-color: #FF6F61; }
-.megamenu .megamenu__grd--cards A:nth-of-type(7) { background-color: #E2583E; }
-.megamenu a:link, .megamenu a:visited, .megamenu a:hover, .megamenu a:focus, .megamenu a:active
+.megamenu .megamenu__grd--cards .megamenu__links A:nth-of-type(1) { background-color: #C74375; }
+.megamenu .megamenu__grd--cards .megamenu__links A:nth-of-type(2) { background-color: #BF1932; }
+.megamenu .megamenu__grd--cards .megamenu__links A:nth-of-type(3) { background-color: #88B04B; }
+.megamenu .megamenu__grd--cards .megamenu__links A:nth-of-type(4) { background-color: #53B0AE; }
+.megamenu .megamenu__grd--cards .megamenu__links A:nth-of-type(5) { background-color: #5A5B9F; }
+.megamenu .megamenu__grd--cards .megamenu__links A:nth-of-type(6) { background-color: #FF6F61; }
+.megamenu .megamenu__grd--cards .megamenu__links A:nth-of-type(7) { background-color: #E2583E; }
+.megamenu A:link, .megamenu A:visited, .megamenu A:hover, .megamenu A:focus, .megamenu A:active
 {
     text-decoration: none;
     color: #000;
@@ -135,6 +137,8 @@ html{
     font-size: 24px;
 }
 /* megamenu end */
+
+
 a.skip__main
 {
     position: absolute;
