@@ -109,6 +109,7 @@ html{
 .megamenu BUTTON {
     cursor: pointer;
     padding: 12px 10px 8px 10px;
+    border-radius: 0%;
     font-family: 'Roboto Condensed',sans-serif;
     font-size: 20px;
     line-height: 1.2;
@@ -117,6 +118,9 @@ html{
 .megamenu BUTTON:hover {
     color: #fff;
     background-color: #000;
+}
+.megamenu .megamenu__grd--cards BUTTON {
+    height: 256px;
 }
 .megamenu a:link, .megamenu a:visited, .megamenu a:hover, .megamenu a:focus, .megamenu a:active
 {
