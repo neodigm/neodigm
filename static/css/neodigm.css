@@ -50,6 +50,9 @@ html{
 .megamenu[data-expand-state='false'] .mm__vect--close { display: none;}
 .megamenu[data-expand-state='false'] .mm__vect--open,
 .megamenu[data-expand-state='true']  .mm__vect--close { display: inline;}
+.megamenu[data-expand-state='true']  .megamenu__grd--top { box-shadow: none !important;}
+
+
 
 .megamenu .megamenu__grd--top {
     position: fixed; top: 0;
@@ -75,10 +78,10 @@ html{
     overflow: hidden;
 }
 .megamenu .megamenu__grd--cards {
-background-color: red;
-    border: solid 1px #000;
-    position: fixed; top: 57px;
+    background-color: #fff;
+    position: fixed; top: 55px;
     width: 100%;
+    box-shadow: 0px 2px 6px 2px rgba(164,164,164,0.6);
 }
 .megamenu .megamenu__grd--bottom {
     text-align: center;
