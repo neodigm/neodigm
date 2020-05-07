@@ -122,6 +122,13 @@ html{
 .megamenu .megamenu__grd--cards BUTTON {
     height: 256px;
 }
+.megamenu .megamenu__grd--cards BUTTON:nth-of-type(1) { background-color: #C74375; }
+.megamenu .megamenu__grd--cards BUTTON:nth-of-type(2) { background-color: #BF1932; }
+.megamenu .megamenu__grd--cards BUTTON:nth-of-type(3) { background-color: #88B04B; }
+.megamenu .megamenu__grd--cards BUTTON:nth-of-type(4) { background-color: #53B0AE; }
+.megamenu .megamenu__grd--cards BUTTON:nth-of-type(5) { background-color: #5A5B9F; }
+.megamenu .megamenu__grd--cards BUTTON:nth-of-type(6) { background-color: #FF6F61; }
+.megamenu .megamenu__grd--cards BUTTON:nth-of-type(7) { background-color: #E2583E; }
 .megamenu a:link, .megamenu a:visited, .megamenu a:hover, .megamenu a:focus, .megamenu a:active
 {
     text-decoration: none;
