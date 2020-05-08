@@ -103,7 +103,7 @@ a{
   
     box-sizing: border-box;
 }
-.megamenu A, 
+
 .megamenu .megamenu__links A {
     display: block;
     cursor: pointer;
@@ -118,22 +118,20 @@ a{
     color: #fff;
     background-color: #000;
 }
-.megamenu .megamenu__grd--cards .megamenu__links A {
+.megamenu .megamenu__grd--cards A {
     height: 256px;
 }
-.megamenu .megamenu__grd--cards .megamenu__links A:nth-of-type(1) { background-color: #C74375; }
-.megamenu .megamenu__grd--cards .megamenu__links A:nth-of-type(2) { background-color: #BF1932; }
-.megamenu .megamenu__grd--cards .megamenu__links A:nth-of-type(3) { background-color: #88B04B; }
-.megamenu .megamenu__grd--cards .megamenu__links A:nth-of-type(4) { background-color: #53B0AE; }
-.megamenu .megamenu__grd--cards .megamenu__links A:nth-of-type(5) { background-color: #5A5B9F; }
-.megamenu .megamenu__grd--cards .megamenu__links A:nth-of-type(6) { background-color: #FF6F61; }
-.megamenu .megamenu__grd--cards .megamenu__links A:nth-of-type(7) { background-color: #E2583E; }
+.megamenu .megamenu__grd--cards A:nth-of-type(1) { background-color: #C74375; }
+.megamenu .megamenu__grd--cards A:nth-of-type(2) { background-color: #BF1932; }
+.megamenu .megamenu__grd--cards A:nth-of-type(3) { background-color: #88B04B; }
+.megamenu .megamenu__grd--cards A:nth-of-type(4) { background-color: #53B0AE; }
+.megamenu .megamenu__grd--cards A:nth-of-type(5) { background-color: #5A5B9F; }
+.megamenu .megamenu__grd--cards A:nth-of-type(6) { background-color: #FF6F61; }
+.megamenu .megamenu__grd--cards A:nth-of-type(7) { background-color: #E2583E; }
 .megamenu .megamenu__links A:link, .megamenu .megamenu__links A:visited, .megamenu .megamenu__links A:hover, .megamenu .megamenu__links A:focus, .megamenu .megamenu__links A:active
 {
     text-decoration: none;
-    color: #000;
-    cursor: pointer;
-    font-size: 24px;
+    color: #fff;
 }
 /* megamenu end */
 
