@@ -2,6 +2,7 @@ html *{
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
+    height: 100%;
 }
 body{
     font-family: 'Roboto Condensed',sans-serif;
@@ -12,6 +13,7 @@ body{
 
     color: #3d3536;
     background-color: white;
+    height: 100%;
 }
 body::-webkit-scrollbar{
     width: 8px;
@@ -26,10 +28,7 @@ body::-webkit-scrollbar-thumb{
 a{
     outline: none;
 }
-body,
-html{
-    height: 100%;
-}
+
 ::selection{
     color: #930;
     background: #fff600;
@@ -104,7 +103,7 @@ html{
   
     box-sizing: border-box;
 }
-
+.megamenu A, 
 .megamenu .megamenu__links A {
     display: block;
     cursor: pointer;
@@ -129,7 +128,7 @@ html{
 .megamenu .megamenu__grd--cards .megamenu__links A:nth-of-type(5) { background-color: #5A5B9F; }
 .megamenu .megamenu__grd--cards .megamenu__links A:nth-of-type(6) { background-color: #FF6F61; }
 .megamenu .megamenu__grd--cards .megamenu__links A:nth-of-type(7) { background-color: #E2583E; }
-.megamenu A:link, .megamenu A:visited, .megamenu A:hover, .megamenu A:focus, .megamenu A:active
+.megamenu .megamenu__links A:link, .megamenu .megamenu__links A:visited, .megamenu .megamenu__links A:hover, .megamenu .megamenu__links A:focus, .megamenu .megamenu__links A:active
 {
     text-decoration: none;
     color: #000;
