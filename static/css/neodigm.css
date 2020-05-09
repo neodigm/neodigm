@@ -76,6 +76,9 @@ a{
     overflow: hidden;
 }
 .megamenu .megamenu__grd--cards {
+opacity: 0.5;
+border: solid 1px #5A5B9F;
+
 
 
     background-color: #fff;
