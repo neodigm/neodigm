@@ -121,7 +121,7 @@ a{
     font-size: 20px;
     letter-spacing: -.008em;
 }
-.megamenu .megamenu__links A:hover {
+.mm__link--top:hover {
     color: #fff;
     background-color: #000;
 }
@@ -133,10 +133,11 @@ a{
 .megamenu .megamenu__grd--cards A:nth-of-type(5) { background-color: #5A5B9F; }
 .megamenu .megamenu__grd--cards A:nth-of-type(6) { background-color: #FF6F61; }
 .megamenu .megamenu__grd--cards A:nth-of-type(7) { background-color: #E2583E; }
-.megamenu .megamenu__links A:link, .megamenu .megamenu__links A:visited, .megamenu .megamenu__links A:hover, .megamenu .megamenu__links A:focus, .megamenu .megamenu__links A:active
+.mm__link--top:link, .mm__link--top:visited, .mm__link--top:hover, .mm__link--top:focus, .mm__link--top:active,
+.mm__link--card:link, .mm__link--card:visited, .mm__link--card:hover, .mm__link--card:focus, .mm__link--card:active,
+.mm__link--bottom:link, .mm__link--bottom:visited, .mm__link--bottom:hover, .mm__link--bottom:focus, .mm__link--bottom:active
 {
     text-decoration: none;
-    color: #fff;
 }
 /* megamenu end */
 
