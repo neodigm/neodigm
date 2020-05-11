@@ -85,7 +85,7 @@ a{
     grid-area: box-content;
     align-content: start;
 
-    grid-template-columns: repeat(2, minmax(20vw, 1fr));
+    grid-template-columns: repeat(2, minmax(50vw, 1fr));
   
     box-sizing: border-box;
     box-shadow: 0px 2px 6px -2px rgba(164,164,164,0.6);
@@ -101,7 +101,7 @@ a{
     letter-spacing: -.008em;
 }
 .megamenu .megamenu__grd--card .mm__link--card {
-    height: 20vw;
+    height: 50vw;
     color: #fff;
 }
 .megamenu .megamenu__grd--bottom .mm__link--bottom {
@@ -221,7 +221,10 @@ a.skip__main:active
         display: grid;
     }
     .megamenu .megamenu__grd--card {    
-        grid-template-columns: repeat(3, minmax(20vw, 1fr));
+        grid-template-columns: repeat(3, minmax(33vw, 1fr));
+    }
+    .megamenu .megamenu__grd--card .mm__link--card {
+        height: 33vw;
     }
 }
 @media only screen and (min-width:62.1em){/* lg */
@@ -229,7 +232,10 @@ a.skip__main:active
         display: grid;
     }
     .megamenu .megamenu__grd--card {    
-        grid-template-columns: repeat(6, minmax(20vw, 1fr));
+        grid-template-columns: repeat(6, minmax(16vw, 1fr));
+    }
+    .megamenu .megamenu__grd--card .mm__link--card {
+        height: 16vw;
     }
 }
     
