@@ -85,7 +85,7 @@ a{
     grid-area: box-content;
     align-content: start;
 
-    grid-template-columns: repeat(6, minmax(20vw, 1fr));
+    grid-template-columns: repeat(2, minmax(20vw, 1fr));
   
     box-sizing: border-box;
     box-shadow: 0px 2px 6px -2px rgba(164,164,164,0.6);
@@ -220,10 +220,16 @@ a.skip__main:active
     .megamenu .megamenu__grd--bottom {
         display: grid;
     }
+    .megamenu .megamenu__grd--card {    
+        grid-template-columns: repeat(3, minmax(20vw, 1fr));
+    }
 }
 @media only screen and (min-width:62.1em){/* lg */
     .megamenu .megamenu__grd--bottom {
         display: grid;
+    }
+    .megamenu .megamenu__grd--card {    
+        grid-template-columns: repeat(6, minmax(20vw, 1fr));
     }
 }
     
