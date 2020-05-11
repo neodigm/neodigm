@@ -44,7 +44,7 @@ a{
     z-index: 16;
     box-shadow: 0px 2px 6px -2px rgba(164,164,164,0.6);
 }
-.megamenu[data-expand-state='false'] .megamenu__grd--cards,
+.megamenu[data-expand-state='false'] .megamenu__grd--card,
 .megamenu[data-expand-state='true']  .megamenu__grd--bottom, 
 .megamenu[data-expand-state='true']  .mm__vect--open,
 .megamenu[data-expand-state='false'] .mm__vect--close { display: none;}
@@ -75,7 +75,7 @@ a{
     text-align: center;
     overflow: hidden;
 }
-.megamenu .megamenu__grd--cards {
+.megamenu .megamenu__grd--card {
     position: fixed; top: 55px;
     text-align: center;
     margin: 0;
@@ -90,11 +90,11 @@ a{
     box-shadow: 0px 2px 6px -2px rgba(164,164,164,0.6);
     width: 100%;
 }
-.megamenu .megamenu__grd--cards A {
+.megamenu .megamenu__grd--card .mm__link--card {
     height: 20vw;
     color: #fff;
 }
-.megamenu .megamenu__grd--bottom A {
+.megamenu .megamenu__grd--bottom .mm__link--bottom {
     line-height: 1.2;
 }
 
@@ -126,13 +126,13 @@ a{
     background-color: #000;
 }
 
-.megamenu .megamenu__grd--cards A:nth-of-type(1) { background-color: #C74375; }
-.megamenu .megamenu__grd--cards A:nth-of-type(2) { background-color: #BF1932; }
-.megamenu .megamenu__grd--cards A:nth-of-type(3) { background-color: #88B04B; }
-.megamenu .megamenu__grd--cards A:nth-of-type(4) { background-color: #53B0AE; }
-.megamenu .megamenu__grd--cards A:nth-of-type(5) { background-color: #5A5B9F; }
-.megamenu .megamenu__grd--cards A:nth-of-type(6) { background-color: #FF6F61; }
-.megamenu .megamenu__grd--cards A:nth-of-type(7) { background-color: #E2583E; }
+.megamenu .megamenu__grd--card A:nth-of-type(1) { background-color: #C74375; }
+.megamenu .megamenu__grd--card A:nth-of-type(2) { background-color: #BF1932; }
+.megamenu .megamenu__grd--card A:nth-of-type(3) { background-color: #88B04B; }
+.megamenu .megamenu__grd--card A:nth-of-type(4) { background-color: #53B0AE; }
+.megamenu .megamenu__grd--card A:nth-of-type(5) { background-color: #5A5B9F; }
+.megamenu .megamenu__grd--card A:nth-of-type(6) { background-color: #FF6F61; }
+.megamenu .megamenu__grd--card A:nth-of-type(7) { background-color: #E2583E; }
 .mm__link--top:link, .mm__link--top:visited, .mm__link--top:hover, .mm__link--top:focus, .mm__link--top:active,
 .mm__link--card:link, .mm__link--card:visited, .mm__link--card:hover, .mm__link--card:focus, .mm__link--card:active,
 .mm__link--bottom:link, .mm__link--bottom:visited, .mm__link--bottom:hover, .mm__link--bottom:focus, .mm__link--bottom:active
