@@ -5,8 +5,6 @@ draft: true
 ---
 <hr>
 <hr>
-<hr>
-<hr>
 <ul>
     {{ range (.GetTerms "tags") }}
         <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
