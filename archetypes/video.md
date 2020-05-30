@@ -4,7 +4,6 @@ date: {{ .Date }}
 draft: true
 ---
 <hr>
-<hr>
 <ul>
     {{ range (.GetTerms "tags") }}
         <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
