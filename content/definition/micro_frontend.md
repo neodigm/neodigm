@@ -5,3 +5,4 @@ draft: true
 ---
 Micro frontends are the technical representations of a business subdomain, they provide strong boundries with clear contracts, also they avoid sharing logic with other subdomains.
 <hr><hr>
+<hr><hr>
