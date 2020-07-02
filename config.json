@@ -1,5 +1,10 @@
 {
     "baseURL": "http://example.org/",
     "languageCode": "en-us",
-    "title": "Scott C. Krause 🚀 Neodigm"
+    "title": "Scott C. Krause 🚀 Neodigm",
+    "taxonomies": {
+      "category": "categories",
+      "tag": "tags",
+      "skill": "skills"
+   }
  }
