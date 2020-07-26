@@ -15,6 +15,18 @@ section.pfmf-grid {
 section.pfmf-grid > div {
     border: solid 1px #222;
 }
+
+@media only screen and (min-width:48.1em) and (max-width:62em){/* med */
+    .QQQQ {    
+        grid-template-columns: repeat(3, minmax(33vw, 1fr));
+    }
+
+}
+@media only screen and (min-width:62.1em){/* lg */
+    .QQQQ {    
+        grid-template-columns: repeat(6, minmax(16vw, 1fr));
+    }
+}
 /* Pan Fried Monkey Fisticufs grid end */
 
 /* megamenu begin */
