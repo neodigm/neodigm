@@ -1,4 +1,19 @@
 
+/* Pan Fried Monkey Fisticufs grid begin */
+section.pfmf-grid {
+    display: grid;
+    grid-area: box-content;
+    align-content: center;
+    grid-gap: 4px;
+  
+    grid-template-columns: 52px 1fr 96px;
+  
+    box-sizing: border-box;
+    box-shadow: 0px 2px 6px -2px rgba(164,164,164,0.6);
+    background-color: lawngreen;
+}
+/* Pan Fried Monkey Fisticufs grid end */
+
 /* megamenu begin */
 .megamenu {
     background-color: #fff;
@@ -129,7 +144,18 @@
 }
 /* megamenu end */
 
+/* type type type, and type begin */
+.readable__doc {
+    color: #000;
+    margin: 4px;
+    padding: 2px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 300;
+    font-size: 1.2em;
+}
+/* type type type, and type end */
 
+/* ummm? */
 a.skip__main
 {
     position: absolute;

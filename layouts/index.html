@@ -10,11 +10,21 @@ Blogfolio Stack
 -->
 {{ partial "head.html" . }}
     <body>
-        <header style="height: 56px;"></header>
+        <header style="height: 56px; margin: 0;"></header>
         {{ partial "megamenu.html" . }}
         <main role="main">
-            <p>Lead product storyteller, UX artisan, front-end engineer, and prolific open source contributor.  Reimagine product narratives as interactive dashboards, persuasive infographics, and succinct data visualizations. Advocate for performant, functional, testable, future-proof, and trusted JavaScript, TypeScript, and Go.</p>
-            <p>Opportunities to innovate find me. I envision, design, simplify, code and deliver.</p>
+            <section class="rfc-grid">
+                <div>
+                    <article class="">a</article>
+                    <article class="">b</article>
+                </div>
+                <div>
+                    <article class="">c</article>
+                    <article class="">d</article>
+                </div>
+            </section>
+            <p class="readable__doc">Lead product storyteller, UX artisan, front-end engineer, and prolific open source contributor.  Reimagine product narratives as interactive dashboards, persuasive infographics, and succinct data visualizations. Advocate for performant, functional, testable, future-proof, and trusted JavaScript, TypeScript, and Go.</p>
+            <p class="readable__doc">Opportunities to innovate find me. I envision, design, simplify, code and deliver.</p>
 HOMEPAGE {{ .Title }}
 <hr>
 <ul>
