@@ -3,29 +3,29 @@
 section.pfmf-grid {
     display: grid;
     grid-area: box-content;
+    margin: 0 auto;
     align-content: center;
     grid-gap: 4px;
   
-    grid-template-columns: 52px 1fr 96px;
+    grid-template-columns: 60% 40%;
   
     box-sizing: border-box;
     box-shadow: 0px 2px 6px -2px rgba(164,164,164,0.6);
-    background-color: lawngreen;
+    background-color: #fff;
+    width: 80%;
 }
-section.pfmf-grid > div {
-    border: solid 1px #222;
+section.pfmf-grid > div > article {
+    margin: 2px;
+    padding: 2px;
+    border: solid 1px #767676;
+    border-radius: 2px;
 }
 
 @media only screen and (min-width:48.1em) and (max-width:62em){/* med */
-    .QQQQ {    
-        grid-template-columns: repeat(3, minmax(33vw, 1fr));
-    }
-
+    .QQQQ {grid-template-columns: repeat(3, minmax(33vw, 1fr));}
 }
 @media only screen and (min-width:62.1em){/* lg */
-    .QQQQ {    
-        grid-template-columns: repeat(6, minmax(16vw, 1fr));
-    }
+    .QQQQ {grid-template-columns: repeat(6, minmax(16vw, 1fr));}
 }
 /* Pan Fried Monkey Fisticufs grid end */
 
