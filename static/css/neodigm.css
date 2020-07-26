@@ -76,6 +76,11 @@
     font-size: 28px;
     letter-spacing: -.008em;
 }
+
+.megamenu .megamenu__grd--card .mm__link--card:hover {
+    filter: brightness(124%);
+  }
+
 .megamenu .megamenu__grd--bottom .mm__link--bottom {
     display: block;
     color: #000;
