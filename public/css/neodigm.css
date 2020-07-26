@@ -117,8 +117,6 @@ section.pfmf-grid > div {
     color: #fff !important;
     background-color: #000;
 }
-
-
 .megamenu .megamenu__grd--bottom {
     text-align: center;
     margin: 0 0 0 0;
@@ -144,6 +142,28 @@ section.pfmf-grid > div {
 .mm__link--bottom:link, .mm__link--bottom:visited, .mm__link--bottom:hover, .mm__link--bottom:focus, .mm__link--bottom:active
 {
     text-decoration: none;
+}
+@media only screen and (min-width:48.1em) and (max-width:62em){/* med */
+    .megamenu .megamenu__grd--bottom {
+        display: grid;
+    }
+    .megamenu .megamenu__grd--card {    
+        grid-template-columns: repeat(3, minmax(33vw, 1fr));
+    }
+    .megamenu .megamenu__grd--card .mm__link--card {
+        height: 33vw;
+    }
+}
+@media only screen and (min-width:62.1em){/* lg */
+    .megamenu .megamenu__grd--bottom {
+        display: grid;
+    }
+    .megamenu .megamenu__grd--card {    
+        grid-template-columns: repeat(6, minmax(16vw, 1fr));
+    }
+    .megamenu .megamenu__grd--card .mm__link--card {
+        height: 16vw;
+    }
 }
 /* megamenu end */
 
@@ -220,28 +240,5 @@ a.skip__main:active
 {
     background: linear-gradient(#b95300, #791300);
     box-shadow: 0 0 8px #c2baa2;
-}
-
-@media only screen and (min-width:48.1em) and (max-width:62em){/* med */
-    .megamenu .megamenu__grd--bottom {
-        display: grid;
-    }
-    .megamenu .megamenu__grd--card {    
-        grid-template-columns: repeat(3, minmax(33vw, 1fr));
-    }
-    .megamenu .megamenu__grd--card .mm__link--card {
-        height: 33vw;
-    }
-}
-@media only screen and (min-width:62.1em){/* lg */
-    .megamenu .megamenu__grd--bottom {
-        display: grid;
-    }
-    .megamenu .megamenu__grd--card {    
-        grid-template-columns: repeat(6, minmax(16vw, 1fr));
-    }
-    .megamenu .megamenu__grd--card .mm__link--card {
-        height: 16vw;
-    }
 }
     
