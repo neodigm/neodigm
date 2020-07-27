@@ -8,29 +8,30 @@ section.pfmf-grid {
     grid-gap: 6px;
   
     box-sizing: border-box;
-    box-shadow: 0px 2px 6px -2px rgba(164,164,164,0.6);
     background-color: #fff;
     width: 80%;
 }
-section.pfmf-grid__left {
-    grid-template-columns: 60% 40%;
-}
-section.pfmf-grid__right {
-    grid-template-columns: 40% 60%;
-}
+section.pfmf-grid__left  { grid-template-columns: 100%; }
+section.pfmf-grid__right { grid-template-columns: 100%; }
+
 section.pfmf-grid > div > article {
     margin: 6px 4px;
     padding: 4px;
     border: solid 1px #aaa;
     border-top: solid 2px #aaa;
     border-radius: 2px;
+    box-shadow: 0px 2px 6px -2px rgba(164,164,164,0.6);
 }
 
 @media only screen and (min-width:48.1em) and (max-width:62em){/* med */
     .QQQQ {grid-template-columns: repeat(3, minmax(33vw, 1fr));}
+    section.pfmf-grid__left  { grid-template-columns: 60% 40%; }
+    section.pfmf-grid__right { grid-template-columns: 40% 60%; }
 }
 @media only screen and (min-width:62.1em){/* lg */
     .QQQQ {grid-template-columns: repeat(6, minmax(16vw, 1fr));}
+    section.pfmf-grid__left  { grid-template-columns: 60% 40%; }
+    section.pfmf-grid__right { grid-template-columns: 40% 60%; }
 }
 /* Pan Fried Monkey Fisticufs grid end */
 
