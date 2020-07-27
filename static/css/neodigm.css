@@ -16,7 +16,7 @@ section.pfmf-grid__left {
     grid-template-columns: 60% 40%;
 }
 section.pfmf-grid__right {
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 40% 60%;
 }
 section.pfmf-grid > div > article {
     margin: 6px 4px;
