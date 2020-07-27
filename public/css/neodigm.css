@@ -1,3 +1,11 @@
+/* Doc */
+[role='main'] {
+    background-color: #f8f8f8;
+}
+.h-center { text-align: center;}
+
+/* Doc */
+
 
 /* Pan Fried Monkey Fisticufs grid begin */
 section.pfmf-grid {
@@ -8,8 +16,7 @@ section.pfmf-grid {
     grid-gap: 6px;
   
     box-sizing: border-box;
-    background-color: #fff;
-    width: 80%;
+    width: 86%;
 }
 section.pfmf-grid__left  { grid-template-columns: 100%; }
 section.pfmf-grid__right { grid-template-columns: 100%; }
@@ -17,21 +24,25 @@ section.pfmf-grid__right { grid-template-columns: 100%; }
 section.pfmf-grid > div > article {
     margin: 6px 4px;
     padding: 4px;
-    border: solid 1px #aaa;
-    border-top: solid 2px #aaa;
+    border: solid 1px #bbb;
+    border-top: solid 2px #bbb;
     border-radius: 2px;
     box-shadow: 0px 2px 6px -2px rgba(164,164,164,0.6);
+    background-color: #fff;
+}
+section.pfmf-grid > div > article.pfmf-crd--black {
+    background-color: #000;
 }
 
 @media only screen and (min-width:48.1em) and (max-width:62em){/* med */
     .QQQQ {grid-template-columns: repeat(3, minmax(33vw, 1fr));}
-    section.pfmf-grid__left  { grid-template-columns: 60% 40%; }
-    section.pfmf-grid__right { grid-template-columns: 40% 60%; }
+    section.pfmf-grid__left  { grid-template-columns: 70% 30%; }
+    section.pfmf-grid__right { grid-template-columns: 30% 70%; }
 }
 @media only screen and (min-width:62.1em){/* lg */
     .QQQQ {grid-template-columns: repeat(6, minmax(16vw, 1fr));}
-    section.pfmf-grid__left  { grid-template-columns: 60% 40%; }
-    section.pfmf-grid__right { grid-template-columns: 40% 60%; }
+    section.pfmf-grid__left  { grid-template-columns: 70% 30%; }
+    section.pfmf-grid__right { grid-template-columns: 30% 70%; }
 }
 /* Pan Fried Monkey Fisticufs grid end */
 
@@ -192,7 +203,10 @@ section.pfmf-grid > div > article {
     padding: 2px;
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: 300;
-    font-size: 1.2em;
+    font-size: 1em;
+}
+.readable__doc--white {
+    color: #fff;
 }
 /* type type type, and type end */
 
