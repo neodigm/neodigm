@@ -1,8 +1,14 @@
 /* Doc helpers */
-[role='main'] {
+body, [role='main'] {
     background: linear-gradient(to right, #fff, #e9e9e9, #fff)
 }
 .h-center { text-align: center;}
+.l-brand-design section img, .l-cert-design section img {
+    width: 256px;
+    height: auto;
+    margin: 4px;
+    padding: 4px;
+}
 /* Doc helpers */
 
 /* Pan Fried Monkey Fisticufs grid begin */
@@ -16,8 +22,9 @@ section.pfmf-grid {
     box-sizing: border-box;
     width: 86%;
 }
-section.pfmf-grid__left  { grid-template-columns: 100%; }
-section.pfmf-grid__right { grid-template-columns: 100%; }
+section.pfmf-grid__70_30  { grid-template-columns: 100%; }
+section.pfmf-grid__30_70  { grid-template-columns: 100%; }
+section.pfmf-grid__100    { grid-template-columns: 100%; }
 
 section.pfmf-grid > div > article {
     margin: 6px 4px;
@@ -34,13 +41,13 @@ section.pfmf-grid > div > article.pfmf-crd--black {
 
 @media only screen and (min-width:48.1em) and (max-width:62em){/* med */
     .QQQQ {grid-template-columns: repeat(3, minmax(33vw, 1fr));}
-    section.pfmf-grid__left  { grid-template-columns: 70% 30%; }
-    section.pfmf-grid__right { grid-template-columns: 30% 70%; }
+    section.pfmf-grid__70_30  { grid-template-columns: 70% 30%; }
+    section.pfmf-grid__30_70  { grid-template-columns: 30% 70%; }
 }
 @media only screen and (min-width:62.1em){/* lg */
     .QQQQ {grid-template-columns: repeat(6, minmax(16vw, 1fr));}
-    section.pfmf-grid__left  { grid-template-columns: 70% 30%; }
-    section.pfmf-grid__right { grid-template-columns: 30% 70%; }
+    section.pfmf-grid__70_30  { grid-template-columns: 70% 30%; }
+    section.pfmf-grid__30_70  { grid-template-columns: 30% 70%; }
 }
 /* Pan Fried Monkey Fisticufs grid end */
 
