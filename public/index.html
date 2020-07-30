@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-	<meta name="generator" content="Hugo 0.69.0" /><script src="/livereload.js?port=1313&mindelay=10&v=2" data-no-instant defer></script>
+	<meta name="generator" content="Hugo 0.69.0" />
         
 <title>UX ⚡ Scott Krause | Vue.js TypeScript GoLang WASM</title>
 
@@ -121,8 +121,9 @@
                         style="height: auto; width: 100%;"></article>
                 </div>
                 <div>
-                    <article class="l-brand-design">
-                        <section class="portf js-sec__cert--id h-ds__none">
+
+                    <article class="js-sec__cert--id l-cert-design h-ds__none">
+                        <section class="l-brand-design cert">
                             <img src="https://neodigm.github.io/brand_logo_graphic_design/fantastic/discerning/1.jpg" alt="">
                             <img src="https://neodigm.github.io/brand_logo_graphic_design/fantastic/discerning/2.jpg" alt="">
                             <img src="https://neodigm.github.io/brand_logo_graphic_design/fantastic/discerning/3.jpg" alt="">
@@ -164,9 +165,7 @@
 let doCertCarousel = ( dc=document, qry=[".js-sec__cert--id",".cert"]) => {
     let elSecCert = dc.querySelector( qry[0] );
     let elFlickCert = elSecCert.querySelector( qry[1] );
-    alert("yikes",elSecCert, elFlickCert);
     if( elSecCert && elFlickCert && Flickity ){
-
         setTimeout(function(){
             elSecCert.classList.remove("h-ds__none");
             var flktyCert = new Flickity( elFlickCert, {
