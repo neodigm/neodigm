@@ -177,6 +177,8 @@
 "desk": ""},
 {"name": "GreenSock", "target":[13,14,15,20], "value": 66, "stackdebt": "1",
 "desk": ""},
+{"name": "GraphQL", "target":[7,8,9,11,12], "value": 44, "stackdebt": "0",
+"desk": ""},
 {"name": "Grunt", "target":[11,12], "value": 44, "stackdebt": "0",
 "desk": ""},
 {"name": "GSAP", "target":[13,14,15,20], "value": 44, "stackdebt": "0",
