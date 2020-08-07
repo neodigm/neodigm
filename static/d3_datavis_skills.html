@@ -177,8 +177,7 @@ svg {user-select: none;}
             })
             .attr("fill", function(d,i){
                   if ( i > 0 ) { // Rnd Colr
-console.log( d );
-                        return aColors[ Math.floor((Math.random() * 20 )) ];
+                        return ( d.stackdebt == "0") ?aColors[ Math.floor((Math.random() * 20 )) ] : "#edba08";
                   } else {
                         return "#fff";
                   }
