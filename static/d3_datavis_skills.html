@@ -96,7 +96,7 @@ svg {user-select: none;}
       function doD3( aSkills ){
             nodes = aSkills;
             var links = [], w = 2900, h = 2900, circleWidth = 5; 
-            var palette = {"brandorange": "#edba08","gray": "#edba08","mediumgray": "#edba08","blue": "#edba08"}
+            //var palette = {"brandorange": "#edba08","gray": "#edba08","mediumgray": "#edba08","blue": "#edba08"}
             var oSkillStage = (function(_d, sClassName){
             //  Show bubble relationships until mouseout
             return {
@@ -161,7 +161,7 @@ svg {user-select: none;}
 
       var link = myChart.selectAll('line') 
             .data(links).enter().append('line')
-            .attr('stroke', palette.brandorange)
+            .attr('stroke', "#edba08")
             .attr('strokewidth', '1');
 
       var node =  myChart.selectAll('circle')  
