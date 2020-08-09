@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-<title>UX ⚡ Scott Krause | TypeScript | Golang</title>
+<title>UX ⚡ Scott Krause | TypeScript | Go | Vue</title>
 <!--
   _________             __    __     ____  __.                                  
  /   _____/ ____  _____/  |__/  |_  |    |/ _|___________   __ __  ______ ____  
@@ -12,7 +12,7 @@
 -->
 <meta charset="utf-8">
 <meta name="viewport" content="initial-scale=1, maximum-scale=2, minimum-scale=1, width=device-width, height=device-height"/>
-<meta name="description" content="Interactive Resume | TypeScript, ES6, Golang, a11y, Web Components, WebAssembly, Jest, Three.js, D3.js, JQuery, and WebGL on Node.js.  I produce and advocate for optimized, asynchronous, reactive, functional, testable, and future-proof TypeScript and JavaScript.">
+<meta name="description" content="Interactive Resume | TypeScript, ES6, Golang, a11y, Web Components, WebAssembly, Jest, Three.js, D3.js, JQuery, and WebGL on Node.js.  I produce and advocate for optimized, asynchronous, reactive, functional, testable, and future-proof TypeScript, JavaScript and Vue.js.">
 <link rel="stylesheet" type="text/css" href="./css/interactive_resume.css"/>
 
 <meta name="twitter:card" content="summary" />
@@ -53,7 +53,7 @@ svg {user-select: none;}
             display: grid;
             grid-template-columns: repeat( auto-fill, minmax(26px, 64px));
             background-color: #790300;
-            background-image: linear-gradient(to bottom, #440404 10%, #000 90%);
+            background-image: linear-gradient(to bottom, #440404 10%, #110000 90%);
             padding: 24px;
       }
       .alpha-grd img { max-width: 64px;  margin: 8px 12px;}
@@ -172,11 +172,11 @@ svg {user-select: none;}
             .attr("cx", function(d){return d.x; })
             .attr("cy", function(d){return d.y; })
             .attr("r", function(d,i){
-                  return circleWidth + d.value; 
+                  return circleWidth + d.value + ( d.stackdebt == "0") ? 0 : 6; 
             })
             .attr("fill", function(d,i){
                   if ( i > 0 ) { // Rnd Colr Pana Lime Punch if stack debt
-                        return ( d.stackdebt == "0") ?aColors[ Math.floor((Math.random() * 20 )) ] : "#c0d725";
+                        return ( d.stackdebt == "0") ? aColors[ Math.floor((Math.random() * 20 )) ] : "#c0d725";
                   } else {
                         return "#fff";
                   }
