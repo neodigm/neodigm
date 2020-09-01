@@ -25,6 +25,8 @@ section.pfmf-grid {
 }
 section.pfmf-grid__70_30  { grid-template-columns: 100%; }
 section.pfmf-grid__70_30 > div:nth-child(1) { order: 1; }
+section.pfmf-grid__60_40  { grid-template-columns: 100%; }
+section.pfmf-grid__60_40 > div:nth-child(1) { order: 1; }
 section.pfmf-grid__30_70  { grid-template-columns: 100%; }
 section.pfmf-grid__100    { grid-template-columns: 100%; }
 
