@@ -219,7 +219,7 @@
 "desk": ""},
 {"name": "JQuery Mobile", "target":[8,13], "value": 66, "stackdebt": "0",
 "desk": ""},
-{"name": "JSON-LD", "target":[4,5], "value": 44, "stackdebt": "0",
+{"name": "JSON-LD", "target":[4,5], "value": 55, "stackdebt": "0",
 "desk": ""},
 {"name": "JSON-P", "target":[9,11,12], "value": 44, "stackdebt": "0",
 "desk": "JSON-P (JSON with Padding), is a historic JavaScript technique for requesting data by loading a SCRIPT tag"},
