@@ -155,6 +155,8 @@
 "desk": ""},
 {"name": "Endeca", "target":[11,12], "value": 44, "stackdebt": "0",
 "desk": ""},
+{"name": "ES2020", "target":[8,10], "value": 44, "stackdebt": "10",
+"desk": "ECMAScript in the year 2020"},
 {"name": "Excel VBA", "target":[3,8], "value": 66, "stackdebt": "0",
 "desk": ""},
 {"name": "FoxBase", "target":[8], "value": 44, "stackdebt": "0",
