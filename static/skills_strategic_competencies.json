@@ -401,7 +401,7 @@
 "desk": ""},
 {"name": "Team Integration", "target":[1,2,13], "value": 77, "stackdebt": "0",
 "desk": ""},
-{"name": "Three.js", "target":[12,13,14,15,16], "value": 55, "stackdebt": "1",
+{"name": "Three.js", "target":[12,13,14,15,16], "value": 55, "stackdebt": "0",
 "desk": ""},
 {"name": "Trade Shows", "target":[1,2,3,4,20], "value": 66, "stackdebt": "0",
 "desk": ""},
