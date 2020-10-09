@@ -455,6 +455,8 @@
 "desk": ""},
 {"name": "WEBP Images", "target":[5,13,14], "value": 77, "stackdebt": "0",
 "desk": ""},
+{"name": "Webpack", "target":[9,11,12], "value": 66, "stackdebt": "1",
+"desk": ""},
 {"name": "WebSockets", "target":[9,11,12], "value": 77, "stackdebt": "1",
 "desk": "The WebSocket API is an advanced technology that makes it possible to open a two-way interactive communication session between the user's browser and a server."},
 {"name": "Wireframing", "target":[1,2,13,14], "value": 77, "stackdebt": "0",
