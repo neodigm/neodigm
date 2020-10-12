@@ -156,7 +156,7 @@ data-caro-target="3">
     console.log("%c Scott C. Krause ⚡ Problem Solver and Visual Storyteller", "background: #000; color: #f4dc5e; font-size: 28px");
 
 let doCertCarousel = ( dc=document, qry=[".js-sec__cert",".cert"]) => {
-    let elSecCert = [].slice.call(dc.querySelectorAll( qry[0] ));
+    let elSecCert = [].slice.call(dc.querySelectorAll( qry[0] )), nCnt=0;
     elSecCert.forEach(eCert => {
         let elFlickCert = eCert.querySelector( qry[1] );
         if( eCert && elFlickCert && Flickity ){
@@ -181,7 +181,7 @@ let doCertCarousel = ( dc=document, qry=[".js-sec__cert",".cert"]) => {
                         }
                     });
                 })
-            }, 2624);
+            }, (++nCnt * 1760) );
         }        
     });
 }
