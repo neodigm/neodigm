@@ -320,7 +320,7 @@
 {"name": "Polyfils", "target":[8,11], "value": 55, "stackdebt": "0",
 "desk": ""},
 {"name": "PostgreSQL", "target":[8,11], "value": 88, "stackdebt": "1",
-"desk": "PostgreSQL has earned a strong reputation for its proven architecture, reliability, data integrity, robust feature set, extensibility, and the dedication of the open source community behind the software to consistently deliver performant and innovative solutions."},
+"desk": "PostgreSQL has earned a strong reputation for its proven architecture, reliability, data integrity, robust feature set, extensibility, and the dedication of the open source community behind the software to consistently deliver performant and innovative solutions. Pronounced Post-Gres-QL."},
 {"name": "PowerCenter ETL", "target":[8,11], "value": 77, "stackdebt": "0",
 "desk": ""},
 {"name": "PowerShell", "target":[8,11], "value": 55, "stackdebt": "0",
