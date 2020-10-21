@@ -119,7 +119,9 @@ TASKS
     }, 4444);
 
     let fCycle = ( (_d, _q, _t) => {  //  Cycle content display
-        let eCycCnt = [].slice.call( _d.querySelectorAll( _q ));
+        //let eCycCnt = [].slice.call( _d.querySelectorAll( _q ));
+        let eCycCnt = [...document.querySelectorAll( _q ).children];
+        //[...document.getElementById('x').children].forEach(child => console.log(child))
         if( eCycCnt ) setTimeout( ()=>{ fCycle.tick(); }, _t);
         return {
             "tick": ()=>{
