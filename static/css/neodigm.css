@@ -10,6 +10,9 @@ body, [role='main'] {
     margin: 4px;
     padding: 4px;
 }
+.rot180 {
+    transform: rotate(180deg);
+}
 /* Doc helpers */
 
 /* Pan Fried Monkey Fisticufs grid begin */
@@ -228,6 +231,14 @@ section.pfmf-grid > div > article.pfmf-crd--black {
 }
 .readable__doc--white {
     color: #fff;
+}
+.readable__caption {
+    color: #000;
+    margin: 4px;
+    padding: 2px;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 300;
+    font-size: 1.4em;
 }
 /* type type type, and type end */
 
