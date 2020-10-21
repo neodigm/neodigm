@@ -82,7 +82,7 @@
 {"name": "ATG", "target":[5], "value": 33, "stackdebt": "0",
 "desk": ""},
 {"name": "Atlassian Jira", "target":[1,2,3,6,7], "value": 66, "stackdebt": "0",
-"desk": ""},,
+"desk": ""},
 {"name": "AWS Amplify", "target":[6,7,11,12], "value": 88, "stackdebt": "1",
 "desk": "AWS Amplify is an end-to-end solution that enables mobile and front-end web developers to build and deploy secure, scalable full stack applications, powered by AWS."},
 {"name": "AWS Elastic Beanstalk", "target":[6,7,11,12], "value": 99, "stackdebt": "0",

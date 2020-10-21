@@ -315,7 +315,9 @@ data-caro-target="3">
     }, 4444);
 
     let fCycle = ( (_d, _q, _t) => {  
-        let eCycCnt = [].slice.call( _d.querySelectorAll( _q ));
+        
+        let eCycCnt = [...document.querySelectorAll( _q ).children];
+        
         if( eCycCnt ) setTimeout( ()=>{ fCycle.tick(); }, _t);
         return {
             "tick": ()=>{
