@@ -44,56 +44,62 @@ TASKS
             {{ partial "carousel_accolades.html" . }}
             {{ partial "carousel_video_fx.html" . }}
 
+{{ range .Pages }}
+<li>
+    <a href="{{.Permalink}}">{{.Date.Format "2006-01-02"}} | {{.Title}}</a>
+</li>
+{{ end }}
+
         </main>
 
 <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400|Roboto+Slab:300,400" rel="stylesheet" type="text/css">
 
 <script>
-    var _d = document;
-    _d.addEventListener( "contextmenu", function(e) { console.log("playAudioFile( 7 )"); });  //  On right-click
-    console.log("%c Scott C. Krause ⚡ Problem Solver and Visual Storyteller", "background: #000; color: #f4dc5e; font-size: 28px");
-    function f1210(){ return (Math.floor(Math.random() * (10) + 1)); }
+var _d = document;
+_d.addEventListener( "contextmenu", function(e) { console.log("playAudioFile( 7 )"); });  //  On right-click
+console.log("%c Scott C. Krause ⚡ Problem Solver and Visual Storyteller", "background: #000; color: #f4dc5e; font-size: 28px");
+function f1210(){ return (Math.floor(Math.random() * (10) + 1)); }
 
-    setInterval(function(){
-        [].slice.call( _d.querySelectorAll( "[data-at]" ) ).filter( function( e3 ){
-            if( f1210() >= 4 ){  //  rnd pipe delim array in data attr
-                var sAlt = e3.dataset.at;
-                if( sAlt ){
-                    var aAlt = sAlt.split("|");
-                    if( aAlt.length > 1 ){
-                        aAlt = aAlt[ (Math.floor(Math.random() * (aAlt.length))) ];
-                        if( e3.dataset.atChange ){
-                            e3[ e3.dataset.atChange ] = aAlt;
-                        }else{
-                            e3.innerHTML = aAlt;
-                        }
+setInterval(function(){
+    [].slice.call( _d.querySelectorAll( "[data-at]" ) ).filter( function( e3 ){
+        if( f1210() >= 4 ){  //  rnd pipe delim array in data attr
+            var sAlt = e3.dataset.at;
+            if( sAlt ){
+                var aAlt = sAlt.split("|");
+                if( aAlt.length > 1 ){
+                    aAlt = aAlt[ (Math.floor(Math.random() * (aAlt.length))) ];
+                    if( e3.dataset.atChange ){
+                        e3[ e3.dataset.atChange ] = aAlt;
+                    }else{
+                        e3.innerHTML = aAlt;
                     }
                 }
             }
-        });        
-    }, 4444);
+        }
+    });        
+}, 4444);
 
-    let fCycle = ( (_d, _q, _t) => {  //  Cycle content display
-        let aCycCnt = [..._d.querySelectorAll( _q )];
-        if( aCycCnt ){
-            aCycCnt.forEach( (eCycCnt) => {
-                eCycCnt.nCycCnt=0;
-                eCycCnt.addEventListener("click", (ev)=>{ fCycle.tick( false ); });
-            } );
-            setTimeout( ()=>{ fCycle.tick(); }, 4);
-        }
-        return {
-            "tick": ( bTimeout=true )=>{
-                aCycCnt.map( (e)=>{
-                    [...e.children].forEach( (eChild, nIndx) => {
-                        eChild.style="display: " + (( nIndx === e.nCycCnt ) ? "inline": "none");
-                    });
-                    e.nCycCnt = (e.nCycCnt === (e.children.length - 1)) ? 0 : (e.nCycCnt + 1);
+let fCycle = ( (_d, _q, _t) => {  //  Cycle content display
+    let aCycCnt = [..._d.querySelectorAll( _q )];
+    if( aCycCnt ){
+        aCycCnt.forEach( (eCycCnt) => {
+            eCycCnt.nCycCnt=0;
+            eCycCnt.addEventListener("click", (ev)=>{ fCycle.tick( false ); });
+        } );
+        setTimeout( ()=>{ fCycle.tick(); }, 4);
+    }
+    return {
+        "tick": ( bTimeout=true )=>{
+            aCycCnt.map( (e)=>{
+                [...e.children].forEach( (eChild, nIndx) => {
+                    eChild.style="display: " + (( nIndx === e.nCycCnt ) ? "inline": "none");
                 });
-                if( bTimeout ) setTimeout( ()=>{ fCycle.tick(); }, _t);
-            }
+                e.nCycCnt = (e.nCycCnt === (e.children.length - 1)) ? 0 : (e.nCycCnt + 1);
+            });
+            if( bTimeout ) setTimeout( ()=>{ fCycle.tick(); }, _t);
         }
-    })(document, "[data-at-cycle]", 13400);
+    }
+})(document, "[data-at-cycle]", 13400);
 
 let doCertCarousel = ( _d=document, qry=[".js-sec__cert",".cert"]) => {
     let elSecCert = [].slice.call(_d.querySelectorAll( qry[0] )), nCnt=0;
