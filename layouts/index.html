@@ -44,10 +44,12 @@ TASKS
             {{ partial "carousel_accolades.html" . }}
             {{ partial "carousel_video_fx.html" . }}
 
-{{ range .Pages }}
+{{ range .Site.Pages }}
+{{ if (eq .Dir "video/" ) }}
 <li>
-    <a href="{{.Permalink}}">{{.Date.Format "2006-01-02"}} | {{.Title}}</a>
+    <a href="{{.Permalink}}">{{.Date.Format "2006-01-02"}} | {{.Title}} | {{.Dir}}</a>
 </li>
+{{end}}
 {{ end }}
 
         </main>
