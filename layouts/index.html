@@ -76,21 +76,24 @@ TASKS
     let fCycle = ( (_d, _q, _t) => {  //  Cycle content display
         let aCycCnt = [..._d.querySelectorAll( _q )];
         if( aCycCnt ){
-            aCycCnt.forEach( (eCycCnt) => { eCycCnt.nCycCnt=0; } );
+            aCycCnt.forEach( (eCycCnt) => {
+                eCycCnt.nCycCnt=0;
+                eCycCnt.addEventListener("click", (ev)=>{ fCycle.tick( false ); });
+            } );
             setTimeout( ()=>{ fCycle.tick(); }, 4);
         }
         return {
-            "tick": ()=>{
+            "tick": ( bTimeout=true )=>{
                 aCycCnt.map( (e)=>{
                     [...e.children].forEach( (eChild, nIndx) => {
-                        eChild.style="display: " + (( nIndx === e.nCycCnt ) ? "inline": "none") + ";";
+                        eChild.style="display: " + (( nIndx === e.nCycCnt ) ? "inline": "none");
                     });
                     e.nCycCnt = (e.nCycCnt === (e.children.length - 1)) ? 0 : (e.nCycCnt + 1);
                 });
-                setTimeout( ()=>{ fCycle.tick(); }, _t);
+                if( bTimeout ) setTimeout( ()=>{ fCycle.tick(); }, _t);
             }
         }
-    })(document, "[data-at-cycle]", 12896);
+    })(document, "[data-at-cycle]", 13400);
 
 let doCertCarousel = ( _d=document, qry=[".js-sec__cert",".cert"]) => {
     let elSecCert = [].slice.call(_d.querySelectorAll( qry[0] )), nCnt=0;
