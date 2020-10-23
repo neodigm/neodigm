@@ -77,8 +77,6 @@
 "desk": ""},
 {"name": "ASP", "target":[8], "value": 44, "stackdebt": "0",
 "desk": ""},
-{"name": "Asset Branding", "target":[4,14], "value": 66, "stackdebt": "0",
-"desk": ""},
 {"name": "ATG", "target":[5], "value": 33, "stackdebt": "0",
 "desk": ""},
 {"name": "Atlassian Jira", "target":[1,2,3,6,7], "value": 66, "stackdebt": "0",
