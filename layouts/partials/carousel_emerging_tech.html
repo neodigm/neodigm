@@ -1,3 +1,18 @@
+<style>/*  inline por tempo cause Hugo is a cache hater */
+
+.l-blog-crd {
+    /*  Blog Content Card Begin  */
+    margin: 6px 4px;
+    padding: 4px;
+    border: solid 1px #bbb;
+    border-top: solid 2px #bbb;
+    border-radius: 2px;
+    box-shadow: 0px 2px 6px -2px rgba(164,164,164,0.6);
+    background-color: #fff;
+    /*  Blog Content Card End    */
+}
+
+</style>
 <section class="pfmf-grid pfmf-grid__100">
     <div>
 
@@ -5,12 +20,12 @@
             <section class="l-brand-design cert"
             data-qqqqcaro-src="1">
             {{ range .Site.Pages }}
-            {{ if (eq .File.Dir "emerging_tech/" ) }}
-            <section>
-                <a href="{{.Permalink}}">{{.Date.Format "2006-01-02"}} | {{.Title}} | {{.File.Dir}}</a>
-            </section>
-            {{end}}
-        {{ end }}
+                {{ if (eq .File.Dir "emerging_tech/" ) }}
+                <section class="l-blog-crd">
+                    <a href="{{.Permalink}}">{{.Date.Format "2006-01-02"}} | {{.Title}} | {{.File.Dir}}</a>
+                </section>
+                {{end}}
+            {{ end }}
             </section>  
         </article>
     </div>
