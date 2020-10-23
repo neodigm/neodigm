@@ -45,11 +45,11 @@ TASKS
             {{ partial "carousel_video_fx.html" . }}
 
 {{ range .Site.Pages }}
-{{ if (eq .Dir "video/" ) }}
-<li>
-    <a href="{{.Permalink}}">{{.Date.Format "2006-01-02"}} | {{.Title}} | {{.Dir}}</a>
-</li>
-{{end}}
+    {{ if (eq .File.Dir "emerging_tech/" ) }}
+    <li>
+        <a href="{{.Permalink}}">{{.Date.Format "2006-01-02"}} | {{.Title}} | {{.File.Dir}}</a>
+    </li>
+    {{end}}
 {{ end }}
 
         </main>
