@@ -24,11 +24,18 @@
             {{ range .Site.Pages }}
                 {{ if (eq .File.Dir "emerging_tech/" ) }}
                 <section class="l-blog-crd">
-                    <a href="{{.Permalink}}">{{.Date.Format "2006-01-02"}} | {{.Title}} | {{.File.Dir}}</a>
+                    <picture>
+                        <img src="gameification_threejs_webcrypto_accelerator_blender_gltf.jpg" alt="">
+                    </picture>
+                    <p>{{.File.Dir}}</p>
+                    <h6>
+                        <a href="{{.Permalink}}">{{.Date.Format "2006-01-02"}} | {{.Title}} | {{.File.Dir}}</a>
+                    </h6>
                 </section>
                 {{end}}
             {{ end }}
             </section>  
         </article>
+
     </div>
 </section>
