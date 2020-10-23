@@ -1,7 +1,17 @@
-{{ range .Site.Pages }}
-    {{ if (eq .File.Dir "emerging_tech/" ) }}
-    <li>
-        <a href="{{.Permalink}}">{{.Date.Format "2006-01-02"}} | {{.Title}} | {{.File.Dir}}</a>
-    </li>
-    {{end}}
-{{ end }}
+<section class="pfmf-grid pfmf-grid__100">
+    <div>
+
+        <article class="js-sec__cert l-cert-design h-ds__none">
+            <section class="l-brand-design cert"
+            data-qqqqcaro-src="1">
+            {{ range .Site.Pages }}
+            {{ if (eq .File.Dir "emerging_tech/" ) }}
+            <section>
+                <a href="{{.Permalink}}">{{.Date.Format "2006-01-02"}} | {{.Title}} | {{.File.Dir}}</a>
+            </section>
+            {{end}}
+        {{ end }}
+            </section>  
+        </article>
+    </div>
+</section>
