@@ -1,0 +1,7 @@
+{{ range .Site.Pages }}
+    {{ if (eq .File.Dir "emerging_tech/" ) }}
+    <li>
+        <a href="{{.Permalink}}">{{.Date.Format "2006-01-02"}} | {{.Title}} | {{.File.Dir}}</a>
+    </li>
+    {{end}}
+{{ end }}

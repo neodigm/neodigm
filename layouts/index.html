@@ -43,15 +43,8 @@ TASKS
             {{ partial "carousel_certs_awards.html" . }}
             {{ partial "carousel_accolades.html" . }}
             {{ partial "carousel_video_fx.html" . }}
-
-{{ range .Site.Pages }}
-    {{ if (eq .File.Dir "emerging_tech/" ) }}
-    <li>
-        <a href="{{.Permalink}}">{{.Date.Format "2006-01-02"}} | {{.Title}} | {{.File.Dir}}</a>
-    </li>
-    {{end}}
-{{ end }}
-
+            {{ partial "carousel_emerging_tech.html" . }}
+            
         </main>
 
 <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400|Roboto+Slab:300,400" rel="stylesheet" type="text/css">
