@@ -3,57 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://thescottkrause.com/emerging_tech/</loc>
-    <lastmod>2020-10-22T15:30:31-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://thescottkrause.com/emerging_tech/saas_aws_amplify_graphql/</loc>
-    <lastmod>2020-10-22T15:30:31-05:00</lastmod>
+    <loc>https://thescottkrause.com/categories/</loc>
   </url>
   
   <url>
     <loc>https://thescottkrause.com/</loc>
-    <lastmod>2020-10-22T15:30:31-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://thescottkrause.com/emerging_tech/accessibility_axe_lighthouse_color_contrast_ratio_wcag_aaa_in_chrome/</loc>
-    <lastmod>2020-10-22T15:30:30-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://thescottkrause.com/emerging_tech/data_viz_d3_vega/</loc>
-    <lastmod>2020-10-22T15:30:30-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://thescottkrause.com/emerging_tech/information_security_electron_webcrypto/</loc>
-    <lastmod>2020-10-22T15:30:30-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://thescottkrause.com/emerging_tech/microinteractions_gsap_parralax_web_audio_web_vibration/</loc>
-    <lastmod>2020-10-22T15:30:30-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://thescottkrause.com/emerging_tech/pwa_vuejs_vuex_web_vitals/</loc>
-    <lastmod>2020-10-22T15:30:30-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://thescottkrause.com/emerging_tech/quality_tdd_typescript_jest_cypress/</loc>
-    <lastmod>2020-10-22T15:30:30-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://thescottkrause.com/emerging_tech/gameification_threejs_webcrypto_accelerator_blender_gltf/</loc>
-    <lastmod>2020-10-22T15:30:29-05:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://thescottkrause.com/categories/</loc>
   </url>
   
   <url>
