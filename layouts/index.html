@@ -86,7 +86,7 @@ let fCycle = ( (_d, _q, _t) => {  //  Cycle content display
     return {
         "tick": ( bTimeout=true )=>{
             aCycCnt.map( (e)=>{
-                [...e.children].forEach( (eChild, nIndx) => {
+                [...e.children].forEach( (eChild, nIndx) => {  //  TODO this needs to fade
                     eChild.style="display: " + (( nIndx === e.nCycCnt ) ? "inline": "none");
                 });
                 e.nCycCnt = (e.nCycCnt === (e.children.length - 1)) ? 0 : (e.nCycCnt + 1);
