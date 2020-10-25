@@ -8,43 +8,47 @@
     box-shadow: 0px 2px 6px -2px rgba(164,164,164,0.6);
     background-color: #fff;
     max-width: 176px;
-
-
-    text-decoration: none !important;
+    text-decoration: none;
 
 }
 .l-blog-crd img {
     width: 100%;
 }
-.l-blog-crd p, .l-blog-crd h6{
+.l-blog-crd p, .l-blog-crd h5, .l-blog-crd h6{
     color: #000;
-    margin: 4px; padding: 2px;
+    margin: 4px 1px; padding: 2px;
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: 300;
-    font-size: 1.26em;
-
+    font-size: 1.08em;
+}
+.l-blog-crd p {
+    color: #6a6a6a;
+    margin: 2px; padding: 1px;
+    font-size: 1.04em;
+}
+.l-blog-crd h6 {
+    border-top: solid 1px #8a8a8a;
 }
     /*  Blog Content Card End    */
 </style>
 <section class="pfmf-grid pfmf-grid__100">
     <div>
 
-        <article class="js-sec__cert QQQQl-cert-design h-ds__none">
-            <section class="QQQQl-brand-design cert"
-            data-qqqqcaro-src="1">
+        <article class="js-sec__cert h-ds__none">
+            <section class="cert">
             {{ range .Site.Pages }}
                 {{ if (eq .File.Dir "emerging_tech/" ) }}
                 <a class="l-blog-crd"href="{{.Permalink}}">
                 <section>
                     <picture>
                         <!--  1280 X 720  -->
-                        <img src="emerging_tech/{{.Title}}.jpg" alt="">
+                        <img src="emerging_tech/{{.Page.Slug}}_tn.jpg" alt="">
                     </picture>
-                    <p>{{.File.Dir}}</p>
-                    <h6>
-                        {{.Date.Format "2006-01-02"}} | {{.Title}} | {{.File.Dir}}
-                    </h6>
-                    <p>{{.File.Dir}}</p>
+                    <p>Emerging Tech</p>
+                    <!-- {{.Title}} | {{.File.Dir}} -->
+                    <h5> {{.Page.Title}} </h5>
+                    <h6> {{.Page.Summary}} </h6>
+                    <p>{{.Date.Format "2006-01-02"}}</p>
                 </section>
                 </a>
                 {{end}}
