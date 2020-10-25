@@ -96,7 +96,7 @@ let fCycle = ( (_d, _q, _t) => {  //  Cycle content display
     }
 })(document, "[data-at-cycle]", 13496);
 
-let doCertCarousel = ( _d=document, qry=[".js-sec__cert",".cert"]) => {
+let doCertCarousel = ( _d=document, qry=[".js-art__caro",".l-caro-design__cnt"]) => {
     let elSecCert = [].slice.call(_d.querySelectorAll( qry[0] )), nCnt=0;
     elSecCert.forEach(eCert => { // Lazy Load Carousels and wire events
         let elFlickCert = eCert.querySelector( qry[1] );
@@ -122,7 +122,7 @@ let doCertCarousel = ( _d=document, qry=[".js-sec__cert",".cert"]) => {
                         }
                     });
                 })
-            }, (++nCnt * 176) );
+            }, (++nCnt * 1760) );
         }        
     });
 }

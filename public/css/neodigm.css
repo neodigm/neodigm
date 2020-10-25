@@ -6,7 +6,7 @@ body, [role='main'] {
 .h-nowrap { white-space: nowrap;}
 .h_ital {font-style: italic;}
 .h-ds__none {display: none;}
-.l-brand-design section img, .l-cert-design section img {
+.l-caro-design section img {
     width: 256px;
     height: auto;
     margin: 4px;
