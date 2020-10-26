@@ -84,17 +84,32 @@ let fCycle = ( (_d, _q, _t) => {  //  Cycle content display
         setTimeout( ()=>{ fCycle.tick(); }, 4);
     }
     return {
+        "pretick": ()=> {  // Blur
+            var eCycLive = _d.querySelector( "[data-at-cycle-live='true']" );
+            eCycLive.classList.add( "h-fade" );
+            eCycLive.dataset.atCycleLive = "false";
+        },
         "tick": ( bTimeout=true )=>{
             aCycCnt.map( (e)=>{
-                [...e.children].forEach( (eChild, nIndx) => {  //  TODO this needs to fade
-                    eChild.style="display: " + (( nIndx === e.nCycCnt ) ? "inline": "none");
+                [...e.children].forEach( (eChild, nIndx) => {
+                eChild.classList.remove("h-ds__inline", "h-ds__none");
+                eChild.classList.remove( "h-fade" );
+                if( nIndx === e.nCycCnt ){
+                    eChild.classList.add( "h-ds__inline" );
+                    eChild.dataset.atCycleLive = "true";
+                }else{
+                    eChild.classList.add( "h-ds__none" );
+                }
                 });
                 e.nCycCnt = (e.nCycCnt === (e.children.length - 1)) ? 0 : (e.nCycCnt + 1);
             });
-            if( bTimeout ) setTimeout( ()=>{ fCycle.tick(); }, _t);
+            if( bTimeout ){
+                setTimeout( ()=>{ fCycle.pretick(); }, (_t - 880));
+                setTimeout( ()=>{ fCycle.tick(); }, _t);
+            }
         }
     }
-})(document, "[data-at-cycle]", 13496);
+})(document, "[data-at-cycle]", 13496 );
 
 let doCertCarousel = ( _d=document, qry=[".js-art__caro",".l-caro-design__cnt"]) => {
     let elSecCert = [].slice.call(_d.querySelectorAll( qry[0] )), nCnt=0;

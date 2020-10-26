@@ -6,6 +6,9 @@ body, [role='main'] {
 .h-nowrap { white-space: nowrap;}
 .h_ital {font-style: italic;}
 .h-ds__none {display: none;}
+.h-ds__block {display: block;}
+.h-ds__inline {display: inline;}
+.h-fade { opacity: 0.4; filter: blur(8px); transition: .88s filter linear;}
 .l-caro-design section {
     background: repeating-linear-gradient(45deg,#fafafa,#fafafa 24px,#ffffff 24px,#ffffff 48px);
 }
@@ -25,9 +28,7 @@ section.pfmf-grid {
     display: grid;
     grid-area: box-content;
     margin: 0 auto;
-    align-content: center;
-    QQQQgrid-gap: 6px;
-  
+    align-content: center;  
     box-sizing: border-box;
     width: 86%;
 }
