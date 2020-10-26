@@ -144,7 +144,7 @@
     <div>
 
         <article class="js-art__caro l-caro-design h-ds__none">
-            <section class="l-caro-design cert"
+            <section class="l-caro-design__cnt"
             data-caro-src="1">
                 <img src="https://neodigm.github.io/brand_logo_graphic_design/fantastic/discerning/1.jpg" alt="">
                 <img src="https://neodigm.github.io/brand_logo_graphic_design/fantastic/discerning/2.jpg" alt="">
@@ -174,7 +174,7 @@
             <section class="pfmf-grid pfmf-grid__60_40">
     <div>
         <article class="js-art__caro l-caro-design h-ds__none">
-            <section class="l-caro-design cert"
+            <section class="l-caro-design__cnt"
             data-caro-src="2">
                 <img src="https://www.thescottkrause.com/ux/typescript/engineer/wasm/hci_uc_san_diego_1.jpg" alt="">
                 <img src="https://www.thescottkrause.com/ux/typescript/engineer/wasm/hci_uc_san_diego_2.jpg" alt="">
@@ -218,12 +218,24 @@
     border-radius: 2px;
     box-shadow: 0px 2px 6px -2px rgba(164,164,164,0.6);
     background-color: #fff;
-    max-width: 176px;
+    min-width: 168px; max-width: 176px;
+    min-height: 260px;   
     text-decoration: none;
-
+}
+.l-blog-crd picture {
+    display: block;
+    overflow: hidden;
+    border-radius: 4px;
+    margin: 0; padding: 0;
+    width: 100%; height: auto;
 }
 .l-blog-crd img {
     width: 100%;
+    transition: all 1s;
+    margin: 0; padding: 0;
+}
+.l-blog-crd:hover img{
+  transform: scale(1.4);
 }
 .l-blog-crd p, .l-blog-crd h5, .l-blog-crd h6{
     color: #000;
@@ -235,7 +247,8 @@
 .l-blog-crd p {
     color: #6a6a6a;
     margin: 2px; padding: 1px;
-    font-size: 1.04em;
+    font-size: .96em;
+    line-height: .88;
 }
 .l-blog-crd h6 {
     border-top: solid 1px #8a8a8a;
@@ -246,7 +259,7 @@
     <div>
 
         <article class="js-art__caro h-ds__none">
-            <section class="cert">
+            <section class="l-caro-design__cnt">
             
                 
             
@@ -256,7 +269,7 @@
             
                 
             
-            </section>  
+            </section>
         </article>
 
     </div>
@@ -277,7 +290,7 @@ data-caro-target="3">
     <div>
 
         <article class="js-art__caro l-caro-design h-ds__none">
-            <section class="l-caro-design cert"
+            <section class="l-caro-design__cnt"
             data-caro-src="3">
                 <img src="video/abbott_inspire_it_iphone_ask_why.jpg" alt="">
                 <img src="video/about_the_author.jpg" alt="">
@@ -373,19 +386,34 @@ let fCycle = ( (_d, _q, _t) => {
         setTimeout( ()=>{ fCycle.tick(); }, 4);
     }
     return {
+        "pretick": ()=> {  
+            var eCycLive = _d.querySelector( "[data-at-cycle-live='true']" );
+            eCycLive.classList.add( "h-fade" );
+            eCycLive.dataset.atCycleLive = "false";
+        },
         "tick": ( bTimeout=true )=>{
             aCycCnt.map( (e)=>{
-                [...e.children].forEach( (eChild, nIndx) => {  
-                    eChild.style="display: " + (( nIndx === e.nCycCnt ) ? "inline": "none");
+                [...e.children].forEach( (eChild, nIndx) => {
+                eChild.classList.remove("h-ds__inline", "h-ds__none");
+                eChild.classList.remove( "h-fade" );
+                if( nIndx === e.nCycCnt ){
+                    eChild.classList.add( "h-ds__inline" );
+                    eChild.dataset.atCycleLive = "true";
+                }else{
+                    eChild.classList.add( "h-ds__none" );
+                }
                 });
                 e.nCycCnt = (e.nCycCnt === (e.children.length - 1)) ? 0 : (e.nCycCnt + 1);
             });
-            if( bTimeout ) setTimeout( ()=>{ fCycle.tick(); }, _t);
+            if( bTimeout ){
+                setTimeout( ()=>{ fCycle.pretick(); }, (_t - 880));
+                setTimeout( ()=>{ fCycle.tick(); }, _t);
+            }
         }
     }
-})(document, "[data-at-cycle]", 13496);
+})(document, "[data-at-cycle]", 13496 );
 
-let doCertCarousel = ( _d=document, qry=[".js-art__caro",".cert"]) => {
+let doCertCarousel = ( _d=document, qry=[".js-art__caro",".l-caro-design__cnt"]) => {
     let elSecCert = [].slice.call(_d.querySelectorAll( qry[0] )), nCnt=0;
     elSecCert.forEach(eCert => { 
         let elFlickCert = eCert.querySelector( qry[1] );
@@ -411,7 +439,7 @@ let doCertCarousel = ( _d=document, qry=[".js-art__caro",".cert"]) => {
                         }
                     });
                 })
-            }, (++nCnt * 176) );
+            }, (++nCnt * 1760) );
         }        
     });
 }
