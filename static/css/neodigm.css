@@ -1,6 +1,29 @@
 /* PFMF Color of the Year begin */
-.pfmf-coy-bg__1  {background-color: #edba08;}
+.pfmf-coy_bg__0  {background-color: #9BB7D4;}
+.pfmf-coy_bg__1  {background-color: #9BB7D4;}
+.pfmf-coy_bg__2  {background-color: #C74375;}
+.pfmf-coy_bg__3  {background-color: #BF1932;}
+.pfmf-coy_bg__4  {background-color: #7BC4C4;}
+.pfmf-coy_bg__5  {background-color: #E2583E;}
+.pfmf-coy_bg__6  {background-color: #53B0AE;}
+.pfmf-coy_bg__7  {background-color: #DECDBE;}
+.pfmf-coy_bg__8  {background-color: #9B1B30;}
+.pfmf-coy_bg__9  {background-color: #5A5B9F;}
+.pfmf-coy_bg__10 {background-color: #F0C05A;}
+.pfmf-coy_bg__11 {background-color: #45B5AA;}
+.pfmf-coy_bg__12 {background-color: #D94F70;}
+.pfmf-coy_bg__13 {background-color: #DD4124;}
+.pfmf-coy_bg__14 {background-color: #009473;}
+.pfmf-coy_bg__15 {background-color: #B163A3;}
+.pfmf-coy_bg__16 {background-color: #955251;}
+.pfmf-coy_bg__17 {background-color: #F7CAC9;}
+.pfmf-coy_bg__18 {background-color: #92A8D1;}
+.pfmf-coy_bg__19 {background-color: #88B04B;}
+.pfmf-coy_bg__20 {background-color: #5F4B8B;}
+.pfmf-coy_bg__21 {background-color: #FF6F61;}
+.pfmf-coy_bg__22 {background-color: #0F4C81;}
 /* PFMF Color of the Year end */
+
 /* Doc helpers begin */
 ::selection {
     color: #930;
