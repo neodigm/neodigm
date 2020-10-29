@@ -1,15 +1,34 @@
-{{ partial "megamenu.html" . }}
+{{ partial "head.html" . }}
+    <body>
+        <div style="height: 56px; margin: 0;"></div>
+        {{ partial "megamenu.html" . }}
+        <main role="main">
+            <picture class="hero-single">
+                <!--  1280 X 720  -->
+                <img class="" src="../{{.Page.Slug}}_tn.jpg" alt="{{ .Title }}">
+            </picture>
 
-single.html {{ .Title }}
+<p>
+    single.html {{ .Title }}
+</p>
 
-{{ .Content }}
+            <ul>
+                {{ range (.GetTerms "tags") }}
+                    <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
+                {{ end }}
+            </ul>
 
-sssssssssssssssssssssss
+            {{ .Content }}  
 
+            {{ partial "carousel_emerging_tech.html" . }}
 
-<ul>
-    {{ range (.GetTerms "tags") }}
-        <li><a href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
-   {{ end }}
-</ul>
+            {{ partial "pfmf_script.html" . }}
 
+        </main>
+
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400|Roboto+Slab:300,400" rel="stylesheet" type="text/css">
+
+{{ partial "jsonld_self.html" . }}
+
+    </body>
+</html>

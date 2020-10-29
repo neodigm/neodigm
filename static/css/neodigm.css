@@ -1,3 +1,5 @@
+/* PFMF Color of the Year begin */
+/* PFMF Color of the Year end */
 /* Doc helpers begin */
 ::selection {
     color: #930;
@@ -38,6 +40,9 @@ body, [role='main'] {
 .hero-img:hover {
     filter: none;
 }
+.hero-single {width: 76%;margin: 12px auto;display: block;}
+.hero-single img {width: 100%}
+
 /* Hero img end */
 
 /* Pan Fried Monkey Fisticufs grid begin */
@@ -102,12 +107,14 @@ section.pfmf-grid > div > article.pfmf-crd--black {
     user-select: none;
 }
 .megamenu[data-expand-state='false'] .megamenu__grd--card,
-.megamenu[data-expand-state='true']  .megamenu__grd--bottom, 
 .megamenu[data-expand-state='true']  .mm__vect--open,
 .megamenu[data-expand-state='false'] .mm__vect--close { display: none;}
 .megamenu[data-expand-state='false'] .mm__vect--open,
 .megamenu[data-expand-state='true']  .mm__vect--close { display: inline;}
 .megamenu[data-expand-state='true']  .megamenu__grd--top { box-shadow: none !important;}
+
+.megamenu[data-expand-state='true']  .megamenu__grd--bottom {visibility: hidden;}
+.megamenu[data-expand-state='false']  .megamenu__grd--bottom {visibility: visible;}
 
 .megamenu .megamenu__grd--top {
     position: fixed; top: 0;
