@@ -55,8 +55,11 @@ body, [role='main'] {
 /* Doc helpers end */
 
 /* Tag Chip begin */
-.l-tag-chip img {
+.l-tag-chip li {
     display: inline;
+}
+.l-tag-chip img {
+    border-radius: 50%;
     border: 4px; margin: 4px 8px;
 }
 /* Tag Chip end */
