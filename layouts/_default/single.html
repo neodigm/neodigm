@@ -12,7 +12,7 @@
     single.html {{ .Title }}
 </p>
 
-            <ul>
+            <ul class="l-tag-chip">
                 {{ range (.GetTerms "tags") }}
                     <li><a class="pfmf-coy_bg__1"
                         href="{{ .Permalink }}">{{ .LinkTitle }}</a></li>
