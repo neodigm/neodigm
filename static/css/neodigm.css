@@ -55,8 +55,9 @@ body, [role='main'] {
 /* Doc helpers end */
 
 /* Tag Chip begin */
-.l-tag-chip li {
+.l-tag-chip ul, .l-tag-chip li {
     display: inline;
+    text-align: center;
 }
 .l-tag-chip a {
     color: #fff;
