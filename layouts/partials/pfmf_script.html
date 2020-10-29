@@ -13,7 +13,12 @@
                     if( aAlt.length > 1 ){
                         aAlt = aAlt[ (Math.floor(Math.random() * (aAlt.length))) ];
                         if( e3.dataset.atChange ){
-                            e3[ e3.dataset.atChange ] = aAlt;
+                            if( e3.dataset.atChange == "class"){
+                                e3.classList.remove(...e3.classList);
+                                e3.classList.add( aAlt );
+                            }else{
+                                e3[ e3.dataset.atChange ] = aAlt;
+                            }
                         }else{
                             e3.innerHTML = aAlt;
                         }

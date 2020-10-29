@@ -58,9 +58,17 @@ body, [role='main'] {
 .l-tag-chip li {
     display: inline;
 }
-.l-tag-chip img {
-    border-radius: 50%;
-    border: 4px; margin: 4px 8px;
+.l-tag-chip a {
+    color: #000;
+    text-decoration: none;
+    border-radius: 24px;
+    padding: 4px 10px; margin: 4px;
+
+    cursor: pointer;
+    line-height: 1.1;
+    font-family: 'Roboto Condensed',sans-serif;
+    font-size: 14px;
+    letter-spacing: -.008em;
 }
 /* Tag Chip end */
 
