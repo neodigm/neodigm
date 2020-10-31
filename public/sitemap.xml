@@ -3,7 +3,12 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://thescottkrause.com/tags/accelerator/</loc>
+    <loc>https://thescottkrause.com/tags/accelerometer-api/</loc>
+    <lastmod>2020-10-24T15:30:23-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://thescottkrause.com/tags/audio-api/</loc>
     <lastmod>2020-10-24T15:30:23-05:00</lastmod>
   </url>
   
@@ -24,6 +29,31 @@
   
   <url>
     <loc>https://thescottkrause.com/categories/gameification/</loc>
+    <lastmod>2020-10-24T15:30:23-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://thescottkrause.com/tags/git/</loc>
+    <lastmod>2020-10-24T15:30:23-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://thescottkrause.com/tags/gltf/</loc>
+    <lastmod>2020-10-24T15:30:23-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://thescottkrause.com/tags/html-canvas/</loc>
+    <lastmod>2020-10-24T15:30:23-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://thescottkrause.com/tags/javascript/</loc>
+    <lastmod>2020-10-24T15:30:23-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://thescottkrause.com/tags/npm/</loc>
     <lastmod>2020-10-24T15:30:23-05:00</lastmod>
   </url>
   
@@ -53,7 +83,22 @@
   </url>
   
   <url>
-    <loc>https://thescottkrause.com/tags/web-crypto/</loc>
+    <loc>https://thescottkrause.com/tags/uv-mapping/</loc>
+    <lastmod>2020-10-24T15:30:23-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://thescottkrause.com/tags/web-crypto-api/</loc>
+    <lastmod>2020-10-24T15:30:23-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://thescottkrause.com/tags/webgl/</loc>
+    <lastmod>2020-10-24T15:30:23-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://thescottkrause.com/tags/webpack/</loc>
     <lastmod>2020-10-24T15:30:23-05:00</lastmod>
   </url>
   
