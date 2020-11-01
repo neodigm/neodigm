@@ -62,12 +62,16 @@ body, [role='main'] {
 }
 /* Doc helpers end */
 
-/* Tag Chip begin */
+/* Tag Chips and Categories begin */
+.l-cat-chip {
+    margin: 8px; padding : 8px;
+    text-align: center;
+}
 .l-tag-chip {
     margin: 8px; padding : 8px;
     text-align: center;
 }
-.l-tag-chip a {
+.l-tag-chip a, .l-tag-chip a {
     cursor: pointer;
     color: #fff;
     text-decoration: none;
@@ -83,7 +87,7 @@ body, [role='main'] {
 .l-tag-chip a:hover {
     filter: brightness(1.1);
   }
-/* Tag Chip end */
+/* Tag Chips and Categories end */
 
 /* Hero img begin */
 .hero-img {
