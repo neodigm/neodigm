@@ -1,3 +1,10 @@
+:root {
+    --wp-dark-mode-bg: #1b2836;
+    --wp-dark-mode-text: #fff;
+    --wp-dark-mode-link: #459be6;
+    --wp-dark-mode-btn: #2f3c4a;
+    --wp-dark-mode-border: #394654;
+}
 /* PFMF Color of the Year begin */
 .pfmf-coy_bg__0  {background-color: #EDBA08;}
 .pfmf-coy_bg__1  {background-color: #9BB7D4;}
@@ -36,6 +43,7 @@ body, [role='main'] {
 .h-center { text-align: center;}
 .h-nowrap { white-space: nowrap;}
 .h_ital {font-style: italic;}
+.h_quote {font-style: italic; border-left: solid 3px #777;padding-left: 12px}
 .h-ds__none {display: none;}
 .h-ds__block {display: block;}
 .h-ds__inline {display: inline;}
@@ -54,12 +62,16 @@ body, [role='main'] {
 }
 /* Doc helpers end */
 
-/* Tag Chip begin */
+/* Tag Chips and Categories begin */
+.l-cat-chip {
+    margin: 8px; padding : 8px;
+    text-align: center;
+}
 .l-tag-chip {
     margin: 8px; padding : 8px;
     text-align: center;
 }
-.l-tag-chip a {
+.l-tag-chip a, .l-tag-chip a {
     cursor: pointer;
     color: #fff;
     text-decoration: none;
@@ -75,7 +87,7 @@ body, [role='main'] {
 .l-tag-chip a:hover {
     filter: brightness(1.1);
   }
-/* Tag Chip end */
+/* Tag Chips and Categories end */
 
 /* Hero img begin */
 .hero-img {
@@ -307,11 +319,12 @@ section.pfmf-grid > div > article.pfmf-crd--black {
 
 /* type type type, and type begin */
 .readable__doc {
-    color: #000;
+    color: #484848;
     margin: 4px; padding: 2px;
-    font-family: 'Roboto Condensed', sans-serif;
-    font-weight: 300;
-    font-size: 1.1em;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 1.12em;
+    line-height: 1.5;
 }
 .readable__doc--white {
     color: #fff;
