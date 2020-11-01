@@ -6,12 +6,11 @@
             <picture class="hero-single" role="banner">
                 <!--  1280 X 720  -->
                 <img class="" src="../{{.Page.Slug}}_tn.jpg" alt="{{ .Title }}">
+                <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
             </picture>
 
-<h1 class="readable__title h-center">
-    {{ .Title }}
-</h1>
-<p class="readable__doc h-center">{{ dateFormat "Monday, Jan 2, 2006" .Date }}</p>
+            <h1 class="readable__title h-center"> {{ .Title }} </h1>
+            <p class="readable__doc h-center">{{ dateFormat "Monday, Jan 2, 2006" .Date }}</p>
 
             {{ .Content }}  
 
