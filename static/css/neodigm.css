@@ -62,6 +62,10 @@ body, [role='main'] {
 }
 /* Doc helpers end */
 
+/* Caption Vivid Vect begin */
+.l-capt__vect img {width: 66px; height: 66px;}
+/* Caption Vivid Vect begin */
+
 /* Tag Chips and Categories begin */
 .l-cat-chip {
     position: relative;
