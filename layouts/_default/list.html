@@ -2,23 +2,23 @@
     <body>
         {{ partial "megamenu.html" . }}
         <main role="main">
-LISTs page {{ .Title }}
-<ul>
-    {{ range .Pages }}
-        <li>
-            <a href="{{.Permalink}}">{{.Date.Format "2006-01-02"}} | {{.Title}}</a>
-            <hr>
-        </li>
-    {{ end }}
-    </ul>
+            <h1 class="readable__caption h-center"> {{ .Title }} </h1>
+            <ul>
+            {{ range .Pages }}
+                <li>
+                    <a href="{{.Permalink}}">{{.Date.Format "2006-01-02"}} | {{.Title}}</a>
+                    <hr>
+                </li>
+            {{ end }}
+            </ul>
         </main>
 
-<link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300,400|Roboto+Slab:300,400" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300,400|Roboto+Slab:300,400" rel="stylesheet" type="text/css">
 
-<script>
-    oD.addEventListener( "contextmenu", function(e) { console.log("playAudioFile( 7 )"); });  //  On right-click
-    console.log("%c Scott C. Krause ⚡ Problem Solver and Visual Storyteller", "background: #000; color: #f4dc5e; font-size: 28px");
-</script>
-{{ partial "jsonld_self.html" . }}
+        <script>
+            oD.addEventListener( "contextmenu", function(e) { console.log("playAudioFile( 7 )"); });  //  On right-click
+            console.log("%c Scott C. Krause ⚡ Problem Solver and Visual Storyteller", "background: #000; color: #f4dc5e; font-size: 28px");
+        </script>
+        {{ partial "jsonld_self.html" . }}
     </body>
 </html>
