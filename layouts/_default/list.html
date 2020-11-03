@@ -11,6 +11,38 @@
                 </li>
             {{ end }}
             </ul>
+
+
+            <section class="pfmf-grid pfmf-grid__100">
+                <div>
+            
+                    <article class="js-art__caro h-ds__none">
+                        <section class="l-caro-design__cnt">
+                        {{ range .Pages }}
+                            {{ if (eq .File.Dir "emerging_tech/" ) }}
+                            <a class="l-blog-crd"href="{{.Permalink}}">
+                            <section>
+                                <picture>
+                                    <!--  1280 X 720  -->
+                                    <img src="/emerging_tech/{{ .Slug}}_tn.webp" alt="{{ .Title}}">
+                                </picture>
+                                <p>Emerging Tech</p>
+                                <!-- {{.Title}} | {{.File.Dir}} -->
+                                <h5> {{ .Title}} </h5>
+                                <h6> {{ .Summary}} </h6>
+                                <p>{{.Date.Format "2006-01-02"}}</p>
+                            </section>
+                            </a>
+                            {{end}}
+                        {{ end }}
+                        </section>
+                    </article>
+            
+                </div>
+            </section>
+
+
+
         </main>
 
         <link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300,400|Roboto+Slab:300,400" rel="stylesheet" type="text/css">
