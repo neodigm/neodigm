@@ -3,15 +3,6 @@
         {{ partial "megamenu.html" . }}
         <main role="main">
             <h1 class="readable__caption h-center"> {{ .Title }} </h1>
-            <ul>
-            {{ range .Pages }}
-                <li>
-                    <a href="{{.Permalink}}">{{.Date.Format "2006-01-02"}} | {{.Title}}</a>
-                    <hr>
-                </li>
-            {{ end }}
-            </ul>
-
 
             <section class="pfmf-grid pfmf-grid__100">
                 <div>
@@ -44,6 +35,8 @@
 
 
         </main>
+
+        {{ partial "pfmf_script.html" . }}
 
         <link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300,400|Roboto+Slab:300,400" rel="stylesheet" type="text/css">
 
