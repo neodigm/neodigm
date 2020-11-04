@@ -96,7 +96,6 @@
         });
     }
     doCertCarousel();
-
     let doVividCaption = ( (_d, _q, _t) => {  //  Inject Vivid Vector Skull
         const VIVPATH = "https://neodigm.github.io/vivid_vector_alphabet/wasm/vv";
         let aVivCnt = [..._d.querySelectorAll( _q )];
@@ -105,7 +104,7 @@
             "tick": ()=>{
                 let sMU = "";
                 aVivCnt.forEach( (eVivCnt) => {
-                    if(eVivCnt.atVivid !== eVivCnt.dataset.atVivid){
+                    if(eVivCnt.atVivid !== eVivCnt.dataset.atVivid){ // Data atr changed
                         Array.from( eVivCnt.dataset.atVivid ).filter(( sChr )=>{
                             if( sChr == " ") sChr = "space";
                             sMU += "<img src='" + VIVPATH + sChr.toLowerCase() + ".svg'>";
