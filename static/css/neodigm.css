@@ -63,7 +63,13 @@ body, [role='main'] {
 /* Doc helpers end */
 
 /* Caption Vivid Vect begin */
-.l-capt__vect img {width: 66px; height: 66px;}
+.l-capt__vect img {width: 42px;}
+@media only screen and (min-width:48.1em) and (max-width:62em){/* med */
+    .l-capt__vect img {width: 66px;}
+}
+@media only screen and (min-width:62.1em){/* lg */
+    .l-capt__vect img {width: 88px;}
+}
 /* Caption Vivid Vect begin */
 
 /* Tag Chips and Categories begin */
