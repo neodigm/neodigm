@@ -100,21 +100,15 @@
     let doVividCaption = ( (_d, _q, _t) => {  //  Inject Vivid Vector Skull
         const VIVPATH = "https://neodigm.github.io/vivid_vector_alphabet/wasm/vv";
         let aVivCnt = [..._d.querySelectorAll( _q )];
-        if( aVivCnt ){
-
-            setTimeout( ()=>{ doVividCaption.tick(); }, 32);
-
-        }
+        if( aVivCnt ){ setTimeout( ()=>{ doVividCaption.tick(); }, 32); }
         return {
             "tick": ()=>{
                 let sMU = "";
-        console.log( "tick" );
                 aVivCnt.forEach( (eVivCnt) => {
                     if(eVivCnt.atVivid !== eVivCnt.dataset.atVivid){
-        console.log( eVivCnt.dataset.atVivid );
                         Array.from( eVivCnt.dataset.atVivid ).filter(( sChr )=>{
-                            sMU += "<img src='" + VIVPATH + sChr + ".svg'>";
-        console.log( sChr );
+                            if( sChr == " ") sChr = "space";
+                            sMU += "<img src='" + VIVPATH + sChr.toLowerCase() + ".svg'>";
                         });
                         eVivCnt.innerHTML = sMU;
                         eVivCnt.atVivid = eVivCnt.dataset.atVivid;
@@ -124,6 +118,5 @@
             }
         };
     })(document, "[data-at-vivid]", 13676 );
-
 
 </script>

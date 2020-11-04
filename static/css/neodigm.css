@@ -60,6 +60,7 @@ body, [role='main'] {
 .rot180 {
     transform: rotate(180deg);
 }
+.l-mega-place-holder {height: 56px; margin: 0;}
 /* Doc helpers end */
 
 /* Caption Vivid Vect begin */
