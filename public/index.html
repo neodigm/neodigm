@@ -53,7 +53,7 @@
 <script defer src="https://neodigm.github.io/pan-fried-monkey-fisticuffs/dist/panFriedMonkeyFisticuffs.min.js"></script>
     </head>
     <body>
-        <div style="height: 56px; margin: 0;"></div>
+        <div class="l-mega-place-holder"></div>
         <section class="megamenu" data-expand-state="false">
         <header>
             <section class="megamenu__grd--top">
@@ -210,10 +210,7 @@
             data-caro-target="2"></article>
     </div>
 </section>
-            <style> 
-
-</style>
-<section class="pfmf-grid pfmf-grid__100">
+            <section class="pfmf-grid pfmf-grid__100">
     <div>
 
         <article class="js-art__caro h-ds__none">
@@ -452,7 +449,30 @@ data-caro-target="3">
         });
     }
     doCertCarousel();
-    </script>
+
+    let doVividCaption = ( (_d, _q, _t) => {  
+        const VIVPATH = "https://neodigm.github.io/vivid_vector_alphabet/wasm/vv";
+        let aVivCnt = [..._d.querySelectorAll( _q )];
+        if( aVivCnt ){ setTimeout( ()=>{ doVividCaption.tick(); }, 32); }
+        return {
+            "tick": ()=>{
+                let sMU = "";
+                aVivCnt.forEach( (eVivCnt) => {
+                    if(eVivCnt.atVivid !== eVivCnt.dataset.atVivid){ 
+                        Array.from( eVivCnt.dataset.atVivid ).filter(( sChr )=>{
+                            if( sChr == " ") sChr = "space";
+                            sMU += "<img src='" + VIVPATH + sChr.toLowerCase() + ".svg'>";
+                        });
+                        eVivCnt.innerHTML = sMU;
+                        eVivCnt.atVivid = eVivCnt.dataset.atVivid;
+                    }
+                } );
+                setTimeout( ()=>{ doVividCaption.tick(); }, _t);
+            }
+        };
+    })(document, "[data-at-vivid]", 13664 );
+
+</script>
 
         </main>
 
