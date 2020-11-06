@@ -1,7 +1,7 @@
 :root {
     --wp-dark-mode-bg: #1b2836;
     --wp-dark-mode-text: #fff;
-    --wp-dark-mode-link: #459be6;
+    --wp-dark-mode-link: #5A5B9F;
     --wp-dark-mode-btn: #2f3c4a;
     --wp-dark-mode-border: #394654;
 }
@@ -48,7 +48,7 @@ body, [role='main'] {
 .h-ds__block {display: block;}
 .h-ds__inline {display: inline;}
 .h-fade { opacity: 0.4; filter: blur(8px); transition: .88s filter linear;}
-.l-caro-design section {
+.l-caro-design > article {
     background: repeating-linear-gradient(45deg,#fafafa,#fafafa 24px,#ffffff 24px,#ffffff 48px);
 }
 .l-caro-design section img {
