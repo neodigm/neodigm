@@ -179,8 +179,6 @@
 "year": "2019", "level": 6,"desk": ""},
 {"name": "Google Analytics", "target":[3,4], "value": 77, "stackdebt": "0",
 "year": "2019", "level": 6,"desk": ""},
-{"name": "Google Optimize", "target":[3,4,5], "value": 77, "stackdebt": "1",
-"year": "2019", "level": 6,"desk": ""},
 {"name": "Google Places API", "target":[3,11], "value": 88, "stackdebt": "0",
 "year": "2019", "level": 6,"desk": ""},
 {"name": "Google Tag Manager", "target":[3,11], "value": 99, "stackdebt": "0",
