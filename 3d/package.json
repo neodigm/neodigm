@@ -1,0 +1,24 @@
+{
+  "name": "arcanus-3-build",
+  "version": "0.5.5",
+  "description": "Generate 1 universal Three.js file from modules via webpack",
+  "main": "a55_3d_template.js",
+  "scripts": {
+    "build": "webpack --config webpack.config.js"
+  },
+  "keywords": [
+    "3d",
+    "a55",
+    "webpack"
+  ],
+  "author": "SCK neodigm",
+  "license": "ISC",
+  "dependencies": {
+    "three": "^0.121.1"
+  },
+  "devDependencies": {
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0"
+  }
+}
