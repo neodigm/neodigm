@@ -178,9 +178,7 @@
                     </article>        
                 </div>
             </section>
-
             <p>This is totally doable for you because you are a smart developer, designer, and magical unicorn.</p>
-
             <p class="h_ital">Project Overview</p>
             <p>We will write custom JavaScript that will animate the dice by changing 3D properties exposed by the Three.js framework. This script will also implement the following browser based APIs: Accelerometer, Audio, Vibration, Web Crypto, and WebGL (via Three.js). Hopefully the end result will behave more like a native app than a web page.</p>
         </article>        
@@ -214,7 +212,6 @@
     </div>
 </section>
 
-
 <section class="pfmf-grid pfmf-grid__60_40">
     <div>
         <article class="pfmf-crd--black h-center"><p class="readable__doc readable__doc--white"
@@ -231,6 +228,57 @@
                 <img src="../gameification-threejs-webcrypto-accelerator-blender-gltf_2.webp" alt="">
                 <img src="../gameification-threejs-webcrypto-accelerator-blender-gltf_3.webp" alt="">
             </section>  
+        </article>
+    </div>
+</section>
+
+<section class="pfmf-grid pfmf-grid__30_70 readable__doc">
+    <div>
+        <article class="pfmf-crd--black h-center"><p class="readable__doc readable__doc--white"
+            data-at="Configure Three.js|Command Line">Install Three.js</p></article>
+        <article style="padding: 12px 12px;">
+            <details>
+                <summary>NPM Install Command</summary>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#a6e22e">npm</span> <span style="color:#a6e22e">install</span> <span style="color:#f92672">--</span><span style="color:#a6e22e">save</span> <span style="color:#a6e22e">three</span>
+</code></pre></div>
+            </details>
+            <details>
+                <summary>WebPack Config</summary>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">path</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;path&#39;</span>)
+
+<span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">entry</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;./a55_3d_template.js&#39;</span>,
+  <span style="color:#a6e22e">output</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">path</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">resolve</span>(<span style="color:#a6e22e">__dirname</span>, <span style="color:#e6db74">&#39;../static/js&#39;</span>),
+    <span style="color:#a6e22e">filename</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;a55_3d.js&#39;</span>,
+  },
+  <span style="color:#a6e22e">devServer</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">publicPath</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;/public/&#39;</span>,
+    <span style="color:#a6e22e">compress</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+    <span style="color:#a6e22e">port</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">9000</span>,
+  },
+}
+</code></pre></div>
+            </details>
+            <details>
+                <summary>a55_3d_template.js</summary>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">import</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">as</span> <span style="color:#a6e22e">THREE</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;three&#39;</span>
+
+<span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">OrbitControls</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;three/examples/jsm/controls/OrbitControls.js&#39;</span>;
+<span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">GLTFLoader</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;three/examples/jsm/loaders/GLTFLoader&#39;</span>;
+
+window.<span style="color:#a6e22e">o3</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">THREE</span>;
+window.<span style="color:#a6e22e">o3loadr</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">GLTFLoader</span>;
+window.<span style="color:#a6e22e">o3orbit</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">OrbitControls</span>;
+</code></pre></div>
+            </details>
+        </article>
+    </div>
+    <div>
+        <article style="padding: 12px 12px;">
+            <p class="h_ital">Rendering 3D object in the browser - three.js</p>
+            <p>Three.js is a JavaScript framework for implementing WebGL in the browser. It is a popular way to make high-touch experiences on the web.</p>
+            <p>You will need a recent version of Node.js and NPM installed. <span class="h_ital">This is kind of a must for any modern knowledge worker.</span> Install Three.js via the NPM command then make the required changes to the webpack and template config files.</p>
         </article>
     </div>
 </section>
