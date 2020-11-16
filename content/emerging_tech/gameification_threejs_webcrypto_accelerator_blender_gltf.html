@@ -74,9 +74,7 @@ tags:
                     </article>        
                 </div>
             </section>
-
             <p>This is totally doable for you because you are a smart developer, designer, and magical unicorn.</p>
-
             <p class="h_ital">Project Overview</p>
             <p>We will write custom JavaScript that will animate the dice by changing 3D properties exposed by the Three.js framework. This script will also implement the following browser based APIs: Accelerometer, Audio, Vibration, Web Crypto, and WebGL (via Three.js). Hopefully the end result will behave more like a native app than a web page.</p>
         </article>        
@@ -110,7 +108,6 @@ tags:
     </div>
 </section>
 
-
 <section class="pfmf-grid pfmf-grid__60_40">
     <div>
         <article class="pfmf-crd--black h-center"><p class="readable__doc readable__doc--white"
@@ -127,6 +124,60 @@ tags:
                 <img src="../gameification-threejs-webcrypto-accelerator-blender-gltf_2.webp" alt="">
                 <img src="../gameification-threejs-webcrypto-accelerator-blender-gltf_3.webp" alt="">
             </section>  
+        </article>
+    </div>
+</section>
+
+<section class="pfmf-grid pfmf-grid__30_70 readable__doc">
+    <div>
+        <article class="pfmf-crd--black h-center"><p class="readable__doc readable__doc--white"
+            data-at="Configure Three.js|Command Line">Install Three.js</p></article>
+        <article style="padding: 12px 12px;">
+            <details>
+                <summary>NPM Install Command</summary>
+{{< highlight JavaScript >}}
+npm install --save three
+{{< /highlight >}}
+            </details>
+            <details>
+                <summary>WebPack Config</summary>
+{{< highlight javascript >}}
+const path = require('path')
+
+module.exports = {
+  entry: './a55_3d_template.js',
+  output: {
+    path: path.resolve(__dirname, '../static/js'),
+    filename: 'a55_3d.js',
+  },
+  devServer: {
+    publicPath: '/public/',
+    compress: true,
+    port: 9000,
+  },
+}
+{{< /highlight >}}
+            </details>
+            <details>
+                <summary>a55_3d_template.js</summary>
+{{< highlight javascript >}}
+import * as THREE from 'three'
+
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
+
+window.o3 = THREE;
+window.o3loadr = GLTFLoader;
+window.o3orbit = OrbitControls;
+{{< /highlight >}}
+            </details>
+        </article>
+    </div>
+    <div>
+        <article style="padding: 12px 12px;">
+            <p class="h_ital">Rendering 3D object in the browser - three.js</p>
+            <p>Three.js is a JavaScript framework for implementing WebGL in the browser. It is a popular way to make high-touch experiences on the web.</p>
+            <p>You will need a recent version of Node.js and NPM installed. <span class="h_ital">This is kind of a must for any modern knowledge worker.</span> Install Three.js via the NPM command then make the required changes to the webpack and template config files.</p>
         </article>
     </div>
 </section>
