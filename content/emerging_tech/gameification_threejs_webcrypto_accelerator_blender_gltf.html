@@ -178,6 +178,12 @@ window.o3orbit = OrbitControls;
             <p class="h_ital">Rendering 3D object in the browser - three.js</p>
             <p>Three.js is a JavaScript framework for implementing WebGL in the browser. It is a popular way to make high-touch experiences on the web.</p>
             <p>You will need a recent version of Node.js and NPM installed. <span class="h_ital">This is kind of a must for any modern knowledge worker.</span> Install Three.js via the NPM command then make the required changes to the webpack and template config files.</p>
+            <p>The objective is to have Webpack rollup only the JavaScript we need into one JS file that we can load like this:</p>
+            <p>
+{{< highlight javascript >}}
+ <script type="module" src ="/js/a55_3d.js"></script>
+{{< /highlight >}}
+            </p>
         </article>
     </div>
 </section>
