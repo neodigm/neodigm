@@ -184,6 +184,67 @@ window.o3orbit = OrbitControls;
  <script type="module" src ="/js/a55_3d.js"></script>
 {{< /highlight >}}
             </p>
+
+<pre><code class="javascript">
+var o3 = null;
+var o3Config = (function(){
+    var camera, scene, renderer, controls;
+    return {
+    "autoSpin": function(){
+        controls.update();
+        requestAnimationFrame( o3Config.autoSpin );
+        renderer.render( scene, camera );
+    },
+    "spin": function(){
+        renderer.render( scene, camera );
+    },
+    "init": function( e3ds ){
+            var sPath = e3ds.dataset.thr3Load, sW = e3ds.dataset.thr3W, sH = e3ds.dataset.thr3H;
+                scene = new o3.Scene();/* Scene */
+
+                var pointLightOrange = new o3.PointLight( 0xC9F4ED, 2, 800 );
+                pointLightOrange.position.set( -4000, -400, -66 ).normalize();
+                scene.add( pointLightOrange );
+
+                camera = new o3.PerspectiveCamera( 4, 1, 1, 1000 );/* Camera */
+                camera.position.x = 56; camera.position.y = 56; camera.position.z = 56;
+                scene.add( camera );
+                camera.add( pointLightOrange ); // Add light to camera
+
+                renderer = new o3.WebGLRenderer( { antialias: true, alpha: true } );/* Renderer */
+                renderer.setPixelRatio( window.devicePixelRatio );
+                renderer.setSize( sW, sH );
+                e3ds.appendChild( renderer.domElement );
+
+                var loader = new o3loadr();/* Loader */
+                loader.load( sPath , function ( gltf ) {
+                scene.add( gltf.scene );
+                o3Config.spin();
+                } );
+
+                controls = new o3orbit( camera, renderer.domElement );/* Controls */
+                controls.autoRotate = true; controls.autoRotateSpeed = 9.4;
+                controls.addEventListener( 'change', o3Config.spin );
+                controls.update();
+                setTimeout( o3Config.autoSpin, 256);
+
+                window.addEventListener( 'resize', onWindowResize, false );
+                function onWindowResize() {
+                camera.aspect = 1;
+                camera.updateProjectionMatrix();
+                renderer.setSize( sW, sH );
+                o3Config.spin();
+                }
+            }
+    }
+})();
+var e3 = document.querySelector("[data-thr3-load]");
+if( e3 ) { // Delay 3d call if still null
+    setTimeout(function(){
+    o3Config.init( e3 );
+    }, (o3===null) ? 3800 : 800 )
+}
+            </code></pre>
         </article>
     </div>
 </section>
