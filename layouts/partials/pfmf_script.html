@@ -138,7 +138,7 @@ if( e3 ) { // Delay 3d call if still null
     
     let doCertCarousel = ( _d=document, qry=[".js-art__caro",".l-caro-design__cnt"]) => {
         let elSecCert = [].slice.call(_d.querySelectorAll( qry[0] )), nCnt=0;
-        elSecCert.forEach(eCert => { // Lazy Load Carousels and wire events
+        elSecCert.forEach(eCert => { // Lazy Load Carousels and wire DOM events
             let elFlickCert = eCert.querySelector( qry[1] );
             if( eCert && elFlickCert && Flickity ){
                 setTimeout(function(){
