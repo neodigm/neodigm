@@ -4,7 +4,7 @@ href="/css/rainbow.css">
 <script src="/js/highlight.pack.js"></script>
 <script>
     hljs.initHighlightingOnLoad();
-    
+
 </script>
 
 <script type="module" src ="/js/a55_3d.js"></script>
@@ -32,7 +32,7 @@ var o3Config = (function(){
               camera = new o3.PerspectiveCamera( 4, 1, 1, 1000 );/* Camera */
               camera.position.x = 56; camera.position.y = 56; camera.position.z = 56;
               scene.add( camera );
-              camera.add( pointLightOrange ); // Add light to camera
+              camera.add( pointLightOrange ); // Point light with camera
 
               renderer = new o3.WebGLRenderer( { antialias: true, alpha: true } );/* Renderer */
               renderer.setPixelRatio( window.devicePixelRatio );
