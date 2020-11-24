@@ -261,7 +261,6 @@ section.pfmf-grid > div > article.pfmf-crd--black {
 .megamenu[data-expand-state='true']  .megamenu__grd--bottom {visibility: hidden;}
 .megamenu[data-expand-state='false']  .megamenu__grd--bottom {visibility: visible;}
 
-
 .megamenu .megamenu__grd--top {
     position: fixed; top: 0;
     background-color: #fff;
