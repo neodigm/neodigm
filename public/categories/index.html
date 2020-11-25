@@ -144,7 +144,18 @@ href="/css/rainbow.css">
 <script src="/js/highlight.pack.js"></script>
 <script>
     hljs.initHighlightingOnLoad();
+</script>
 
+<script type="module" src ="/js/tiny.js"></script>
+<script>
+    
+    var tinytext = require('./lib/tiny');
+    module.exports = function(text) {
+        return text.split('').map(function(a) {
+        return tinytext.hasOwnProperty(a) ? tinytext[a] : a;
+        }).join('');
+    };
+console.log( tinytext("ducks"));
 </script>
 
 <script type="module" src ="/js/a55_3d.js"></script>
