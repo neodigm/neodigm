@@ -30,7 +30,7 @@ tags:
     <div>
         <article style="padding: 12px 12px;">
             <p>In order for improvements to stand the test of time, there must be a company culture that supports accessibility and be willing to make it a requirement even when faced with competing priorities. For example, imagine explaining to an art director that the brand colors cannot be perceived by the colorblind. Imagine telling an SEO consultant that there are too many characters in an alt attribute. These can be awkward conversations if a11y is not prioritized within the organization.</p>
-            <p class="h_quote">Every tier of management must embrace the “engage everyone” mantra because it’s simply too easy to justify cutting corners. The website is not successful until it is also accessible.</p>
+            <p class="h_quote">Every tier of management must embrace the “engage everyone” mantra because it’s simply too easy to justify cutting corners. The website is not successful until it is accessible.</p>
             <p>Large eCom sites are particularly challenging because they are always changing. Product information and imagery are managed within a CMS, therefore, there is always a risk of newly-added content being inaccessible. Ideally this situation would be addressed with a cyclical audit. That is a web crawler that captures a11y issues throughout the entire site. Similarly an a11y audit could run as part of automated unit testing upon software build or check in.</p>
             <p>Finding a11y issues during development is preferred but keep in mind the developers will require more time to become proficient in this discipline and the project estimates should reflect that.</p>
         </article>
@@ -52,7 +52,15 @@ tags:
 <section class="pfmf-grid pfmf-grid__100 readable__doc">
     <div>
         <article style="padding: 12px 12px;">
-            <p>Another challenge for eCom sites is interaction complexity. Components such as carousels, mini shopping carts, and promotional popup dialogs are transitional and difficult to describe to the visually impaired. The fact that these interactions are actuated with JavaScript makes it impractical to test automatically. I’ve found the best way to find and fix these types of interactions is with a screen reader and then applying state-full ARIA patterns attributes as needed.</p>
+            <p class="pfmf-coy__2">Before I get into the technical details I want to emphasize what I consider the most important a11y skill for a front-end engineer - Succinct communication. You must be able to communicate to a larger team exactly why a particular element is failing WCAG success criteria and provide examples of how to fix it. Don’t fix it for them but help your team understand how to identify the issue and fix it.</p>
+        </article>
+    </div>
+</section>
+
+<section class="pfmf-grid pfmf-grid__100 readable__doc">
+    <div>
+        <article style="padding: 12px 12px;">
+            <p>The most significant technical challenges for eCom sites involve interaction complexity. Micro-interaction components such as carousels, mini shopping carts, pinch zoom, and promotional popup dialogs are transitional and difficult to describe to the visually impaired. The fact that these interactions are actuated with JavaScript makes it impractical to test automatically. I’ve found the best way to find and fix these types of interactions is with a screen reader and then applying state-full ARIA patterns attributes as needed.</p>
         </article>
     </div>
 </section>
