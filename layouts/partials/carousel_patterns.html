@@ -1,8 +1,9 @@
-<section class="pfmf-grid pfmf-grid__100">
-    <div class="l-caro-design">
-
+<section class="pfmf-grid pfmf-grid__60_40">
+    <div>
+            
         <article class="js-art__caro h-ds__none">
-            <section class="l-caro-design__cnt">
+            <section class="l-caro-design__cnt"
+            data-caro-src="8">
             {{ range .Site.Pages }}
                 {{ if (eq .File.Dir "patterns/" ) }}
                 <a class="l-blog-crd" href="{{.Permalink}}">
@@ -22,6 +23,14 @@
             {{ end }}
             </section>
         </article>
+
+    </div>
+    <div>
+
+        <article class="pfmf-crd--black h-center"><p class="readable__doc readable__doc--white">Branding, Identity & Logo Design</p></article>
+        <article><img src="https://neodigm.github.io/brand_logo_graphic_design/fantastic/discerning/24.webp" alt="WASM Golang JavaScript Vue"
+            style="height: auto; width: 100%;"
+            data-caro-target="8"></article>
 
     </div>
 </section>
