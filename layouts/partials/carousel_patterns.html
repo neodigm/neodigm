@@ -1,0 +1,27 @@
+<section class="pfmf-grid pfmf-grid__100">
+    <div class="l-caro-design">
+
+        <article class="js-art__caro h-ds__none">
+            <section class="l-caro-design__cnt">
+            {{ range .Site.Pages }}
+                {{ if (eq .File.Dir "patterns/" ) }}
+                <a class="l-blog-crd" href="{{.Permalink}}">
+                <section>
+                    <picture>
+                        <!--  1280 X 720  -->
+                        <img src="/patterns/{{.Page.Slug}}_tn.webp" alt="{{.Page.Title}}">
+                    </picture>
+                    <p>Patterns</p>
+                    <!-- {{.Title}} | {{.File.Dir}} -->
+                    <h5> {{.Page.Title}} </h5>
+                    <h6> {{.Page.Summary}} </h6>
+                    <p>{{.Date.Format "2022-03-15"}}</p>
+                </section>
+                </a>
+                {{end}}
+            {{ end }}
+            </section>
+        </article>
+
+    </div>
+</section>
