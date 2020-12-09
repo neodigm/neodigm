@@ -12,4 +12,42 @@ tags:
 - Data Viz
 - JavaScript
 ---
+{{< highlight JavaScript >}}
+// Desc: Asynchronous recursive crawl report the total number of products by category
+// Usage: catCount.init();
 
+var catCount = (function(_d,_q){
+    "use strict";
+    let aSub = [];
+    console.clear();
+
+    
+    return {
+        init: function(){ // Get ref to all product categories in the left nav
+            aSub = [].slice.call( _d.querySelectorAll( _q ) ).filter(function( el ){
+                return (( el.firstChild.nodeValue ) && ( el.href ));
+            } );
+            aSub.forEach( function( elLink ){
+                if( elLink ) catCount.asyncTotal( elLink );
+            } );
+        },
+        parse: function( _Name, _Contents ){
+            let aTotl = _Contents.split("sizeTotalNumRecs");
+            if( aTotl[1].split('"')[2] ){
+                 console.log( _Name, aTotl[1].split('"')[2]);
+            }
+            return true;
+        },
+        asyncTotal: function( _elLink ){
+            let oXhr = new XMLHttpRequest();
+            oXhr.open("GET", _elLink.href, true);
+            oXhr.onreadystatechange = function(){
+                if( this.readyState!==4 || this.status!==200 ) return;
+                catCount.parse( _elLink.firstChild.nodeValue, this.responseText );
+            };
+            oXhr.send();
+        }
+    }
+
+})(document, "LI.item nav > a" );
+{{< /highlight >}}
