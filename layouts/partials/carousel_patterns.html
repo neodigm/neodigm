@@ -3,8 +3,8 @@
             
         <article class="js-art__caro h-ds__none">
             <section class="l-caro-design__cnt h-bg__stripe"
-            data-caro-src="8">
-            {{ range .Site.Pages }}
+            data-caro-src="256">
+           {{ range .Site.Pages }}
                 {{ if (eq .File.Dir "patterns/" ) }}
                 <a class="l-blog-crd" href="{{.Permalink}}">
                 <section>
@@ -32,13 +32,10 @@
 
         <article class="pfmf-crd--black h-center"><p class="readable__doc readable__doc--white"
             data-at="Source Code & Snippets|Scripts & Gists|Real-world vetted code|Functional Functions|Best Practices & Patterns">Source Code & Snippets</p></article>
-        <article><span
-            data-caro-target="8">
+        <article><pre
+            data-caro-target="256">
 
-
-        </span>
-                        
-
+        </pre>
         </article>
     </div>
 </section>

@@ -194,6 +194,7 @@ if( e3 ) { // Delay 3d call if still null
                             sPar = sPar.parentElement.parentElement.dataset.caroSrc;
                             sPar = _d.querySelector("[data-caro-target='"+ sPar +"']");
                             if(sPar){
+    console.log("-------- | " + sPar.type );
                                 if( sPar.type === "video/mp4" ){
                                     sPar.parentElement.src = ev.currentTarget.src.replace(".jpg", ".mp4");
                                 }else{
@@ -230,5 +231,5 @@ if( e3 ) { // Delay 3d call if still null
         };
     })(document, "[data-at-vivid]", 12664 );
 
-    
+
 </script>
