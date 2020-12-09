@@ -355,6 +355,8 @@
 "year": "2019", "level": 6,"desk": ""},
 {"name": "Service Workers", "target":[11,12], "value": 88, "stackdebt": "0",
 "year": "2019", "level": 6,"desk": ""},
+{"name": "Session Replay", "target":[3,4], "value": 88, "stackdebt": "0",
+"year": "2019", "level": 6,"desk": "Mouseflow UX research"},
 {"name": "Skunkworks", "target":[1,2,13], "value": 77, "stackdebt": "0",
 "year": "2019", "level": 6,"desk": "An enriched environment that is intended to help a small group design a new idea by escaping routine organizational procedures"},
 {"name": "SOAP", "target":[9,11], "value": 33, "stackdebt": "0",
