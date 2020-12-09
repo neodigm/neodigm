@@ -13,5 +13,43 @@ tags:
 - JavaScript
 ---
 {{< highlight JavaScript >}}
-alert("ducks!");
+closestAirports = (function(_d){
+    return {
+      "find": function(nLat, nLon, objPorts, nRadius){
+        if(nLat && nLon && objPorts){
+          var arrPorts = [];
+          for (var prop in objPorts) { // Sort Object
+            if (objPorts.hasOwnProperty(prop)) {
+              var lat = objPorts[prop].geoCode.split(",")[0];
+              var lon = objPorts[prop].geoCode.split(",")[1];
+              arrPorts.push({
+                'key': prop, 'lat': lat, 'lon': lon,
+                "dist": getDistance(lat, lon, nLat, nLon),
+                "formattedAirport": objPorts[prop].formattedAirport
+              });
+            }
+          }
+          arrPorts.sort(function(a, b){
+            return a.dist - b.dist;
+          });
+          return arrPorts.filter(function(aP){
+            return (aP.dist <= nRadius);
+          });
+        }
+      }
+    };
+})(document);
+
+function getDistance(lat1, lon1, lat2, lon2) {
+  var radlat1 = Math.PI * lat1/180;
+  var radlat2 = Math.PI * lat2/180;
+  var theta = lon1-lon2;
+  var radtheta = Math.PI * theta/180;
+  var dst = Math.sin(radlat1) * Math.sin(radlat2) + Math.cos(radlat1) * Math.cos(radlat2) * Math.cos(radtheta);
+  if (dst > 1) dst = 1;
+  dst = Math.acos(dst);
+  dst = dst * 180/Math.PI;
+  dst = dst * 60 * 1.1515; // miles
+  return dst;
+}
 {{< /highlight >}}
