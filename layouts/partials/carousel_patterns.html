@@ -10,14 +10,14 @@
                 <section>
                     <picture>
                         <!--  1280 X 720  -->
-                        <img src="/patterns/{{.Page.Slug}}_tn.jpg" alt="{{.Page.Title}}">
+                        <img src="/patterns/{{.Page.Slug}}_tn.webp" alt="{{.Page.Title}}">
                     </picture>
                     <p>Patterns</p>
                     <!-- {{.Title}} | {{.File.Dir}} -->
                     <h5> {{.Page.Title}} </h5>
                     <h6> {{.Page.Summary}} </h6>
                     <pre>
-                        {{ .Content}}
+                        {{.Content}}
                     </pre>
                     <p>{{.Date.Format "2006-01-02"}}</p>
                 </section>
