@@ -4,6 +4,6 @@ I code performant, functional, testable, future-proof, and trusted JavaScript, T
 
 <p align="center">
 <a href="https://theScottKrause.com/">
-  <img src="https://thescottkrause.com/content/eres_2020_infgr_venn_1.webp" width="680" alt="I communicate, automate, design, simplify, code, test, and deliver.">
+  <img src="https://thescottkrause.com/content/eres_2020_infgr_venn_1.png" width="680" alt="I communicate, automate, design, simplify, code, test, and deliver.">
 </a>
 </p>
