@@ -55,7 +55,7 @@ tags:
 <section class="pfmf-grid pfmf-grid__100 readable__doc">
     <div>
         <article style="padding: 12px 12px;">
-            <p class="pfmf-coy__2">Before I get into the technical details I want to emphasize what I consider the most important a11y skill for a front-end engineer - Succinct communication. You must be able to communicate to a larger team exactly why a particular element is failing WCAG success criteria and provide examples of how to fix it. Don’t fix it for them but help your team understand how to identify the issue and fix it. Don’t simply make the change, be the agent of change.</p>
+            <p class="pfmf-coy__2">Before I get into the technical details I want to emphasize what I consider the most important a11y skill for a front-end engineer - <span class="h_ital">Succinct communication</span>. You must be able to communicate to a larger team exactly why a particular element is failing WCAG success criteria and provide examples of how to fix it. Don’t fix it for them but help your team understand how to identify the issue and fix it. Don’t simply make the change, be the agent of change.</p>
         </article>
     </div>
 </section>
@@ -80,10 +80,10 @@ tags:
                     <details>
                         <summary class="h-pro-tip">Pro ⚡ Tips</summary>
                             <p>Generally, do not use a tab index value greater than 0. Use tabindex="0" on an A element that does not have an HREF.</p>
-                            <p>In dev tools console click on the 👁️ eye icon and create this expression - document.activeElement</p>
+
 {{< highlight JavaScript >}}
 //  Run in browser console or save as a browser snippet.
-//  Remove ALL tabIndex on the entire page - Thats is a fun thing to do.  ES5
+//  Remove ALL tabIndex on the entire page - That is a fun thing to do.  ES5
 //  From the entire document remove tabIndex if its value is greater than 0
 [].slice.call( document.querySelectorAll("[tabIndex]") ).filter(function(el){ // Neodigm 2020
     console.log("-- | " + el.tabIndex );
@@ -98,6 +98,10 @@ tags:
         el.tabIndex = 0;
     }
 }); 
+{{< /highlight >}}
+                        <p>Always show which element has the focus. In dev tools console click on the 👁️ eye icon and create this expression:</p>
+{{< highlight javascript >}}
+document.activeElement
 {{< /highlight >}}
                     </details>
                 </li>
@@ -121,7 +125,7 @@ tags:
                     <details>
                         <summary class="h-pro-tip">Pro ⚡ Tips</summary>
                             <p>Install aXe CLI</p>
-{{< highlight JavaScript >}}
+{{< highlight javascript >}}
 npm i @axe-core/cli
 {{< /highlight >}}
 <p>You can then run the A11Y audit from within VSCode terminal or automate with Gulp / Github Actions.</p>
