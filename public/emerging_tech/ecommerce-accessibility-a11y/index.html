@@ -168,7 +168,7 @@
 <section class="pfmf-grid pfmf-grid__100 readable__doc">
     <div>
         <article style="padding: 12px 12px;">
-            <p class="pfmf-coy__2">Before I get into the technical details I want to emphasize what I consider the most important a11y skill for a front-end engineer - Succinct communication. You must be able to communicate to a larger team exactly why a particular element is failing WCAG success criteria and provide examples of how to fix it. Don’t fix it for them but help your team understand how to identify the issue and fix it. Don’t simply make the change, be the agent of change.</p>
+            <p class="pfmf-coy__2">Before I get into the technical details I want to emphasize what I consider the most important a11y skill for a front-end engineer - <span class="h_ital">Succinct communication</span>. You must be able to communicate to a larger team exactly why a particular element is failing WCAG success criteria and provide examples of how to fix it. Don’t fix it for them but help your team understand how to identify the issue and fix it. Don’t simply make the change, be the agent of change.</p>
         </article>
     </div>
 </section>
@@ -193,9 +193,9 @@
                     <details>
                         <summary class="h-pro-tip">Pro ⚡ Tips</summary>
                             <p>Generally, do not use a tab index value greater than 0. Use tabindex="0" on an A element that does not have an HREF.</p>
-                            <p>In dev tools console click on the 👁️ eye icon and create this expression - document.activeElement</p>
+
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#75715e">//  Run in browser console or save as a browser snippet.
-</span><span style="color:#75715e">//  Remove ALL tabIndex on the entire page - Thats is a fun thing to do.  ES5
+</span><span style="color:#75715e">//  Remove ALL tabIndex on the entire page - That is a fun thing to do.  ES5
 </span><span style="color:#75715e">//  From the entire document remove tabIndex if its value is greater than 0
 </span><span style="color:#75715e"></span>[].<span style="color:#a6e22e">slice</span>.<span style="color:#a6e22e">call</span>( document.<span style="color:#a6e22e">querySelectorAll</span>(<span style="color:#e6db74">&#34;[tabIndex]&#34;</span>) ).<span style="color:#a6e22e">filter</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">el</span>){ <span style="color:#75715e">// Neodigm 2020
 </span><span style="color:#75715e"></span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;-- | &#34;</span> <span style="color:#f92672">+</span> <span style="color:#a6e22e">el</span>.<span style="color:#a6e22e">tabIndex</span> );
@@ -210,6 +210,9 @@
         <span style="color:#a6e22e">el</span>.<span style="color:#a6e22e">tabIndex</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
     }
 }); 
+</code></pre></div>
+                        <p>Always show which element has the focus. In dev tools console click on the 👁️ eye icon and create this expression:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">document.<span style="color:#a6e22e">activeElement</span>
 </code></pre></div>
                     </details>
                 </li>
@@ -233,7 +236,7 @@
                     <details>
                         <summary class="h-pro-tip">Pro ⚡ Tips</summary>
                             <p>Install aXe CLI</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#a6e22e">npm</span> <span style="color:#a6e22e">i</span> <span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">axe</span><span style="color:#f92672">-</span><span style="color:#a6e22e">core</span><span style="color:#f92672">/</span><span style="color:#a6e22e">cli</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">npm</span> <span style="color:#a6e22e">i</span> <span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">axe</span><span style="color:#f92672">-</span><span style="color:#a6e22e">core</span><span style="color:#f92672">/</span><span style="color:#a6e22e">cli</span>
 </code></pre></div>
 <p>You can then run the A11Y audit from within VSCode terminal or automate with Gulp / Github Actions.</p>
                     </details>                    
