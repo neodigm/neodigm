@@ -117,8 +117,11 @@ if( !oIDs[ sDialogId ]){ // A11y update the dialog (inert content) only once
         if( a55_reveal.isOpen && (typeof ev.target != "undefined") ){
           var eTarget = ev.target, bInside = false;
           if(typeof eTarget.tagName != "undefined"){
-            while( eTarget.tagName !== "HTML" ){  //  Tab within modal dialog
-              if( eTarget.tagName == "LTDC-REVEAL" ){ bInside = true; break; }
+            while( eTarget.tagName !== "HTML" ){ 
+                //  Tab within modal dialog
+                if( eTarget.tagName == "A55-REVEAL" ){
+                  bInside = true; break;
+                }
               eTarget = eTarget.parentNode;
             }                    
           }
@@ -140,6 +143,14 @@ if( !oIDs[ sDialogId ]){ // A11y update the dialog (inert content) only once
             data-at="CSS Skip to Content|Tab to Conent Link">Skip to Main Content</p></article>
         <article style="padding: 12px 12px;">
             <p>Skip to Main Content - CSS Focus rules that make the link visible when focused from the omnibox.</p>
+            <details open="true">
+                <summary>CSS Only Solution - Markup</summary>
+{{< highlight HTML >}}
+<a class="js-skip__main--id skip__main"
+href="#ltdc-skipmain">Skip to Main Content</a>
+{{< /highlight >}}
+                </summary>
+            </detail>
             <details open="true">
                 <summary>CSS Only Solution</summary>
 {{< highlight CSS >}}
@@ -172,20 +183,7 @@ a.skip__main {
             </detail>
         </article>
     </div>
-    <div>
-        <article class="pfmf-crd--black h-center"><p class="readable__doc readable__doc--white"
-            data-at="Chrome A11y Tools|Browser A11y Tests">Chrome Extensions</p></article>
-        <article style="padding: 12px 12px;">
-QQQQ
-        </article>
-    </div>
-    <div>
-        <article class="pfmf-crd--black h-center"><p class="readable__doc readable__doc--white"
-            data-at="Chrome A11y Tools|Browser A11y Tests">Chrome Extensions</p></article>
-        <article style="padding: 12px 12px;">
-QQQQ
-        </article>
-    </div>
+
 </section>
 
 <section class="pfmf-grid pfmf-grid__100 readable__doc">
