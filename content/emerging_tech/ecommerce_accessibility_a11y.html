@@ -76,7 +76,7 @@ tags:
                 <li><p>Can a shopper navigate with the tab key and are the focus styles visible?</p></li>
                 <li><p>Is there off-screen content that receives the focus?</p></li>
                 <li><p>Can a shopper search, filter, and add to cart with a screen reader?</p></li>
-                <li><p>Do landmark elements / roles represent the document’s hierarchy?</p></li>
+                <li><p>Do landmark elements / roles represent the document’s information hierarchy?</p></li>
                 <li><p>Is the document's accessibility tree well formed (chrome://accessibility/)?</p></li>
                 
             </ol>
@@ -96,24 +96,80 @@ tags:
     </div>
 </section>
 
-CODE YO 
-
-Skip to main content
-Automate AxE
-
 <section class="pfmf-grid pfmf-grid__50_50 readable__doc">
     <div>
         <article class="pfmf-crd--black h-center"><p class="readable__doc readable__doc--white"
-            data-at="Chrome A11y Tools|Browser A11y Tests">Chrome Extensions</p></article>
+            data-at="Passive Navigation|Circular Tab Focus">JavaScript Keyboard Trap</p></article>
         <article style="padding: 12px 12px;">
-QQQQ
+            <p>Keyboard Trap POC snippet - Prevent users from tabbing outside of a modal dialog.</p>
+            <details open="true">
+                <summary>Circular Keyboard Trap</summary>
+{{< highlight JavaScript >}}
+a55_reveal.aRevAct[i].setAttribute("aria-haspopup", "dialog");
+a55_reveal.aRevAct[i].setAttribute("aria-controls", sDialogId);
+if( !oIDs[ sDialogId ]){ // A11y update the dialog (inert content) only once
+  var eDialog = document.getElementById( sDialogId );
+  if( eDialog ){
+    eDialog.tabIndex = -1;
+    eDialog.setAttribute("role", "dialog");
+    eDialog.setAttribute("aria-modal", "true");
+    window.addEventListener("focus", function(ev){
+        if( a55_reveal.isOpen && (typeof ev.target != "undefined") ){
+          var eTarget = ev.target, bInside = false;
+          if(typeof eTarget.tagName != "undefined"){
+            while( eTarget.tagName !== "HTML" ){  //  Tab within modal dialog
+              if( eTarget.tagName == "LTDC-REVEAL" ){ bInside = true; break; }
+              eTarget = eTarget.parentNode;
+            }                    
+          }
+          if( !bInside ){
+            a55_reveal.doFocus();
+            ev.preventDefault(); ev.stopPropagation();
+          }                  
+        }
+      }, true);
+    }
+  oIDs[ sDialogId ] = true;
+}
+{{< /highlight >}}
+            </details>
         </article>
     </div>
     <div>
         <article class="pfmf-crd--black h-center"><p class="readable__doc readable__doc--white"
-            data-at="Chrome A11y Tools|Browser A11y Tests">Chrome Extensions</p></article>
+            data-at="CSS Skip to Content|Tab to Conent Link">Skip to Main Content</p></article>
         <article style="padding: 12px 12px;">
-QQQQ
+            <p>Skip to Main Content - CSS Focus rules that make the link visible when focused from the omnibox.</p>
+            <details open="true">
+                <summary>CSS Only Solution</summary>
+{{< highlight CSS >}}
+a.skip__main:active, a.skip__main:focus {
+    background-color: #fff;
+    border-radius: 4px;
+    border: 2px solid #000;
+    color: #000;
+    font-size: 1em;
+    height: auto;
+    left: auto;
+    margin: 8px 42%;
+    overflow: auto;
+    padding: 4px;
+    text-align: center;
+    top: auto;
+    width: 16%;
+    z-index: 1024;
+}
+a.skip__main {
+    left: -1024px;
+    overflow: hidden;
+    position: absolute;
+    top: auto;
+    width: 1px; height: 1px;
+    z-index: -1024;
+}
+{{< /highlight >}}
+                </summary>
+            </detail>
         </article>
     </div>
     <div>
