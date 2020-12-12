@@ -285,8 +285,6 @@
 "year": "2020", "level": 1,"desk": "A progressive Node.js framework for building efficient, reliable and scalable server-side applications."},
 {"name": "Net Promoter Score", "target":[2,3,4], "value": 88, "stackdebt": "0",
 "year": "2019", "level": 6,"desk": ""},
-{"name": "Netlify Lambda", "target":[7,8,9,11,12], "value": 99, "stackdebt": "1",
-"year": "2019", "level": 6,"desk": ""},
 {"name": "NPM", "target":[11,12], "value": 33, "stackdebt": "0",
 "year": "2019", "level": 6,"desk": ""},
 {"name": "Offline-first PWA", "target":[5,6,9,13], "value": 88, "stackdebt": "0",
