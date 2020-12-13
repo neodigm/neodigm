@@ -2,7 +2,7 @@
 title: "JavaScript eCom Nav Category Count"
 date: 2020-12-07T20:26:54-06:00
 draft: false
-summary: "Asynchronous recursive crawl report the total number of products by category"
+summary: "Asynchronous recursive crawl reports the total number of products by category."
 slug: javascript
 categories:
 - eCom
@@ -21,9 +21,9 @@ var catCount = (function(_d,_q){
     let aSub = [];
     console.clear();
 
-    
     return {
-        init: function(){ // Get ref to all product categories in the left nav
+        init: function(){
+            // Get ref to all product categories in the left nav
             aSub = [].slice.call( _d.querySelectorAll( _q ) ).filter(function( el ){
                 return (( el.firstChild.nodeValue ) && ( el.href ));
             } );
@@ -52,5 +52,5 @@ var catCount = (function(_d,_q){
 })(document, "LI.item nav > a" );
 {{< /highlight >}}
 <span class="h-ds__none"
-data-at="eCom Product Data Viz|Async Product Crawl|Console Log Product Report|Recursive IIFE"></span>
+data-at="eCom Product Data Viz|Async Product Crawl|Console Log Product Report|Recursive IIFE">eCom Product Data Viz</span>
 </output>

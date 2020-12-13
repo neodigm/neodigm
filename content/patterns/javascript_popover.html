@@ -1,15 +1,68 @@
 ---
-title: "Javascript_popover"
+title: "JavaScript Popover Microinteraction"
 date: 2020-12-07T20:26:54-06:00
-draft: true
-summary: ""
-description: 
-slug: sql
+draft: false
+summary: "A popover is a transient view that shows on a content screen when a user clicks on a control button or within a defined area."
+slug: javascript
 categories:
 - Design System
 - UI Components
-- UX
+- Microinteraction
 tags:
+- UX
 - JavaScript
 ---
+<output>
+{{< highlight JavaScript >}}
+//  A popover is a transient view that shows on a content screen when a user clicks on a control button or within
+//  a defined area. Declarative implementation.
 
+var oPopOver = (function( _w, _d, _q ){
+        let arPops = [], ePos, iOffTop=0, iOffLft=0;
+        return {  // Popover UX pattern
+            "init": function(){ // wire DOM events
+                arPops= [].slice.call(_d.querySelectorAll(_q));
+                _w.addEventListener("resize", oPopOver.closeAll);
+                _w.addEventListener("scroll", oPopOver.closeAll); 
+                _d.body.addEventListener("click", function( e ){  //  Outside Click close
+                    var eTarget = e.target, bInside = false;
+                    while( eTarget.tagName !== "HTML" ){
+                        if( eTarget.dataset.popover ){ bInside = true; break; }
+                        eTarget = eTarget.parentNode;
+                    }
+                    if( !bInside ){
+                        oPopOver.closeAll();
+                    }
+                }, true);
+            },
+            "open": function(id, evPos){
+                if( arPops.length == 0) return false;
+                oPopOver.closeAll();
+                ePos = evPos.currentTarget;
+                var elPop = arPops.filter(function(el){
+                    return ( el.id == id );
+                })[0];
+                iOffTop = Number(elPop.dataset.popoverPos.split("|")[0]);
+                iOffLft = Number(elPop.dataset.popoverPos.split("|")[1]);
+                elPop.dataset.popover = "true";
+                elPop.style.left = oPopOver.position().left+"px";
+                elPop.style.top = oPopOver.position().top+"px";
+            },
+            "closeAll": function(){
+                if( arPops.length == 0) return false;
+                arPops.filter(function(el){
+                    el.dataset.popover = "false";
+                });
+            },
+            "position": function(){
+                var rec = ePos.getBoundingClientRect(),
+                pxLft = _w.pageXOffset || _d.documentElement.scrollLeft,
+                pxTop = _w.pageYOffset || _d.documentElement.scrollTop;
+                return { top: (rec.top + pxTop + iOffTop), left: (rec.left + pxLft + iOffLft) }
+            }
+        }
+    })(window, _d, "[data-popover]");
+{{< /highlight >}}
+<span class="h-ds__none"
+data-at="Declarative implementation|Floating UI Widget|Popover Microinteraction|Declarative implementation">Vanilla JS Popover</span>
+</output>
