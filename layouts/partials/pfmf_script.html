@@ -210,9 +210,11 @@ console.log("********* | " + sCaroSrc );
                                         eCrdDetail.parentElement.src = ev.currentTarget.src.replace(".jpg", ".mp4");
                                     break;
                                     case "OUTPUT":
-                                        eCrdDetail.innerHTML ="QQQQQ";//= ev.currentTarget.querySelector("OUTPUT").outerHTML;
-                                        eRelaCaption.dataset.at ="999999999|88888888|777777777";
-alert("ducks");
+                                        let eEv = ev.currentTarget;
+                                        eCrdDetail.innerHTML = eEv.querySelector("OUTPUT").outerHTML.replace("h-ds__none","");
+                                        eCrdDetail.classList.remove("h-ds__none");
+console.log( ev.currentTarget.querySelector("OUTPUT") );
+                                        eRelaCaption.dataset.at = eEv.querySelector("[data-at]").dataset.at;
                                     break;
                                 }
                             }
