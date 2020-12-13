@@ -1,13 +1,12 @@
 ---
-title: "Javascript airport geo proximity"
+title: "JavaScript Airport Geo-Proximity"
 date: 2020-12-07T20:26:54-06:00
 draft: false
-summary: "99999"
-description: 
+summary: "Airport geo-proximity logic that answers questions, like; “What are the three closest airports to me right now?”"
 slug: javascript
 categories:
 - NGS
-- UX
+- GEOLOCATION
 tags:
 - API
 - JavaScript
@@ -16,6 +15,19 @@ tags:
 {{< highlight JavaScript >}}
 // Desc: Get the closest airports by geolocation radius
 // Usage: closestAirports.find(-99, -99, oAirports, 4); // 4 miles
+function getDistance(lat1, lon1, lat2, lon2) {
+    var radlat1 = Math.PI * lat1/180;
+    var radlat2 = Math.PI * lat2/180;
+    var theta = lon1-lon2;
+    var radtheta = Math.PI * theta/180;
+    var dst = Math.sin(radlat1) * Math.sin(radlat2) + Math.cos(radlat1) * Math.cos(radlat2) * Math.cos(radtheta);
+    if (dst > 1) dst = 1;
+    dst = Math.acos(dst);
+    dst = dst * 180/Math.PI;
+    dst = dst * 60 * 1.1515; // miles
+    return dst;
+  }
+
 closestAirports = (function(_d){
     return {
       "find": function(nLat, nLon, objPorts, nRadius){
@@ -42,18 +54,7 @@ closestAirports = (function(_d){
       }
     };
 })(document);
-
-function getDistance(lat1, lon1, lat2, lon2) {
-  var radlat1 = Math.PI * lat1/180;
-  var radlat2 = Math.PI * lat2/180;
-  var theta = lon1-lon2;
-  var radtheta = Math.PI * theta/180;
-  var dst = Math.sin(radlat1) * Math.sin(radlat2) + Math.cos(radlat1) * Math.cos(radlat2) * Math.cos(radtheta);
-  if (dst > 1) dst = 1;
-  dst = Math.acos(dst);
-  dst = dst * 180/Math.PI;
-  dst = dst * 60 * 1.1515; // miles
-  return dst;
-}
 {{< /highlight >}}
+<span class="h-ds__none"
+data-at="Longitude & Latitude|Geo-Proximity Radius|Closest X number of Airports|Airports within X Miles"></span>
 </output>

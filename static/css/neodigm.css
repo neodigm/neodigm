@@ -49,6 +49,7 @@ body, [role='main'] {
     letter-spacing: .04em;
     color: #fbb502;
 }
+.h-smaller {font-size: smaller !important;}
 
 .h-nowrap {white-space: nowrap;}
 .h_ital {font-style: italic;}
