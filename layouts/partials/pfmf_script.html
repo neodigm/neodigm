@@ -194,6 +194,7 @@ if( e3 ) { // Delay 3d call if still null
                             let eRelaCaption = eCrdTop.querySelector(".js-patterns__caption");
                             let sCaroSrc = eCrdTop.querySelector("[data-caro-src]").dataset.caroSrc;
                             let eCrdDetail = _d.querySelector("[data-caro-target='"+ sCaroSrc +"']");
+
                             if(eCrdDetail){
                                 switch( eCrdDetail.tagName ){
                                     case "IMG":
@@ -205,14 +206,12 @@ if( e3 ) { // Delay 3d call if still null
                                     case "OUTPUT":
                                         let eEv = ev.currentTarget;
                                         eCrdDetail.innerHTML = eEv.querySelector("OUTPUT").outerHTML.replace("h-ds__none","");
-                                        eCrdDetail.classList.remove("h-ds__none");
-console.log( ev.currentTarget.querySelector("OUTPUT") );
                                         eRelaCaption.dataset.at = eEv.querySelector("[data-at]").dataset.at;
                                     break;
                                 }
                             }
                         });
-                    })
+                    });
                 }, (++nCnt * 1460) );
             }        
         });
