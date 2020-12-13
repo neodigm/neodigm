@@ -200,10 +200,10 @@ if( e3 ) { // Delay 3d call if still null
                                     case "IMG":
                                         eCrdDetail.src = ev.currentTarget.src;
                                     break;
-                                    case "SOURCE":
+                                    case "SOURCE": // video
                                         eCrdDetail.parentElement.src = ev.currentTarget.src.replace(".jpg", ".mp4");
                                     break;
-                                    case "OUTPUT":
+                                    case "OUTPUT": // source code
                                         let eEv = ev.currentTarget;
                                         eCrdDetail.innerHTML = eEv.querySelector("OUTPUT").outerHTML.replace("h-ds__none","");
                                         eRelaCaption.dataset.at = eEv.querySelector("[data-at]").dataset.at;
@@ -212,6 +212,17 @@ if( e3 ) { // Delay 3d call if still null
                             }
                         });
                     });
+                    let eAutoTop = _d.querySelector("[data-caro-auto-click='true']");
+    //console.log( eAutoTop );
+                    if( eAutoTop ){
+                        eAutoTop.dataset.caroAutoClick = "false";
+                        eAutoTop = eAutoTop.querySelectorAll(".caro-target__js");
+                        if( eAutoTop ) {
+                            setTimeout(function(){
+                                eAutoTop[0].click();
+                            }, (++nCnt * 1464) );
+                        }
+                    }
                 }, (++nCnt * 1460) );
             }        
         });
