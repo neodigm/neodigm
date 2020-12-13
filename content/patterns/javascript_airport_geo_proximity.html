@@ -1,10 +1,10 @@
 ---
-title: "Javascript_airport_geo_proximity"
+title: "Javascript airport geo proximity"
 date: 2020-12-07T20:26:54-06:00
 draft: false
 summary: "99999"
 description: 
-slug: css
+slug: javascript
 categories:
 - NGS
 - UX
@@ -12,7 +12,10 @@ tags:
 - API
 - JavaScript
 ---
+<output>
 {{< highlight JavaScript >}}
+// Desc: Get the closest airports by geolocation radius
+// Usage: closestAirports.find(-99, -99, oAirports, 4); // 4 miles
 closestAirports = (function(_d){
     return {
       "find": function(nLat, nLon, objPorts, nRadius){
@@ -53,3 +56,4 @@ function getDistance(lat1, lon1, lat2, lon2) {
   return dst;
 }
 {{< /highlight >}}
+</output>
