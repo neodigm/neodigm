@@ -187,18 +187,25 @@ if( e3 ) { // Delay 3d call if still null
                     "cellAlign": "left", "contain": true, "autoPlay": true, "groupCells": true,
                     pageDots: false
                     });
-                    var aImg = [].slice.call(_d.querySelectorAll(".flickity-slider img"));
-                    aImg.forEach(eImg => {
-                        eImg.addEventListener("click", (ev) => {
+                    var aTrg = [].slice.call(_d.querySelectorAll(".flickity-slider .caro-target__js"));
+                    aTrg.forEach(eTrg => {
+                        eTrg.addEventListener("click", (ev) => {
                             var sPar = ev.currentTarget.parentElement;
                             sPar = sPar.parentElement.parentElement.dataset.caroSrc;
                             sPar = _d.querySelector("[data-caro-target='"+ sPar +"']");
+    console.log("======== | " + sPar );
                             if(sPar){
-    console.log("-------- | " + sPar.type );
-                                if( sPar.type === "video/mp4" ){
-                                    sPar.parentElement.src = ev.currentTarget.src.replace(".jpg", ".mp4");
-                                }else{
-                                    sPar.src = ev.currentTarget.src;
+    console.log("-------- | " + sPar.tagName );
+                                switch( sPar.tagName ){
+                                    case "IMG":
+                                        sPar.src = ev.currentTarget.src;
+                                    break;
+                                    case "SOURCE":
+                                        sPar.parentElement.src = ev.currentTarget.src.replace(".jpg", ".mp4");
+                                    break;
+                                    case "PRE":
+                                        sPar.innerHTML = ev.currentTarget.querySelector("PRE").innerHTML;
+                                    break;
                                 }
                             }
                         });

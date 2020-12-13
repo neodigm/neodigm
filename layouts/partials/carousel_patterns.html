@@ -1,4 +1,4 @@
-<section class="pfmf-grid pfmf-grid__60_40">
+<section class="pfmf-grid pfmf-grid__50_50">
     <div>
             
         <article class="js-art__caro h-ds__none">
@@ -6,22 +6,22 @@
             data-caro-src="256">
            {{ range .Site.Pages }}
                 {{ if (eq .File.Dir "patterns/" ) }}
-                <a class="l-blog-crd" href="{{.Permalink}}">
-                <section>
-                    <picture>
-                        <!--  1280 X 720  -->
-                        <img src="/patterns/{{.Page.Slug}}_tn.jpg" alt="{{.Page.Title}}">
-                    </picture>
-                    <p>Patterns</p>
-                    <!-- {{.Title}} | {{.File.Dir}} -->
-                    <h5> {{.Page.Title}} </h5>
-                    <h6> {{.Page.Summary}} </h6>
-                    <pre>
-                        {{.Content}}
-                    </pre>
-                    <p>{{.Date.Format "2006-01-02"}}</p>
-                </section>
-                </a>
+                <div class="l-blog-crd caro-target__js">
+                    <section>
+                        <picture>
+                            <!--  1280 X 720  -->
+                            <img src="/patterns/{{.Page.Slug}}_tn.jpg" alt="{{.Page.Title}}">
+                        </picture>
+                        <p>Patterns</p>
+                        <!-- {{.Title}} | {{.File.Dir}} -->
+                        <h5> {{.Page.Title}} </h5>
+                        <h6> {{.Page.Summary}} </h6>
+                        <pre class="h-ds__none">
+                            {{.Content}}
+                        </pre>
+                        <p>{{.Date.Format "2006-01-02"}}</p>
+                    </section>
+                </div>
                 {{end}}
             {{ end }}
             </section>
@@ -32,7 +32,7 @@
 
         <article class="pfmf-crd--black h-center"><p class="readable__doc readable__doc--white"
             data-at="Source Code & Snippets|Scripts & Gists|Real-world vetted code|Functional Functions|Best Practices & Patterns">Source Code & Snippets</p></article>
-        <article><pre
+        <article class="h-bg__stripe"><pre
             data-caro-target="256">
 
         </pre>
