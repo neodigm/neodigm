@@ -1,8 +1,8 @@
 ---
-title: "Javascript_html_data_attrib_to_javascript_dataset"
+title: "JavaScript HTML data attrib to javascript dataset"
 date: 2020-12-07T20:33:21-06:00
-draft: true
-summary: ""
+draft: false
+summary: "Convert an HTML formatted data attrib name to a JS formatted name."
 description: 
 slug: javascript
 categories:
@@ -10,3 +10,21 @@ categories:
 tags:
 - JavaScript
 ---
+{{< highlight JavaScript >}}
+// Desc: data-is-whatever will be converted to isWhatever
+// Usage: e.dataset[ data2prop("data-is-whatever") ]
+
+function data2prop( sDset ){  //  Convert HTML data attrib name to JS dataset name
+    sDset = sDset.replace("data-", "").toLowerCase();
+    let aDset = sDset.split(""), aDret = [], bUpper = false;
+    aDset.forEach( (sVal, nIx) => {
+        if( sVal == "-" ){
+            bUpper = true;
+        }else{
+            aDret.push( ( bUpper ) ? sVal.toUpperCase() : sVal );
+            bUpper = false;
+        }
+    });
+    return aDret.join("");
+}
+{{< /highlight >}}
