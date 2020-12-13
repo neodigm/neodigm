@@ -191,17 +191,10 @@ if( e3 ) { // Delay 3d call if still null
                     aTrg.forEach(eTrg => {
                         eTrg.addEventListener("click", (ev) => {
                             let eCrdTop = ev.currentTarget.parentElement.parentElement.parentElement.parentElement.parentElement.parentElement;
-    console.log("________ | " );
-    console.log( eCrdTop );
                             let eRelaCaption = eCrdTop.querySelector(".js-patterns__caption");
-    console.log("________ | " + eRelaCaption );
                             let sCaroSrc = eCrdTop.querySelector("[data-caro-src]").dataset.caroSrc;
-console.log("********* | " + sCaroSrc );
-
                             let eCrdDetail = _d.querySelector("[data-caro-target='"+ sCaroSrc +"']");
-    console.log("======== | " + eCrdDetail );
                             if(eCrdDetail){
-    console.log("-------- | " + eCrdDetail.tagName );
                                 switch( eCrdDetail.tagName ){
                                     case "IMG":
                                         eCrdDetail.src = ev.currentTarget.src;
