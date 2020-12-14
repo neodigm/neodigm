@@ -1,0 +1,63 @@
+---
+title: "CSS Advanced Accessibility"
+date: 2020-12-13T23:55:57-06:00
+draft: false
+summary: "Motion, theme, and skip A11Y CSS solutions"
+slug: css
+categories:
+- DOM
+tags:
+- A11Y
+- CSS
+---
+<output>
+{{< highlight css >}}
+/* Skip to Main Content - CSS Focus rules that make the
+link visible when focused from the omnibox. */
+
+a.skip__main:active, a.skip__main:focus {
+    background-color: #fff;
+    border-radius: 4px;
+    border: 2px solid #000;
+    color: #000;
+    font-size: 1em;
+    height: auto; width: 16%;
+    left: auto;
+    margin: 8px 42%;
+    overflow: auto;
+    padding: 4px;
+    text-align: center;
+    top: auto;
+    z-index: 1024;
+}
+a.skip__main {
+    left: -1024px;
+    overflow: hidden;
+    position: absolute;
+    top: auto;
+    width: 1px; height: 1px;
+    z-index: -1024;
+}
+/* Dark Mode begin */
+@media (prefers-color-scheme: dark) {
+    body, [role='main'] {
+        background: linear-gradient(to right, #555, #c2c2c2, #555)
+    }
+    .h-bg__stripe, .l-caro-design > article, article.l-caro-design {
+        background: repeating-linear-gradient(45deg,#bbb,#bbb 24px,#ddd 24px,#ddd 48px);
+    }
+}
+/* Dark Mode end */
+
+/* Reduced Motion begin*/
+@media (prefers-reduced-motion: reduce) {
+    .hero__vect {
+      animation: none;
+    }
+}
+/* Reduced Motion end*/
+{{< /highlight >}}
+    <span class="h-ds__none"
+    data-at="A11Y CSS|Reduced Motion Media Query|OS Dark Mode Detection|CSS Skip to Content|Tab to Conent Link"></span>
+</output>
+
