@@ -1,6 +1,52 @@
 ---
-title: "Typescript_virtual_keyboard_extention"
+title: "Virtual Keyboard Extention Configuration"
 date: 2020-12-13T22:17:37-06:00
-draft: true
+draft: false
+summary: "TS Virtual Keyboard Chrome Extention"
+slug: typescript
+categories:
+- NGS
+- GEOLOCATION
+tags:
+- API
+- TypeScript
 ---
+<output>
+{{< highlight TypeScript >}}
+// TS Virtual Keyboard Chrome Extention
+// Configuration Class
+
+class AVKOptions {
+    aOpts : Array<any>;
+    constructor ( pAr : Array<any> = [] ) {
+        this.aOpts = pAr;
+    }
+    setState (  sOpt : string, bState : boolean ) : boolean{
+        this.aOpts = this.aOpts.filter( (e) => {
+            if (e[0] === sOpt) e[1] = bState;
+             return true;
+        } );
+        return bState;
+    }
+    getState ( sOpt : string ) : boolean {
+        return this.aOpts.filter( (e) => {
+            if (e[0] === sOpt) {
+                return true;
+            }            
+        })[0][1];
+    }
+    getFeedback ( sOpt : string ) : string {
+        return this.aOpts.filter( (e) => {
+            if (e[0] === sOpt) {
+                return true;
+            }            
+        })[0][2];
+    }
+}
+export let options = new AVKOptions([["audio", false, "Click Sounds"], ["autohide", false, "Hide if not in use"], ["blur", false, "Blur Text"], ["hover", false, "Hover No Click"], ["opaque", false, "Cannot See Through"], ["scramble", false, "Rearrange Keys"], ["theme", false, "Daytime theme"]]);
+
+{{< /highlight >}}
+<span class="h-ds__none"
+data-at="TS Config Class|Chrome Extention TS|TypeScript Config Class|In Browser Virtual Keyboard"></span>
+</output>
 
