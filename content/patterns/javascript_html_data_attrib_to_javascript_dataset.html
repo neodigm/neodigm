@@ -13,6 +13,13 @@ tags:
 {{< highlight JavaScript >}}
 // Desc: data-is-whatever will be converted to isWhatever
 // Usage: e.dataset[ data2prop("data-is-whatever") ]
+/***
+ *      ____|   ___|   \  |     \      ___|              _)         |   
+ *      __|    |      |\/ |    _ \   \___ \    __|   __|  |  __ \   __| 
+ *      |      |      |   |   ___ \        |  (     |     |  |   |  |   
+ *     _____| \____| _|  _| _/    _\ _____/  \___| _|    _|  .__/  \__| 
+ *                                                          _|          
+ */
 
 function data2prop( sDset ){  //  Convert HTML data attrib name to JS dataset name
     sDset = sDset.replace("data-", "").toLowerCase();
