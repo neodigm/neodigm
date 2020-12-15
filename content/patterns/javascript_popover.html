@@ -24,7 +24,7 @@ tags:
  *    | |___| |_| |_   | |___| |/ /\ \ 
  *     \______(_____)   \______/_/  \_\ */
 
-var oPopOver = ( ( _win, _doc, _qry ) => {
+let oPopOver = ( ( _win, _doc, _qry ) => {
         let arPops = [], ePos, iOffTop=0, iOffLft=0;
         return {  // Popover UX pattern
             "init": function(){ // wire DOM events
@@ -32,7 +32,7 @@ var oPopOver = ( ( _win, _doc, _qry ) => {
                 _win.addEventListener("resize", oPopOver.closeAll);
                 _win.addEventListener("scroll", oPopOver.closeAll); 
                 _doc.body.addEventListener("click", function( e ){ // Outside Click
-                    var eTarget = e.target, bInside = false;
+                    let eTarget = e.target, bInside = false;
                     while( eTarget.tagName !== "HTML" ){
                         if( eTarget.dataset.popover ){ bInside = true; break; }
                         eTarget = eTarget.parentNode;
@@ -46,7 +46,7 @@ var oPopOver = ( ( _win, _doc, _qry ) => {
                 if( arPops.length == 0) return false;
                 oPopOver.closeAll();
                 ePos = evPos.currentTarget;
-                var elPop = arPops.filter(function(el){
+                let elPop = arPops.filter(function(el){
                     return ( el.id == id );
                 })[0];
                 iOffTop = Number(elPop.dataset.popoverPos.split("|")[0]);
@@ -62,7 +62,7 @@ var oPopOver = ( ( _win, _doc, _qry ) => {
                 });
             },
             "position": function(){ // Determine Popover position
-                var rec = ePos.getBoundingClientRect(),
+                let rec = ePos.getBoundingClientRect(),
                 pxLft = _win.pageXOffset || _doc.documentElement.scrollLeft,
                 pxTop = _win.pageYOffset || _doc.documentElement.scrollTop;
                 return { top: (rec.top + pxTop + iOffTop), left: (rec.left + pxLft + iOffLft) }
