@@ -32,14 +32,14 @@ var oPopOver = (function( _w, _d, _q ){
                 arPops= [].slice.call(_d.querySelectorAll(_q));
                 _w.addEventListener("resize", oPopOver.closeAll);
                 _w.addEventListener("scroll", oPopOver.closeAll); 
-                _d.body.addEventListener("click", function( e ){  //  Outside Click close
+                _d.body.addEventListener("click", function( e ){ // Outside Click
                     var eTarget = e.target, bInside = false;
                     while( eTarget.tagName !== "HTML" ){
                         if( eTarget.dataset.popover ){ bInside = true; break; }
                         eTarget = eTarget.parentNode;
                     }
                     if( !bInside ){
-                        oPopOver.closeAll();
+                        oPopOver.closeAll(); // Tapped Outside of Popup
                     }
                 }, true);
             },
@@ -52,13 +52,13 @@ var oPopOver = (function( _w, _d, _q ){
                 })[0];
                 iOffTop = Number(elPop.dataset.popoverPos.split("|")[0]);
                 iOffLft = Number(elPop.dataset.popoverPos.split("|")[1]);
-                elPop.dataset.popover = "true";
+                elPop.dataset.popover = "true"; // Open and Active
                 elPop.style.left = oPopOver.position().left+"px";
                 elPop.style.top = oPopOver.position().top+"px";
             },
             "closeAll": function(){
                 if( arPops.length == 0) return false;
-                arPops.filter(function(el){
+                arPops.map(function(el){
                     el.dataset.popover = "false";
                 });
             },
@@ -72,5 +72,5 @@ var oPopOver = (function( _w, _d, _q ){
     })(window, _d, "[data-popover]");
 {{< /highlight >}}
 <span class="h-ds__none"
-data-at="Vanilla JS Popover|Declarative implementation|Floating UI Widget|Popover Microinteraction|Declarative implementation"></span>
+data-at="Vanilla JS Popover|Declarative implementation|Floating UI Widget|Popover Microinteraction|Declarative Binding"></span>
 </output>
