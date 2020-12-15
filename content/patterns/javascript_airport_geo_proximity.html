@@ -52,6 +52,7 @@ closestAirports = (function(_d){
             }
           }
           arrPorts.sort(function(a, b){
+            // Sort by Distance
             return a.dist - b.dist;
           });
           return arrPorts.filter(function(aP){

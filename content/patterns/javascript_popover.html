@@ -43,7 +43,7 @@ var oPopOver = (function( _w, _d, _q ){
                     }
                 }, true);
             },
-            "open": function(id, evPos){
+            "open": function(id, evPos){ // Open a single Popover
                 if( arPops.length == 0) return false;
                 oPopOver.closeAll();
                 ePos = evPos.currentTarget;
@@ -56,13 +56,13 @@ var oPopOver = (function( _w, _d, _q ){
                 elPop.style.left = oPopOver.position().left+"px";
                 elPop.style.top = oPopOver.position().top+"px";
             },
-            "closeAll": function(){
+            "closeAll": function(){ // Close all Popovers
                 if( arPops.length == 0) return false;
                 arPops.map(function(el){
                     el.dataset.popover = "false";
                 });
             },
-            "position": function(){
+            "position": function(){ // Determine Popover position
                 var rec = ePos.getBoundingClientRect(),
                 pxLft = _w.pageXOffset || _d.documentElement.scrollLeft,
                 pxTop = _w.pageYOffset || _d.documentElement.scrollTop;
