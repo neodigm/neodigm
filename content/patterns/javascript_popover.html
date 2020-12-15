@@ -24,21 +24,21 @@ tags:
  *    | |___| |_| |_   | |___| |/ /\ \ 
  *     \______(_____)   \______/_/  \_\ */
 
-var oPopOver = (function( _w, _d, _q ){
+var oPopOver = ( ( _win, _doc, _qry ) => {
         let arPops = [], ePos, iOffTop=0, iOffLft=0;
         return {  // Popover UX pattern
             "init": function(){ // wire DOM events
-                arPops= [].slice.call(_d.querySelectorAll(_q));
-                _w.addEventListener("resize", oPopOver.closeAll);
-                _w.addEventListener("scroll", oPopOver.closeAll); 
-                _d.body.addEventListener("click", function( e ){ // Outside Click
+                arPops= [].slice.call(_doc.querySelectorAll( _qry ));
+                _win.addEventListener("resize", oPopOver.closeAll);
+                _win.addEventListener("scroll", oPopOver.closeAll); 
+                _doc.body.addEventListener("click", function( e ){ // Outside Click
                     var eTarget = e.target, bInside = false;
                     while( eTarget.tagName !== "HTML" ){
                         if( eTarget.dataset.popover ){ bInside = true; break; }
                         eTarget = eTarget.parentNode;
                     }
-                    if( !bInside ){
-                        oPopOver.closeAll(); // Tapped Outside of Popup
+                    if( !bInside ){ // Tapped Outside of Popup
+                        oPopOver.closeAll();
                     }
                 }, true);
             },
@@ -63,12 +63,12 @@ var oPopOver = (function( _w, _d, _q ){
             },
             "position": function(){ // Determine Popover position
                 var rec = ePos.getBoundingClientRect(),
-                pxLft = _w.pageXOffset || _d.documentElement.scrollLeft,
-                pxTop = _w.pageYOffset || _d.documentElement.scrollTop;
+                pxLft = _win.pageXOffset || _doc.documentElement.scrollLeft,
+                pxTop = _win.pageYOffset || _doc.documentElement.scrollTop;
                 return { top: (rec.top + pxTop + iOffTop), left: (rec.left + pxLft + iOffLft) }
             }
         }
-    })(window, _d, "[data-popover]"); // Declarative implementation
+    })(window, _doc, "[data-popover]"); // Declarative implementation
 {{< /highlight >}}
 <span class="h-ds__none"
 data-at="Vanilla JS Popover|Declarative implementation|Floating UI Widget|Popover Microinteraction|Declarative Binding"></span>
