@@ -14,16 +14,15 @@ tags:
 ---
 <output>
 {{< highlight JavaScript >}}
-//  A popover is a transient view that shows on a content screen when a user clicks on a control button or within
-//  a defined area. Declarative implementation.
+//  A popover is a transient view that shows on a content screen when
+//  a user clicks on a control button or within a defined area.
 /***
  *     _     _ _____    _     _ _    _ 
  *    | |   | (_____)  | |   | \ \  / /
  *    | |   | |  _     | |   | |\ \/ / 
  *    | |   | | | |    | |   | | )  (  
  *    | |___| |_| |_   | |___| |/ /\ \ 
- *     \______(_____)   \______/_/  \_\
- */
+ *     \______(_____)   \______/_/  \_\ */
 
 var oPopOver = (function( _w, _d, _q ){
         let arPops = [], ePos, iOffTop=0, iOffLft=0;
@@ -69,7 +68,7 @@ var oPopOver = (function( _w, _d, _q ){
                 return { top: (rec.top + pxTop + iOffTop), left: (rec.left + pxLft + iOffLft) }
             }
         }
-    })(window, _d, "[data-popover]");
+    })(window, _d, "[data-popover]"); // Declarative implementation
 {{< /highlight >}}
 <span class="h-ds__none"
 data-at="Vanilla JS Popover|Declarative implementation|Floating UI Widget|Popover Microinteraction|Declarative Binding"></span>
