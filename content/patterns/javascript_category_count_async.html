@@ -33,10 +33,10 @@ var catCount = (function(_d,_q){
     return {
         init: function(){
             // Get ref to all product categories in the left nav
-            aSub = [ ... _d.querySelectorAll( _q ) ].filter(function( el ){
+            aSub = [ ... _d.querySelectorAll( _q ) ].filter( ( el ) => {
                 return (( el.firstChild.nodeValue ) && ( el.href ));
             } );
-            aSub.forEach( function( elLink ){
+            aSub.forEach( ( elLink ) => {
                 if( elLink ) catCount.asyncTotal( elLink );
             } );
         },
@@ -50,7 +50,7 @@ var catCount = (function(_d,_q){
         asyncTotal: function( _elLink ){
             let oXhr = new XMLHttpRequest();
             oXhr.open("GET", _elLink.href, true);
-            oXhr.onreadystatechange = function(){
+            oXhr.onreadystatechange = () => {
                 if( this.readyState!==4 || this.status!==200 ) return;
                 catCount.parse( _elLink.firstChild.nodeValue, this.responseText );
             };
