@@ -21,7 +21,9 @@ tags:
  *    | |    | | | |  _ \ / _  )    \ \ / ___)/ ___) |  _ \|  _) 
  *    | |____| |_| | | | ( (/ / _____) | (___| |   | | | | | |__ 
  *     \______)__  | ||_/ \____|______/ \____)_|   |_| ||_/ \___)
- *           (____/|_|                               |_|         */
+ *           (____/|_|                               |_|         
+ npm install --save @types/chrome
+ */
 
 class AVKOptions {
     aOpts : Array<any>;
@@ -50,7 +52,10 @@ class AVKOptions {
         })[0][2];
     }
 }
-export let options = new AVKOptions([["audio", false, "Click Sounds"], ["autohide", false, "Hide if not in use"], ["blur", false, "Blur Text"], ["hover", false, "Hover No Click"], ["opaque", false, "Cannot See Through"], ["scramble", false, "Rearrange Keys"], ["theme", false, "Daytime theme"]]);
+export let options = new AVKOptions([["audio", false, "Click Sounds"],
+["autohide", false, "Hide if not in use"], ["blur", false, "Blur Text"],
+["hover", false, "Hover No Click"], ["opaque", false, "Cannot See Through"],
+["scramble", false, "Rearrange Keys"], ["theme", false, "Daytime theme"]]);
 
 {{< /highlight >}}
 <span class="h-ds__none"
