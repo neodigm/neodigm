@@ -17,12 +17,12 @@ tags:
 //  A Vue.js snippet that shows how to capture both a tap and
 //  a double-tap on the same element within the template.
 /***
- *     _     _ _____    _     _ _    _ 
- *    | |   | (_____)  | |   | \ \  / /
- *    | |   | |  _     | |   | |\ \/ / 
- *    | |   | | | |    | |   | | )  (  
- *    | |___| |_| |_   | |___| |/ /\ \ 
- *     \______(_____)   \______/_/  \_\ */
+ *    ____   ____                      __        
+ *    \   \ /   /_ __   ____          |__| ______
+ *     \   Y   /  |  \_/ __ \         |  |/  ___/
+ *      \     /|  |  /\  ___/         |  |\___ \ 
+ *       \___/ |____/  \___  > /\ /\__|  /____  >
+ *                         \/  \/ \______|    \/ */
 
  methods: {
     "doHeroMobMouseUp": function( ev ){ // Double Tap
@@ -33,7 +33,7 @@ tags:
           this.doHeroMobScale( .5 ); // Double Tap
         }else{
           oHro.doubleTap = true;
-          setTimeout(function(){ vltdc_productdetail.doHeroMobMouseUp_expire() }, 380);
+          setTimeout(function(){ this.doHeroMobMouseUp_expire() }, 380);
         }
       }
       this.oHeroZmMob.isDown = false;
