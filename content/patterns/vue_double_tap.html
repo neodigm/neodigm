@@ -2,20 +2,20 @@
 title: "Vue.js double tap Microinteraction"
 date: 2020-12-15T20:15:30-06:00
 draft: false
-summary: "A popover is a transient view that shows on a content screen when a user clicks on a control button or within a defined area."
+summary: "Firing both a tap and a double-tap on the same element"
 slug: vue
 categories:
-- Design System
 - UI Components
 - Microinteraction
 tags:
 - UX
 - JavaScript
+- Vue
 ---
 <output>
 {{< highlight JavaScript >}}
-//  A popover is a transient view that shows on a content screen when
-//  a user clicks on a control button or within a defined area.
+//  A Vue.js snippet that shows how to capture both a tap and
+//  a double-tap on the same element within the template.
 /***
  *     _     _ _____    _     _ _    _ 
  *    | |   | (_____)  | |   | \ \  / /
@@ -24,53 +24,30 @@ tags:
  *    | |___| |_| |_   | |___| |/ /\ \ 
  *     \______(_____)   \______/_/  \_\ */
 
-let oPopOver = ( ( _win, _doc, _qry ) => {
-        let arPops = [], ePos, iOffTop=0, iOffLft=0;
-        return {  // Popover UX pattern
-            "init": function(){ // wire DOM events
-                arPops= [].slice.call(_doc.querySelectorAll( _qry ));
-                _win.addEventListener("resize", oPopOver.closeAll);
-                _win.addEventListener("scroll", oPopOver.closeAll); 
-                _doc.body.addEventListener("click", function( e ){ // Outside Click
-                    let eTarget = e.target, bInside = false;
-                    while( eTarget.tagName !== "HTML" ){
-                        if( eTarget.dataset.popover ){ bInside = true; break; }
-                        eTarget = eTarget.parentNode;
-                    }
-                    if( !bInside ){ // Tapped Outside of Popup
-                        oPopOver.closeAll();
-                    }
-                }, true);
-            },
-            "open": function(id, evPos){ // Open a single Popover
-                if( arPops.length == 0) return false;
-                oPopOver.closeAll();
-                ePos = evPos.currentTarget;
-                let elPop = arPops.filter(function(el){
-                    return ( el.id == id );
-                })[0];
-                iOffTop = Number(elPop.dataset.popoverPos.split("|")[0]);
-                iOffLft = Number(elPop.dataset.popoverPos.split("|")[1]);
-                elPop.dataset.popover = "true"; // Open and Active
-                elPop.style.left = oPopOver.position().left+"px";
-                elPop.style.top = oPopOver.position().top+"px";
-            },
-            "closeAll": function(){ // Close all Popovers
-                if( arPops.length == 0) return false;
-                arPops.map(function(el){
-                    el.dataset.popover = "false";
-                });
-            },
-            "position": function(){ // Determine Popover position
-                let rec = ePos.getBoundingClientRect(),
-                pxLft = _win.pageXOffset || _doc.documentElement.scrollLeft,
-                pxTop = _win.pageYOffset || _doc.documentElement.scrollTop;
-                return { top: (rec.top + pxTop + iOffTop), left: (rec.left + pxLft + iOffLft) }
-            }
+ methods: {
+    "doHeroMobMouseUp": function( ev ){ // Double Tap
+      var oHro = this.oHeroZmMob;
+      if( oHro.isInit ){
+        if( oHro.doubleTap ){
+          oHro.doubleTap = false;
+          this.doHeroMobScale( .5 ); // Double Tap
+        }else{
+          oHro.doubleTap = true;
+          setTimeout(function(){ vltdc_productdetail.doHeroMobMouseUp_expire() }, 380);
         }
-    })(window, _doc, "[data-popover]"); // Declarative implementation
+      }
+      this.oHeroZmMob.isDown = false;
+    },
+    "doHeroMobMouseUp_expire": function(){ // Single Tap
+      var oHro = this.oHeroZmMob;
+      if( oHro.isInit ){
+        if( oHro.doubleTap ) this.doHeroMobScale( -.5 ); // Single Tap
+        oHro.doubleTap = false;
+      } 
+    }
+ }
 {{< /highlight >}}
 <span class="h-ds__none"
-data-at="Vanilla JS Popover|Declarative implementation|Floating UI Widget|Popover Microinteraction|Declarative Binding"></span>
+data-at="Vue.js Double-Tap Logic|Process both Tap and Double-Tap|Vue.js Methods"></span>
 </output>
 
