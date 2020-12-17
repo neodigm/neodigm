@@ -6,11 +6,52 @@
     --wp-dark-mode-border: #394654;
 }
 
-
-
-
-.pfmf-coy__2     {color: #C74375;}
-
+/* Doc helpers begin */
+::selection {
+    color: #930;
+    background: #fff600;
+    text-shadow: none;
+}
+body, [role='main'] {
+    background: linear-gradient(to right, #fff, #e2e2e2, #fff)
+}
+.h-center { text-align: center;}
+.h-left { text-align: left;}
+.h-link {
+    font-weight: 400;
+    cursor: pointer;
+    letter-spacing: .04em;
+    color: #fbb502;
+}
+.h-vect-line-art { stroke: #000;}
+.h-smaller {font-size: smaller !important;}
+.h-pro-tip {cursor: pointer;user-select: none;}
+.h-nowrap {white-space: nowrap;}
+.h_ital {font-style: italic;}
+.h_code {font-family: monospace !important; font-weight: bolder;}
+.h_quote {font-style: italic; border-left: solid 3px #777;padding-left: 12px}
+.h-ds__none {display: none;}
+.h-ds__block {display: block;}
+.h-ds__inline {display: inline;}
+.h-3d-canvas canvas { display: block;margin: 0 auto; outline: none;}
+.h-fade { opacity: 0.4; filter: blur(8px); transition: .88s filter linear;}
+.h-bg__stripe, .l-caro-design > article, article.l-caro-design {
+    background: repeating-linear-gradient(45deg,#fafafa,#fafafa 24px,#ffffff 24px,#ffffff 48px);
+}
+.l-blog-crd.caro-target__js.h--select {
+    border-bottom: solid 2px #C74375;
+}
+.l-caro-design section img {
+    width: 256px;
+    height: auto;
+    margin: 4px;
+    padding: 4px;
+}
+.rot180 {
+    transform: rotate(180deg);
+}
+.l-mega-place-holder {height: 56px; margin: 0;}
+/* Doc helpers end */
 
  /* Color of the Year begin */
  .bg-coy_2000  {background-color: #9BB7D4;}  /* Cerulean */
@@ -63,53 +104,6 @@
  .text-coy_2021  {color: #939597;}  /* Ultimate Gray */
  .text-coy_2021b {color: #F5DF4D;}  /* Illuminating */
  /* Color of the Year end */
-
-/* Doc helpers begin */
-::selection {
-    color: #930;
-    background: #fff600;
-    text-shadow: none;
-}
-body, [role='main'] {
-    background: linear-gradient(to right, #fff, #e2e2e2, #fff)
-}
-.h-center { text-align: center;}
-.h-left { text-align: left;}
-.h-link {
-    font-weight: 400;
-    cursor: pointer;
-    letter-spacing: .04em;
-    color: #fbb502;
-}
-.h-vect-line-art { stroke: #000;}
-.h-smaller {font-size: smaller !important;}
-.h-pro-tip {cursor: pointer;user-select: none;}
-.h-nowrap {white-space: nowrap;}
-.h_ital {font-style: italic;}
-.h_code {font-family: monospace !important; font-weight: bolder;}
-.h_quote {font-style: italic; border-left: solid 3px #777;padding-left: 12px}
-.h-ds__none {display: none;}
-.h-ds__block {display: block;}
-.h-ds__inline {display: inline;}
-.h-3d-canvas canvas { display: block;margin: 0 auto; outline: none;}
-.h-fade { opacity: 0.4; filter: blur(8px); transition: .88s filter linear;}
-.h-bg__stripe, .l-caro-design > article, article.l-caro-design {
-    background: repeating-linear-gradient(45deg,#fafafa,#fafafa 24px,#ffffff 24px,#ffffff 48px);
-}
-.l-blog-crd.caro-target__js.h--select {
-    border-bottom: solid 2px #C74375;
-}
-.l-caro-design section img {
-    width: 256px;
-    height: auto;
-    margin: 4px;
-    padding: 4px;
-}
-.rot180 {
-    transform: rotate(180deg);
-}
-.l-mega-place-holder {height: 56px; margin: 0;}
-/* Doc helpers end */
 
 /* Caption Vivid Vect begin */
 .l-capt__vect img {width: 42px;}
