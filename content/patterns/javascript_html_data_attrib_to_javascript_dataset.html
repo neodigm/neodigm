@@ -26,11 +26,11 @@ tags:
 function data2prop( sDset ){  //  Convert HTML data attrib name to JS dataset name
     sDset = sDset.replace("data-", "").toLowerCase();
     let aDset = sDset.split(""), aDret = [], bUpper = false;
-    aDset.forEach( (sVal, nIx) => {
-        if( sVal == "-" ){
+    aDset.forEach( ( sChar ) => {
+        if( sChar == "-" ){
             bUpper = true;
         }else{
-            aDret.push( ( bUpper ) ? sVal.toUpperCase() : sVal );
+            aDret.push( ( bUpper ) ? sChar.toUpperCase() : sChar );
             bUpper = false;
         }
     });
