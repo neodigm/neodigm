@@ -54,6 +54,7 @@ body, [role='main'] {
 /* Doc helpers end */
 
  /* Color of the Year begin */
+ .bg-coy_1999  {background-color: #000000;}  /* Black */
  .bg-coy_2000  {background-color: #9BB7D4;}  /* Cerulean */
  .bg-coy_2001  {background-color: #C74375;}  /* Fuchsia Rose */
  .bg-coy_2002  {background-color: #BF1932;}  /* True Red */
@@ -79,6 +80,7 @@ body, [role='main'] {
  .bg-coy_2021  {background-color: #939597;}  /* Ultimate Gray */
  .bg-coy_2021b {background-color: #F5DF4D;}  /* Illuminating */
 
+ .text-coy_1999  {color: #000000;}  /* Black */
  .text-coy_2000  {color: #9BB7D4;}  /* Cerulean */
  .text-coy_2001  {color: #C74375;}  /* Fuchsia Rose */
  .text-coy_2002  {color: #BF1932;}  /* True Red */
