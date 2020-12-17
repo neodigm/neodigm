@@ -37,7 +37,7 @@ let oPopOver = ( ( _win, _doc, _qry ) => {
                         if( eTarget.dataset.popover ){ bInside = true; break; }
                         eTarget = eTarget.parentNode;
                     }
-                    if( !bInside ){ // Tapped Outside of Popup
+                    if( !bInside ){ // Tapped Outside of Popover
                         oPopOver.closeAll();
                     }
                 }, true);

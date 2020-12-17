@@ -34,7 +34,7 @@ function getDistance(lat1, lon1, lat2, lon2) {
     return dst;
   }
 
-closestAirports = (function(_d){
+let closestAirports = ((_d) => {
     return {
       "find": function(nLat, nLon, objPorts, nRadius){
         if(nLat && nLon && objPorts){

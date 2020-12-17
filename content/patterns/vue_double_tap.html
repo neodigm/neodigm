@@ -28,7 +28,7 @@ tags:
     "doHeroMobMouseUp": function( ev ){ // Double Tap
       var oHro = this.oHeroZmMob;
       if( oHro.isInit ){
-        if( oHro.doubleTap ){
+        if( oHro.doubleTap ){ // Zoom In
           oHro.doubleTap = false;
           this.doHeroMobScale( .5 ); // Double Tap
         }else{
@@ -40,7 +40,7 @@ tags:
     },
     "doHeroMobMouseUp_expire": function(){ // Single Tap
       var oHro = this.oHeroZmMob;
-      if( oHro.isInit ){
+      if( oHro.isInit ){ // Zoom Out
         if( oHro.doubleTap ) this.doHeroMobScale( -.5 ); // Single Tap
         oHro.doubleTap = false;
       } 
