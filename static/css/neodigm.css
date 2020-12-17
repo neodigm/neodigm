@@ -49,6 +49,7 @@ body, [role='main'] {
     letter-spacing: .04em;
     color: #fbb502;
 }
+.h-vect-line-art { stroke: #000;}
 .h-smaller {font-size: smaller !important;}
 .h-pro-tip {cursor: pointer;user-select: none;}
 .h-nowrap {white-space: nowrap;}
@@ -517,6 +518,7 @@ a.skip__main:active
     }
     .readable__doc { color: #fff; }
     .readable__caption { color: #fff; }
+    .h-vect-line-art { stroke: #fff;}
 }
 /* Dark Mode end */
     
