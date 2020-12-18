@@ -1,14 +1,44 @@
 ---
-title: "Javascript_spotify_ad_blocker"
+title: "Web Music Ad Blocker Snippet"
 date: 2020-12-07T20:26:54-06:00
-draft: true
-summary: ""
-description: 
-slug: vue
+draft: false
+summary: "Automatically mute the Music player when Ads are playing and unmute when they are done (in Chrome)."
+slug: javascript
 categories:
-- Polyfill
-- Asynchrony
+- DOM
 tags:
-- IIFE
+- Snippets
 - JavaScript
 ---
+<output>
+{{< highlight JavaScript >}}
+/* Install: Open Chrome Dev Tools (Command+option+I on Mac). Menu > Sources > Snippets
+   Install: Create a new Snippet named musicADify.js, Paste this script, Save (Command+S).
+   Usage: Run the Snippet once each time you start the Music Web Player.
+   Usage: Right-Click the snippet named musicADify.js and choose Run from the drop-down.
+   Usage: Close Chrome Dev Tools. 🏖️ Play your Jams! 🎶
+
+╔═╗┌─┐┌─┐┌┬┐┬┌─┐┬ ┬  ╔═╗┌┬┐┌─┐
+╚═╗├─┘│ │ │ │├┤ └┬┘  ╠═╣ ││└─┐
+╚═╝┴  └─┘ ┴ ┴└   ┴   ╩ ╩─┴┘└─┘ */
+
+ let spotADify = ( (_d, _q, _t) => {
+    let eS = _d.querySelector( _q ), bS = true;
+    if( eS ){ // 🏖️ Play your Jams! 🎶
+        bS = ( eS.getAttribute("aria-label") == "Mute" );
+        setInterval( () => {spotADify.tick();}, _t);
+        return {
+        "tick":  () => {
+          if((_d.title.indexOf("Adve") != -1) || (_d.title.indexOf("Spoti") != -1)){
+              if(  bS ){ eS.click(); bS=!true; }
+          }else{
+              if( !bS ){ eS.click(); bS=true; }
+          }
+        }
+      }
+    }
+  })( document, "[aria-label='Mute'],[aria-label='Unmute']", 256);
+{{< /highlight >}}
+    <span class="h-ds__none"
+    data-at="Mute Ads in Web Player|Automatically Mute Ads|Remove Ads from Web Music"></span>
+</output>
