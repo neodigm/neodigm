@@ -1,6 +1,45 @@
 ---
-title: "Javascript_dark_mode_and_reduced_motion"
+title: "Dark Mode and Reduced Motion"
 date: 2020-12-19T12:05:23-06:00
-draft: true
+draft: false
+summary: "Making Dark Mode work with both a UI switch and the OS preference."
+slug: javascript
+categories:
+- Media Query
+- User Peference
+tags:
+- A11Y
+- UX
+- JavaScript
 ---
+<output>
+{{< highlight JavaScript >}}
+// Desc: data-is-whatever will be converted to isWhatever
+// Usage: element.dataset[ data2prop("data-is-whatever") ]
+/***
+ *      ______ _____ __  __           _____           _       _   
+ *     |  ____/ ____|  \/  |   /\    / ____|         (_)     | |  
+ *     | |__ | |    | \  / |  /  \  | (___   ___ _ __ _ _ __ | |_ 
+ *     |  __|| |    | |\/| | / /\ \  \___ \ / __| '__| | '_ \| __|
+ *     | |___| |____| |  | |/ ____ \ ____) | (__| |  | | |_) | |_ 
+ *     |______\_____|_|  |_/_/    \_\_____/ \___|_|  |_| .__/ \__|
+ *                                                     | |        
+ *                                                     |_|        */
 
+function data2prop( sDset ){  //  Convert HTML data attrib name to JS dataset name
+    sDset = sDset.replace("data-", "").toLowerCase();
+    let aDset = sDset.split(""), aDret = [], bUpper = false;
+    aDset.forEach( ( sChar ) => {
+        if( sChar == "-" ){
+            bUpper = true;
+        }else{
+            aDret.push( ( bUpper ) ? sChar.toUpperCase() : sChar );
+            bUpper = false;
+        }
+    });
+    return aDret.join("");
+}
+{{< /highlight >}}
+    <span class="h-ds__none"
+    data-at="HTML data attrib to JS camel-case|Modern JS data-name-utility|JS DOM dataset convention"></span>
+</output>
