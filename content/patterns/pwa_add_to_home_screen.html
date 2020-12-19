@@ -3,7 +3,7 @@ title: "PWA Add to Home Screen"
 date: 2020-12-19T15:33:13-06:00
 draft: false
 summary: "Convert an HTML formatted data attrib name to a JS formatted name."
-slug: javascript
+slug: pwa
 categories:
 - DOM
 tags:
@@ -11,8 +11,32 @@ tags:
 ---
 <output>
 {{< highlight JavaScript >}}
-
+/*    ╔═╗┌─┐┬─┐┬  ┬┬┌─┐┌─┐
+ *    ╚═╗├┤ ├┬┘└┐┌┘││  ├┤ 
+ *    ╚═╝└─┘┴└─ └┘ ┴└─┘└─┘
+ *    ╦ ╦┌─┐┬─┐┬┌─┌─┐┬─┐  
+ *    ║║║│ │├┬┘├┴┐├┤ ├┬┘  
+ *    ╚╩╝└─┘┴└─┴ ┴└─┘┴└─  Advanced Cache ⚡ Notification Patterns
+ */
+{{< /highlight >}}
+<hr>
+{{< highlight JavaScript >}}
+eA2hs.addEventListener("click", (e) => {
+    eA2hs.style.display = "none";
+    eA2hsP.style.display = "block";
+    evDefPrompt.prompt();
+    evDefPrompt.userChoice
+      .then((choiceResult) => {
+        if (choiceResult.outcome === "accepted") {
+          if( snck ) snck.q("Wow, Now I'm an App on your Desktop|How Convenient!");
+          playAudioFile( 7 );  //  ggl anl event | User accepted the A2HS prompt
+        } else {
+          playAudioFile( 3 );  //  ggl anl event | User dismissed the A2HS prompt
+        }
+        evDefPrompt = null;
+      });
+  });
 {{< /highlight >}}
     <span class="h-ds__none"
-    data-at="HTML data attrib to JS camel-case|Modern JS data-name-utility|JS DOM dataset convention"></span>
+    data-at="Offline First PWA|Installable Web App|Progressive Web App|Service Worker Enabled"></span>
 </output>
