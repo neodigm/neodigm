@@ -13,61 +13,55 @@ tags:
 - JavaScript
 ---
 <output>
-{{< highlight JavaScript >}}
-//  Desc: Listen to the OS for user preference
-//  but override with a UI toggle.
-/*  ______                  __        ____    ____               __        
-   |_   _ `.               [  |  _   |_   \  /   _|             |  ]       
-     | | `. \ ,--.   _ .--. | | / ]    |   \/   |   .--.    .--.| | .---.  
-     | |  | |`'_\ : [ `/'`\]| '' <     | |\  /| | / .'`\ \/ /'`\' |/ /__\\ 
-    _| |_.' /// | |, | |    | |`\ \   _| |_\/_| |_| \__. || \__/  || \__., 
-   |______.' \'-;__/[___]  [__|  \_] |_____||_____|'.__.'  '.__.;__]'.__.'  User Prefs */
+{{< highlight sql >}}
+PROCEDURE post_stage
+(
+    in_rowid_job            cmxlb.cmx_rowid,
+    in_ldg_table_name       cmxlb.cmx_table_name,
+    in_stg_table_name       cmxlb.cmx_table_name,
+    out_error_msg      OUT  cmxlb.cmx_message,
+    out_return_code    OUT  int
+)
+AS
+sql_stmt varchar2(2000);
+t_party_acct_id varchar2(14);
+t_txn_div_cd varchar2(20);
+t_txn_div_display varchar2(50);
+commit_count NUMBER := 0;
+commit_inc NUMBER := 1000;
+--
+CURSOR C_PTAC_TXN IS
+SELECT PARTY_ACCT_ID, TXN_DIV_CD, TXN_DIV_DISPLAY
+FROM   C_STG_PTAC_TXN_DIV;
+--
+BEGIN
+--
+    commit_inc := to_number(GET_PARAMETER('post_stage_commit', commit_inc));
+    IF in_ldg_table_name = 'C_LDG_PTAC_TXN_DIV' AND in_stg_table_name = 'C_STG_PTAC_TXN_DIV' THEN
+    --    20130225 SCK Update the stage txn_div_display col with a denormalized string derived
+    --    from an aggregate of both staging and base object. 
+    --    🏄 SQL ⚡ ETL MDM ⚡ PL/SQL ORM
+        cmxlog.debug ('ADDUE: Landing table name is ' || in_ldg_table_name || ' Staging table name is ' || in_stg_table_name);
+        BEGIN
+              FOR R_PTAC_TXN in C_PTAC_TXN LOOP
+                    post_stage_concat(R_PTAC_TXN.PARTY_ACCT_ID, t_txn_div_display);
+                    UPDATE C_STG_PTAC_TXN_DIV
+                    SET txn_div_display = t_txn_div_display, create_date = sysdate WHERE TXN_DIV_CD = R_PTAC_TXN.TXN_DIV_CD AND
+                    PARTY_ACCT_ID = R_PTAC_TXN.PARTY_ACCT_ID;  -- CURRENT OF C_PTAC_TXN;
+                    commit_count := commit_count + commit_inc;
+                    IF MOD(commit_count, 1000) = 0 THEN
+                        cmxlog.debug ('ADDUE: post_stage_concat is: ' || commit_count || ':' || R_PTAC_TXN.PARTY_ACCT_ID || ' : ' || t_txn_div_display);
+                        COMMIT;
+                    END IF;
+              END LOOP;
+              COMMIT;
+        END;
+    ELSE
+      CMXlog.debug ('ADDUE Post Stage - no action taken');
+    END IF;
+END post_stage;
+END ADD_UE;
 
-
-let doPrefersReducedMotion = function( bMotion ){// Stop 3D rotation
-    o3Config.controls.autoRotate = !bMotion; 
-}
-let doPrefersColorScheme = function( bScheme ){ // UI | OS Semaphore
-    document.body.dataset.prefScheme = ((bScheme) ? "dark" : "light"); //  🌙  /  ☀️
-}
-
-// Capture the prefers media queries
-const mqPrefReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-const mqPrefColorScheme = window.matchMedia("(prefers-color-scheme: dark)");
-
-doPrefersReducedMotion( (mqPrefReducedMotion && mqPrefReducedMotion.matches) );
-doPrefersColorScheme( (mqPrefColorScheme && mqPrefColorScheme.matches) );
-
-// listen to changes in the media query's value
-mqPrefReducedMotion.addEventListener("change", () => {
-    doPrefersReducedMotion( mqPrefReducedMotion.matches );
-});
-mqPrefColorScheme.addEventListener("change", () => {
-    doPrefersColorScheme( mqPrefColorScheme.matches );
-});
-{{< /highlight >}}
-<hr>
-{{< highlight css >}}
-/* Dark Mode begin */
-/*@media (prefers-color-scheme: dark) {*/
-
-    body[data-pref-scheme='dark'] [role='main'] {
-        background: linear-gradient(to right, #555, #c2c2c2, #555)
-    }
-    body[data-pref-scheme='dark'] .h-bg__stripe, body[data-pref-scheme='dark'] .l-caro-design > article, body[data-pref-scheme='dark'] article.l-caro-design {
-        background: repeating-linear-gradient(45deg,#242424,#242424 24px,#444 24px,#444 48px);
-    }
-    body[data-pref-scheme='dark'] section.pfmf-grid > div > article {
-        border: solid 1px #888;
-        border-top: solid 2px #888;
-        box-shadow: 0px 2px 6px -2px rgba(164,164,164,0.6);
-        background-color: #242424;
-    }
-    body[data-pref-scheme='dark'] .readable__doc { color: #fff; }
-    body[data-pref-scheme='dark'] .readable__caption { color: #fff; }
-    body[data-pref-scheme='dark'] .h-vect-line-art { stroke: #fff;}
-/*}*/
-/* Dark Mode end */
 {{< /highlight >}}
     <span class="h-ds__none"
     data-at="🏄 SQL⚡ ETL MDM ⚡ PL/SQL ORM|Oracle PL/SQL Logic|SQL Stored Procedure|Structured English Query Language"></span>
