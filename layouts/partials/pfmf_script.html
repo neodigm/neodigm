@@ -245,7 +245,7 @@ if( e3 ) { // Delay 3d call if still null
                 aVivCnt.forEach( (eVivCnt) => {
                     if(eVivCnt.atVivid !== eVivCnt.dataset.atVivid){ // Data atr changed
                         Array.from( eVivCnt.dataset.atVivid ).filter(( sChr )=>{
-                            if( sChr == " ") sChr = "space";
+                            if( sChr == " " ) sChr = "space";
                             sMU += "<img src='" + VIVPATH + sChr.toLowerCase() + ".svg'>";
                         });
                         eVivCnt.innerHTML = sMU;

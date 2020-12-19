@@ -21,7 +21,7 @@ tags:
      | | `. \ ,--.   _ .--. | | / ]    |   \/   |   .--.    .--.| | .---.  
      | |  | |`'_\ : [ `/'`\]| '' <     | |\  /| | / .'`\ \/ /'`\' |/ /__\\ 
     _| |_.' /// | |, | |    | |`\ \   _| |_\/_| |_| \__. || \__/  || \__., 
-   |______.' \'-;__/[___]  [__|  \_] |_____||_____|'.__.'  '.__.;__]'.__.'  User Preference */
+   |______.' \'-;__/[___]  [__|  \_] |_____||_____|'.__.'  '.__.;__]'.__.'  User Prefs */
 
 
 let doPrefersReducedMotion = function( bMotion ){// Stop 3D rotation
@@ -45,6 +45,29 @@ mqPrefReducedMotion.addEventListener("change", () => {
 mqPrefColorScheme.addEventListener("change", () => {
     doPrefersColorScheme( mqPrefColorScheme.matches );
 });
+{{< /highlight >}}
+<hr>
+{{< highlight css >}}
+/* Dark Mode begin */
+/*@media (prefers-color-scheme: dark) {*/
+
+    body[data-pref-scheme='dark'] [role='main'] {
+        background: linear-gradient(to right, #555, #c2c2c2, #555)
+    }
+    body[data-pref-scheme='dark'] .h-bg__stripe, body[data-pref-scheme='dark'] .l-caro-design > article, body[data-pref-scheme='dark'] article.l-caro-design {
+        background: repeating-linear-gradient(45deg,#242424,#242424 24px,#444 24px,#444 48px);
+    }
+    body[data-pref-scheme='dark'] section.pfmf-grid > div > article {
+        border: solid 1px #888;
+        border-top: solid 2px #888;
+        box-shadow: 0px 2px 6px -2px rgba(164,164,164,0.6);
+        background-color: #242424;
+    }
+    body[data-pref-scheme='dark'] .readable__doc { color: #fff; }
+    body[data-pref-scheme='dark'] .readable__caption { color: #fff; }
+    body[data-pref-scheme='dark'] .h-vect-line-art { stroke: #fff;}
+/*}*/
+/* Dark Mode end */
 {{< /highlight >}}
     <span class="h-ds__none"
     data-at="Dark Scheme Implementation|OS / UI Semaphore|User Centric Preference|Three.js Motion Control"></span>
