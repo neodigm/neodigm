@@ -16,29 +16,36 @@ tags:
 {{< highlight JavaScript >}}
 // Desc: data-is-whatever will be converted to isWhatever
 // Usage: element.dataset[ data2prop("data-is-whatever") ]
-/***
- *      ______ _____ __  __           _____           _       _   
- *     |  ____/ ____|  \/  |   /\    / ____|         (_)     | |  
- *     | |__ | |    | \  / |  /  \  | (___   ___ _ __ _ _ __ | |_ 
- *     |  __|| |    | |\/| | / /\ \  \___ \ / __| '__| | '_ \| __|
- *     | |___| |____| |  | |/ ____ \ ____) | (__| |  | | |_) | |_ 
- *     |______\_____|_|  |_/_/    \_\_____/ \___|_|  |_| .__/ \__|
- *                                                     | |        
- *                                                     |_|        */
+/*
+    ______                  __        ____    ____               __        
+   |_   _ `.               [  |  _   |_   \  /   _|             |  ]       
+     | | `. \ ,--.   _ .--. | | / ]    |   \/   |   .--.    .--.| | .---.  
+     | |  | |`'_\ : [ `/'`\]| '' <     | |\  /| | / .'`\ \/ /'`\' |/ /__\\ 
+    _| |_.' /// | |, | |    | |`\ \   _| |_\/_| |_| \__. || \__/  || \__., 
+   |______.' \'-;__/[___]  [__|  \_] |_____||_____|'.__.'  '.__.;__]'.__.'  User Preference */
 
-function data2prop( sDset ){  //  Convert HTML data attrib name to JS dataset name
-    sDset = sDset.replace("data-", "").toLowerCase();
-    let aDset = sDset.split(""), aDret = [], bUpper = false;
-    aDset.forEach( ( sChar ) => {
-        if( sChar == "-" ){
-            bUpper = true;
-        }else{
-            aDret.push( ( bUpper ) ? sChar.toUpperCase() : sChar );
-            bUpper = false;
-        }
-    });
-    return aDret.join("");
+
+let doPrefersReducedMotion = function( bMotion ){// Stop 3D rotation
+    o3Config.controls.autoRotate = !bMotion; 
 }
+let doPrefersColorScheme = function( bScheme ){ // UI | OS Semaphore
+    document.body.dataset.prefScheme = ((bScheme) ? "dark" : "light");
+}
+
+// Capture the prefers media queries
+const mqPrefReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+const mqPrefColorScheme = window.matchMedia("(prefers-color-scheme: dark)");
+
+doPrefersReducedMotion( (mqPrefReducedMotion && mqPrefReducedMotion.matches) );
+doPrefersColorScheme( (mqPrefColorScheme && mqPrefColorScheme.matches) );
+
+// listen to changes in the media query's value
+mqPrefReducedMotion.addEventListener("change", () => {
+    doPrefersReducedMotion( mqPrefReducedMotion.matches );
+});
+mqPrefColorScheme.addEventListener("change", () => {
+    doPrefersColorScheme( mqPrefColorScheme.matches );
+});
 {{< /highlight >}}
     <span class="h-ds__none"
     data-at="HTML data attrib to JS camel-case|Modern JS data-name-utility|JS DOM dataset convention"></span>
