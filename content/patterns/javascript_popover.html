@@ -29,7 +29,7 @@ let oPopOver = ( ( _win, _doc, _qry ) => {
                 arPops= [].slice.call(_doc.querySelectorAll( _qry ));
                 _win.addEventListener("resize", oPopOver.closeAll);
                 _win.addEventListener("scroll", oPopOver.closeAll); 
-                _doc.body.addEventListener("click", function( e ){ // Outside Click
+                _doc.body.addEventListener("click", function( e ){ // 👁️ Outside Click
                     let eTarget = e.target, bInside = false;
                     while( eTarget.tagName !== "HTML" ){
                         if( eTarget.dataset.popover ){ bInside = true; break; }
