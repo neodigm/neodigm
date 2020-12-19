@@ -2,7 +2,7 @@
 title: "Dark Mode and Reduced Motion"
 date: 2020-12-19T12:05:23-06:00
 draft: false
-summary: "Making Dark Mode work with both a UI switch and the OS preference."
+summary: "Making Dark Mode work with both a UI switch && the OS preference."
 slug: javascript
 categories:
 - Media Query
@@ -14,10 +14,9 @@ tags:
 ---
 <output>
 {{< highlight JavaScript >}}
-// Desc: data-is-whatever will be converted to isWhatever
-// Usage: element.dataset[ data2prop("data-is-whatever") ]
-/*
-    ______                  __        ____    ____               __        
+//  Desc: Listen to the OS for user preference
+//  but override with a UI toggle.
+/*  ______                  __        ____    ____               __        
    |_   _ `.               [  |  _   |_   \  /   _|             |  ]       
      | | `. \ ,--.   _ .--. | | / ]    |   \/   |   .--.    .--.| | .---.  
      | |  | |`'_\ : [ `/'`\]| '' <     | |\  /| | / .'`\ \/ /'`\' |/ /__\\ 
@@ -48,5 +47,5 @@ mqPrefColorScheme.addEventListener("change", () => {
 });
 {{< /highlight >}}
     <span class="h-ds__none"
-    data-at="HTML data attrib to JS camel-case|Modern JS data-name-utility|JS DOM dataset convention"></span>
+    data-at="Dark Scheme Implementation|OS / UI Semaphore|User Centric Preference"></span>
 </output>
