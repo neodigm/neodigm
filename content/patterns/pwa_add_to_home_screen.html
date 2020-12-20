@@ -16,7 +16,7 @@ tags:
  *    ╚═╝└─┘┴└─ └┘ ┴└─┘└─┘
  *    ╦ ╦┌─┐┬─┐┬┌─┌─┐┬─┐  
  *    ║║║│ │├┬┘├┴┐├┤ ├┬┘  
- *    ╚╩╝└─┘┴└─┴ ┴└─┘┴└─  Advanced Cache ⚡ Notification Patterns
+ *    ╚╩╝└─┘┴└─┴ ┴└─┘┴└─  Advanced Cache ⚡ Notifications
  */
  if ("serviceWorker" in navigator) {
     window.addEventListener("load", () => {
@@ -37,9 +37,9 @@ eA2hs.addEventListener("click", (e) => {
       .then((choiceResult) => {
         if (choiceResult.outcome === "accepted") {
           if( snck ) snck.q("Wow, Now I'm an App on your Desktop|How Convenient!");
-          playAudioFile( 7 );  //  ggl anl event | User accepted the A2HS prompt
+          playAudioFile( 7 );  //  ggl tag event | User accepted the A2HS prompt
         } else {
-          playAudioFile( 3 );  //  ggl anl event | User dismissed the A2HS prompt
+          playAudioFile( 3 );  //  ggl tag event | User dismissed the A2HS prompt
         }
         evDefPrompt = null;
       });
