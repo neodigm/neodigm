@@ -2,7 +2,7 @@
 title: "PWA Add to Home Screen"
 date: 2020-12-19T15:33:13-06:00
 draft: false
-summary: "Convert an HTML formatted data attrib name to a JS formatted name."
+summary: "Progressive Web App ⚡ Advanced Cache && Notification Patterns"
 slug: pwa
 categories:
 - DOM
@@ -45,6 +45,29 @@ eA2hs.addEventListener("click", (e) => {
       });
   });
 {{< /highlight >}}
-    <span class="h-ds__none"
+<hr>
+{{< highlight JavaScript >}}
+function displayMsg( sMsg ){
+    //    System Tray Notification
+    console.log( sMsg );
+    if (!("Notification" in window)) {
+        console.log('Notification API not supported.');
+        return;
+    } else if (Notification.permission === "granted") {
+        // If it's okay let's create a notification
+        var notification = new Notification( Nowish(), {icon: "https://repository-images.githubusercontent.com/178555357/2b6ad880-7aa0-11ea-8dde-63e70187e3e9", body: sMsg} );
+    } else if (Notification.permission !== "denied") {
+        // Otherwise, we need to ask the user for permission
+
+        Notification.requestPermission(function (permission) {
+            // If the user accepts, let's create a notification
+            if (permission === "granted") {
+                var notification = new Notification( Nowish(), {icon: "https://repository-images.githubusercontent.com/178555357/2b6ad880-7aa0-11ea-8dde-63e70187e3e9", body: sMsg} );
+            }
+        });
+    }
+}
+{{< /highlight >}}
+<span class="h-ds__none"
     data-at="Offline First PWA|Installable Web App|Progressive Web App|Service Worker Enabled"></span>
 </output>
