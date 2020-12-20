@@ -533,6 +533,11 @@ a.skip__main:active
 /* Dark Mode begin */
 /*@media (prefers-color-scheme: dark) {*/
 
+    body[data-pref-scheme='dark']  .scheme__vect--dark { display: inline; }
+    body[data-pref-scheme='dark']  .scheme__vect--light{ display: none; }
+    body[data-pref-scheme='light'] .scheme__vect--dark { display: none; }
+    body[data-pref-scheme='light'] .scheme__vect--light{ display: inline; }
+
     body[data-pref-scheme='dark'] [role='main'] {
         background: linear-gradient(to right, #555, #c2c2c2, #555)
     }
