@@ -11,12 +11,12 @@ tags:
 ---
 <output>
 {{< highlight JavaScript >}}
-/*    ╔═╗┌─┐┬─┐┬  ┬┬┌─┐┌─┐
- *    ╚═╗├┤ ├┬┘└┐┌┘││  ├┤ 
- *    ╚═╝└─┘┴└─ └┘ ┴└─┘└─┘
- *    ╦ ╦┌─┐┬─┐┬┌─┌─┐┬─┐  
- *    ║║║│ │├┬┘├┴┐├┤ ├┬┘  
- *    ╚╩╝└─┘┴└─┴ ┴└─┘┴└─  Advanced Cache ⚡ Notifications
+
+/*     ______   __     __     ______    
+      /\  == \ /\ \  _ \ \   /\  __ \   
+      \ \  _-/ \ \ \/ ".\ \  \ \  __ \  
+       \ \_\    \ \__/".~\_\  \ \_\ \_\ 
+        \/_/     \/_/   \/_/   \/_/\/_/  ✨ Add to Home Screen
  */
  if ("serviceWorker" in navigator) {
     window.addEventListener("load", () => {
@@ -57,7 +57,6 @@ function displayMsg( sMsg ){
         var notification = new Notification( Nowish(), {icon: "https://repository-images.githubusercontent.com/178555357/2b6ad880-7aa0-11ea-8dde-63e70187e3e9", body: sMsg} );
     } else if (Notification.permission !== "denied") {
         // Otherwise, we need to ask the user for permission
-
         Notification.requestPermission(function (permission) {
             // If the user accepts, let's create a notification
             if (permission === "granted") {
@@ -67,6 +66,50 @@ function displayMsg( sMsg ){
     }
 }
 {{< /highlight >}}
+<hr>
+{{< highlight JavaScript >}}
+/*    ╔═╗┌─┐┬─┐┬  ┬┬┌─┐┌─┐
+ *    ╚═╗├┤ ├┬┘└┐┌┘││  ├┤ 
+ *    ╚═╝└─┘┴└─ └┘ ┴└─┘└─┘
+ *    ╦ ╦┌─┐┬─┐┬┌─┌─┐┬─┐  
+ *    ║║║│ │├┬┘├┴┐├┤ ├┬┘  
+ *    ╚╩╝└─┘┴└─┴ ┴└─┘┴└─  Advanced Cache ⚡ Notifications
+ */
+importScripts('https://storage.googleapis.com/workbox-cdn/releases/4.0.0/workbox-sw.js');
+workbox.LOG_LEVEL = "debug";
+self.addEventListener("fetch", event => {
+  event.respondWith(caches.match(event.request)
+    .then(cachedResponse => {
+        if (cachedResponse) {
+          return cachedResponse;
+        }
+        return fetch(event.request);
+      })
+    );
+});
+workbox.routing.registerRoute(
+  // Cache CSS files
+  /.*\.css/,
+  // Use cache but update in the background ASAP
+  workbox.strategies.staleWhileRevalidate({
+    cacheName: 'css-cache',
+  })
+);
+workbox.routing.registerRoute(
+  // Cache image files
+  /\.(?:png|gif|jpg|jpeg|webp|svg|mp3|mp4|json|html|js)$/,
+  // Use the cache if it's available
+  workbox.strategies.cacheFirst({
+    cacheName: 'image-cache',
+    plugins: [
+      new workbox.expiration.Plugin({
+        maxEntries: 256, maxAgeSeconds: 172800,
+      })
+    ],
+  })
+);
+{{< /highlight >}}
+
 <span class="h-ds__none"
     data-at="Offline First PWA|Installable Web App|Progressive Web App|Service Worker Enabled"></span>
 </output>
