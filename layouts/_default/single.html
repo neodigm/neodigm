@@ -2,7 +2,7 @@
     <body>
         <div class="l-mega-place-holder"></div>
         {{ partial "megamenu.html" . }}
-        <main role="main">
+        <main id="a11y-skipmain" role="main">
             <picture class="hero-single" role="banner"> <!--  1280 X 720  -->
                 <img class="" src="../{{.Page.Slug}}_tn.webp" alt="{{ .Title }}">
                 <figcaption class="l-cat-chip">
