@@ -16,22 +16,22 @@ tags:
      | /  \/_   _ _ __  _ __ ___  ___ ___ 
      | |   | | | | '_ \| '__/ _ \/ __/ __|
      | \__/\ |_| | |_) | | |  __/\__ \__ \
-      \____/\__, | .__/|_|  \___||___/___/
+      \____/\__, | .__/|_|  \___||___/___/.io
              __/ | |                      
             |___/|_|                      E2E
 
  Automatically capture a video when a test fails
- Apply optional configuration files via the command line. This will allow us to change environments easily (requires v3.6)
- Test globals like system_output
  Test values persisted in the Vuex (Vue.js Vuex specific) store
+ Apply optional configuration files via the command line (requires v3.6)
  Create custom reusable, and chainable commands, such as cy.signIn() or cy.turnOnFeature()
- Test responsive layout behavior  */
+ Test responsive layout 🦄 Local Storage
+ Test A11y WCAG success criteria  */
 
 describe('E2E test | Hotel navigation, selection, and discovery', () => {
-  context('Admin Add Hotel to Event', function () {
-      Cypress.on('uncaught:exception', (err, runnable) => { return false }); // ignore CORS
+  context('Admin Add Hotel to Event', function () { // ignore CORS
+      Cypress.on('uncaught:exception', (err, runnable) => { return false });
       it('Success Login then Save Event', () => {
-          cy.viewport(1066, 600)  //  large laptop 66.524em 
+          cy.viewport(1066, 600)  //  large laptop 66.563em
           cy.log( JSON.stringify(Cypress.env()) )
           let event_url;  //  The URL of the first event (default)
           let dMessage = new Date();  //  Now
