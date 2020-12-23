@@ -172,6 +172,57 @@ body, [role='main'] {
 }
 /* Hero img end */
 
+/*  Hero Zoom Desktop begin */
+.l-HeroZoom-Cntr {
+    margin: 0 auto 50px auto;
+    position: relative;
+    height: 100%; width: 100%;
+}
+
+.l-HeroZoom-Cntr .l-HeroZoom > section {
+    cursor: pointer; width: auto; height: auto; font-size: 0px; position: relative; user-select: none;
+    background: linear-gradient(to right, #fff, #e2e2e2, #fff);
+}
+.l-HeroZoom-Cntr .l-HeroZoom > section > img {
+    width: 100%; height: auto; pointer-events: none;
+}
+.l-HeroZoom-Cntr .l-HeroZoom > section > div {
+    overflow: hidden; position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;pointer-events: none;
+}
+.l-HeroZoom-Cntr .l-HeroZoom > section > div > img {
+    display: block; pointer-events: none; width: 100%;
+}
+
+.l-HeroZoom-Cntr .HeroZoom-Cntr__link{
+    display: none;
+    border: 2px solid #d6d6d6;
+}
+
+.l-HeroZoom-Cntr:hover .HeroZoom-Cntr__link,
+.l-HeroZoom-Cntr:hover .HeroZoom-Cntr__link:link,
+.l-HeroZoom-Cntr:hover .HeroZoom-Cntr__link:visited,
+.l-HeroZoom-Cntr:hover .HeroZoom-Cntr__link:hover,
+.l-HeroZoom-Cntr:hover .HeroZoom-Cntr__link:active {
+    cursor: pointer;
+    background-color: #fff; color: #424242;
+    border-radius: 28px;
+    bottom: 16px;
+    display: inline;
+    left: 50%;
+    line-height: 1;
+    opacity: 1;
+    padding: .5rem;
+    position: absolute;
+    text-align: center;
+    text-decoration: none;
+    transform: translateX(-50%);
+    user-select: none;
+    width: 156px;
+    z-index: 32;
+}
+
+/*  Hero Zoom Desktop end */ 
+
 /*  Blog Content Card Begin  */
     .l-blog-crd {
         margin: 6px 4px; padding: 4px;
