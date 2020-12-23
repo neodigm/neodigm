@@ -176,12 +176,13 @@ body, [role='main'] {
 .l-HeroZoom-Cntr {
     margin: 0 auto 50px auto;
     position: relative;
-    height: 100%; width: 100%;
+    background: linear-gradient(to right, #555, #c2c2c2, #555);
+    QQQQheight: 100%; QQQQwidth: 100%;
 }
 
 .l-HeroZoom-Cntr .l-HeroZoom > section {
     cursor: pointer; width: auto; height: auto; font-size: 0px; position: relative; user-select: none;
-    background: linear-gradient(to right, #fff, #e2e2e2, #fff);
+    background: linear-gradient(to right, #fff, #c4c4c4, #fff);
 }
 .l-HeroZoom-Cntr .l-HeroZoom > section > img {
     width: 100%; height: auto; pointer-events: none;
@@ -198,11 +199,11 @@ body, [role='main'] {
     border: 2px solid #d6d6d6;
 }
 
-.l-HeroZoom-Cntr:hover .HeroZoom-Cntr__link,
-.l-HeroZoom-Cntr:hover .HeroZoom-Cntr__link:link,
-.l-HeroZoom-Cntr:hover .HeroZoom-Cntr__link:visited,
-.l-HeroZoom-Cntr:hover .HeroZoom-Cntr__link:hover,
-.l-HeroZoom-Cntr:hover .HeroZoom-Cntr__link:active {
+.QQQQl-HeroZoom-Cntr:hover .HeroZoom-Cntr__link,
+.QQQQl-HeroZoom-Cntr:hover .HeroZoom-Cntr__link:link,
+.QQQQl-HeroZoom-Cntr:hover .HeroZoom-Cntr__link:visited,
+.QQQQl-HeroZoom-Cntr:hover .HeroZoom-Cntr__link:hover,
+.QQQQl-HeroZoom-Cntr:hover .HeroZoom-Cntr__link:active {
     cursor: pointer;
     background-color: #fff; color: #424242;
     border-radius: 28px;
