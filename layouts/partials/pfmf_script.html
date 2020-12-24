@@ -202,9 +202,10 @@ if( e3 ) { // Delay 3d call if still null
                                     case "IMG":
                                         aCrdDetail.forEach( (eCrd) =>{ 
                                             eCrd.src = ev.currentTarget.src;
-                                            for( var _ds in eCrd.dataset){
-                                                eCrd.dataset[ _ds ] = "false";
-                                            }
+                                            eCrd.dataset.zoom = ev.currentTarget.dataset.zoom;
+                                            //for( var _ds in eCrd.dataset){
+                                                //eCrd.dataset[ _ds ] = "false";
+                                            //}
                                         });
                                     break;
                                     case "SOURCE": // video
@@ -254,7 +255,7 @@ if( e3 ) { // Delay 3d call if still null
                 }
             },
             "doHeroMouseEnter": ( ev )=>{
-                if( oHro.e && oHro.eBg ){
+                if( oHro.e && oHro.eBg && oHro.eBg.dataset.zoom == "true" ){
                     if( !oHro.isInit ){ // Run once per engagement
                         oHro.h = oHro.e.offsetHeight * oHro.zMult;
                         oHro.w = oHro.e.offsetWidth * oHro.zMult;
@@ -266,14 +267,14 @@ if( e3 ) { // Delay 3d call if still null
                 }
             },
             "doHeroMouseMove": ( ev )=>{
-                if( oHro.e && oHro.eBg ){
+                if( oHro.e && oHro.eBg && oHro.eBg.dataset.zoom == "true" ){
                     oHro.x = (oHro.w - (oHro.e.offsetHeight * oHro.setMtrx[0] ))  -  (ev.offsetX * (oHro.zMult * (oHro.zMult/oHro.setMtrx[1])));
                     oHro.y = (oHro.h - (oHro.e.offsetWidth  * oHro.setMtrx[2] ))  -  (ev.offsetY * (oHro.zMult * (oHro.zMult/oHro.setMtrx[3])));
                     oHro.e.style.transform = "translate(" + oHro.x + "px, " + oHro.y + "px) scale("+oHro.zRatio+")";
                 }
             },
             "oHeroMouseOut": ( ev )=>{
-                if( oHro.e && oHro.eBg ){
+                if( oHro.e && oHro.eBg && oHro.eBg.dataset.zoom == "true" ){
                     oHro.eBg.style.opacity = "1";
                     oHro.e.style.display = "none";
                 }
