@@ -5,6 +5,55 @@ href="/css/rainbow.css">
 <script>
     hljs.initHighlightingOnLoad();
 </script>
+<script>
+    var oD = document;
+    var CnfState = {"audio": false};
+    var AudioContext = window.AudioContext || false;
+    if (AudioContext) {
+      CnfState.audio = true;    //    Icanuse
+      var oAudContx = new AudioContext();    //    HTML5 Audio
+      var oAJAXReq = new XMLHttpRequest();   //    Get Sounds
+      var aAudioBuffer = new Array(18);      //    Store Sound files
+      var fetchSoundConfig = {sound_max: 18, sound_current: 1};    //    Sound limits
+      setTimeout( function(){ fetchSound(); }, 5600);
+    }
+    function fetchSound() {
+        //    AJAX a single sound binary
+        oAJAXReq.open("GET", "https://neodigm.github.io/brand_logo_graphic_design/fantastic/discerning/au/a" + fetchSoundConfig.sound_current + ".mp3", true);
+        oAJAXReq.responseType = "arraybuffer";
+        oAJAXReq.send();
+        oAJAXReq.onload = fetchSoundonload;
+    }
+    function fetchSoundonload() {
+        //    The audio file has loaded via AJAX
+        oAudContx.decodeAudioData(oAJAXReq.response, function (decAudBuf) {
+            aAudioBuffer[ fetchSoundConfig.sound_current ] = decAudBuf;
+            fetchSoundConfig.sound_current = fetchSoundConfig.sound_current + 1;
+            if(fetchSoundConfig.sound_current <= fetchSoundConfig.sound_max){
+                oAJAXReq = new XMLHttpRequest();
+                oAJAXReq.responseType = "arraybuffer";
+                fetchSound( fetchSoundConfig.sound_current );
+            }
+        });
+    };
+    function playAudioFile( nSound ) {
+      if( CnfState.audio === true ){  //  Play MP3 if sound toggle is true
+        try{
+            //nSound = nSound + 8;
+          var oSrc = oAudContx.createBufferSource();
+          var volume = oAudContx.createGain();
+          oSrc.buffer = aAudioBuffer[nSound];
+          oSrc.connect(volume);
+          volume.connect(oAudContx.destination);
+          oSrc.connect(oAudContx.destination);
+          oSrc.start(oAudContx.currentTime);
+        } catch( e ){}
+      }
+    };
+    function playAudioRand( aSound ){  //  Either Or | array | max 2
+      playAudioFile( aSound[Math.random()+.5|0]);
+    }
+</script>
 
 <script>
 let aTiny = {"a":"ᵃ","b":"ᵇ","c":"ᶜ","d":"ᵈ","e":"ᵉ","f":"ᶠ","g":"ᵍ","h":"ʰ","i":"ᶦ","j":"ʲ","k":"ᵏ","l":"ᶫ","m":"ᵐ","n":"ᶰ","o":"ᵒ","p":"ᵖ","q":"ᑫ","r":"ʳ","s":"ˢ","t":"ᵗ","u":"ᵘ","v":"ᵛ","w":"ʷ","x":"ˣ","y":"ʸ","z":"ᶻ","A":"ᴬ","B":"ᴮ","C":"ᶜ","D":"ᴰ","E":"ᴱ","F":"ᶠ","G":"ᴳ","H":"ᴴ","I":"ᴵ","J":"ᴶ","K":"ᴷ","L":"ᴸ","M":"ᴹ","N":"ᴺ","O":"ᴼ","P":"ᴾ","Q":"ᑫ","R":"ᴿ","S":"ˢ","T":"ᵀ","U":"ᵁ","V":"ⱽ","W":"ᵂ","X":"ˣ","Y":"ʸ","Z":"ᶻ","`":"`","~":"~","!":"﹗","@":"@","#":"#","$":"﹩","%":"﹪","^":"^","&":"﹠","*":"﹡","(":"⁽",")":"⁾","_":"⁻","-":"⁻","=":"⁼","+":"+","{":"{","[":"[","}":"}","]":"]",":":"﹕",";":"﹔","?":"﹖"};
