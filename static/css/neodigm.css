@@ -177,12 +177,11 @@ body, [role='main'] {
     margin: 0 auto 50px auto;
     position: relative;
     background: linear-gradient(to right, #555, #c2c2c2, #555);
-    QQQQheight: 100%; QQQQwidth: 100%;
 }
 
 .l-HeroZoom-Cntr .l-HeroZoom > section {
     cursor: pointer; width: auto; height: auto; font-size: 0px; position: relative; user-select: none;
-    background: linear-gradient(to right, #fff, #c4c4c4, #fff);
+    background: linear-gradient(to bottom, #555, #c2c2c2, #555);
 }
 .l-HeroZoom-Cntr .l-HeroZoom > section > img {
     width: 100%; height: auto; pointer-events: none;
@@ -198,30 +197,6 @@ body, [role='main'] {
     display: none;
     border: 2px solid #d6d6d6;
 }
-
-.QQQQl-HeroZoom-Cntr:hover .HeroZoom-Cntr__link,
-.QQQQl-HeroZoom-Cntr:hover .HeroZoom-Cntr__link:link,
-.QQQQl-HeroZoom-Cntr:hover .HeroZoom-Cntr__link:visited,
-.QQQQl-HeroZoom-Cntr:hover .HeroZoom-Cntr__link:hover,
-.QQQQl-HeroZoom-Cntr:hover .HeroZoom-Cntr__link:active {
-    cursor: pointer;
-    background-color: #fff; color: #424242;
-    border-radius: 28px;
-    bottom: 16px;
-    display: inline;
-    left: 50%;
-    line-height: 1;
-    opacity: 1;
-    padding: .5rem;
-    position: absolute;
-    text-align: center;
-    text-decoration: none;
-    transform: translateX(-50%);
-    user-select: none;
-    width: 156px;
-    z-index: 32;
-}
-
 /*  Hero Zoom Desktop end */ 
 
 /*  Blog Content Card Begin  */
