@@ -353,6 +353,18 @@ if( e3 ) { // Delay 3d call if still null
         };
     })(document, "[data-at-vivid]", 12664 );
 
+    setTimeout(()=>{
+        let wire4Sound = ((_d, _q)=>{
+            let aFlickArrows = _d.querySelectorAll( _q[0] );
+            if( aFlickArrows.length > 0){
+                aFlickArrows.forEach( (eArw )=>{
+                    eArw.addEventListener("click", (ev)=>{ playAudioFile( 2 ); } );
+                });
+            }
+        })( document, [".flickity-button"]);        
+    },14000);
+
+
 var doPrefersReducedMotion = function( bMotion ){// Stop 3D rotation
     o3Config.controls.autoRotate = !bMotion; 
 }
