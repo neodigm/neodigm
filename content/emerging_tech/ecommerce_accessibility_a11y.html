@@ -43,7 +43,7 @@ tags:
             style="display:block;width: 66%;margin: 10px auto;">
             <details >
                <summary  data-wired4sound="click|9"  class="h-pro-tip">Pro ⚡ Tips</summary>
-                    <p>If you do not see this dialog in Chrome dev tools try swapping the foreground and background colors.</p>
+                    <p>💡 If you do not see this dialog in Chrome dev tools try swapping the foreground and background colors.</p>
             </details>
             <!--<p class="text-coy_2001" data-at-tiny="Color Contract Ratio Tools" data-at-change="data-at-tiny" data-at="Click on the color swatch in chrome dev tools|drag to select the level of compliance"
             style="margin: 2px;padding: 2px;line-height: .6;font-size: smaller;font-family: monospace;"
@@ -99,10 +99,11 @@ tags:
     }
 }); 
 {{< /highlight >}}
-                        <p>Always show which element has the focus. In dev tools console click on the 👁️ eye icon and create this expression:</p>
+                        <p>💡 Always show which element has the focus. In dev tools console click on the 👁️ eye icon and create this expression:</p>
 {{< highlight javascript >}}
 document.activeElement
 {{< /highlight >}}
+                        <p>💡 When debugging keyboard access issues in Chrome make sure that the DevTools panel is disconnected from the browser. If it is connected it shares the tab order with the document you are viewing. This makes it difficult to test issues related to "Skip to Main Content".</p>
                     </details>
                 </li>
                 <li><p>Is there off-screen content that receives the focus?</p></li>
@@ -128,7 +129,7 @@ document.activeElement
 {{< highlight javascript >}}
 npm i @axe-core/cli
 {{< /highlight >}}
-<p>You can then run the A11Y audit from within VSCode terminal or automate via Gulp watch / Github Actions.</p>
+<p>💡 You can then run the A11Y audit from within VSCode terminal or automate via Gulp watch / Github Actions.</p>
                     </details>                    
                 </li>
             </ol>
