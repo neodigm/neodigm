@@ -164,7 +164,7 @@ href="#a11y-skipmain">Skip to Main Content</a>
             style="display:block;width: 66%;margin: 10px auto;">
             <details >
                <summary  data-wired4sound="click|9"  class="h-pro-tip">Pro ⚡ Tips</summary>
-                    <p>If you do not see this dialog in Chrome dev tools try swapping the foreground and background colors.</p>
+                    <p>💡 If you do not see this dialog in Chrome dev tools try swapping the foreground and background colors.</p>
             </details>
             <!--<p class="text-coy_2001" data-at-tiny="Color Contract Ratio Tools" data-at-change="data-at-tiny" data-at="Click on the color swatch in chrome dev tools|drag to select the level of compliance"
             style="margin: 2px;padding: 2px;line-height: .6;font-size: smaller;font-family: monospace;"
@@ -219,9 +219,10 @@ href="#a11y-skipmain">Skip to Main Content</a>
     }
 }); 
 </code></pre></div>
-                        <p>Always show which element has the focus. In dev tools console click on the 👁️ eye icon and create this expression:</p>
+                        <p>💡 Always show which element has the focus. In dev tools console click on the 👁️ eye icon and create this expression:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">document.<span style="color:#a6e22e">activeElement</span>
 </code></pre></div>
+                        <p>💡 When debugging keyboard access issues in Chrome make sure that the DevTools panel is disconnected from the browser. If it is connected it shares the tab order with the document you are viewing. This makes it difficult to test issues related to "Skip to Main Content".</p>
                     </details>
                 </li>
                 <li><p>Is there off-screen content that receives the focus?</p></li>
@@ -246,7 +247,7 @@ href="#a11y-skipmain">Skip to Main Content</a>
                             <p>Install aXe CLI</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">npm</span> <span style="color:#a6e22e">i</span> <span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">axe</span><span style="color:#f92672">-</span><span style="color:#a6e22e">core</span><span style="color:#f92672">/</span><span style="color:#a6e22e">cli</span>
 </code></pre></div>
-<p>You can then run the A11Y audit from within VSCode terminal or automate via Gulp watch / Github Actions.</p>
+<p>💡 You can then run the A11Y audit from within VSCode terminal or automate via Gulp watch / Github Actions.</p>
                     </details>                    
                 </li>
             </ol>
