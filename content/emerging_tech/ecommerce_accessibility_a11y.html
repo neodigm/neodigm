@@ -41,8 +41,8 @@ tags:
         <article class="h-bg__stripe h-left">
             <img src="../ecommerce-accessibility-a11y_1.webp" alt="Chrome Dev Tools"
             style="display:block;width: 66%;margin: 10px auto;">
-            <details>
-                <summary class="h-pro-tip">Pro ⚡ Tips</summary>
+            <details >
+               <summary  data-wired4sound="click|9"  class="h-pro-tip">Pro ⚡ Tips</summary>
                     <p>If you do not see this dialog in Chrome dev tools try swapping the foreground and background colors.</p>
             </details>
             <!--<p class="text-coy_2001" data-at-tiny="Color Contract Ratio Tools" data-at-change="data-at-tiny" data-at="Click on the color swatch in chrome dev tools|drag to select the level of compliance"
@@ -77,8 +77,8 @@ tags:
             <ol>
                 <li><p>Is there a Skip to Main Content Link from the omnibox?</p></li>
                 <li><p>Can a shopper navigate with the tab key and are the focus styles visible?</p>
-                    <details>
-                        <summary class="h-pro-tip">Pro ⚡ Tips</summary>
+                    <details >
+                       <summary  data-wired4sound="click|9"  class="h-pro-tip">Pro ⚡ Tips</summary>
                             <p>Generally, do not use a tab index value greater than 0. Use tabindex="0" on an A element that does not have an HREF.</p>
 
 {{< highlight JavaScript >}}
@@ -122,8 +122,8 @@ document.activeElement
                 <li><p>Google Lighthouse — I use Lighthouse at least daily to get a feel for not only a11y but performance as well.</p></li>
                 <li><p>Wave — This is the WebAIM extension. What I like most about this is its ability to show you the exact line that has the issue.</p></li>
                 <li><p>aXe — Becoming my new fav, this extension exists solely in the developer tools panel. The results are very in-depth. They also offer a command line version that can be hooked into your CI build script.</p>
-                    <details>
-                        <summary class="h-pro-tip">Pro ⚡ Tips</summary>
+                    <details >
+                       <summary  data-wired4sound="click|9"  class="h-pro-tip">Pro ⚡ Tips</summary>
                             <p>Install aXe CLI</p>
 {{< highlight javascript >}}
 npm i @axe-core/cli
@@ -142,8 +142,8 @@ npm i @axe-core/cli
             data-at="Passive Navigation|Circular Tab Focus">JavaScript Keyboard Trap</p></article>
         <article style="padding: 12px 12px;">
             <p>Keyboard Trap POC snippet - Prevent the user from tabbing outside of a modal dialog.</p>
-            <details open="true">
-                <summary>Circular Keyboard Trap</summary>
+            <details  open="true">
+               <summary  data-wired4sound="click|9" >Circular Keyboard Trap</summary>
 {{< highlight JavaScript >}}
 a55_reveal.aRevAct[i].setAttribute("aria-haspopup", "dialog");
 a55_reveal.aRevAct[i].setAttribute("aria-controls", sDialogId);
@@ -183,16 +183,16 @@ if( !oIDs[ sDialogId ]){ // A11y update the dialog (inert content) only once
             data-at="CSS Skip to Content|Tab to Conent Link">Skip to Main Content</p></article>
         <article style="padding: 12px 12px;">
             <p>Skip to Main Content - CSS Focus rules that make the link visible when focused from the omnibox.</p>
-            <details open="true">
-                <summary>CSS Only Solution - Markup</summary>
+            <details  open="true">
+               <summary  data-wired4sound="click|9" >CSS Only Solution - Markup</summary>
 {{< highlight HTML >}}
 <a class="js-skip__main--id skip__main"
 href="#ltdc-skipmain">Skip to Main Content</a>
 {{< /highlight >}}
                 </summary>
             </detail>
-            <details open="true">
-                <summary>CSS Only Solution</summary>
+            <details  open="true">
+               <summary  data-wired4sound="click|9" >CSS Only Solution</summary>
 {{< highlight CSS >}}
 a.skip__main:active, a.skip__main:focus {
     background-color: #fff;
