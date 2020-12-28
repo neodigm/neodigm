@@ -272,13 +272,13 @@ if( e3 ) { // Delay 3d call if still null
                             }
                         });
                     });
-                    let eAutoTop = _d.querySelector("[data-caro-auto-click='true']");
-                    if( eAutoTop ){
-                        eAutoTop.dataset.caroAutoClick = "false";
-                        eAutoTop = eAutoTop.querySelectorAll(".caro-target__js");
-                        if( eAutoTop ) {
+                    let eAutoTap = _d.querySelector("[data-caro-auto-click='true']");
+                    if( eAutoTap ){
+                        eAutoTap.dataset.caroAutoClick = "false";
+                        eAutoTap = eAutoTap.querySelectorAll(".caro-target__js");
+                        if( eAutoTap ) {
                             setTimeout(function(){
-                                eAutoTop[ f1210() ].click();
+                                eAutoTap[ f1210() ].click();
                             }, (++nCnt * 964) );
                         }
                     }
