@@ -299,7 +299,8 @@ if( e3 ) { // Delay 3d call if still null
                     eEv.addEventListener("mouseenter", doZm.doHeroMouseEnter);
                     eEv.addEventListener("mousemove", doZm.doHeroMouseMove);
                     eEv.addEventListener("mouseout", doZm.oHeroMouseOut);
-                    
+console.log('zm width - ' + oHro.eBg.naturalWidth);
+console.log('zm height - ' + oHro.eBg.naturalHeight);
                 }
             },
             "doHeroMouseEnter": ( ev )=>{
@@ -313,8 +314,7 @@ if( e3 ) { // Delay 3d call if still null
                     oHro.eBg.style.opacity = "0";
                     oHro.e.style.display = "block";
                 }
-console.log('zm width - ' + oHro.eBg.naturalWidth);
-console.log('zm height - ' + oHro.eBg.naturalHeight);
+
             },
             "doHeroMouseMove": ( ev )=>{
                 if( oHro.e && oHro.eBg && oHro.eBg.dataset.zoom == "true" ){
