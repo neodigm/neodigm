@@ -36,7 +36,7 @@ body, [role='main'] {
 .h-3d-canvas canvas { display: block;margin: 0 auto; outline: none;}
 .h-fade { opacity: 0.4; filter: blur(8px); transition: .88s filter linear;}
 .h-bg__stripe, .l-caro-design > article, article.l-caro-design {
-    background: repeating-linear-gradient(45deg,#fafafa,#fafafa 24px,#ffffff 24px,#ffffff 48px);
+    background: repeating-linear-gradient(45deg,#f2f2f2,#f2f2f2 26px,#ffffff 26px,#ffffff 52px);
 }
 .l-blog-crd.caro-target__js.h--select {
     border-bottom: solid 2px #C74375;
