@@ -250,6 +250,7 @@ if( e3 ) { // Delay 3d call if still null
                             if(aCrdDetail.length){
                                 switch( aCrdDetail[0].tagName ){
                                     case "IMG":
+//if( doZm ) doZm.reset();
                                         aCrdDetail.forEach( (eCrd) =>{ 
                                             eCrd.src = ev.currentTarget.src;
                                             eCrd.dataset.zoom = ev.currentTarget.dataset.zoom;
@@ -299,12 +300,12 @@ if( e3 ) { // Delay 3d call if still null
                     eEv.addEventListener("mouseenter", doZm.doHeroMouseEnter);
                     eEv.addEventListener("mousemove", doZm.doHeroMouseMove);
                     eEv.addEventListener("mouseout", doZm.oHeroMouseOut);
-console.log('zm width - ' + oHro.eBg.naturalWidth);
-console.log('zm height - ' + oHro.eBg.naturalHeight);
                 }
             },
             "doHeroMouseEnter": ( ev )=>{
-                if( oHro.e && oHro.eBg && oHro.eBg.dataset.zoom == "true" ){
+//if( oHro.eBg.dataset.zoom == "true"  ) {console.log("paral"); oHro.setMtrx = [2.2,  3.2,  .88, 3.2];} // a55 paral bg dim
+//if( oHro.eBg.dataset.zoom == "square"  ) {console.log("square"); oHro.setMtrx = [1.38, 3.2, 1.38, 3.2];} // square 1k                
+                if( oHro.e && oHro.eBg && oHro.eBg.dataset.zoom != "false" ){
                     if( !oHro.isInit ){ // Run once per engagement
                         oHro.h = oHro.e.offsetHeight * oHro.zMult;
                         oHro.w = oHro.e.offsetWidth * oHro.zMult;
@@ -317,14 +318,14 @@ console.log('zm height - ' + oHro.eBg.naturalHeight);
 
             },
             "doHeroMouseMove": ( ev )=>{
-                if( oHro.e && oHro.eBg && oHro.eBg.dataset.zoom == "true" ){
+                if( oHro.e && oHro.eBg && oHro.eBg.dataset.zoom != "false" ){
                     oHro.x = (oHro.w - (oHro.e.offsetHeight * oHro.setMtrx[0] ))  -  (ev.offsetX * (oHro.zMult * (oHro.zMult/oHro.setMtrx[1])));
                     oHro.y = (oHro.h - (oHro.e.offsetWidth  * oHro.setMtrx[2] ))  -  (ev.offsetY * (oHro.zMult * (oHro.zMult/oHro.setMtrx[3])));
                     oHro.e.style.transform = "translate(" + oHro.x + "px, " + oHro.y + "px) scale("+oHro.zRatio+")";
                 }
             },
             "oHeroMouseOut": ( ev )=>{
-                if( oHro.e && oHro.eBg && oHro.eBg.dataset.zoom == "true" ){
+                if( oHro.e && oHro.eBg && oHro.eBg.dataset.zoom != "false" ){
                     oHro.eBg.style.opacity = "1";
                     oHro.e.style.display = "none";
                 }
