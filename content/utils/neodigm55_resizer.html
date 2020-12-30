@@ -27,7 +27,7 @@ tags:
         <script>
             let oSrch = (new URL(document.location)).searchParams
             let eIfrm = document.querySelector(".l-iframe");
-            if( eIfrm && oSrch ){
+            if( eIfrm && oSrch ){ // Simulate Responsive Layout from Search params
                 let sURI = oSrch.get('uri')
                 let sVPrt = oSrch.get('vp');
                 let sMsg = "Mobile ", nH = 736, nW = 414
@@ -35,7 +35,7 @@ tags:
                 if( !sURI ) sURI = "https://MachVive.com/";
                 if( sURI ){
                     if( sVPrt ){
-                        switch( sVPrt ){
+                        switch( sVPrt ){ // Add new devices here
                             case "m" :
                                 sMsg = "Mobile " + (nH = 736) + " x " + (nW = 414);
                             break;
