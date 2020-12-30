@@ -23,9 +23,13 @@ tags:
 
         </iframe>
         <script>
-            var eIf = document.querySelector(".l-iframe");
-            if( eIf ){
-                eIf.src = "https://neodigm.github.io/is-ecom-labs/sms_order_conf_create_accnt/sys_order_conf_create_accnt.htm";
+            let eIf = document.querySelector(".l-iframe");
+            let oURL = (new URL(document.location)).searchParams;
+            if( eIf && oURL ){
+                let sURI = params.get('uri');
+                if( sURI ){
+                    eIf.src = sURI;
+                }                   
             }
         </script>
     </article></div>
