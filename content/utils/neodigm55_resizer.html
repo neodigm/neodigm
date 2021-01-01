@@ -28,7 +28,7 @@ tags:
             let oSrch = (new URL(document.location)).searchParams
             let eIfrm = document.querySelector(".l-iframe");
             if( eIfrm && oSrch ){ // Simulate Responsive Layout from Search params
-                let sURI = oSrch.get('uri')
+                let sURI = oSrch.get('uri');
                 let sVPrt = oSrch.get('vp');
                 let sMsg = "Mobile ", nH = 736, nW = 414
                 let eFB = document.querySelector("main > p.readable__doc.h-center");
