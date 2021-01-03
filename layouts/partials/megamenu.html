@@ -63,7 +63,7 @@ href="#a11y-skipmain">Skip to Main Content</a>
                     .filter(function(el){
                         el.addEventListener("click", function(){
                             if( el.classList.contains("scheme__vect") ){
-                                doPrefersColorScheme( (document.body.dataset.prefScheme !== "dark") );
+                                doPrefersColorScheme( (document.body.dataset.prefScheme !== "dark"), true );
                             }else{
                                 eMM.expandState = (eMM.expandState == "true") ? "false" : "true";
                             }

@@ -134,493 +134,6 @@ href="#a11y-skipmain">Skip to Main Content</a>
             <h1 class="readable__title h-center"> Roll Dice in High-Fidelity 3D </h1>
             <p class="readable__doc h-center">Scott C. Krause | Monday, Nov 2, 2020</p>
 
-            
-<section class="pfmf-grid pfmf-grid__100 readable__doc">
-    <div>
-        <article style="padding: 12px 12px;">
-            <p>Rolling dice virtually is not the same experience as rolling dice physically. It just doesn't feel real. The dice do not appear to tumble or make sounds. This disconnected experience makes one suspect that maybe these on-line dice are not really random.</p>
-            <p>It would be great to recreate the experience of actually rolling dice in the browser. It would be reminiscent of marathon Monopoly with your friends. It would be like Vegas baby!</p>
-            <p>In this article I introduce a gamified micro-interaction in which dice are rolled virtually by shaking the phone. The sensation is complete with haptic and audio feedback making it seem like the bones are rattling in your sweaty palm. The mathematical integrity of the roll result is achieved through the high entropy of the Web Crypto API.</p>
-            <p class="h_quote">"Why?", you might and should ask. I prefer to answer the "Why" in terms of business value.</p>
-            <ol>
-                <li><p><span class="h_ital">The PWA proposition:</span> It is not uncommon for startups to develop a web app, an iPhone app, and an Android app. When management is convinced that a web app can be <a class="h-link" target="_blank" rel="noopener" href="https://developers.google.com/web/updates/capabilities">just as engaging</a> as native they will decide to focus solely on the web app and get to market much quicker (<a class="h-link" target="_blank" rel="noopener" href="https://web.dev/app-like-pwas/">PWA=MVP</a>). Making a web app installable results in increased traffic, visitor retention, sales per customer, and conversions. I believe that this project proves beyond doubt the immersive potential of <a class="h-link" target="_blank" rel="noopener" href="https://docs.google.com/spreadsheets/d/1de0ZYDOcafNXXwMcg4EZhT0346QM-QFvZfoD8ZffHeA/edit#gid=557099940">browser APIs.</a></p></li>
-                <li><p><span class="h_ital">The argument for Gamification:</span> Framing a customer touch-point as a playful game has the potential to differentiate, engage, and persuade like nothing else.</p></li>
-                <li><p><span class="h_ital">Professional Branding:</span> I am doing this because it allows me to integrate emerging browser APIs in such a way that I have a slick deliverable to demonstrate when I am done.</p></li>
-            </ol>
-        </article>        
-    </div>
-</section>
-
-
-<section class="pfmf-grid pfmf-grid__70_30 readable__doc">
-    <div>
-        <article style="padding: 12px 12px;">
-            <p>You will learn these skills while building this project:</p>
-
-            <section class="pfmf-grid pfmf-grid__50_50 readable__doc">
-                <div>
-                    <article style="padding: 4px">
-                        <ul>
-                            <li>Accelerometer API</li>
-                            <li>Audio API</li>
-                            <li>Blender 3D Modeling</li>
-                            <li>Git</li>
-                            <li>glTF</li>
-                            <li>HTML canvas</li>
-                            <li>JavaScript</li>
-                        </ul>
-                    </article>        
-                </div>
-                <div>
-                    <article style="padding: 4px">
-                        <ul>
-                            <li>NPM </li>
-                            <li>Three.js</li>
-                            <li>Vibration API</li>
-                            <li>UV Mapping</li>
-                            <li>Web Crypto API</li>
-                            <li>WebGL</li>
-                            <li>Webpack</li>
-                        </ul>
-                    </article>        
-                </div>
-            </section>
-            <p>This is totally doable for you because you are a smart developer, designer, and magical unicorn.</p>
-            <p class="h_ital">Project Overview</p>
-            <p>We will write custom JavaScript that will animate the dice by changing 3D properties exposed by the Three.js framework. This script will also implement the following browser based APIs: Accelerometer, Audio, Vibration, Web Crypto, and WebGL (via Three.js). Hopefully the end result will behave more like a native app than a web page.</p>
-        </article>        
-    </div>
-    <div>
-        <article class="pfmf-crd--black h-center"><p class="readable__doc readable__doc--white"
-            data-at="3D Model Preview|Click and Drag|Mouse Scroll to Zoom">3D Model Preview</p></article>
-        <article class="h-bg__stripe h-3d-canvas"
-        data-thr3-load="https://neodigm.github.io/Roll-Dice-in-High-Fidelity-3D/assets/dice.glb"
-        data-thr3-w="332" data-thr3-h="332">
-        </article>
-    </div>
-</section>
-
-<section class="pfmf-grid pfmf-grid__100 readable__doc">
-    <div>
-        <article style="padding: 12px 12px;">
-            <p class="h_ital">Creating the 3D model</p>
-            <p>I will use the open source Blender v2.90 to create the 3D dice (or die singular). This is by no means a Blender tutorial, there are plenty of those on youtube however we will cover the basic steps to produce this particular 3D model.</p>
-            <p class="h_ital">If you don't want to learn how to create the model you can skip this section then download the pre-made assets from the <a class="h-link" target="_blank" rel="noopener" href="https://github.com/neodigm/Roll-Dice-in-High-Fidelity-3D">git repo</a>.</p>
-            <p>Download Blender and fire it up. Conveniently Blender starts up with a sample cube in the project, that's pretty close to a die so let's go with that.</p>
-            <ol>
-                <li><p>Select the cube and change its size to 1.6 CM (all dimensions). Thats going to make it small so use your mouse wheel to zoom in.</p></li>
-                <li><p>Smooth the edges with a "Bevel Modifier". In the lower-right panel click the wrench icon to view modifiers. Select the cube and click the <span class="h_code">Add Modifier drop-down > Bevel</span>. Amount 0.2 and Segments 8. The cube should now look smooooooth. Save your work!</p></li>
-                <li><p>UV Mapping is the process by which one wraps a 2D image around a 3D model. For us that means the little black dots (called pips) that determine the dice's value are actually in a flat <a class="h-link" target="_blank" rel="noopener" href="https://github.com/neodigm/Roll-Dice-in-High-Fidelity-3D/blob/gh-pages/assets/dice_uv_map.jpg">JPG file</a> derived from a layered Adobe Illustrator <a class="h-link" target="_blank" rel="noopener" href="https://medium.com/r?url=https%3A%2F%2Fgithub.com%2Fneodigm%2FRoll-Dice-in-High-Fidelity-3D%2Fblob%2Fgh-pages%2Fassets%2Fdice_uv_map.ai%3Fraw%3Dtrue">AI file</a>. UV Mapping can be a difficult endeavor with complex geometries but a square die is about as simple as it gets. How convenient!</p></li>
-                <li><p>To add the image map; Click into the Shading workspace (top horz menu). Click <span class="h_code">Add > Texture > Image Texture</span> from the dropdown menu. Click the folder icon then navigate to the <a class="h-link" target="_blank" rel="noopener" href="https://github.com/neodigm/Roll-Dice-in-High-Fidelity-3D/blob/gh-pages/assets/dice_uv_map.jpg">dice_uv_map.jpg</a> file. Drag the Color (little dot on the right) onto the Base Color node attaching the new image to the objects texture. The cube should be an orange color and have numbers.</p></li>
-                <li><p>glTF is a relatively new open format for transporting 3D assets. We need to export from Blender in this format so that we can load it into Three.js to display it in the browser. Click the Layout workspace (up top). Select the die then choose <span class="h_code">File > Export > glTF 2.0</span> from the application menu. You will be presented with a dialog for saving your model. On the right is a configuration section titled Geometry. Open that and tick Apply Modifiers. Now save your model as <a class="h-link" target="_blank" rel="noopener" href="https://github.com/neodigm/Roll-Dice-in-High-Fidelity-3D/blob/gh-pages/assets/dice.glb">dice.glb</a> into your project's root folder.</p>
-                <p><span class="h_ital">Self-check: </span> You can preview your model in a browser by uploading the GLB file to the <a class="h-link" target="_blank" rel="noopener" href="https://gltf-viewer.donmccurdy.com/">glTF Viewer</a> website.</p></li>
-            </ol>
-        </article>
-    </div>
-</section>
-<!--
-    <div>
-        <article class="pfmf-crd--black h-center"><p class="readable__doc readable__doc--white"
-            data-at="Blender 3D Modeling|Steps 1 thru 5">Blender 3D Modeling</p></article>
-        <article><img src="../gameification-threejs-webcrypto-accelerator-blender-gltf_2.webp" alt="Create 3D Dice with Strong Random Entropy"
-            style="height: auto; width: 100%;"
-            data-caro-target="24"></article>
-    </div>    
--->
-
-<section class="pfmf-grid pfmf-grid__60_40">
-    <div>
-        <article class="pfmf-crd--black h-center"><p class="readable__doc readable__doc--white"
-            data-at="Blender 3D Modeling|Steps 1 thru 5">Blender 3D Modeling</p></article>
-
-        <article class="l-HeroZoom-Cntr">
-            <span class="l-HeroZoom">
-                <section>
-                    <img class="js-img_HeroZoom_bg" src="../gameification-threejs-webcrypto-accelerator-blender-gltf_2.webp" alt="Create 3D Dice with Strong Random Entropy"
-                    style="height: auto; width: 100%;"
-                    data-caro-target="24" data-zoom="true">
-                    <div>
-                        <img class="js-img_HeroZoom" alt="Neodigm"
-                        src="../gameification-threejs-webcrypto-accelerator-blender-gltf_2.webp"
-                        data-caro-target="24">
-                    </div>
-                </section>
-            </span>
-        </article>
-        
-    </div>
-    <div>
-        <article class="js-art__caro l-caro-design h-ds__none">
-            <section class="l-caro-design__cnt"
-            data-caro-src="24">
-                <img class="caro-target__js" data-zoom="true" data-wired4sound="click|8" src="../gameification-threejs-webcrypto-accelerator-blender-gltf_1.webp" alt="Blender 3D UX">
-                <img class="caro-target__js" data-zoom="true" data-wired4sound="click|8" src="../gameification-threejs-webcrypto-accelerator-blender-gltf_2.webp" alt="Blender 3D glTF">
-                <img class="caro-target__js" data-zoom="true" data-wired4sound="click|8" src="../gameification-threejs-webcrypto-accelerator-blender-gltf_3.webp" alt="Three.js Dice Web APIs">
-                <img class="caro-target__js" data-zoom="true" data-wired4sound="click|8" src="../gameification-threejs-webcrypto-accelerator-blender-gltf_4.webp" alt="2D Flat Dice Texture">
-            </section>  
-        </article>
-    </div>
-</section>
-
-<section class="pfmf-grid pfmf-grid__30_70 readable__doc">
-    <div>
-        <article class="pfmf-crd--black h-center"><p class="readable__doc readable__doc--white"
-            data-at="Configure Three.js|Command Line">Install Three.js</p></article>
-        <article style="padding: 12px 12px;">
-            <details  open="true">
-               <summary  data-wired4sound="click|9" >NPM Install Command</summary>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#a6e22e">npm</span> <span style="color:#a6e22e">install</span> <span style="color:#f92672">--</span><span style="color:#a6e22e">save</span> <span style="color:#a6e22e">three</span>
-</code></pre></div>
-            </details>
-            <details  open="true">
-               <summary  data-wired4sound="click|9" >WebPack Config</summary>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">path</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;path&#39;</span>)
-
-<span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> {
-  <span style="color:#a6e22e">entry</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;./a55_3d_template.js&#39;</span>,
-  <span style="color:#a6e22e">output</span><span style="color:#f92672">:</span> {
-    <span style="color:#a6e22e">path</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">resolve</span>(<span style="color:#a6e22e">__dirname</span>, <span style="color:#e6db74">&#39;../static/js&#39;</span>),
-    <span style="color:#a6e22e">filename</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;a55_3d.js&#39;</span>,
-  },
-  <span style="color:#a6e22e">devServer</span><span style="color:#f92672">:</span> {
-    <span style="color:#a6e22e">publicPath</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;/public/&#39;</span>,
-    <span style="color:#a6e22e">compress</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
-    <span style="color:#a6e22e">port</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">9000</span>,
-  },
-}
-</code></pre></div>
-            </details>
-            <details  open="true">
-               <summary  data-wired4sound="click|9" >a55_3d_template.js</summary>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">import</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">as</span> <span style="color:#a6e22e">THREE</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;three&#39;</span>
-
-<span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">OrbitControls</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;three/examples/jsm/controls/OrbitControls.js&#39;</span>;
-<span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">GLTFLoader</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;three/examples/jsm/loaders/GLTFLoader&#39;</span>;
-
-window.<span style="color:#a6e22e">o3</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">THREE</span>;
-window.<span style="color:#a6e22e">o3loadr</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">GLTFLoader</span>;
-window.<span style="color:#a6e22e">o3orbit</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">OrbitControls</span>;
-</code></pre></div>
-            </details>
-        </article>
-    </div>
-    <div>
-        <article style="padding: 12px 12px;">
-            <p class="h_ital">Rendering 3D object in the browser - three.js</p>
-            <p>Three.js is a JavaScript framework for implementing WebGL in the browser. It is a popular way to make high-touch experiences on the web.</p>
-            <p>You will need a recent version of Node.js and NPM installed. <span class="h_ital">This is kind of a must for any modern knowledge worker.</span> Install Three.js via the NPM command then make the required changes to the webpack and template config files.</p>
-            <p>The objective is to have Webpack rollup only the JavaScript we need into one JS file that we can load like this:</p>
-            <p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"> <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;module&#34;</span> <span style="color:#a6e22e">src</span> <span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/js/a55_3d.js&#34;</span><span style="color:#f92672">&gt;&lt;</span><span style="color:#960050;background-color:#1e0010">/script&gt;</span>
-</code></pre></div>
-            </p>
-
-<pre><code class="javascript">
-var o3 = null;
-var o3Config = (function(){
-    var camera, scene, renderer, controls;
-    return {
-    "autoSpin": function(){
-        controls.update();
-        requestAnimationFrame( o3Config.autoSpin );
-        renderer.render( scene, camera );
-    },
-    "spin": function(){
-        renderer.render( scene, camera );
-    },
-    "init": function( e3ds ){
-            var sPath = e3ds.dataset.thr3Load, sW = e3ds.dataset.thr3W, sH = e3ds.dataset.thr3H;
-                scene = new o3.Scene();/* Scene */
-
-                var pointLightOrange = new o3.PointLight( 0xC9F4ED, 2, 800 );
-                pointLightOrange.position.set( -4000, -400, -66 ).normalize();
-                scene.add( pointLightOrange );
-
-                camera = new o3.PerspectiveCamera( 4, 1, 1, 1000 );/* Camera */
-                camera.position.x = 56; camera.position.y = 56; camera.position.z = 56;
-                scene.add( camera );
-                camera.add( pointLightOrange ); // Add light to camera
-
-                renderer = new o3.WebGLRenderer( { antialias: true, alpha: true } );/* Renderer */
-                renderer.setPixelRatio( window.devicePixelRatio );
-                renderer.setSize( sW, sH );
-                e3ds.appendChild( renderer.domElement );
-
-                var loader = new o3loadr();/* Loader */
-                loader.load( sPath , function ( gltf ) {
-                scene.add( gltf.scene );
-                o3Config.spin();
-                } );
-
-                controls = new o3orbit( camera, renderer.domElement );/* Controls */
-                controls.autoRotate = true; controls.autoRotateSpeed = 9.4;
-                controls.addEventListener( 'change', o3Config.spin );
-                controls.update();
-                setTimeout( o3Config.autoSpin, 256);
-
-                window.addEventListener( 'resize', onWindowResize, false );
-                function onWindowResize() {
-                camera.aspect = 1;
-                camera.updateProjectionMatrix();
-                renderer.setSize( sW, sH );
-                o3Config.spin();
-                }
-            }
-    }
-})();
-var e3 = document.querySelector("[data-thr3-load]");
-if( e3 ) { // Delay 3d call if still null
-    setTimeout(function(){
-    o3Config.init( e3 );
-    }, (o3===null) ? 3800 : 800 )
-}
-            </code></pre>
-        </article>
-    </div>
-</section>
-
-<!--
-<section class="pfmf-grid pfmf-grid__50_50 readable__doc">
-    <div>
-        <article style="padding: 12px 12px;">        
-<script type="application/javascript" src="https://gist.github.com/neodigm/b8f59ab4f99ab3c34c511779f564584c.js"></script>
-
-        </article>
-    </div>
-    <div>
-        <article style="padding: 12px 12px;">        
-qqqqqqq
-        </article>        
-    </div>
-
-
-</section>
--->  
-
-            <section class="pfmf-grid pfmf-grid__100">
-    <div class="l-caro-design">
-
-        <article class="js-art__caro h-ds__none">
-            <section class="l-caro-design__cnt">
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-                <a class="l-blog-crd" href="https://thescottkrause.com/emerging_tech/ecommerce-accessibility-a11y/">
-                <section>
-                    <picture>
-                        
-                        <img class="caro-target__js" src="/emerging_tech/ecommerce-accessibility-a11y_tn.webp" alt="eCommerce Accessibility A11y">
-                    </picture>
-                    <p>Emerging Tech</p>
-                    
-                    <h5> eCommerce Accessibility A11y </h5>
-                    <h6> Accessibility Challenges Unique to eCommerce </h6>
-                    <p>2020-12-07</p>
-                </section>
-                </a>
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-                <a class="l-blog-crd" href="https://thescottkrause.com/emerging_tech/gameification-threejs-webcrypto-accelerator-blender-gltf/">
-                <section>
-                    <picture>
-                        
-                        <img class="caro-target__js" src="/emerging_tech/gameification-threejs-webcrypto-accelerator-blender-gltf_tn.webp" alt="Roll Dice in High-Fidelity 3D">
-                    </picture>
-                    <p>Emerging Tech</p>
-                    
-                    <h5> Roll Dice in High-Fidelity 3D </h5>
-                    <h6> Create 3D Dice with Strong Random Entropy </h6>
-                    <p>2020-11-02</p>
-                </section>
-                </a>
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-            </section>
-        </article>
-
-    </div>
-</section>
-
-            <section class="l-tag-chip">
-                
-                    <a class="bg-coy_1999" data-at="bg-coy_1999|bg-coy_2000|bg-coy_2001|bg-coy_2002|bg-coy_2003|bg-coy_2004|bg-coy_2005|bg-coy_2006|bg-coy_2007|bg-coy_2008|bg-coy_2009"
-                        data-at-change="class"
-                        href="https://thescottkrause.com/tags/accelerometer-api/">Accelerometer API</a>
-                
-                    <a class="bg-coy_1999" data-at="bg-coy_1999|bg-coy_2000|bg-coy_2001|bg-coy_2002|bg-coy_2003|bg-coy_2004|bg-coy_2005|bg-coy_2006|bg-coy_2007|bg-coy_2008|bg-coy_2009"
-                        data-at-change="class"
-                        href="https://thescottkrause.com/tags/audio-api/">Audio API</a>
-                
-                    <a class="bg-coy_1999" data-at="bg-coy_1999|bg-coy_2000|bg-coy_2001|bg-coy_2002|bg-coy_2003|bg-coy_2004|bg-coy_2005|bg-coy_2006|bg-coy_2007|bg-coy_2008|bg-coy_2009"
-                        data-at-change="class"
-                        href="https://thescottkrause.com/tags/blender/">Blender</a>
-                
-                    <a class="bg-coy_1999" data-at="bg-coy_1999|bg-coy_2000|bg-coy_2001|bg-coy_2002|bg-coy_2003|bg-coy_2004|bg-coy_2005|bg-coy_2006|bg-coy_2007|bg-coy_2008|bg-coy_2009"
-                        data-at-change="class"
-                        href="https://thescottkrause.com/tags/git/">Git</a>
-                
-                    <a class="bg-coy_1999" data-at="bg-coy_1999|bg-coy_2000|bg-coy_2001|bg-coy_2002|bg-coy_2003|bg-coy_2004|bg-coy_2005|bg-coy_2006|bg-coy_2007|bg-coy_2008|bg-coy_2009"
-                        data-at-change="class"
-                        href="https://thescottkrause.com/tags/gltf/">glTF</a>
-                
-                    <a class="bg-coy_1999" data-at="bg-coy_1999|bg-coy_2000|bg-coy_2001|bg-coy_2002|bg-coy_2003|bg-coy_2004|bg-coy_2005|bg-coy_2006|bg-coy_2007|bg-coy_2008|bg-coy_2009"
-                        data-at-change="class"
-                        href="https://thescottkrause.com/tags/html-canvas/">HTML canvas</a>
-                
-                    <a class="bg-coy_1999" data-at="bg-coy_1999|bg-coy_2000|bg-coy_2001|bg-coy_2002|bg-coy_2003|bg-coy_2004|bg-coy_2005|bg-coy_2006|bg-coy_2007|bg-coy_2008|bg-coy_2009"
-                        data-at-change="class"
-                        href="https://thescottkrause.com/tags/javascript/">JavaScript</a>
-                
-                    <a class="bg-coy_1999" data-at="bg-coy_1999|bg-coy_2000|bg-coy_2001|bg-coy_2002|bg-coy_2003|bg-coy_2004|bg-coy_2005|bg-coy_2006|bg-coy_2007|bg-coy_2008|bg-coy_2009"
-                        data-at-change="class"
-                        href="https://thescottkrause.com/tags/npm/">NPM</a>
-                
-                    <a class="bg-coy_1999" data-at="bg-coy_1999|bg-coy_2000|bg-coy_2001|bg-coy_2002|bg-coy_2003|bg-coy_2004|bg-coy_2005|bg-coy_2006|bg-coy_2007|bg-coy_2008|bg-coy_2009"
-                        data-at-change="class"
-                        href="https://thescottkrause.com/tags/three.js/">Three.js</a>
-                
-                    <a class="bg-coy_1999" data-at="bg-coy_1999|bg-coy_2000|bg-coy_2001|bg-coy_2002|bg-coy_2003|bg-coy_2004|bg-coy_2005|bg-coy_2006|bg-coy_2007|bg-coy_2008|bg-coy_2009"
-                        data-at-change="class"
-                        href="https://thescottkrause.com/tags/uv-mapping/">UV Mapping</a>
-                
-                    <a class="bg-coy_1999" data-at="bg-coy_1999|bg-coy_2000|bg-coy_2001|bg-coy_2002|bg-coy_2003|bg-coy_2004|bg-coy_2005|bg-coy_2006|bg-coy_2007|bg-coy_2008|bg-coy_2009"
-                        data-at-change="class"
-                        href="https://thescottkrause.com/tags/web-crypto-api/">Web Crypto API</a>
-                
-                    <a class="bg-coy_1999" data-at="bg-coy_1999|bg-coy_2000|bg-coy_2001|bg-coy_2002|bg-coy_2003|bg-coy_2004|bg-coy_2005|bg-coy_2006|bg-coy_2007|bg-coy_2008|bg-coy_2009"
-                        data-at-change="class"
-                        href="https://thescottkrause.com/tags/webgl/">WebGL</a>
-                
-                    <a class="bg-coy_1999" data-at="bg-coy_1999|bg-coy_2000|bg-coy_2001|bg-coy_2002|bg-coy_2003|bg-coy_2004|bg-coy_2005|bg-coy_2006|bg-coy_2007|bg-coy_2008|bg-coy_2009"
-                        data-at-change="class"
-                        href="https://thescottkrause.com/tags/webpack/">Webpack</a>
-                
-            </section>
-            
             <ltdc-snackbar class="l-snackbar" role="alert">
     <section id="js-snackbar__id" class="snackbar__cont snackbar__cont--hide" aria-live="polite" aria-atomic="true">
         <div class="snackbar__progbar"></div>
@@ -1063,6 +576,493 @@ if( e3 ) {
 
 </script>
 
+            
+<section class="pfmf-grid pfmf-grid__100 readable__doc">
+    <div>
+        <article style="padding: 12px 12px;">
+            <p>Rolling dice virtually is not the same experience as rolling dice physically. It just doesn't feel real. The dice do not appear to tumble or make sounds. This disconnected experience makes one suspect that maybe these on-line dice are not really random.</p>
+            <p>It would be great to recreate the experience of actually rolling dice in the browser. It would be reminiscent of marathon Monopoly with your friends. It would be like Vegas baby!</p>
+            <p>In this article I introduce a gamified micro-interaction in which dice are rolled virtually by shaking the phone. The sensation is complete with haptic and audio feedback making it seem like the bones are rattling in your sweaty palm. The mathematical integrity of the roll result is achieved through the high entropy of the Web Crypto API.</p>
+            <p class="h_quote">"Why?", you might and should ask. I prefer to answer the "Why" in terms of business value.</p>
+            <ol>
+                <li><p><span class="h_ital">The PWA proposition:</span> It is not uncommon for startups to develop a web app, an iPhone app, and an Android app. When management is convinced that a web app can be <a class="h-link" target="_blank" rel="noopener" href="https://developers.google.com/web/updates/capabilities">just as engaging</a> as native they will decide to focus solely on the web app and get to market much quicker (<a class="h-link" target="_blank" rel="noopener" href="https://web.dev/app-like-pwas/">PWA=MVP</a>). Making a web app installable results in increased traffic, visitor retention, sales per customer, and conversions. I believe that this project proves beyond doubt the immersive potential of <a class="h-link" target="_blank" rel="noopener" href="https://docs.google.com/spreadsheets/d/1de0ZYDOcafNXXwMcg4EZhT0346QM-QFvZfoD8ZffHeA/edit#gid=557099940">browser APIs.</a></p></li>
+                <li><p><span class="h_ital">The argument for Gamification:</span> Framing a customer touch-point as a playful game has the potential to differentiate, engage, and persuade like nothing else.</p></li>
+                <li><p><span class="h_ital">Professional Branding:</span> I am doing this because it allows me to integrate emerging browser APIs in such a way that I have a slick deliverable to demonstrate when I am done.</p></li>
+            </ol>
+        </article>        
+    </div>
+</section>
+
+
+<section class="pfmf-grid pfmf-grid__70_30 readable__doc">
+    <div>
+        <article style="padding: 12px 12px;">
+            <p>You will learn these skills while building this project:</p>
+
+            <section class="pfmf-grid pfmf-grid__50_50 readable__doc">
+                <div>
+                    <article style="padding: 4px">
+                        <ul>
+                            <li>Accelerometer API</li>
+                            <li>Audio API</li>
+                            <li>Blender 3D Modeling</li>
+                            <li>Git</li>
+                            <li>glTF</li>
+                            <li>HTML canvas</li>
+                            <li>JavaScript</li>
+                        </ul>
+                    </article>        
+                </div>
+                <div>
+                    <article style="padding: 4px">
+                        <ul>
+                            <li>NPM </li>
+                            <li>Three.js</li>
+                            <li>Vibration API</li>
+                            <li>UV Mapping</li>
+                            <li>Web Crypto API</li>
+                            <li>WebGL</li>
+                            <li>Webpack</li>
+                        </ul>
+                    </article>        
+                </div>
+            </section>
+            <p>This is totally doable for you because you are a smart developer, designer, and magical unicorn.</p>
+            <p class="h_ital">Project Overview</p>
+            <p>We will write custom JavaScript that will animate the dice by changing 3D properties exposed by the Three.js framework. This script will also implement the following browser based APIs: Accelerometer, Audio, Vibration, Web Crypto, and WebGL (via Three.js). Hopefully the end result will behave more like a native app than a web page.</p>
+        </article>        
+    </div>
+    <div>
+        <article class="pfmf-crd--black h-center"><p class="readable__doc readable__doc--white"
+            data-at="3D Model Preview|Click and Drag|Mouse Scroll to Zoom">3D Model Preview</p></article>
+        <article class="h-bg__stripe h-3d-canvas"
+        data-thr3-load="https://neodigm.github.io/Roll-Dice-in-High-Fidelity-3D/assets/dice.glb"
+        data-thr3-w="332" data-thr3-h="332">
+        </article>
+    </div>
+</section>
+
+<section class="pfmf-grid pfmf-grid__100 readable__doc">
+    <div>
+        <article style="padding: 12px 12px;">
+            <p class="h_ital">Creating the 3D model</p>
+            <p>I will use the open source Blender v2.90 to create the 3D dice (or die singular). This is by no means a Blender tutorial, there are plenty of those on youtube however we will cover the basic steps to produce this particular 3D model.</p>
+            <p class="h_ital">If you don't want to learn how to create the model you can skip this section then download the pre-made assets from the <a class="h-link" target="_blank" rel="noopener" href="https://github.com/neodigm/Roll-Dice-in-High-Fidelity-3D">git repo</a>.</p>
+            <p>Download Blender and fire it up. Conveniently Blender starts up with a sample cube in the project, that's pretty close to a die so let's go with that.</p>
+            <ol>
+                <li><p>Select the cube and change its size to 1.6 CM (all dimensions). Thats going to make it small so use your mouse wheel to zoom in.</p></li>
+                <li><p>Smooth the edges with a "Bevel Modifier". In the lower-right panel click the wrench icon to view modifiers. Select the cube and click the <span class="h_code">Add Modifier drop-down > Bevel</span>. Amount 0.2 and Segments 8. The cube should now look smooooooth. Save your work!</p></li>
+                <li><p>UV Mapping is the process by which one wraps a 2D image around a 3D model. For us that means the little black dots (called pips) that determine the dice's value are actually in a flat <a class="h-link" target="_blank" rel="noopener" href="https://github.com/neodigm/Roll-Dice-in-High-Fidelity-3D/blob/gh-pages/assets/dice_uv_map.jpg">JPG file</a> derived from a layered Adobe Illustrator <a class="h-link" target="_blank" rel="noopener" href="https://medium.com/r?url=https%3A%2F%2Fgithub.com%2Fneodigm%2FRoll-Dice-in-High-Fidelity-3D%2Fblob%2Fgh-pages%2Fassets%2Fdice_uv_map.ai%3Fraw%3Dtrue">AI file</a>. UV Mapping can be a difficult endeavor with complex geometries but a square die is about as simple as it gets. How convenient!</p></li>
+                <li><p>To add the image map; Click into the Shading workspace (top horz menu). Click <span class="h_code">Add > Texture > Image Texture</span> from the dropdown menu. Click the folder icon then navigate to the <a class="h-link" target="_blank" rel="noopener" href="https://github.com/neodigm/Roll-Dice-in-High-Fidelity-3D/blob/gh-pages/assets/dice_uv_map.jpg">dice_uv_map.jpg</a> file. Drag the Color (little dot on the right) onto the Base Color node attaching the new image to the objects texture. The cube should be an orange color and have numbers.</p></li>
+                <li><p>glTF is a relatively new open format for transporting 3D assets. We need to export from Blender in this format so that we can load it into Three.js to display it in the browser. Click the Layout workspace (up top). Select the die then choose <span class="h_code">File > Export > glTF 2.0</span> from the application menu. You will be presented with a dialog for saving your model. On the right is a configuration section titled Geometry. Open that and tick Apply Modifiers. Now save your model as <a class="h-link" target="_blank" rel="noopener" href="https://github.com/neodigm/Roll-Dice-in-High-Fidelity-3D/blob/gh-pages/assets/dice.glb">dice.glb</a> into your project's root folder.</p>
+                <p><span class="h_ital">Self-check: </span> You can preview your model in a browser by uploading the GLB file to the <a class="h-link" target="_blank" rel="noopener" href="https://gltf-viewer.donmccurdy.com/">glTF Viewer</a> website.</p></li>
+            </ol>
+        </article>
+    </div>
+</section>
+<!--
+    <div>
+        <article class="pfmf-crd--black h-center"><p class="readable__doc readable__doc--white"
+            data-at="Blender 3D Modeling|Steps 1 thru 5">Blender 3D Modeling</p></article>
+        <article><img src="../gameification-threejs-webcrypto-accelerator-blender-gltf_2.webp" alt="Create 3D Dice with Strong Random Entropy"
+            style="height: auto; width: 100%;"
+            data-caro-target="24"></article>
+    </div>    
+-->
+
+<section class="pfmf-grid pfmf-grid__60_40">
+    <div>
+        <article class="pfmf-crd--black h-center"><p class="readable__doc readable__doc--white"
+            data-at="Blender 3D Modeling|Steps 1 thru 5">Blender 3D Modeling</p></article>
+
+        <article class="l-HeroZoom-Cntr">
+            <span class="l-HeroZoom">
+                <section>
+                    <img class="js-img_HeroZoom_bg" src="../gameification-threejs-webcrypto-accelerator-blender-gltf_2.webp" alt="Create 3D Dice with Strong Random Entropy"
+                    style="height: auto; width: 100%;"
+                    data-caro-target="24" data-zoom="true">
+                    <div>
+                        <img class="js-img_HeroZoom" alt="Neodigm"
+                        src="../gameification-threejs-webcrypto-accelerator-blender-gltf_2.webp"
+                        data-caro-target="24">
+                    </div>
+                </section>
+            </span>
+        </article>
+        
+    </div>
+    <div>
+        <article class="js-art__caro l-caro-design h-ds__none">
+            <section class="l-caro-design__cnt"
+            data-caro-src="24">
+                <img class="caro-target__js" data-zoom="true" data-wired4sound="click|8" src="../gameification-threejs-webcrypto-accelerator-blender-gltf_1.webp" alt="Blender 3D UX">
+                <img class="caro-target__js" data-zoom="true" data-wired4sound="click|8" src="../gameification-threejs-webcrypto-accelerator-blender-gltf_2.webp" alt="Blender 3D glTF">
+                <img class="caro-target__js" data-zoom="true" data-wired4sound="click|8" src="../gameification-threejs-webcrypto-accelerator-blender-gltf_3.webp" alt="Three.js Dice Web APIs">
+                <img class="caro-target__js" data-zoom="true" data-wired4sound="click|8" src="../gameification-threejs-webcrypto-accelerator-blender-gltf_4.webp" alt="2D Flat Dice Texture">
+            </section>  
+        </article>
+    </div>
+</section>
+
+<section class="pfmf-grid pfmf-grid__30_70 readable__doc">
+    <div>
+        <article class="pfmf-crd--black h-center"><p class="readable__doc readable__doc--white"
+            data-at="Configure Three.js|Command Line">Install Three.js</p></article>
+        <article style="padding: 12px 12px;">
+            <details  open="true">
+               <summary  data-wired4sound="click|4" >NPM Install Command</summary>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#a6e22e">npm</span> <span style="color:#a6e22e">install</span> <span style="color:#f92672">--</span><span style="color:#a6e22e">save</span> <span style="color:#a6e22e">three</span>
+</code></pre></div>
+            </details>
+            <details  open="true">
+               <summary  data-wired4sound="click|4" >WebPack Config</summary>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">path</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;path&#39;</span>)
+
+<span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> {
+  <span style="color:#a6e22e">entry</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;./a55_3d_template.js&#39;</span>,
+  <span style="color:#a6e22e">output</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">path</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">path</span>.<span style="color:#a6e22e">resolve</span>(<span style="color:#a6e22e">__dirname</span>, <span style="color:#e6db74">&#39;../static/js&#39;</span>),
+    <span style="color:#a6e22e">filename</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;a55_3d.js&#39;</span>,
+  },
+  <span style="color:#a6e22e">devServer</span><span style="color:#f92672">:</span> {
+    <span style="color:#a6e22e">publicPath</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;/public/&#39;</span>,
+    <span style="color:#a6e22e">compress</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">true</span>,
+    <span style="color:#a6e22e">port</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">9000</span>,
+  },
+}
+</code></pre></div>
+            </details>
+            <details  open="true">
+               <summary  data-wired4sound="click|4" >a55_3d_template.js</summary>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">import</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">as</span> <span style="color:#a6e22e">THREE</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;three&#39;</span>
+
+<span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">OrbitControls</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;three/examples/jsm/controls/OrbitControls.js&#39;</span>;
+<span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">GLTFLoader</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;three/examples/jsm/loaders/GLTFLoader&#39;</span>;
+
+window.<span style="color:#a6e22e">o3</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">THREE</span>;
+window.<span style="color:#a6e22e">o3loadr</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">GLTFLoader</span>;
+window.<span style="color:#a6e22e">o3orbit</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">OrbitControls</span>;
+</code></pre></div>
+            </details>
+        </article>
+    </div>
+    <div>
+        <article style="padding: 12px 12px;">
+            <p class="h_ital">Rendering 3D object in the browser - three.js</p>
+            <p>Three.js is a JavaScript framework for implementing WebGL in the browser. It is a popular way to make high-touch experiences on the web.</p>
+            <p>You will need a recent version of Node.js and NPM installed. <span class="h_ital">This is kind of a must for any modern knowledge worker.</span> Install Three.js via the NPM command then make the required changes to the webpack and template config files.</p>
+            <p>The objective is to have Webpack rollup only the JavaScript we need into one JS file that we can load like this:</p>
+            <p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"> <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;module&#34;</span> <span style="color:#a6e22e">src</span> <span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/js/a55_3d.js&#34;</span><span style="color:#f92672">&gt;&lt;</span><span style="color:#960050;background-color:#1e0010">/script&gt;</span>
+</code></pre></div>
+            </p>
+
+<pre><code class="javascript">
+var o3 = null;
+var o3Config = (function(){
+    var camera, scene, renderer, controls;
+    return {
+    "autoSpin": function(){
+        controls.update();
+        requestAnimationFrame( o3Config.autoSpin );
+        renderer.render( scene, camera );
+    },
+    "spin": function(){
+        renderer.render( scene, camera );
+    },
+    "init": function( e3ds ){
+            var sPath = e3ds.dataset.thr3Load, sW = e3ds.dataset.thr3W, sH = e3ds.dataset.thr3H;
+                scene = new o3.Scene();/* Scene */
+
+                var pointLightOrange = new o3.PointLight( 0xC9F4ED, 2, 800 );
+                pointLightOrange.position.set( -4000, -400, -66 ).normalize();
+                scene.add( pointLightOrange );
+
+                camera = new o3.PerspectiveCamera( 4, 1, 1, 1000 );/* Camera */
+                camera.position.x = 56; camera.position.y = 56; camera.position.z = 56;
+                scene.add( camera );
+                camera.add( pointLightOrange ); // Add light to camera
+
+                renderer = new o3.WebGLRenderer( { antialias: true, alpha: true } );/* Renderer */
+                renderer.setPixelRatio( window.devicePixelRatio );
+                renderer.setSize( sW, sH );
+                e3ds.appendChild( renderer.domElement );
+
+                var loader = new o3loadr();/* Loader */
+                loader.load( sPath , function ( gltf ) {
+                scene.add( gltf.scene );
+                o3Config.spin();
+                } );
+
+                controls = new o3orbit( camera, renderer.domElement );/* Controls */
+                controls.autoRotate = true; controls.autoRotateSpeed = 9.4;
+                controls.addEventListener( 'change', o3Config.spin );
+                controls.update();
+                setTimeout( o3Config.autoSpin, 256);
+
+                window.addEventListener( 'resize', onWindowResize, false );
+                function onWindowResize() {
+                camera.aspect = 1;
+                camera.updateProjectionMatrix();
+                renderer.setSize( sW, sH );
+                o3Config.spin();
+                }
+            }
+    }
+})();
+var e3 = document.querySelector("[data-thr3-load]");
+if( e3 ) { // Delay 3d call if still null
+    setTimeout(function(){
+    o3Config.init( e3 );
+    }, (o3===null) ? 3800 : 800 )
+}
+            </code></pre>
+        </article>
+    </div>
+</section>
+
+<!--
+<section class="pfmf-grid pfmf-grid__50_50 readable__doc">
+    <div>
+        <article style="padding: 12px 12px;">        
+<script type="application/javascript" src="https://gist.github.com/neodigm/b8f59ab4f99ab3c34c511779f564584c.js"></script>
+
+        </article>
+    </div>
+    <div>
+        <article style="padding: 12px 12px;">        
+qqqqqqq
+        </article>        
+    </div>
+
+
+</section>
+-->  
+
+            <section class="pfmf-grid pfmf-grid__100">
+    <div class="l-caro-design">
+
+        <article class="js-art__caro h-ds__none">
+            <section class="l-caro-design__cnt">
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                <a class="l-blog-crd" href="https://thescottkrause.com/emerging_tech/ecommerce-accessibility-a11y/">
+                <section>
+                    <picture>
+                        
+                        <img class="caro-target__js" src="/emerging_tech/ecommerce-accessibility-a11y_tn.webp" alt="eCommerce Accessibility A11y">
+                    </picture>
+                    <p>Emerging Tech</p>
+                    
+                    <h5> eCommerce Accessibility A11y </h5>
+                    <h6> Accessibility Challenges Unique to eCommerce </h6>
+                    <p>2020-12-07</p>
+                </section>
+                </a>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                <a class="l-blog-crd" href="https://thescottkrause.com/emerging_tech/gameification-threejs-webcrypto-accelerator-blender-gltf/">
+                <section>
+                    <picture>
+                        
+                        <img class="caro-target__js" src="/emerging_tech/gameification-threejs-webcrypto-accelerator-blender-gltf_tn.webp" alt="Roll Dice in High-Fidelity 3D">
+                    </picture>
+                    <p>Emerging Tech</p>
+                    
+                    <h5> Roll Dice in High-Fidelity 3D </h5>
+                    <h6> Create 3D Dice with Strong Random Entropy </h6>
+                    <p>2020-11-02</p>
+                </section>
+                </a>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            </section>
+        </article>
+
+    </div>
+</section>
+
+            <section class="l-tag-chip">
+                
+                    <a class="bg-coy_1999" data-at="bg-coy_1999|bg-coy_2000|bg-coy_2001|bg-coy_2002|bg-coy_2003|bg-coy_2004|bg-coy_2005|bg-coy_2006|bg-coy_2007|bg-coy_2008|bg-coy_2009"
+                        data-at-change="class"
+                        href="https://thescottkrause.com/tags/accelerometer-api/">Accelerometer API</a>
+                
+                    <a class="bg-coy_1999" data-at="bg-coy_1999|bg-coy_2000|bg-coy_2001|bg-coy_2002|bg-coy_2003|bg-coy_2004|bg-coy_2005|bg-coy_2006|bg-coy_2007|bg-coy_2008|bg-coy_2009"
+                        data-at-change="class"
+                        href="https://thescottkrause.com/tags/audio-api/">Audio API</a>
+                
+                    <a class="bg-coy_1999" data-at="bg-coy_1999|bg-coy_2000|bg-coy_2001|bg-coy_2002|bg-coy_2003|bg-coy_2004|bg-coy_2005|bg-coy_2006|bg-coy_2007|bg-coy_2008|bg-coy_2009"
+                        data-at-change="class"
+                        href="https://thescottkrause.com/tags/blender/">Blender</a>
+                
+                    <a class="bg-coy_1999" data-at="bg-coy_1999|bg-coy_2000|bg-coy_2001|bg-coy_2002|bg-coy_2003|bg-coy_2004|bg-coy_2005|bg-coy_2006|bg-coy_2007|bg-coy_2008|bg-coy_2009"
+                        data-at-change="class"
+                        href="https://thescottkrause.com/tags/git/">Git</a>
+                
+                    <a class="bg-coy_1999" data-at="bg-coy_1999|bg-coy_2000|bg-coy_2001|bg-coy_2002|bg-coy_2003|bg-coy_2004|bg-coy_2005|bg-coy_2006|bg-coy_2007|bg-coy_2008|bg-coy_2009"
+                        data-at-change="class"
+                        href="https://thescottkrause.com/tags/gltf/">glTF</a>
+                
+                    <a class="bg-coy_1999" data-at="bg-coy_1999|bg-coy_2000|bg-coy_2001|bg-coy_2002|bg-coy_2003|bg-coy_2004|bg-coy_2005|bg-coy_2006|bg-coy_2007|bg-coy_2008|bg-coy_2009"
+                        data-at-change="class"
+                        href="https://thescottkrause.com/tags/html-canvas/">HTML canvas</a>
+                
+                    <a class="bg-coy_1999" data-at="bg-coy_1999|bg-coy_2000|bg-coy_2001|bg-coy_2002|bg-coy_2003|bg-coy_2004|bg-coy_2005|bg-coy_2006|bg-coy_2007|bg-coy_2008|bg-coy_2009"
+                        data-at-change="class"
+                        href="https://thescottkrause.com/tags/javascript/">JavaScript</a>
+                
+                    <a class="bg-coy_1999" data-at="bg-coy_1999|bg-coy_2000|bg-coy_2001|bg-coy_2002|bg-coy_2003|bg-coy_2004|bg-coy_2005|bg-coy_2006|bg-coy_2007|bg-coy_2008|bg-coy_2009"
+                        data-at-change="class"
+                        href="https://thescottkrause.com/tags/npm/">NPM</a>
+                
+                    <a class="bg-coy_1999" data-at="bg-coy_1999|bg-coy_2000|bg-coy_2001|bg-coy_2002|bg-coy_2003|bg-coy_2004|bg-coy_2005|bg-coy_2006|bg-coy_2007|bg-coy_2008|bg-coy_2009"
+                        data-at-change="class"
+                        href="https://thescottkrause.com/tags/three.js/">Three.js</a>
+                
+                    <a class="bg-coy_1999" data-at="bg-coy_1999|bg-coy_2000|bg-coy_2001|bg-coy_2002|bg-coy_2003|bg-coy_2004|bg-coy_2005|bg-coy_2006|bg-coy_2007|bg-coy_2008|bg-coy_2009"
+                        data-at-change="class"
+                        href="https://thescottkrause.com/tags/uv-mapping/">UV Mapping</a>
+                
+                    <a class="bg-coy_1999" data-at="bg-coy_1999|bg-coy_2000|bg-coy_2001|bg-coy_2002|bg-coy_2003|bg-coy_2004|bg-coy_2005|bg-coy_2006|bg-coy_2007|bg-coy_2008|bg-coy_2009"
+                        data-at-change="class"
+                        href="https://thescottkrause.com/tags/web-crypto-api/">Web Crypto API</a>
+                
+                    <a class="bg-coy_1999" data-at="bg-coy_1999|bg-coy_2000|bg-coy_2001|bg-coy_2002|bg-coy_2003|bg-coy_2004|bg-coy_2005|bg-coy_2006|bg-coy_2007|bg-coy_2008|bg-coy_2009"
+                        data-at-change="class"
+                        href="https://thescottkrause.com/tags/webgl/">WebGL</a>
+                
+                    <a class="bg-coy_1999" data-at="bg-coy_1999|bg-coy_2000|bg-coy_2001|bg-coy_2002|bg-coy_2003|bg-coy_2004|bg-coy_2005|bg-coy_2006|bg-coy_2007|bg-coy_2008|bg-coy_2009"
+                        data-at-change="class"
+                        href="https://thescottkrause.com/tags/webpack/">Webpack</a>
+                
+            </section>
+            
         </main>
 
 <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400|Roboto+Slab:300,400" rel="stylesheet" type="text/css">

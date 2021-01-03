@@ -128,248 +128,6 @@ href="#a11y-skipmain">Skip to Main Content</a>
             <h1 class="readable__title h-center"> CSS Advanced Accessibility </h1>
             <p class="readable__doc h-center">Scott C. Krause | Sunday, Dec 13, 2020</p>
 
-            <output>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#75715e">/* Skip to Main Content - CSS Focus rules that make the
-</span><span style="color:#75715e">link visible when focused from the omnibox.
-</span><span style="color:#75715e">========================================
-</span><span style="color:#75715e">====  ========  ========  =====  ====  =
-</span><span style="color:#75715e">===    =====    ======    =====   ==   =
-</span><span style="color:#75715e">==  ==  ======  ========  ======  ==  ==
-</span><span style="color:#75715e">=  ====  =====  ========  ======  ==  ==
-</span><span style="color:#75715e">=  ====  =====  ========  =======    ===
-</span><span style="color:#75715e">=        =====  ========  ========  ====
-</span><span style="color:#75715e">=  ====  =====  ========  ========  ====
-</span><span style="color:#75715e">=  ====  =====  ========  ========  ====
-</span><span style="color:#75715e">=  ====  ===      ====      ======  ====
-</span><span style="color:#75715e">======================================== */</span>
-
-<span style="color:#f92672">a</span>.<span style="color:#a6e22e">skip__main</span>:<span style="color:#a6e22e">active</span><span style="color:#f92672">,</span> <span style="color:#f92672">a</span>.<span style="color:#a6e22e">skip__main</span>:<span style="color:#a6e22e">focus</span> {
-    <span style="color:#66d9ef">background-color</span>: <span style="color:#ae81ff">#fff</span>;
-    <span style="color:#66d9ef">border-radius</span>: <span style="color:#ae81ff">4</span><span style="color:#66d9ef">px</span>;
-    <span style="color:#66d9ef">border</span>: <span style="color:#ae81ff">2</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">solid</span> <span style="color:#ae81ff">#000</span>;
-    <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#000</span>;
-    <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">em</span>;
-    <span style="color:#66d9ef">height</span>: <span style="color:#66d9ef">auto</span>; <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">16</span><span style="color:#66d9ef">%</span>;
-    <span style="color:#66d9ef">left</span>: <span style="color:#66d9ef">auto</span>;
-    <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">8</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">42</span><span style="color:#66d9ef">%</span>;
-    <span style="color:#66d9ef">overflow</span>: <span style="color:#66d9ef">auto</span>;
-    <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">4</span><span style="color:#66d9ef">px</span>;
-    <span style="color:#66d9ef">text-align</span>: <span style="color:#66d9ef">center</span>;
-    <span style="color:#66d9ef">top</span>: <span style="color:#66d9ef">auto</span>;
-    <span style="color:#66d9ef">z-index</span>: <span style="color:#ae81ff">1024</span>;
-}
-<span style="color:#f92672">a</span>.<span style="color:#a6e22e">skip__main</span> {
-    <span style="color:#66d9ef">left</span>: <span style="color:#ae81ff">-1024</span><span style="color:#66d9ef">px</span>;
-    <span style="color:#66d9ef">overflow</span>: <span style="color:#66d9ef">hidden</span>;
-    <span style="color:#66d9ef">position</span>: <span style="color:#66d9ef">absolute</span>;
-    <span style="color:#66d9ef">top</span>: <span style="color:#66d9ef">auto</span>;
-    <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span>; <span style="color:#66d9ef">height</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span>;
-    <span style="color:#66d9ef">z-index</span>: <span style="color:#ae81ff">-1024</span>;
-}
-<span style="color:#75715e">/* Dark Mode begin */</span>
-@<span style="color:#66d9ef">media</span> <span style="color:#f92672">(</span><span style="color:#f92672">prefers-color-scheme</span><span style="color:#f92672">:</span> <span style="color:#f92672">dark</span><span style="color:#f92672">)</span> {
-    <span style="color:#f92672">body</span><span style="color:#f92672">,</span> <span style="color:#f92672">[</span><span style="color:#f92672">role</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;main&#39;</span><span style="color:#f92672">]</span> {
-        <span style="color:#66d9ef">background</span>: linear-gradient(<span style="color:#66d9ef">to</span> <span style="color:#66d9ef">right</span>, <span style="color:#ae81ff">#555</span>, <span style="color:#ae81ff">#c2c2c2</span>, <span style="color:#ae81ff">#555</span>)
-    }
-    .<span style="color:#a6e22e">h-bg__stripe</span><span style="color:#f92672">,</span> .<span style="color:#a6e22e">l-caro-design</span> <span style="color:#f92672">&gt;</span> <span style="color:#f92672">article</span><span style="color:#f92672">,</span> <span style="color:#f92672">article</span>.<span style="color:#a6e22e">l-caro-design</span> {
-        <span style="color:#66d9ef">background</span>: repeating-linear-gradient(<span style="color:#ae81ff">45</span><span style="color:#66d9ef">deg</span>,<span style="color:#ae81ff">#bbb</span>,<span style="color:#ae81ff">#bbb</span> <span style="color:#ae81ff">24</span><span style="color:#66d9ef">px</span>,<span style="color:#ae81ff">#ddd</span> <span style="color:#ae81ff">24</span><span style="color:#66d9ef">px</span>,<span style="color:#ae81ff">#ddd</span> <span style="color:#ae81ff">48</span><span style="color:#66d9ef">px</span>);
-    }
-}
-<span style="color:#75715e">/* Dark Mode end */</span>
-
-<span style="color:#75715e">/* Reduced Motion begin*/</span>
-@<span style="color:#66d9ef">media</span> <span style="color:#f92672">(</span><span style="color:#f92672">prefers-reduced-motion</span><span style="color:#f92672">:</span> <span style="color:#f92672">reduce</span><span style="color:#f92672">)</span> {
-    .<span style="color:#a6e22e">hero__vect</span> { <span style="color:#66d9ef">animation</span>: <span style="color:#66d9ef">none</span>; }
-}
-<span style="color:#75715e">/* Reduced Motion end*/</span></code></pre></div>
-<hr>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;js-skip__main--id skip__main&#34;</span>
-<span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#a11y-skipmain&#34;</span>&gt;Skip to Main Content&lt;/<span style="color:#f92672">a</span>&gt;</code></pre></div>
-
-    <span class="h-ds__none"
-    data-at="Modern A11Y CSS|Reduced Motion Media Query|OS Dark Mode Detection|CSS Skip to Content|Tab to Conent Link"></span>
-</output>  
-
-            <section class="pfmf-grid pfmf-grid__100">
-    <div class="l-caro-design">
-
-        <article class="js-art__caro h-ds__none">
-            <section class="l-caro-design__cnt">
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-                <a class="l-blog-crd" href="https://thescottkrause.com/emerging_tech/ecommerce-accessibility-a11y/">
-                <section>
-                    <picture>
-                        
-                        <img class="caro-target__js" src="/emerging_tech/ecommerce-accessibility-a11y_tn.webp" alt="eCommerce Accessibility A11y">
-                    </picture>
-                    <p>Emerging Tech</p>
-                    
-                    <h5> eCommerce Accessibility A11y </h5>
-                    <h6> Accessibility Challenges Unique to eCommerce </h6>
-                    <p>2020-12-07</p>
-                </section>
-                </a>
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-                <a class="l-blog-crd" href="https://thescottkrause.com/emerging_tech/gameification-threejs-webcrypto-accelerator-blender-gltf/">
-                <section>
-                    <picture>
-                        
-                        <img class="caro-target__js" src="/emerging_tech/gameification-threejs-webcrypto-accelerator-blender-gltf_tn.webp" alt="Roll Dice in High-Fidelity 3D">
-                    </picture>
-                    <p>Emerging Tech</p>
-                    
-                    <h5> Roll Dice in High-Fidelity 3D </h5>
-                    <h6> Create 3D Dice with Strong Random Entropy </h6>
-                    <p>2020-11-02</p>
-                </section>
-                </a>
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-            </section>
-        </article>
-
-    </div>
-</section>
-
-            <section class="l-tag-chip">
-                
-                    <a class="bg-coy_1999" data-at="bg-coy_1999|bg-coy_2000|bg-coy_2001|bg-coy_2002|bg-coy_2003|bg-coy_2004|bg-coy_2005|bg-coy_2006|bg-coy_2007|bg-coy_2008|bg-coy_2009"
-                        data-at-change="class"
-                        href="https://thescottkrause.com/tags/a11y/">A11Y</a>
-                
-                    <a class="bg-coy_1999" data-at="bg-coy_1999|bg-coy_2000|bg-coy_2001|bg-coy_2002|bg-coy_2003|bg-coy_2004|bg-coy_2005|bg-coy_2006|bg-coy_2007|bg-coy_2008|bg-coy_2009"
-                        data-at-change="class"
-                        href="https://thescottkrause.com/tags/css/">CSS</a>
-                
-            </section>
-            
             <ltdc-snackbar class="l-snackbar" role="alert">
     <section id="js-snackbar__id" class="snackbar__cont snackbar__cont--hide" aria-live="polite" aria-atomic="true">
         <div class="snackbar__progbar"></div>
@@ -812,6 +570,248 @@ if( e3 ) {
 
 </script>
 
+            <output>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-css" data-lang="css"><span style="color:#75715e">/* Skip to Main Content - CSS Focus rules that make the
+</span><span style="color:#75715e">link visible when focused from the omnibox.
+</span><span style="color:#75715e">========================================
+</span><span style="color:#75715e">====  ========  ========  =====  ====  =
+</span><span style="color:#75715e">===    =====    ======    =====   ==   =
+</span><span style="color:#75715e">==  ==  ======  ========  ======  ==  ==
+</span><span style="color:#75715e">=  ====  =====  ========  ======  ==  ==
+</span><span style="color:#75715e">=  ====  =====  ========  =======    ===
+</span><span style="color:#75715e">=        =====  ========  ========  ====
+</span><span style="color:#75715e">=  ====  =====  ========  ========  ====
+</span><span style="color:#75715e">=  ====  =====  ========  ========  ====
+</span><span style="color:#75715e">=  ====  ===      ====      ======  ====
+</span><span style="color:#75715e">======================================== */</span>
+
+<span style="color:#f92672">a</span>.<span style="color:#a6e22e">skip__main</span>:<span style="color:#a6e22e">active</span><span style="color:#f92672">,</span> <span style="color:#f92672">a</span>.<span style="color:#a6e22e">skip__main</span>:<span style="color:#a6e22e">focus</span> {
+    <span style="color:#66d9ef">background-color</span>: <span style="color:#ae81ff">#fff</span>;
+    <span style="color:#66d9ef">border-radius</span>: <span style="color:#ae81ff">4</span><span style="color:#66d9ef">px</span>;
+    <span style="color:#66d9ef">border</span>: <span style="color:#ae81ff">2</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">solid</span> <span style="color:#ae81ff">#000</span>;
+    <span style="color:#66d9ef">color</span>: <span style="color:#ae81ff">#000</span>;
+    <span style="color:#66d9ef">font-size</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">em</span>;
+    <span style="color:#66d9ef">height</span>: <span style="color:#66d9ef">auto</span>; <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">16</span><span style="color:#66d9ef">%</span>;
+    <span style="color:#66d9ef">left</span>: <span style="color:#66d9ef">auto</span>;
+    <span style="color:#66d9ef">margin</span>: <span style="color:#ae81ff">8</span><span style="color:#66d9ef">px</span> <span style="color:#ae81ff">42</span><span style="color:#66d9ef">%</span>;
+    <span style="color:#66d9ef">overflow</span>: <span style="color:#66d9ef">auto</span>;
+    <span style="color:#66d9ef">padding</span>: <span style="color:#ae81ff">4</span><span style="color:#66d9ef">px</span>;
+    <span style="color:#66d9ef">text-align</span>: <span style="color:#66d9ef">center</span>;
+    <span style="color:#66d9ef">top</span>: <span style="color:#66d9ef">auto</span>;
+    <span style="color:#66d9ef">z-index</span>: <span style="color:#ae81ff">1024</span>;
+}
+<span style="color:#f92672">a</span>.<span style="color:#a6e22e">skip__main</span> {
+    <span style="color:#66d9ef">left</span>: <span style="color:#ae81ff">-1024</span><span style="color:#66d9ef">px</span>;
+    <span style="color:#66d9ef">overflow</span>: <span style="color:#66d9ef">hidden</span>;
+    <span style="color:#66d9ef">position</span>: <span style="color:#66d9ef">absolute</span>;
+    <span style="color:#66d9ef">top</span>: <span style="color:#66d9ef">auto</span>;
+    <span style="color:#66d9ef">width</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span>; <span style="color:#66d9ef">height</span>: <span style="color:#ae81ff">1</span><span style="color:#66d9ef">px</span>;
+    <span style="color:#66d9ef">z-index</span>: <span style="color:#ae81ff">-1024</span>;
+}
+<span style="color:#75715e">/* Dark Mode begin */</span>
+@<span style="color:#66d9ef">media</span> <span style="color:#f92672">(</span><span style="color:#f92672">prefers-color-scheme</span><span style="color:#f92672">:</span> <span style="color:#f92672">dark</span><span style="color:#f92672">)</span> {
+    <span style="color:#f92672">body</span><span style="color:#f92672">,</span> <span style="color:#f92672">[</span><span style="color:#f92672">role</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#39;main&#39;</span><span style="color:#f92672">]</span> {
+        <span style="color:#66d9ef">background</span>: linear-gradient(<span style="color:#66d9ef">to</span> <span style="color:#66d9ef">right</span>, <span style="color:#ae81ff">#555</span>, <span style="color:#ae81ff">#c2c2c2</span>, <span style="color:#ae81ff">#555</span>)
+    }
+    .<span style="color:#a6e22e">h-bg__stripe</span><span style="color:#f92672">,</span> .<span style="color:#a6e22e">l-caro-design</span> <span style="color:#f92672">&gt;</span> <span style="color:#f92672">article</span><span style="color:#f92672">,</span> <span style="color:#f92672">article</span>.<span style="color:#a6e22e">l-caro-design</span> {
+        <span style="color:#66d9ef">background</span>: repeating-linear-gradient(<span style="color:#ae81ff">45</span><span style="color:#66d9ef">deg</span>,<span style="color:#ae81ff">#bbb</span>,<span style="color:#ae81ff">#bbb</span> <span style="color:#ae81ff">24</span><span style="color:#66d9ef">px</span>,<span style="color:#ae81ff">#ddd</span> <span style="color:#ae81ff">24</span><span style="color:#66d9ef">px</span>,<span style="color:#ae81ff">#ddd</span> <span style="color:#ae81ff">48</span><span style="color:#66d9ef">px</span>);
+    }
+}
+<span style="color:#75715e">/* Dark Mode end */</span>
+
+<span style="color:#75715e">/* Reduced Motion begin*/</span>
+@<span style="color:#66d9ef">media</span> <span style="color:#f92672">(</span><span style="color:#f92672">prefers-reduced-motion</span><span style="color:#f92672">:</span> <span style="color:#f92672">reduce</span><span style="color:#f92672">)</span> {
+    .<span style="color:#a6e22e">hero__vect</span> { <span style="color:#66d9ef">animation</span>: <span style="color:#66d9ef">none</span>; }
+}
+<span style="color:#75715e">/* Reduced Motion end*/</span></code></pre></div>
+<hr>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;js-skip__main--id skip__main&#34;</span>
+<span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#a11y-skipmain&#34;</span>&gt;Skip to Main Content&lt;/<span style="color:#f92672">a</span>&gt;</code></pre></div>
+
+    <span class="h-ds__none"
+    data-at="Modern A11Y CSS|Reduced Motion Media Query|OS Dark Mode Detection|CSS Skip to Content|Tab to Conent Link"></span>
+</output>  
+
+            <section class="pfmf-grid pfmf-grid__100">
+    <div class="l-caro-design">
+
+        <article class="js-art__caro h-ds__none">
+            <section class="l-caro-design__cnt">
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                <a class="l-blog-crd" href="https://thescottkrause.com/emerging_tech/ecommerce-accessibility-a11y/">
+                <section>
+                    <picture>
+                        
+                        <img class="caro-target__js" src="/emerging_tech/ecommerce-accessibility-a11y_tn.webp" alt="eCommerce Accessibility A11y">
+                    </picture>
+                    <p>Emerging Tech</p>
+                    
+                    <h5> eCommerce Accessibility A11y </h5>
+                    <h6> Accessibility Challenges Unique to eCommerce </h6>
+                    <p>2020-12-07</p>
+                </section>
+                </a>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+                <a class="l-blog-crd" href="https://thescottkrause.com/emerging_tech/gameification-threejs-webcrypto-accelerator-blender-gltf/">
+                <section>
+                    <picture>
+                        
+                        <img class="caro-target__js" src="/emerging_tech/gameification-threejs-webcrypto-accelerator-blender-gltf_tn.webp" alt="Roll Dice in High-Fidelity 3D">
+                    </picture>
+                    <p>Emerging Tech</p>
+                    
+                    <h5> Roll Dice in High-Fidelity 3D </h5>
+                    <h6> Create 3D Dice with Strong Random Entropy </h6>
+                    <p>2020-11-02</p>
+                </section>
+                </a>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            </section>
+        </article>
+
+    </div>
+</section>
+
+            <section class="l-tag-chip">
+                
+                    <a class="bg-coy_1999" data-at="bg-coy_1999|bg-coy_2000|bg-coy_2001|bg-coy_2002|bg-coy_2003|bg-coy_2004|bg-coy_2005|bg-coy_2006|bg-coy_2007|bg-coy_2008|bg-coy_2009"
+                        data-at-change="class"
+                        href="https://thescottkrause.com/tags/a11y/">A11Y</a>
+                
+                    <a class="bg-coy_1999" data-at="bg-coy_1999|bg-coy_2000|bg-coy_2001|bg-coy_2002|bg-coy_2003|bg-coy_2004|bg-coy_2005|bg-coy_2006|bg-coy_2007|bg-coy_2008|bg-coy_2009"
+                        data-at-change="class"
+                        href="https://thescottkrause.com/tags/css/">CSS</a>
+                
+            </section>
+            
         </main>
 
 <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400|Roboto+Slab:300,400" rel="stylesheet" type="text/css">

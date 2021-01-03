@@ -39,7 +39,7 @@ body, [role='main'] {
     background: repeating-linear-gradient(45deg,#f2f2f2,#f2f2f2 26px,#ffffff 26px,#ffffff 52px);
 }
 .l-blog-crd.caro-target__js.h--select {
-    border-bottom: solid 2px #C74375;
+    border-bottom: solid 4px #C74375;
 }
 .l-caro-design section img {
     width: 256px;
