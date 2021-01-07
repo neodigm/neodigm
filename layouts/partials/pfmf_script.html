@@ -7,12 +7,12 @@ href="/css/rainbow.css">
 </script>
 <script>
     var _d = oD = document;
-    
+
     var isMobile = function(){ return (oD.body.clientWidth <= 768) ? true : false; }
     var CnfState = {"audio": false};
     var AudioContext = window.AudioContext || false;
     if (AudioContext) {
-      CnfState.audio = true;    //    Icanuse
+      CnfState.audio = true;    //    I can use
       var oAudContx = new AudioContext();    //    HTML5 Audio
       var oAJAXReq = new XMLHttpRequest();   //    Get Sounds
       var aAudioBuffer = new Array(18);      //    Store Sound files
