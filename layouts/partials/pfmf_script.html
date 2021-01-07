@@ -21,6 +21,7 @@ href="/css/rainbow.css">
     }
     function fetchSound() {
         //    AJAX a single sound binary
+        var oReq = {};
         oAJAXReq.open("GET", "https://neodigm.github.io/brand_logo_graphic_design/fantastic/discerning/au/a" + fetchSoundConfig.sound_current + ".mp3", true);
         oAJAXReq.responseType = "arraybuffer";
         oAJAXReq.send();
