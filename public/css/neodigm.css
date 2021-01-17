@@ -42,6 +42,10 @@ body, [role='main'] {
     border-bottom: solid 4px #C74375;
     filter: brightness(1.4);
 }
+div.caro-target__js:not(.h--select) {
+    opacity: .2;
+    qqqqfilter: blur(22px);
+}
 .l-caro-design section img {
     width: 256px;
     height: auto;
