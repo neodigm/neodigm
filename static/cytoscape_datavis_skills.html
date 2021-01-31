@@ -1,0 +1,158 @@
+<html>
+  <head>
+    <title>UX ⚡ Scott Krause | TypeScript | Go | Vue.js</title>
+    <!--
+      _________             __    __     ____  __.                                  
+     /   _____/ ____  _____/  |__/  |_  |    |/ _|___________   __ __  ______ ____  
+     \_____  \_/ ___\/  _ \   __\   __\ |      < \_  __ \__  \ |  |  \/  ___// __ \ 
+     /        \  \__(  <_> )  |  |  |   |    |  \ |  | \// __ \|  |  /\___ \\  ___/ 
+    /_______  /\___  >____/|__|  |__|   |____|__ \|__|  (____  /____//____  >\___  >
+            \/     \/                           \/           \/           \/     \/ 
+    -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=2, minimum-scale=1, width=device-width, height=device-height"/>
+     <script src="https://unpkg.com/jquery@3.3.1/dist/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.2.17/cytoscape.min.js">   </script>
+   
+    <!-- cyposcape dagre -->
+    <script src="https://unpkg.com/dagre@0.7.4/dist/dagre.js"></script>
+    <script src="https://cdn.rawgit.com/cytoscape/cytoscape.js-dagre/1.5.0/cytoscape-dagre.js"></script>
+    
+    <!-- cytoscape popper -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.5/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/cytoscape-popper@1.0.2/cytoscape-popper.min.js"></script>
+    
+  </head>
+  <body>
+        <style>
+        body { font: 14px helvetica neue, helvetica, arial, sans-serif;}
+        #cy { height: 100%; width: 100%; left: 0; top: 0; float: left; position: absolute; }
+        </style>
+    <div id="cy"></div>
+    <script>
+var cy = (window.cy = cytoscape({
+  container: document.getElementById("cy"),
+
+  boxSelectionEnabled: false,
+  autounselectify: true,
+
+  style: [
+    {
+      selector: "node",
+      css: {
+        content: "data(id)",
+        "text-valign": "center",
+        "text-halign": "center",
+        height: "60px",
+        width: "60px",
+        "border-color": "black",
+        "border-opacity": "1",
+        "border-width": "10px"
+      }
+    },
+    {
+      selector: "$node > node",
+      css: {
+        "padding-top": "10px",
+        "padding-left": "10px",
+        "padding-bottom": "10px",
+        "padding-right": "10px",
+        "text-valign": "top",
+        "text-halign": "center",
+        "background-color": "#bbb"
+      }
+    },
+    {
+      selector: "edge",
+      css: {
+        "target-arrow-shape": "triangle"
+      }
+    },
+    {
+      selector: ":selected",
+      css: {
+        "background-color": "black",
+        "line-color": "black",
+        "target-arrow-color": "black",
+        "source-arrow-color": "black"
+      }
+    }
+  ],
+
+  elements: {
+    nodes: [
+      { data: { id: "n0" } },
+      { data: { id: "n1" } },
+      { data: { id: "n2" } },
+      { data: { id: "n3" } },
+      { data: { id: "n4" } },
+      { data: { id: "n5" } },
+      { data: { id: "n6" } },
+      { data: { id: "n7" } },
+      { data: { id: "n8" } },
+      { data: { id: "n9" } },
+      { data: { id: "n10" } },
+      { data: { id: "n11" } },
+      { data: { id: "n12" } },
+      { data: { id: "n13" } },
+      { data: { id: "n14" } },
+      { data: { id: "n15" } },
+      { data: { id: "n16" } }
+    ],
+    edges: [
+      { data: { source: "n0", target: "n1" } },
+      { data: { source: "n1", target: "n2" } },
+      { data: { source: "n1", target: "n3" } },
+      { data: { source: "n2", target: "n7" } },
+      { data: { source: "n2", target: "n11" } },
+      { data: { source: "n2", target: "n16" } },
+      { data: { source: "n3", target: "n4" } },
+      { data: { source: "n3", target: "n16" } },
+      { data: { source: "n4", target: "n5" } },
+      { data: { source: "n4", target: "n6" } },
+      { data: { source: "n6", target: "n8" } },
+      { data: { source: "n8", target: "n9" } },
+      { data: { source: "n8", target: "n10" } },
+      { data: { source: "n11", target: "n12" } },
+      { data: { source: "n12", target: "n13" } },
+      { data: { source: "n13", target: "n14" } },
+      { data: { source: "n13", target: "n15" } }
+    ]
+  },
+
+  layout: {
+    name: "dagre",
+    padding: 5
+  }
+}));
+
+cy.ready(function () {
+  let node = cy.nodes().first();
+  let popper = node.popper({
+    content: () => {
+      let div = document.createElement("div");
+
+      div.innerHTML = "Sticky Popper content";
+
+      document.body.appendChild(div);
+
+      return div;
+    }
+  });
+
+  let update = () => {
+    popper.scheduleUpdate();
+  };
+  node.on("position", update);
+  cy.on("pan zoom resize", update);
+  cy.bind("click", "node", function () {
+    var png = cy.png();
+    $('<img id="png"></img>').insertAfter("#cy");
+    $("#png").attr("src", png);
+  });
+});
+
+
+    </script>
+  </body>
+</html>
