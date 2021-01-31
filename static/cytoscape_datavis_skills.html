@@ -30,127 +30,113 @@
         </style>
     <div id="cy"></div>
     <script>
-var cy = (window.cy = cytoscape({
-  container: document.getElementById("cy"),
+        fetch("skills_strategic_competencies.json")
+        .then(response => response.json())
+        .then((aSkills) => {
+            doCyto( doCYSP_json(aSkills) );
+        });
 
-  boxSelectionEnabled: false,
-  autounselectify: true,
+        function doCYSP_json( aSkills ){
+            let aCYSP_nodes = [], aCYSP_edges = [];
+            aSkills.map( (dSkill, nDx) =>{
+                aCYSP_nodes.push( {"data":{"id": "n"+nDx, "name": dSkill.name}});
+                dSkill.target.forEach(nTarget => {
+                    aCYSP_edges.push( {"data":{"source": "n"+nDx, "target": "n" + nTarget }});
+                });
+            });
+            return [aCYSP_nodes, aCYSP_edges];
+        }
 
-  style: [
-    {
-      selector: "node",
-      css: {
-        content: "data(id)",
-        "text-valign": "center",
-        "text-halign": "center",
-        height: "60px",
-        width: "60px",
-        "border-color": "black",
-        "border-opacity": "1",
-        "border-width": "10px"
-      }
-    },
-    {
-      selector: "$node > node",
-      css: {
-        "padding-top": "10px",
-        "padding-left": "10px",
-        "padding-bottom": "10px",
-        "padding-right": "10px",
-        "text-valign": "top",
-        "text-halign": "center",
-        "background-color": "#bbb"
-      }
-    },
-    {
-      selector: "edge",
-      css: {
-        "target-arrow-shape": "triangle"
-      }
-    },
-    {
-      selector: ":selected",
-      css: {
-        "background-color": "black",
-        "line-color": "black",
-        "target-arrow-color": "black",
-        "source-arrow-color": "black"
-      }
-    }
-  ],
+        function doCyto( aDat ){
+            var cy = (window.cy = cytoscape({
+            container: document.getElementById("cy"),
 
-  elements: {
-    nodes: [
-      { data: { id: "n0" } },
-      { data: { id: "n1" } },
-      { data: { id: "n2" } },
-      { data: { id: "n3" } },
-      { data: { id: "n4" } },
-      { data: { id: "n5" } },
-      { data: { id: "n6" } },
-      { data: { id: "n7" } },
-      { data: { id: "n8" } },
-      { data: { id: "n9" } },
-      { data: { id: "n10" } },
-      { data: { id: "n11" } },
-      { data: { id: "n12" } },
-      { data: { id: "n13" } },
-      { data: { id: "n14" } },
-      { data: { id: "n15" } },
-      { data: { id: "n16" } }
-    ],
-    edges: [
-      { data: { source: "n0", target: "n1" } },
-      { data: { source: "n1", target: "n2" } },
-      { data: { source: "n1", target: "n3" } },
-      { data: { source: "n2", target: "n7" } },
-      { data: { source: "n2", target: "n11" } },
-      { data: { source: "n2", target: "n16" } },
-      { data: { source: "n3", target: "n4" } },
-      { data: { source: "n3", target: "n16" } },
-      { data: { source: "n4", target: "n5" } },
-      { data: { source: "n4", target: "n6" } },
-      { data: { source: "n6", target: "n8" } },
-      { data: { source: "n8", target: "n9" } },
-      { data: { source: "n8", target: "n10" } },
-      { data: { source: "n11", target: "n12" } },
-      { data: { source: "n12", target: "n13" } },
-      { data: { source: "n13", target: "n14" } },
-      { data: { source: "n13", target: "n15" } }
-    ]
-  },
+            boxSelectionEnabled: false,
+            autounselectify: true,
 
-  layout: {
-    name: "dagre",
-    padding: 5
-  }
-}));
+            style: [
+            {
+            selector: "node",
+            css: {
+            content: "data(name)",
+            "text-valign": "center",
+            "text-halign": "center",
+            height: "60px",
+            width: "60px",
+            "border-color": "black",
+            "border-opacity": "1",
+            "border-width": "10px"
+            }
+            },
+            {
+            selector: "$node > node",
+            css: {
+            "padding-top": "10px",
+            "padding-left": "10px",
+            "padding-bottom": "10px",
+            "padding-right": "10px",
+            "text-valign": "top",
+            "text-halign": "center",
+            "background-color": "#bbb"
+            }
+            },
+            {
+            selector: "edge",
+            css: {
+            "target-arrow-shape": "triangle"
+            }
+            },
+            {
+            selector: ":selected",
+            css: {
+            "background-color": "black",
+            "line-color": "black",
+            "target-arrow-color": "black",
+            "source-arrow-color": "black"
+            }
+            }
+            ],
 
-cy.ready(function () {
-  let node = cy.nodes().first();
-  let popper = node.popper({
-    content: () => {
-      let div = document.createElement("div");
+            elements: {
+            nodes: aDat[0],
+            edges: aDat[1]
+            },
 
-      div.innerHTML = "Sticky Popper content";
+            layout: {
+            name: "dagre",
+            padding: 5
+            }
+            }));
 
-      document.body.appendChild(div);
+            cy.ready(function () {
+            let node = cy.nodes().first();
+            let popper = node.popper({
+            content: () => {
+            let div = document.createElement("div");
 
-      return div;
-    }
-  });
+            div.innerHTML = "Sticky Popper content";
 
-  let update = () => {
-    popper.scheduleUpdate();
-  };
-  node.on("position", update);
-  cy.on("pan zoom resize", update);
-  cy.bind("click", "node", function () {
-    var png = cy.png();
-    $('<img id="png"></img>').insertAfter("#cy");
-    $("#png").attr("src", png);
-  });
-});
+            document.body.appendChild(div);
+
+            return div;
+            }
+            });
+
+            let update = () => {
+            popper.scheduleUpdate();
+            };
+            node.on("position", update);
+            cy.on("pan zoom resize", update);
+            cy.bind("click", "node", function () {
+            var png = cy.png();
+            $('<img id="png"></img>').insertAfter("#cy");
+            $("#png").attr("src", png);
+            });
+            });
+        }
+
+
+
 
 
     </script>
