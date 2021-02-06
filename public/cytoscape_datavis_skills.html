@@ -12,30 +12,29 @@
     <meta charset="utf-8">
     <meta name="viewport" content="initial-scale=1, maximum-scale=2, minimum-scale=1, width=device-width, height=device-height"/>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.18.0/cytoscape.min.js"></script>
-    <script src ="js/cytoscape-cose-bilkent.js"></script>
-    
-    <!-- cytoscape popper -->
-    <template src="https://cdn.jsdelivr.net/npm/popper.js@1.14.5/dist/umd/popper.min.js"></template>
-    <template src="https://cdn.jsdelivr.net/npm/cytoscape-popper@1.0.2/cytoscape-popper.min.js"></template>
+    <script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+    <script src="https://unpkg.com/layout-base/layout-base.js"></script>
+    <script src="https://unpkg.com/cose-base/cose-base.js"></script>
+    <script src="https://unpkg.com/cytoscape-layout-utilities/cytoscape-layout-utilities.js"></script>
+    <script src="js/cytoscape-fcose.js"></script>
     
   </head>
   <body data-cy-ready="false">
         <style>
             body {
                 font: 14px helvetica neue, helvetica, arial, sans-serif;
-                QQQQbackground: linear-gradient(to right, #fffde7, #646464, #fffde7);
+                background: linear-gradient(to right, #fffde7, #646464, #fffde7);
                 background-color: #000;
                 min-height: 1200px;
             }
             body[data-cy-ready='true']  .cy--ready {display: none;}
             body[data-cy-ready='false'] .cy--ready {display: block;}
 
-            #cy { height: calc(1000px); width: 1000px; left: 0; top: 0; float: left; position: absolute; }
+            #cy { height: calc(1000px); width: 1000px; left: 0; top: 96px; float: left; position: absolute; }
             .cmd-graph__download {
                 cursor: pointer;
                 position: absolute;
-                bottom: 4px;
+                top: 4px;
                 width: 256px;
                 margin: 4px auto; padding: 12px;
 
@@ -90,11 +89,11 @@
             content: "data(name)",
             "text-valign": "center",
             "text-halign": "center",
-            height: "96px", width: "96px",
+            height: "104px", width: "104px",
             "border-color": "#DD4124",
             "border-opacity": ".8",
-            "border-width": "3px",
-            "background-color": "#FF6F61"
+            "border-width": "4px",
+            "background-color": "#88B04B"
             }
             },
             {
@@ -133,7 +132,8 @@
             },
 
             layout: {
-        name: 'cose-bilkent',
+        name: 'fcose',
+        xname: 'cose-bilkent',
         randomize: true,
         idealEdgeLength: 260,
         animate: false
