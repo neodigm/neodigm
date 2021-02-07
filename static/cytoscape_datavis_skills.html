@@ -71,11 +71,11 @@
         </style>
     <section class="cy--ready">Loading ... </section>
     <a id="downloadPNG" class="cmd-graph__download">Download skills_graph.png</a>
-    <div id="cy"></div>
+    <div id="cy" role="main"></div>
 
     <script>
         fetch("skills_strategic_competencies.json")
-        .then(response => response.json())
+        .then(response => response.json()) // Get skills
         .then((aSkills) => {
             doCyto( doCYSP_json(aSkills) );
         });
