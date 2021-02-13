@@ -42,10 +42,12 @@
                 background-color: #000;
                 min-height: 1200px;
             }
+
             body[data-cy-ready='true']  .cy--ready {display: none;}
             body[data-cy-ready='false'] .cy--ready {display: block;}
 
-            #cy { height: calc(1000px); width: 1000px; left: 0; top: 96px; float: left; position: absolute; }
+            #cy { height: calc(1000px); width: 1000px; left: 0; top: 96px; float: left; position: absolute;
+            border: solid 1px #fff; border-radius: 10px; }
 
             .cmd-graph__download {
                 cursor: pointer;
@@ -71,11 +73,11 @@
         </style>
     <section class="cy--ready">Loading ... </section>
     <a id="downloadPNG" class="cmd-graph__download">Download skills_graph.png</a>
-    <div id="cy"></div>
+    <div id="cy" role="main"></div>
 
     <script>
         fetch("skills_strategic_competencies.json")
-        .then(response => response.json())
+        .then(response => response.json()) // Get skills
         .then((aSkills) => {
             doCyto( doCYSP_json(aSkills) );
         });
@@ -102,14 +104,14 @@
             {
             selector: "node",
             css: {
-            content: "data(name)",
-            "text-valign": "center",
-            "text-halign": "center",
-            height: "104px", width: "104px",
-            "border-color": "#DD4124",
-            "border-opacity": ".8",
-            "border-width": "4px",
-            "background-color": "#88B04B"
+                content: "data(name)",
+                "text-valign": "center",
+                "text-halign": "center",
+                height: "104px", width: "104px",
+                "border-color": "#DD4124",
+                "border-opacity": ".8",
+                "border-width": "4px",
+                "background-color": "#88B04B"
             }
             },
             {
