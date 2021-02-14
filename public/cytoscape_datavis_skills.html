@@ -82,7 +82,7 @@
             doCyto( doCYSP_json(aSkills) );
         });
 
-        function doCYSP_json( aSkills ){
+        function doCYSP_json( aSkills ){ // Convert to Cytoscape format
             let aCYSP_nodes = [], aCYSP_edges = [];
             aSkills.map( (dSkill, nDx) =>{
                 aCYSP_nodes.push( {"data":{"id": "n"+nDx, "name": dSkill.name}});
@@ -129,8 +129,14 @@
             {
             selector: "edge",
             css: {
-            "target-arrow-shape": "triangle",
-            "line-color": "#92A8D1"
+            'target-arrow-shape': 'triangle',
+        'target-arrow-color': 'black',
+        'source-arrow-color': '#92A8D1',
+        'line-color': '#92A8D1',
+        'width': 1.5,
+        'curve-style': 'bezier'
+
+
             }
             },
             {
