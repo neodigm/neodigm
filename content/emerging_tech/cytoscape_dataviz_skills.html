@@ -25,7 +25,7 @@ tags:
 <section class="pfmf-grid pfmf-grid__100 readable__doc">
     <div>
         <article style="padding: 12px 12px;">
-            <p>I love interaction. I create websites that engage, excite, and inform in a way that is fun. Most of my day is spent enchanting websites with the little details that you will never find in a sea of boring, flat template sites.</p>
+            <p>I love interaction. I create websites that engage, excite, and inform in a way that is fun. Most of my day is spent enchanting websites with the little details that you will never find in a sea of boring template sites.</p>
             <p class="h_quote">It's important to present information in a way that tells a story. Like a mystery it should give up its secrets with a few inspired clicks.</p>
             <p>To that end, I've been experimenting with network graphs to display complex information is a way that is instantly intuitive, discoverable, and fun.</p>
         </article>
@@ -46,6 +46,27 @@ tags:
             <p class="h_ital">Cytoscape.js seemed like the logical next step after working with D3.js for a while.</p>
             <p>For the Cytoscape graph I use the same dataset that I used in the D3 graph. That is a hierarchical view of my skill set in JSON. Here I present the JavaScript code to convert the JSON from it's D3 format to one that can be easily consumed by Cytoscape.</p>
             <p>This graph utilizes the FCOSE layout plugin.</p>
+
+            <details>
+                <summary data-wired4sound="click|4"  class="h-pro-tip">Pro ⚡ Tips</summary>
+                <p>💡 Create a link to download a PNG image of the CURRENT graph on the canvas.</p>
+
+ {{< highlight javascript >}}
+ document.body.dataset.cyReady = "true";
+ var text, name, file;
+ var eA = document.getElementById("downloadPNG");
+ if( eA ){
+     eA.addEventListener("mouseover", (ev)=>{
+         text = window.cy.png({'output': 'blob'});
+         name = "skills_graph.png"; type = "image/png";
+         file = new Blob([text], { type: type });
+         eA.href = URL.createObjectURL(file);
+         eA.download = name;
+     });
+ }
+ {{< /highlight >}}
+             </details>
+
         </article>
     </div>
 
