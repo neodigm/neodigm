@@ -32,6 +32,14 @@ tags:
     </div>
 </section>
 
+<section class="pfmf-grid pfmf-grid__100 readable__doc">
+    <div>
+        <article style="padding: 12px 12px;">
+            <div id="cy" role="main"></div>
+        </article>
+    </div>
+</section>
+
 <section class="pfmf-grid pfmf-grid__60_40 readable__doc">
     <div>
         <article style="padding: 12px 12px;">
@@ -75,18 +83,7 @@ function doCYSP_json( aSkills ){ // Convert to Cytoscape format
 </section>
 
 <style>
-    body {
-        font: 14px helvetica neue, helvetica, arial, sans-serif;
-        background: linear-gradient(to right, #fffde7, #646464, #fffde7);
-        background-color: #000;
-        min-height: 1200px;
-        background: repeating-linear-gradient( 45deg ,#242424,#242424 24px,#444 24px,#444 48px);
-    }
-
-    body[data-cy-ready='true']  .cy--ready {display: none;}
-    body[data-cy-ready='false'] .cy--ready {display: block;}
-
-    #cy { height: calc(1000px); width: 1000px; left: 0; top: 96px; float: left; position: absolute;
+    #cy { height: calc(1000px); width: 100%;
     border: solid 1px #fff; border-radius: 10px; }
 
     .cmd-graph__download {
@@ -100,18 +97,7 @@ function doCYSP_json( aSkills ){ // Convert to Cytoscape format
         font-size: 18px;
         border: 2px solid #edba08; border-radius: 6px;
     }
-    .cy--ready {
-        display: block;
-        background: rgba( 256, 255, 256, .2);
-        font-size: 18px;
-        border: 2px solid #edba08; border-radius: 6px;
-        margin: 256px auto; padding: 12px;
-        text-align: center;
-        width: 256px; z-index: 1024;
-    }
 </style>
-
-<div id="cy" role="main"></div>
 
 <script>
     fetch("/skills_strategic_competencies.json")
