@@ -55,7 +55,7 @@ tags:
  document.body.dataset.cyReady = "true";
  var text, name, file;
  var eA = document.getElementById("downloadPNG");
- if( eA ){
+ if( eA ){ // Download image of graph
      eA.addEventListener("mouseover", (ev)=>{
          text = window.cy.png({'output': 'blob'});
          name = "skills_graph.png"; type = "image/png";
