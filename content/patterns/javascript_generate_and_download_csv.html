@@ -1,0 +1,97 @@
+---
+title: "Javascript Generate and Download CSV"
+date: 2021-02-27T19:56:40-06:00
+draft: false
+summary: "Produce CSV with client-side JS. Contruct Blog and Download as CSV file."
+slug: javascript
+categories:
+- Data
+- Dashboard
+tags:
+- CSV
+- Reporting
+- JavaScript
+---
+<output>
+    {{< highlight JavaScript >}}
+// Desc: Produce CSV with client-side JS. Contruct Blob and Download as CSV file
+/*    _________   _____________   ____ __________.__        ___.    
+ *    \_   ___ \ /   _____/\   \ /   / \______   \  |   ____\_ |__  
+ *    /    \  \/ \_____  \  \   Y   /   |    |  _/  |  /  _ \| __ \ 
+ *    \     \____/        \  \     /    |    |   \  |_(  <_> ) \_\ \
+ *     \______  /_______  /   \___/     |______  /____/\____/|___  /
+ *            \/        \/                     \/                \/    CSV Report */
+
+ ✅ The resulting CSV files will contain a header row with deterministic column names
+ ✅ The resulting CSV files will be quoted
+ ✅ The file name is auto-generated with timestamp
+ ✅ Cell string data may contain a comma “,” however quotes will be removed
+ ✅ Cell string data may contain only utf-8 characters
+ ✅ Cell string data may contain only utf-8 characters
+
+let nativeCSV = ( ( _d )=>{
+    let oCnt, jnCSV, sCSV, blCSV, elCSV;  //  config, json, array, blob, and element
+    let retObj = {
+        "init": ( _oCnt )=>{
+            oCnt = _oCnt;
+            if( oCnt.fileName.indexOf("####") !== -1) {
+                oCnt.fileName = oCnt.fileName.replace("####", Date.now() );}
+            jnCSV = sCSV = blCSV = elCSV = "";
+            return retObj;
+        },
+        "setArray": ( _jnCSV )=>{  //  An array (rows) of arrays (cols) !jagged
+            jnCSV = _jnCSV;
+            if( oCnt.header ) jnCSV.unshift( oCnt.header );
+            jnCSV.forEach(( aRow )=>{
+                aRow.forEach(( sCol )=>{
+                    if( typeof sCol === "string"){
+                        sCSV += oCnt.delimQuote + sCol
+                            .split( oCnt.delimQuote ).join("");
+                        sCSV += oCnt.delimQuote + oCnt.delimCol;                       
+                    }
+                });
+                sCSV = sCSV.slice(0, -1) + oCnt.delimLine;
+            });
+            return retObj;
+        },
+        "getBlob": ()=>{
+            blCSV = new Blob([ sCSV ], { type: "text/csv;charset=utf-8;" });
+            return retObj;
+        },
+        "createLink": ()=>{
+            elCSV = _d.createElement("a");
+            elCSV.setAttribute("href", URL.createObjectURL( blCSV ));
+            elCSV.setAttribute("download", oCnt.fileName );
+            elCSV.style.visibility = 'hidden';
+            _d.body.appendChild( elCSV );
+            return retObj;
+        },
+        "clickLink": ()=>{
+            elCSV.click();
+            return retObj;
+        },
+        "removeLink": ()=>{
+            _d.body.removeChild( elCSV );
+            return retObj;
+        }
+    };
+    return retObj;
+})( document );{{< /highlight >}}
+    <br>
+    {{< highlight JavaScript >}}
+
+console.log( nativeCSV.init({  //  Usage: 
+    "delimCol": ",",
+    "delimQuote": '"',
+    "delimLine": "\n",
+    "fileName": "graph_nodes_####.csv",
+    "header": ["id","name", "FQDN"]})
+    .setArray( currentGraph2Array(jCurrentGraph) )
+    .getBlob()
+    .createLink()
+    .clickLink()
+    .removeLink()    
+);{{< /highlight >}}
+    <span class="h-ds__none"
+        data-at="Automatic CSV Report|Dashboard Download|Client-side CSV|Serverless CSV Report"></span>
+    </output>
