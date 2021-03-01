@@ -14,7 +14,7 @@
   "author": "SCK neodigm",
   "license": "ISC",
   "dependencies": {
-    "three": "^0.121.1"
+    "three": "^0.125.0"
   },
   "devDependencies": {
     "webpack": "^4.42.1",
