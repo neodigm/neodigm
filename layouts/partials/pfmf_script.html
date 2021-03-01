@@ -15,6 +15,8 @@ href="/css/rainbow.css">
     if (AudioContext) {
       CnfState.audio = true;    //    Icanuse
       var oAudContx = new AudioContext();    //    HTML5 Audio
+
+
       var oAJAXReq = new XMLHttpRequest();   //    Get Sounds
       var aAudioBuffer = new Array(18);      //    Store Sound files
       var fetchSoundConfig = {sound_max: 18, sound_current: 1};    //    Sound limits
@@ -50,8 +52,9 @@ href="/css/rainbow.css">
           oSrc.connect(volume);
           volume.connect(oAudContx.destination);
           oSrc.connect(oAudContx.destination);
+          volume.gain.value = .0001;
           oSrc.start(oAudContx.currentTime);
-        } catch( e ){}
+        } catch( e ){ console.warn("Audio warn") }
       }
     };
     function playAudioRand( aSound ){  //  Either Or | array | max 2
