@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>data on Scott C. Krause 🚀 neodigm</title>
+    <title>Data on Scott C. Krause 🚀 neodigm</title>
     <link>https://thescottkrause.com/categories/data/</link>
-    <description>Recent content in data on Scott C. Krause 🚀 neodigm</description>
+    <description>Recent content in Data on Scott C. Krause 🚀 neodigm</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 04 Mar 2021 20:27:43 -0600</lastBuildDate><atom:link href="https://thescottkrause.com/categories/data/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <pubDate>Thu, 04 Mar 2021 20:27:43 -0600</pubDate>
       
       <guid>https://thescottkrause.com/emerging_tech/weaponeered-poetry-links/</guid>
-      <description>In-depth and Indispensable Curated Links</description>
+      <description>Indispensable Curated Links</description>
     </item>
     
     <item>
@@ -23,6 +23,15 @@
       
       <guid>https://thescottkrause.com/patterns/javascript/</guid>
       <description>Produce CSV with client-side JS. Construct Blog and Download as CSV file.</description>
+    </item>
+    
+    <item>
+      <title>Cytoscape Skills Data Visualization</title>
+      <link>https://thescottkrause.com/emerging_tech/cytoscape_dataviz_skills/</link>
+      <pubDate>Sat, 20 Feb 2021 19:38:41 -0600</pubDate>
+      
+      <guid>https://thescottkrause.com/emerging_tech/cytoscape_dataviz_skills/</guid>
+      <description>Persuasive Infographics &amp;amp; Data Visualizations</description>
     </item>
     
   </channel>
