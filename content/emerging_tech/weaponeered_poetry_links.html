@@ -1,5 +1,5 @@
 ---
-title: "Weaponeered Poetry Links"
+title: "Curated Emerging Tech Links"
 date: 2021-03-04T20:27:43-06:00
 draft: false
 summary: "Indispensable Curated Links"
@@ -14,15 +14,36 @@ tags:
 ---
 <style>
     .l-favs article {
-        font-family: 'Courier New', Courier, monospace;
         display: grid;
         grid-template-columns: 25% 12% 25% 38%;
+
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 400;
+            font-size: 1.12em;
+            line-height: 1.5;
         text-align: center;
     }
     .l-favs article div {
-        border: solid 1px #686868;
-        margin: 2px;
+        border: solid 1px #868686;
+        margin: 2px; padding: 2px;
         border-radius: 6px;
+    }
+    .l-favs article div.fav__comment {
+        padding: 12px;
+        text-align: justify !important;
+    }
+    .l-favs article div .fav__tag span {
+        color: #fff;
+        text-decoration: none;
+        border-radius: 24px;
+        margin: 4px;
+        padding: 4px 10px;
+        line-height: 2;
+        white-space: nowrap;
+        font-family: 'Roboto Condensed',sans-serif;
+        font-size: 16px;
+        letter-spacing: -.008em;
+        background-color: #edba08;
     }
 </style>
 <section class="pfmf-grid pfmf-grid__100 readable__doc">
@@ -105,7 +126,7 @@ const aFavs = [
     {"name": "Google Closure JS Compiler online", "cat": "", "tags": ["js","Compiler","","","",""], "uri": "https://closure-compiler.appspot.com/home", "comment": ""},
     {"name": "Lake County Data Hub", "cat": "", "tags": ["gov","map","","","",""], "uri": "http://data-lakecountyil.opendata.arcgis.com/", "comment": ""},
     {"name": "icons material design", "cat": "", "tags": ["svg","icon","material","","",""], "uri": "https://materialdesignicons.com/", "comment": ""},
-    {"name": "planning for my kidnapping", "cat": "", "tags": ["sec","","","","",""], "uri": "", "comment": "https://blog.luap.info/planning-for-my-kidnapping.html"},
+    {"name": "planning for my kidnapping", "cat": "", "tags": ["sec","","","","",""], "uri": "", "comment": "You never know"},
     {"name": "Comic", "cat": "", "tags": ["","","","","",""], "uri": "https://www.xkcd.com/", "comment": "Comic xkcd"},
     {"name": "Haiku Gen", "cat": "", "tags": ["","","","","",""], "uri": "https://www.poem-generator.org.uk/?i=z3jbw2u", "comment": "Bug with the word SELECT or some random word"},
     {"name": "Compress audio", "cat": "", "tags": ["","","","","",""], "uri": "http://www.mp3louder.com/", "comment": "be careful to select “decrease volume” (8db)"},
@@ -249,32 +270,33 @@ const aFavs = [
     {"name": "Build a Chrome Extension", "cat": "tech", "tags": ["","","","","",""], "uri": "https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#connection-based_messaging", "comment": ""},
     {"name": "aws perspective", "cat": "tech", "tags": ["","","","","",""], "uri": "https://aws.amazon.com/solutions/implementations/aws-perspective/", "comment": ""},
     {"name": "three.js network graph", "cat": "tech", "tags": ["","","","","",""], "uri": "https://vasturiano.github.io/3d-force-graph/example/text-links/", "comment": ""},
-    {"name": "", "cat": "tech", "tags": ["ERT","","","","",""], "uri": "https://developers.google.com/gmail", "comment": ""},
-    {"name": "", "cat": "tech", "tags": ["ERT","","","","",""], "uri": "https://github.com/google/google-api-javascript-client/tree/master/docs", "comment": ""},
-    {"name": "", "cat": "tech", "tags": ["ERT","","","","",""], "uri": "https://gmail.googleapis.com/$discovery/rest?version=v1", "comment": ""},
+    {"name": "gmail api", "cat": "tech", "tags": ["ERT","","","","",""], "uri": "https://developers.google.com/gmail", "comment": ""},
+    {"name": "gmail api js client", "cat": "tech", "tags": ["ERT","","","","",""], "uri": "https://github.com/google/google-api-javascript-client/tree/master/docs", "comment": ""},
+    {"name": "gmail api schema", "cat": "tech", "tags": ["ERT","","","","",""], "uri": "https://gmail.googleapis.com/$discovery/rest?version=v1", "comment": ""},
     {"name": "", "cat": "bus", "tags": ["ERT","","","","",""], "uri": "https://migration.cloudasta.com/?__hstc=20192487.7dd241b6fe31c549bc53ebcdbd7aa496.1613759439333.1613759439333.1613759439333.1&__hssc=20192487.1.1613759439333&__hsfp=3703010909", "comment": ""},
     {"name": "", "cat": "bus", "tags": ["ERT","","","","",""], "uri": "https://migration.cloudasta.com/pages/attribution", "comment": ""},
-    {"name": "", "cat": "", "tags": ["","","","","",""], "uri": "https://cloudasta.com/terms-and-conditions/", "comment": ""},
-    {"name": "", "cat": "", "tags": ["","","","","",""], "uri": "", "comment": ""},
-    {"name": "", "cat": "", "tags": ["","","","","",""], "uri": "", "comment": ""},
-    {"name": "", "cat": "", "tags": ["","","","","",""], "uri": "", "comment": ""},
-    {"name": "", "cat": "", "tags": ["","","","","",""], "uri": "", "comment": ""},
-    {"name": "", "cat": "", "tags": ["","","","","",""], "uri": "", "comment": ""}
+    {"name": "", "cat": "bus", "tags": ["","","","","",""], "uri": "https://cloudasta.com/terms-and-conditions/", "comment": ""}
     ];
 
 let showFavs = ( ( _d, _sQ )=>{
     let elFavs = _d.querySelector( _sQ );
     if( elFavs && aFavs ){
         aFavs.forEach((fav)=>{
-            let sMU = `
-            <article>
-                <div><p><a class="h-link" target="_blank" rel="noopener" href="${fav.uri}">${fav.name}</a></p></div>
-                <div><p>${fav.cat}</p></div>
-                <div><p>${fav.tags}</p></div>
-                <div><p>${fav.comment}</p></div>
-            </article>
-            `;
-            elFavs.innerHTML = elFavs.innerHTML + sMU;
+            if( fav.cat === "tech"){
+                let sTags = "";
+                fav.tags.forEach(( tag )=>{
+                    if( tag ) sTags += `<span>${ tag }</span>`;
+                });
+                let sMU = `
+                <article>
+                    <div><p><a class="h-link" target="_blank" rel="noopener" href="${fav.uri}">${fav.name}</a></p></div>
+                    <div><p>${fav.cat}</p></div>
+                    <div><p class="fav__tag">${sTags}</p></div>
+                    <div class="fav__comment"><p>${fav.comment}</p></div>
+                </article>
+                `;
+                elFavs.innerHTML = elFavs.innerHTML + sMU;
+            }
         });
     }
 })( document, ".js-sec__fav");
