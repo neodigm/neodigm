@@ -15,7 +15,7 @@ tags:
 <style>
     .l-favs article {
         display: grid;
-        grid-template-columns: 25% 12% 25% 38%;
+        grid-template-columns: 25% 25% 50%;
 
             font-family: 'Montserrat', sans-serif;
             font-weight: 400;
@@ -72,7 +72,6 @@ tags:
                             <article>
                                 <div><p><a class="h-link" target="_blank" rel="noopener" href="${fav.uri}">${fav.name}</a></p></div>
                                 <div><p>${fav.cat}</p></div>
-                                <div><p class="fav__tag">${sTags}</p></div>
                                 <div class="fav__comment"><p>${fav.comment}</p></div>
                             </article>
                             `;
