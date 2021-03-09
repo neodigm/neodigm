@@ -4,7 +4,7 @@
     {"name": "Chromes GIT page", "cat": "tech", "tags": ["git","repo","chrome","","",""], "uri": "https://github.com/GoogleChrome", "comment": " Every type of Chrome project is here"},
     {"name": "Animated Type", "cat": "creative", "tags": ["interactive","codepen","","","",""], "uri": "https://codepen.io/airnan/details/NRaOZb?utm_source=frontendfocus&utm_medium=email", "comment": ""},
     {"name": "3d tilt 🦄 parallax JS lib", "cat": "creative", "tags": ["tilt","parallax","","","",""], "uri": "https://micku7zu.github.io/vanilla-tilt.js/", "comment": ""},
-    {"name": "loadCSS", "cat": "tech", "tags": ["css","polyfill","","","",""], "uri": "https://github.com/filamentgroup/loadCSS", "comment": ""},
+    {"name": "loadCSS", "cat": "tech", "tags": ["css","polyfill","repo","","",""], "uri": "https://github.com/filamentgroup/loadCSS", "comment": "A pattern for loading CSS asynchronously"},
     {"name": "JS QR codes", "cat": "business", "tags": ["qr","","","","",""], "uri": "https://github.com/neocotic/qrious", "comment": ""},
     {"name": "CSS grid tuts", "cat": "tech", "tags": ["grid","","","","",""], "uri": "https://gridbyexample.com/", "comment": ""},
     {"name": "parallax", "cat": "creative", "tags": ["parallax","","","","",""], "uri": "https://codepen.io/caseycallis/pen/pwEWxo", "comment": ""},

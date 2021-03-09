@@ -171,6 +171,7 @@ href="#a11y-skipmain">Skip to Main Content</a>
         letter-spacing: -.008em;
         background-color: #edba08;
     }
+    .l-favs article div .fav__tag span:contains("video"){background-color: red !important;}
 </style>
 <section class="pfmf-grid pfmf-grid__100 readable__doc">
     <div>
@@ -191,6 +192,7 @@ href="#a11y-skipmain">Skip to Main Content</a>
                     aFavs.forEach((fav)=>{
                         if( fav.cat === "tech"){
                             let sTags = "";
+                            if( fav.uri.toLowerCase().indexOf("youtube") !== -1 ) fav.tags.push("video");
                             fav.tags.forEach(( tag )=>{
                                 if( tag ) sTags += `<span>${ tag }</span>`;
                             });
