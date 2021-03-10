@@ -50,11 +50,12 @@ tags:
     .l-favs article div .fav__tag span.fav-tag--3d      {background-color: #45B5AA;}
     .l-favs article div .fav__tag span.fav-tag--dataviz {background-color: #9BB7D4;}
 
-    .l-favs article div.fav-cat--tech {background-color: #9BB7D4;}
-    .l-favs article div.fav-cat--creative {background-color: #C74375;}
+    .l-favs article div.fav-cat--tech {background-color: #009473;}
+    .l-favs article div.fav-cat--creative {background-color: #E2583E;}
     .l-favs article div.fav-cat--privacy {background-color: #BF1932;}
-    .l-favs article div.fav-cat--sass {background-color: #7BC4C4;}
+    .l-favs article div.fav-cat--saas {background-color: #378090;}
     .l-favs article div.fav-cat--api {background-color: #E2583E;}
+    .l-favs article div.fav-cat--a55 {background-color: #cb7800; }
 </style>
 <section class="pfmf-grid pfmf-grid__100 readable__doc">
     <div>
@@ -72,10 +73,12 @@ tags:
             let showFavs = ( ( _d, _sQ )=>{
                 let elFavs = _d.querySelector( _sQ );
                 if( elFavs && aFavs ){
+                    aFavs = aFavs.sort((a, b) => ((a.cat+a.name) > (b.cat+b.name)) ? 1 : -1)
                     aFavs.forEach((fav)=>{
-                        if( fav.cat !== "Qtech"){
+                        if( fav.cat === "tech"){
                             let sTags = "";
-                            if( fav.uri.toLowerCase().indexOf("youtube") !== -1 ) fav.tags.push("video");
+                            if( fav.uri.toLowerCase().indexOf("youtu") !== -1 ) fav.tags.push("video");
+                            fav.tags = fav.tags.sort();
                             fav.tags.forEach(( tag )=>{
                                 tag = tag.toLowerCase();
                                 if( tag ) sTags += `<span class="fav-tag--${ tag }">${ tag }</span>`;
