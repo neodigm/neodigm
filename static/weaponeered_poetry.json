@@ -70,7 +70,7 @@
     {"name": "Comic", "cat": "creative", "tags": ["comic","","","","",""], "uri": "https://www.xkcd.com/", "comment": "Comic xkcd"},
     {"name": "Haiku Gen", "cat": "creative", "tags": ["poetry","","","","",""], "uri": "https://www.poem-generator.org.uk/?i=z3jbw2u", "comment": "Bug with the word SELECT or some random word"},
     {"name": "Compress audio", "cat": "creative", "tags": ["audio","","","","",""], "uri": "http://www.mp3louder.com/", "comment": "be careful to select “decrease volume” (8db)"},
-    {"name": "Electron to MS store", "cat": "tech", "tags": ["","","","","",""], "uri": "https://blogs.msdn.microsoft.com/appconsult/2017/03/14/convert-your-electron-app-using-the-desktop-bridge/", "comment": ""},
+    {"name": "Electron to MS store", "cat": "tech", "tags": ["js","ms","electron","git","",""], "uri": "https://blogs.msdn.microsoft.com/appconsult/2017/03/14/convert-your-electron-app-using-the-desktop-bridge/", "comment": ""},
     {"name": "Submit Web 2 Lead to blank iFrame", "cat": "saas", "tags": ["sfdc","w2l","crm","js","",""], "uri": "https://www.adminbooster.com/blog/hacking_web2lead_web2case", "comment": ""},
     {"name": "Create NPM package", "cat": "tech", "tags": ["js","npm","","","",""], "uri": "https://medium.freecodecamp.org/how-to-make-a-beautiful-tiny-npm-package-and-publish-it-2881d4307f78", "comment": ""},
     {"name": "Easy node.js elephant article", "cat": "saas", "tags": ["js","","","","",""], "uri": "", "comment": ""},
