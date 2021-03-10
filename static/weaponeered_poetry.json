@@ -91,7 +91,7 @@
     {"name": "Seo keyword multiplier", "cat": "saas", "tags": ["seo","martech","","","",""], "uri": "https://cleverclicks.com.au/resources/keyword-multiplier-tool-seo-ppc/", "comment": "Seo keyword multiplier"},
     {"name": "Hidden text", "cat": "a55", "tags": ["privacy","","","","",""], "uri": "https://www.umpox.com/zero-width-detection/", "comment": "akult"},
     {"name": "Web-based tooling for BPMN", "cat": "saas", "tags": ["bpmn","","","","",""], "uri": "https://bpmn.io/", "comment": "Use bpmn-js to display BPMN 2.0 diagrams on your website."},
-    {"name": "Server-side Tag Manager", "cat": "saas", "tags": ["","","","","",""], "uri": "https://developers.google.com/tag-manager/serverside/intro", "comment": "Server containers use the same tag, trigger, and variable model that you're used to, while also providing new tools that allow you to measure user activity wherever it happen"},
+    {"name": "Server-side Tag Manager", "cat": "saas", "tags": ["tag","martech","","","",""], "uri": "https://developers.google.com/tag-manager/serverside/intro", "comment": "Server containers use the same tag, trigger, and variable model that you're used to, while also providing new tools that allow you to measure user activity wherever it happen"},
     {"name": "Gamified auth", "cat": "saas", "tags": ["privacy","","","","",""], "uri": "https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8476573", "comment": "Chess akult"},
     {"name": "gif maker", "cat": "creative", "tags": ["gif","","","","",""], "uri": "https://giphy.com/create/gifmaker", "comment": "amination gif"},
     {"name": "webassembly via typescript", "cat": "tech", "tags": ["js","ts","wasm","","",""], "uri": "https://www.youtube.com/watch?v=3KuDtqFxvRg", "comment": "ts wasm AssemblyScript "},
