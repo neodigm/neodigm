@@ -168,7 +168,7 @@
     {"name": "vue.js micro", "cat": "tech", "tags": ["js","vue","","","",""], "uri": "https://medium.com/@borvelt/micro-frontend-vue-js-435d9458218c", "comment": "Micro Frontend vue stack"},
     {"name": "patent", "cat": "saas", "tags": ["ip","","","","",""], "uri": "https://www.lens.org/lens/", "comment": ""},
     {"name": "FPO RSS", "cat": "saas", "tags": ["rss","","","","",""], "uri": "http://www.freepatentsonline.com/rssfeed.html", "comment": ""},
-    {"name": "css illustration cabinet", "cat": "creative", "tags": ["","","","","",""], "uri": "https://codepen.io/lynnandtonic/full/LYGjqOo?utm_source=gamedevjsweekly&utm_medium=email", "comment": "css-tricks"},
+    {"name": "css illustration cabinet", "cat": "creative", "tags": ["css","","","","",""], "uri": "https://codepen.io/lynnandtonic/full/LYGjqOo?utm_source=gamedevjsweekly&utm_medium=email", "comment": "css-tricks"},
     {"name": "Illustration awards", "cat": "creative", "tags": ["creative","","","","",""], "uri": "https://3x3mag.com/", "comment": ""},
     {"name": "golfed js ani", "cat": "tech", "tags": ["JS","anim","","","",""], "uri": "https://www.dwitter.net/about", "comment": "generative js canvas"},
     {"name": "portf", "cat": "creative", "tags": ["3d","portf","anim","","",""], "uri": "https://mgz.me/", "comment": ""},
