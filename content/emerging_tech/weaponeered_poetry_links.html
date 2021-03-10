@@ -45,7 +45,16 @@ tags:
         letter-spacing: -.008em;
         background-color: #edba08;
     }
-    .l-favs article div .fav__tag span:contains("video"){background-color: red !important;}
+    .l-favs article div .fav__tag span.fav-tag--video   {background-color: #DD4124;}
+    .l-favs article div .fav__tag span.fav-tag--js      {background-color: #B163A3;}
+    .l-favs article div .fav__tag span.fav-tag--3d      {background-color: #45B5AA;}
+    .l-favs article div .fav__tag span.fav-tag--dataviz {background-color: #9BB7D4;}
+
+    .l-favs article div.fav-cat--tech {background-color: #9BB7D4;}
+    .l-favs article div.fav-cat--creative {background-color: #C74375;}
+    .l-favs article div.fav-cat--privacy {background-color: #BF1932;}
+    .l-favs article div.fav-cat--sass {background-color: #7BC4C4;}
+    .l-favs article div.fav-cat--api {background-color: #E2583E;}
 </style>
 <section class="pfmf-grid pfmf-grid__100 readable__doc">
     <div>
@@ -64,15 +73,16 @@ tags:
                 let elFavs = _d.querySelector( _sQ );
                 if( elFavs && aFavs ){
                     aFavs.forEach((fav)=>{
-                        if( fav.cat === "tech"){
+                        if( fav.cat !== "Qtech"){
                             let sTags = "";
                             if( fav.uri.toLowerCase().indexOf("youtube") !== -1 ) fav.tags.push("video");
                             fav.tags.forEach(( tag )=>{
-                                if( tag ) sTags += `<span>${ tag }</span>`;
+                                tag = tag.toLowerCase();
+                                if( tag ) sTags += `<span class="fav-tag--${ tag }">${ tag }</span>`;
                             });
                             let sMU = `
                             <article>
-                                <div><p><a class="h-link" target="_blank" rel="noopener" href="${fav.uri}">${fav.name}</a></p></div>
+                                <div class="fav-cat--${fav.cat}"><p><a class="h-link" target="_blank" rel="noopener" href="${fav.uri}">${fav.name}</a></p></div>
                                 <div><p class="fav__tag">${sTags}</p></div>
                                 <div class="fav__comment"><p>${fav.comment}</p></div>
                             </article>
