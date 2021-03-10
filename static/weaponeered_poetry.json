@@ -82,7 +82,7 @@
     {"name": "Password Strength Visualizations", "cat": "tech", "tags": ["privacy","","","","",""], "uri": "https://www.ei.rub.de/media/mobsec/veroeffentlichungen/2018/07/02/way2018-final10.pdf", "comment": "Strength meters can help users to choose more secure passwords by representing strength via easy to understand textual and visual feedback."},
     {"name": "Sound sync in AE CSS6", "cat": "creative", "tags": ["aep","ae","","","",""], "uri": "https://www.youtube.com/watch?v=u3Bxvn-bnLY", "comment": ""},
     {"name": "Nicks press release draft", "cat": "saas", "tags": ["copy","","","","",""], "uri": "https://docs.google.com/document/d/1G0gSJB0-hEwfhY31KlyiUbpttJuh9I8jI4H-o17yS5s/edit?ts=5b5249f0", "comment": ""},
-    {"name": "Get source code from an electron app", "cat": "tech", "tags": ["","","","","",""], "uri": "https://medium.com/how-to-electron/how-to-get-source-code-of-any-electron-application-cbb5c7726c37", "comment": ""},
+    {"name": "Get source code from an electron app", "cat": "tech", "tags": ["js","git","electron","","",""], "uri": "https://medium.com/how-to-electron/how-to-get-source-code-of-any-electron-application-cbb5c7726c37", "comment": ""},
     {"name": "Our pinterest", "cat": "a55", "tags": ["social","","","","",""], "uri": "https://www.pinterest.com/source/arcanus55.com/", "comment": ""},
     {"name": "fancy qr codes", "cat": "saas", "tags": ["","","","","",""], "uri": "https://www.qrpicture.com/", "comment": ""},
     {"name": "What Web Can Do", "cat": "tech", "tags": ["js","api","","","",""], "uri": "https://whatwebcando.today/", "comment": "Native api browser"},
