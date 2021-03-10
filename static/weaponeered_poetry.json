@@ -84,7 +84,7 @@
     {"name": "Nicks press release draft", "cat": "saas", "tags": ["copy","","","","",""], "uri": "https://docs.google.com/document/d/1G0gSJB0-hEwfhY31KlyiUbpttJuh9I8jI4H-o17yS5s/edit?ts=5b5249f0", "comment": ""},
     {"name": "Get source code from an electron app", "cat": "tech", "tags": ["js","git","electron","privacy","",""], "uri": "https://medium.com/how-to-electron/how-to-get-source-code-of-any-electron-application-cbb5c7726c37", "comment": ""},
     {"name": "Our pinterest", "cat": "a55", "tags": ["social","","","","",""], "uri": "https://www.pinterest.com/source/arcanus55.com/", "comment": ""},
-    {"name": "fancy qr codes", "cat": "saas", "tags": ["","","","","",""], "uri": "https://www.qrpicture.com/", "comment": ""},
+    {"name": "fancy qr codes", "cat": "saas", "tags": ["qr","","","","",""], "uri": "https://www.qrpicture.com/", "comment": ""},
     {"name": "What Web Can Do", "cat": "tech", "tags": ["js","api","","","",""], "uri": "https://whatwebcando.today/", "comment": "Native api browser"},
     {"name": "Google Image opt", "cat": "tech", "tags": ["js","wasm","","","",""], "uri": "https://squoosh.app/", "comment": ""},
     {"name": "JS audio lib", "cat": "tech", "tags": ["js","","","","",""], "uri": "https://howlerjs.com/", "comment": "audio sprites mp3"},
