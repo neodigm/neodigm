@@ -210,12 +210,12 @@
     {"name": "Build a Chrome Extension", "cat": "tech", "tags": ["js","api","privacy","","",""], "uri": "https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#connection-based_messaging", "comment": "Mozilla Connection-based messaging"},
     {"name": "aws perspective", "cat": "tech", "tags": ["dataviz","aws","","","",""], "uri": "https://aws.amazon.com/solutions/implementations/aws-perspective/", "comment": ""},
     {"name": "three.js network graph", "cat": "tech", "tags": ["js","graph","3d","","",""], "uri": "https://vasturiano.github.io/3d-force-graph/example/text-links/", "comment": ""},
-    {"name": "gmail api", "cat": "tech", "tags": ["","","","","",""], "uri": "https://developers.google.com/gmail", "comment": ""},
-    {"name": "gmail api js client", "cat": "tech", "tags": ["","","","","",""], "uri": "https://github.com/google/google-api-javascript-client/tree/master/docs", "comment": ""},
-    {"name": "gmail api schema", "cat": "tech", "tags": ["","","","","",""], "uri": "https://gmail.googleapis.com/$discovery/rest?version=v1", "comment": ""},
-    {"name": "cloudasta", "cat": "a55", "tags": ["","","","","",""], "uri": "https://migration.cloudasta.com/?__hstc=20192487.7dd241b6fe31c549bc53ebcdbd7aa496.1613759439333.1613759439333.1613759439333.1&__hssc=20192487.1.1613759439333&__hsfp=3703010909", "comment": ""},
-    {"name": "cloudasta attribution", "cat": "a55", "tags": ["","","","","",""], "uri": "https://migration.cloudasta.com/pages/attribution", "comment": ""},
-    {"name": "cloudasta terms", "cat": "a55", "tags": ["","","","","",""], "uri": "https://cloudasta.com/terms-and-conditions/", "comment": ""},
-    {"name": "email reply saas video", "cat": "a55", "tags": ["","","","","",""], "uri": "https://www.youtube.com/watch?v=4ZcS-WkEA5M&t=435s", "comment": "This is a really good view at how they layout the information"},
-    {"name": "delete me", "cat": "a55", "tags": ["","","","","",""], "uri": "https://cloudasta.com/terms-and-conditions/", "comment": "cat = tech, creative, privacy, sass, api, a55 (!design) | tags = js, 3d, dataviz"}
+    {"name": "gmail api", "cat": "tech", "tags": ["js","","","","",""], "uri": "https://developers.google.com/gmail", "comment": ""},
+    {"name": "gmail api js client", "cat": "tech", "tags": ["js","","","","",""], "uri": "https://github.com/google/google-api-javascript-client/tree/master/docs", "comment": ""},
+    {"name": "gmail api schema", "cat": "tech", "tags": ["js","","","","",""], "uri": "https://gmail.googleapis.com/$discovery/rest?version=v1", "comment": ""},
+    {"name": "cloudasta", "cat": "a55", "tags": ["js","","","","",""], "uri": "https://migration.cloudasta.com/?__hstc=20192487.7dd241b6fe31c549bc53ebcdbd7aa496.1613759439333.1613759439333.1613759439333.1&__hssc=20192487.1.1613759439333&__hsfp=3703010909", "comment": ""},
+    {"name": "cloudasta attribution", "cat": "a55", "tags": ["js","","","","",""], "uri": "https://migration.cloudasta.com/pages/attribution", "comment": ""},
+    {"name": "cloudasta terms", "cat": "a55", "tags": ["js","","","","",""], "uri": "https://cloudasta.com/terms-and-conditions/", "comment": ""},
+    {"name": "email reply saas video", "cat": "a55", "tags": ["js","","","","",""], "uri": "https://www.youtube.com/watch?v=4ZcS-WkEA5M&t=435s", "comment": "This is a really good view at how they layout the information"},
+    {"name": "delete me", "cat": "a55", "tags": ["a55","","","","",""], "uri": "https://cloudasta.com/terms-and-conditions/", "comment": "cat = tech, creative, privacy, sass, api, a55 (!design) | tags = js, 3d, dataviz"}
     ]
