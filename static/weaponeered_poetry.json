@@ -97,7 +97,7 @@
     {"name": "webassembly via typescript", "cat": "tech", "tags": ["js","ts","wasm","","",""], "uri": "https://www.youtube.com/watch?v=3KuDtqFxvRg", "comment": "ts wasm AssemblyScript "},
     {"name": "simple icons", "cat": "creative", "tags": ["us","svg","","","",""], "uri": "https://simpleicons.org/", "comment": "svg icons social"},
     {"name": "animated url hash emoji", "cat": "tech", "tags": ["js","","","","",""], "uri": "http://matthewrayfield.com/articles/animating-urls-with-javascript-and-emojis/#%F0%9F%8C%91", "comment": "emoji loop anim url omnibox"},
-    {"name": "anamorphic", "cat": "creative", "tags": ["","","","","",""], "uri": "https://io9.gizmodo.com/5928448/the-art-of-anamorphic-illusions?tag=optical-illusions", "comment": ""},
+    {"name": "anamorphic", "cat": "creative", "tags": ["anim","","","","",""], "uri": "https://io9.gizmodo.com/5928448/the-art-of-anamorphic-illusions?tag=optical-illusions", "comment": ""},
     {"name": "svg canvas paper.js creative", "cat": "creative", "tags": ["svg","js","","","",""], "uri": "http://paperjs.org/", "comment": "mike chambers"},
     {"name": "RegEx online", "cat": "tech", "tags": ["js","regex","","","",""], "uri": "https://regexr.com/", "comment": "regular expression online"},
     {"name": "CSS Grid Generator", "cat": "tech", "tags": ["css","","","","",""], "uri": "https://www.layoutit.com/grid", "comment": "online css grid"},
