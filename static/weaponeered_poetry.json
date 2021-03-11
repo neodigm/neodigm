@@ -8,7 +8,7 @@
     {"name": "JS QR codes", "cat": "saas", "tags": ["qr","js","","","",""], "uri": "https://github.com/neocotic/qrious", "comment": "Pure JavaScript library for QR code generation using canvas"},
     {"name": "CSS grid tuts", "cat": "tech", "tags": ["grid","","","","",""], "uri": "https://gridbyexample.com/", "comment": "A collection of examples, video and other information to help you learn CSS Grid Layout"},
     {"name": "parallax", "cat": "creative", "tags": ["parallax","","","","",""], "uri": "https://codepen.io/caseycallis/pen/pwEWxo", "comment": "Parallax Grid"},
-    {"name": "parallax", "cat": "creative", "tags": ["parallax","","","","",""], "uri": "https://codepen.io/vavik96/pen/oxzNxX", "comment": ""},
+    {"name": "parallax", "cat": "creative", "tags": ["parallax","","","","",""], "uri": "https://codepen.io/vavik96/pen/oxzNxX", "comment": "Parallax Scrolling parallax.js"},
     {"name": "Cool parallax js lib", "cat": "creative", "tags": ["parallax","js","","","",""], "uri": "http://matthew.wagerfield.com/parallax/", "comment": ""},
     {"name": "Cool parallax chronilogical ux", "cat": "creative", "tags": ["parallax","resume","portfolio","","",""], "uri": "http://www.iancoyle.com/", "comment": ""},
     {"name": "Cool circle hover effects", "cat": "creative", "tags": ["css","","","","",""], "uri": "https://codepen.io/shaman_tito/pen/snFpk", "comment": ""},
