@@ -215,5 +215,7 @@
     {"name": "cloudasta attribution", "cat": "a55", "tags": ["js","","","","",""], "uri": "https://migration.cloudasta.com/pages/attribution", "comment": ""},
     {"name": "cloudasta terms", "cat": "a55", "tags": ["js","","","","",""], "uri": "https://cloudasta.com/terms-and-conditions/", "comment": ""},
     {"name": "email reply saas video", "cat": "a55", "tags": ["js","","","","",""], "uri": "https://www.youtube.com/watch?v=4ZcS-WkEA5M&t=435s", "comment": "This is a really good view at how they layout the information"},
+        {"name": "web components", "cat": "tech", "tags": ["js","css","dom","components","",""], "uri": "https://www.webcomponents.org/introduction", "comment": "Web components are a set of web platform APIs that allow you to create new custom, reusable, encapsulated HTML tags to use in web pages and web apps"},
+
     {"name": "delete me", "cat": "a55", "tags": ["a55","","","","",""], "uri": "https://cloudasta.com/terms-and-conditions/", "comment": "cat = tech, creative, privacy, sass, api, a55 (!design) | tags = js, 3d, dataviz"}
     ]
