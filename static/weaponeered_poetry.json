@@ -20,7 +20,7 @@
     {"name": "torn", "cat": "a55", "tags": ["torrent","","","","",""], "uri": "https://www.limetorrents.cc", "comment": ""},
     {"name": "Inspector Spacetime", "cat": "creative", "tags": ["aep","css","ae","","",""], "uri": "https://google.github.io/inspectorspacetime/", "comment": "Inject motion specs into reference video to become an engineer's best friend"},
     {"name": "VueJS cheat sheet", "cat": "tech", "tags": ["js","vue","","","",""], "uri": "https://vuejs-tips.github.io/cheatsheet/", "comment": "Vue Cheat Sheet"},
-    {"name": "Sketchfab 3D/VR API", "cat": "tech", "tags": ["3d","","","","",""], "uri": "https://sketchfab.com/developers/viewer", "comment": ""},
+    {"name": "Sketchfab 3D/VR API", "cat": "tech", "tags": ["3d","api","","","",""], "uri": "https://sketchfab.com/developers/viewer", "comment": "Sketchfab Viewer"},
     {"name": "Sketchfab 3D/VR player C7d018c1605e", "cat": "tech", "tags": ["3d","","","","",""], "uri": "https://sketchfab.com/", "comment": ""},
     {"name": "CSS gradiant generator", "cat": "creative", "tags": ["css","gradiant","","","",""], "uri": "https://gradient.world/", "comment": ""},
     {"name": "royalty free photos", "cat": "creative", "tags": ["photos","stock","","","",""], "uri": "https://unsplash.com/", "comment": ""},
