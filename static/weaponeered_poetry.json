@@ -236,194 +236,101 @@
 {"name": "mattdowdy.online", "cat": "personal web", "tags": ["music","candles","writing","","","","",""], "uri": "http://mattdowdy.online/", "comment": "mattdowdy.online"},
 {"name": "lliu.glitch.me", "cat": "personal web", "tags": ["design","","","","","","",""], "uri": "https://lliu.glitch.me/", "comment": "lliu.glitch.me"},
 {"name": "self-noise.net", "cat": "personal web", "tags": ["sound","environment","journal","","","","",""], "uri": "http://self-noise.net/", "comment": "self-noise.net"},
-
-{"name": "agbero.dev", "cat": "personal web", "tags": ["developer","thoughts","writing","not"], "uri": "https://agbero.dev", "comment": "agbero.dev"},              
-
-{"name": "lartu.net/~lartu", "cat": "personal web", "tags": ["game","design","softwa"], "uri": "https://lartu.net/~lartu/", "comment": "lartu.net/~lartu"},              
-
-{"name": "caeth.net", "cat": "personal web", "tags": ["games","desi"], "uri": "https://caeth.net/", "comment": "caeth.net"},              
-
-{"name": "munjiwoo.com", "cat": "personal web", "tags": ["poem","journ"], "uri": "http://munjiwoo.com", "comment": "munjiwoo.com"},              
-
-{"name": "maxbittker.com", "cat": "personal web", "tags": ["programmer","design"], "uri": "https://maxbittker.com/", "comment": "maxbittker.com"},              
-
-{"name": "mmmo.info", "cat": "personal web", "tags": ["artist","poet"], "uri": "http://mmmo.info", "comment": "mmmo.info"},              
-
-{"name": "justus.ws/misc/housewarming-gifts/ ", "cat": "personal web", "tags": ["community","gifts","collections","things","lin"], "uri": "https://justus.ws/misc/housewarming-gifts/ ", "comment": "justus.ws/misc/housewarming-gifts/ "},              
-
-{"name": "good.phantomwifi.com", "cat": "personal web", "tags": ["drawing","asc"], "uri": "https://good.phantomwifi.com/", "comment": "good.phantomwifi.com"},              
-
-{"name": "pond.computer", "cat": "personal web", "tags": ["activism","directory","libra"], "uri": "https://pond.computer", "comment": "pond.computer"},              
-
-{"name": "laurelschwulst.com", "cat": "personal web", "tags": ["artist","designer","wi"], "uri": "https://laurelschwulst.com/", "comment": "laurelschwulst.com"},              
-
-{"name": "evy.garden", "cat": "personal web", "tags": ["lists","thoughts","notes","mus"], "uri": "https://evy.garden/", "comment": "evy.garden"},              
-
-{"name": "coleoptera.neocities.org", "cat": "personal web", "tags": ["games","writi"], "uri": "https://coleoptera.neocities.org/", "comment": "coleoptera.neocities.org"},              
-
-{"name": "legdept.phantomwifi.com", "cat": "personal web", "tags": ["story","gifs","big te"], "uri": "https://legdept.phantomwifi.com/", "comment": "legdept.phantomwifi.com"},              
-
-{"name": "paeneultima.space", "cat": "personal web", "tags": ["journal","thoughts","writi"], "uri": "https://paeneultima.space", "comment": "paeneultima.space"},              
-
-{"name": "reid.cat", "cat": "personal web", "tags": ["art","mus"], "uri": "https://reid.cat", "comment": "reid.cat"},              
-
-{"name": "mindyseu.com", "cat": "personal web", "tags": ["designer","new yo"], "uri": "https://mindyseu.com/", "comment": "mindyseu.com"},              
-
-{"name": "dantaeyoung.com", "cat": "personal web", "tags": ["designer","developer","educat"], "uri": "https://dantaeyoung.com/", "comment": "dantaeyoung.com"},              
-
-{"name": "franz.hamburg", "cat": "personal web", "tags": ["computer","science","programmi"], "uri": "https://franz.hamburg", "comment": "franz.hamburg"},              
-
-{"name": "argir.io", "cat": "personal web", "tags": ["designer","develop"], "uri": "http://argir.io", "comment": "argir.io"},              
-
-{"name": "johnprovencher.com", "cat": "personal web", "tags": ["designer","developer","educat"], "uri": "https://johnprovencher.com/", "comment": "johnprovencher.com"},              
-
-{"name": "lander.blue", "cat": "personal web", "tags": ["journal","games","ht"], "uri": "https://lander.blue/", "comment": "lander.blue"},              
-
-{"name": "olivernash.org", "cat": "personal web", "tags": ["math","physics","codi"], "uri": "http://olivernash.org", "comment": "olivernash.org"},              
-
-{"name": "middlepot.com", "cat": "personal web", "tags": ["blog","portfolio","self","care","crafts","aesthet"], "uri": "https://middlepot.com", "comment": "middlepot.com"},              
-
+{"name": "agbero.dev", "cat": "personal web", "tags": ["developer","thoughts","writing","not"], "uri": "https://agbero.dev", "comment": "agbero.dev"},
+{"name": "lartu.net/~lartu", "cat": "personal web", "tags": ["game","design","softwa"], "uri": "https://lartu.net/~lartu/", "comment": "lartu.net/~lartu"},
+{"name": "caeth.net", "cat": "personal web", "tags": ["games","desi"], "uri": "https://caeth.net/", "comment": "caeth.net"},
+{"name": "munjiwoo.com", "cat": "personal web", "tags": ["poem","journ"], "uri": "http://munjiwoo.com", "comment": "munjiwoo.com"},
+{"name": "maxbittker.com", "cat": "personal web", "tags": ["programmer","design"], "uri": "https://maxbittker.com/", "comment": "maxbittker.com"},
+{"name": "mmmo.info", "cat": "personal web", "tags": ["artist","poet"], "uri": "http://mmmo.info", "comment": "mmmo.info"},
+{"name": "justus.ws/misc/housewarming-gifts/ ", "cat": "personal web", "tags": ["community","gifts","collections","things","lin"], "uri": "https://justus.ws/misc/housewarming-gifts/ ", "comment": "justus.ws/misc/housewarming-gifts/ "},
+{"name": "good.phantomwifi.com", "cat": "personal web", "tags": ["drawing","asc"], "uri": "https://good.phantomwifi.com/", "comment": "good.phantomwifi.com"},
+{"name": "pond.computer", "cat": "personal web", "tags": ["activism","directory","libra"], "uri": "https://pond.computer", "comment": "pond.computer"},
+{"name": "laurelschwulst.com", "cat": "personal web", "tags": ["artist","designer","wi"], "uri": "https://laurelschwulst.com/", "comment": "laurelschwulst.com"},
+{"name": "evy.garden", "cat": "personal web", "tags": ["lists","thoughts","notes","mus"], "uri": "https://evy.garden/", "comment": "evy.garden"},
+{"name": "coleoptera.neocities.org", "cat": "personal web", "tags": ["games","writi"], "uri": "https://coleoptera.neocities.org/", "comment": "coleoptera.neocities.org"},
+{"name": "legdept.phantomwifi.com", "cat": "personal web", "tags": ["story","gifs","big te"], "uri": "https://legdept.phantomwifi.com/", "comment": "legdept.phantomwifi.com"},
+{"name": "paeneultima.space", "cat": "personal web", "tags": ["journal","thoughts","writi"], "uri": "https://paeneultima.space", "comment": "paeneultima.space"},
+{"name": "reid.cat", "cat": "personal web", "tags": ["art","mus"], "uri": "https://reid.cat", "comment": "reid.cat"},
+{"name": "mindyseu.com", "cat": "personal web", "tags": ["designer","new yo"], "uri": "https://mindyseu.com/", "comment": "mindyseu.com"},
+{"name": "dantaeyoung.com", "cat": "personal web", "tags": ["designer","developer","educat"], "uri": "https://dantaeyoung.com/", "comment": "dantaeyoung.com"},
+{"name": "franz.hamburg", "cat": "personal web", "tags": ["computer","science","programmi"], "uri": "https://franz.hamburg", "comment": "franz.hamburg"},
+{"name": "argir.io", "cat": "personal web", "tags": ["designer","develop"], "uri": "http://argir.io", "comment": "argir.io"},
+{"name": "johnprovencher.com", "cat": "personal web", "tags": ["designer","developer","educat"], "uri": "https://johnprovencher.com/", "comment": "johnprovencher.com"},
+{"name": "lander.blue", "cat": "personal web", "tags": ["journal","games","ht"], "uri": "https://lander.blue/", "comment": "lander.blue"},
+{"name": "olivernash.org", "cat": "personal web", "tags": ["math","physics","codi"], "uri": "http://olivernash.org", "comment": "olivernash.org"},
+{"name": "middlepot.com", "cat": "personal web", "tags": ["blog","portfolio","self","care","crafts","aesthet"], "uri": "https://middlepot.com", "comment": "middlepot.com"},
 {"name": "justus.ws", "cat": "personal web", "tags": ["hypertext","digital","garden","cozy","technology"], "uri": "https://justus.ws", "comment": "justus.ws"},
-{"name": "umhi.xyz/sean", "cat": "personal web", "tags": ["diary","li"], "uri": "https://umhi.xyz/sean/", "comment": "umhi.xyz/sean"},              
-
-{"name": "litepalette.github.io", "cat": "personal web", "tags": ["blog","essays","syste"], "uri": "https://litepalette.github.io/", "comment": "litepalette.github.io"},              
-
-{"name": "archivings.net", "cat": "personal web", "tags": ["index","archiving","fashi"], "uri": "https://archivings.net/", "comment": "archivings.net"},              
-
-{"name": "sophiefields.com", "cat": "personal web", "tags": ["artist","drawing","animation","performan"], "uri": "https://sophiefields.com/", "comment": "sophiefields.com"},              
-
-{"name": "vasilis.nl", "cat": "personal web", "tags": ["writing","design","html","accessibili"], "uri": "https://vasilis.nl/", "comment": "vasilis.nl"},              
-
-{"name": "vhsportraits.com", "cat": "personal web", "tags": ["art","video","portrait","v"], "uri": "https://vhsportraits.com/", "comment": "vhsportraits.com"},              
-
-{"name": "sheafitz.com", "cat": "personal web", "tags": ["artist","designer","writ"], "uri": "http://sheafitz.com", "comment": "sheafitz.com"},              
-
-{"name": "site.transbienne.club/garden.html", "cat": "personal web", "tags": ["garden","mixtapes","writing","explorati"], "uri": "https://site.transbienne.club/garden.html", "comment": "site.transbienne.club/garden.html"},              
-
-{"name": "tobyshorin.com", "cat": "personal web", "tags": ["designer","writer","research"], "uri": "https://tobyshorin.com", "comment": "tobyshorin.com"},              
-
-{"name": "sadgrl.online", "cat": "personal web", "tags": ["internet","nostalgia","writing","resources","links"], "uri": "https://sadgrl.online", "comment": "sadgrl.online"},              
-{"name": "jwhgd.co", "cat": "personal web", "tags": ["design","portfolio",""], "uri": "http://jwhgd.co", "comment": "jwhgd.co"},              
-
-{"name": "gwern.net", "cat": "personal web", "tags": ["psychology","statistics","technolo"], "uri": "https://gwern.net", "comment": "gwern.net"},              
-
-{"name": "zoebrezsny.com", "cat": "personal web", "tags": ["poetry",""], "uri": "https://zoebrezsny.com/", "comment": "zoebrezsny.com"},              
-
-{"name": "marceldochamp.net", "cat": "personal web", "tags": ["artist","researcher","cod"], "uri": "https://marceldochamp.net/", "comment": "marceldochamp.net"},              
-
-{"name": "weiweihsu.com", "cat": "personal web", "tags": ["weeknotes","comic","log","rolod"], "uri": "http://weiweihsu.com", "comment": "weiweihsu.com"},              
-
-{"name": "lizas.kitchen", "cat": "personal web", "tags": ["cooking","music","a"], "uri": "http://lizas.kitchen/", "comment": "lizas.kitchen"},              
-
-{"name": "maya.land", "cat": "personal web", "tags": ["culture","crafts","aesthetic","link","blog","te"], "uri": "https://maya.land/", "comment": "maya.land"},              
-
-{"name": "teeaze.world", "cat": "personal web", "tags": ["maximal","designer","3D","arti"], "uri": "http://teeaze.world", "comment": "teeaze.world"},              
-
-{"name": "obshagce.gamemaking.tools", "cat": "personal web", "tags": ["games","framework","ht"], "uri": "https://obshagce.gamemaking.tools/", "comment": "obshagce.gamemaking.tools"},              
-
-{"name": "benjamingood.info", "cat": "personal web", "tags": ["architecture","words","thin"], "uri": "https://benjamingood.info/", "comment": "benjamingood.info"},              
-
-{"name": "tilde.town/~troido", "cat": "personal web", "tags": ["ascii","home","til"], "uri": "http://tilde.town/~troido/", "comment": "tilde.town/~troido"},              
-
-{"name": "pixouls.github.io", "cat": "personal web", "tags": ["art","care","too"], "uri": "https://pixouls.github.io/", "comment": "pixouls.github.io"},              
-
-{"name": "michellelin.co", "cat": "personal web", "tags": ["story","animation","gard"], "uri": "http://michellelin.co/", "comment": "michellelin.co"},              
-
-{"name": "laurengraycar.com", "cat": "personal web", "tags": ["design","typograp"], "uri": "https://laurengraycar.com/", "comment": "laurengraycar.com"},              
-
-{"name": "good.phantomwifi.com/alone.html", "cat": "personal web", "tags": ["view","gradie"], "uri": "https://good.phantomwifi.com/alone.html", "comment": "good.phantomwifi.com/alone.html"},              
-
-{"name": "jaltera.xyz", "cat": "personal web", "tags": ["designer","arti"], "uri": "http://jaltera.xyz", "comment": "jaltera.xyz"},              
-
-{"name": "alerithe.github.io", "cat": "personal web", "tags": ["develop"], "uri": "https://alerithe.github.io/", "comment": "alerithe.github.io"},              
-
-{"name": "zeste.ee", "cat": "personal web", "tags": ["art","feelings","fo"], "uri": "http://zeste.ee", "comment": "zeste.ee"},              
-
-{"name": "monolesan.com", "cat": "personal web", "tags": ["artist","designer","AI","experiments","interactive"], "uri": "https://monolesan.com/", "comment": "monolesan.com"},              
-  
-{"name": "jake.surf", "cat": "personal web", "tags": ["developer","arti"], "uri": "http://jake.surf/", "comment": "jake.surf"},              
-
-{"name": "rahulshinde.com", "cat": "personal web", "tags": ["computer","artist","directo"], "uri": "https://rahulshinde.com/", "comment": "rahulshinde.com"},              
-
-{"name": "natehn.com", "cat": "personal web", "tags": ["blog","english","music","essays","not"], "uri": "https://natehn.com", "comment": "natehn.com"},              
-
-{"name": "simone.computer", "cat": "personal web", "tags": ["simone","computer","nostalgia","programming","piz"], "uri": "https://simone.computer", "comment": "simone.computer"},              
-
-{"name": "c-sadovnikov.com", "cat": "personal web", "tags": ["art","installation","craf"], "uri": "http://c-sadovnikov.com", "comment": "c-sadovnikov.com"},              
-
-{"name": "12xu.com", "cat": "personal web", "tags": ["websites","projects","arti"], "uri": "https://12xu.com/", "comment": "12xu.com"},              
-
-{"name": "juliatufts.com", "cat": "personal web", "tags": ["art","games","mus"], "uri": "http://juliatufts.com/", "comment": "juliatufts.com"},              
-
-{"name": "louisdesmet.be", "cat": "personal web", "tags": ["art","ascii","homepa"], "uri": "https://louisdesmet.be/", "comment": "louisdesmet.be"},              
-
-{"name": "jinwoochoi.com", "cat": "personal web", "tags": ["web","map","ind"], "uri": "https://jinwoochoi.com/", "comment": "jinwoochoi.com"},              
-
-{"name": "lainecalhoun.com", "cat": "personal web", "tags": ["crafts","a"], "uri": "http://lainecalhoun.com", "comment": "lainecalhoun.com"},              
-
-{"name": "pascalcobaltphone.com", "cat": "personal web", "tags": ["web","map","ind"], "uri": "https://pascalcobaltphone.com/", "comment": "pascalcobaltphone.com"},              
-
-{"name": "maxwelljoslyn.com", "cat": "personal web", "tags": ["chinese","translation","computers","indieweb","poet"], "uri": "https://maxwelljoslyn.com", "comment": "maxwelljoslyn.com"},              
-
-{"name": "eric.young.li", "cat": "personal web", "tags": ["designer","develop"], "uri": "https://eric.young.li/", "comment": "eric.young.li"},              
-
-{"name": "thedigitaldiarist.ca", "cat": "personal web", "tags": ["diary","writing","communication","lin"], "uri": "https://thedigitaldiarist.ca/", "comment": "thedigitaldiarist.ca"},              
-
-{"name": "yatu.xyz", "cat": "personal web", "tags": ["designer","artist","writ"], "uri": "https://yatu.xyz/", "comment": "yatu.xyz"},              
-
-{"name": "nicholasheskes.com/ ", "cat": "personal web", "tags": ["painting","drawing","art","writi"], "uri": "http://nicholasheskes.com/ ", "comment": "nicholasheskes.com/ "},              
-
-{"name": "bnjmnearl.eu", "cat": "personal web", "tags": ["designer","developer","writ"], "uri": "https://bnjmnearl.eu/", "comment": "bnjmnearl.eu"},              
-
-{"name": "maddybruster.com", "cat": "personal web", "tags": ["designer","new yo"], "uri": "https://maddybruster.com/", "comment": "maddybruster.com"},              
-
-{"name": "tsak.net", "cat": "personal web", "tags": ["photos","gi"], "uri": "https://tsak.net/", "comment": "tsak.net"},              
-
-{"name": "loom.sprig.site", "cat": "personal web", "tags": ["weaving","a"], "uri": "https://loom.sprig.site/", "comment": "loom.sprig.site"},              
-
-{"name": "coolguy.website", "cat": "personal web", "tags": ["blog","garden","how-"], "uri": "https://coolguy.website/", "comment": "coolguy.website"},              
-
-{"name": "jacobhall.net/links.html", "cat": "personal web", "tags": ["directory","lists","lin"], "uri": "https://jacobhall.net/links.html", "comment": "jacobhall.net/links.html"},              
-
-{"name": "me.phantomwifi.com", "cat": "personal web", "tags": ["blog","images","links","writing","ind"], "uri": "http://me.phantomwifi.com/", "comment": "me.phantomwifi.com"},              
-
-{"name": "maple.pet", "cat": "personal web", "tags": ["blog","lin"], "uri": "https://maple.pet/", "comment": "maple.pet"},              
-
-{"name": "redguts.com", "cat": "personal web", "tags": ["video","juggling","art","lin"], "uri": "https://redguts.com", "comment": "redguts.com"},              
-
-{"name": "eric-xia.com", "cat": "personal web", "tags": ["art","technology","new","med"], "uri": "https://eric-xia.com", "comment": "eric-xia.com"},              
-
-{"name": "lovelanguages.melaniehoff.com", "cat": "personal web", "tags": ["class","poetic computati"], "uri": "https://lovelanguages.melaniehoff.com/", "comment": "lovelanguages.melaniehoff.com"},              
-
-{"name": "rodrigofranco.com", "cat": "personal web", "tags": ["notes","lists","slow","w"], "uri": "https://rodrigofranco.com", "comment": "rodrigofranco.com"},              
-
-{"name": "onwardlyfaring.neocities.org", "cat": "personal web", "tags": ["links","questions","ma"], "uri": "https://onwardlyfaring.neocities.org/", "comment": "onwardlyfaring.neocities.org"},              
-
-{"name": "aaronstrick.com", "cat": "personal web", "tags": ["homepa"], "uri": "https://aaronstrick.com", "comment": "aaronstrick.com"},              
-
-{"name": "hi.phantomwifi.com", "cat": "personal web", "tags": ["blog","writi"], "uri": "https://hi.phantomwifi.com/", "comment": "hi.phantomwifi.com"},              
-
-{"name": "kickscondor.com", "cat": "personal web", "tags": ["hypertext","blog","early","w"], "uri": "https://kickscondor.com/", "comment": "kickscondor.com"},              
-
-{"name": "stephaniekwak.com", "cat": "personal web", "tags": ["developer","arti"], "uri": "https://stephaniekwak.com/", "comment": "stephaniekwak.com"},              
-
-{"name": "everest-pipkin.com", "cat": "personal web", "tags": ["art","writing","gam"], "uri": "http://everest-pipkin.com", "comment": "everest-pipkin.com"},              
-
-{"name": "bwamp.org", "cat": "personal web", "tags": ["colla"], "uri": "http://bwamp.org/", "comment": "bwamp.org"},              
-
-{"name": "jesspotter.github.io", "cat": "personal web", "tags": ["graphic designer","arti"], "uri": "https://jesspotter.github.io/", "comment": "jesspotter.github.io"},              
-
-{"name": "brycewilner.com", "cat": "personal web", "tags": ["designer","educat"], "uri": "http://brycewilner.com/", "comment": "brycewilner.com"},              
-
-{"name": "mark-beasley.com", "cat": "personal web", "tags": ["artist","developer","educat"], "uri": "https://mark-beasley.com/", "comment": "mark-beasley.com"},              
-
+{"name": "umhi.xyz/sean", "cat": "personal web", "tags": ["diary","li"], "uri": "https://umhi.xyz/sean/", "comment": "umhi.xyz/sean"},
+{"name": "litepalette.github.io", "cat": "personal web", "tags": ["blog","essays","syste"], "uri": "https://litepalette.github.io/", "comment": "litepalette.github.io"},
+{"name": "archivings.net", "cat": "personal web", "tags": ["index","archiving","fashi"], "uri": "https://archivings.net/", "comment": "archivings.net"},
+{"name": "sophiefields.com", "cat": "personal web", "tags": ["artist","drawing","animation","performan"], "uri": "https://sophiefields.com/", "comment": "sophiefields.com"},
+{"name": "vasilis.nl", "cat": "personal web", "tags": ["writing","design","html","accessibili"], "uri": "https://vasilis.nl/", "comment": "vasilis.nl"},
+{"name": "vhsportraits.com", "cat": "personal web", "tags": ["art","video","portrait","v"], "uri": "https://vhsportraits.com/", "comment": "vhsportraits.com"},
+{"name": "sheafitz.com", "cat": "personal web", "tags": ["artist","designer","writ"], "uri": "http://sheafitz.com", "comment": "sheafitz.com"},
+{"name": "site.transbienne.club/garden.html", "cat": "personal web", "tags": ["garden","mixtapes","writing","explorati"], "uri": "https://site.transbienne.club/garden.html", "comment": "site.transbienne.club/garden.html"},
+{"name": "tobyshorin.com", "cat": "personal web", "tags": ["designer","writer","research"], "uri": "https://tobyshorin.com", "comment": "tobyshorin.com"},
+{"name": "sadgrl.online", "cat": "personal web", "tags": ["internet","nostalgia","writing","resources","links"], "uri": "https://sadgrl.online", "comment": "sadgrl.online"},{"name": "jwhgd.co", "cat": "personal web", "tags": ["design","portfolio",""], "uri": "http://jwhgd.co", "comment": "jwhgd.co"},
+{"name": "gwern.net", "cat": "personal web", "tags": ["psychology","statistics","technolo"], "uri": "https://gwern.net", "comment": "gwern.net"},
+{"name": "zoebrezsny.com", "cat": "personal web", "tags": ["poetry",""], "uri": "https://zoebrezsny.com/", "comment": "zoebrezsny.com"},
+{"name": "marceldochamp.net", "cat": "personal web", "tags": ["artist","researcher","cod"], "uri": "https://marceldochamp.net/", "comment": "marceldochamp.net"},
+{"name": "weiweihsu.com", "cat": "personal web", "tags": ["weeknotes","comic","log","rolod"], "uri": "http://weiweihsu.com", "comment": "weiweihsu.com"},
+{"name": "lizas.kitchen", "cat": "personal web", "tags": ["cooking","music","a"], "uri": "http://lizas.kitchen/", "comment": "lizas.kitchen"},
+{"name": "maya.land", "cat": "personal web", "tags": ["culture","crafts","aesthetic","link","blog","te"], "uri": "https://maya.land/", "comment": "maya.land"},
+{"name": "teeaze.world", "cat": "personal web", "tags": ["maximal","designer","3D","arti"], "uri": "http://teeaze.world", "comment": "teeaze.world"},
+{"name": "obshagce.gamemaking.tools", "cat": "personal web", "tags": ["games","framework","ht"], "uri": "https://obshagce.gamemaking.tools/", "comment": "obshagce.gamemaking.tools"},
+{"name": "benjamingood.info", "cat": "personal web", "tags": ["architecture","words","thin"], "uri": "https://benjamingood.info/", "comment": "benjamingood.info"},
+{"name": "tilde.town/~troido", "cat": "personal web", "tags": ["ascii","home","til"], "uri": "http://tilde.town/~troido/", "comment": "tilde.town/~troido"},
+{"name": "pixouls.github.io", "cat": "personal web", "tags": ["art","care","too"], "uri": "https://pixouls.github.io/", "comment": "pixouls.github.io"},
+{"name": "michellelin.co", "cat": "personal web", "tags": ["story","animation","gard"], "uri": "http://michellelin.co/", "comment": "michellelin.co"},
+{"name": "laurengraycar.com", "cat": "personal web", "tags": ["design","typograp"], "uri": "https://laurengraycar.com/", "comment": "laurengraycar.com"},
+{"name": "good.phantomwifi.com/alone.html", "cat": "personal web", "tags": ["view","gradie"], "uri": "https://good.phantomwifi.com/alone.html", "comment": "good.phantomwifi.com/alone.html"},
+{"name": "jaltera.xyz", "cat": "personal web", "tags": ["designer","arti"], "uri": "http://jaltera.xyz", "comment": "jaltera.xyz"},
+{"name": "alerithe.github.io", "cat": "personal web", "tags": ["develop"], "uri": "https://alerithe.github.io/", "comment": "alerithe.github.io"},
+{"name": "zeste.ee", "cat": "personal web", "tags": ["art","feelings","fo"], "uri": "http://zeste.ee", "comment": "zeste.ee"},
+{"name": "monolesan.com", "cat": "personal web", "tags": ["artist","designer","AI","experiments","interactive"], "uri": "https://monolesan.com/", "comment": "monolesan.com"},  
+{"name": "jake.surf", "cat": "personal web", "tags": ["developer","arti"], "uri": "http://jake.surf/", "comment": "jake.surf"},
+{"name": "rahulshinde.com", "cat": "personal web", "tags": ["computer","artist","directo"], "uri": "https://rahulshinde.com/", "comment": "rahulshinde.com"},
+{"name": "natehn.com", "cat": "personal web", "tags": ["blog","english","music","essays","not"], "uri": "https://natehn.com", "comment": "natehn.com"},
+{"name": "simone.computer", "cat": "personal web", "tags": ["simone","computer","nostalgia","programming","piz"], "uri": "https://simone.computer", "comment": "simone.computer"},
+{"name": "c-sadovnikov.com", "cat": "personal web", "tags": ["art","installation","craf"], "uri": "http://c-sadovnikov.com", "comment": "c-sadovnikov.com"},
+{"name": "12xu.com", "cat": "personal web", "tags": ["websites","projects","arti"], "uri": "https://12xu.com/", "comment": "12xu.com"},
+{"name": "juliatufts.com", "cat": "personal web", "tags": ["art","games","mus"], "uri": "http://juliatufts.com/", "comment": "juliatufts.com"},
+{"name": "louisdesmet.be", "cat": "personal web", "tags": ["art","ascii","homepa"], "uri": "https://louisdesmet.be/", "comment": "louisdesmet.be"},
+{"name": "jinwoochoi.com", "cat": "personal web", "tags": ["web","map","ind"], "uri": "https://jinwoochoi.com/", "comment": "jinwoochoi.com"},
+{"name": "lainecalhoun.com", "cat": "personal web", "tags": ["crafts","a"], "uri": "http://lainecalhoun.com", "comment": "lainecalhoun.com"},
+{"name": "pascalcobaltphone.com", "cat": "personal web", "tags": ["web","map","ind"], "uri": "https://pascalcobaltphone.com/", "comment": "pascalcobaltphone.com"},
+{"name": "maxwelljoslyn.com", "cat": "personal web", "tags": ["chinese","translation","computers","indieweb","poet"], "uri": "https://maxwelljoslyn.com", "comment": "maxwelljoslyn.com"},
+{"name": "eric.young.li", "cat": "personal web", "tags": ["designer","develop"], "uri": "https://eric.young.li/", "comment": "eric.young.li"},
+{"name": "thedigitaldiarist.ca", "cat": "personal web", "tags": ["diary","writing","communication","lin"], "uri": "https://thedigitaldiarist.ca/", "comment": "thedigitaldiarist.ca"},
+{"name": "yatu.xyz", "cat": "personal web", "tags": ["designer","artist","writ"], "uri": "https://yatu.xyz/", "comment": "yatu.xyz"},
+{"name": "nicholasheskes.com/ ", "cat": "personal web", "tags": ["painting","drawing","art","writi"], "uri": "http://nicholasheskes.com/ ", "comment": "nicholasheskes.com/ "},
+{"name": "bnjmnearl.eu", "cat": "personal web", "tags": ["designer","developer","writ"], "uri": "https://bnjmnearl.eu/", "comment": "bnjmnearl.eu"},
+{"name": "maddybruster.com", "cat": "personal web", "tags": ["designer","new yo"], "uri": "https://maddybruster.com/", "comment": "maddybruster.com"},
+{"name": "tsak.net", "cat": "personal web", "tags": ["photos","gi"], "uri": "https://tsak.net/", "comment": "tsak.net"},
+{"name": "loom.sprig.site", "cat": "personal web", "tags": ["weaving","a"], "uri": "https://loom.sprig.site/", "comment": "loom.sprig.site"},
+{"name": "coolguy.website", "cat": "personal web", "tags": ["blog","garden","how-"], "uri": "https://coolguy.website/", "comment": "coolguy.website"},
+{"name": "jacobhall.net/links.html", "cat": "personal web", "tags": ["directory","lists","lin"], "uri": "https://jacobhall.net/links.html", "comment": "jacobhall.net/links.html"},
+{"name": "me.phantomwifi.com", "cat": "personal web", "tags": ["blog","images","links","writing","ind"], "uri": "http://me.phantomwifi.com/", "comment": "me.phantomwifi.com"},
+{"name": "maple.pet", "cat": "personal web", "tags": ["blog","lin"], "uri": "https://maple.pet/", "comment": "maple.pet"},
+{"name": "redguts.com", "cat": "personal web", "tags": ["video","juggling","art","lin"], "uri": "https://redguts.com", "comment": "redguts.com"},
+{"name": "eric-xia.com", "cat": "personal web", "tags": ["art","technology","new","med"], "uri": "https://eric-xia.com", "comment": "eric-xia.com"},
+{"name": "lovelanguages.melaniehoff.com", "cat": "personal web", "tags": ["class","poetic computati"], "uri": "https://lovelanguages.melaniehoff.com/", "comment": "lovelanguages.melaniehoff.com"},
+{"name": "rodrigofranco.com", "cat": "personal web", "tags": ["notes","lists","slow","w"], "uri": "https://rodrigofranco.com", "comment": "rodrigofranco.com"},
+{"name": "onwardlyfaring.neocities.org", "cat": "personal web", "tags": ["links","questions","ma"], "uri": "https://onwardlyfaring.neocities.org/", "comment": "onwardlyfaring.neocities.org"},
+{"name": "aaronstrick.com", "cat": "personal web", "tags": ["homepa"], "uri": "https://aaronstrick.com", "comment": "aaronstrick.com"},
+{"name": "hi.phantomwifi.com", "cat": "personal web", "tags": ["blog","writi"], "uri": "https://hi.phantomwifi.com/", "comment": "hi.phantomwifi.com"},
+{"name": "kickscondor.com", "cat": "personal web", "tags": ["hypertext","blog","early","w"], "uri": "https://kickscondor.com/", "comment": "kickscondor.com"},
+{"name": "stephaniekwak.com", "cat": "personal web", "tags": ["developer","arti"], "uri": "https://stephaniekwak.com/", "comment": "stephaniekwak.com"},
+{"name": "everest-pipkin.com", "cat": "personal web", "tags": ["art","writing","gam"], "uri": "http://everest-pipkin.com", "comment": "everest-pipkin.com"},
+{"name": "bwamp.org", "cat": "personal web", "tags": ["colla"], "uri": "http://bwamp.org/", "comment": "bwamp.org"},
+{"name": "jesspotter.github.io", "cat": "personal web", "tags": ["graphic designer","arti"], "uri": "https://jesspotter.github.io/", "comment": "jesspotter.github.io"},
+{"name": "brycewilner.com", "cat": "personal web", "tags": ["designer","educat"], "uri": "http://brycewilner.com/", "comment": "brycewilner.com"},
+{"name": "mark-beasley.com", "cat": "personal web", "tags": ["artist","developer","educat"], "uri": "https://mark-beasley.com/", "comment": "mark-beasley.com"},
 {"name": "kool.tools", "cat": "personal web", "tags": ["tools","lin"], "uri": "https://kool.tools/", "comment": "kool.tools"},
 {"name": "fee.cool", "cat": "personal web", "tags": ["ideas","experiments","projec"], "uri": "http://fee.cool/", "comment": "fee.cool"},
-{"name": "melaniehoff.com", "cat": "personal web", "tags": ["designer","developer","educat"], "uri": "https://melaniehoff.com/", "comment": "melaniehoff.com"},              
-
-{"name": "log.nikhil.io", "cat": "personal web", "tags": ["l"], "uri": "https://log.nikhil.io", "comment": "log.nikhil.io"},              
-
-{"name": "papert.org", "cat": "personal web", "tags": ["children","computers","learning","ma"], "uri": "http://papert.org/", "comment": "papert.org"},              
-
-{"name": "carolinekunka.com", "cat": "personal web", "tags": ["artist","illustration","sculptu"], "uri": "https://carolinekunka.com/", "comment": "carolinekunka.com"}
+{"name": "melaniehoff.com", "cat": "personal web", "tags": ["designer","developer","educat"], "uri": "https://melaniehoff.com/", "comment": "melaniehoff.com"},
+{"name": "log.nikhil.io", "cat": "personal web", "tags": ["l"], "uri": "https://log.nikhil.io", "comment": "log.nikhil.io"},
+{"name": "papert.org", "cat": "personal web", "tags": ["children","computers","learning"], "uri": "http://papert.org/", "comment": "papert.org"},
+{"name": "carolinekunka.com", "cat": "personal web", "tags": ["artist","illustration","sculpture"], "uri": "https://carolinekunka.com/", "comment": "carolinekunka.com"},
+{"name": "Gossip’s Web the directory of handmade webpages", "cat": "tech", "tags": ["content"], "uri": "https://gossipsweb.net", "comment": "Directory of handmade webpages"}
 ]
