@@ -1,13 +1,12 @@
 ---
-title: "Curated Emerging Tech Links"
-date: 2021-03-04T20:27:43-06:00
+title: "Curated JavaScript Links"
+date: 2021-03-12T19:25:11-06:00
 draft: false
-summary: "Indispensable Curated Links"
-description: In-depth and indispensable curated tech links
-slug: weaponeered-poetry-links
+summary: "Indispensable Curated JavaScript Links"
+description: In-depth and indispensable curated JavaScript links
+slug: curated-javascript-links
 categories:
 - Links
-- Emerging Tech
 - JavaScript
 tags:
 - Data
@@ -77,7 +76,8 @@ tags:
                 if( elFavs && aFavs ){
                     aFavs = aFavs.sort((a, b) => ((a.cat+a.name) > (b.cat+b.name)) ? 1 : -1)
                     aFavs.forEach((fav)=>{
-                        if( fav.cat === "tech"){
+                        if( fav.cat !== "a55"){
+                        if( fav.tags.find( cell => cell === "js" )){
                             let sTags = "";
                             if( fav.uri.toLowerCase().indexOf("youtu") !== -1 ) fav.tags.push("video");
                             fav.tags = fav.tags.sort();
@@ -94,9 +94,11 @@ tags:
                             `;
                             elFavs.innerHTML = elFavs.innerHTML + sMU;
                         }
+                        }
                     });
                 }
             })( document, ".js-sec__fav");
         });
 
 </script>
+
