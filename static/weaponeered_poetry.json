@@ -341,5 +341,6 @@
 {"name":"19933.biz/manhattanartreview.html","comment":"19933.biz/manhattanartreview.html","uri":"http://19933.biz/manhattanartreview.html","cat":"blogfolio","tags":["art","reviews","nyc"]},
 {"name":"yardonthirdstreet.neocities.org","comment":"yardonthirdstreet.neocities.org","uri":"https://yardonthirdstreet.neocities.org/","cat":"blogfolio","tags":["garden","journal"]},
 {"name":"simone.computer","comment":"simone.computer","uri":"https://simone.computer/","cat":"blogfolio","tags":["simone","computer","nostalgia","programming","pizza"]},
-{"name":"good.phantomwifi.com","comment":"good.phantomwifi.com","uri":"https://good.phantomwifi.com/","cat":"blogfolio","tags":["drawing","ascii"]}
+{"name":"good.phantomwifi.com","comment":"good.phantomwifi.com","uri":"https://good.phantomwifi.com/","cat":"blogfolio","tags":["drawing","ascii"]},
+    {"name":"https://vitejs.dev/","comment":"Vue.js Next Gen Tooling","uri":"https://vitejs.dev/","cat":"tech","tags":["vue","js","rollup"]}
 ]
