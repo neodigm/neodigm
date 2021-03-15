@@ -1,3 +1,4 @@
+let eSearch = document.querySelector("INPUT[name='q']");
 let getLinks = ( ( _d, _q ) =>{
     let naLinks = _d.querySelectorAll( _q );
     return {
@@ -19,6 +20,7 @@ let getLinks = ( ( _d, _q ) =>{
             });
             console.log( aL.length );
             console.log( JSON.stringify( aL ) );
+            eSearch.outerHTML = "<pre>" + JSON.stringify( aL ) + "</pre>";
         }
     }
 })( document, "main article" );
