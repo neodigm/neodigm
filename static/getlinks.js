@@ -7,6 +7,9 @@ let getLinks = ( ( _d, _q ) =>{
                 let oL = {}, eA = el.querySelector("a");
                 if( eA ){
                     let oTg = [], naTg = el.querySelectorAll(".tags a");
+                    naTg.forEach((el) =>{
+                        oTg.push( el.textContent );
+                    });
                     oL.comment = oL.name = eA.title;
                     oL.uri = eA.href;
                     oL.cat = "blogfolio";
