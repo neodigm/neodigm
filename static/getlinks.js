@@ -6,6 +6,7 @@ let getLinks = ( ( _d, _q ) =>{
             naLinks.forEach( ( el ) => {
                 let oL = {}, eA = el.querySelector("a");
                 if( eA ){
+                    let naT = el.querySelectorAll("a");
                     oL.comment = oL.name = eA.title;
                     oL.uri = eA.href;
                     oL.cat = "blogfolio";
