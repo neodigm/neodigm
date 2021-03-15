@@ -6,10 +6,11 @@ let getLinks = ( ( _d, _q ) =>{
             naLinks.forEach( ( el ) => {
                 let oL = {}, eA = el.querySelector("a");
                 if( eA ){
-                    let naT = el.querySelectorAll("a");
+                    let oTg = [], naTg = el.querySelectorAll(".tags a");
                     oL.comment = oL.name = eA.title;
                     oL.uri = eA.href;
                     oL.cat = "blogfolio";
+                    oL.tags = oTg;
                     aL.push( oL );
                 }
             });
