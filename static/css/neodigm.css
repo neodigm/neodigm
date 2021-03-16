@@ -238,6 +238,9 @@ div.caro-target__js:not(.h--select) {
         font-weight: 300;
         font-size: 1.08em;
     }
+    .l-blog-crd h5, .l-blog-crd h6 {
+        min-height: 44px;
+    }
     .l-blog-crd p {
         color: #6a6a6a;
         margin: 2px; padding: 1px;
