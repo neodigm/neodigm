@@ -1,17 +1,19 @@
 ---
-title: "Curated JavaScript Links"
-date: 2021-03-12T19:25:11-06:00
+title: "Curated Links Blogfolios"
+date: 2021-03-15T16:55:43-05:00
 draft: false
-summary: "Indispensable Curated JavaScript Links"
-description: In-depth and indispensable curated JavaScript links
-slug: curated-javascript-links
+summary: "Curated Links Portfolios"
+description: In-depth and indispensable blog links
+slug: curated-links-blogfolios
 categories:
 - Links
-- JavaScript
+- Personal
+- Blog
+- Blogfolio
 tags:
 - Data
 - Curated
-- JavaScript
+- Links
 ---
 <section class="pfmf-grid pfmf-grid__100 readable__doc">
     <div>
@@ -31,8 +33,7 @@ tags:
                 if( elFavs && aFavs ){
                     aFavs = aFavs.sort((a, b) => ((a.cat+a.name) > (b.cat+b.name)) ? 1 : -1)
                     aFavs.forEach((fav)=>{
-                        if( fav.cat !== "a55"){
-                        if( fav.tags.find( cell => cell === "js" )){
+                        if( fav.cat === "blogfolio"){
                             let sTags = "";
                             if( fav.uri.toLowerCase().indexOf("youtu") !== -1 ) fav.tags.push("video");
                             fav.tags = fav.tags.sort();
@@ -48,7 +49,6 @@ tags:
                             </article>
                             `;
                             elFavs.innerHTML = elFavs.innerHTML + sMU;
-                        }
                         }
                     });
                 }

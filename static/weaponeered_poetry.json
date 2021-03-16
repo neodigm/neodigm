@@ -217,7 +217,8 @@
     {"name": "email reply saas video", "cat": "a55", "tags": ["js","","","","",""], "uri": "https://www.youtube.com/watch?v=4ZcS-WkEA5M&t=435s", "comment": "This is a really good view at how they layout the information"},
 {"name": "web components", "cat": "tech", "tags": ["js","css","dom","components","",""], "uri": "https://www.webcomponents.org/introduction", "comment": "Web components are a set of web platform APIs that allow you to create new custom, reusable, encapsulated HTML tags to use in web pages and web apps"},
 {"name": "Gossip’s Web the directory of handmade webpages", "cat": "tech", "tags": ["content"], "uri": "https://gossipsweb.net", "comment": "Directory of handmade webpages"},
-{"name": "", "cat": "tech", "tags": ["vue","js"], "uri": "https://markus.oberlehner.net/blog/", "comment": "Advanced Vue.js Blog"},
+{"name": "Markus Oberlehner Vue.js", "cat": "tech", "tags": ["vue","js"], "uri": "https://markus.oberlehner.net/blog/", "comment": "Advanced Vue.js Blog"},
+    {"name": "Vite", "cat": "tech", "tags": ["vue","js"], "uri": "https://vitejs.dev/", "comment": "Next generation frontend tooling. It's fast!"},
 
 {"name":"mark-beasley.com","comment":"mark-beasley.com","uri":"https://mark-beasley.com/","cat":"blogfolio","tags":["artist","developer","educator"]},
 {"name":"monolesan.com","comment":"monolesan.com","uri":"https://monolesan.com/","cat":"blogfolio","tags":["artist","designer","AI","experiments","interactive","art"]},
