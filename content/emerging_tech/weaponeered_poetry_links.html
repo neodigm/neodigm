@@ -26,7 +26,7 @@ tags:
     //  cat = tech, creative, privacy, sass, api, a55 (!design)
     //  tags = js, 3d, dataviz
     fetch("/weaponeered_poetry.json")
-        .then(response => response.json()) // Get skills
+        .then(response => response.json()) // Get links
         .then((aFavs) => {
             let showFavs = ( ( _d, _sQ )=>{
                 let elFavs = _d.querySelector( _sQ );
