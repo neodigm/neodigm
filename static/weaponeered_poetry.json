@@ -1,5 +1,5 @@
 [
-    {"name": "portfolio site", "cat": "creative", "tags": ["design","portfolio","ux","3d","",""], "uri": "https://hoang.moe/", "comment": "awwwards"},
+    {"name": "portfolio site", "cat": "blogfolio", "tags": ["design","portfolio","ux","3d","",""], "uri": "https://hoang.moe/", "comment": "awwwards"},
     {"name": "Material Design Components Web", "cat": "tech", "tags": ["material","design system","","","",""], "uri": "https://material.io/components/web/catalog/", "comment": "Material is a design system – backed by open-source code – that helps teams build high-quality digital experiences."},
     {"name": "Chromes GIT page", "cat": "tech", "tags": ["git","repo","chrome","","",""], "uri": "https://github.com/GoogleChrome", "comment": " Every type of Chrome project is here"},
     {"name": "Animated Type", "cat": "creative", "tags": ["interactive","codepen","","","",""], "uri": "https://codepen.io/airnan/details/NRaOZb?utm_source=frontendfocus&utm_medium=email", "comment": "Have fun tapping on your keyboard"},
