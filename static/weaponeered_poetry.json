@@ -99,6 +99,7 @@
     {"name": "svg canvas paper.js creative", "cat": "creative", "tags": ["svg","js","","","",""], "uri": "http://paperjs.org/", "comment": "mike chambers"},
     {"name": "RegEx online", "cat": "tech", "tags": ["js","regex","","","",""], "uri": "https://regexr.com/", "comment": "regular expression online"},
     {"name": "CSS Grid Generator", "cat": "tech", "tags": ["css","","","","",""], "uri": "https://www.layoutit.com/grid", "comment": "online css grid"},
+        {"name": "Stimulus js", "cat": "tech", "tags": ["js","","","","",""], "uri": "https://stimulus.hotwire.dev/", "comment": "A modest JavaScript framework for the HTML you already have"},
     {"name": "Google Algorithm", "cat": "saas", "tags": ["SEO","SERP","","","",""], "uri": "https://static.googleusercontent.com/media/www.google.com/en//insidesearch/howsearchworks/assets/searchqualityevaluatorguidelines.pdf", "comment": "Google Search Organic"},
     {"name": "Google Algorithm", "cat": "saas", "tags": ["SEO","SERP","","","",""], "uri": "https://moz.com/google-algorithm-change", "comment": "Google Search Organic"},
     {"name": "view service workers in chrome", "cat": "tech", "tags": ["js","","","","",""], "uri": "chrome://serviceworker-internals/", "comment": "sw service worker js chrome"},
