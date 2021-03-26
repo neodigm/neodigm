@@ -609,5 +609,6 @@
 {"name":"pond.computer","comment":"pond.computer","uri":"https://pond.computer/","cat":"blogfolio","tags":["activism","directory","library"]},
 {"name":"nowherethis.org/issue/dreamland","comment":"nowherethis.org/issue/dreamland","uri":"http://www.nowherethis.org/issue/dreamland/","cat":"blogfolio","tags":["audio","maps","dreams"]},
 {"name":"carolinekunka.com","comment":"carolinekunka.com","uri":"https://carolinekunka.com/","cat":"blogfolio","tags":["artist","illustration","sculpture"]},
-{"name":"amod.io/","comment":"Eric Amodio — full-stack developer","uri":"https://www.amod.io/","cat":"blogfolio","tags":["dev","git","full-stack"]}
+{"name":"amod.io/","comment":"Eric Amodio — full-stack developer","uri":"https://www.amod.io/","cat":"blogfolio","tags":["dev","git","full-stack"]},
+{"name":"http://permission.site/","comment":"User Agent Permissions","uri":"hhttp://permission.site/","cat":"tech","tags":["js","api","infosec"]}
 ]
