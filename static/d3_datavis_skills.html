@@ -195,7 +195,13 @@ svg {user-select: none;}
                   }
             })
             .attr("strokewidth", function(d,i){ return "4"; })
-            .attr('stroke', function(d,i){ return '#edba08'; })
+            .attr('stroke', function(d,i){
+                  if ( i > 0 ) { // Rnd Colr Pana Lime Punch if stack debt
+                        return ( d.brand ) ? aColors[ Math.floor((Math.random() * 20 )) ] : "#000";
+                  } else {
+                        return "#edba08";
+                  }
+            })
             .attr("id", function(d,i) { return "_" + i; }) // Dyn Gen ID attr
             .on("click", oSkillStage.click )
             .on("mouseout", oSkillStage.done );
