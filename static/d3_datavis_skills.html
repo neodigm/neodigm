@@ -194,11 +194,10 @@ svg {user-select: none;}
                         return "#fff";
                   }
             })
-            .attr("strokewidth", function(d,i){ return "4"; })
+            .attr("strokewidth", function(d,i){ return "8"; })
             .attr('stroke', function(d,i){
-console.log(d.brand);
                   if ( i > 0 ) { // Rnd Colr Pana Lime Punch if stack debt
-                        return ( d.brand ) ? aColors[ Math.floor((Math.random() * 20 )) ] : "#000";
+                        return ( d.brand ) ? "#000" : "#edba08";
                   } else {
                         return "#edba08";
                   }
