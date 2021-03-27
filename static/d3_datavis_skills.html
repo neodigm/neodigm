@@ -194,7 +194,7 @@ svg {user-select: none;}
                         return "#fff";
                   }
             })
-            .attr("stroke-width", function(d,i){ return "8"; })
+            .attr("stroke-width", function(d,i){ return "4"; })
             .attr('stroke', function(d,i){
                   if ( i > 0 ) { // Rnd Colr Pana Lime Punch if stack debt
                         return ( d.brand ) ? "#000" : "#edba08";
@@ -424,6 +424,11 @@ setTimeout(() =>{
             }
       });
       console.table( aSD );
+      nodes.forEach(function( oSkill ){  //  Output to console the name of every skill with uber brand
+            if( oSkill.brand ){
+                  aSD.push( oSkill.name );
+            }
+      });
 }, 12000);
 
 document.addEventListener( "contextmenu", function(e) { playAudioFile( 7 ); });  //  On right-click
