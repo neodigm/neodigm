@@ -37,5 +37,31 @@
 {{ partial "jsonld_self.html" . }}
 {{ partial "pfmf_script.html" . }}
 
+
+<script type="application/ld+json">
+    { "@context": "https://schema.org", 
+     "@type": "BlogPosting",
+     "headline": "{{ .Title }}",
+     "alternativeHeadline": "{{ .Summary }}",
+     "image": "../{{.Page.Slug}}_tn.webp",
+     "award": "Best of the Independent Web",
+     "editor": "Scott C. Krause", 
+     "genre": "Emerging Tech", 
+     "keywords": "Data Visualizations Micro Frontend Offline-first PWA Three.js TypeScript WASM", 
+     "wordcount": "1646",
+     "publisher": "Arcanus 55",
+     "url": "{{ .Permalink }}",
+     "datePublished": "{{ dateFormat "2006-01-02" .Date }}",
+     "dateCreated": "{{ dateFormat "2006-01-02" .Date }}",
+     "dateModified": "{{ dateFormat "2006-01-02" .Date }}",
+     "description": "{{ .Title }}",
+     "articleBody": "{{ .Summary }}",
+       "author": {
+        "@type": "Person",
+        "name": "Scott C. Krause"
+      }
+     }
+    </script>
+
     </body>
 </html>
