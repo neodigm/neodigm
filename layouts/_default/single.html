@@ -55,7 +55,7 @@
      "dateCreated": "{{ dateFormat "2006-01-02" .Date }}",
      "dateModified": "{{ dateFormat "2006-01-02" .Date }}",
      "description": "{{ .Title }}",
-     "articleBody": "{{ .Summary }}",
+     "articleBody": "{{ .Summary }} {{ .Description }}",
        "author": {
         "@type": "Person",
         "name": "Scott C. Krause"
