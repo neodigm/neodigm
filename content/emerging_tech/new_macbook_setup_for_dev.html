@@ -242,17 +242,14 @@ sbt clean (Optionally delete .ivy2 )
             data-at="Golang">Go</p></article>
         <article style="padding: 12px 12px;">
 <pre><code class="bash">
-brew update
-brew tap caskroom/versions
-brew cask install adoptopenjdk8
-brew install jenv
-echo 'export PATH="$HOME/.jenv/bin:$PATH"' >> ~/.zshrc
-echo 'eval "$(jenv init -)"' >> ~/.zshrc
+brew update&& brew install golang
+mkdir -p $HOME/go/{bin,src,pkg}
 </code></pre>
 <pre><code class="bash">
-java -version
-ls /Library/Java/JavaVirtualMachines
-ls /Library/Java/JavaVirtualMachines/jdk1.8.0_251.jdk/Contents/Home
+nano ~/.zshrc
+export GOPATH=$HOME/go
+export GOROOT="$(brew --prefix golang)/libexec"
+export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
 </code></pre>
 <h4 class="document__title h-center text-coy_2020">See Also</h4>
 <div><a class="h-link" target="_blank" rel="noopener" href="https://sdkman.io/">SDKMan</a></div>
