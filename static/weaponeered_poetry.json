@@ -614,7 +614,8 @@
 {"name":"Password Managers Explained","comment":"Should You Trust Your Passwords in the Cloud? | Consider KeePass","uri":"https://arcanus55.medium.com/offline-vs-cloud-password-managers-51b1fbebe301","cat":"tech","tags":["infosec","privacy"]},
 {"name":"Is Your GMail Safe","comment":"Your Gmail account integrity is the weakest link in you privacy stack","uri":"https://www.arcanus55.com/trust/key/vault/is_your_gmail_safe.html","cat":"tech","tags":["infosec","privacy"]},
 {"name":"Vue focus trap component","comment":"Vue component to trap the focus within a DOM element","uri":"https://github.com/posva/focus-trap-vue","cat":"tech","tags":["js","vue","a11y"]},
-{"name":"","comment":"","uri":"","cat":"tech","tags":["","",""]},
+{"name":"","comment":"","uri":"","cat":"tech","tags":["js","",""]},
+{"name":"","comment":"","uri":"","cat":"tech","tags":["js","",""]},
 https://single-spa.js.org/
 https://www.thoughtworks.com/radar/languages-and-frameworks
 https://www.thoughtworks.com/radar/techniques
