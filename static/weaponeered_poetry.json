@@ -615,7 +615,7 @@
 {"name":"Is Your GMail Safe","comment":"Your Gmail account integrity is the weakest link in you privacy stack","uri":"https://www.arcanus55.com/trust/key/vault/is_your_gmail_safe.html","cat":"tech","tags":["infosec","privacy"]},
 {"name":"Vue focus trap component","comment":"Vue component to trap the focus within a DOM element","uri":"https://github.com/posva/focus-trap-vue","cat":"tech","tags":["js","vue","a11y"]},
 {"name":"Micro Frontend","comment":"Micro Frontend","uri":"https://single-spa.js.org/","cat":"tech","tags":["js","vue","microfrontend"]},
-{"name":"","comment":"","uri":"https://www.thoughtworks.com/radar/languages-and-frameworks","cat":"tech","tags":["js","radar",""]},
+{"name":"Radar languages frameworks","comment":"Radar languages frameworks","uri":"https://www.thoughtworks.com/radar/languages-and-frameworks","cat":"tech","tags":["js","radar",""]},
 {"name":"","comment":"","uri":"https://www.thoughtworks.com/radar/techniques","cat":"tech","tags":["js","radar",""]},
 {"name":"","comment":"","uri":"https://www.thoughtworks.com/radar/tools","cat":"tech","tags":["js","radar",""]},
 {"name":"","comment":"","uri":"https://www.thoughtworks.com/radar/platforms","cat":"tech","tags":["js","radar",""]}
