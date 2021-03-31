@@ -616,12 +616,7 @@
 {"name":"Vue focus trap component","comment":"Vue component to trap the focus within a DOM element","uri":"https://github.com/posva/focus-trap-vue","cat":"tech","tags":["js","vue","a11y"]},
 {"name":"","comment":"","uri":"https://single-spa.js.org/","cat":"tech","tags":["js","",""]},
 {"name":"","comment":"","uri":"https://www.thoughtworks.com/radar/languages-and-frameworks","cat":"tech","tags":["js","",""]},
-{"name":"","comment":"","uri":"","cat":"tech","tags":["js","",""]},
-{"name":"","comment":"","uri":"","cat":"tech","tags":["js","",""]},
-{"name":"","comment":"","uri":"","cat":"tech","tags":["js","",""]},
-
-
-https://www.thoughtworks.com/radar/techniques
-https://www.thoughtworks.com/radar/tools
-https://www.thoughtworks.com/radar/platforms
+{"name":"","comment":"","uri":"https://www.thoughtworks.com/radar/techniques","cat":"tech","tags":["js","",""]},
+{"name":"","comment":"","uri":"https://www.thoughtworks.com/radar/tools","cat":"tech","tags":["js","",""]},
+{"name":"","comment":"","uri":"https://www.thoughtworks.com/radar/platforms","cat":"tech","tags":["js","",""]}
 ]
