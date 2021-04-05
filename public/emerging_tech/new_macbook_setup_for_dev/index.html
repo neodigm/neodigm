@@ -192,7 +192,7 @@ xcode-select --version
             data-at="Finder Home|Finder Hidden Files">Finder Config</p></article>
         <article style="padding: 12px 12px;">
 <pre><code class="bash">
-    chflags nohidden ~/Library
+chflags nohidden ~/Library
 defaults write com.apple.Finder AppleShowAllFiles true
 defaults write com.apple.finder ShowPathbar -bool true
 defaults write com.apple.finder ShowStatusBar -bool true
@@ -203,14 +203,6 @@ killall Finder
 <pre ><code class="bash">
 Menu > Finder > Preferences [ Select Drive ]
 </code></pre>
-Show Library folder:
-
-Show hidden files:
-defaults write com.apple.finder AppleShowAllFiles YES
-Show path bar:
-
-Show status bar:
-
         </article>
     </div>
     <div>
