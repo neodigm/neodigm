@@ -620,5 +620,5 @@
 {"name":"Radar Tools","comment":"Radar Tools","uri":"https://www.thoughtworks.com/radar/tools","cat":"tech","tags":["js","radar",""]},
 {"name":"Radar Platforms","comment":"Radar Platforms","uri":"https://www.thoughtworks.com/radar/platforms","cat":"tech","tags":["js","radar",""]},
 {"name":"Why Webassembly Modules","comment":"","uri":"https://thenewstack.io/why-webassembly-modules-could-be-the-new-de-facto-unit-of-compute/","cat":"tech","tags":["wasm","webassembly","golang"]},
-{"name":"double n-back","comment":"double n-back","uri":"https://www.gwern.net/DNB-FAQ","cat":"tech","tags":["game"]}
+{"name":"double n-back","comment":"Dual N-Back is a kind of cognitive training intended to expand your working memory (WM), and hopefully your intelligence (IQ1)","uri":"https://www.gwern.net/DNB-FAQ","cat":"tech","tags":["game"]}
 ]
