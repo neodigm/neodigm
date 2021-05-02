@@ -25,7 +25,7 @@
 "year": "2019", "level": 6,"desk": ""},
 {"name": "Framework / Stack", "target": [0], "value": 124 , "stackdebt": "0",
 "year": "2019", "level": 6,"desk": ""},
-{"name": "UX / UI", "target": [0], "value": 124 , "stackdebt": "0",
+{"name": "UX / UI", "target": [0], "value": 124 , "stackdebt": "0", "brand": "UX Design",
 "year": "2019", "level": 6,"desk": ""},
 {"name": "Graphic Design", "target": [0,2,5,20], "value": 124 , "stackdebt": "0",
 "year": "2019", "level": 6,"desk": ""},
