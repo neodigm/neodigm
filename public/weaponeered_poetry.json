@@ -223,6 +223,7 @@
 {"name":"AWS API Documentation","comment":"Find user guides, developer guides, API references, tutorials, and more.","uri":"https://docs.aws.amazon.com/","cat":"tech","tags":["saas","api"]},
 {"name":"Vite Vue.js 3, Vuex & Tailwinds","comment":"","uri":"https://www.youtube.com/watch?v=O8epzPrsADI&t=460s","cat":"tech","tags":["js","vue","vite","esm"]},
 
+{"name":"Cutle Fish","comment":"","uri":"https://cutle.fish/","cat":"blogfolio","tags":["agile","sprints"]},
 {"name":"toastytech.com IE is evil","comment":"toastytech.com IE is evil","uri":"http://toastytech.com//","cat":"blogfolio","tags":["TI","GUI","Windows","OS/2"]},
 {"name":"svilendobrev.com","comment":"svilendobrev.com","uri":"http://svilendobrev.com/","cat":"blogfolio","tags":["work","life","play","library"]},
 {"name":"tom.so","comment":"tom.so","uri":"https://tom.so/","cat":"blogfolio","tags":["portfolio","blog","art"]},
