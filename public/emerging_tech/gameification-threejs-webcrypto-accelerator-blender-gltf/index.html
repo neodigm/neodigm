@@ -280,12 +280,12 @@ href="#a11y-skipmain">Skip to Main Content</a>
         <article style="padding: 12px 12px;">
             <details  open="true">
                <summary  data-wired4sound="click|4" >NPM Install Command</summary>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#171812;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#a6e22e">npm</span> <span style="color:#a6e22e">install</span> <span style="color:#f92672">--</span><span style="color:#a6e22e">save</span> <span style="color:#a6e22e">three</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#a6e22e">npm</span> <span style="color:#a6e22e">install</span> <span style="color:#f92672">--</span><span style="color:#a6e22e">save</span> <span style="color:#a6e22e">three</span>
 </code></pre></div>
             </details>
             <details  open="true">
                <summary  data-wired4sound="click|4" >WebPack Config</summary>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#171812;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">path</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;path&#39;</span>)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">path</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#39;path&#39;</span>)
 
 <span style="color:#a6e22e">module</span>.<span style="color:#a6e22e">exports</span> <span style="color:#f92672">=</span> {
   <span style="color:#a6e22e">entry</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;./a55_3d_template.js&#39;</span>,
@@ -303,7 +303,7 @@ href="#a11y-skipmain">Skip to Main Content</a>
             </details>
             <details  open="true">
                <summary  data-wired4sound="click|4" >a55_3d_template.js</summary>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#171812;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">import</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">as</span> <span style="color:#a6e22e">THREE</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;three&#39;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">import</span> <span style="color:#f92672">*</span> <span style="color:#a6e22e">as</span> <span style="color:#a6e22e">THREE</span> <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;three&#39;</span>
 
 <span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">OrbitControls</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;three/examples/jsm/controls/OrbitControls.js&#39;</span>;
 <span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">GLTFLoader</span> } <span style="color:#a6e22e">from</span> <span style="color:#e6db74">&#39;three/examples/jsm/loaders/GLTFLoader&#39;</span>;
@@ -322,7 +322,7 @@ window.<span style="color:#a6e22e">o3orbit</span> <span style="color:#f92672">=<
             <p>You will need a recent version of Node.js and NPM installed. <span class="h_ital">This is kind of a must for any modern knowledge worker.</span> Install Three.js via the NPM command then make the required changes to the webpack and template config files.</p>
             <p>The objective is to have Webpack rollup only the JavaScript we need into one JS file that we can load like this:</p>
             <p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#171812;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"> <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;module&#34;</span> <span style="color:#a6e22e">src</span> <span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/js/a55_3d.js&#34;</span><span style="color:#f92672">&gt;&lt;</span><span style="color:#960050;background-color:#1e0010">/script&gt;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"> <span style="color:#f92672">&lt;</span><span style="color:#a6e22e">script</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;module&#34;</span> <span style="color:#a6e22e">src</span> <span style="color:#f92672">=</span><span style="color:#e6db74">&#34;/js/a55_3d.js&#34;</span><span style="color:#f92672">&gt;&lt;</span><span style="color:#960050;background-color:#1e0010">/script&gt;</span>
 </code></pre></div>
             </p>
 
