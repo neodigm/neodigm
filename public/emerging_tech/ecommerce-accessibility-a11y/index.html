@@ -182,7 +182,7 @@ href="#a11y-skipmain">Skip to Main Content</a>
 <section class="pfmf-grid pfmf-grid__100 readable__doc">
     <div>
         <article style="padding: 12px 12px;">
-            <p class="text-coy_2001">Before I get into the technical details I want to emphasize what I consider the most important a11y skill for a front-end engineer - <span class="h_ital">Succinct communication</span>. You must be able to communicate to a larger team exactly why a particular element is failing WCAG success criteria and provide examples of how to fix it. Don’t fix it for them but help your team understand how to identify the issue and fix it. Don’t simply make the change, be the agent of change.</p>
+            <p class="text-coy_2019">Before I get into the technical details I want to emphasize what I consider the most important a11y skill for a front-end engineer - <span class="h_ital">Succinct communication</span>. You must be able to communicate to a larger team exactly why a particular element is failing WCAG success criteria and provide examples of how to fix it. Don’t fix it for them but help your team understand how to identify the issue and fix it. Don’t simply make the change, be the agent of change.</p>
         </article>
     </div>
 </section>
@@ -208,7 +208,7 @@ href="#a11y-skipmain">Skip to Main Content</a>
                        <summary  data-wired4sound="click|4"  class="h-pro-tip">Pro ⚡ Tips</summary>
                             <p>Generally, do not use a tab index value greater than 0. Use tabindex="0" on an A element that does not have an HREF.</p>
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#75715e">//  Run in browser console or save as a browser snippet.
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#171812;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#75715e">//  Run in browser console or save as a browser snippet.
 </span><span style="color:#75715e">//  Remove ALL tabIndex on the entire page - That is a fun thing to do.  ES5
 </span><span style="color:#75715e">//  From the entire document remove tabIndex if its value is greater than 0
 </span><span style="color:#75715e"></span>[].<span style="color:#a6e22e">slice</span>.<span style="color:#a6e22e">call</span>( document.<span style="color:#a6e22e">querySelectorAll</span>(<span style="color:#e6db74">&#34;[tabIndex]&#34;</span>) ).<span style="color:#a6e22e">filter</span>(<span style="color:#66d9ef">function</span>(<span style="color:#a6e22e">el</span>){ <span style="color:#75715e">// Neodigm 2020
@@ -226,7 +226,7 @@ href="#a11y-skipmain">Skip to Main Content</a>
 }); 
 </code></pre></div>
                         <p>💡 Always show which element has the focus. In dev tools console click on the 👁️ eye icon and create this expression:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">document.<span style="color:#a6e22e">activeElement</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#171812;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript">document.<span style="color:#a6e22e">activeElement</span>
 </code></pre></div>
                         <p>💡 When debugging keyboard access issues in Chrome make sure that the DevTools panel is disconnected from the browser. If it is connected it shares the tab order with the document you are viewing. This makes it difficult to test issues related to "Skip to Main Content".</p>
                     </details>
@@ -251,7 +251,7 @@ href="#a11y-skipmain">Skip to Main Content</a>
                     <details >
                        <summary  data-wired4sound="click|4"  class="h-pro-tip">Pro ⚡ Tips</summary>
                             <p>Install aXe CLI</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">npm</span> <span style="color:#a6e22e">i</span> <span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">axe</span><span style="color:#f92672">-</span><span style="color:#a6e22e">core</span><span style="color:#f92672">/</span><span style="color:#a6e22e">cli</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#171812;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#a6e22e">npm</span> <span style="color:#a6e22e">i</span> <span style="color:#960050;background-color:#1e0010">@</span><span style="color:#a6e22e">axe</span><span style="color:#f92672">-</span><span style="color:#a6e22e">core</span><span style="color:#f92672">/</span><span style="color:#a6e22e">cli</span>
 </code></pre></div>
 <p>💡 You can then run the A11Y audit from within VSCode terminal or automate via Gulp watch / Github Actions.</p>
                     </details>                    
@@ -269,7 +269,7 @@ href="#a11y-skipmain">Skip to Main Content</a>
             <p>Keyboard Trap POC snippet - Prevent the user from tabbing outside of a modal dialog.</p>
             <details  open="true">
                <summary  data-wired4sound="click|4" >Circular Keyboard Trap</summary>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#a6e22e">a55_reveal</span>.<span style="color:#a6e22e">aRevAct</span>[<span style="color:#a6e22e">i</span>].<span style="color:#a6e22e">setAttribute</span>(<span style="color:#e6db74">&#34;aria-haspopup&#34;</span>, <span style="color:#e6db74">&#34;dialog&#34;</span>);
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#171812;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#a6e22e">a55_reveal</span>.<span style="color:#a6e22e">aRevAct</span>[<span style="color:#a6e22e">i</span>].<span style="color:#a6e22e">setAttribute</span>(<span style="color:#e6db74">&#34;aria-haspopup&#34;</span>, <span style="color:#e6db74">&#34;dialog&#34;</span>);
 <span style="color:#a6e22e">a55_reveal</span>.<span style="color:#a6e22e">aRevAct</span>[<span style="color:#a6e22e">i</span>].<span style="color:#a6e22e">setAttribute</span>(<span style="color:#e6db74">&#34;aria-controls&#34;</span>, <span style="color:#a6e22e">sDialogId</span>);
 <span style="color:#66d9ef">if</span>( <span style="color:#f92672">!</span><span style="color:#a6e22e">oIDs</span>[ <span style="color:#a6e22e">sDialogId</span> ]){ <span style="color:#75715e">// A11y update the dialog (inert content) only once
 </span><span style="color:#75715e"></span>  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">eDialog</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>( <span style="color:#a6e22e">sDialogId</span> );
@@ -309,13 +309,13 @@ href="#a11y-skipmain">Skip to Main Content</a>
             <p>Skip to Main Content - CSS Focus rules that make the link visible when focused from the omnibox.</p>
             <details  open="true">
                <summary  data-wired4sound="click|4" >CSS Only Solution - Markup</summary>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-HTML" data-lang="HTML">&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;js-skip__main--id skip__main&#34;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#171812;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-HTML" data-lang="HTML">&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;js-skip__main--id skip__main&#34;</span>
 <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#ltdc-skipmain&#34;</span>&gt;Skip to Main Content&lt;/<span style="color:#f92672">a</span>&gt;</code></pre></div>
                 </summary>
             </details>
             <details  open="true">
                <summary  data-wired4sound="click|4" >CSS Only Solution</summary>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-CSS" data-lang="CSS"><span style="color:#f92672">a</span>.<span style="color:#a6e22e">skip__main</span>:<span style="color:#a6e22e">active</span><span style="color:#f92672">,</span> <span style="color:#f92672">a</span>.<span style="color:#a6e22e">skip__main</span>:<span style="color:#a6e22e">focus</span> {
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#171812;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-CSS" data-lang="CSS"><span style="color:#f92672">a</span>.<span style="color:#a6e22e">skip__main</span>:<span style="color:#a6e22e">active</span><span style="color:#f92672">,</span> <span style="color:#f92672">a</span>.<span style="color:#a6e22e">skip__main</span>:<span style="color:#a6e22e">focus</span> {
     <span style="color:#66d9ef">background-color</span>: <span style="color:#ae81ff">#fff</span>;
     <span style="color:#66d9ef">border-radius</span>: <span style="color:#ae81ff">4</span><span style="color:#66d9ef">px</span>;
     <span style="color:#66d9ef">border</span>: <span style="color:#ae81ff">2</span><span style="color:#66d9ef">px</span> <span style="color:#66d9ef">solid</span> <span style="color:#ae81ff">#000</span>;

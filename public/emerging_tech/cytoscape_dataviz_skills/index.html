@@ -186,7 +186,7 @@ href="#a11y-skipmain">Skip to Main Content</a>
                 <summary data-wired4sound="click|4" class="h-pro-tip">Pro ⚡ Tips</summary>
                 <p>💡 Create a link to download a PNG image of the CURRENT graph on the canvas.</p>
 
- <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"> document.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">dataset</span>.<span style="color:#a6e22e">cyReady</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;true&#34;</span>;
+ <div class="highlight"><pre style="color:#f8f8f2;background-color:#171812;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"> document.<span style="color:#a6e22e">body</span>.<span style="color:#a6e22e">dataset</span>.<span style="color:#a6e22e">cyReady</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;true&#34;</span>;
  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">text</span>, <span style="color:#a6e22e">name</span>, <span style="color:#a6e22e">file</span>;
  <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">eA</span> <span style="color:#f92672">=</span> document.<span style="color:#a6e22e">getElementById</span>(<span style="color:#e6db74">&#34;downloadPNG&#34;</span>);
  <span style="color:#66d9ef">if</span>( <span style="color:#a6e22e">eA</span> ){ <span style="color:#75715e">// Download image of graph
@@ -211,7 +211,7 @@ href="#a11y-skipmain">Skip to Main Content</a>
         <article style="padding: 12px 12px;">
             <details  open="true">
                <summary  data-wired4sound="click|4" >Fetch JSON</summary>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#a6e22e">fetch</span>(<span style="color:#e6db74">&#34;skills_strategic_competencies.json&#34;</span>)
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#171812;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#a6e22e">fetch</span>(<span style="color:#e6db74">&#34;skills_strategic_competencies.json&#34;</span>)
 .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">response</span> =&gt; <span style="color:#a6e22e">response</span>.<span style="color:#a6e22e">json</span>()) <span style="color:#75715e">// Get skills
 </span><span style="color:#75715e"></span>.<span style="color:#a6e22e">then</span>((<span style="color:#a6e22e">aSkills</span>) =&gt; {
     <span style="color:#a6e22e">doCyto</span>( <span style="color:#a6e22e">doCYSP_json</span>(<span style="color:#a6e22e">aSkills</span>) );
@@ -220,7 +220,7 @@ href="#a11y-skipmain">Skip to Main Content</a>
             </details>
             <details  open="true">
                <summary  data-wired4sound="click|4" >Reformat JSON</summary>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">doCYSP_json</span>( <span style="color:#a6e22e">aSkills</span> ){ <span style="color:#75715e">// Convert to Cytoscape format
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#171812;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">doCYSP_json</span>( <span style="color:#a6e22e">aSkills</span> ){ <span style="color:#75715e">// Convert to Cytoscape format
 </span><span style="color:#75715e"></span>    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">aCYSP_nodes</span> <span style="color:#f92672">=</span> [], <span style="color:#a6e22e">aCYSP_edges</span> <span style="color:#f92672">=</span> [];
     <span style="color:#a6e22e">aSkills</span>.<span style="color:#a6e22e">map</span>( (<span style="color:#a6e22e">dSkill</span>, <span style="color:#a6e22e">nDx</span>) =&gt;{
         <span style="color:#a6e22e">aCYSP_nodes</span>.<span style="color:#a6e22e">push</span>( {<span style="color:#e6db74">&#34;data&#34;</span><span style="color:#f92672">:</span>{<span style="color:#e6db74">&#34;id&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;n&#34;</span><span style="color:#f92672">+</span><span style="color:#a6e22e">nDx</span>, <span style="color:#e6db74">&#34;name&#34;</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">dSkill</span>.<span style="color:#a6e22e">name</span>}});
