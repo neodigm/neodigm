@@ -55,7 +55,7 @@
     {"name": "Modern JavaScript Cheatsheet", "cat": "tech", "tags": ["js","","","","",""], "uri": "https://github.com/mbeaudru/modern-js-cheatsheet", "comment": ""},
     {"name": "wordcloud", "cat": "creative", "tags": ["worldcloud","","","","",""], "uri": "https://wordart.com/create", "comment": ""},
     {"name": "lotti web", "cat": "creative", "tags": ["ani","AE","Bodymovin","3d","",""], "uri": "https://github.com/airbnb/lottie-web", "comment": ""},
-    {"name": "Bodymovin lottie files AE", "cat": "creative", "tags": ["Animation","ae","","","",""], "uri": "https://codepen.io/airnan/pen/GOvebO/", "comment": ""},
+    {"name": "Bodymovin lottie files AE", "cat": "creative", "tags": ["animation","ae","","","",""], "uri": "https://codepen.io/airnan/pen/GOvebO/", "comment": ""},
     {"name": "Greensock Dev Tools Advanced Animator", "cat": "tech", "tags": ["animation","gsap","","","",""], "uri": "https://greensock.com/gsdevtools", "comment": ""},
     {"name": "Video (mp4) compression", "cat": "tech", "tags": ["mp4","","","","",""], "uri": "http://www.videosmaller.com/", "comment": ""},
     {"name": "Inside Batmans head", "cat": "a55", "tags": ["privacy","","","","",""], "uri": "https://www.youtube.com/watch?v=Ceca1JCRQbA", "comment": ""},
