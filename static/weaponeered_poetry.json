@@ -1,5 +1,6 @@
 [
     {"name": "portfolio site", "cat": "blogfolio", "tags": ["design","portfolio","ux","3d","",""], "uri": "https://hoang.moe/", "comment": "awwwards"},
+    {"name": "Cofounder of Basecamp & HEY","comment":"DAVID HEINEMEIER HANSSON","uri":"https://dhh.dk/","cat":"blogfolio","tags":["basecamp","hey"]},
     {"name": "Material Design Components Web", "cat": "tech", "tags": ["material","design system","","","",""], "uri": "https://material.io/components/web/catalog/", "comment": "Material is a design system – backed by open-source code – that helps teams build high-quality digital experiences."},
     {"name": "Chromes GIT page", "cat": "tech", "tags": ["git","repo","chrome","","",""], "uri": "https://github.com/GoogleChrome", "comment": " Every type of Chrome project is here"},
     {"name": "Animated Type", "cat": "creative", "tags": ["interactive","codepen","","","",""], "uri": "https://codepen.io/airnan/details/NRaOZb?utm_source=frontendfocus&utm_medium=email", "comment": "Have fun tapping on your keyboard"},
@@ -516,5 +517,12 @@
 {"name":"CCCS-CIC-AndMal-2020","comment":"Canadian Institute for Cybersecurity (CIC) | Canadian Centre for Cyber Security (CCCS)","uri":"https://www.unb.ca/cic/datasets/andmal2020.html","cat":"tech","tags":["cyber","data","infosec","cmmc"]},
 {"name":"SQLite Datasets","comment":"Download data in SQLite format","uri":"http://2016.padjo.org/tutorials/sqlite-data-starterpacks/","cat":"tech","tags":["sqlite","data","dataviz"]},
 {"name":"C4 Diagrams","comment":"C4 Diagrams | An evolution of UML","uri":"https://c4model.com/","cat":"tech","tags":["C4","UML","dataviz"]},
-{"name":"SQLite compiled to JavaScript","comment":"sql.js is a javascript SQL database. It allows you to create a relational database and query it entirely in the browser","uri":"https://sql.js.org","cat":"tech","tags":["js","sql","wasm"]}
+{"name":"SQLite compiled to JavaScript","comment":"sql.js is a javascript SQL database. It allows you to create a relational database and query it entirely in the browser","uri":"https://sql.js.org","cat":"tech","tags":["js","sql","wasm"]},
+{"name":"","comment":"","uri":"https://www.typescriptlang.org/docs/","cat":"tech","tags":["TypeScript","js","docs"]},
+{"name":"","comment":"","uri":"https://www.typescriptlang.org/docs/handbook/typescript-in-5-minutes.html","cat":"tech","tags":["TypeScript","js","docs"]},
+{"name":"","comment":"","uri":"https://www.typescriptlang.org/tsconfig","cat":"tech","tags":["TypeScript","js","config"]},
+{"name":"TypeScript Declaration File","comment":"","uri":"https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html","cat":"tech","tags":["TypeScript","js","docs"]},
+{"name":"The most common types","comment":"The most common types of values you’ll find in JavaScript code, and explain the corresponding ways to describe those types in TypeScript","uri":"https://www.typescriptlang.org/docs/handbook/2/everyday-types.html","cat":"tech","tags":["TypeScript","js","docs"]},
+{"name":"","comment":"","uri":"https://www.typescriptlang.org/dt/search?search=","cat":"tech","tags":["TypeScript","js","search"]},
+{"name":"Find npm packages that have type declarations","comment":"Find npm packages that have type declarations, either bundled or on Definitely Typed.","uri":"","cat":"tech","tags":["TypeScript","js","docs"]}
 ]
