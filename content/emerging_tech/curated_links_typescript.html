@@ -1,18 +1,17 @@
 ---
-title: "Curated JavaScript Links"
-date: 2021-03-12T19:25:11-06:00
+title: "Transition to TypeScript"
+date: 2021-06-05T18:14:20-05:00
 draft: false
-summary: "Indispensable Curated JavaScript Links"
-description: In-depth and indispensable curated JavaScript links
-slug: curated-javascript-links
+summary: "Indispensable Curated TypeScript Links"
+description: In-depth and indispensable curated TypeScript links
+slug: curated-typescript-links
 categories:
 - Links
-- JavaScript
+- TypeScript
 tags:
 - Links
 - Curated
 - Tutorials
-- JavaScript
 - TypeScript
 ---
 <section class="pfmf-grid pfmf-grid__100 readable__doc">
@@ -34,7 +33,7 @@ tags:
                     aFavs = aFavs.sort((a, b) => ((a.cat+a.name) > (b.cat+b.name)) ? 1 : -1)
                     aFavs.forEach((fav)=>{
                         if( fav.cat !== "a55"){
-                        if( fav.tags.find( cell => cell === "js" )){
+                        if( fav.tags.find( cell => cell.toLowerCase() === "typescript" )){
                             let sTags = "";
                             if( fav.uri.toLowerCase().indexOf("youtu") !== -1 ) fav.tags.push("video");
                             fav.tags = fav.tags.sort();
