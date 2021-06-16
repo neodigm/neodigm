@@ -14,6 +14,9 @@ tags:
 - Tutorials
 - TypeScript
 ---
+
+<p class="js-vect__banner readable__caption h-center l-capt__vect" data-at-vivid="Curated" data-at-rnd-gt="0" data-at-change="data-at-vivid" data-at="doh|Links">
+</p>
 <section class="pfmf-grid pfmf-grid__100 readable__doc">
     <div>
         <article class="js-sec__fav l-favs" style="padding: 12px 12px;">
@@ -26,7 +29,8 @@ tags:
         .then(response => response.json()) // Get links
         .then((aFavs) => {
             let showFavs = ( ( _d, _sQ, sInc, sExc )=>{
-                let elFavs = _d.querySelector( _sQ )
+                let elFavs = _d.querySelector( _sQ[0] )
+                let elVect = _d.querySelector( _sQ[1] )
                 let nCnt =0
                 if( elFavs && aFavs ){
                     aFavs = aFavs.sort((a, b) => ((a.cat+a.name) > (b.cat+b.name)) ? 1 : -1)
@@ -56,7 +60,7 @@ tags:
                     });
                     if(snck) snck.q( nCnt + " " + sInc.toLocaleUpperCase() + "|Curated Links")
                 }
-            })( document, ".js-sec__fav", "typescript", "a55");
+            })( document, [".js-sec__fav", ".js-vect__banner"], "typescript", "a55");
         });
 
 </script>
