@@ -15,7 +15,7 @@ tags:
 - TypeScript
 ---
 
-<p class="js-vect__banner readable__caption h-center l-capt__vect" data-at-vivid="Curated" data-at-rnd-gt="0" data-at-change="data-at-vivid" data-at="doh|Links">
+<p class="js-vect__banner readable__caption h-center l-capt__vect" data-at-vivid="Curated" data-at-rnd-gt="0" data-at-change="data-at-vivid" data-at="Links">
 </p>
 <section class="pfmf-grid pfmf-grid__100 readable__doc">
     <div>
@@ -31,6 +31,7 @@ tags:
             let showFavs = ( ( _d, _sQ, sInc, sExc )=>{
                 let elFavs = _d.querySelector( _sQ[0] )
                 let elVect = _d.querySelector( _sQ[1] )
+                let aAllTags = []
                 let nCnt =0
                 if( elFavs && aFavs ){
                     aFavs = aFavs.sort((a, b) => ((a.cat+a.name) > (b.cat+b.name)) ? 1 : -1)
@@ -45,6 +46,7 @@ tags:
                                 fav.tags = [ ... new Set( fav.tags.sort((a, b) => ((a.toLowerCase()) > (b.toLowerCase())) ? 1 : -1) )] 
                                 fav.tags.forEach(( tag )=>{
                                     tag = tag.toLowerCase();
+                                    aAllTags.push( tag )
                                     if( tag ) sTags += `<span data-wired4sound="click|10" class="fav-tag--${ tag }">${ tag }</span>`;
                                 });
                                 let sMU = `
@@ -59,6 +61,7 @@ tags:
                         }
                     });
                     if(snck) snck.q( nCnt + " " + sInc.toLocaleUpperCase() + "|Curated Links")
+                    elVect.dataset.at = aAllTags.join("|")
                 }
             })( document, [".js-sec__fav", ".js-vect__banner"], "typescript", "a55");
         });
