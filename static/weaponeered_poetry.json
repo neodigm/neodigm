@@ -541,7 +541,7 @@
 {"name":"Daniel Rosenwasser on TypeScript","comment":"Microsoft Program Manager, TypeScript","uri":"https://devblogs.microsoft.com/typescript/author/danielrosenwasser/","cat":"blogfolio","tags":["typescript","js","blog"]},
 {"name":"A New Way to Achieve Round-Efficient Byzantine Agreement","comment":"Minimizing the round complexity of Byzantine Agreement (BA)","uri":"https://eprint.iacr.org/2021/814","cat":"tech","tags":["infosec","encryption","privacy","cryptographic","proxcensus","protocols"]},
 {"name":"A General Purpose Transpiler for Fully Homomorphic Encryption","comment":"Fully homomorphic encryption (FHE) is an encryption scheme which enables computation on encrypted data without revealing the underlying data.","uri":"https://eprint.iacr.org/2021/811","cat":"tech","tags":["infosec","encryption","privacy","homomorphic","protocols"]},
-{"name":"","comment":"","uri":"","cat":"tech","tags":["infosec","encryption","privacy","","",""]},
+{"name":"White-box Cryptography with Device Binding","comment":"hite-box cryptography has been proposed as a software countermeasure technique for applications where limited or no hardware-based security is available.","uri":"https://eprint.iacr.org/2021/767","cat":"tech","tags":["infosec","encryption","privacy","Obfuscation","cryptography"]},
 {"name":"","comment":"","uri":"","cat":"tech","tags":["infosec","encryption","privacy","","",""]},
 {"name":"","comment":"","uri":"","cat":"tech","tags":["infosec","encryption","privacy","","",""]},
 {"name":"","comment":"","uri":"","cat":"tech","tags":["infosec","encryption","privacy","","",""]},
