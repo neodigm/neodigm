@@ -398,6 +398,7 @@ if( e3 ) { // Delay 3d call if still null
                     if(eVivCnt.atVivid !== eVivCnt.dataset.atVivid){ // Data atr changed
                         Array.from( eVivCnt.dataset.atVivid ).filter(( sChr )=>{
                             if( sChr == " " ) sChr = "space";
+                            if( sChr == "." ) sChr = "period";
                             sMU += "<img src='" + VIVPATH + sChr.toLowerCase() + ".svg'>";
                         });
                         eVivCnt.innerHTML = sMU;
@@ -407,7 +408,7 @@ if( e3 ) { // Delay 3d call if still null
                 setTimeout( ()=>{ doVividCaption.tick(); }, _t);
             }
         };
-    })(document, "[data-at-vivid]", 2664 );
+    })(document, "[data-at-vivid]", 2064 );
 
     setTimeout(()=>{
         let wired4SoundPrep = (( _d )=>{ // Flick Nav Arrows and Mega SVGs

@@ -568,11 +568,11 @@ a.skip__main {
     overflow: hidden;
 }
 .l-favs article div p.fav-cat {
+    color: #fff;
     position: relative;
     top: 4px; left: 4px;
     width: 100%;
     text-align: left;
-
 }
 .l-favs article div.fav__comment {
     padding: 12px;
