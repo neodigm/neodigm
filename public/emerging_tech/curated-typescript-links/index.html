@@ -161,7 +161,12 @@ href="#a11y-skipmain">Skip to Main Content</a>
                 let aAllTags = []
                 let nCnt =0
                 if( elFavs && aFavs ){
-                    aFavs = aFavs.sort((a, b) => ((a.cat+a.name) > (b.cat+b.name)) ? 1 : -1)
+                    aFavs = aFavs.sort((a, b)=>{
+                        let nWeight = 0;
+                        nWeight =  ((a.cat+a.name) > (b.cat+b.name)) ? 1 : -1;
+                        ( a.tags.join("|").indexOf("1st") > b.tags.join("|").indexOf("1st")) ? nWeight++ : nWeight--;
+                        return nWeight;
+                    })
                     aFavs.forEach((fav)=>{
                         if( fav.cat !== sExc){
                             if( fav.tags.find( cell => cell.toLowerCase() === sInc )){
