@@ -38,9 +38,8 @@ tags:
                 if( elFavs && aFavs ){
                     aFavs = aFavs.sort((a, b)=>{
                         let nWeight = 0;
-                        let sTags = a.tags.join("|")
                         nWeight =  ((a.cat+a.name) > (b.cat+b.name)) ? 1 : -1
-                        if( sTags.indexOf("1st") > -1 ) nWeight=nWeight-1.1
+                        if( a.tags.join("|").indexOf("1st") > -1 ) nWeight=nWeight-1.1
                         return nWeight;
                     })
                     aFavs.forEach((fav)=>{
@@ -53,9 +52,11 @@ tags:
                                 if( fav.uri.toLowerCase().indexOf("github") !== -1 ) fav.tags.push("git");
                                 fav.tags = [ ... new Set( fav.tags.sort((a, b) => ((a.toLowerCase()) > (b.toLowerCase())) ? 1 : -1) )] 
                                 fav.tags.forEach(( tag )=>{
-                                    tag = tag.toLowerCase();
-                                    aAllTags.push( tag )
-                                    if( tag ) sTags += `<span data-wired4sound="click|10" class="fav-tag--${ tag }">${ tag }</span>`;
+                                    if(tag !== "1st"){
+                                        tag = tag.toLowerCase();
+                                        aAllTags.push( tag )
+                                        if( tag ) sTags += `<span data-wired4sound="click|10" class="fav-tag--${ tag }">${ tag }</span>`;                                        
+                                    }
                                 });
                                 let sMU = `
                                 <article data-pfmf-tag-filter="true">
