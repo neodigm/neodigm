@@ -38,10 +38,9 @@ tags:
                 if( elFavs && aFavs ){
                     aFavs = aFavs.sort((a, b)=>{
                         let nWeight = 0;
-                        nWeight =  ((a.cat+a.name) > (b.cat+b.name)) ? 1 : -1;
-                        if( a.tags.join("|").indexOf("1st")){
-                            nWeight=nWeight-1.1;
-                        }
+                        let sTags = a.tags.join("|")
+                        nWeight =  ((a.cat+a.name) > (b.cat+b.name)) ? 1 : -1
+                        if( sTags.indexOf("1st") > -1 ) nWeight=nWeight-1.1
                         return nWeight;
                     })
                     aFavs.forEach((fav)=>{
