@@ -39,7 +39,7 @@ tags:
                     aFavs = aFavs.sort((a, b)=>{
                         let nWeight = 0;
                         nWeight =  ((a.cat+a.name) > (b.cat+b.name)) ? 1 : -1;
-                        ( a.tags.join("|").indexOf("1st") > b.tags.join("|").indexOf("1st")) ? nWeight++ : nWeight--;
+                        ( a.tags.join("|").indexOf("1st") > b.tags.join("|").indexOf("1st")) ? (nWeight=nWeight-1.1) : (nWeight=nWeight);
                         return nWeight;
                     })
                     aFavs.forEach((fav)=>{
