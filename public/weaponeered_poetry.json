@@ -550,5 +550,10 @@
 {"name":"From Cloud Password to KeePass Password 🔐","comment":"If you don’t trust your passwords on the cloud then this article is for you. If you’ve tried a cloud based password managers and received your first monthly bill then this article is for you.","uri":"https://arcanus55.medium.com/moving-password-management-from-the-cloud-to-keepass-password-vault-9e3c465bf5d4","cat":"tech","tags":["infosec","encryption","privacy","password","anonymity"]},
 {"name":"Sensational Mind Blowing Interactive Type","comment":"Beautiful Hand Drawn Letters","uri":"https://neodigm.github.io/vivid_vector_alphabet/","cat":"creative","tags":["js","animation","type","svg","generative"]},
 {"name":"tsParticles Web Component","comment":"","uri":"https://codepen.io/matteobruni/full/ZEeqGOq","cat":"creative","tags":["js","animation","particle","svg","generative"]},
-{"name":"","comment":"","uri":"","cat":"tech","tags":["js","typescript","generative"]}
+{"name":"Vue Query","comment":"Vue Query package provides hooks for fetching, caching and updating asynchronous data in Vue.","uri":"https://vue-query.vercel.app/#/","cat":"tech","tags":["js","typescript","vue"]},
+{"name":"","comment":"","uri":"","cat":"tech","tags":["js","typescript","vue"]},
+{"name":"","comment":"","uri":"","cat":"tech","tags":["js","typescript","vue"]},
+{"name":"","comment":"","uri":"","cat":"tech","tags":["js","typescript","vue"]},
+{"name":"","comment":"","uri":"","cat":"tech","tags":["js","typescript","vue"]},
+{"name":"","comment":"","uri":"","cat":"tech","tags":["js","typescript","vue"]}
 ]
