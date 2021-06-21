@@ -551,8 +551,8 @@
 {"name":"Sensational Mind Blowing Interactive Type","comment":"Beautiful Hand Drawn Letters","uri":"https://neodigm.github.io/vivid_vector_alphabet/","cat":"creative","tags":["js","animation","type","svg","generative"]},
 {"name":"tsParticles Web Component","comment":"","uri":"https://codepen.io/matteobruni/full/ZEeqGOq","cat":"creative","tags":["js","animation","particle","svg","generative"]},
 {"name":"Vue Query","comment":"Vue Query package provides hooks for fetching, caching and updating asynchronous data in Vue.","uri":"https://vue-query.vercel.app/#/","cat":"tech","tags":["js","typescript","vue"]},
-{"name":"","comment":"","uri":"","cat":"tech","tags":["js","typescript","vue"]},
-{"name":"","comment":"","uri":"","cat":"tech","tags":["js","typescript","vue"]},
+{"name":"Vue Query NPM","comment":"Transport/protocol/backend agnostic data fetching (REST, GraphQL, promises, whatever!)","uri":"https://www.npmjs.com/package/vue-query","cat":"tech","tags":["js","typescript","vue","npm"]},
+{"name":"Scala Metals VSCode","comment":"Metals extension for Visual Studio Code","uri":"https://marketplace.visualstudio.com/items?itemName=scalameta.metals","cat":"tech","tags":["js","typescript","vue"]},
 {"name":"","comment":"","uri":"","cat":"tech","tags":["js","typescript","vue"]},
 {"name":"","comment":"","uri":"","cat":"tech","tags":["js","typescript","vue"]},
 {"name":"","comment":"","uri":"","cat":"tech","tags":["js","typescript","vue"]}
