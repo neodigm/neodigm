@@ -549,5 +549,6 @@
 {"name":"Is Your Gmail Safe?","comment":"Your Gmail account integrity is the weakest link in you privacy stack. If a bad actor gains access to your Gmail it could end your career.","uri":"https://arcanus55.medium.com/is-your-gmail-safe-e60d88778add","cat":"tech","tags":["infosec","encryption","privacy","blockchain","anonymity"]},
 {"name":"From Cloud Password to KeePass Password 🔐","comment":"If you don’t trust your passwords on the cloud then this article is for you. If you’ve tried a cloud based password managers and received your first monthly bill then this article is for you.","uri":"https://arcanus55.medium.com/moving-password-management-from-the-cloud-to-keepass-password-vault-9e3c465bf5d4","cat":"tech","tags":["infosec","encryption","privacy","password","anonymity"]},
 {"name":"Sensational Mind Blowing Interactive Type","comment":"Beautiful Hand Drawn Letters","uri":"https://neodigm.github.io/vivid_vector_alphabet/","cat":"creative","tags":["js","animation","type","svg","generative"]},
-{"name":"tsParticles Web Component","comment":"","uri":"https://codepen.io/matteobruni/full/ZEeqGOq","cat":"creative","tags":["js","animation","particle","svg","generative"]}
+{"name":"tsParticles Web Component","comment":"","uri":"https://codepen.io/matteobruni/full/ZEeqGOq","cat":"creative","tags":["js","animation","particle","svg","generative"]},
+{"name":"","comment":"","uri":"","cat":"tech","tags":["js","typescript","generative"]}
 ]
