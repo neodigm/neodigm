@@ -94,7 +94,7 @@
     {"name": "Gamified auth", "cat": "saas", "tags": ["privacy","","","","",""], "uri": "https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8476573", "comment": "Chess akult"},
     {"name": "gif maker", "cat": "creative", "tags": ["gif","creative"], "uri": "https://giphy.com/create/gifmaker", "comment": "amination gif"},
     {"name": "webassembly via typescript", "cat": "tech", "tags": ["js","typescript","wasm","","",""], "uri": "https://www.youtube.com/watch?v=3KuDtqFxvRg", "comment": "ts wasm AssemblyScript "},
-    {"name": "simple icons", "cat": "creative", "tags": ["us","svg","creative"], "uri": "https://simpleicons.org/", "comment": "svg icons social"},
+    {"name": "simple icons", "cat": "creative", "tags": ["ux","svg","creative"], "uri": "https://simpleicons.org/", "comment": "svg icons social"},
     {"name": "animated url hash emoji", "cat": "tech", "tags": ["js","","","","",""], "uri": "http://matthewrayfield.com/articles/animating-urls-with-javascript-and-emojis/#%F0%9F%8C%91", "comment": "emoji loop anim url omnibox"},
     {"name": "anamorphic", "cat": "creative", "tags": ["animation","creative"], "uri": "https://io9.gizmodo.com/5928448/the-art-of-anamorphic-illusions?tag=optical-illusions", "comment": "The art of anamorphic illusions"},
     {"name": "svg canvas paper.js creative", "cat": "creative", "tags": ["svg","js","creative"], "uri": "http://paperjs.org/", "comment": "mike chambers"},
@@ -556,5 +556,6 @@
 {"name":"Mitre Enterprise tactics and techniques","comment":"The Matrix contains information for the following platforms: Windows, macOS, Linux, PRE, Azure AD, Office 365, Google Workspace, SaaS, IaaS, Network, Containers.","uri":"https://attack.mitre.org/matrices/enterprise/","cat":"tech","tags":["infosec","encryption","privacy","Mitre","att&ck"]},
 {"name":"Mike Gualtieri","comment":"Mike is a technologist and entrepreneur who is passionate about Linux, Open Source Software, internet privacy, and cyber security.","uri":"https://www.mike-gualtieri.com/","cat":"blogfolio","tags":["infosec","encryption","privacy"]},
 {"name":"CSS Houdini Dojo","comment":"A small project with 0 external dependencies to explore the emerging CSS Houdini Paint API.","uri":"https://css-houdini-dojo.georgi-nikolov.com/","cat":"creative","tags":["css","houdini","generative","creative"]},
-{"name":"houdini how","comment":"Houdini is a group of APIs that give developers direct access to the CSS Object Model (CSSOM), enabling developers to write code the browser can parse as CSS","uri":"https://houdini.how/#","cat":"creative","tags":["css","houdini","generative","creative"]}
+{"name":"houdini how","comment":"Houdini is a group of APIs that give developers direct access to the CSS Object Model (CSSOM), enabling developers to write code the browser can parse as CSS","uri":"https://houdini.how/#","cat":"creative","tags":["css","houdini","generative","creative"]},
+{"name":"Hemanth HM","comment":"MTS at PayPal Inc.","uri":"https://h3manth.com/","cat":"blogfolio","tags":["js","node"]}
 ]
