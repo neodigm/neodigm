@@ -184,7 +184,7 @@
     {"name": "tink js", "cat": "tech", "tags": ["js","npm","","","",""], "uri": "https://stackblitz.com/edit/react-rmxhhb?file=src%2FApp.js", "comment": ""},
     {"name": "scan usb devices", "cat": "tech", "tags": ["js","chrome","","","",""], "uri": "chrome://device-log/?refresh=12", "comment": ""},
     {"name": "interactive digital commic", "cat": "creative", "tags": ["ux","webtoons","creative"], "uri": "https://screendiver.com/prostress/0730-the-importance-of-art-education/", "comment": ""},
-    {"name": "Project Fugu", "cat": "tech", "tags": ["api","js","1st","","",""], "uri": "https://docs.google.com/spreadsheets/d/1de0ZYDOcafNXXwMcg4EZhT0346QM-QFvZfoD8ZffHeA/edit#gid=557099940", "comment": ""},
+    {"name": "Project Fugu", "cat": "tech", "tags": ["api","js","1st","api"], "uri": "https://docs.google.com/spreadsheets/d/1de0ZYDOcafNXXwMcg4EZhT0346QM-QFvZfoD8ZffHeA/edit#gid=557099940", "comment": ""},
     {"name": "Blender Coke Can", "cat": "creative", "tags": ["3d","creative"], "uri": "https://www.youtube.com/watch?v=G7YUIFpi6Y8", "comment": ""},
     {"name": "Three.js OffscreenCanvas", "cat": "tech", "tags": ["js","3d","","","",""], "uri": "https://threejsfundamentals.org/threejs/lessons/threejs-offscreencanvas.html", "comment": ""},
     {"name": "Jexcel", "cat": "tech", "tags": ["js","excel","","","",""], "uri": "https://bossanova.uk/jexcel/v4/", "comment": "jExcel is a lightweight vanilla javascript plugin to create amazing web-based online interactive tables and spreadsheets compatible with other spreadsheet softwares. "},
