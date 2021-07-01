@@ -564,5 +564,6 @@
 {"name":"Matalic Text Style CSS","comment":"Matalic Text Style CSS CodePen","uri":"https://codepen.io/mandymichael/pen/JjWQXqy","cat":"creative","tags":["css","type","gradient"]},
 {"name":"AnimeJS","comment":"It works with CSS properties, SVG, DOM attributes and JavaScript Objects.","uri":"https://animejs.com/","cat":"creative","tags":["js","animation"]},
 {"name":"Latest JavaScript on Reddit","comment":"Community Posts","uri":"https://www.reddit.com/r/javascript/new/","cat":"ecosystem","tags":["js","typescript","1st"]},
-{"name":"Latest TypeScript on Reddit","comment":"Community Posts","uri":"https://www.reddit.com/r/typescript/new/","cat":"ecosystem","tags":["js","typescript","1st"]}
+{"name":"Latest TypeScript on Reddit","comment":"Community Posts","uri":"https://www.reddit.com/r/typescript/new/","cat":"ecosystem","tags":["js","typescript","1st"]},
+{"name":"V8 Wasm Features","comment":"V8 Wasm Features","uri":"https://v8.dev/features","cat":"ecosystem","tags":["js","typescript"]}
 ]
