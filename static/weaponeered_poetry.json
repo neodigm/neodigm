@@ -571,5 +571,6 @@
 {"name":"Petite Vue.js","comment":"Petite Vue.js light and fast Vue","uri":"https://www.npmjs.com/package/petite-vue","cat":"tech","tags":["js","vue","npm"]},
 {"name":"PixiJS The HTML5 Creation Engine","comment":"Create beautiful digital content with the fastest, most flexible 2D WebGL renderer.","uri":"https://www.pixijs.com/","cat":"creative","tags":["js","animation","creative"]},
 {"name":"Jake Trent","comment":"","uri":"https://jaketrent.com/post/create-bezier-curve-clip-path","cat":"blogfolio","tags":["js","css","svg","creative","nestjs"]},
-{"name":"do not look into laser with remaining eye","comment":"","uri":"https://graphthinking.blogspot.com/","cat":"eccosystem","tags":["datavis","data"]}
+{"name":"do not look into laser with remaining eye","comment":"","uri":"https://graphthinking.blogspot.com/","cat":"eccosystem","tags":["datavis","data"]},
+{"name":"One Line JS Solutions","comment":"","uri":"https://github.com/nonunicorn/onelinerhub/tree/main/javascript","cat":"eccosystem","tags":["js","1st"]}
 ]
