@@ -573,5 +573,5 @@
 {"name":"do not look into laser with remaining eye","comment":"","uri":"https://graphthinking.blogspot.com/","cat":"eccosystem","tags":["datavis","data"]},
 {"name":"One Line JS Solutions","comment":"","uri":"https://github.com/nonunicorn/onelinerhub/tree/main/javascript","cat":"ecosystem","tags":["js","1st"]},
 {"name":"Music for Programming","comment":"Techno Chill","uri":"https://www.musicforprogramming.net/","cat":"creative","tags":["creative","music","art"]},
-{"name":"","comment":"Jurgen Van de Moere—Front-end Architect","uri":"https://www.jvandemo.com/","cat":"creative","tags":["js","angular","service workers","typescript"]}
+{"name":"jvandemo.com","comment":"Jurgen Van de Moere—Front-end Architect","uri":"https://www.jvandemo.com/","cat":"blogfolio","tags":["js","angular","service workers","typescript"]}
 ]
