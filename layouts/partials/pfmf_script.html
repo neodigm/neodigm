@@ -479,14 +479,15 @@ if( e3 ) { // Delay 3d call if still null
     const mqPrefColorScheme = window.matchMedia("(prefers-color-scheme: dark)");
 
     doPrefersReducedMotion( (mqPrefReducedMotion && mqPrefReducedMotion.matches) );
-    doPrefersColorScheme( (mqPrefColorScheme && mqPrefColorScheme.matches), false );
+    //  doPrefersColorScheme( (mqPrefColorScheme && mqPrefColorScheme.matches), false );
+    doPrefersColorScheme( false, false );
 
-    // listen to changes in the media query's value
+    // listen to changes in the media query's value NOT USED
     mqPrefReducedMotion.addEventListener("change", () => {
-        //  doPrefersReducedMotion( mqPrefReducedMotion.matches );
+        doPrefersReducedMotion( mqPrefReducedMotion.matches );
     });
     mqPrefColorScheme.addEventListener("change", () => {
-        //  doPrefersColorScheme( mqPrefColorScheme.matches, true );
+        doPrefersColorScheme( mqPrefColorScheme.matches, true );
     });
 
 </script>
