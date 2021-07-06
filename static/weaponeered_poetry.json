@@ -579,7 +579,7 @@
 {"name":"Vue.js","comment":"","uri":"","cat":"ecosystem","tags":["js","typescript","vue"]},
 {"name":"Vue.js","comment":"","uri":"","cat":"ecosystem","tags":["js","typescript","vue"]},
 {"name":"Vue.js","comment":"","uri":"","cat":"ecosystem","tags":["js","typescript","vue"]},
-{"name":"","comment":"","uri":"","cat":"ecosystem","tags":["js","typescript","wasm"]},
-{"name":"","comment":"","uri":"","cat":"ecosystem","tags":["js","typescript","wasm"]},
-{"name":"","comment":"","uri":"","cat":"ecosystem","tags":["js","typescript","wasm"]}
+{"name":"Webassembly","comment":"","uri":"","cat":"ecosystem","tags":["js","typescript","wasm"]},
+{"name":"Webassembly","comment":"","uri":"","cat":"ecosystem","tags":["js","typescript","wasm"]},
+{"name":"Webassembly","comment":"","uri":"","cat":"ecosystem","tags":["js","typescript","wasm"]}
 ]
