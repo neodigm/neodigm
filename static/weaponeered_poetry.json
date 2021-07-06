@@ -582,6 +582,5 @@
 {"name":"Latest Vue.js on Reddit","comment":"","uri":"https://www.reddit.com/r/vue/new/","cat":"ecosystem","tags":["js","typescript","vue","reddit"]},
 {"name":"Trending Webassembly Repos","comment":"See what the WebAssembly GitHub community is excited about today.","uri":"https://github.com/trending/wasm","cat":"ecosystem","tags":["js","typescript","wasm","git"]},
 {"name":"Latest Webassembly on StackOverflow","comment":"","uri":"https://stackoverflow.com/questions/tagged/wasm","cat":"ecosystem","tags":["js","typescript","wasm","stackoverflow"]},
-{"name":"Webassembly","comment":"","uri":"https://www.reddit.com/r/wasm/new/","cat":"ecosystem","tags":["js","typescript","wasm","reddit"]}
+{"name":"Latest Webassembly / WASM on Reddit","comment":"","uri":"https://www.reddit.com/r/wasm/new/","cat":"ecosystem","tags":["js","typescript","wasm","reddit"]}
 ]
-{"name":"Latest JavaScript on Reddit","comment":"Community Posts","uri":"https://www.reddit.com/r/javascript/new/","cat":"ecosystem","tags":["js","typescript","1st","reddit"]}, 
