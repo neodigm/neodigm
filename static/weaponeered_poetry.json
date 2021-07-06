@@ -580,6 +580,6 @@
 {"name":"Vue.js","comment":"","uri":"","cat":"ecosystem","tags":["js","typescript","vue"]},
 {"name":"Vue.js","comment":"","uri":"","cat":"ecosystem","tags":["js","typescript","vue"]},
 {"name":"Trending Webassembly Repos","comment":"See what the WebAssembly GitHub community is most excited about today.","uri":"https://github.com/trending/wasm","cat":"ecosystem","tags":["js","typescript","wasm"]},
-{"name":"Webassembly","comment":"","uri":"","cat":"ecosystem","tags":["js","typescript","wasm"]},
-{"name":"Webassembly","comment":"","uri":"","cat":"ecosystem","tags":["js","typescript","wasm"]}
+{"name":"Webassembly","comment":"","uri":"https://stackoverflow.com/questions/tagged/typescript","cat":"ecosystem","tags":["js","typescript","wasm"]},
+{"name":"Webassembly","comment":"","uri":"https://stackoverflow.com/questions/tagged/typescript","cat":"ecosystem","tags":["js","typescript","wasm"]}
 ]
