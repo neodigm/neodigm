@@ -576,10 +576,11 @@
 {"name":"jvandemo.com","comment":"Jurgen Van de Moere—Front-end Architect","uri":"https://www.jvandemo.com/","cat":"blogfolio","tags":["js","angular","service workers","typescript"]},
 {"name":"Vivid Digital Alchemy","comment":"Branding, Identity and Logo Design","uri":"https://neodigm.github.io/brand_logo_graphic_design/","cat":"blogfolio","tags":["creative","marketing","brand","design"]},
 {"name":"33 JS Concepts","comment":"33 Concepts Every JavaScript Developer Should Know","uri":"https://github.com/leonardomso/33-js-concepts","cat":"ecosystem","tags":["js","typescript"]},
-{"name":"Trending Vue.js Repos","comment":"See what the Vue.js GitHub community is most excited about today.","uri":"https://github.com/trending/vue","cat":"ecosystem","tags":["js","typescript","vue"]},
+
+{"name":"Trending Vue.js Repos","comment":"See what the Vue.js GitHub community is most excited about today.","uri":"https://github.com/trending/vue","cat":"ecosystem","tags":["js","typescript","vue","git"]},
 {"name":"Latest Vue.js on StackOverflow","comment":"","uri":"https://stackoverflow.com/questions/tagged/vue","cat":"ecosystem","tags":["js","typescript","vue"]},
 {"name":"Vue.js","comment":"","uri":"","cat":"ecosystem","tags":["js","typescript","vue"]},
-{"name":"Trending Webassembly Repos","comment":"See what the WebAssembly GitHub community is most excited about today.","uri":"https://github.com/trending/wasm","cat":"ecosystem","tags":["js","typescript","wasm"]},
+{"name":"Trending Webassembly Repos","comment":"See what the WebAssembly GitHub community is most excited about today.","uri":"https://github.com/trending/wasm","cat":"ecosystem","tags":["js","typescript","wasm","git"]},
 {"name":"Latest Webassembly on StackOverflow","comment":"","uri":"https://stackoverflow.com/questions/tagged/wasm","cat":"ecosystem","tags":["js","typescript","wasm"]},
 {"name":"Webassembly","comment":"","uri":"","cat":"ecosystem","tags":["js","typescript","wasm"]}
 ]
