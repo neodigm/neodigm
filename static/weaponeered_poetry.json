@@ -25,7 +25,7 @@
     {"name": "Sketchfab 3D/VR player", "cat": "tech", "tags": ["3d"], "uri": "https://sketchfab.com/", "comment": "Sketchfab 3D/VR player"},
     {"name": "royalty free photos", "cat": "creative", "tags": ["photos","stock","creative"], "uri": "https://unsplash.com/", "comment": "Copyright free photo stock"},
     {"name": "royalty free photos", "cat": "creative", "tags": ["photos","stock","creative"], "uri": "https://www.pexels.com/", "comment": "Copyright free photo stock"},
-    {"name": "Animating vuejs", "cat": "tech", "tags": ["animation","vue","svg","js"], "uri": "https://youtu.be/gJDyhmL9O_E", "comment": "As superfluous as something like animation may initially seem, you can tell a lot about framework by the way that it handles the concept of time. Idiosyncrasies and race conditions in rendering reveal themselves, pauses in DOM and virtual DOM diffing can be exposed."},
+    {"name": "Animating vuejs", "cat": "tech", "tags": ["animation","vue","svg","js","creative"], "uri": "https://youtu.be/gJDyhmL9O_E", "comment": "As superfluous as something like animation may initially seem, you can tell a lot about framework by the way that it handles the concept of time. Idiosyncrasies and race conditions in rendering reveal themselves, pauses in DOM and virtual DOM diffing can be exposed."},
     {"name": "Folder advfiles ltdc path tidal", "cat": "a55", "tags": ["LAI"], "uri": "\\advfiles\\ATGTransfer\\Static\\compressed", "comment": "a55"},
     {"name": "A11y laws", "cat": "saas", "tags": ["a11y","law","ux"], "uri": "https://www.w3.org/WAI/Policy/", "comment": "Ally legal"},
     {"name": "3d parallax sketch", "cat": "creative", "tags": ["codepen","3d","creative"], "uri": "http://yiwenl.github.io/Sketches/exps/30/", "comment": "cool interactive parallax 3d"},
@@ -574,5 +574,12 @@
 {"name":"One Line JS Solutions","comment":"","uri":"https://github.com/nonunicorn/onelinerhub/tree/main/javascript","cat":"ecosystem","tags":["js","1st"]},
 {"name":"Music for Programming","comment":"Techno Chill","uri":"https://www.musicforprogramming.net/","cat":"creative","tags":["creative","music","art"]},
 {"name":"jvandemo.com","comment":"Jurgen Van de Moere—Front-end Architect","uri":"https://www.jvandemo.com/","cat":"blogfolio","tags":["js","angular","service workers","typescript"]},
-{"name":"Vivid Digital Alchemy","comment":"Branding, Identity and Logo Design","uri":"https://neodigm.github.io/brand_logo_graphic_design/","cat":"blogfolio","tags":["creative","marketing","brand","design"]}
+{"name":"Vivid Digital Alchemy","comment":"Branding, Identity and Logo Design","uri":"https://neodigm.github.io/brand_logo_graphic_design/","cat":"blogfolio","tags":["creative","marketing","brand","design"]},
+{"name":"33 JS Concepts","comment":"33 Concepts Every JavaScript Developer Should Know","uri":"https://github.com/leonardomso/33-js-concepts","cat":"ecosystem","tags":["js","typescript"]},
+{"name":"","comment":"","uri":"","cat":"ecosystem","tags":["js","typescript","vue"]},
+{"name":"","comment":"","uri":"","cat":"ecosystem","tags":["js","typescript","vue"]},
+{"name":"","comment":"","uri":"","cat":"ecosystem","tags":["js","typescript","vue"]},
+{"name":"","comment":"","uri":"","cat":"ecosystem","tags":["js","typescript","wasm"]},
+{"name":"","comment":"","uri":"","cat":"ecosystem","tags":["js","typescript","wasm"]},
+{"name":"","comment":"","uri":"","cat":"ecosystem","tags":["js","typescript","wasm"]}
 ]
