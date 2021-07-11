@@ -60,7 +60,7 @@
     {"name": "Greensock Dev Tools Advanced Animator", "cat": "tech", "tags": ["animation","gsap"], "uri": "https://greensock.com/gsdevtools", "comment": ""},
     {"name": "Video (mp4) compression", "cat": "tech", "tags": ["mp4"], "uri": "http://www.videosmaller.com/", "comment": ""},
     {"name": "Inside Batmans head", "cat": "a55", "tags": ["privacy"], "uri": "https://www.youtube.com/watch?v=Ceca1JCRQbA", "comment": ""},
-    {"name": "Authentication through Gamification", "cat": "tech", "tags": ["Gamification","privacy"], "uri": "https://books.google.com/books?id=zXZBDAAAQBAJ&pg=PA101&lpg=PA101&dq=Knowledge+Based+Authentication+through+Gamification&source=bl&ots=_M7v35oN6E&sig=5dXW9E8CW79WdUL0bGnbgeoAO50&hl=en&sa=X&ved=0ahUKEwikoMLc-r_YAhUkY98KHZfIAMwQ6AEIMjAB#v=onepage&q=Knowledge%20Based%20Authentication%20through%20Gamification&f=false", "comment": "Knowledge Based Authentication through Gamification"},
+    {"name": "Authentication through Gamification", "cat": "tech", "tags": ["gamification","privacy"], "uri": "https://books.google.com/books?id=zXZBDAAAQBAJ&pg=PA101&lpg=PA101&dq=Knowledge+Based+Authentication+through+Gamification&source=bl&ots=_M7v35oN6E&sig=5dXW9E8CW79WdUL0bGnbgeoAO50&hl=en&sa=X&ved=0ahUKEwikoMLc-r_YAhUkY98KHZfIAMwQ6AEIMjAB#v=onepage&q=Knowledge%20Based%20Authentication%20through%20Gamification&f=false", "comment": "Knowledge Based Authentication through Gamification"},
     {"name": "Word Cloud Transparent PNG Motif", "cat": "creative", "tags": ["wordcloud","creative"], "uri": "https://wordart.com/create", "comment": "Crossing Vert Horz | Roboto various"},
     {"name": "Google Closure JS Compiler online", "cat": "tech", "tags": ["js","Compiler"], "uri": "https://closure-compiler.appspot.com/home", "comment": ""},
     {"name": "Lake County Data Hub", "cat": "a55", "tags": ["gov","map","","","",""], "uri": "http://data-lakecountyil.opendata.arcgis.com/", "comment": ""},
@@ -585,6 +585,7 @@
 {"name":"Latest Webassembly / WASM on Reddit","comment":"","uri":"https://www.reddit.com/r/wasm/new/","cat":"ecosystem","tags":["js","typescript","wasm","reddit"]},
 {"name":"Temporal js Dates","comment":"A modern date/time API to the ECMAScript language","uri":"https://tc39.es/proposal-temporal/docs/index.html","cat":"tech","tags":["js","date","temporal","api"]},
 {"name":"Vuex alternative - gist","comment":"Gist | Dive into DOM to access Vuex array from mixin","uri":"https://gist.github.com/neodigm/74234859cbc5dbb9f7a889fb7971e560","cat":"tech","tags":["js","vue","vuex","git","dom"]},
-{"name":"Vue.js Gamification","comment":"JavaScript Gamification 👽 A long time ago in a galaxy far, far away... Vue.js + D3.js + Web Audio API ⭐ Star it!","uri":"https://neodigm.github.io/vue_voyagers/index.html","cat":"creative","tags":["js","vue","d3","git","api","1st"]},
+{"name":"Vue.js Gamification","comment":"JavaScript Gamification 👽 A long time ago in a galaxy far, far away... Vue.js + D3.js + Web Audio API ⭐ Star it!","uri":"https://neodigm.github.io/vue_voyagers/index.html","cat":"creative","tags":["js","vue","d3","git","api","gamification","1st"]},
+{"name":"Made with Vue","comment":"","uri":"https://madewithvuejs.com/","cat":"ecosystem","tags":["js","vue"]},
 {"name":"","comment":"","uri":"https://madewithvuejs.com/","cat":"ecosystem","tags":["js","vue"]}
 ]
