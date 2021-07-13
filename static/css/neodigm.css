@@ -567,7 +567,7 @@ a.skip__main {
         line-height: 1.5;
     text-align: center;
 }
-body[data-pref-scheme='dark']  .l-favs article div {border: solid 1px #767676; }
+body[data-pref-scheme='dark']  .l-favs article div {border: solid 1px #333; }
 body[data-pref-scheme='light'] .l-favs article div {border: solid 1px #ddd; }
 .l-favs article div {
     
