@@ -567,8 +567,10 @@ a.skip__main {
         line-height: 1.5;
     text-align: center;
 }
+body[data-pref-scheme='dark']  .l-favs article div {border: solid 1px #767676; }
+body[data-pref-scheme='light'] .l-favs article div {border: solid 1px #aaa; }
 .l-favs article div {
-    border: solid 1px #868686;
+    
     margin: 2px; padding: 2px;
     border-radius: 6px;
     overflow: hidden;
