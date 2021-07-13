@@ -591,10 +591,7 @@
 {"name":"JS Snippet","comment":"Gists code samples","uri":"https://gist.github.com/neodigm","cat":"tech","tags":["git","js","1st"]},
 {"name":"I love TypeScript","comment":"Vintage 2019 LinkedIn Post","uri":"https://www.linkedin.com/pulse/from-javascript-typescript-tale-two-scripts-scott-krause/","cat":"tech","tags":["js","typescript"]},
 {"name":"CodePen Latest Generative","comment":"","uri":"https://codepen.io/search/pens?q=generative","cat":"ecosystem","tags":["js","generative","creative"]},
-{"name":"","comment":"","uri":"","cat":"","tags":["js","",""]},
-{"name":"","comment":"","uri":"","cat":"","tags":["js","",""]},
-{"name":"","comment":"","uri":"","cat":"","tags":["js","",""]},
-{"name":"","comment":"","uri":"","cat":"","tags":["js","",""]},
-{"name":"","comment":"","uri":"","cat":"","tags":["js","",""]},
-{"name":"","comment":"","uri":"","cat":"","tags":["js","",""]},
-]https://codepen.io/search/pens?q=vue.js
+{"name":"CodePen Latest Vue.js","comment":"","uri":"https://codepen.io/search/pens?q=vue.js","cat":"ecosystem","tags":["js","codepen","vue"]},
+{"name":"CodePen Latest Procedural","comment":"","uri":"https://codepen.io/search/pens?q=procedural","cat":"ecosystem","tags":["js","codepen","procedural"]},
+{"name":"Vue Query","comment":"Vue Query package provides hooks for fetching, caching and updating asynchronous data in Vue.","uri":"https://vue-query.vercel.app/#/","cat":"tech","tags":["js","typescript","vue"]}
+]
