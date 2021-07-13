@@ -568,7 +568,7 @@ a.skip__main {
     text-align: center;
 }
 body[data-pref-scheme='dark']  .l-favs article div {border: solid 1px #767676; }
-body[data-pref-scheme='light'] .l-favs article div {border: solid 1px #aaa; }
+body[data-pref-scheme='light'] .l-favs article div {border: solid 1px #ddd; }
 .l-favs article div {
     
     margin: 2px; padding: 2px;
