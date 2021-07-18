@@ -602,6 +602,6 @@
 {"name":"TypeScript to WASM","comment":"","uri":"https://www.assemblyscript.org/","cat":"tech","tags":["js","typescript","wasm","webassembly","assemblyscript"]},
 {"name":"Grafana Free Dashboards","comment":"","uri":"https://grafana.com/","cat":"tech","tags":["js","typescript","dataviz"]},
 {"name":"13 kilobytes JS Games","comment":"Coding competition for HTML5 Game Developers","uri":"https://js13kgames.com/","cat":"tech","tags":["js","creative","gamification"]},
-{"name":"eCommerce UX experiments","comment":"UX ⚡ IA Microinteraction Prototype","uri":"https://neodigm.github.io/is-ecom-labs/prototypes.html","cat":"tech","tags":["js","creative","ecom","ux"]}
+{"name":"eCommerce UX experiments","comment":"UX ⚡ IA Microinteraction Prototype","uri":"https://neodigm.github.io/is-ecom-labs/prototypes.html","cat":"tech","tags":["js","creative","ecom","ux","1st"]}
 ]
 
