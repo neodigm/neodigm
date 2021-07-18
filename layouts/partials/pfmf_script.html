@@ -70,6 +70,14 @@ let pfmf_tagFilter = ((_d, _q)=>{  //  Dyn content filtering by tag chip
     setTimeout(()=>{
         pfmf_tagFilter.init()
     },760)
+    setTimeout(()=>{  //  auto-click tab if filter search param exists
+        var searchParm = new URLSearchParams( document.location.search )
+        searchParm = searchParm.get("filter")
+        if( searchParm ) {
+            searchParm = document.querySelectorAll(".fav-tag--" + searchParm )[0]
+            searchParm.click()
+        }
+    },976)
     return {
         init: ()=>{
             aArts = [ ... _d.querySelectorAll( _q ) ]
