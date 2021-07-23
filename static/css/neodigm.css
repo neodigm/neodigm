@@ -573,8 +573,10 @@ body[data-pref-scheme='light'] .l-favs article:nth-child(even) { background-colo
 
 body[data-pref-scheme='dark']  .l-favs article div {border: solid 1px #333; }
 body[data-pref-scheme='dark']  .l-favs article:hover div {border: solid 1px #666; }
+body[data-pref-scheme='dark']  .l-favs article:hover div a { color: #000000; }
 body[data-pref-scheme='light'] .l-favs article div {border: solid 1px #ddd; }
 body[data-pref-scheme='light'] .l-favs article:hover div {border: solid 1px #aaa; }
+body[data-pref-scheme='light']  .l-favs article:hover div a { filter: brightness(66%); }
 .l-favs article div {
     
     margin: 2px; padding: 2px;
