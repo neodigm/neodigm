@@ -618,7 +618,7 @@ body[data-pref-scheme='light'] .l-favs article:hover div {border: solid 1px #aaa
 .l-favs article div .fav__tag span.fav-tag--codepen {background-color: #B163A3;}
 .l-favs article div .fav__tag span.fav-tag--creative {background-color: #813373;}
 .l-favs article div .fav__tag span.fav-tag--css     {background-color: #5A5B9F;}
-.l-favs article div .fav__tag span.fav-tag--dataviz {background-color: #9BB7D4;}
+.l-favs article div .fav__tag span.fav-tag--dataviz {background-color: #000000;}
 .l-favs article div .fav__tag span.fav-tag--encryption   {background-color: #5A5B9F;}
 .l-favs article div .fav__tag span.fav-tag--generative {background-color: #C74375;}
 .l-favs article div .fav__tag span.fav-tag--git     {background-color: #9B1B30;}
