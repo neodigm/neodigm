@@ -103,7 +103,7 @@
         {"name": "Stimulus js", "cat": "tech", "tags": ["js","","","","",""], "uri": "https://stimulus.hotwire.dev/", "comment": "A modest JavaScript framework for the HTML you already have"},
     {"name": "Google Algorithm", "cat": "saas", "tags": ["SEO","SERP","","","",""], "uri": "https://static.googleusercontent.com/media/www.google.com/en//insidesearch/howsearchworks/assets/searchqualityevaluatorguidelines.pdf", "comment": "Google Search Organic"},
     {"name": "Google Algorithm", "cat": "saas", "tags": ["SEO","SERP","","","",""], "uri": "https://moz.com/google-algorithm-change", "comment": "Google Search Organic"},
-    {"name": "view service workers in chrome", "cat": "tech", "tags": ["js","","","","",""], "uri": "chrome://serviceworker-internals/", "comment": "sw service worker js chrome"},
+    {"name": "view service workers in chrome", "cat": "tech", "tags": ["js","pwa","api"], "uri": "chrome://serviceworker-internals/", "comment": "sw service worker js chrome"},
     {"name": "CSS Gradients", "cat": "creative", "tags": ["css","creative"], "uri": "https://www.css-gradient.com/", "comment": "color hex gradient online"},
     {"name": "Color Stepper", "cat": "creative", "tags": ["css","creative"], "uri": "https://learnui.design/tools/data-color-picker.html#divergent", "comment": "hex color pallet"},
     {"name": "Material Device Metrics Dimensions", "cat": "tech", "tags": ["css","material","mq","","",""], "uri": "https://www.material.io/tools/devices/", "comment": "Viewports"},
@@ -618,5 +618,6 @@
 {"name":"PWA trending on StackOverflow","comment":"","uri":"https://stackoverflow.com/questions/tagged/progressive-web-apps?tab=Newest","cat":"ecosystem","tags":["pwa","js","api"]},
 {"name":"PWA Type Devs","comment":"","uri":"https://www.typescriptlang.org/dt/search?search=pwa","cat":"ecosystem","tags":["pwa","js","api","typescript"]},
 {"name":"R U Mobile","comment":"Your site should become a native app in both experience and performance","uri":"https://www.linkedin.com/pulse/you-mobile-scott-krause/?trk=portfolio_article-card_title","cat":"blogfolio","tags":["pwa","js","api","mobile","1st"]},
-{"name":"PWA Workbox","comment":"","uri":"https://developers.google.com/web/tools/workbox","cat":"tech","tags":["pwa","js","api","mobile"]}
-]
+{"name":"PWA Workbox","comment":"","uri":"https://developers.google.com/web/tools/workbox","cat":"tech","tags":["pwa","js","api","mobile"]},
+{"name":"PWA Add to Home Screen Tweet","comment":"","uri":"https://twitter.com/arcanus_55/status/1101236397111943169","cat":"tech","tags":["pwa","js","saas","1st"]}
+]https://serviceworke.rs/
