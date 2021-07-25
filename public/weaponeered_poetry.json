@@ -619,5 +619,6 @@
 {"name":"PWA Type Devs","comment":"","uri":"https://www.typescriptlang.org/dt/search?search=pwa","cat":"ecosystem","tags":["pwa","js","api","typescript"]},
 {"name":"R U Mobile","comment":"Your site should become a native app in both experience and performance","uri":"https://www.linkedin.com/pulse/you-mobile-scott-krause/?trk=portfolio_article-card_title","cat":"blogfolio","tags":["pwa","js","api","mobile","1st"]},
 {"name":"PWA Workbox","comment":"","uri":"https://developers.google.com/web/tools/workbox","cat":"tech","tags":["pwa","js","api","mobile"]},
-{"name":"PWA Add to Home Screen Tweet","comment":"","uri":"https://twitter.com/arcanus_55/status/1101236397111943169","cat":"tech","tags":["pwa","js","saas","1st"]}
+{"name":"PWA Add to Home Screen Tweet","comment":"","uri":"https://twitter.com/arcanus_55/status/1101236397111943169","cat":"tech","tags":["pwa","js","saas","1st"]},
+{"name":"Thomas Steiner","comment":"","uri":"https://blog.tomayac.com/","cat":"blogfolio","tags":["pwa","js"]}
 ]
