@@ -624,6 +624,6 @@
 {"name":"Service Worker Fundamentals","comment":"","uri":"https://developers.google.com/web/fundamentals/primers/service-workers","cat":"tech","tags":["pwa","js"]},
 {"name":"What makes a good Progressive Web App?","comment":"","uri":"https://web.dev/pwa-checklist/","cat":"tech","tags":["pwa","js"]},
 {"name":"Cannon.js","comment":"A lightweight and simple 3D physics engine for the web","uri":"https://schteppe.github.io/cannon.js/","cat":"tech","tags":["3d","js","creative"]},
-{"name":"Sam Richard","comment":"Better known as Snugug throughout the Internet","uri":"https://snugug.com/","cat":"blogfolio","tags":["wasm","js","pwa"]}
+{"name":"Sam Richard","comment":"Better known as Snugug throughout the Internet","uri":"https://snugug.com/","cat":"blogfolio","tags":["wasm","js","pwa"]},
 {"name":"Wormhole","comment":"Simple, private file sharing","uri":"https://wormhole.app/","cat":"tech","tags":["infosec","js","pwa"]}
 ]
