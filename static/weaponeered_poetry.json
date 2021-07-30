@@ -626,7 +626,7 @@
 {"name":"Cannon.js","comment":"A lightweight and simple 3D physics engine for the web","uri":"https://schteppe.github.io/cannon.js/","cat":"tech","tags":["3d","js","creative"]},
 {"name":"Sam Richard","comment":"Better known as Snugug throughout the Internet","uri":"https://snugug.com/","cat":"blogfolio","tags":["wasm","js","pwa"]},
 {"name":"Wormhole","comment":"Simple, private file sharing","uri":"https://wormhole.app/","cat":"tech","tags":["infosec","js","pwa"]},
-{"name":"OWASP","comment":"","uri":"","cat":"","tags":["","",""]},
+{"name":"","comment":"","uri":"","cat":"","tags":["","",""]},
 {"name":"","comment":"","uri":"","cat":"","tags":["","",""]},
 {"name":"","comment":"","uri":"","cat":"","tags":["","",""]},
 {"name":"","comment":"","uri":"","cat":"","tags":["","",""]}
