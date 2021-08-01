@@ -619,15 +619,15 @@
 {"name":"PWA Type Devs","comment":"","uri":"https://www.typescriptlang.org/dt/search?search=pwa","cat":"ecosystem","tags":["pwa","js","api","typescript"]},
 {"name":"R U Mobile","comment":"Your site should become a native app in both experience and performance","uri":"https://www.linkedin.com/pulse/you-mobile-scott-krause/?trk=portfolio_article-card_title","cat":"blogfolio","tags":["pwa","js","api","mobile","1st"]},
 {"name":"PWA Workbox","comment":"","uri":"https://developers.google.com/web/tools/workbox","cat":"tech","tags":["pwa","js","api","mobile"]},
-{"name":"PWA Add to Home Screen Tweet","comment":"","uri":"https://twitter.com/arcanus_55/status/1101236397111943169","cat":"tech","tags":["pwa","js","saas","1st"]},
+{"name":"PWA Add to Home Screen Tweet","comment":"","uri":"https://twitter.com/arcanus_55/status/1101236397111943169","cat":"tech","tags":["pwa","js","saas"]},
 {"name":"Are Service Workers Ready","comment":"","uri":"https://jakearchibald.github.io/isserviceworkerready/resources.html","cat":"blogfolio","tags":["pwa","js"]},
 {"name":"Service Worker Fundamentals","comment":"","uri":"https://developers.google.com/web/fundamentals/primers/service-workers","cat":"tech","tags":["pwa","js"]},
 {"name":"What makes a good Progressive Web App?","comment":"","uri":"https://web.dev/pwa-checklist/","cat":"tech","tags":["pwa","js"]},
 {"name":"Cannon.js","comment":"A lightweight and simple 3D physics engine for the web","uri":"https://schteppe.github.io/cannon.js/","cat":"tech","tags":["3d","js","creative"]},
 {"name":"Sam Richard","comment":"Better known as Snugug throughout the Internet","uri":"https://snugug.com/","cat":"blogfolio","tags":["wasm","js","pwa"]},
 {"name":"Wormhole","comment":"Simple, private file sharing","uri":"https://wormhole.app/","cat":"tech","tags":["infosec","js","pwa"]},
+{"name":"Convert Game to TypeScript","comment":"Convert Phaser Game to TypeScript","uri":"https://www.emanueleferonato.com/2021/05/21/phaser-and-the-migration-from-javascript-to-typescript-step-1-node-js/","cat":"blogfolio","tags":["typescript","gamification"]},
 {"name":"","comment":"","uri":"","cat":"","tags":["","",""]},
 {"name":"","comment":"","uri":"","cat":"","tags":["","",""]},
-{"name":"","comment":"","uri":"","cat":"","tags":["","",""]},
-{"name":"","comment":"","uri":"","cat":"","tags":["","",""]},
+{"name":"","comment":"","uri":"","cat":"","tags":["","",""]}
 ]
