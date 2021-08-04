@@ -629,7 +629,7 @@
 {"name":"Convert Game to TypeScript","comment":"Convert Phaser Game to TypeScript","uri":"https://www.emanueleferonato.com/2021/05/21/phaser-and-the-migration-from-javascript-to-typescript-step-1-node-js/","cat":"blogfolio","tags":["typescript","gamification"]},
 {"name":"Interactive Fiction 2020","comment":"","uri":"https://ifcomp.org/comp/2020","cat":"ecosystem","tags":["creative","if"]},
 {"name":"Gmail API tutorial","comment":"","uri":"https://betterprogramming.pub/a-beginners-guide-to-the-google-gmail-api-and-its-documentation-c73495deff08","cat":"tech","tags":["api","saas"]},
-{"name":"","comment":"","uri":"https://shaungallagher.github.io/say_restyle/","cat":"tech","tags":["","",""]},
+{"name":"Edit Webpage with voice","comment":"","uri":"https://shaungallagher.github.io/say_restyle/","cat":"tech","tags":["voice","api","js"]},
 {"name":"","comment":"","uri":"","cat":"","tags":["","",""]},
 {"name":"","comment":"","uri":"","cat":"","tags":["","",""]}
 ]
