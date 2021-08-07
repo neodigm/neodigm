@@ -630,6 +630,5 @@
 {"name":"Interactive Fiction 2020","comment":"","uri":"https://ifcomp.org/comp/2020","cat":"ecosystem","tags":["creative","if"]},
 {"name":"Gmail API tutorial","comment":"","uri":"https://betterprogramming.pub/a-beginners-guide-to-the-google-gmail-api-and-its-documentation-c73495deff08","cat":"tech","tags":["api","saas"]},
 {"name":"Edit Webpage with voice","comment":"","uri":"https://shaungallagher.github.io/say_restyle/","cat":"tech","tags":["voice","api","js"]},
-{"name":"","comment":"","uri":"","cat":"","tags":["","",""]},
-{"name":"","comment":"","uri":"","cat":"","tags":["","",""]}
+{"name":"Simon Willison","comment":"","uri":"https://simonwillison.net/","cat":"blogfolio","tags":["js","git",""]}
 ]
