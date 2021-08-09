@@ -636,6 +636,6 @@
 {"name":"Vugu Go UI","comment":"Build a web front-end in Go that runs in your browser, today.","uri":"https://www.vugu.org/","cat":"tech","tags":["wasm","go","ux","1st"]},
 {"name":"VueUse Vue Composition","comment":"Collection of essential Vue Composition Utilities","uri":"https://vueuse.org/","cat":"tech","tags":["vue","typescrript","npm","1st"]},
 {"name":"VueUse Repo","comment":"Composition Utilities for Vue 2 and 3","uri":"https://github.com/vueuse/vueuse","cat":"tech","tags":["vue","typescrript","repo"]},
-{"name":"","comment":"","uri":"https://github.com/vueuse/vue-demi","cat":"tech","tags":["vue","typescrript"]},
+{"name":"Vue Demi Repo","comment":"Creates Universal Library for Vue 2 & 3","uri":"https://github.com/vueuse/vue-demi","cat":"tech","tags":["vue","typescrript"]},
 {"name":"","comment":"","uri":"","cat":"tech","tags":["vue","typescrript"]}
 ]
