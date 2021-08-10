@@ -638,7 +638,8 @@
 {"name":"VueUse Repo","comment":"Composition Utilities for Vue 2 and 3","uri":"https://github.com/vueuse/vueuse","cat":"tech","tags":["vue","typescrript","repo"]},
 {"name":"Vue Demi Repo","comment":"Creates Universal Library for Vue 2 and 3","uri":"https://github.com/vueuse/vue-demi","cat":"tech","tags":["vue","typescrript"]},
 {"name":"Vue Chemistry","comment":"Reactified JavaScript functions for Vue","uri":"https://github.com/vueuse/vue-chemistry","cat":"tech","tags":["vue","typescrript"]},
-{"name":"Anthony Fu","comment":"","uri":"https://antfu.me/posts","cat":"blogfolio","tags":["vue","typescrript"]}
+{"name":"Anthony Fu","comment":"","uri":"https://antfu.me/posts","cat":"blogfolio","tags":["vue","typescrript"]},
+{"name":"","comment":"","uri":"","cat":"","tags":["",""]}
 ]https://codepen.io/designbyremedy/pen/aqjLx
 https://codepen.io/trangthule/pen/vYmpNYR
 https://chrome.google.com/webstore/detail/aria-devtools/dneemiigcbbgbdjlcdjjnianlikimpck
