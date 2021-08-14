@@ -117,10 +117,28 @@ brew --version
             <div><a class="h-link" target="_blank" rel="noopener" href="https://chrome.google.com/webstore/detail/axe-web-accessibility-tes/lhdoppojpmngadmnindnejefpokejbdd">AxE</a></div>
             <div><a class="h-link" target="_blank" rel="noopener" href="https://chrome.google.com/webstore/detail/postman-interceptor/aicmkgpgakddgnaphhhpliifpcfhicfo/related?hl=en">Postman Interceptor</a></div>
             <div><a class="h-link" target="_blank" rel="noopener" href="https://chrome.google.com/webstore/detail/vue-force-dev/oohfffedbkbjnbpbbedapppafmlnccmb?hl=en">Vue Force Dev</a></div>
-            <h4 class="document__title h-center text-coy_2020">Chrome OSX Command Line</h4>
-<pre><code class="bash">Chrome without CORS
-open -n -a /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --args --user-data-dir="/tmp/chrome_dev_test" --disable-web-security
-</code></pre>
+
+
+            <details>
+                <summary data-wired4sound="click|4" class="h-pro-tip">Pro ⚡ Tips</summary>
+                <p>💡 Create a link to download a PNG image of the CURRENT graph on the canvas.</p>
+
+ {{< highlight javascript >}}
+ document.body.dataset.cyReady = "true";
+ var text, name, file;
+ var eA = document.getElementById("downloadPNG");
+ if( eA ){ // Download image of graph
+     eA.addEventListener("mouseover", (ev)=>{
+         text = window.cy.png({'output': 'blob'});
+         name = "skills_graph.png"; type = "image/png";
+         file = new Blob([text], { type: type });
+         eA.href = URL.createObjectURL(file);
+         eA.download = name;
+     });
+ }
+ {{< /highlight >}}
+             </details>
+
         </article>
     </div>
     <div>
