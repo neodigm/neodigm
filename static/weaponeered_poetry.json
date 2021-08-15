@@ -647,16 +647,16 @@
 {"name":"indexdDB Wrapper API","comment":"","uri":"https://www.npmjs.com/package/idb","cat":"tech","tags":["indexdDB","js","api"]},
 {"name":"PostgreSQL Management Tool","comment":"","uri":"https://marketplace.visualstudio.com/items?itemName=ckolkman.vscode-postgres","cat":"tech","tags":["vscode","js","sql","postgresql"]},
 {"name":"JavaScript Epoch Time Tool","comment":"","uri":"https://ctrlq.org/epoch/","cat":"tech","tags":["tool","js","date","epoch"]},
-{"name":"","comment":"","uri":"","cat":"blogfolio","tags":["creatve"]},
-{"name":"","comment":"","uri":"","cat":"blogfolio","tags":["creatve"]},
-{"name":"","comment":"","uri":"","cat":"blogfolio","tags":["creatve"]},
-{"name":"","comment":"","uri":"","cat":"blogfolio","tags":["creatve"]},
-{"name":"","comment":"","uri":"","cat":"blogfolio","tags":["creatve"]},
-{"name":"","comment":"","uri":"","cat":"blogfolio","tags":["creatve"]},
-]https://codepen.io/cassie-codes
-https://codepen.io/ycw/collections/
-https://paul.kinlan.me/
-http://worrydream.com/
-http://mintdesigncompany.com/
-https://blog.jpl.design/
-https://b5editor.app/
+{"name":"","comment":"","uri":"https://codepen.io/cassie-codes","cat":"blogfolio","tags":["creatve"]},
+{"name":"","comment":"","uri":"https://codepen.io/ycw/collections/","cat":"blogfolio","tags":["creatve"]},
+{"name":"","comment":"","uri":"https://paul.kinlan.me/","cat":"blogfolio","tags":["creatve"]},
+{"name":"","comment":"","uri":"http://worrydream.com/","cat":"blogfolio","tags":["creatve"]},
+{"name":"","comment":"","uri":"http://mintdesigncompany.com/","cat":"blogfolio","tags":["creatve"]},
+{"name":"","comment":"","uri":"https://blog.jpl.design/","cat":"blogfolio","tags":["creatve"]},
+{"name":"","comment":"","uri":"https://b5editor.app/","cat":"tech","tags":["creatve","dataviz"]}
+]
+
+
+
+
+
