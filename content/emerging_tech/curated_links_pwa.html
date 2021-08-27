@@ -31,6 +31,7 @@ tags:
     </div>
 </section>
 
+<script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/2674_RC03/embed_loader.js"></script> 
 <script>
     fetch("/weaponeered_poetry.json")
         .then(response => response.json()) // Get links
@@ -82,4 +83,10 @@ tags:
             })( document, [".js-sec__fav", ".js-vect__banner"], "pwa", "a55");
         });
 
+</script>
+
+<script type="text/javascript">
+setTimeout(function(){
+    trends.embed.renderExploreWidget("TIMESERIES", {"comparisonItem":[{"keyword":"/g/11bzxympx6","geo":"US","time":"2021-05-27 2021-08-27"}],"category":0,"property":""}, {"exploreQuery":"date=today%203-m&geo=US&q=%2Fg%2F11bzxympx6","guestPath":"https://trends.google.com:443/trends/embed/"});
+},2000)
 </script>
