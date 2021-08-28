@@ -94,11 +94,11 @@ tags:
 <script type="text/javascript">
     const eIFCont = _d.querySelector(".eIF__js")
     if( eIFCont ){
-        const eIF = _d.querySelector(".eIF__js article")
+        const eIF = eIFCont.querySelector("article")
         setTimeout(function(){
-console.log( eIF, trends )
-            if( eIF && trends ){
-            trends.embed.renderExploreWidgetTo(eIF, "TIMESERIES", {"comparisonItem":[{"keyword":"/g/11bzxympx6","geo":"US","time":"2021-05-27 2021-08-27"}],"category":0,"property":""}, {"exploreQuery":"date=today%203-m&geo=US&q=%2Fg%2F11bzxympx6","guestPath":"https://trends.google.com:443/trends/embed/"});
+console.log( eIF, trends?.embed )
+            if( eIF && trends?.embed ){
+                trends.embed.renderExploreWidgetTo(eIF, "TIMESERIES", {"comparisonItem":[{"keyword":"/g/11bzxympx6","geo":"US","time":"2021-05-27 2021-08-27"}],"category":0,"property":""}, {"exploreQuery":"date=today%203-m&geo=US&q=%2Fg%2F11bzxympx6","guestPath":"https://trends.google.com:443/trends/embed/"});
             }
         }, 3800)
     }
