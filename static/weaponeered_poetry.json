@@ -659,5 +659,6 @@
 {"name":"3D ShaderToy","comment":"","uri":"https://www.shadertoy.com/","cat":"creative","tags":["creative","js","3d","generative","procedural"]},
 {"name":"Integer Circle Algorithm","comment":"","uri":"https://www.onirom.fr/ica.html","cat":"creative","tags":["creative","js","generative","procedural"]},
 {"name":"Julien Verneuil","comment":"","uri":"https://www.onirom.fr/","cat":"blogfolio","tags":["creative","generative","procedural","math"]},
+{"name":"","comment":"","uri":"https://stackoverflow.com/questions/tagged/ervice-worker","cat":"tech","tags":["js","vue","laravel"]},
 {"name":"Andrew Schmelyun","comment":"","uri":"https://aschmelyun.com/","cat":"blogfolio","tags":["js","vue","laravel"]}
 ]
