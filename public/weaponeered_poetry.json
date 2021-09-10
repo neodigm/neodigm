@@ -670,5 +670,6 @@
 {"name":"The Algorithms JavaScript","comment":"","uri":"https://github.com/TheAlgorithms/Javascript","cat":"tech","tags":["js","algorithm"]},
 {"name":"Lingdong Huang","comment":"","uri":"https://github.com/LingDong-","cat":"blogfolio","tags":["creative","generative","svg"]},
 {"name":"","comment":"","uri":"http://brasslantern.org/","cat":"eccosystem","tags":["creative","story-telling","interactive","fiction"]},
-{"name":"Classic CS Papers","comment":"","uri":"https://gerlacdt.github.io/posts/classic-papers/","cat":"blogfolio","tags":["research","coding"]}
+{"name":"Classic CS Papers","comment":"","uri":"https://gerlacdt.github.io/posts/classic-papers/","cat":"blogfolio","tags":["research","coding"]},
+{"name":"Justin Windle","comment":"Creative Developer from London who likes to mix code, animation, interactivity and generative design","uri":"https://soulwire.co.uk/","cat":"blogfolio","tags":["creative","coding"]}
 ]
