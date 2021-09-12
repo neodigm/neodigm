@@ -453,6 +453,8 @@
 "year": "2019", "level": 6,"desk": ""},
 {"name": "WebAssembly", "target":[6,9,11,12], "value": 66, "stackdebt": "10", "brand":"WASM",
 "year": "2019", "level": 6,"desk": ""},
+{"name": "AssemblyScript", "target":[6,9,11,12], "value": 99, "stackdebt": "10", "brand":"WASM",
+"year": "2019", "level": 6,"desk": ""},
 {"name": "WebGL", "target":[12,13,14,15,16,20], "value": 55, "stackdebt": "1",
 "year": "2019", "level": 6,"desk": ""},
 {"name": "WEBP Images", "target":[5,13,14], "value": 77, "stackdebt": "0",
