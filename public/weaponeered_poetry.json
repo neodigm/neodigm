@@ -672,7 +672,10 @@
 {"name":"","comment":"","uri":"http://brasslantern.org/","cat":"eccosystem","tags":["creative","story-telling","interactive","fiction"]},
 {"name":"Classic CS Papers","comment":"","uri":"https://gerlacdt.github.io/posts/classic-papers/","cat":"blogfolio","tags":["research","coding"]},
 {"name":"Justin Windle","comment":"Creative Developer from London who likes to mix code, animation, interactivity and generative design","uri":"https://soulwire.co.uk/","cat":"blogfolio","tags":["creative","coding"]}
-{"name":"","comment":"","uri":"https://soulwire.co.uk/","cat":"blogfolio","tags":["creative","coding"]}
+{"name":"","comment":"","uri":"","cat":"","tags":["",""]},
+{"name":"","comment":"","uri":"","cat":"","tags":["",""]},
+{"name":"","comment":"","uri":"","cat":"","tags":["",""]},
+{"name":"","comment":"","uri":"","cat":"","tags":["",""]},
 ]https://subconscious.substack.com/p/why-did-the-web-take-over-desktop
 https://web.dev/bundling-non-js-resources/
 wasi.rreverser.com/
