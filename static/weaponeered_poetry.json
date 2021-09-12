@@ -672,8 +672,8 @@
 {"name":"","comment":"","uri":"http://brasslantern.org/","cat":"eccosystem","tags":["creative","story-telling","interactive","fiction"]},
 {"name":"Classic CS Papers","comment":"","uri":"https://gerlacdt.github.io/posts/classic-papers/","cat":"blogfolio","tags":["research","coding"]},
 {"name":"Justin Windle","comment":"Creative Developer from London who likes to mix code, animation, interactivity and generative design","uri":"https://soulwire.co.uk/","cat":"blogfolio","tags":["creative","coding"]},
-{"name":"","comment":"","uri":"https://subconscious.substack.com/p/why-did-the-web-take-over-desktop","cat":"","tags":["",""]},
-{"name":"","comment":"","uri":"https://web.dev/bundling-non-js-resources/","cat":"","tags":["",""]},
-{"name":"","comment":"","uri":"wasi.rreverser.com/","cat":"","tags":["",""]},
-{"name":"","comment":"","uri":"https://rreverser.com/#open","cat":"","tags":["",""]}
+{"name":"","comment":"","uri":"https://subconscious.substack.com/p/why-did-the-web-take-over-desktop","cat":"blogfolio","tags":["",""]},
+{"name":"","comment":"","uri":"https://web.dev/bundling-non-js-resources/","cat":"tech","tags":["js","wasm"]},
+{"name":"","comment":"","uri":"wasi.rreverser.com/","cat":"tech","tags":["wasm","rust"]},
+{"name":"","comment":"","uri":"https://rreverser.com/#open","cat":"blogfolio","tags":["wasm","rust"]}
 ]
