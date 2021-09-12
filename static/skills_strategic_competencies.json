@@ -167,7 +167,7 @@
 "year": "2019", "level": 6,"desk": "ECMAScript in the year 2020"},
 {"name": "Excel VBA", "target":[3,8], "value": 66, "stackdebt": "0",
 "year": "2019", "level": 6,"desk": ""},
-{"name": "FoxBase", "target":[8], "value": 44, "stackdebt": "0",
+{"name": "FoxPro", "target":[8], "value": 44, "stackdebt": "0",
 "year": "2019", "level": 6,"desk": ""},
 {"name": "Gamification", "target":[1,2,3,5,13,15,16,20], "value": 77, "stackdebt": "0",
 "year": "2019", "level": 6,"desk": ""},
