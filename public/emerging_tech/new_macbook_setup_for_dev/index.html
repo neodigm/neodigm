@@ -471,7 +471,7 @@ sbt clean (Optionally delete .ivy2 )
 
 
 
-<section class="pfmf-grid pfmf-grid__100 readable__doc">
+<section class="pfmf-grid pfmf-grid__50_50 readable__doc">
     <div>
         <article class="pfmf-crd--black h-center"><p class="readable__doc readable__doc--white"
             data-at="Golang">Go</p></article>
@@ -485,6 +485,18 @@ nano ~/.zshrc
 export GOPATH=$HOME/go
 export GOROOT="$(brew --prefix golang)/libexec"
 export PATH="$PATH:${GOPATH}/bin:${GOROOT}/bin"
+</code></pre>
+        </article>
+    </div>
+    <div>
+        <article class="pfmf-crd--black h-center"><p class="readable__doc readable__doc--white"
+            data-at="Rust|RustUp">Rust</p></article>
+        <article style="padding: 12px 12px;">
+<pre><code class="bash">
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+</code></pre>
+<pre><code class="bash">
+rustc --version
 </code></pre>
         </article>
     </div>
