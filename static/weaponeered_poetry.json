@@ -690,9 +690,9 @@
 {"name":"Pretty Code","comment":"","uri":"https://carbon.now.sh/","cat":"tech","tags":["creative"]},
 {"name":"Git Helper","comment":"","uri":"https://gitexplorer.com/","cat":"tech","tags":["tool"]},
 {"name":"Animated Borders","comment":"","uri":"https://codepen.io/jhancock532/pen/wvqBdLM","cat":"creative","tags":["JavaScript", "creative", "generative","procedural"]},
-{"name":"","comment":"","uri":"https://medium.com/adobetech/make-your-first-plugin-with-vue-js-for-photoshop-and-adobe-xd-7af094c69aa5","cat":"","tags":[""]},
-{"name":"","comment":"","uri":"https://incoherency.co.uk/image-steganography/#","cat":"","tags":[""]},
-{"name":"","comment":"","uri":"https://incoherency.co.uk/blog/","cat":"","tags":[""]}
+{"name":"Plugin with Vue JS for Photoshop","comment":"","uri":"https://medium.com/adobetech/make-your-first-plugin-with-vue-js-for-photoshop-and-adobe-xd-7af094c69aa5","cat":"tech","tags":["vue","javascript"]},
+{"name":"Steganographically hide images","comment":"","uri":"https://incoherency.co.uk/image-steganography/#","cat":"","tags":[""]},
+{"name":"James Stanley","comment":"","uri":"https://incoherency.co.uk/blog/","cat":"","tags":[""]}
 ]
 
 
