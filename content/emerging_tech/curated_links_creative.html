@@ -75,7 +75,7 @@ tags:
                         }
                     });
                     setTimeout(function(){
-                        if(typeof snck !== "undefined") snck.q( nCnt + " " + sInc.toLocaleUpperCase() + "|Curated Links")
+                        if(typeof snck !== "undefined") neodigmSnack.q( nCnt + " " + sInc.toLocaleUpperCase() + "|Curated Links")
                     }, 2200)
                     elVect.dataset.at = [ ... new Set(aAllTags)].join("|")
                 }
