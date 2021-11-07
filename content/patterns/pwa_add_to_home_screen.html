@@ -37,7 +37,7 @@ eA2hs.addEventListener("click", (e) => {
     evDefPrompt.userChoice
       .then((choiceResult) => {
         if (choiceResult.outcome === "accepted") {
-          if( snck ) snck.q("Wow, Now I'm an App on your Desktop|How Convenient!");
+          if( snck ) neodigmSnack.q("Wow, Now I'm an App on your Desktop|How Convenient!");
           playAudioFile( 7 );  //  ggl tag event | User accepted the A2HS prompt
         } else {
           playAudioFile( 3 );  //  ggl tag event | User dismissed the A2HS prompt
