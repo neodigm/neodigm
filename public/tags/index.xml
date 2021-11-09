@@ -6,13 +6,40 @@
     <description>Recent content in Tags on Scott C. Krause 🚀 neodigm</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 24 Jul 2021 19:06:14 -0500</lastBuildDate><atom:link href="https://thescottkrause.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 17 Oct 2021 18:33:52 -0500</lastBuildDate><atom:link href="https://thescottkrause.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Curated</title>
       <link>https://thescottkrause.com/tags/curated/</link>
-      <pubDate>Sat, 24 Jul 2021 19:06:14 -0500</pubDate>
+      <pubDate>Sun, 17 Oct 2021 18:33:52 -0500</pubDate>
       
       <guid>https://thescottkrause.com/tags/curated/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Links</title>
+      <link>https://thescottkrause.com/tags/links/</link>
+      <pubDate>Sun, 17 Oct 2021 18:33:52 -0500</pubDate>
+      
+      <guid>https://thescottkrause.com/tags/links/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tutorials</title>
+      <link>https://thescottkrause.com/tags/tutorials/</link>
+      <pubDate>Sun, 17 Oct 2021 18:33:52 -0500</pubDate>
+      
+      <guid>https://thescottkrause.com/tags/tutorials/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vue</title>
+      <link>https://thescottkrause.com/tags/vue/</link>
+      <pubDate>Sun, 17 Oct 2021 18:33:52 -0500</pubDate>
+      
+      <guid>https://thescottkrause.com/tags/vue/</guid>
       <description></description>
     </item>
     
@@ -26,42 +53,6 @@
     </item>
     
     <item>
-      <title>Links</title>
-      <link>https://thescottkrause.com/tags/links/</link>
-      <pubDate>Sat, 24 Jul 2021 19:06:14 -0500</pubDate>
-      
-      <guid>https://thescottkrause.com/tags/links/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>PWA</title>
-      <link>https://thescottkrause.com/tags/pwa/</link>
-      <pubDate>Sat, 24 Jul 2021 19:06:14 -0500</pubDate>
-      
-      <guid>https://thescottkrause.com/tags/pwa/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Service Worker</title>
-      <link>https://thescottkrause.com/tags/service-worker/</link>
-      <pubDate>Sat, 24 Jul 2021 19:06:14 -0500</pubDate>
-      
-      <guid>https://thescottkrause.com/tags/service-worker/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Tutorials</title>
-      <link>https://thescottkrause.com/tags/tutorials/</link>
-      <pubDate>Sat, 24 Jul 2021 19:06:14 -0500</pubDate>
-      
-      <guid>https://thescottkrause.com/tags/tutorials/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>TypeScript</title>
       <link>https://thescottkrause.com/tags/typescript/</link>
       <pubDate>Sat, 24 Jul 2021 19:06:14 -0500</pubDate>
@@ -71,11 +62,20 @@
     </item>
     
     <item>
-      <title>Vue</title>
-      <link>https://thescottkrause.com/tags/vue/</link>
+      <title>PWA</title>
+      <link>https://thescottkrause.com/tags/pwa/</link>
       <pubDate>Fri, 09 Jul 2021 12:37:14 -0500</pubDate>
       
-      <guid>https://thescottkrause.com/tags/vue/</guid>
+      <guid>https://thescottkrause.com/tags/pwa/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Service Worker</title>
+      <link>https://thescottkrause.com/tags/service-worker/</link>
+      <pubDate>Fri, 09 Jul 2021 12:37:14 -0500</pubDate>
+      
+      <guid>https://thescottkrause.com/tags/service-worker/</guid>
       <description></description>
     </item>
     
