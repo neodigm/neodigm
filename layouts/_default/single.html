@@ -16,8 +16,6 @@
             <h1 class="readable__title h-center"> {{ .Title }} </h1>
             <p class="readable__doc h-center">Scott C. Krause | {{ dateFormat "Monday, Jan 2, 2006" .Date }}</p>
 
-            {{ partial "neodigm55_snackbar.html" . }}
-
             {{ .Content }}  
 <br>
             {{ partial "carousel_emerging_tech.html" . }}
