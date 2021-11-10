@@ -84,7 +84,7 @@ tags:
         </article>
     </div>
     <div>
-        <article style="padding: 12px 12px;">
+        <article class="js-copy" style="padding: 12px 12px;">
 {{< highlight HTML >}}
 
 
@@ -94,6 +94,9 @@ tags:
 
 
 {{< /highlight >}}
+            <div class="h-center">
+                <button class="js-copy-btn l-btn l-btn--ghost" data-wired4sound="click|10">Copy</button>
+            </div>
         </article>
     </div>
 </section>
@@ -157,4 +160,18 @@ tags:
     setTimeout(function(){ neodigmSnack.q("A vanilla JavaScript|micro-interaction library")}, 28000)
     setTimeout(function(){ neodigmSnack.q("Star us on Github|Contributions welcome")}, 52000)
     setTimeout(function(){ neodigmSnack.q("For those who defiantly think|for themselves ⭐ Star it!")}, 104000)
+</script>
+
+<script>
+    document.querySelector(".js-copy-btn").addEventListener('click', async ev => {
+        if ( navigator.clipboard ) {
+            const cbText = document.querySelector(".js-copy").innerText;
+            try {
+                await navigator.clipboard.writeText( cbText );
+                neodigmSnack.q("Copied to Clipboard|Paste into your document")
+            } catch (err) {
+                console.warn('Failed to copy', err)
+            }
+        }
+    })
 </script>
