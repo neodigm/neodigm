@@ -73,7 +73,7 @@ tags:
                 <p>On a mobile device a Toast message will cause a slight vibration to call attention to the message.</p>
                 <p>A Toast message may contain two lines of text. The pipe character is used to break text onto multiple lines.</p>
                 <details>
-                    <summary data-wired4sound="click|4" class="h-pro-tip text-coy_2009">No JavaScript 💡</summary>
+                    <summary data-wired4sound="click|4" class="h-pro-tip text-coy_2009">No JavaScript ⚡</summary>
                     <p>Neodigm 55 Toast is “declarative”. That means that you simply add a tag to your existing HTML. No JavaScript required. You can use JavaScript if you want however it's not required.</p>
                     <details>
                         <summary data-wired4sound="click|4" class="h-pro-tip text-coy_2009">For Example 👁️</summary>
@@ -95,6 +95,26 @@ tags:
                             <button class="l-btn l-btn--ghost" onClick="neodigmToast.q('Hello World Advanced')"
                             data-wired4sound="click|11">Advanced</button>    
                         </div>
+                        <details>
+                            <summary class="h-pro-tip text-coy_2009" data-wired4sound="click|4"
+                            data-neodigm-toast="This is how to customize|Colors in CSS">Custom Colors 🚀</summary>
+                                <div id="js-copy__css">
+{{< highlight html >}}
+
+<style>
+    .l-snackbar .snackbar__cont { /* Overrides */
+	border-radius: 4px;
+	background: linear-gradient(45deg, #5c81ad 0%, #213042 100%) !important;
+	box-shadow: inset #213042 0 0 6px 2px !important;
+    }
+</style>
+
+{{< /highlight >}}
+                                </div>
+                            <div class="h-center">
+                                <button class="js-copy-btn l-btn l-btn--ghost" onclick="doCopy('#js-copy__css')" data-wired4sound="click|10">Copy</button>
+                            </div>
+                        </details>
                      </details>
                  </details>
              </details>
@@ -110,7 +130,7 @@ tags:
         </article>
     </div>
     <div>
-        <article class="js-copy" style="padding: 12px 12px;">
+        <article id="js-copy__cdn" style="padding: 12px 12px;">
 {{< highlight html >}}
 
 
@@ -121,7 +141,7 @@ tags:
 
 {{< /highlight >}}
             <div class="h-center">
-                <button class="js-copy-btn l-btn l-btn--ghost" data-wired4sound="click|10">Copy</button>
+                <button class="js-copy-btn l-btn l-btn--ghost" onclick="doCopy('#js-copy__cdn')" data-wired4sound="click|10">Copy</button>
             </div>
         </article>
     </div>
@@ -140,10 +160,10 @@ tags:
                     <p>Hi, I am a simple popup. I stay fixed when the page scrolls. I stay focused because the background is blurred. I size myself automatically to fit your content. I am easy to open and easy to close.</p>
                     <p>I can be added to your website without knowledge of JavaScript.</p>
                     <details>
-                        <summary data-wired4sound="click|4" class="h-pro-tip text-coy_2009">No JavaScript 💡</summary>
+                        <summary class="h-pro-tip text-coy_2009" data-wired4sound="click|4" class="h-pro-tip text-coy_2009">No JavaScript 💡</summary>
                         <p>Neodigm 55 Popups are “declarative”. That means that you simply add a tag to your existing HTML. No JavaScript required. You can use JavaScript if you want however it's not required.</p>
                         <details>
-                            <summary data-wired4sound="click|4" class="h-pro-tip text-coy_2009">For Example 👁️</summary>
+                            <summary class="h-pro-tip text-coy_2009" data-wired4sound="click|4" class="h-pro-tip text-coy_2009">For Example 👁️</summary>
                             <p>Simply add a tag to your button:</p>
 {{< highlight html >}}
 
@@ -156,6 +176,30 @@ tags:
 <button onClick="neodigmPop.autoOpen('myPopup_id')">Try Me</button>
 
 {{< /highlight >}}
+                            <details>
+                                <summary class="h-pro-tip text-coy_2009" data-wired4sound="click|4"
+                                data-neodigm-toast="This is the HTML template|used to make a Popup">Popup Template 🚀</summary>
+                                    <div id="js-copy__pop">
+{{< highlight html >}}
+
+<neodigmPop class="l-reveal reveal__init reveal-cta">
+    <section id="YOUR ID HERE" class="reveal-modal medium" data-reveal aria-hidden="true">
+        <a class="close-reveal-modal resp_x eml-msg__x">
+            <svg fill="#EDBA08" height="32" viewBox="0 0 22 22" width="32" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/>
+            <path d="M14.59 8L12 10.59 9.41 8 8 9.41 10.59 12 8 14.59 9.41 16 12 13.41 14.59 16 16 14.59 13.41 12 16 9.41 14.59 8zM12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+        </a>
+        <article class="rev-artc">
+YOUR CONTENT HERE
+        </article>
+    </section>
+</neodigmPop>
+
+{{< /highlight >}}
+                                    </div>
+                                <div class="h-center">
+                                    <button class="js-copy-btn l-btn l-btn--ghost" onclick="doCopy('#js-copy__pop')" data-wired4sound="click|10">Copy</button>
+                                </div>
+                            </details>
                          </details>
                      </details>
                 </article>    
@@ -239,23 +283,23 @@ tags:
 </neodigmPop>
 
 <script>
-    setTimeout(function(){ neodigmToast.q("##Easy to Use|Landing Page Solution 💡")}, 18800)
-    setTimeout(function(){ neodigmToast.q("##Engaging, Performant and Unique")}, 28800)
-    setTimeout(function(){ neodigmToast.q("##A Landing Page|micro-interaction library")}, 68000)
-    setTimeout(function(){ neodigmToast.q("##Star us on Github|Contributions welcome ⭐")}, 126000)
-    setTimeout(function(){ neodigmToast.q("##For those who defiantly think|for themselves ⭐ Star it!")}, 144000)
+    setTimeout(function(){ neodigmToast.q("##Easy to Use|Landing Page Solution 💡")}, 48800)
+    setTimeout(function(){ neodigmToast.q("##Engaging, Performant and Unique")}, 28880)
+    setTimeout(function(){ neodigmToast.q("##A Landing Page|micro-interaction library")}, 88000)
+    setTimeout(function(){ neodigmToast.q("##Star us on Github|Contributions welcome ⭐")}, 826000)
+    setTimeout(function(){ neodigmToast.q("##For those who defiantly think|for themselves ⭐ Star it!")}, 184000)
 </script>
 
-<script>
-    document.querySelector(".js-copy-btn").addEventListener('click', async ev => {
-        if ( navigator.clipboard ) {
-            const cbText = document.querySelector(".js-copy").innerText;
+<script>    
+    function doCopy( _q ){ // Cannot prebind to element withing detail
+        let sText = document.querySelector( _q )?.innerText;
+        if( sText ){
             try {
-                await navigator.clipboard.writeText( cbText );
+                navigator.clipboard.writeText( sText );
                 neodigmToast.q("Copied to Clipboard|Paste into your document")
             } catch (err) {
                 console.warn('Failed to copy', err)
             }
         }
-    })
+    }
 </script>
