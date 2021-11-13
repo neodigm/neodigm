@@ -123,7 +123,7 @@ let pfmf_tagFilter = ((_d, _q)=>{  //  Dyn content filtering by tag chip
                 art.dataset.pfmfTagFilter = (bShow) ? "true" : "false"
                 return art
             })
-            if( neodigmSnack ) neodigmSnack.q( nCount + " " + sFilter );
+            if( neodigmToast ) neodigmToast.q( nCount + " " + sFilter );
         }
     };
 
@@ -494,7 +494,7 @@ if( e3 ) { // Delay 3d call if still null
     }
     var doPrefersColorScheme = function( bScheme, bToast ){ // UI | OS Semaphore
         document.body.dataset.prefScheme = ((bScheme) ? "dark" : "light");
-        if( bToast ) neodigmSnack.q("Switching to|" + document.body.dataset.prefScheme + " color scheme");
+        if( bToast ) neodigmToast.q("Switching to|" + document.body.dataset.prefScheme + " color scheme");
     }
 
     // Capture the prefers media queries
