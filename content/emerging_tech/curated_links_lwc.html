@@ -73,7 +73,7 @@ tags:
                         }
                     });
                     setTimeout(function(){
-                        if(typeof snck !== "undefined") neodigmToast.q( nCnt + " " + sInc.toLocaleUpperCase() + "|Curated Links")
+                        if(typeof neodigmToast !== "undefined") neodigmToast.q( nCnt + " " + sInc.toLocaleUpperCase() + "|Curated Links")
                     }, 2200)
                     elVect.dataset.at = [ ... new Set(aAllTags)].join("|")
                 }
@@ -95,7 +95,7 @@ tags:
         setTimeout(function(){
             if( eIF && trends?.embed ){
                 eIFCont.classList.remove("h-ds__none")
-                trends.embed.renderExploreWidgetTo(eIF, "TIMESERIES", {"comparisonItem":[{"keyword":"Progressive Web App","geo":"US","time":"now 7-d"},{"keyword":"Electron App","geo":"US","time":"now 7-d"}],"category":0,"property":""}, {"exploreQuery":"date=now%207-d&geo=US&q=Progressive%20Web%20App,Electron%20App","guestPath":"https://trends.google.com:443/trends/embed/"})
+                trends.embed.renderExploreWidgetTo(eIF, "TIMESERIES", {"comparisonItem":[{"keyword":"Lightning Web Components","geo":"US","time":"today 12-m"}],"category":0,"property":""}, {"exploreQuery":"q=Lightning%20Web%20Components&geo=US&date=today 12-m","guestPath":"https://trends.google.com:443/trends/embed/"} )
             }
         }, 3800)
     }

@@ -28,16 +28,16 @@ tags:
         <article class="h-bg__stripe" style="padding: 12px 12px;">
             <h3 class="document__title h_ital h-center text-coy_2009">Simple Popup</h3>
             <div class="h-center">
-                <button class="l-btn h-center" data-neodigm-pop-id="js-basic--id" data-wired4sound="click|10">Try Me</button>
+                <button class="l-btn h-center" data-neodigm-sodapop-id="js-basic--id" data-wired4sound="click|10">Try Me</button>
             </div>
             <br><br>
             <details>
                 <summary data-wired4sound="click|4" class="h-pro-tip text-coy_2009">Popup Sizes 💡</summary>
                 <br>
                 <div class="h-center">
-                    <button class="l-btn l-btn--ghost" data-neodigm-pop-id="js-basic--id" data-wired4sound="click|9">Small</button>
-                    <button class="l-btn l-btn--ghost" data-neodigm-pop-id="js-basic-md--id" data-wired4sound="click|10">Medium</button>
-                    <button class="l-btn l-btn--ghost" data-neodigm-pop-id="js-basic-lg--id" data-wired4sound="click|11"
+                    <button class="l-btn l-btn--ghost" data-neodigm-sodapop-id="js-basic--id"    data-wired4sound="click|9">Small</button>
+                    <button class="l-btn l-btn--ghost" data-neodigm-sodapop-id="js-basic-md--id" data-wired4sound="click|10">Medium</button>
+                    <button class="l-btn l-btn--ghost" data-neodigm-sodapop-id="js-basic-lg--id" data-wired4sound="click|11"
                     onclick="neodigmToast.q('No matter the size, it will|always fit on a mobile device.')">Large</button>
                 </div>
              </details>
@@ -74,7 +74,7 @@ tags:
                 <p>A Toast message may contain two lines of text. The pipe character is used to break text onto multiple lines.</p>
                 <details>
                     <summary data-wired4sound="click|4" class="h-pro-tip text-coy_2009">No JavaScript ⚡</summary>
-                    <p>Neodigm 55 Toast is “declarative”. That means that you simply add a tag to your existing HTML. No JavaScript required. You can use JavaScript if you want however it's not required.</p>
+                    <p>Neodigm 55 Toast is “declarative”. That means that you simply add a tag to your existing HTML. No JavaScript required. You can use JavaScript if you want however it's not necessary.</p>
                     <details>
                         <summary data-wired4sound="click|4" class="h-pro-tip text-coy_2009">For Example 👁️</summary>
                         <p>Simply add a tag to your button:</p>
@@ -147,74 +147,57 @@ tags:
     </div>
 </section>
 
-<neodigmPop class="l-reveal reveal__init reveal-cta">
-    <section id="js-basic--id" class="reveal-modal small" data-reveal aria-hidden="true">
-        <a class="close-reveal-modal resp_x eml-msg__x">
-            <svg fill="#EDBA08" height="32" viewBox="0 0 22 22" width="32" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/>
-            <path d="M14.59 8L12 10.59 9.41 8 8 9.41 10.59 12 8 14.59 9.41 16 12 13.41 14.59 16 16 14.59 13.41 12 16 9.41 14.59 8zM12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
-        </a>
-        <article class="rev-artc">
-            <h4 class="h-center readable__caption">Neodigm Popup</h4>
-            <section class="readable__doc" style="border-top: solid #EDBA08 1px;">
-                <article style="padding: 12px 12px;">
-                    <p>Hi, I am a simple popup. I stay fixed when the page scrolls. I stay focused because the background is blurred. I size myself automatically to fit your content. I am easy to open and easy to close.</p>
-                    <p>I can be added to your website without knowledge of JavaScript.</p>
+<template id="js-basic--id" data-neodigm-sodapop-modal="false"  data-neodigm-sodapop-size="small">
+    <article>
+        <h4 class="h-center readable__caption">Neodigm Popup (Soda Pop)</h4>
+        <section class="readable__doc" style="border-top: solid #EDBA08 1px;">
+            <article style="padding: 12px 12px;">
+                <p>Hi, I am a simple popup. I stay fixed when the page scrolls. I stay focused because the background is blurred. I size myself automatically to fit your content. I am easy to open and easy to close.</p>
+                <p>I can be added to your website without knowledge of JavaScript.</p>
+                <details>
+                    <summary class="h-pro-tip text-coy_2009" data-wired4sound="click|4" class="h-pro-tip text-coy_2009">No JavaScript 💡</summary>
+                    <p>Neodigm 55 Popups are “declarative”. That means that you simply add a tag to your existing HTML. No JavaScript required. You can use JavaScript if you want however it's not necessary.</p>
                     <details>
-                        <summary class="h-pro-tip text-coy_2009" data-wired4sound="click|4" class="h-pro-tip text-coy_2009">No JavaScript 💡</summary>
-                        <p>Neodigm 55 Popups are “declarative”. That means that you simply add a tag to your existing HTML. No JavaScript required. You can use JavaScript if you want however it's not required.</p>
+                        <summary class="h-pro-tip text-coy_2009" data-wired4sound="click|4" class="h-pro-tip text-coy_2009">For Example 👁️</summary>
+                        <p>Simply add a tag to your button:</p>
+{{< highlight html >}}
+
+<button data-neodigm-sodapop-id="myPopup_id">Try Me</button>
+
+{{< /highlight >}}
+                        <p>Or call the Popup with JavaScript:</p>
+{{< highlight html >}}
+
+<button onClick="neodigmSodaPop.autoOpen('myPopup_id')">Try Me</button>
+
+{{< /highlight >}}
                         <details>
-                            <summary class="h-pro-tip text-coy_2009" data-wired4sound="click|4" class="h-pro-tip text-coy_2009">For Example 👁️</summary>
-                            <p>Simply add a tag to your button:</p>
+                            <summary class="h-pro-tip text-coy_2009" data-wired4sound="click|4"
+                            data-neodigm-toast="This is the HTML template|used to make a Popup">Popup Template 🚀</summary>
+                                <div id="js-copy__pop">
 {{< highlight html >}}
 
-<button data-neodigm-pop-id="myPopup_id">Try Me</button>
+<template id="js-basic--id" data-neodigm-sodapop-modal="false"  data-neodigm-sodapop-size="small">
 
-{{< /highlight >}}
-                            <p>Or call the Popup with JavaScript:</p>
-{{< highlight html >}}
-
-<button onClick="neodigmPop.autoOpen('myPopup_id')">Try Me</button>
-
-{{< /highlight >}}
-                            <details>
-                                <summary class="h-pro-tip text-coy_2009" data-wired4sound="click|4"
-                                data-neodigm-toast="This is the HTML template|used to make a Popup">Popup Template 🚀</summary>
-                                    <div id="js-copy__pop">
-{{< highlight html >}}
-
-<neodigmPop class="l-reveal reveal__init reveal-cta">
-    <section id="YOUR ID HERE" class="reveal-modal medium" data-reveal aria-hidden="true">
-        <a class="close-reveal-modal resp_x eml-msg__x">
-            <svg fill="#EDBA08" height="32" viewBox="0 0 22 22" width="32" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/>
-            <path d="M14.59 8L12 10.59 9.41 8 8 9.41 10.59 12 8 14.59 9.41 16 12 13.41 14.59 16 16 14.59 13.41 12 16 9.41 14.59 8zM12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
-        </a>
-        <article class="rev-artc">
 YOUR CONTENT HERE
-        </article>
-    </section>
-</neodigmPop>
+
+</template>
 
 {{< /highlight >}}
-                                    </div>
-                                <div class="h-center">
-                                    <button class="js-copy-btn l-btn l-btn--ghost" onclick="doCopy('#js-copy__pop')" data-wired4sound="click|10">Copy</button>
                                 </div>
-                            </details>
-                         </details>
+                            <div class="h-center">
+                                <button class="js-copy-btn l-btn l-btn--ghost" onclick="doCopy('#js-copy__pop')" data-wired4sound="click|10">Copy</button>
+                            </div>
+                        </details>
                      </details>
-                </article>    
-            </section>
-        </article>
-    </section>
-</neodigmPop>
+                 </details>
+            </article>    
+        </section>
+    </article>
+</template>
 
-<neodigmPop class="l-reveal reveal__init reveal-cta">
-    <section id="js-basic-md--id" class="reveal-modal medium" data-reveal aria-hidden="true">
-        <a class="close-reveal-modal resp_x eml-msg__x">
-            <svg fill="#EDBA08" height="32" viewBox="0 0 22 22" width="32" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/>
-            <path d="M14.59 8L12 10.59 9.41 8 8 9.41 10.59 12 8 14.59 9.41 16 12 13.41 14.59 16 16 14.59 13.41 12 16 9.41 14.59 8zM12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
-        </a>
-        <article class="rev-artc">
+<template id="js-basic-md--id" data-neodigm-sodapop-modal="false"  data-neodigm-sodapop-size="medium">
+        <article>
             <h4 class="h-center readable__caption">Neodigm Popup (Medium)</h4>
             <section class="readable__doc" style="border-top: solid #EDBA08 1px;">
                 <article style="padding: 12px 12px;">
@@ -222,19 +205,19 @@ YOUR CONTENT HERE
                     <p>I can be added to your website without knowledge of JavaScript.</p>
                     <details>
                         <summary data-wired4sound="click|4" class="h-pro-tip text-coy_2009">No JavaScript 💡</summary>
-                        <p>Neodigm 55 Popups are “declarative”. That means that you simply add a tag to your existing HTML. No JavaScript required. You can use JavaScript if you want however it's not required.</p>
+                        <p>Neodigm 55 Popups are “declarative”. That means that you simply add a tag to your existing HTML. No JavaScript required. You can use JavaScript if you want however it's not necessary.</p>
                         <details>
                             <summary data-wired4sound="click|4" class="h-pro-tip text-coy_2009">For Example 👁️</summary>
                             <p>Simply add a tag to your button:</p>
 {{< highlight html >}}
 
-<button data-neodigm-pop-id="myPopup_id">Try Me</button>
+<button data-neodigm-sodapop-id="myPopup_id">Try Me</button>
 
 {{< /highlight >}}
                             <p>Or call the Popup with JavaScript:</p>
 {{< highlight html >}}
 
-<button onClick="neodigmPop.autoOpen('myPopup_id')">Try Me</button>
+<button onClick="neodigmSodaPop.autoOpen('myPopup_id')">Try Me</button>
 
 {{< /highlight >}}
                          </details>
@@ -242,45 +225,38 @@ YOUR CONTENT HERE
                 </article>    
             </section>
         </article>
-    </section>
-</neodigmPop>
+</template>
 
-<neodigmPop class="l-reveal reveal__init reveal-cta">
-    <section id="js-basic-lg--id" class="reveal-modal medium" data-reveal aria-hidden="true">
-        <a class="close-reveal-modal resp_x eml-msg__x">
-            <svg fill="#EDBA08" height="32" viewBox="0 0 22 22" width="32" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0z" fill="none"/>
-            <path d="M14.59 8L12 10.59 9.41 8 8 9.41 10.59 12 8 14.59 9.41 16 12 13.41 14.59 16 16 14.59 13.41 12 16 9.41 14.59 8zM12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
-        </a>
-        <article class="rev-artc">
-            <h4 class="h-center readable__caption">Neodigm Popup (Large)</h4>
-            <section class="readable__doc" style="border-top: solid #EDBA08 1px;">
-                <article style="padding: 12px 12px;">
-                    <p>Hi, I am a simple popup. I stay fixed when the page scrolls. I stay focused because the background is blurred. I size myself automatically to fit your content. I am easy to open and easy to close.</p>
-                    <p>I can be added to your website without knowledge of JavaScript.</p>
+<template id="js-basic-lg--id" data-neodigm-sodapop-modal="false"  data-neodigm-sodapop-size="large">
+    <article>
+        <h4 class="h-center readable__caption">Neodigm Popup (Large)</h4>
+        <section class="readable__doc" style="border-top: solid #EDBA08 1px;">
+            <article style="padding: 12px 12px;">
+                <p>Hi, I am a simple popup. I stay fixed when the page scrolls. I stay focused because the background is blurred. I size myself automatically to fit your content. I am easy to open and easy to close.</p>
+                <p>I can be added to your website without knowledge of JavaScript.</p>
+                <details>
+                    <summary data-wired4sound="click|4" class="h-pro-tip text-coy_2009">No JavaScript 💡</summary>
+                    <p>Neodigm 55 Popups are “declarative”. That means that you simply add a tag to your existing HTML. No JavaScript required. You can use JavaScript if you want however it's not necessary.</p>
                     <details>
-                        <summary data-wired4sound="click|4" class="h-pro-tip text-coy_2009">No JavaScript 💡</summary>
-                        <p>Neodigm 55 Popups are “declarative”. That means that you simply add a tag to your existing HTML. No JavaScript required. You can use JavaScript if you want however it's not required.</p>
-                        <details>
-                            <summary data-wired4sound="click|4" class="h-pro-tip text-coy_2009">For Example 👁️</summary>
-                            <p>Simply add a tag to your button:</p>
-{{< highlight html >}}
+                        <summary data-wired4sound="click|4" class="h-pro-tip text-coy_2009">For Example 👁️</summary>
+                        <p>Simply add a tag to your button:</p>
+    {{< highlight html >}}
 
-<button data-neodigm-pop-id="myPopup_id">Try Me</button>
+    <button data-neodigm-sodapop-id="myPopup_id">Try Me</button>
 
-{{< /highlight >}}
-                            <p>Or call the Popup with JavaScript:</p>
-{{< highlight html >}}
+    {{< /highlight >}}
+                        <p>Or call the Popup with JavaScript:</p>
+    {{< highlight html >}}
 
-<button onClick="neodigmPop.autoOpen('myPopup_id')">Try Me</button>
+    <button onClick="neodigmSodaPop.autoOpen('myPopup_id')">Try Me</button>
 
-{{< /highlight >}}
-                         </details>
-                     </details>
-                </article>    
-            </section>
-        </article>
-    </section>
-</neodigmPop>
+    {{< /highlight >}}
+                        </details>
+                    </details>
+            </article>    
+        </section>
+    </article>
+</template>
 
 <script>
     setTimeout(function(){ neodigmToast.q("##Easy to Use|Landing Page Solution 💡")}, 48800)
