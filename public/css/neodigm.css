@@ -722,6 +722,9 @@ body[data-pref-scheme='light']  .l-favs article:hover div a { filter: brightness
         background-color: #fff !important;
     }
     /* megamenu end */
+    body[data-pref-scheme='dark'] .rev-artc {
+        background-color: #242424;
+    }
 
 /*}*/
 /* Dark Mode end */
