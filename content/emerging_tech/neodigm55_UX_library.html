@@ -229,46 +229,44 @@ YOUR CONTENT HERE
 </template>
 
 <template id="js-basic-lg--id" data-neodigm-sodapop-modal="false" data-neodigm-sodapop-size="large">
-    <article>
-        <h4 class="h-center readable__caption">Neodigm Popup (Large)</h4>
-        <section class="readable__doc" style="border-top: solid #EDBA08 1px;">
-            <article style="padding: 12px 12px;">
-                <p>Hi, I am a simple popup. I stay fixed when the page scrolls. I stay focused because the background is blurred. I size myself automatically to fit your content. I am easy to open and easy to close.</p>
-                <p>I can be added to your website without knowledge of JavaScript.</p>
+    <h4 class="h-center readable__caption">Neodigm Popup (Large)</h4>
+    <section class="readable__doc" style="border-top: solid #EDBA08 1px;">
+        <article style="padding: 12px 12px;">
+            <p>Hi, I am a simple popup. I stay fixed when the page scrolls. I stay focused because the background is blurred. I size myself automatically to fit your content. I am easy to open and easy to close.</p>
+            <p>I can be added to your website without knowledge of JavaScript.</p>
+            <details>
+                <summary data-wired4sound="click|4" class="h-pro-tip text-coy_2009">No JavaScript 💡</summary>
+                <p>Neodigm 55 Popups are “declarative”. That means that you simply add a tag to your existing HTML. No JavaScript required. You can use JavaScript if you want however it's not necessary.</p>
                 <details>
-                    <summary data-wired4sound="click|4" class="h-pro-tip text-coy_2009">No JavaScript 💡</summary>
-                    <p>Neodigm 55 Popups are “declarative”. That means that you simply add a tag to your existing HTML. No JavaScript required. You can use JavaScript if you want however it's not necessary.</p>
-                    <details>
-                        <summary data-wired4sound="click|4" class="h-pro-tip text-coy_2009">For Example 👁️</summary>
-                        <p>Simply add a tag to your button:</p>
-    {{< highlight html >}}
+                    <summary data-wired4sound="click|4" class="h-pro-tip text-coy_2009">For Example 👁️</summary>
+                    <p>Simply add a tag to your button:</p>
+{{< highlight html >}}
 
-    <button data-neodigm-sodapop-id="myPopup_id">Try Me</button>
+<button data-neodigm-sodapop-id="myPopup_id">Try Me</button>
 
-    {{< /highlight >}}
-                        <p>Or call the Popup with JavaScript:</p>
-    {{< highlight html >}}
+{{< /highlight >}}
+                    <p>Or call the Popup with JavaScript:</p>
+{{< highlight html >}}
 
-    <button onClick="neodigmSodaPop.autoOpen('myPopup_id')">Try Me</button>
+<button onClick="neodigmSodaPop.autoOpen('myPopup_id')">Try Me</button>
 
-    {{< /highlight >}}
-                        </details>
+{{< /highlight >}}
                     </details>
-            </article>    
-        </section>
-    </article>
+                </details>
+        </article>    
+    </section>
 </template>
 
 <script>
-    setTimeout(function(){ neodigmToast.q("##Easy to Use|Landing Page Solution 💡")}, 48800)
-    setTimeout(function(){ neodigmToast.q("##Engaging, Performant and Unique")}, 28880)
-    setTimeout(function(){ neodigmToast.q("##A Landing Page|micro-interaction library")}, 88000)
-    setTimeout(function(){ neodigmToast.q("##Star us on Github|Contributions welcome ⭐")}, 826000)
-    setTimeout(function(){ neodigmToast.q("##For those who defiantly think|for themselves ⭐ Star it!")}, 184000)
+    setTimeout(function(){ neodigmToast.q("##Easy to Use|Landing Page Solution 💡")}, 58800)
+    setTimeout(function(){ neodigmToast.q("##Engaging, Performant and Unique")}, 89880)
+    setTimeout(function(){ neodigmToast.q("##A Landing Page|micro-interaction library")}, 108000)
+    setTimeout(function(){ neodigmToast.q("##Star us on Github|Contributions welcome ⭐")}, 1826000)
+    setTimeout(function(){ neodigmToast.q("##For those who defiantly think|for themselves ⭐ Star it!")}, 284000)
 </script>
 
 <script>    
-    function doCopy( _q ){ // Cannot prebind to element withing detail
+    function doCopy( _q ){ // Cannot prebind to element within detail
         let sText = document.querySelector( _q )?.innerText;
         if( sText ){
             try {

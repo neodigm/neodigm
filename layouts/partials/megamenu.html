@@ -21,6 +21,7 @@ href="#a11y-skipmain">Skip to Main Content</a>
                 <a class="mm__link--card" href="https://www.linkedin.com/in/neodigm55/" target="_blank" rel="noopener">LinkedIn</a>
                 <a class="mm__link--card" href="https://www.arcanus55.com/?trusted55=A55PV2" target="_blank" rel="noopener">Arcanus 55</a>
                 <a class="mm__link--card" href="https://machfivemarketing.com/" target="_blank" rel="noopener">MachFive</a> 
+                <a class="mm__link--card" onClick="neodigmSodaPop.autoOpen('js-contactPop__id')">Contact</a>
                 <a class="mm__link--card" href="/Arcanus_Scott_C_Krause_2021.pdf" target="_blank" rel="noopener">Résumé PDF</a>
                 <!--<a class="mm__link--card" href="https://trailblazer.me/id/skrause">Salesforce CRM</a> -->
             </section>   
@@ -31,6 +32,7 @@ href="#a11y-skipmain">Skip to Main Content</a>
                 <a class="mm__link--bottom" href="https://github.com/neodigm" target="_blank" rel="noopener">Github</a>
                 <a class="mm__link--bottom" href="https://www.arcanus55.com/?trusted55=A55PV2" target="_blank" rel="noopener">Arcanus 55</a>
                 <a class="mm__link--bottom" href="https://machfivemarketing.com/" target="_blank" rel="noopener">MachFive</a>
+                <a class="mm__link--bottom" onClick="neodigmSodaPop.autoOpen('js-contactPop__id')">Contact</a>
                 <a class="mm__link--bottom" href="/Arcanus_Scott_C_Krause_2021.pdf" target="_blank" rel="noopener">Résumé PDF</a>
                 <!--<a class="mm__link--bottom" href="https://trailblazer.me/id/skrause">Salesforce CRM</a>-->
             </section>
@@ -60,3 +62,27 @@ href="#a11y-skipmain">Skip to Main Content</a>
     }(document, [".megamenu", ".mm__vect, .scheme__vect"]);
     oSimpleMenuState.init();
 </script>
+
+<template id="js-contactPop__id" data-neodigm-sodapop-modal="false" 
+data-neodigm-sodapop-size="small">
+    <h4 class="h-center readable__caption">How can I help you?</h4>
+    <section class="readable__doc" style="border-top: solid #EDBA08 1px;">
+        <article style="padding: 12px 12px;">
+
+            <form autocomplete="off" novalidate
+            onsubmit="return false">
+                <br>
+                <input id="m5m_contact_us_email" name="email" class="m5m-input" type="email"
+                placeholder="Email Address">
+                <textarea id="m5m_contact_us_message" name="message" class="m5m-input" type="text" rows="3"
+                placeholder="Message"></textarea>
+                <div class="h-center">
+                    <button class="l-btn"
+                    onclick="valForm('m5m_contact_us', this )">Contact</button>
+                </div>  
+            </form>
+
+        </article> 
+    </section>
+
+</template>
