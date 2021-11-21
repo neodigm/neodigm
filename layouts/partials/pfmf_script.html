@@ -564,7 +564,7 @@ if( e3 ) { // Delay 3d call if still null
         if( sToken && eForm ){
             eForm = eForm.parentElement.parentElement;
             switch( sToken ){
-                case "m5m_contact_us":
+                case "tsk_contact_us":
                     contextMsg = "We will respond to your|message shortly";
                     if( (eForm.email.value.indexOf("@") === -1) || (eForm.email.value.indexOf(".") === -1) ){
                         isVal = false; valMsg = "Email Address is|invalid";
@@ -576,22 +576,6 @@ if( e3 ) { // Delay 3d call if still null
                         isVal = false; valMsg = "Email Address is|Required";
                     }
                     package = [eForm.email.value, eForm.message.value];
-                    break;
-                case "m5m_free_report":
-                    contextMsg = "Expect to see your report|in your inbox soon!";
-                    if( eForm.domain.value.indexOf(".") === -1 ){
-                        isVal = false; valMsg = "Website Domain is|invalid";
-                    }
-                    if( (eForm.email.value.indexOf("@") === -1) || (eForm.email.value.indexOf(".") === -1) ){
-                        isVal = false; valMsg = "Email Address is|invalid";
-                    }
-                    if( !eForm.domain.value ){
-                        isVal = false; valMsg = "Website Domain is|Required";
-                    }
-                    if( !eForm.email.value ){
-                        isVal = false; valMsg = "Email Address is|Required";
-                    }                    
-                    package = [eForm.email.value, eForm.domain.value];
                     break;
                 default:
                     console.warn( sToken, " does not exist.");
