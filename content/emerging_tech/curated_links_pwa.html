@@ -35,9 +35,119 @@ tags:
             <p>There is friction when a customer must discover your app, install it, and create an account. People have become resistant to installing new apps simply because the novelty has worn off.</p> 
             <h3 class="document__title h_ital h-center text-coy_2019">Here’s the solution</h3>
             <p>A website that behaves like an app. The discovery and onboarding are frictionless because there is no need to install an app. It’s Instant gratification.</p> 
+            <div class="h-center">
+                <button class="l-btn" data-neodigm-sodapop-id="js-pwa-code--id" data-wired4sound="click|12">For Example ...</button>
+            </div>
         </article>  
     </div>
 </section>
+
+<template id="js-pwa-code--id" data-neodigm-sodapop-modal="false" 
+data-neodigm-sodapop-size="small">
+
+<output>
+    {{< highlight JavaScript >}}
+    
+    /*     ______   __     __     ______    
+          /\  == \ /\ \  _ \ \   /\  __ \   
+          \ \  _-/ \ \ \/ ".\ \  \ \  __ \  
+           \ \_\    \ \__/".~\_\  \ \_\ \_\ 
+            \/_/     \/_/   \/_/   \/_/\/_/  ✨ Add to Home Screen
+            chrome://serviceworker-internals/
+     */
+     if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("sw.js");
+        });
+    }
+    {{< /highlight >}}
+    <hr>
+    {{< highlight JavaScript >}}
+    let eA2hs = oD.getElementsByClassName("js-a2hs")[0];
+    let eA2hsP = oD.getElementsByClassName("js-a2hs--post")[0];
+    
+    eA2hs.addEventListener("click", (e) => {
+        eA2hs.style.display = "none";
+        eA2hsP.style.display = "block";
+        evDefPrompt.prompt();
+        evDefPrompt.userChoice
+          .then((choiceResult) => {
+            if (choiceResult.outcome === "accepted") {
+              if( snck ) neodigmToast.q("Wow, Now I'm an App on your Desktop|How Convenient!");
+              playAudioFile( 7 );  //  ggl tag event | User accepted the A2HS prompt
+            } else {
+              playAudioFile( 3 );  //  ggl tag event | User dismissed the A2HS prompt
+            }
+            evDefPrompt = null;
+          });
+      });
+    {{< /highlight >}}
+    <hr>
+    {{< highlight JavaScript >}}
+    function displayMsg( sMsg ){
+        //    System Tray Notification
+        if (!("Notification" in window)) {
+            console.log('Notification API not supported.');
+            return;
+        } else if (Notification.permission === "granted") {
+            // If it's okay let's create a notification
+            var notification = new Notification( Nowish(), {icon: "https://repository-images.githubusercontent.com/178555357/2b6ad880-7aa0-11ea-8dde-63e70187e3e9", body: sMsg} );
+        } else if (Notification.permission !== "denied") {
+            // Otherwise, we need to ask the user for permission
+            Notification.requestPermission(function (permission) {
+                // If the user accepts, let's create a notification
+                if (permission === "granted") {
+                    var notification = new Notification( Nowish(), {icon: "https://repository-images.githubusercontent.com/178555357/2b6ad880-7aa0-11ea-8dde-63e70187e3e9", body: sMsg} );
+                }
+            });
+        }
+    }
+    {{< /highlight >}}
+    <hr>
+    {{< highlight JavaScript >}}
+    /*    ╔═╗┌─┐┬─┐┬  ┬┬┌─┐┌─┐
+     *    ╚═╗├┤ ├┬┘└┐┌┘││  ├┤ 
+     *    ╚═╝└─┘┴└─ └┘ ┴└─┘└─┘
+     *    ╦ ╦┌─┐┬─┐┬┌─┌─┐┬─┐  
+     *    ║║║│ │├┬┘├┴┐├┤ ├┬┘  
+     *    ╚╩╝└─┘┴└─┴ ┴└─┘┴└─  Advanced Cache ⚡ Notifications
+     */
+    importScripts('https://storage.googleapis.com/workbox-cdn/releases/4.0.0/workbox-sw.js');
+    workbox.LOG_LEVEL = "debug";
+    self.addEventListener("fetch", event => {
+      event.respondWith(caches.match(event.request)
+        .then(cachedResponse => {
+            if (cachedResponse) {
+              return cachedResponse;
+            }
+            return fetch(event.request);
+          })
+        );
+    });
+    workbox.routing.registerRoute(
+      // Cache CSS files
+      /.*\.css/,
+      // Use cache but update in the background ASAP
+      workbox.strategies.staleWhileRevalidate({
+        cacheName: 'css-cache',
+      })
+    );
+    workbox.routing.registerRoute(
+      // Cache image files
+      /\.(?:png|gif|jpg|jpeg|webp|svg|mp3|mp4|json|html|js)$/,
+      // Use the cache if it's available
+      workbox.strategies.cacheFirst({
+        cacheName: 'image-cache',
+        plugins: [
+          new workbox.expiration.Plugin({
+            maxEntries: 256, maxAgeSeconds: 172800,
+          })
+        ],
+      })
+    );
+    {{< /highlight >}}
+
+</template>
 
 <div class="vvs-cont">
     <p class="js-vect__banner readable__caption h-center l-capt__vect"
