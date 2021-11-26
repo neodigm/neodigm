@@ -38,9 +38,9 @@ tags:
                     </div>
                     <div style="display: contents;">
                         <article  class="h-bg__stripe" style="padding: 12px 12px;">
-                            <h3 class="document__title h_ital h-center text-coy_2009">Daisy Chain</h3>
+                            <h3 class="document__title h_ital h-center text-coy_2009">Sequential</h3>
                             <div>
-                                <p>Popups can be chained together in a way that the user encounters them in a sequence. This is good for linear processes when one popup closes and the next one opens.</p>
+                                <p>Popups can be chained together in a way that the user encounters them in a consecutive sequence. This is good for linear processes because when one popup closes and the next one opens.</p>
                             </div>
                             <div class="h-center">
                                 <button class="l-btn h-center" data-neodigm-sodapop-id="js-daisey-chain-1--id" data-wired4sound="click|12">Try Me</button>
@@ -353,23 +353,10 @@ function daisyChain( sId ){
 </template>
 
 <script>
+    setTimeout(function(){ document.body.dataset.prefScheme="dark"; }, 400)
     setTimeout(function(){ neodigmToast.q("##Easy to Use|Landing Page Solution 💡")}, 78800)
     setTimeout(function(){ neodigmToast.q("##Engaging, Performant and Unique")}, 98880)
     setTimeout(function(){ neodigmToast.q("##A Landing Page|micro-interaction library")}, 188000)
     setTimeout(function(){ neodigmToast.q("##Star us on Github|Contributions welcome ⭐")}, 2426000)
     setTimeout(function(){ neodigmToast.q("##For those who defiantly think|for themselves ⭐ Star it!")}, 314000)
-</script>
-
-<script>    
-    function doCopy( _q ){ // Cannot prebind to element within detail
-        let sText = document.querySelector( _q )?.innerText;
-        if( sText ){
-            try {
-                navigator.clipboard.writeText( sText );
-                neodigmToast.q("Copied to Clipboard|Paste into your document")
-            } catch (err) {
-                console.warn('Failed to copy', err)
-            }
-        }
-    }
 </script>

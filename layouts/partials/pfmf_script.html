@@ -597,5 +597,19 @@ if( e3 ) { // Delay 3d call if still null
 </script>
 <!--  SFDC form validation and sub end  -->
 
+<script>    
+function doCopy( _q ){ // Cannot prebind to element within detail
+    let sText = document.querySelector( _q )?.innerText;
+    if( sText ){
+        try {
+            navigator.clipboard.writeText( sText );
+            neodigmToast.q("Copied to Clipboard|Paste into your document")
+        } catch (err) {
+            console.warn('Failed to copy', err)
+        }
+    }
+}
+</script>
+
 <template src="https://cdn.jsdelivr.net/gh/arcanus55/neodigm55@gh-pages/dist/neodigm55_v1_1.min.js"></template>
 <script src="https://arcanus55.github.io/neodigm55/dist/neodigm55_v1_3.js"></script>
