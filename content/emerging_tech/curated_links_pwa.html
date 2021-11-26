@@ -25,8 +25,17 @@ tags:
             data-at="Web Renaissance|Feasible Impossibilities|Progressive Web App|Service Worker Wizardry|Houston we have an Alternative|From Fad to Fundamental|Clever Tricknology">Service Worker Wizardry</p></article>
             <article style="padding: 12px 12px;">
                 <p>The Progressive Web App represents the single greatest leap in engagement opportunity since the introduction of the browser. Because of its intimate relationship with the phone the potential to influence the micro-moment behavior of its user is vast and largely unexplored.</p>
-                <p>Your website becomes a native app in both experience and performance. Your home page is a first class citizen on an iPhone or Android. It resides on the homescreen and in the app drawer.</p> 
+                <p>Your website becomes a native app in both experience and performance. Your PWA is a first class citizen on an iPhone or Android. It resides on the homescreen and in the app drawer.</p> 
                 <p>When it is tapped it will respond instantly with a custom splash screen even while offline.</p>
+                <div class="h-center">
+                    <button class="l-btn" data-neodigm-sodapop-id="js-pwa-code--id" data-wired4sound="click|12"
+                    data-neodigm-toast="Offline First PWA|Service Worker Enabled">For Example ...</button>
+                </div>
+<!-- PRO TIP
+
+                chrome://serviceworker-internals/
+
+-->
             </article>  
     </div>
     <div>
@@ -38,6 +47,115 @@ tags:
         </article>  
     </div>
 </section>
+
+<template id="js-pwa-code--id" data-neodigm-sodapop-modal="false" 
+data-neodigm-sodapop-size="small">
+
+<output id="js-copy__css">
+    {{< highlight JavaScript >}}
+    
+    /*     ______   __     __     ______    
+          /\  == \ /\ \  _ \ \   /\  __ \   
+          \ \  _-/ \ \ \/ ".\ \  \ \  __ \  
+           \ \_\    \ \__/".~\_\  \ \_\ \_\ 
+            \/_/     \/_/   \/_/   \/_/\/_/  ✨ Add to Home Screen
+            chrome://serviceworker-internals/
+     */
+     if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("sw.js");
+        });
+    }
+    {{< /highlight >}}
+    <hr>
+    {{< highlight JavaScript >}}
+    let eA2hs = oD.getElementsByClassName("js-a2hs")[0];
+    let eA2hsP = oD.getElementsByClassName("js-a2hs--post")[0];
+    
+    eA2hs.addEventListener("click", (e) => {
+        eA2hs.style.display = "none";
+        eA2hsP.style.display = "block";
+        evDefPrompt.prompt();
+        evDefPrompt.userChoice
+          .then((choiceResult) => {
+            if (choiceResult.outcome === "accepted") {
+              if( snck ) neodigmToast.q("Wow, Now I'm an App on your Desktop|How Convenient!");
+              playAudioFile( 7 );  //  ggl tag event | User accepted the A2HS prompt
+            } else {
+              playAudioFile( 3 );  //  ggl tag event | User dismissed the A2HS prompt
+            }
+            evDefPrompt = null;
+          });
+      });
+    {{< /highlight >}}
+    <hr>
+    {{< highlight JavaScript >}}
+    function displayMsg( sMsg ){
+        //    System Tray Notification
+        if (!("Notification" in window)) {
+            console.log('Notification API not supported.');
+            return;
+        } else if (Notification.permission === "granted") {
+            // If it's okay let's create a notification
+            var notification = new Notification( Nowish(), {icon: "https://repository-images.githubusercontent.com/178555357/2b6ad880-7aa0-11ea-8dde-63e70187e3e9", body: sMsg} );
+        } else if (Notification.permission !== "denied") {
+            // Otherwise, we need to ask the user for permission
+            Notification.requestPermission(function (permission) {
+                // If the user accepts, let's create a notification
+                if (permission === "granted") {
+                    var notification = new Notification( Nowish(), {icon: "https://repository-images.githubusercontent.com/178555357/2b6ad880-7aa0-11ea-8dde-63e70187e3e9", body: sMsg} );
+                }
+            });
+        }
+    }
+    {{< /highlight >}}
+    <hr>
+    {{< highlight JavaScript >}}
+    /*    ╔═╗┌─┐┬─┐┬  ┬┬┌─┐┌─┐
+     *    ╚═╗├┤ ├┬┘└┐┌┘││  ├┤ 
+     *    ╚═╝└─┘┴└─ └┘ ┴└─┘└─┘
+     *    ╦ ╦┌─┐┬─┐┬┌─┌─┐┬─┐  
+     *    ║║║│ │├┬┘├┴┐├┤ ├┬┘  
+     *    ╚╩╝└─┘┴└─┴ ┴└─┘┴└─  Advanced Cache ⚡ Notifications
+     */
+    importScripts('https://storage.googleapis.com/workbox-cdn/releases/4.0.0/workbox-sw.js');
+    workbox.LOG_LEVEL = "debug";
+    self.addEventListener("fetch", event => {
+      event.respondWith(caches.match(event.request)
+        .then(cachedResponse => {
+            if (cachedResponse) {
+              return cachedResponse;
+            }
+            return fetch(event.request);
+          })
+        );
+    });
+    workbox.routing.registerRoute(
+      // Cache CSS files
+      /.*\.css/,
+      // Use cache but update in the background ASAP
+      workbox.strategies.staleWhileRevalidate({
+        cacheName: 'css-cache',
+      })
+    );
+    workbox.routing.registerRoute(
+      // Cache image files
+      /\.(?:png|gif|jpg|jpeg|webp|avif|svg|mp3|mp4|json|html|js)$/,
+      // Use the cache if it's available
+      workbox.strategies.cacheFirst({
+        cacheName: 'image-cache',
+        plugins: [
+          new workbox.expiration.Plugin({
+            maxEntries: 256, maxAgeSeconds: 172800,
+          })
+        ],
+      })
+    );
+    {{< /highlight >}}
+    <div class="h-center">
+        <button class="js-copy-btn l-btn l-btn--ghost" onclick="doCopy('#js-copy__css')" data-wired4sound="click|10">Copy</button>
+    </div>
+</template>
 
 <div class="vvs-cont">
     <p class="js-vect__banner readable__caption h-center l-capt__vect"
@@ -122,4 +240,12 @@ tags:
             }
         }, 3800)
     }
+</script>
+
+<script>
+    setTimeout(function(){ neodigmToast.q("##Offline First PWA 👁️|Installable Web App 💡")}, 48800)
+    setTimeout(function(){ neodigmToast.q("##Progressive Web App✨|Native App Alternative ⭐ Star it!")}, 18880)
+    setTimeout(function(){ neodigmToast.q("##PWA ⚡|Service Worker Enabled")}, 88000)
+    setTimeout(function(){ neodigmToast.q("##Service Worker Wizardry ⭐|Houston we have an Alternative 🚀")}, 226000)
+    setTimeout(function(){ neodigmToast.q("##Clever Tricknology 🍭|Web Renaissance ")}, 24000)
 </script>

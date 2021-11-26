@@ -22,6 +22,33 @@ tags:
         <article style="padding: 12px 12px;">
             <p>Neodigm 55 is an eclectic JavaScript UX micro-library. The lightweight components come together in a unique way that will make visiting your website playful and fun.</p>
             <p>Neodigm 55 is low-code, performant, accessible, and <a class="h-link" target="_blank" rel="noopener" href="https://github.com/arcanus55/neodigm55">open source</a>. Because it’s so easy to get started it is the perfect solution for quick landing pages or event sites.</p>
+            <details>
+                <summary data-wired4sound="click|4" class="h-pro-tip text-coy_2009">Powerful Popups 💡</summary>
+                <section class="pfmf-grid pfmf-grid__50_50 readable__doc">
+                    <div style="display: contents;">
+                        <article  class="h-bg__stripe" style="padding: 12px 12px;">
+                            <h3 class="document__title h_ital h-center text-coy_2009">Modal Dialog</h3>
+                            <div>
+                                <p>A modal dialog cannot be closed until the user has answered the questions. The user cannot click anything outside of the popup until satisfied the requirements of the dialog, usually this means clicked a button.</p>
+                            </div>
+                            <div class="h-center">
+                                <button class="l-btn h-center" data-neodigm-sodapop-id="js-modal-dialog--id" data-wired4sound="click|10">Try Me</button>
+                            </div>
+                        </article> 
+                    </div>
+                    <div style="display: contents;">
+                        <article  class="h-bg__stripe" style="padding: 12px 12px;">
+                            <h3 class="document__title h_ital h-center text-coy_2009">Sequential</h3>
+                            <div>
+                                <p>Popups can be chained together in a way that the user encounters them in a consecutive sequence. This is good for linear processes because when one popup closes and the next one opens.</p>
+                            </div>
+                            <div class="h-center">
+                                <button class="l-btn h-center" data-neodigm-sodapop-id="js-daisey-chain-1--id" data-wired4sound="click|12">Try Me</button>
+                            </div>
+                        </article> 
+                    </div>
+                </section>
+             </details>
         </article>
     </div>
     <div>
@@ -48,7 +75,7 @@ tags:
 
 <div class="vvs-cont">
     <p class="js-vect__banner readable__caption h-center l-capt__vect"
-    data-at-vivid="neodigm55 UX" data-at-rnd-gt="0" data-at-change="data-at-vivid" data-at="UX Components|Small and Fast|Responsive|Accessible|Mobile Ready|Easy to Use|Popups that Pop|Unique UX|No Dependencies|No Frameworks|landing pages|event sites|playful and fun|unobtrusive|conversational|bespoke|whimsical">
+    data-at-vivid="neodigm55 UX" data-at-rnd-gt="0" data-at-change="data-at-vivid" data-at="UX Components|Small and Fast|Only 7k|Responsive|Accessible|Mobile Ready|Easy to Use|Popups that Pop|Less than 7k|Unique UX|No Dependencies|No Frameworks|landing pages|event sites|playful and fun|unobtrusive|conversational|bespoke|whimsical">
     </p>
 </div>
 
@@ -134,9 +161,9 @@ tags:
 {{< highlight html >}}
 
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/arcanus55/neodigm55@gh-pages/dist/neodigm55_v1_1.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/arcanus55/neodigm55@gh-pages/dist/neodigm55_v1_3.min.css">
 
-<script src="https://cdn.jsdelivr.net/gh/arcanus55/neodigm55@gh-pages/dist/neodigm55_v1_1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/arcanus55/neodigm55@gh-pages/dist/neodigm55_v1_3.min.js"></script>
 
 
 {{< /highlight >}}
@@ -155,8 +182,8 @@ tags:
                 <p>Hi, I am a simple popup. I stay fixed when the page scrolls. I stay focused because the background is blurred. I size myself automatically to fit your content. I am easy to open and easy to close.</p>
                 <p>I can be added to your website without knowledge of JavaScript.</p>
                 <div class="h-center">
-                    <button class="l-btn l-btn--ghost" data-wired4sound="click|3"
-                    onclick="neodigmToast.q('I can Shake and|Vibrate on a Mobile Phone');neodigmSodaPop.shake()">Shake</button>
+                    <button class="l-btn l-btn--ghost" QQQQdata-wired4sound="click|3"
+                    onclick="neodigmSodaPop.shake()">Shake</button>
                 </div>
                 <details>
                     <summary class="h-pro-tip text-coy_2009" data-wired4sound="click|4" class="h-pro-tip text-coy_2009">No JavaScript 💡</summary>
@@ -177,7 +204,7 @@ tags:
 {{< /highlight >}}
                         <details>
                             <summary class="h-pro-tip text-coy_2009" data-wired4sound="click|4"
-                            data-neodigm-toast="This is the HTML template|used to make a Popup">Popup Template 🚀</summary>
+                            data-neodigm-toast="##This is the HTML template|used to make a Popup">Popup Template 🚀</summary>
                                 <div id="js-copy__pop">
 {{< highlight html >}}
 
@@ -261,24 +288,75 @@ YOUR CONTENT HERE
     </section>
 </template>
 
+<template id="js-modal-dialog--id" data-neodigm-sodapop-modal="true" data-neodigm-sodapop-size="small">
+    <h4 class="h-center readable__caption">Neodigm Popup (Modal Dialog)</h4>
+    <section class="readable__doc" style="border-top: solid #EDBA08 1px;">
+        <article style="padding: 12px 12px;">
+            <p>Hi, I am a Modal Popup. I can’t be closed until you select one of the buttons below. This ensures that you acknowledge the selection and have not simply closed the popup accidentally.</p>
+            <div class="h-center">
+                <button class="l-btn"
+                onclick="neodigmSodaPop.close();neodigmToast.q('##User Selected|OK')">OK</button>
+                <button class="l-btn l-btn--ghost"
+                onclick="neodigmSodaPop.close();neodigmToast.q('User Selected|Cancel')">Cancel</button>
+            </div>
+        </article>    
+    </section>
+</template>
+
 <script>
+function daisyChain( sId ){
+    neodigmSodaPop.close();
+    setTimeout(function(){
+        neodigmSodaPop.autoOpen( sId )
+    },600)
+}
+</script>
+
+<template id="js-daisey-chain-1--id" data-neodigm-sodapop-modal="false" data-neodigm-sodapop-size="small">
+    <h4 class="h-center readable__caption">Neodigm Popup (Daisy Chain)</h4>
+    <section class="readable__doc" style="border-top: solid #EDBA08 1px;">
+        <article style="padding: 12px 12px;">
+            <p class="js-vect__banner readable__caption h-center l-capt__vect">
+                <img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vv1.svg" class="img__show">
+                <img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvspace.svg" class="img__show">
+                <img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvo.svg" class="img__show">
+                <img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvf.svg" class="img__show">
+                <img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvspace.svg" class="img__show">
+                <img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vv2.svg" class="img__show">
+            </p>
+            <div class="h-center">
+                <button class="l-btn"
+                onclick="daisyChain('js-daisey-chain-2--id')">Next</button>
+            </div>
+        </article>    
+    </section>
+</template>
+
+<template id="js-daisey-chain-2--id" data-neodigm-sodapop-modal="false" data-neodigm-sodapop-size="small">
+    <h4 class="h-center readable__caption">Neodigm Popup (Daisy Chain)</h4>
+    <section class="readable__doc" style="border-top: solid #EDBA08 1px;">
+        <article style="padding: 12px 12px;">
+            <p class="js-vect__banner readable__caption h-center l-capt__vect">
+                <img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vv2.svg" class="img__show">
+                <img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvspace.svg" class="img__show">
+                <img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvo.svg" class="img__show">
+                <img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvf.svg" class="img__show">
+                <img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vvspace.svg" class="img__show">
+                <img src="https://neodigm.github.io/vivid_vector_alphabet/wasm/vv2.svg" class="img__show">
+            </p>
+            <div class="h-center">
+                <button class="l-btn"
+                onclick="daisyChain('js-daisey-chain-1--id')">Previous</button>
+            </div>
+        </article>    
+    </section>
+</template>
+
+<script>
+    setTimeout(function(){ document.body.dataset.prefScheme="dark"; }, 400)
     setTimeout(function(){ neodigmToast.q("##Easy to Use|Landing Page Solution 💡")}, 78800)
     setTimeout(function(){ neodigmToast.q("##Engaging, Performant and Unique")}, 98880)
     setTimeout(function(){ neodigmToast.q("##A Landing Page|micro-interaction library")}, 188000)
     setTimeout(function(){ neodigmToast.q("##Star us on Github|Contributions welcome ⭐")}, 2426000)
     setTimeout(function(){ neodigmToast.q("##For those who defiantly think|for themselves ⭐ Star it!")}, 314000)
-</script>
-
-<script>    
-    function doCopy( _q ){ // Cannot prebind to element within detail
-        let sText = document.querySelector( _q )?.innerText;
-        if( sText ){
-            try {
-                navigator.clipboard.writeText( sText );
-                neodigmToast.q("Copied to Clipboard|Paste into your document")
-            } catch (err) {
-                console.warn('Failed to copy', err)
-            }
-        }
-    }
 </script>

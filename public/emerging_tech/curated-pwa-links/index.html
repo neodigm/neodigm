@@ -177,9 +177,119 @@ data-neodigm-sodapop-size="small">
             <p>There is friction when a customer must discover your app, install it, and create an account. People have become resistant to installing new apps simply because the novelty has worn off.</p> 
             <h3 class="document__title h_ital h-center text-coy_2019">Here’s the solution</h3>
             <p>A website that behaves like an app. The discovery and onboarding are frictionless because there is no need to install an app. It’s Instant gratification.</p> 
+            <div class="h-center">
+                <button class="l-btn" data-neodigm-sodapop-id="js-pwa-code--id" data-wired4sound="click|12">For Example ...</button>
+            </div>
         </article>  
     </div>
 </section>
+
+<template id="js-pwa-code--id" data-neodigm-sodapop-modal="false" 
+data-neodigm-sodapop-size="small">
+
+<output>
+    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JavaScript" data-lang="JavaScript">    
+    <span style="color:#75715e">/*     ______   __     __     ______    
+</span><span style="color:#75715e">          /\  == \ /\ \  _ \ \   /\  __ \   
+</span><span style="color:#75715e">          \ \  _-/ \ \ \/ &#34;.\ \  \ \  __ \  
+</span><span style="color:#75715e">           \ \_\    \ \__/&#34;.~\_\  \ \_\ \_\ 
+</span><span style="color:#75715e">            \/_/     \/_/   \/_/   \/_/\/_/  ✨ Add to Home Screen
+</span><span style="color:#75715e">            chrome://serviceworker-internals/
+</span><span style="color:#75715e">     */</span>
+     <span style="color:#66d9ef">if</span> (<span style="color:#e6db74">&#34;serviceWorker&#34;</span> <span style="color:#66d9ef">in</span> <span style="color:#a6e22e">navigator</span>) {
+        window.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;load&#34;</span>, () =&gt; {
+          <span style="color:#a6e22e">navigator</span>.<span style="color:#a6e22e">serviceWorker</span>.<span style="color:#a6e22e">register</span>(<span style="color:#e6db74">&#34;sw.js&#34;</span>);
+        });
+    }
+    
+</code></pre></div>
+    <hr>
+    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JavaScript" data-lang="JavaScript">    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">eA2hs</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">oD</span>.<span style="color:#a6e22e">getElementsByClassName</span>(<span style="color:#e6db74">&#34;js-a2hs&#34;</span>)[<span style="color:#ae81ff">0</span>];
+    <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">eA2hsP</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">oD</span>.<span style="color:#a6e22e">getElementsByClassName</span>(<span style="color:#e6db74">&#34;js-a2hs--post&#34;</span>)[<span style="color:#ae81ff">0</span>];
+    
+    <span style="color:#a6e22e">eA2hs</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;click&#34;</span>, (<span style="color:#a6e22e">e</span>) =&gt; {
+        <span style="color:#a6e22e">eA2hs</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">display</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;none&#34;</span>;
+        <span style="color:#a6e22e">eA2hsP</span>.<span style="color:#a6e22e">style</span>.<span style="color:#a6e22e">display</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;block&#34;</span>;
+        <span style="color:#a6e22e">evDefPrompt</span>.<span style="color:#a6e22e">prompt</span>();
+        <span style="color:#a6e22e">evDefPrompt</span>.<span style="color:#a6e22e">userChoice</span>
+          .<span style="color:#a6e22e">then</span>((<span style="color:#a6e22e">choiceResult</span>) =&gt; {
+            <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">choiceResult</span>.<span style="color:#a6e22e">outcome</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;accepted&#34;</span>) {
+              <span style="color:#66d9ef">if</span>( <span style="color:#a6e22e">snck</span> ) <span style="color:#a6e22e">neodigmToast</span>.<span style="color:#a6e22e">q</span>(<span style="color:#e6db74">&#34;Wow, Now I&#39;m an App on your Desktop|How Convenient!&#34;</span>);
+              <span style="color:#a6e22e">playAudioFile</span>( <span style="color:#ae81ff">7</span> );  <span style="color:#75715e">//  ggl tag event | User accepted the A2HS prompt
+</span><span style="color:#75715e"></span>            } <span style="color:#66d9ef">else</span> {
+              <span style="color:#a6e22e">playAudioFile</span>( <span style="color:#ae81ff">3</span> );  <span style="color:#75715e">//  ggl tag event | User dismissed the A2HS prompt
+</span><span style="color:#75715e"></span>            }
+            <span style="color:#a6e22e">evDefPrompt</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">null</span>;
+          });
+      });
+    
+</code></pre></div>
+    <hr>
+    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JavaScript" data-lang="JavaScript">    <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">displayMsg</span>( <span style="color:#a6e22e">sMsg</span> ){
+        <span style="color:#75715e">//    System Tray Notification
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>(<span style="color:#e6db74">&#34;Notification&#34;</span> <span style="color:#66d9ef">in</span> window)) {
+            <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#39;Notification API not supported.&#39;</span>);
+            <span style="color:#66d9ef">return</span>;
+        } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">Notification</span>.<span style="color:#a6e22e">permission</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;granted&#34;</span>) {
+            <span style="color:#75715e">// If it&#39;s okay let&#39;s create a notification
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">notification</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Notification</span>( <span style="color:#a6e22e">Nowish</span>(), {<span style="color:#a6e22e">icon</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;https://repository-images.githubusercontent.com/178555357/2b6ad880-7aa0-11ea-8dde-63e70187e3e9&#34;</span>, <span style="color:#a6e22e">body</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">sMsg</span>} );
+        } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">Notification</span>.<span style="color:#a6e22e">permission</span> <span style="color:#f92672">!==</span> <span style="color:#e6db74">&#34;denied&#34;</span>) {
+            <span style="color:#75715e">// Otherwise, we need to ask the user for permission
+</span><span style="color:#75715e"></span>            <span style="color:#a6e22e">Notification</span>.<span style="color:#a6e22e">requestPermission</span>(<span style="color:#66d9ef">function</span> (<span style="color:#a6e22e">permission</span>) {
+                <span style="color:#75715e">// If the user accepts, let&#39;s create a notification
+</span><span style="color:#75715e"></span>                <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">permission</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;granted&#34;</span>) {
+                    <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">notification</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Notification</span>( <span style="color:#a6e22e">Nowish</span>(), {<span style="color:#a6e22e">icon</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;https://repository-images.githubusercontent.com/178555357/2b6ad880-7aa0-11ea-8dde-63e70187e3e9&#34;</span>, <span style="color:#a6e22e">body</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">sMsg</span>} );
+                }
+            });
+        }
+    }
+    
+</code></pre></div>
+    <hr>
+    <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JavaScript" data-lang="JavaScript">    <span style="color:#75715e">/*    ╔═╗┌─┐┬─┐┬  ┬┬┌─┐┌─┐
+</span><span style="color:#75715e">     *    ╚═╗├┤ ├┬┘└┐┌┘││  ├┤ 
+</span><span style="color:#75715e">     *    ╚═╝└─┘┴└─ └┘ ┴└─┘└─┘
+</span><span style="color:#75715e">     *    ╦ ╦┌─┐┬─┐┬┌─┌─┐┬─┐  
+</span><span style="color:#75715e">     *    ║║║│ │├┬┘├┴┐├┤ ├┬┘  
+</span><span style="color:#75715e">     *    ╚╩╝└─┘┴└─┴ ┴└─┘┴└─  Advanced Cache ⚡ Notifications
+</span><span style="color:#75715e">     */</span>
+    <span style="color:#a6e22e">importScripts</span>(<span style="color:#e6db74">&#39;https://storage.googleapis.com/workbox-cdn/releases/4.0.0/workbox-sw.js&#39;</span>);
+    <span style="color:#a6e22e">workbox</span>.<span style="color:#a6e22e">LOG_LEVEL</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;debug&#34;</span>;
+    <span style="color:#a6e22e">self</span>.<span style="color:#a6e22e">addEventListener</span>(<span style="color:#e6db74">&#34;fetch&#34;</span>, <span style="color:#a6e22e">event</span> =&gt; {
+      <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">respondWith</span>(<span style="color:#a6e22e">caches</span>.<span style="color:#a6e22e">match</span>(<span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">request</span>)
+        .<span style="color:#a6e22e">then</span>(<span style="color:#a6e22e">cachedResponse</span> =&gt; {
+            <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">cachedResponse</span>) {
+              <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">cachedResponse</span>;
+            }
+            <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">fetch</span>(<span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">request</span>);
+          })
+        );
+    });
+    <span style="color:#a6e22e">workbox</span>.<span style="color:#a6e22e">routing</span>.<span style="color:#a6e22e">registerRoute</span>(
+      <span style="color:#75715e">// Cache CSS files
+</span><span style="color:#75715e"></span>      <span style="color:#e6db74">/.*\.css/</span>,
+      <span style="color:#75715e">// Use cache but update in the background ASAP
+</span><span style="color:#75715e"></span>      <span style="color:#a6e22e">workbox</span>.<span style="color:#a6e22e">strategies</span>.<span style="color:#a6e22e">staleWhileRevalidate</span>({
+        <span style="color:#a6e22e">cacheName</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;css-cache&#39;</span>,
+      })
+    );
+    <span style="color:#a6e22e">workbox</span>.<span style="color:#a6e22e">routing</span>.<span style="color:#a6e22e">registerRoute</span>(
+      <span style="color:#75715e">// Cache image files
+</span><span style="color:#75715e"></span>      <span style="color:#e6db74">/\.(?:png|gif|jpg|jpeg|webp|svg|mp3|mp4|json|html|js)$/</span>,
+      <span style="color:#75715e">// Use the cache if it&#39;s available
+</span><span style="color:#75715e"></span>      <span style="color:#a6e22e">workbox</span>.<span style="color:#a6e22e">strategies</span>.<span style="color:#a6e22e">cacheFirst</span>({
+        <span style="color:#a6e22e">cacheName</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;image-cache&#39;</span>,
+        <span style="color:#a6e22e">plugins</span><span style="color:#f92672">:</span> [
+          <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">workbox</span>.<span style="color:#a6e22e">expiration</span>.<span style="color:#a6e22e">Plugin</span>({
+            <span style="color:#a6e22e">maxEntries</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">256</span>, <span style="color:#a6e22e">maxAgeSeconds</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">172800</span>,
+          })
+        ],
+      })
+    );
+    
+</code></pre></div>
+
+</template>
 
 <div class="vvs-cont">
     <p class="js-vect__banner readable__caption h-center l-capt__vect"
@@ -2147,7 +2257,7 @@ href="/css/rainbow.css">
 <script src="/js/flickity.pkgd.min.js"></script>
 
 <template rel="stylesheet" href="https://cdn.jsdelivr.net/gh/arcanus55/neodigm55@gh-pages/dist/neodigm55_v1_1.min.css"></template>
-<link rel="stylesheet" href="https://arcanus55.github.io/neodigm55/dist/neodigm55_v1_1.css">
+<link rel="stylesheet" href="https://arcanus55.github.io/neodigm55/dist/neodigm55_v1_3.css">
 
 <link rel="manifest" href="/manifest.json">
 <script>
@@ -2731,6 +2841,7 @@ if( e3 ) {
                 }
                 neodigmSodaPop.close();
             }else{
+                neodigmSodaPop.shake();
                 if( neodigmToast ){ neodigmToast.q( valMsg ); }
             }
         }
@@ -2738,9 +2849,8 @@ if( e3 ) {
 </script>
 
 
-
 <template src="https://cdn.jsdelivr.net/gh/arcanus55/neodigm55@gh-pages/dist/neodigm55_v1_1.min.js"></template>
-<script src="https://arcanus55.github.io/neodigm55/dist/neodigm55_v1_1.js"></script>
+<script src="https://arcanus55.github.io/neodigm55/dist/neodigm55_v1_3.js"></script>
 
 
 <script type="application/ld+json">
