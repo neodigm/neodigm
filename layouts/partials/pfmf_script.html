@@ -77,6 +77,14 @@ href="/css/rainbow.css">
 </script>
 
 <script>
+setTimeout(()=>{  //  autoOpen if in query string
+    var autoOpenParm = new URLSearchParams( document.location.search )
+    autoOpenParm = autoOpenParm.get("autoOpen")
+    if( autoOpenParm ) {
+        neodigmSodaPop.autoOpen( autoOpenParm )
+    }
+},876)
+
 let pfmf_tagFilter = ((_d, _q)=>{  //  Dyn content filtering by tag chip
     let aTags = aArts = []  //  TODO make removal chips from aTags array
     setTimeout(()=>{
