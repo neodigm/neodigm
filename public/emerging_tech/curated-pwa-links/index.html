@@ -173,6 +173,18 @@ data-neodigm-sodapop-size="small">
                     <button class="l-btn" data-neodigm-sodapop-id="js-pwa-code--id" data-wired4sound="click|12"
                     data-neodigm-toast="Offline First PWA|Service Worker Enabled">For Example ...</button>
                 </div>
+                <details>
+                    <summary data-wired4sound="click|4" class="h-pro-tip text-coy_2009">Favorite PWAs 🦄</summary>
+                    <h4 class="document__title h-center text-coy_2020">The best and most practical PWAs</h4>
+                    <div><a class="h-link" target="_blank" rel="noopener" href="https://squoosh.app/?utm_medium=PWA&utm_source=launcher">Squoosh.app</a></div>
+                    <div><a class="h-link" target="_blank" rel="noopener" href="https://jakearchibald.github.io/svgomg/">svgOMG.app</a></div>
+                    <div><a class="h-link" target="_blank" rel="noopener" href="https://wormhole.app/?utm_source=homescreen">Wormhole.app</a></div>
+                    <div><a class="h-link" target="_blank" rel="noopener" href="https://www.arcanus55.com/index.html">Arcanus55.com</a></div>
+                    <div><a class="h-link" target="_blank" rel="noopener" href="https://www.machfivemarketing.com/index.html">MachFiveMarketing.com</a></div>
+                    <div><a class="h-link" target="_blank" rel="noopener" href="https://svgco.de/">SVGco.de</a></div>
+                    <div><a class="h-link" target="_blank" rel="noopener" href="https://excalidraw.com/">Excalidraw.com</a></div>
+                    <div><a class="h-link" target="_blank" rel="noopener" href="https://lana-k.github.io/sqliteviz/#/workspace">SQLite Viz</a></div>
+                </details>
 <!-- PRO TIP
 
                 chrome://serviceworker-internals/
@@ -2345,6 +2357,14 @@ href="/css/rainbow.css">
 </script>
 
 <script>
+setTimeout(()=>{  
+    var autoOpenParm = new URLSearchParams( document.location.search )
+    autoOpenParm = autoOpenParm.get("autoOpen")
+    if( autoOpenParm ) {
+        neodigmSodaPop.autoOpen( autoOpenParm )
+    }
+},876)
+
 let pfmf_tagFilter = ((_d, _q)=>{  
     let aTags = aArts = []  
     setTimeout(()=>{
@@ -2487,7 +2507,7 @@ if( e3 ) {
 </script>
 <script>
     var _d = document;
-    _d.addEventListener( "contextmenu", function(e) { playAudioFile( 7 ); });  
+    _d.addEventListener( "contextmenu", function(e) { playAudioFile( 6 ); });  
     console.log("%c Scott C. Krause ⚡ Problem Solver and Visual Storyteller", "background: #000; color: #f4dc5e; font-size: 28px");
     function f1210(){ return (Math.floor(Math.random() * (10) + 1)); }
     

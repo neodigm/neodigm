@@ -77,6 +77,14 @@ href="/css/rainbow.css">
 </script>
 
 <script>
+setTimeout(()=>{  //  autoOpen if in query string
+    var autoOpenParm = new URLSearchParams( document.location.search )
+    autoOpenParm = autoOpenParm.get("autoOpen")
+    if( autoOpenParm ) {
+        neodigmSodaPop.autoOpen( autoOpenParm )
+    }
+},876)
+
 let pfmf_tagFilter = ((_d, _q)=>{  //  Dyn content filtering by tag chip
     let aTags = aArts = []  //  TODO make removal chips from aTags array
     setTimeout(()=>{
@@ -219,7 +227,7 @@ if( e3 ) { // Delay 3d call if still null
 </script>
 <script>
     var _d = document;
-    _d.addEventListener( "contextmenu", function(e) { playAudioFile( 7 ); });  //  On right-click
+    _d.addEventListener( "contextmenu", function(e) { playAudioFile( 6 ); });  //  On right-click
     console.log("%c Scott C. Krause ⚡ Problem Solver and Visual Storyteller", "background: #000; color: #f4dc5e; font-size: 28px");
     function f1210(){ return (Math.floor(Math.random() * (10) + 1)); }
     
