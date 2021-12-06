@@ -27,7 +27,8 @@ tags:
             <h3 class="document__title h_ital h-center text-coy_2017">The Progressive JavaScript Framework</h3>
             <p>Unlike other monolithic frameworks, Vue is designed from the ground up to be incrementally adoptable. The core library is focused on the view layer only, and is easy to pick up and integrate with other libraries or existing projects.</p>
             <div class="h-center">
-                <button class="l-btn h-center" data-neodigm-sodapop-id="sp_vue_hybrid_data_viz" data-wired4sound="click|8">For Example ...</button>
+                <button class="l-btn h-center" onClick="doOpenwithCB('sp_vue_hybrid_data_viz')" data-wired4sound="click|8"
+                data-neodigm-toast="Data Visualization|Vuetify Dependency">For Example ...</button>
             </div>
             <details>
                 <summary data-wired4sound="click|4" class="h-pro-tip text-coy_2009">Vue Expertise</summary>
@@ -135,20 +136,33 @@ sp_vue_hybrid_data_viz = function(){  //  neodigm 55 onOpen Callback naming conv
         el: '#app',
         vuetify: new Vuetify(),
         data: () => ({
-            goals: [
-            {"metric": "RINVOQ Market Share",       "goalValue": "9",  "thresholdType": "Percentage",              "thresholdValue": "7"},
-            {"metric": "SKYRIZI Market Share",      "goalValue": "49", "thresholdType": "Percentage",              "thresholdValue": "44"},
-            {"metric": "ISA Utilization",           "goalValue": "68", "thresholdType": "Percentage",              "thresholdValue": "80"},
-            {"metric": "Call Plan Achievement",     "goalValue": "76", "thresholdType": "Percentage",              "thresholdValue": "55"},
-            {"metric": "Priority Target Reach",     "goalValue": "86", "thresholdType": "Percentage",              "thresholdValue": "72"},
-            {"metric": "Priority Target Frequency", "goalValue": "12", "thresholdType": "Number, 1 decimal place", "thresholdValue": "6"},
-            {"metric": "Priority Target Email",     "goalValue": "16", "thresholdType": "Whole Number",            "thresholdValue": "1"},
-            {"metric": "SUMMIT Ranking",            "goalValue": "70", "thresholdType": "Top Half of Rank Group",  "thresholdValue": "60"} 
+            goals: [  //  Assumptions: Goal Metric is unique. Threshold is the goal expressed in per cent or abs.
+            {"metric": "RINVOQ Market Share",       "currentAchieved": "7",  "thresholdType": "Percentage",              "thresholdValue": "9"},
+            {"metric": "SKYRIZI Market Share",      "currentAchieved": "44", "thresholdType": "Percentage",              "thresholdValue": "49"},
+            {"metric": "ISA Utilization",           "currentAchieved": "80", "thresholdType": "Percentage",              "thresholdValue": "68"},
+            {"metric": "Call Plan Achievement",     "currentAchieved": "55", "thresholdType": "Percentage",              "thresholdValue": "76"},
+            {"metric": "Priority Target Reach",     "currentAchieved": "72", "thresholdType": "Percentage",              "thresholdValue": "86"},
+            {"metric": "Priority Target Frequency", "currentAchieved": "6",  "thresholdType": "Number, 1 decimal place", "thresholdValue": "9"},
+            {"metric": "Priority Target Email",     "currentAchieved": "19", "thresholdType": "Whole Number",            "thresholdValue": "300"},
+            {"metric": "SUMMIT Ranking",            "currentAchieved": "9",  "thresholdType": "Top Half of Rank Group",  "thresholdValue": "6"} 
             ],
             tmpGoals: "",
         }),
         mounted(){
             this.tmpGoals = JSON.stringify( this.goals )
+        },
+        methods: {
+            renderAbsolute( _g ){
+                if( _g.thresholdType == "Percentage" ){
+                    return [_g.currentAchieved, _g.thresholdValue, _g.currentAchieved];
+                }else{
+                    if( _g.currentAchieved >= _g.thresholdValue ){  //  Goal Acheived
+                        return [100, Math.round((_g.thresholdValue / _g.currentAchieved) * 100), _g.currentAchieved];
+                    }else{
+                        return [Math.round((_g.currentAchieved / _g.thresholdValue) * 100), 100, _g.currentAchieved];
+                    }
+                }
+            }
         }
     })
 }
@@ -186,7 +200,7 @@ sp_vue_hybrid_data_viz = function(){  //  neodigm 55 onOpen Callback naming conv
     white-space: nowrap;
     overflow: hidden;
 }
-.l-hbr-grd goal-line {
+.l-hbr-grd .goal-line {
     position: relative; top: -28px;
     display: block;
     border: 0;
@@ -218,7 +232,7 @@ data-neodigm-sodapop-size="large">
 <h4 class="h-center readable__caption">The Hybrid Graph Vue/Vuetify Component</h4>
     <section class="readable__doc" style="border-top: solid #EDBA08 1px;">
         <article id="app" style="padding: 12px 12px;">
-            <p>The hybrid graph component displays a horizontal bar chart of both percentages and absolute values with a goal adornment. The goal adornment is a superimposed gray vertical line positioned on the X axis depicting the goals value.</p>
+            <p>The hybrid graph component displays a horizontal bar chart of both percentages and absolute values with a goal adornment. The goal adornment is a superimposed gray vertical line positioned on the X axis depicting the goal value.</p>
 
                 <section class="pfmf-grid pfmf-grid__100 readable__doc">
                     <div style="display: contents;">
@@ -228,22 +242,21 @@ data-neodigm-sodapop-size="large">
                                   <section class="l-hbr-grd" v-for="goal in goals" :key="goal.metric">
                                     <aside>
                                         <p>{{ goal.metric }}</p>
-                                        <p>Goal: {{ goal.goalValue}}<span v-if="goal.thresholdType == 'Percentage'">%</span></p>
+                                        <p>Goal: {{ goal.thresholdValue }}<span v-if="goal.thresholdType == 'Percentage'">%</span></p>
                                     </aside>
                                     <output>
                                         <v-progress-linear
+                                            :value="renderAbsolute( goal )[0]"
                                             background-color="#dae4ef"
-                                            :value="goal.thresholdValue"
-                                            color="#1ac9a8"
-                                            height="24"
+                                            color="#1ac9a8" height="24"
                                         >
                                         <template>
-                                            <span class="inline__text">{{ Math.ceil(goal.thresholdValue) }}<span v-if="goal.thresholdType == 'Percentage'">%</span>
+                                            <span class="inline__text">{{ Math.ceil(renderAbsolute( goal )[2]) }}<span v-if="goal.thresholdType == 'Percentage'">%</span>
                                             </span>
                                         </template>
                                         </v-progress-linear>
-                                        <goal-line  v-if="goal.thresholdType == 'Percentage'" :style="{ width: goal.goalValue + '%' }">
-                                        </goal-line>
+                                        <div class="goal-line" :style="{ width: renderAbsolute( goal )[1] + '%' }">
+                                        </div class="goal-line">
                                     </output>
                                   </section>
                                </v-app>
@@ -265,25 +278,25 @@ data-neodigm-sodapop-size="large">
 {{< highlight html >}}
 <section class="l-hbr-grd" v-for="goal in goals" :key="goal.metric">
     <aside>
-        <p>\{\{ goal.metric \}\}</p>
-        <p>Goal: \{\{ goal.goalValue\}\}<span v-if="goal.thresholdType == 'Percentage'">%</span></p>
+        <p>{ { goal.metric } }</p>
+        <p>Goal: { { goal.thresholdValue } }<span v-if="goal.thresholdType == 'Percentage'">%</span></p>
     </aside>
     <output>
         <v-progress-linear
+            :value="renderAbsolute( goal )[0]"
             background-color="#dae4ef"
-            :value="goal.thresholdValue"
-            color="#1ac9a8"
-            height="24"
+            color="#1ac9a8" height="24"
         >
         <template>
-            <span class="inline__text">\{\{ Math.ceil(goal.thresholdValue) \}\}<span v-if="goal.thresholdType == 'Percentage'">%</span>
+            <span class="inline__text">{ { Math.ceil(renderAbsolute( goal )[2]) } }<span v-if="goal.thresholdType == 'Percentage'">%</span>
             </span>
         </template>
         </v-progress-linear>
-        <goal-line  v-if="goal.thresholdType == 'Percentage'" :style="{ width: goal.goalValue + '%' }">
-        </goal-line>
+        <div class="goal-line" :style="{ width: renderAbsolute( goal )[1] + '%' }">
+        </div class="goal-line">
     </output>
   </section>
+
 {{< /highlight >}}
 <h4 class="document__title h_ital h-center text-coy_2020">JavaScript Vue SFC</h4>
 {{< highlight javascript >}}
@@ -291,20 +304,33 @@ exampleVue = new Vue({
     el: '#app',
     vuetify: new Vuetify(),
     data: () => ({
-        goals: [
-        {"metric": "RINVOQ Market Share",       "goalValue": "9",  "thresholdType": "Percentage",              "thresholdValue": "7"},
-        {"metric": "SKYRIZI Market Share",      "goalValue": "49", "thresholdType": "Percentage",              "thresholdValue": "44"},
-        {"metric": "ISA Utilization",           "goalValue": "68", "thresholdType": "Percentage",              "thresholdValue": "80"},
-        {"metric": "Call Plan Achievement",     "goalValue": "76", "thresholdType": "Percentage",              "thresholdValue": "55"},
-        {"metric": "Priority Target Reach",     "goalValue": "86", "thresholdType": "Percentage",              "thresholdValue": "72"},
-        {"metric": "Priority Target Frequency", "goalValue": "12", "thresholdType": "Number, 1 decimal place", "thresholdValue": "6"},
-        {"metric": "Priority Target Email",     "goalValue": "16", "thresholdType": "Whole Number",            "thresholdValue": "1"},
-        {"metric": "SUMMIT Ranking",            "goalValue": "70", "thresholdType": "Top Half of Rank Group",  "thresholdValue": "60"} 
+        goals: [  //  Assumptions: Goal Metric is unique. Threshold is the goal expressed in per cent or abs.
+        {"metric": "RINVOQ Market Share",       "currentAchieved": "7",  "thresholdType": "Percentage",              "thresholdValue": "9"},
+        {"metric": "SKYRIZI Market Share",      "currentAchieved": "44", "thresholdType": "Percentage",              "thresholdValue": "49"},
+        {"metric": "ISA Utilization",           "currentAchieved": "80", "thresholdType": "Percentage",              "thresholdValue": "68"},
+        {"metric": "Call Plan Achievement",     "currentAchieved": "55", "thresholdType": "Percentage",              "thresholdValue": "76"},
+        {"metric": "Priority Target Reach",     "currentAchieved": "72", "thresholdType": "Percentage",              "thresholdValue": "86"},
+        {"metric": "Priority Target Frequency", "currentAchieved": "6",  "thresholdType": "Number, 1 decimal place", "thresholdValue": "9"},
+        {"metric": "Priority Target Email",     "currentAchieved": "19", "thresholdType": "Whole Number",            "thresholdValue": "300"},
+        {"metric": "SUMMIT Ranking",            "currentAchieved": "9",  "thresholdType": "Top Half of Rank Group",  "thresholdValue": "6"} 
         ],
         tmpGoals: "",
     }),
     mounted(){
         this.tmpGoals = JSON.stringify( this.goals )
+    },
+    methods: {
+        renderAbsolute( _g ){
+            if( _g.thresholdType == "Percentage" ){
+                return [_g.currentAchieved, _g.thresholdValue, _g.currentAchieved];
+            }else{
+                if( _g.currentAchieved >= _g.thresholdValue ){  //  Goal Acheived
+                    return [100, Math.round((_g.thresholdValue / _g.currentAchieved) * 100), _g.currentAchieved];
+                }else{
+                    return [Math.round((_g.currentAchieved / _g.thresholdValue) * 100), 100, _g.currentAchieved];
+                }
+            }
+        }
     }
 })
 {{< /highlight >}}
@@ -342,7 +368,7 @@ exampleVue = new Vue({
     white-space: nowrap;
     overflow: hidden;
 }
-.l-hbr-grd goal-line {
+.l-hbr-grd .goal-line {
     position: relative; top: -28px;
     display: block;
     border: 0;
@@ -358,3 +384,12 @@ exampleVue = new Vue({
         </article>
     </section>
 </template>
+
+<script>
+    function doOpenwithCB( _ndSodaPopId ){  // Callback by nameing convention
+        if( neodigmSodaPop ) {
+            if (typeof window[_ndSodaPopId] === "function") neodigmSodaPop.setOnAfterOpen( window[_ndSodaPopId] )
+            neodigmSodaPop.autoOpen( _ndSodaPopId )
+        }
+    }
+</script>
