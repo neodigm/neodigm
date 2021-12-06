@@ -80,7 +80,8 @@ href="/css/rainbow.css">
 setTimeout(()=>{  //  autoOpen if in query string
     var autoOpenParm = new URLSearchParams( document.location.search )
     autoOpenParm = autoOpenParm.get("autoOpen")
-    if( autoOpenParm ) {
+    if( autoOpenParm && neodigmSodaPop ) {  // Callback by nameing convention
+        if (typeof window[autoOpenParm] === "function") neodigmSodaPop.setOnAfterOpen( window[autoOpenParm] )
         neodigmSodaPop.autoOpen( autoOpenParm )
     }
 },876)
