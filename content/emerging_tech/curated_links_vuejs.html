@@ -14,6 +14,30 @@ tags:
 - Tutorials
 - Vue
 ---
+
+<link href="https://cdn.jsdelivr.net/npm/@mdi/font@6.x/css/materialdesignicons.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+
+<section class="pfmf-grid pfmf-grid__100 readable__doc">
+    <div>
+        <article style="padding: 12px 12px;">
+            <h3 class="document__title h_ital h-center text-coy_2017">The Progressive JavaScript Framework</h3>
+            <p>Unlike other monolithic frameworks, Vue is designed from the ground up to be incrementally adoptable. The core library is focused on the view layer only, and is easy to pick up and integrate with other libraries or existing projects.</p>
+            <div class="h-center">
+                <button class="l-btn h-center" data-neodigm-sodapop-id="sp_vue_hybrid_data_viz" data-wired4sound="click|8">For Example ...</button>
+            </div>
+            <details>
+                <summary data-wired4sound="click|4" class="h-pro-tip text-coy_2009">Vue Expertise</summary>
+                <p>Since 2014, I've implemented the best coding practices that reduce complexity and take advantage of the flexibility of the Vue.js ecosystem.</p>
+                <p>I am adept at using a wide range of modern Vue tools to build mission-critical applications. This includes understanding how to properly use the Vue CLI, Vue Router, Vuex, Vuetify, and Vue DevTools to maximize code reusability, easily expand application functionality, and standardize UI style across the organization.</p>
+            </details>
+        </article>
+    </div>
+</section>
+
 <div class="vvs-cont">
     <p class="js-vect__banner readable__caption h-center l-capt__vect"
     data-at-vivid="Curated" data-at-rnd-gt="0" data-at-change="data-at-vivid" data-at="Links">
@@ -27,7 +51,7 @@ tags:
 </section>
 
 <div class="h-center">
-    <button class="l-btn" data-wired4sound="click|6" onClick="clickRandom('.h-link')"
+    <button class="l-btn l-btn--ghost" data-wired4sound="click|6" onClick="clickRandom('.h-link')"
     data-neodigm-toast="##Im feeling lucky|Visit a Random link">Random 🎲</button>
 </div>   
 
@@ -92,7 +116,7 @@ tags:
 </section>
 
 <script type="text/javascript">
-    const eIFCont = document.querySelector(".eIF__js")
+    const eIFCont = document.querySelector(".eIF__js")  //  Google Trends
     if( eIFCont ){
         const eIF = eIFCont.querySelector("article")
         setTimeout(function(){
@@ -103,3 +127,234 @@ tags:
         }, 3800)
     }
 </script>
+
+<script>
+let exampleVue = {}
+sp_vue_hybrid_data_viz = function(){  //  neodigm 55 onOpen Callback naming convention
+    exampleVue = new Vue({
+        el: '#app',
+        vuetify: new Vuetify(),
+        data: () => ({
+            goals: [
+            {"metric": "RINVOQ Market Share",       "goalValue": "9",  "thresholdType": "Percentage",              "thresholdValue": "7"},
+            {"metric": "SKYRIZI Market Share",      "goalValue": "49", "thresholdType": "Percentage",              "thresholdValue": "44"},
+            {"metric": "ISA Utilization",           "goalValue": "68", "thresholdType": "Percentage",              "thresholdValue": "80"},
+            {"metric": "Call Plan Achievement",     "goalValue": "76", "thresholdType": "Percentage",              "thresholdValue": "55"},
+            {"metric": "Priority Target Reach",     "goalValue": "86", "thresholdType": "Percentage",              "thresholdValue": "72"},
+            {"metric": "Priority Target Frequency", "goalValue": "12", "thresholdType": "Number, 1 decimal place", "thresholdValue": "6"},
+            {"metric": "Priority Target Email",     "goalValue": "16", "thresholdType": "Whole Number",            "thresholdValue": "1"},
+            {"metric": "SUMMIT Ranking",            "goalValue": "70", "thresholdType": "Top Half of Rank Group",  "thresholdValue": "60"} 
+            ],
+            tmpGoals: "",
+        }),
+        mounted(){
+            this.tmpGoals = JSON.stringify( this.goals )
+        }
+    })
+}
+</script>
+<style>
+.l-hbr-grd {
+    display: grid;
+    grid-template-columns: 148px 1fr;
+    gap: 0px 0px;
+    width: 99%;
+    padding: 0;
+}
+.l-hbr-grd > aside {
+    position: relative;
+    border-width: 0; border-right: solid 1px #aaa;
+    text-align: right;
+    padding: 2px 1px 12px 2px;
+}
+.l-hbr-grd > aside > p {
+    color: #2d2926;
+    font-family: 'Lato', sans-serif;
+    margin: 2px; padding: 2px;
+    line-height: .98;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.l-hbr-grd > aside > p:nth-of-type(1) { font-size: 12px; }
+.l-hbr-grd > aside > p:nth-of-type(2) { font-size: 11px; }
+.l-hbr-grd > output { margin-left: 6px; }
+.l-hbr-grd .inline__text {
+    color: #2d2926;
+    font-family: 'Lato', sans-serif; font-size: 12px;
+    margin: 2px; padding: 2px;
+    line-height: .98;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.l-hbr-grd goal-line {
+    position: relative; top: -28px;
+    display: block;
+    border: 0;
+    border-right: solid 4px #aaa;
+    width: 0; height: 32px;
+    z-index: 64;
+}
+</style>
+
+<style>
+/* vuetify overrides */
+.v-application--wrap {
+    min-height: fit-content;
+}
+.txta-json {
+    display: block;
+    width: 82%;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 14px;
+    border: solid 1px #2d2926;
+    border-radius: 16px;
+    margin: 8px auto;
+    background-color: #fff;
+}
+</style>
+
+<template id="sp_vue_hybrid_data_viz" data-neodigm-sodapop-modal="false"
+data-neodigm-sodapop-size="large">
+<h4 class="h-center readable__caption">The Hybrid Graph Vue/Vuetify Component</h4>
+    <section class="readable__doc" style="border-top: solid #EDBA08 1px;">
+        <article id="app" style="padding: 12px 12px;">
+            <p>The hybrid graph component displays a horizontal bar chart of both percentages and absolute values with a goal adornment. The goal adornment is a superimposed gray vertical line positioned on the X axis depicting the goals value.</p>
+
+                <section class="pfmf-grid pfmf-grid__100 readable__doc">
+                    <div style="display: contents;">
+                        <article style="padding: 12px 12px;border-width: 0;">
+                            <div>
+                                <v-app>
+                                  <section class="l-hbr-grd" v-for="goal in goals" :key="goal.metric">
+                                    <aside>
+                                        <p>{{ goal.metric }}</p>
+                                        <p>Goal: {{ goal.goalValue}}<span v-if="goal.thresholdType == 'Percentage'">%</span></p>
+                                    </aside>
+                                    <output>
+                                        <v-progress-linear
+                                            background-color="#dae4ef"
+                                            :value="goal.thresholdValue"
+                                            color="#1ac9a8"
+                                            height="24"
+                                        >
+                                        <template>
+                                            <span class="inline__text">{{ Math.ceil(goal.thresholdValue) }}<span v-if="goal.thresholdType == 'Percentage'">%</span>
+                                            </span>
+                                        </template>
+                                        </v-progress-linear>
+                                        <goal-line  v-if="goal.thresholdType == 'Percentage'" :style="{ width: goal.goalValue + '%' }">
+                                        </goal-line>
+                                    </output>
+                                  </section>
+                               </v-app>
+                              </div>
+                        </article>
+                    </div>
+                </section>
+                <details>
+                    <summary data-wired4sound="click|4" class="h-pro-tip text-coy_2009">Try it ⚡</summary>
+                    <textarea class="txta-json"rows=8 v-model="tmpGoals"></textarea>
+                    <div class="h-center">
+                        <button class="l-btn h-center" @click="goals =  JSON.parse( tmpGoals )" data-wired4sound="click|5">Update Component</button>
+                    </div>
+                </details>
+                <br>
+                <details id="js-vue_hybrid_data_viz">
+                    <summary data-wired4sound="click|4" class="h-pro-tip text-coy_2009">Source Code 👁️</summary>
+<h4 class="document__title h_ital h-center text-coy_2020">Template Vue SFC</h4>
+{{< highlight html >}}
+<section class="l-hbr-grd" v-for="goal in goals" :key="goal.metric">
+    <aside>
+        <p>\{\{ goal.metric \}\}</p>
+        <p>Goal: \{\{ goal.goalValue\}\}<span v-if="goal.thresholdType == 'Percentage'">%</span></p>
+    </aside>
+    <output>
+        <v-progress-linear
+            background-color="#dae4ef"
+            :value="goal.thresholdValue"
+            color="#1ac9a8"
+            height="24"
+        >
+        <template>
+            <span class="inline__text">\{\{ Math.ceil(goal.thresholdValue) \}\}<span v-if="goal.thresholdType == 'Percentage'">%</span>
+            </span>
+        </template>
+        </v-progress-linear>
+        <goal-line  v-if="goal.thresholdType == 'Percentage'" :style="{ width: goal.goalValue + '%' }">
+        </goal-line>
+    </output>
+  </section>
+{{< /highlight >}}
+<h4 class="document__title h_ital h-center text-coy_2020">JavaScript Vue SFC</h4>
+{{< highlight javascript >}}
+exampleVue = new Vue({
+    el: '#app',
+    vuetify: new Vuetify(),
+    data: () => ({
+        goals: [
+        {"metric": "RINVOQ Market Share",       "goalValue": "9",  "thresholdType": "Percentage",              "thresholdValue": "7"},
+        {"metric": "SKYRIZI Market Share",      "goalValue": "49", "thresholdType": "Percentage",              "thresholdValue": "44"},
+        {"metric": "ISA Utilization",           "goalValue": "68", "thresholdType": "Percentage",              "thresholdValue": "80"},
+        {"metric": "Call Plan Achievement",     "goalValue": "76", "thresholdType": "Percentage",              "thresholdValue": "55"},
+        {"metric": "Priority Target Reach",     "goalValue": "86", "thresholdType": "Percentage",              "thresholdValue": "72"},
+        {"metric": "Priority Target Frequency", "goalValue": "12", "thresholdType": "Number, 1 decimal place", "thresholdValue": "6"},
+        {"metric": "Priority Target Email",     "goalValue": "16", "thresholdType": "Whole Number",            "thresholdValue": "1"},
+        {"metric": "SUMMIT Ranking",            "goalValue": "70", "thresholdType": "Top Half of Rank Group",  "thresholdValue": "60"} 
+        ],
+        tmpGoals: "",
+    }),
+    mounted(){
+        this.tmpGoals = JSON.stringify( this.goals )
+    }
+})
+{{< /highlight >}}
+<h4 class="document__title h_ital h-center text-coy_2020">CSS Vue SFC</h4>
+{{< highlight css >}}
+.l-hbr-grd {
+    display: grid;
+    grid-template-columns: 148px 1fr;
+    gap: 0px 0px;
+    width: 99%;
+    padding: 0;
+}
+.l-hbr-grd > aside {
+    position: relative;
+    border-width: 0; border-right: solid 1px #aaa;
+    text-align: right;
+    padding: 2px 1px 12px 2px;
+}
+.l-hbr-grd > aside > p {
+    color: #2d2926;
+    font-family: 'Lato', sans-serif;
+    margin: 2px; padding: 2px;
+    line-height: .98;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.l-hbr-grd > aside > p:nth-of-type(1) { font-size: 12px; }
+.l-hbr-grd > aside > p:nth-of-type(2) { font-size: 11px; }
+.l-hbr-grd > output { margin-left: 6px; }
+.l-hbr-grd .inline__text {
+    color: #2d2926;
+    font-family: 'Lato', sans-serif; font-size: 12px;
+    margin: 2px; padding: 2px;
+    line-height: .98;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.l-hbr-grd goal-line {
+    position: relative; top: -28px;
+    display: block;
+    border: 0;
+    border-right: solid 4px #aaa;
+    width: 0; height: 32px;
+    z-index: 64;
+}
+{{< /highlight >}}
+                <div class="h-center">
+                    <button class="js-copy-btn l-btn l-btn--ghost" onclick="doCopy('#js-vue_hybrid_data_viz')" data-wired4sound="click|10">Copy</button>
+                </div>
+            </details>
+        </article>
+    </section>
+</template>

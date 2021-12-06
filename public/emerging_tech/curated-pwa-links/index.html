@@ -324,7 +324,7 @@ data-neodigm-sodapop-size="small">
 </section>
 
 <div class="h-center">
-    <button class="l-btn" data-wired4sound="click|6" onClick="clickRandom('.h-link')"
+    <button class="l-btn l-btn--ghost" data-wired4sound="click|6" onClick="clickRandom('.h-link')"
     data-neodigm-toast="##Im feeling lucky|Visit a Random link">Random 🎲</button>
 </div>   
 
@@ -2365,7 +2365,8 @@ href="/css/rainbow.css">
 setTimeout(()=>{  
     var autoOpenParm = new URLSearchParams( document.location.search )
     autoOpenParm = autoOpenParm.get("autoOpen")
-    if( autoOpenParm ) {
+    if( autoOpenParm && neodigmSodaPop ) {  
+        if (typeof window[autoOpenParm] === "function") neodigmSodaPop.setOnAfterOpen( window[autoOpenParm] )
         neodigmSodaPop.autoOpen( autoOpenParm )
     }
 },876)
