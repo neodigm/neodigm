@@ -696,7 +696,7 @@
 {"name":"Laravel Vapor","comment":"","uri":"https://vapor.laravel.com/","cat":"tech","tags":["laravel","php","aws"]},
 {"name":"Laravel Consultancy","comment":"","uri":"https://tighten.co/","cat":"a55","tags":["laravel","php","chicgao"]},
 {"name":"Sai Nikhil","comment":"","uri":"https://iamsainikhil.com/","cat":"blogfolio","tags":["vue","Js","UX", "infosec"]},
-{"name":"Vue classic server-side routing","comment":"Inertia has no client-side routing, nor does it require an API. Simply build controllers and page views like you've always done!","uri":"https://inertiajs.com/","cat":"tech","tags":["vue","Js","laravel", "inertia"]},
+{"name":"Vue classic server-side routing","comment":"Inertia has no client-side routing, nor does it require an API. Simply build controllers and page views like you've always done!","uri":"https://inertiajs.com/","cat":"tech","tags":["vue","Js","laravel", "inertia", "1st"]},
 {"name":"Affinity Designer","comment":"Best in class for creating concept art, print projects, logos, icons, UI designs, mock-ups","uri":"https://affinity.serif.com/en-us/designer/","cat":"creative","tags":["creative","svg","UX", "1st"]},
 {"name":"Bideo Wego","comment":"I'm Bideo Wego. Humans call me Chris Scavello.","uri":"http://bideowego.com/","cat":"blogfolio","tags":["creative","gamification","Js"]},
 {"name":"Web Components","comment":"Standard component model for the Web","uri":"https://github.com/WICG/webcomponents","cat":"tech","tags":["lwc","web-components","Js"]},

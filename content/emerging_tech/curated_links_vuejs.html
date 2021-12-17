@@ -27,8 +27,8 @@ tags:
             <h3 class="document__title h_ital h-center text-coy_2017">The Progressive JavaScript Framework</h3>
             <p>Unlike other monolithic frameworks, Vue is designed from the ground up to be incrementally adoptable. The core library is focused on the view layer only, and is easy to pick up and integrate with other libraries or existing projects.</p>
             <div class="h-center">
-                <button class="l-btn h-center" onClick="doOpenwithCB('sp_vue_hybrid_data_viz')" data-neodigm-wired4sound="click|8"
-                data-neodigm-toast="Data Visualization|Vuetify Dependency">For Example ...</button>
+                <button class="l-btn h-center" data-neodigm-sodapop-id="sp_sample_vue" data-neodigm-wired4sound="click|5"
+                data-neodigm-toast="Vue.js Double-Tap Logic">For Example ...</button>
             </div>
             <details>
                 <summary data-neodigm-wired4sound="click|4" class="h-pro-tip text-coy_2009">Vue Expertise</summary>
@@ -131,7 +131,7 @@ tags:
 
 <script>
 let exampleVue = {}
-sp_vue_hybrid_data_viz = function(){  //  neodigm 55 onOpen Callback naming convention
+sp_vue_hybrid_data_viz2 = function(){  //  neodigm 55 onOpen Callback naming convention
     exampleVue = new Vue({
         el: '#app',
         vuetify: new Vuetify(),
@@ -227,7 +227,60 @@ sp_vue_hybrid_data_viz = function(){  //  neodigm 55 onOpen Callback naming conv
 }
 </style>
 
-<template id="sp_vue_hybrid_data_viz" data-neodigm-sodapop-modal="false"
+<template id="sp_sample_vue" data-neodigm-sodapop-modal="false" 
+data-neodigm-sodapop-size="small">
+
+<output id="js-copy__css">
+{{< highlight JavaScript >}}
+//  A Vue.js snippet that shows how to capture both a tap and
+//  a double-tap on the same element within the template.
+//
+//  Canonical Use Case: Double-Tap to zoom into a hero image
+//  and single-tap to zoom out.
+
+   /*    ____   ____                      __        
+    *    \   \ /   /_ __   ____          |__| ______
+    *     \   Y   /  |  \_/ __ \         |  |/  ___/
+    *      \     /|  |  /\  ___/         |  |\___ \ 
+    *       \___/ |____/  \___  > /\ /\__|  /____  >
+    *                         \/  \/ \______|    \/ */
+
+    methods: {
+    "doHeroMobMouseUp": function( ev ){ // Double Tap
+        var oHro = this.oHeroZmMob;
+        if( oHro.isInit ){
+        if( oHro.doubleTap ){ // Zoom In
+            oHro.doubleTap = false;
+            this.doHeroMobScale( .5 ); // Double Tap
+        }else{
+            oHro.doubleTap = true;
+            setTimeout(function(){ this.doHeroMobMouseUp_expire() }, 380);
+        }
+        }
+        this.oHeroZmMob.isDown = false;
+    },
+    "doHeroMobMouseUp_expire": function(){ // Single Tap
+        var oHro = this.oHeroZmMob;
+        if( oHro.isInit ){ // Zoom Out
+        if( oHro.doubleTap ) this.doHeroMobScale( -.5 ); // Single Tap
+        oHro.doubleTap = false;
+        } 
+    }
+    }
+    /*
+    This is only part of a larger Vue gesture implementation supporting
+    Pinch 🤏, Zoom, Pan, and Swipe. Reach out to me if you want to learn more.
+    */
+{{< /highlight >}}
+        <span class="h-ds__none"
+        data-at="Vue.js Double-Tap Logic|Process both Tap and Double-Tap|Vue.js Methods"></span>
+        </output>
+    <div class="h-center">
+        <button class="js-copy-btn l-btn l-btn--ghost" onclick="doCopy('#js-copy__css')" data-neodigm-wired4sound="click|10">Copy</button>
+    </div>
+</template>
+
+<template id="sp_vue_hybrid_data_viz2" data-neodigm-sodapop-modal="false"
 data-neodigm-sodapop-size="large">
 <h4 class="h-center readable__caption">The Hybrid Graph Vue/Vuetify Component</h4>
     <section class="readable__doc" style="border-top: solid #EDBA08 1px;">
@@ -392,4 +445,8 @@ exampleVue = new Vue({
             neodigmSodaPop.autoOpen( _ndSodaPopId )
         }
     }
+</script>
+
+<script>
+    setTimeout(function(){ document.body.dataset.prefScheme="dark"; }, 480)
 </script>
