@@ -1,27 +1,22 @@
 ---
-title: "Curated Creative Links"
-date: 2021-06-25T13:40:22-05:00
+title: "Svelte"
+date: 2021-04-05T18:14:20-05:00
 draft: false
-summary: "Indispensable Curated Creative Links"
-description: In-depth and indispensable curated Creative links
-slug: curated-creative-links
+summary: "Indispensable Curated Svelte Links"
+description: In-depth and indispensable curated Svelte links
+slug: curated-svelte-links
 categories:
 - Links
-- JavaScript
-- Creative
+- Svelte
 tags:
 - Links
 - Curated
 - Tutorials
-- JavaScript
-- TypeScript
-- Creative coding
-- Procedural
+- Svelte
 ---
-
 <div class="vvs-cont">
     <p class="js-vect__banner readable__caption h-center l-capt__vect"
-    data-at-vivid="Creative Coding" data-at-rnd-gt="0" data-at-change="data-at-vivid" data-at="Links">
+    data-at-vivid="Curated" data-at-rnd-gt="0" data-at-change="data-at-vivid" data-at="Links">
     </p>
 </div>
 <section class="pfmf-grid pfmf-grid__100 readable__doc">
@@ -31,12 +26,7 @@ tags:
     </div>
 </section>
 
-<div class="h-center">
-    <button class="l-btn l-btn--ghost" data-neodigm-wired4sound="click|6" onClick="clickRandom('.h-link')"
-    data-neodigm-toast="##Im feeling lucky|Visit a Random link">Open Random 🎲</button>
-</div>
-<br>
-
+<script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/2674_RC03/embed_loader.js"></script> 
 <script>
     fetch("/weaponeered_poetry.json")
         .then(response => response.json()) // Get links
@@ -82,16 +72,37 @@ tags:
                     });
                     setTimeout(function(){
                         if(typeof neodigmToast !== "undefined") neodigmToast.q( nCnt + " " + sInc.toLocaleUpperCase() + "|Curated Links")
-                    }, 2200)
+                    }, 2800)
                     elVect.dataset.at = [ ... new Set(aAllTags)].join("|")
                 }
-            })( document, [".js-sec__fav", ".js-vect__banner"], "creative", "a55");
+            })( document, [".js-sec__fav", ".js-vect__banner"], "svelte", "a55");
         });
 
 </script>
 
-<neodigm-parallax data-neodigm-parallax="https://neodigm.github.io/brand_logo_graphic_design/fantastic/discerning/27.jpg">
-    <section>
-        <aside></aside>
-    </section>
-</neodigm-parallax> 
+<div class="h-center">
+    <button class="l-btn l-btn--ghost" data-neodigm-wired4sound="click|6" onClick="clickRandom('.h-link')"
+    data-neodigm-toast="##Im feeling lucky|Visit a Random link">Open Random 🎲</button>
+</div>   
+
+<section class="eIF__js pfmf-grid pfmf-grid__100 readable__doc h-ds__none">
+    <div>
+        <article class="l-favs" style="padding: 12px 12px;"></article>        
+    </div>
+</section>
+
+<script type="text/javascript">
+    const eIFCont = document.querySelector(".eIF__js")
+    if( eIFCont ){
+        const eIF = eIFCont.querySelector("article")
+        setTimeout(function(){
+            if( eIF && trends?.embed ){
+                eIFCont.classList.remove("h-ds__none")
+                trends.embed.renderExploreWidgetTo(eIF, "TIMESERIES", {"comparisonItem":[{"keyword":"vuejs","geo":"US","time":"today 12-m"},{"keyword":"sveltejs","geo":"US","time":"today 12-m"},{"keyword":"reactjs","geo":"US","time":"today 12-m"}],"category":0,"property":""}, {"exploreQuery":"geo=US&q=vuejs,sveltejs,reactjs&date=today 12-m,today 12-m,today 12-m","guestPath":"https://trends.google.com:443/trends/embed/"} )
+            }
+        }, 3800)
+    }
+</script>
+
+
+
