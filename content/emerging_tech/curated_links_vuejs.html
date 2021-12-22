@@ -53,8 +53,8 @@ tags:
 
 <div class="h-center">
     <button class="l-btn l-btn--ghost" data-neodigm-wired4sound="click|6" onClick="clickRandom('.h-link')"
-    data-neodigm-toast="##Im feeling lucky|Visit a Random link">Random 🎲</button>
-</div>   
+    data-neodigm-toast="##Im feeling lucky|Visit a Random link">Open Random 🎲</button>
+</div>
 
 <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/2674_RC03/embed_loader.js"></script>
 <script>
@@ -131,7 +131,7 @@ tags:
 
 <script>
 let exampleVue = {}
-sp_vue_hybrid_data_viz2 = function(){  //  neodigm 55 onOpen Callback naming convention
+sp_vue_hybrid_data_viz = function(){  //  neodigm 55 onOpen Callback naming convention
     exampleVue = new Vue({
         el: '#app',
         vuetify: new Vuetify(),
@@ -228,7 +228,9 @@ sp_vue_hybrid_data_viz2 = function(){  //  neodigm 55 onOpen Callback naming con
 </style>
 
 <template id="sp_sample_vue" data-neodigm-sodapop-modal="false" 
-data-neodigm-sodapop-size="small">
+data-neodigm-sodapop-size="medium">
+
+<article class="pfmf-crd--black h-center"><p class="js-patterns__caption readable__doc readable__doc--white" data-at="Vue.js Double-Tap Logic|Process both Tap and Double-Tap|Vue.js Methods|Vue Reactive Provide Inject|Persist Vuetify Pagination">Vue.js Methods</p></article>
 
 <output id="js-copy__css">
 {{< highlight JavaScript >}}
@@ -272,6 +274,43 @@ data-neodigm-sodapop-size="small">
     Pinch 🤏, Zoom, Pan, and Swipe. Reach out to me if you want to learn more.
     */
 {{< /highlight >}}
+<hr>
+{{< highlight JavaScript >}}
+//  Vuejs Provide Inject Reactive Component Communication
+//. Parent Component
+provide() {
+    return {
+      cyRef: this.cytoRef,
+      obsId: this.obsId,
+      hostname: () => this.reactiveHostname
+    }
+  }
+
+//. Child Component
+inject: ['cyRef', 'hostname'],
+    
+//  Add computed - 
+compCyRef(){
+    return this.cyRef()
+}
+{{< /highlight >}}
+<hr>
+{{< highlight JavaScript >}}
+  watch: {
+      //. Hydrate the Vuetify Pagination object to persist
+      //  the Sort colunm and Number of Pages.
+    pagination(val) {
+      const lsKey = this?.$route?.path || 'lsKey'
+      localStorage.setItem(lsKey, JSON.stringify(val, null))
+    }
+  },
+  mounted() {
+    const lsKey = this?.$route?.path || 'lsKey'
+    if (localStorage.getItem(lsKey)) {
+      this.pagination = JSON.parse(localStorage.getItem(lsKey))
+    }
+  },
+  {{< /highlight >}}
         <span class="h-ds__none"
         data-at="Vue.js Double-Tap Logic|Process both Tap and Double-Tap|Vue.js Methods"></span>
         </output>
@@ -280,7 +319,7 @@ data-neodigm-sodapop-size="small">
     </div>
 </template>
 
-<template id="sp_vue_hybrid_data_viz2" data-neodigm-sodapop-modal="false"
+<template id="sp_vue_hybrid_data_viz" data-neodigm-sodapop-modal="false"
 data-neodigm-sodapop-size="large">
 <h4 class="h-center readable__caption">The Hybrid Graph Vue/Vuetify Component</h4>
     <section class="readable__doc" style="border-top: solid #EDBA08 1px;">
@@ -439,7 +478,7 @@ exampleVue = new Vue({
 </template>
 
 <script>
-    function doOpenwithCB( _ndSodaPopId ){  // Callback by nameing convention
+    function doOpenwithCB( _ndSodaPopId ){  // Callback by nameing convention (soda pop api)
         if( neodigmSodaPop ) {
             if (typeof window[_ndSodaPopId] === "function") neodigmSodaPop.setOnAfterOpen( window[_ndSodaPopId] )
             neodigmSodaPop.autoOpen( _ndSodaPopId )

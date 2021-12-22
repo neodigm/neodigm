@@ -76,7 +76,7 @@ href="#a11y-skipmain">Skip to Main Content</a>
                 <a class="mm__link--card" href="https://machfivemarketing.com/" target="_blank" rel="noopener">Mach Five</a> 
                 <a class="mm__link--card" onClick="neodigmSodaPop.autoOpen('js-contactPop__id')"
                 data-neodigm-wired4sound="click|11">Contact</a>
-                <a class="mm__link--card" href="/Arcanus_Scott_C_Krause_2021.pdf" target="_blank" rel="noopener">Résumé PDF</a>
+                <a class="mm__link--card" href="/Arcanus_Scott_C_Krause_2022.pdf" target="_blank" rel="noopener">Résumé PDF</a>
                 
             </section>   
         </header>
@@ -88,7 +88,7 @@ href="#a11y-skipmain">Skip to Main Content</a>
                 <a class="mm__link--bottom" href="https://machfivemarketing.com/" target="_blank" rel="noopener">Mach Five</a>
                 <a class="mm__link--bottom" onClick="neodigmSodaPop.autoOpen('js-contactPop__id')"
                 data-neodigm-wired4sound="click|11">Contact</a>
-                <a class="mm__link--bottom" href="/Arcanus_Scott_C_Krause_2021.pdf" target="_blank" rel="noopener">Résumé PDF</a>
+                <a class="mm__link--bottom" href="/Arcanus_Scott_C_Krause_2022.pdf" target="_blank" rel="noopener">Résumé PDF</a>
                 
             </section>
         </div>
@@ -306,6 +306,7 @@ data-neodigm-sodapop-size="small">
     );
     
 </code></pre></div>
+    </output>
     <div class="h-center">
         <button class="js-copy-btn l-btn l-btn--ghost" onclick="doCopy('#js-copy__css')" data-neodigm-wired4sound="click|10">Copy</button>
     </div>
@@ -325,7 +326,7 @@ data-neodigm-sodapop-size="small">
 
 <div class="h-center">
     <button class="l-btn l-btn--ghost" data-neodigm-wired4sound="click|6" onClick="clickRandom('.h-link')"
-    data-neodigm-toast="##Im feeling lucky|Visit a Random link">Random 🎲</button>
+    data-neodigm-toast="##Im feeling lucky|Visit a Random link">Open Random 🎲</button>
 </div>   
 
 <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/2674_RC03/embed_loader.js"></script> 
@@ -600,40 +601,6 @@ data-neodigm-sodapop-size="small">
                 
             
                 
-                <a class="l-blog-crd" href="https://thescottkrause.com/emerging_tech/new_macbook_setup_for_dev/">
-                <section>
-                    <picture>
-                        
-                        <img class="caro-target__js" src="/emerging_tech/new_macbook_setup_for_dev_tn.webp" alt="New Macbook Setup for Developers">
-                    </picture>
-                    <p>Emerging Tech</p>
-                    
-                    <h5> New Macbook Setup for Developers </h5>
-                    <h6> New Macbook Config for Devs 2021 </h6>
-                    <p>2021-03-24</p>
-                </section>
-                </a>
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
             
                 
             
@@ -858,6 +825,12 @@ data-neodigm-sodapop-size="small">
                 
             
                 
+            
+                
+            
+                
+            
+                
                 <a class="l-blog-crd" href="https://thescottkrause.com/emerging_tech/gameification-threejs-webcrypto-accelerator-blender-gltf/">
                 <section>
                     <picture>
@@ -898,26 +871,6 @@ data-neodigm-sodapop-size="small">
             <section class="l-caro-design__cnt h-bg__stripe"
             data-caro-src="256">
            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
                 
             
                 
@@ -2061,6 +2014,48 @@ data-at="eCom Product Data Viz|Async 🛒 Product Crawl|Console Log Product Repo
                 
             
                 
+                <div class="l-blog-crd caro-target__js">
+                    <section>
+                        <picture>
+                            
+                            <img src="/patterns/javascript_tn.webp" alt="Solve Anagram Puzzle">
+                        </picture>
+                        
+                        <h5> Solve Anagram Puzzle </h5>
+                        <h6 class="h-smaller"> Do two strings contain the exact amount of letters to form two words? </h6>
+                        <output class="h-ds__none"> <output>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-JavaScript" data-lang="JavaScript"><span style="color:#75715e">/* An anagram is a word or phrase formed by rearranging the letters
+</span><span style="color:#75715e">of a different word or phrase, typically using all the original
+</span><span style="color:#75715e">letters exactly once. For example, the word anagram itself can be
+</span><span style="color:#75715e">rearranged into nag a ram, also the word binary into brainy. 🎯 🍰 🔥
+</span><span style="color:#75715e">   _                                         
+</span><span style="color:#75715e">  /_\  _ __   __ _  __ _ _ __ __ _ _ __ ___  
+</span><span style="color:#75715e"> //_\\| &#39;_ \ / _` |/ _` | &#39;__/ _` | &#39;_ ` _ \ 
+</span><span style="color:#75715e">/  _  \ | | | (_| | (_| | | | (_| | | | | | |
+</span><span style="color:#75715e">\_/ \_/_| |_|\__,_|\__, |_|  \__,_|_| |_| |_|
+</span><span style="color:#75715e">                 |___/                     */</span>
+
+
+<span style="color:#75715e">//  Determine if two strings are Anagrams
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">isAnagram</span>( <span style="color:#a6e22e">word1</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;DOCTORWHO&#34;</span>, <span style="color:#a6e22e">word2</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;TORCHWOOD&#34;</span>){
+  <span style="color:#66d9ef">let</span> <span style="color:#a6e22e">uc1</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">word1</span>.<span style="color:#a6e22e">toUpperCase</span>(), <span style="color:#a6e22e">uc2</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">word2</span>.<span style="color:#a6e22e">toUpperCase</span>()
+  <span style="color:#66d9ef">return</span> ([ ... <span style="color:#a6e22e">uc1</span> ].<span style="color:#a6e22e">filter</span>(( <span style="color:#a6e22e">c</span> )=&gt;{
+    <span style="color:#66d9ef">if</span>( <span style="color:#a6e22e">uc2</span>.<span style="color:#a6e22e">indexOf</span>( <span style="color:#a6e22e">c</span> ) <span style="color:#f92672">!=</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1</span> ){
+      <span style="color:#a6e22e">uc2</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">uc2</span>.<span style="color:#a6e22e">replace</span>( <span style="color:#a6e22e">c</span>, <span style="color:#e6db74">&#34;&#34;</span> )  <span style="color:#75715e">//  Replace First Occurrence
+</span><span style="color:#75715e"></span>      <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+    }
+  }).<span style="color:#a6e22e">length</span> <span style="color:#f92672">===</span> <span style="color:#a6e22e">uc1</span>.<span style="color:#a6e22e">length</span> <span style="color:#f92672">&amp;&amp;</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">uc2</span>))
+}
+<span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">warn</span>( <span style="color:#a6e22e">isAnagram</span>(<span style="color:#e6db74">&#34;neodigm&#34;</span>, <span style="color:#e6db74">&#34;dogimen&#34;</span>) );</code></pre></div>
+    <span class="h-ds__none"
+    data-at="Anagram Logic|Rearranging Letters|Puzzle Solver"></span>
+</output> </output>
+                        <p>2020-12-07</p>
+                    </section>
+                </div>
+                
+            
+                
             
                 
                 <div class="l-blog-crd caro-target__js">
@@ -2197,6 +2192,10 @@ data-at="TS Config Class|Chrome Extention TS|TypeScript Config Class|In Browser 
             
                 
             
+                
+            
+                
+            
             </section>
         </article>
 
@@ -2264,7 +2263,7 @@ data-at="TS Config Class|Chrome Extention TS|TypeScript Config Class|In Browser 
     "url": "https://www.theScottKrause.com",
     "sameAs" : [ "https://github.com/neodigm",
 "https://www.theScottKrause.com/",
-"https://thescottkrause.com/Arcanus_Scott_C_Krause_2021.pdf",
+"https://thescottkrause.com/Arcanus_Scott_C_Krause_2022.pdf",
 "https://thescottkrause.com/tags/javascript/",
                 "https://thescottkrause.com/emerging_tech/ecommerce-accessibility-a11y/",
 "https://thescottkrause.com/d3_datavis_skills.html",

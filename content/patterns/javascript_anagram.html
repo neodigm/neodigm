@@ -1,0 +1,41 @@
+---
+title: "Solve Anagram Puzzle"
+date: 2020-12-07T20:26:54-06:00
+draft: false
+summary: "Do two strings contain the exact amount of letters to form two words?"
+slug: javascript
+categories:
+- DOM
+tags:
+- Snippets
+- JavaScript
+---
+<output>
+{{< highlight JavaScript >}}
+/* An anagram is a word or phrase formed by rearranging the letters
+of a different word or phrase, typically using all the original
+letters exactly once. For example, the word anagram itself can be
+rearranged into nag a ram, also the word binary into brainy. 🎯 🍰 🔥
+   _                                         
+  /_\  _ __   __ _  __ _ _ __ __ _ _ __ ___  
+ //_\\| '_ \ / _` |/ _` | '__/ _` | '_ ` _ \ 
+/  _  \ | | | (_| | (_| | | | (_| | | | | | |
+\_/ \_/_| |_|\__,_|\__, |_|  \__,_|_| |_| |_|
+                 |___/                     */
+
+
+//  Determine if two strings are Anagrams
+function isAnagram( word1 = "DOCTORWHO", word2 = "TORCHWOOD"){
+  let uc1 = word1.toUpperCase(), uc2 = word2.toUpperCase()
+  return ([ ... uc1 ].filter(( c )=>{
+    if( uc2.indexOf( c ) != -1 ){
+      uc2 = uc2.replace( c, "" )  //  Replace First Occurrence
+      return true;
+    }
+  }).length === uc1.length && (!uc2))
+}
+console.warn( isAnagram("neodigm", "dogimen") );
+{{< /highlight >}}
+    <span class="h-ds__none"
+    data-at="Anagram Logic|Rearranging Letters|Puzzle Solver"></span>
+</output>

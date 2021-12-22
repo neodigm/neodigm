@@ -296,7 +296,6 @@
 {"name":"lainecalhoun.com","comment":"lainecalhoun.com","uri":"http://lainecalhoun.com/","cat":"blogfolio","tags":["crafts","art","blog"]},
 {"name":"marceldochamp.net","comment":"marceldochamp.net","uri":"https://marceldochamp.net/","cat":"blogfolio","tags":["artist","researcher","coder","blog"]},
 {"name":"kickscondor.com","comment":"kickscondor.com","uri":"https://kickscondor.com/","cat":"blogfolio","tags":["hypertext","blog","early","web","blog"]},
-{"name":"natehn.com","comment":"natehn.com","uri":"https://natehn.com/","cat":"blogfolio","tags":["english","music","essays","notes","blog"]},
 {"name":"jesspotter.github.io","comment":"jesspotter.github.io","uri":"https://jesspotter.github.io/","cat":"blogfolio","tags":["graphic designer","artist","blog"]},
 {"name":"log.nikhil.io","comment":"log.nikhil.io","uri":"https://log.nikhil.io/","cat":"blogfolio","tags":["log","blog"]},
 {"name":"mark-beasley.com","comment":"mark-beasley.com","uri":"https://mark-beasley.com/","cat":"blogfolio","tags":["artist","developer","educator","blog"]},
@@ -696,7 +695,7 @@
 {"name":"Laravel Vapor","comment":"","uri":"https://vapor.laravel.com/","cat":"tech","tags":["laravel","php","aws"]},
 {"name":"Laravel Consultancy","comment":"","uri":"https://tighten.co/","cat":"a55","tags":["laravel","php","chicgao"]},
 {"name":"Sai Nikhil","comment":"","uri":"https://iamsainikhil.com/","cat":"blogfolio","tags":["vue","Js","UX", "infosec"]},
-{"name":"Vue classic server-side routing","comment":"Inertia has no client-side routing, nor does it require an API. Simply build controllers and page views like you've always done!","uri":"https://inertiajs.com/","cat":"tech","tags":["vue","Js","laravel", "inertia"]},
+{"name":"Vue classic server-side routing","comment":"Inertia has no client-side routing, nor does it require an API. Simply build controllers and page views like you've always done!","uri":"https://inertiajs.com/","cat":"tech","tags":["vue","Js","laravel", "inertia", "1st"]},
 {"name":"Affinity Designer","comment":"Best in class for creating concept art, print projects, logos, icons, UI designs, mock-ups","uri":"https://affinity.serif.com/en-us/designer/","cat":"creative","tags":["creative","svg","UX", "1st"]},
 {"name":"Bideo Wego","comment":"I'm Bideo Wego. Humans call me Chris Scavello.","uri":"http://bideowego.com/","cat":"blogfolio","tags":["creative","gamification","Js"]},
 {"name":"Web Components","comment":"Standard component model for the Web","uri":"https://github.com/WICG/webcomponents","cat":"tech","tags":["lwc","web-components","Js"]},
@@ -722,7 +721,7 @@
 {"name":"Gen Art","comment":"","uri":"https://zzart.3d2k.com/","cat":"creative","tags":["creative","js","generative"]},
 {"name":"Regarding Electron","comment":"Electron offers several benefits that made it the preferred choice for most desktop applications","uri":"https://federicoterzi.com/blog/why-electron-is-a-necessary-evil/","cat":"blogfolio","tags":["pwa","js","git"]},
 {"name":"Aliend Landscapes","comment":"Click to see generated landscapes","uri":"https://aliendscapes.3d2k.com/","cat":"creative","tags":["creative","js","generative"]},
-{"name":"Dynamic and Progressive Vue components","comment":"Single File Component loader for Vue2 and Vue3. Load .vue files directly from your HTML. No node.js environment, no build step.","uri":"https://github.com/FranckFreiburger/vue3-sfc-loader","cat":"tech","tags":["vue","js","generative"]},
+{"name":"Dynamic and Progressive Vue components","comment":"Single File Component loader for Vue2 and Vue3. Load .vue files directly from your HTML. No node.js environment, no build step.","uri":"https://github.com/FranckFreiburger/vue3-sfc-loader","cat":"tech","tags":["vue","js"]},
 {"name":"Ben Ilegbodu","comment":"Currently, I’m particularly passionate about building frontend systems.","uri":"https://www.benmvp.com/","cat":"blogfolio","tags":["typescript","js","fed"]},
 {"name":"Front-end Programming Challenge","comment":"This is a front-end engineer programming exercise designed to test the skills required to maintain an eCom site utilizing modern technology native to the browser.","uri":"https://github.com/neodigm/FED_Programming_Challenge","cat":"tech","tags":["js","fed","challenge"]},
 {"name":"Keith Clark","comment":"","uri":"https://keithclark.co.uk/","cat":"creative","tags":["js","css","3d","gamification"]},
@@ -731,5 +730,11 @@
 {"name":"Dwitter","comment":"Dwitter.net is a challenge to see what awesomeness you can create when limited to only 140 characters of javascript and a canvas","uri":"https://www.dwitter.net/hot","cat":"ecosystem","tags":["js","creative","1st","generative","procedural"]},
 {"name":"CodeSketch","comment":"CodeSketch is a collection of Javascript code on CodePen since August 2015","uri":"https://codesketch.georgi-nikolov.com/#","cat":"creative","tags":["webgl","js","animation"]},
 {"name":"Georgi Nikolov","comment":"","uri":"https://www.georgi-nikolov.com/","cat":"blogfolio","tags":["3d","js","webgl"]},
-{"name":"Quasar","comment":"Effortlessly build high-performance & high-quality Vue.js 3 user interfaces in record time","uri":"https://quasar.dev/introduction-to-quasar","cat":"tech","tags":["vue","js","typescript"]}
+{"name":"Quasar","comment":"Effortlessly build high-performance & high-quality Vue.js 3 user interfaces in record time","uri":"https://quasar.dev/introduction-to-quasar","cat":"tech","tags":["vue","js","typescript"]},
+{"name":"Canvas Capture JS","comment":"A library to capture canvas-based animations","uri":"https://github.com/spite/ccapture.js/","cat":"creative","tags":["3d","js","webgl"]},
+{"name":"Lodash (underscore)","comment":"Modern JavaScript utility library","uri":"https://lodash.com/","cat":"tech","tags":["js"]},
+{"name":"Git Dataviz","comment":"","uri":"http://ghv.artzub.com/#repo=css_checkbox&climit=100&user=neodigm","cat":"ecosystem","tags":["git","dataviz","creative"]},
+{"name":"capJS","comment":"live code editor for capturing video","uri":"https://capjs.3d2k.com/","cat":"tech","tags":["js","video","canvas","creative"]},
+{"name":"Svente on Github","comment":"Trending TypeScript Repos","uri":"https://github.com/trending/typescript","cat":"ecosystem","tags":["svelte", "js"]},
+{"name":"Svente on LinkedIn","comment":"","uri":"https://www.linkedin.com/groups/13560581/","cat":"ecosystem","tags":["svelte", "js"]}
 ]
