@@ -784,6 +784,7 @@ if( e3 ) {
 function doCopy( _q ){ 
     let sText = document.querySelector( _q )?.innerText;
     if( sText ){
+        sText += "\n<!-- (c) 2022 🗝️ www.theScottKrause.com -->"
         try {
             navigator.clipboard.writeText( sText );
             neodigmToast.q("Copied to Clipboard|Paste into your document")
