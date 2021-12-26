@@ -231,10 +231,12 @@ data-neodigm-sodapop-size="small">
         </article>
     </div>
     <div>
-        <article id="js-copy__cdn" style="padding: 12px 12px;">
+        <article style="padding: 12px 12px;">
+            <div id="js-copy__cdn">
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/gh/arcanus55/neodigm55@gh-pages/dist/neodigm55_v1_5.min.css&#34;</span>&gt;
 
 &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/gh/arcanus55/neodigm55@gh-pages/dist/neodigm55_v1_5.min.js&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;</code></pre></div>
+            </div>
             <div class="h-center">
                 <button class="js-copy-btn l-btn l-btn--ghost" onclick="doCopy('#js-copy__cdn')" data-neodigm-wired4sound="click|10">Copy</button>
             </div>
@@ -327,11 +329,13 @@ data-neodigm-sodapop-size="small">
             <details>
                 <summary class="h-pro-tip text-coy_2009" data-neodigm-wired4sound="click|4" class="h-pro-tip text-coy_2009">For Example 👁️</summary>
                 <p>Simply add a tag to your button:</p>
+                <div id="js-copy__w4s">
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">data-neodigm-wired4sound</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;click|4&#34;</span>&gt;Play Sound on Click&lt;/<span style="color:#f92672">button</span>&gt;</code></pre></div>
+                </div>
                 <p>Or play the Sound with JavaScript:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">onClick</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;neodigmWired4Sound.play( 4 )&#34;</span>&gt;Play Sound on Click&lt;/<span style="color:#f92672">button</span>&gt;</code></pre></div>
                 <div class="h-center">
-                    <button class="js-copy-btn l-btn l-btn--ghost" onclick="doCopy('#js-copy__cdn')" data-neodigm-wired4sound="click|10">Copy</button>
+                    <button class="js-copy-btn l-btn l-btn--ghost" onclick="doCopy('#js-copy__w4s')" data-neodigm-wired4sound="click|10">Copy</button>
                 </div>
             </details>
         </article>
@@ -340,6 +344,9 @@ data-neodigm-sodapop-size="small">
 
 <template id="js-basic--id" data-neodigm-sodapop-modal="false"  data-neodigm-sodapop-size="small">
     <article>
+        <neodigm-marquee data-neodigm-marquee-text=" Popups that Pop! Easy to Use JavaScript UX Library. Small and Fast, only 9k. ">
+            <p></p>
+        </neodigm-marquee>
         <h4 class="h-center readable__caption">Neodigm Popup (Soda Pop)</h4>
         <section class="readable__doc" style="border-top: solid #EDBA08 1px;">
             <article style="padding: 12px 12px;">
@@ -434,12 +441,14 @@ YOUR CONTENT HERE
 
 <section class="pfmf-grid pfmf-grid__70_30 readable__doc">
     <div>
-        <article id="js-copy__parallax" style="padding: 12px 12px;">
+        <article style="padding: 12px 12px;">
+            <div id="js-copy__parallax">
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">neodigm-parallax</span> <span style="color:#a6e22e">data-neodigm-parallax</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;PATH TO YOUR BACKGROUND IMAGE&#34;</span>&gt;
     &lt;<span style="color:#f92672">section</span>&gt;
         &lt;<span style="color:#f92672">aside</span>&gt;&lt;/<span style="color:#f92672">aside</span>&gt;
     &lt;/<span style="color:#f92672">section</span>&gt;
 &lt;/<span style="color:#f92672">neodigm-parallax</span>&gt; </code></pre></div>
+            </div>
             <div class="h-center">
                 <button class="js-copy-btn l-btn l-btn--ghost" onclick="doCopy('#js-copy__parallax')" data-neodigm-wired4sound="click|10">Copy</button>
             </div>
@@ -526,13 +535,14 @@ function daisyChain( sId ){
 </template>
 
 <script>
-    setTimeout(function(){ document.body.dataset.prefScheme="dark"; }, 400)
+    setTimeout(function(){ if( neodigmSodaPop && neodigmMarquee ) neodigmSodaPop.setOnAfterOpen( neodigmMarquee.init ) }, 4800)
+    setTimeout(function(){ document.body.dataset.prefScheme="dark"; }, 600)
     setTimeout(function(){ neodigmToast.q("##Easy to Use 💡|Landing Page Solution")}, 74800)
     setTimeout(function(){ neodigmToast.q("##Swiss Army Chainsaw ⚡|Ridiculously Easy")}, 98800)
     setTimeout(function(){ neodigmToast.q("##Provocative Engagement ⭐|Performant and Unique")}, 128880)
     setTimeout(function(){ neodigmToast.q("##A Landing Page 🚀|Micro-interaction library")}, 188000)
     setTimeout(function(){ neodigmToast.q("##Superlatively Hip 🍰|Tweaked into Oblivion 🍭")}, 228000)
-    setTimeout(function(){ neodigmToast.q("##Star us on Github|Contributions welcome ⭐")}, 2626000)
+    setTimeout(function(){ neodigmToast.q("Star us on Github|Contributions welcome ⭐")}, 2626000)
     setTimeout(function(){ neodigmToast.q("For those who defiantly think|for themselves ⭐ Star it!")}, 326000)
 </script>  
 <br>
@@ -2466,10 +2476,10 @@ href="/css/rainbow.css">
 <script src="/js/highlight.pack.js"></script>
 <script src="/js/flickity.pkgd.min.js"></script>
 
-<template rel="stylesheet" href="https://cdn.jsdelivr.net/gh/arcanus55/neodigm55@gh-pages/dist/neodigm55_v1_5.min.css"></template>
-<link rel="stylesheet" href="https://arcanus55.github.io/neodigm55/dist/neodigm55_v1_5.css">
-<template src="https://cdn.jsdelivr.net/gh/arcanus55/neodigm55@gh-pages/dist/neodigm55_v1_5.min.js"></template>
-<script src="https://arcanus55.github.io/neodigm55/dist/neodigm55_v1_5.js"></script>
+<template rel="stylesheet" href="https://cdn.jsdelivr.net/gh/arcanus55/neodigm55@gh-pages/dist/neodigm55_v1_6.min.css"></template>
+<link rel="stylesheet" href="https://arcanus55.github.io/neodigm55/dist/neodigm55_v1_6.css">
+<template src="https://cdn.jsdelivr.net/gh/arcanus55/neodigm55@gh-pages/dist/neodigm55_v1_6.min.js"></template>
+<script src="https://arcanus55.github.io/neodigm55/dist/neodigm55_v1_6.js"></script>
 
 <link rel="manifest" href="/manifest.json">
 <script>
@@ -3003,6 +3013,7 @@ if( e3 ) {
 function doCopy( _q ){ 
     let sText = document.querySelector( _q )?.innerText;
     if( sText ){
+        sText += "\n<!-- (c) 2022 🗝️ www.theScottKrause.com -->"
         try {
             navigator.clipboard.writeText( sText );
             neodigmToast.q("Copied to Clipboard|Paste into your document")

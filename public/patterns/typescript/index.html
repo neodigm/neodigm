@@ -2137,10 +2137,10 @@ href="/css/rainbow.css">
 <script src="/js/highlight.pack.js"></script>
 <script src="/js/flickity.pkgd.min.js"></script>
 
-<template rel="stylesheet" href="https://cdn.jsdelivr.net/gh/arcanus55/neodigm55@gh-pages/dist/neodigm55_v1_5.min.css"></template>
-<link rel="stylesheet" href="https://arcanus55.github.io/neodigm55/dist/neodigm55_v1_5.css">
-<template src="https://cdn.jsdelivr.net/gh/arcanus55/neodigm55@gh-pages/dist/neodigm55_v1_5.min.js"></template>
-<script src="https://arcanus55.github.io/neodigm55/dist/neodigm55_v1_5.js"></script>
+<template rel="stylesheet" href="https://cdn.jsdelivr.net/gh/arcanus55/neodigm55@gh-pages/dist/neodigm55_v1_6.min.css"></template>
+<link rel="stylesheet" href="https://arcanus55.github.io/neodigm55/dist/neodigm55_v1_6.css">
+<template src="https://cdn.jsdelivr.net/gh/arcanus55/neodigm55@gh-pages/dist/neodigm55_v1_6.min.js"></template>
+<script src="https://arcanus55.github.io/neodigm55/dist/neodigm55_v1_6.js"></script>
 
 <link rel="manifest" href="/manifest.json">
 <script>
@@ -2674,6 +2674,7 @@ if( e3 ) {
 function doCopy( _q ){ 
     let sText = document.querySelector( _q )?.innerText;
     if( sText ){
+        sText += "\n<!-- (c) 2022 🗝️ www.theScottKrause.com -->"
         try {
             navigator.clipboard.writeText( sText );
             neodigmToast.q("Copied to Clipboard|Paste into your document")

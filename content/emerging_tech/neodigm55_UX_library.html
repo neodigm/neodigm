@@ -84,7 +84,8 @@ tags:
         </article>
     </div>
     <div>
-        <article id="js-copy__cdn" style="padding: 12px 12px;">
+        <article style="padding: 12px 12px;">
+            <div id="js-copy__cdn">
 {{< highlight html >}}
 
 
@@ -94,6 +95,7 @@ tags:
 
 
 {{< /highlight >}}
+            </div>
             <div class="h-center">
                 <button class="js-copy-btn l-btn l-btn--ghost" onclick="doCopy('#js-copy__cdn')" data-neodigm-wired4sound="click|10">Copy</button>
             </div>
@@ -198,11 +200,13 @@ tags:
             <details>
                 <summary class="h-pro-tip text-coy_2009" data-neodigm-wired4sound="click|4" class="h-pro-tip text-coy_2009">For Example 👁️</summary>
                 <p>Simply add a tag to your button:</p>
+                <div id="js-copy__w4s">
 {{< highlight html >}}
 
 <button data-neodigm-wired4sound="click|4">Play Sound on Click</button>
 
 {{< /highlight >}}
+                </div>
                 <p>Or play the Sound with JavaScript:</p>
 {{< highlight html >}}
 
@@ -210,7 +214,7 @@ tags:
 
 {{< /highlight >}}
                 <div class="h-center">
-                    <button class="js-copy-btn l-btn l-btn--ghost" onclick="doCopy('#js-copy__cdn')" data-neodigm-wired4sound="click|10">Copy</button>
+                    <button class="js-copy-btn l-btn l-btn--ghost" onclick="doCopy('#js-copy__w4s')" data-neodigm-wired4sound="click|10">Copy</button>
                 </div>
             </details>
         </article>
@@ -219,6 +223,9 @@ tags:
 
 <template id="js-basic--id" data-neodigm-sodapop-modal="false"  data-neodigm-sodapop-size="small">
     <article>
+        <neodigm-marquee data-neodigm-marquee-text=" Popups that Pop! Easy to Use JavaScript UX Library. Small and Fast, only 9k. ">
+            <pre></pre>
+        </neodigm-marquee>
         <h4 class="h-center readable__caption">Neodigm Popup (Soda Pop)</h4>
         <section class="readable__doc" style="border-top: solid #EDBA08 1px;">
             <article style="padding: 12px 12px;">
@@ -341,7 +348,8 @@ YOUR CONTENT HERE
 
 <section class="pfmf-grid pfmf-grid__70_30 readable__doc">
     <div>
-        <article id="js-copy__parallax" style="padding: 12px 12px;">
+        <article style="padding: 12px 12px;">
+            <div id="js-copy__parallax">
 {{< highlight html >}}
 
 <neodigm-parallax data-neodigm-parallax="PATH TO YOUR BACKGROUND IMAGE">
@@ -351,6 +359,7 @@ YOUR CONTENT HERE
 </neodigm-parallax> 
 
 {{< /highlight >}}
+            </div>
             <div class="h-center">
                 <button class="js-copy-btn l-btn l-btn--ghost" onclick="doCopy('#js-copy__parallax')" data-neodigm-wired4sound="click|10">Copy</button>
             </div>
@@ -437,12 +446,13 @@ function daisyChain( sId ){
 </template>
 
 <script>
-    setTimeout(function(){ document.body.dataset.prefScheme="dark"; }, 400)
+    setTimeout(function(){ if( neodigmSodaPop && neodigmMarquee ) neodigmSodaPop.setOnAfterOpen( neodigmMarquee.init ) }, 4800)
+    setTimeout(function(){ document.body.dataset.prefScheme="dark"; }, 600)
     setTimeout(function(){ neodigmToast.q("##Easy to Use 💡|Landing Page Solution")}, 74800)
     setTimeout(function(){ neodigmToast.q("##Swiss Army Chainsaw ⚡|Ridiculously Easy")}, 98800)
     setTimeout(function(){ neodigmToast.q("##Provocative Engagement ⭐|Performant and Unique")}, 128880)
     setTimeout(function(){ neodigmToast.q("##A Landing Page 🚀|Micro-interaction library")}, 188000)
     setTimeout(function(){ neodigmToast.q("##Superlatively Hip 🍰|Tweaked into Oblivion 🍭")}, 228000)
-    setTimeout(function(){ neodigmToast.q("##Star us on Github|Contributions welcome ⭐")}, 2626000)
+    setTimeout(function(){ neodigmToast.q("Star us on Github|Contributions welcome ⭐")}, 2626000)
     setTimeout(function(){ neodigmToast.q("For those who defiantly think|for themselves ⭐ Star it!")}, 326000)
 </script>
