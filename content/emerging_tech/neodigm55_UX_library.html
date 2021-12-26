@@ -89,9 +89,9 @@ tags:
 {{< highlight html >}}
 
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/arcanus55/neodigm55@gh-pages/dist/neodigm55_v1_5.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/arcanus55/neodigm55@gh-pages/dist/neodigm55_v1_6.min.css">
 
-<script src="https://cdn.jsdelivr.net/gh/arcanus55/neodigm55@gh-pages/dist/neodigm55_v1_5.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/arcanus55/neodigm55@gh-pages/dist/neodigm55_v1_6.min.js"></script>
 
 
 {{< /highlight >}}
@@ -380,6 +380,41 @@ YOUR CONTENT HERE
     </section>
 </neodigm-parallax> 
 <br>
+
+<section class="pfmf-grid pfmf-grid__30_70 readable__doc">
+    <div>
+        <article class="pfmf-crd--black h-center">
+            <neodigm-marquee data-neodigm-marquee-text="    The scrolling text glows like retro noir theater lights, adding resonance and depth to your storytelling. "
+            data-neodigm-marquee-size="small">
+                <pre></pre>
+            </neodigm-marquee>
+        </article>
+        <article style="padding: 12px 12px;">
+
+            <h3 class="document__title h_ital h-center text-coy_2009">Marquee</h3>
+            <p>The Marquee display is a powerful and distinct way to draw attention to important text.</p>
+        </article>
+    </div>
+    <div>
+        <article style="padding: 12px 12px;">
+            <div id="js-copy__marq">
+{{< highlight html >}}
+
+
+<neodigm-marquee data-neodigm-marquee-text=" YOUR SCROLLING TEXT HERE "
+data-neodigm-marquee-size="small">
+    <pre></pre>
+</neodigm-marquee>
+
+
+{{< /highlight >}}
+            </div>
+            <div class="h-center">
+                <button class="js-copy-btn l-btn l-btn--ghost" onclick="doCopy('#js-copy__marq')" data-neodigm-wired4sound="click|10">Copy</button>
+            </div>
+        </article>
+    </div>
+</section>
 
 <template id="js-modal-dialog--id" data-neodigm-sodapop-modal="true" data-neodigm-sodapop-size="small">
     <h4 class="h-center readable__caption">Neodigm Popup (Modal Dialog)</h4>
