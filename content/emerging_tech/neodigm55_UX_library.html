@@ -485,7 +485,11 @@ function daisyChain( sId ){
 </template>
 
 <script>
-    setTimeout(function(){ if( neodigmSodaPop && neodigmMarquee ) neodigmSodaPop.setOnAfterOpen( neodigmMarquee.init ) }, 4800)
+    setTimeout(function(){ if( neodigmSodaPop && neodigmMarquee ) neodigmSodaPop.setOnAfterOpen( function(){
+        neodigmMetronome.init()
+        neodigmMarquee.init()
+        }
+        ) }, 4800)
     setTimeout(function(){ document.body.dataset.prefScheme="dark"; }, 600)
     setTimeout(function(){ neodigmToast.q("##Easy to Use 💡|Landing Page Solution")}, 74800)
     setTimeout(function(){ neodigmToast.q("##Swiss Army Chainsaw ⚡|Ridiculously Easy")}, 98800)
