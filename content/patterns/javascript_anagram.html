@@ -36,6 +36,21 @@ function isAnagram( word1 = "DOCTORWHO", word2 = "TORCHWOOD"){
 }
 console.warn( isAnagram("neodigm", "dogimen") );
 {{< /highlight >}}
+<hr>
+{{< highlight JavaScript >}}
+// Palindromes | They can be read the same backwards and forwards!
+// Is TACOCAT spelled backward still TACOCAT?
+// People have been asking this question for thousands of years until...
+// I wrote a function in JavaScript to prove it and end the debate. Palindrome in JavaScript
+
+let isPalindrome = ( sIn = "tacocat" ) => ( sIn.split("").reverse().join("") === sIn );
+/*🐈‍🐱
+ _._     _,-'""`-._
+(,-.`._,'(       |\`-/|
+    `-.-' \ )-`( , o o)
+          `-    \`_`"'- My name is Taco! ^_^
+*/
+{{< /highlight >}}
     <span class="h-ds__none"
-    data-at="Anagram Logic|Rearranging Letters|Puzzle Solver|String Algorithms"></span>
+    data-at="Anagram Logic|Rearranging Letters|Puzzle Solver|String Algorithms|Palindromes Logic"></span>
 </output>
