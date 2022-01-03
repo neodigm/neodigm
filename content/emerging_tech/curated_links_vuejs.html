@@ -28,7 +28,7 @@ tags:
             <p>Unlike other monolithic frameworks, Vue is designed from the ground up to be incrementally adoptable. The core library is focused on the view layer only, and is easy to pick up and integrate with other libraries or existing projects.</p>
             <div class="h-center">
                 <button class="l-btn h-center" data-neodigm-sodapop-id="sp_sample_vue" data-neodigm-wired4sound="click|5"
-                data-neodigm-toast="Vue.js Double-Tap Logic">For Example ...</button>
+                data-neodigm-toast="##Vue.js Double-Tap Logic">For Example ...</button>
             </div>
             <details>
                 <summary data-neodigm-wired4sound="click|4" class="h-pro-tip text-coy_2009">Vue Expertise</summary>
@@ -230,13 +230,17 @@ sp_vue_hybrid_data_viz = function(){  //  neodigm 55 onOpen Callback naming conv
 <template id="sp_sample_vue" data-neodigm-sodapop-modal="false" 
 data-neodigm-sodapop-size="medium">
 
-<article class="pfmf-crd--black h-center"><p class="js-patterns__caption readable__doc readable__doc--white" data-at="Vue.js Double-Tap Logic|Process both Tap and Double-Tap|Vue.js Methods|Vue Reactive Provide Inject|Persist Vuetify Pagination">Vue.js Methods</p></article>
-
+<article class="pfmf-crd--black h-center"
+style="background-color: #383838; padding: 12px 0 0 0;">
+    <neodigm-marquee
+    data-neodigm-marquee-text="  This is part of a larger Vue gesture implementation supporting Pinch, Zoom, Pan, and Swipe. A Vue.js snippet that shows how to capture both a tap and a double-tap on the same element within the template. Vuejs Provide Inject Reactive Component Communication. Hydrate the Vuetify Pagination object to persist. "
+    data-neodigm-marquee-size="small">
+        <pre></pre>
+    </neodigm-marquee>
+    <p class="readable__doc readable__doc--white"
+    data-at=""></p></article>
 <output id="js-copy__css">
 {{< highlight JavaScript >}}
-//  A Vue.js snippet that shows how to capture both a tap and
-//  a double-tap on the same element within the template.
-//
 //  Canonical Use Case: Double-Tap to zoom into a hero image
 //  and single-tap to zoom out.
 
@@ -269,10 +273,6 @@ data-neodigm-sodapop-size="medium">
         } 
     }
     }
-    /*
-    This is only part of a larger Vue gesture implementation supporting
-    Pinch 🤏, Zoom, Pan, and Swipe. Reach out to me if you want to learn more.
-    */
 {{< /highlight >}}
 <hr>
 {{< highlight JavaScript >}}
@@ -487,5 +487,10 @@ exampleVue = new Vue({
 </script>
 
 <script>
-    setTimeout(function(){ document.body.dataset.prefScheme="dark"; }, 480)
+    setTimeout(function(){ document.body.dataset.prefScheme="dark"; }, 680)
+    setTimeout(function(){ if( neodigmSodaPop && neodigmMarquee ) neodigmSodaPop.setOnAfterOpen( function(){
+        neodigmMetronome.init()
+        neodigmMarquee.init()
+        }
+        ) }, 3200)
 </script>
