@@ -140,23 +140,21 @@ tags:
                             data-neodigm-wired4sound="click|11">Advanced</button>    
                         </div>
                         <details>
-                            <summary class="h-pro-tip text-coy_2009" data-neodigm-wired4sound="click|4"
-                            data-neodigm-toast="This is how to customize|Colors in CSS">Custom Colors 🚀</summary>
-                                <div id="js-copy__css">
-{{< highlight html >}}
-
-<style>
-    .l-snackbar .snackbar__cont { /* Overrides */
-	border-radius: 4px;
-	background: linear-gradient(45deg, #5c81ad 0%, #213042 100%) !important;
-	box-shadow: inset #213042 0 0 6px 2px !important;
-    }
-</style>
-
-{{< /highlight >}}
-                                </div>
+                            <summary class="h-pro-tip text-coy_2009" data-neodigm-wired4sound="click|4">Toast Themes 🚀</summary>
+                            <br>
                             <div class="h-center">
-                                <button class="js-copy-btn l-btn l-btn--ghost" onclick="doCopy('#js-copy__css')" data-neodigm-wired4sound="click|10">Copy</button>
+                                <button class="js-copy-btn l-btn l-btn--ghost"
+                                onClick="neodigmToast.setTheme('primary').q('primary')">Primary</button>
+                                <button class="js-copy-btn l-btn l-btn--ghost"
+                                onClick="neodigmToast.setTheme('secondary').q('secondary')">Secondary</button>
+                                <button class="js-copy-btn l-btn l-btn--ghost"
+                                onClick="neodigmToast.setTheme('success').q('success')">Success</button>
+                                <button class="js-copy-btn l-btn l-btn--ghost"
+                                onClick="neodigmToast.setTheme('danger').q('danger')">Danger</button>
+                                <button class="js-copy-btn l-btn l-btn--ghost"
+                                onClick="neodigmToast.setTheme('warning').q('warning')">Warning</button>
+                                <button class="js-copy-btn l-btn l-btn--ghost"
+                                onClick="neodigmToast.setTheme('info').q('info')">Info</button>                                
                             </div>
                         </details>
                      </details>
