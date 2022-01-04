@@ -1,6 +1,6 @@
 ---
 title: "Neodigm55 UX Library"
-date: 2021-07-24T19:06:14-05:00
+date: 2021-10-17T18:33:52-05:00
 draft: false
 summary: "Popups and Snackbar"
 description: Neodigm55JS JavaScript Library
@@ -139,36 +139,38 @@ tags:
                             <button class="l-btn l-btn--ghost" onClick="neodigmToast.q('Hello World Advanced')"
                             data-neodigm-wired4sound="click|11">Advanced</button>    
                         </div>
-                        <details>
-                            <summary class="h-pro-tip text-coy_2009" data-neodigm-wired4sound="click|4">Toast Themes 🚀</summary>
-                            <br>
-                            <div class="h-center">
-                                <button class="js-copy-btn l-btn l-btn--ghost"
-                                onClick="neodigmToast.setTheme('primary').q('primary')">Primary</button>
-                                <button class="js-copy-btn l-btn l-btn--ghost"
-                                onClick="neodigmToast.setTheme('secondary').q('secondary')">Secondary</button>
-                                <button class="js-copy-btn l-btn l-btn--ghost"
-                                onClick="neodigmToast.setTheme('success').q('success')">Success</button>
-                                <button class="js-copy-btn l-btn l-btn--ghost"
-                                onClick="neodigmToast.setTheme('danger').q('danger')">Danger</button>
-                                <button class="js-copy-btn l-btn l-btn--ghost"
-                                onClick="neodigmToast.setTheme('warning').q('warning')">Warning</button>
-                                <button class="js-copy-btn l-btn l-btn--ghost"
-                                onClick="neodigmToast.setTheme('info').q('info')">Info</button>                                
-                            </div>
-                        </details>
                      </details>
                  </details>
              </details>
         </article>
     </div>
     <div>
-        <article class="h-center h-bg__stripe" style="padding: 12px 12px;">
-            <h3 class="document__title h_ital h-center text-coy_2009">Simple Toast</h3>
-            <input id="simple_toast" name="simple_toast" class="tool-sample__input h-center" type="text" value="It Pops up like Toast!"
-            placeholder="Enter text for Toast">
-            <button class="l-btn" onclick="neodigmToast.q( document.getElementById('simple_toast').value )"  data-neodigm-wired4sound="click|11">Try Me</button>
+        <article class="h-bg__stripe" style="padding: 12px 12px;">
+            <div class="h-center">
+                <h3 class="document__title h_ital h-center text-coy_2009">Simple Toast</h3>
+                <input id="simple_toast" name="simple_toast" class="tool-sample__input h-center" type="text" value="It Pops up like Toast!"
+                placeholder="Enter text for Toast">
+                <button class="l-btn" onclick="neodigmToast.q( document.getElementById('simple_toast').value )"  data-neodigm-wired4sound="click|11">Try Me</button>
+            </div>
             <br><br>
+            <details>
+                <summary class="h-pro-tip text-coy_2009" data-neodigm-wired4sound="click|4">Toast Themes 🚀</summary>
+                <br>
+                <div class="h-center">
+                    <button style="background-color: #465C85;" class="js-copy-btn l-btn"
+                    onClick="neodigmToast.setTheme('primary').q('primary')">Primary</button>
+                    <button style="background-color: #47494B;" class="js-copy-btn l-btn"
+                    onClick="neodigmToast.setTheme('secondary').q('secondary')">Secondary</button>
+                    <button style="background-color: #004827;" class="js-copy-btn l-btn"
+                    onClick="neodigmToast.setTheme('success').q('success')">Success</button>
+                    <button style="background-color: #910000;" class="js-copy-btn l-btn"
+                    onClick="neodigmToast.setTheme('danger').q('danger')">Danger</button>
+                    <button style="background-color: #A99301;" class="js-copy-btn l-btn"
+                    onClick="neodigmToast.setTheme('warning').q('warning')">Warning</button>
+                    <button style="background-color: #2F7878;" class="js-copy-btn l-btn"
+                    onClick="neodigmToast.setTheme('info').q('info')">Info</button>                                
+                </div>
+            </details>
         </article>  
     </div>
 </section>
