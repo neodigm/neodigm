@@ -2746,6 +2746,25 @@ function doCopy( _q ){
     }
 </script>
 
+<script>
+class NeodigmPWA {
+    constructor(){
+
+    }
+    init () {
+        window.addEventListener('appinstalled', () => {
+            
+            hideInstallPromotion();
+            
+            deferredPrompt = null;
+            
+            console.log('PWA was installed');
+          });
+    }
+}
+let neodigmPWA = new NeodigmPWA()
+</script>
+
 
 <script type="application/ld+json">
     { "@context": "https://schema.org", 

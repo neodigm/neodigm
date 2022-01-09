@@ -737,6 +737,25 @@ function doCopy( _q ){
     }
 </script>
 
+<script>
+class NeodigmPWA {
+    constructor(){
+
+    }
+    init () {
+        window.addEventListener('appinstalled', () => {
+            
+            hideInstallPromotion();
+            
+            deferredPrompt = null;
+            
+            console.log('PWA was installed');
+          });
+    }
+}
+let neodigmPWA = new NeodigmPWA()
+</script>
+
         <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400|Roboto+Slab:300,400" rel="stylesheet" type="text/css">
 
         <script>
