@@ -79,7 +79,10 @@ data-neodigm-sodapop-size="small">
         });
     }
     {{< /highlight >}}
-    <hr>
+<neodigm-marquee data-neodigm-marquee-text=" Add to Home screen is a feature available in modern browsers that allows a user to 'install' a web app, ie. add a shortcut to their Home screen representing their favorite web app (or site) so they can subsequently access it with a single tap. "
+data-neodigm-marquee-size="small">
+    <pre data-neodigm-theme="primary"></pre>
+</neodigm-marquee>
     {{< highlight JavaScript >}}
     let eA2hs = oD.getElementsByClassName("js-a2hs")[0];
     let eA2hsP = oD.getElementsByClassName("js-a2hs--post")[0];
@@ -163,6 +166,27 @@ data-neodigm-sodapop-size="small">
         ],
       })
     );
+    {{< /highlight >}}
+<neodigm-marquee data-neodigm-marquee-text=" Create a custom Google Analytics event that fires whenever your PWA is installed. "
+data-neodigm-marquee-size="small">
+    <pre data-neodigm-theme="primary"></pre>
+</neodigm-marquee>
+    {{< highlight JavaScript >}}
+    class NeodigmPWA {
+      constructor(){
+      }
+      init () {
+          window.addEventListener('appinstalled', () => {
+              setTimeout(function(){
+                  neodigmToast.q("##Application Installed|Neodigm UX ✨ Scott C. Krause")
+                  neodigmWired4Sound.play( 8 )
+                  if( dataLayer ) dataLayer.push({'event': 'appinstalled'})
+              }, 1200)
+            });
+      }
+    }
+    let neodigmPWA = new NeodigmPWA()
+    neodigmPWA.init()
     {{< /highlight >}}
     </output>
     <div class="h-center">
@@ -266,4 +290,10 @@ data-neodigm-sodapop-size="small">
     setTimeout(function(){ neodigmToast.q("##PWA ⚡|Service Worker Enabled")}, 88000)
     setTimeout(function(){ neodigmToast.q("##Service Worker Wizardry ⭐|Houston we have an Alternative 🚀")}, 226000)
     setTimeout(function(){ neodigmToast.q("##Clever Tricknology 🍭|Web Renaissance ")}, 24000)
+    setTimeout(function(){ document.body.dataset.prefScheme="dark"; }, 680)
+    setTimeout(function(){ if( neodigmSodaPop && neodigmMarquee ) neodigmSodaPop.setOnAfterOpen( function(){
+        neodigmMetronome.init()
+        neodigmMarquee.init()
+        }
+        ) }, 3200)
 </script>

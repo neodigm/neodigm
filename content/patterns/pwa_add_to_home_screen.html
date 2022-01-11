@@ -110,6 +110,24 @@ workbox.routing.registerRoute(
   })
 );
 {{< /highlight >}}
+<hr>
+{{< highlight JavaScript >}}
+class NeodigmPWA {
+  constructor(){
+  }
+  init () {
+      window.addEventListener('appinstalled', () => {
+          setTimeout(function(){
+              neodigmToast.q("##Application Installed|Neodigm UX ✨ Scott C. Krause")
+              neodigmWired4Sound.play( 8 )
+              if( dataLayer ) dataLayer.push({'event': 'appinstalled'})
+          }, 1200)
+        });
+  }
+}
+let neodigmPWA = new NeodigmPWA()
+neodigmPWA.init()
+{{< /highlight >}}
 
 <span class="h-ds__none"
     data-at="Offline First PWA|Installable Web App|Progressive Web App|Service Worker Enabled"></span>
