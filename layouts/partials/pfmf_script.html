@@ -569,6 +569,7 @@ class NeodigmPWA {
             setTimeout(function(){
                 neodigmToast.q("##Application Installed|Neodigm UX ✨ Scott C. Krause")
                 neodigmWired4Sound.play( 8 )
+                if( dataLayer ) dataLayer.push({'event': 'appinstalled'})
             }, 1200)
           });
     }
