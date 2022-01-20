@@ -15,23 +15,23 @@ var $jscomp=$jscomp||{};$jscomp.scope={};$jscomp.createTemplateTagFirstArg=funct
         neodigmRandText.prototype.randomChar=function(){return this.chars[Math.floor(Math.random()*this.chars.length)]};
   
 const phrases = [
-"Applied Tricknology",
-"Complex Ideas become Powerful Stories",
-"Interactivity is the Active Ingredient",
-"Knowtify Me",
-"Persuasive Infographics ",
-"Succinct Data Visualizations",
-"Interactive Dashboards",
-"Enough of Good Enough",
-"Would you Persuade",
-"speak of Interest",
-"not of Reason",
-"Make Time. Change your Mind",
-"Invest in Easy to Use",
-"Houston we have an Alternative",
-"Ideation to Fruition",
-"Feasible Impossibilities",
-"Precisely",
+"applied tricknology",
+"phenomenal storytelling that resonates",
+"interactivity is the active ingredient",
+"persuasive infographics",
+"succinct data visualizations",
+"interactive dashboards",
+"enchanted ux",
+"enough of good enough",
+"would you persuade",
+"speak of interest",
+"not of reason",
+"make time to change your mind",
+"knowtify yourself",
+"invest in easy to use",
+"ideation to fruition",
+"feasible impossibilities",
+"precisely",
 ];
   
   
@@ -41,7 +41,7 @@ const phrases = [
   let counter = 0;
   const next = () => {
     fx.setText(phrases[counter]).then(() => {
-      setTimeout(next, 800);
+      setTimeout(next, 1200);
     });
     counter = (counter + 1) % phrases.length;
   };
