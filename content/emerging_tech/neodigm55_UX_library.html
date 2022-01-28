@@ -16,7 +16,7 @@ tags:
 <section class="pfmf-grid pfmf-grid__70_30 readable__doc">
     <div>
         <article style="padding: 12px 12px;">
-            <p>Neodigm 55 is an eclectic JavaScript UX micro-library. The lightweight components come together in a unique way that make your website playful and fun.</p>
+            <p>Neodigm 55 is an eclectic JavaScript UX micro-library. The lightweight components come together in a unique way that makes your website playful and fun.</p>
             <p>Neodigm 55 is low-code, performant, accessible, and <a class="h-link" target="_blank" rel="noopener" href="https://github.com/arcanus55/neodigm55">open source</a>. Because it’s so easy to get started it is the perfect solution for quick landing pages or event sites.</p>
             <details>
                 <summary data-neodigm-wired4sound="click|4" class="h-pro-tip text-coy_2009">Powerful Popups 💡</summary>
@@ -96,7 +96,7 @@ tags:
 {{< /highlight >}}
             </div>
             <div class="h-center">
-                <button class="js-copy-btn l-btn l-btn--ghost" onclick="doCopy('#js-copy__cdn')" data-neodigm-wired4sound="click|10">Copy</button>
+                <button class="js-copy-btn l-btn l-btn--ghost" onclick="doCopyClass('#js-copy__cdn')" data-neodigm-wired4sound="click|10">Copy</button>
             </div>
         </article>
     </div>
@@ -203,30 +203,32 @@ tags:
             <details>
                 <summary class="h-pro-tip text-coy_2009" data-neodigm-wired4sound="click|4" class="h-pro-tip text-coy_2009">For Example 👁️</summary>
                 <p>Simply add a tag to your button:</p>
-                <div id="js-copy__w4s">
+                <aside class="js-copy__w4s">
 {{< highlight html >}}
 
 <button data-neodigm-wired4sound="click|4">Play Sound on Click</button>
 
 {{< /highlight >}}
-                </div>
+                </aside>
                 <p>Or play the Sound with JavaScript:</p>
+                <aside class="js-copy__w4s">
 {{< highlight html >}}
 
 <button onClick="neodigmWired4Sound.play( 4 )">Play Sound on Click</button>
 
 {{< /highlight >}}
+                </aside>
                 <div class="h-center">
-                    <button class="js-copy-btn l-btn l-btn--ghost" onclick="doCopy('#js-copy__w4s')" data-neodigm-wired4sound="click|10">Copy</button>
+                    <button class="js-copy-btn l-btn l-btn--ghost" onclick="doCopyClass('.js-copy__w4s')" data-neodigm-wired4sound="click|10">Copy</button>
                 </div>
             </details>
         </article>
     </div>
 </section>
 
-<template id="js-basic--id" data-neodigm-sodapop-modal="false"  data-neodigm-sodapop-size="small">
+<template id="js-basic--id" data-neodigm-sodapop-modal="false" data-neodigm-sodapop-size="small">
     <article>
-        <neodigm-marquee data-neodigm-marquee-size="medium"
+        <neodigm-marquee data-neodigm-marquee-size="small"
         data-neodigm-marquee-text=" Popups that Pop! Easy to Use JavaScript UX Library. Small and Fast, only 9k. Star on Github! The Audio can be toggled ON and OFF by the developer or the end user.  ">
             <pre></pre> 
         </neodigm-marquee>
@@ -248,21 +250,25 @@ tags:
                     <details>
                         <summary class="h-pro-tip text-coy_2009" data-neodigm-wired4sound="click|4" class="h-pro-tip text-coy_2009">For Example 👁️</summary>
                         <p>Simply add a tag to your button:</p>
+<aside class="js-copy__pop">
 {{< highlight html >}}
 
 <button data-neodigm-sodapop-id="myPopup_id">Try Me</button>
 
 {{< /highlight >}}
+</aside>
                         <p>Or call the Popup with JavaScript:</p>
+<aside class="js-copy__pop">
 {{< highlight html >}}
 
 <button onClick="neodigmSodaPop.autoOpen('myPopup_id')">Try Me</button>
 
 {{< /highlight >}}
+</aside>
                         <details>
                             <summary class="h-pro-tip text-coy_2009" data-neodigm-wired4sound="click|4"
                             data-neodigm-toast="##This is the HTML template|used to make a Popup">Popup Template 🚀</summary>
-                                <div id="js-copy__pop">
+                                <aside class="js-copy__pop">
 {{< highlight html >}}
 
 <template id="myPopup_id" data-neodigm-sodapop-modal="false" 
@@ -273,9 +279,9 @@ YOUR CONTENT HERE
 </template>
 
 {{< /highlight >}}
-                                </div>
+                                </aside>
                             <div class="h-center">
-                                <button class="js-copy-btn l-btn l-btn--ghost" onclick="doCopy('#js-copy__pop')" data-neodigm-wired4sound="click|10">Copy</button>
+                                <button class="js-copy-btn l-btn l-btn--ghost" onclick="doCopyClass('.js-copy__pop')" data-neodigm-wired4sound="click|10">Copy</button>
                             </div>
                         </details>
                      </details>
@@ -378,7 +384,7 @@ data-neodigm-parallax-size="small">
 {{< /highlight >}}
             </div>
             <div class="h-center">
-                <button class="js-copy-btn l-btn l-btn--ghost" onclick="doCopy('#js-copy__parallax')" data-neodigm-wired4sound="click|10">Copy</button>
+                <button class="js-copy-btn l-btn l-btn--ghost" onclick="doCopyClass('#js-copy__parallax')" data-neodigm-wired4sound="click|10">Copy</button>
             </div>
         </article>
     </div>
@@ -403,7 +409,7 @@ data-neodigm-parallax-size="small">
 <section class="pfmf-grid pfmf-grid__30_70 readable__doc">
     <div>
         <article class="pfmf-crd--black h-center">
-            <neodigm-marquee data-neodigm-marquee-text="  The scrolling words glow like retro noir theater lights, adding poetic resonance and depth to your product storytelling. You should Star this on Github. "
+            <neodigm-marquee data-neodigm-marquee-text="  The scrolling words glow like retro noir theater lights, adding poetic resonance and depth to your product storytelling. You should Star this on Github! "
             data-neodigm-marquee-size="small">
                 <pre></pre>
             </neodigm-marquee>
@@ -428,7 +434,7 @@ data-neodigm-marquee-size="small">
 {{< /highlight >}}
             </div>
             <div class="h-center">
-                <button class="js-copy-btn l-btn l-btn--ghost" onclick="doCopy('#js-copy__marq')" data-neodigm-wired4sound="click|10">Copy</button>
+                <button class="js-copy-btn l-btn l-btn--ghost" onclick="doCopyClass('#js-copy__marq')" data-neodigm-wired4sound="click|10">Copy</button>
             </div>
         </article>
     </div>
@@ -498,7 +504,7 @@ data-neodigm-marquee-size="small">
     data-neodigm-marquee-size="small">
         <pre></pre>
     </neodigm-marquee>
-    <section class="readable__doc" style="border-top: solid #EDBA08 1px;">
+    <section class="readable__doc" style="border-top: solid #EDBA08 1px; height: 76vh; overflow-y: scroll">
         <article style="padding: 12px 12px;">
             <div class="h-center">
                 <img src="https://neodigm.github.io/brand_logo_graphic_design/fantastic/discerning/25.jpg"
@@ -506,18 +512,13 @@ data-neodigm-marquee-size="small">
                 <br>
                 <a class="l-btn" target="_blank" rel="noopener" href="https://github.com/arcanus55/neodigm55">Star ⭐ on Github</a>
             </div>
-        </article>    
+        </article>
     </section>
 </template>
 
 <script>
-    setTimeout(function(){ if( neodigmSodaPop && neodigmMarquee ) neodigmSodaPop.setOnAfterOpen( function(){
-        neodigmMetronome.init()
-        neodigmMarquee.init()
-        }
-        ) }, 4800)
     setTimeout(function(){ document.body.dataset.prefScheme="dark"; }, 600)
-    setTimeout(function(){ neodigmToast.q("Audio Sound FX Optional|Toggled ON 🔊 OFF")}, 18800)
+    setTimeout(function(){ neodigmToast.q("Audio Sound FX Optional|Toggled ON 🔊 OFF")}, 26800)
     setTimeout(function(){ neodigmToast.q("##Easy to Use 💡|Landing Page Solution")}, 76800)
     setTimeout(function(){ neodigmToast.q("##Swiss Army Chainsaw ⚡|Ridiculously Easy")}, 98800)
     setTimeout(function(){ neodigmToast.q("##Provocative Engagement ⭐|Performant and Unique")}, 128880)
@@ -526,4 +527,12 @@ data-neodigm-marquee-size="small">
     setTimeout(function(){ neodigmToast.q("Star us on Github|Contributions welcome ⭐")}, 2626000)
     setTimeout(function(){ neodigmToast.q("##Freedom, Flexibility, and Finesse|⭐ Star it!")}, 3226000)
     setTimeout(function(){ neodigmToast.q("For those who defiantly|think for themselves ⭐ Star it!")}, 342000)
+    window.addEventListener('DOMContentLoaded', (ev) => {
+        setTimeout(function(){
+            if( neodigmSodaPop && neodigmMarquee ) neodigmSodaPop.setOnAfterOpen( function(){
+                neodigmMetronome.init()
+                neodigmMarquee.init()
+            })            
+        }, 3200)
+    });
 </script>
