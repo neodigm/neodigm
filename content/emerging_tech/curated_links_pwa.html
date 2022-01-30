@@ -83,6 +83,7 @@ data-neodigm-sodapop-size="small">
 data-neodigm-marquee-size="small">
     <pre data-neodigm-theme="primary"></pre>
 </neodigm-marquee>
+<aside class="js-copy__pwa">
     {{< highlight JavaScript >}}
     let eA2hs = oD.getElementsByClassName("js-a2hs")[0];
     let eA2hsP = oD.getElementsByClassName("js-a2hs--post")[0];
@@ -167,10 +168,12 @@ data-neodigm-marquee-size="small">
       })
     );
     {{< /highlight >}}
-<neodigm-marquee data-neodigm-marquee-text=" Create a custom Google Analytics event that fires whenever your PWA is installed. "
+</aside>
+<neodigm-marquee data-neodigm-marquee-text=" Create a custom Google Analytics / GTM event that fires whenever your PWA is installed. "
 data-neodigm-marquee-size="small">
     <pre data-neodigm-theme="primary"></pre>
 </neodigm-marquee>
+<aside class="js-copy__pwa">
     {{< highlight JavaScript >}}
     class NeodigmPWA {
       constructor(){
@@ -188,9 +191,10 @@ data-neodigm-marquee-size="small">
     let neodigmPWA = new NeodigmPWA()
     neodigmPWA.init()
     {{< /highlight >}}
+</aside>
     </output>
     <div class="h-center">
-        <button class="js-copy-btn l-btn l-btn--ghost" onclick="doCopy('#js-copy__css')" data-neodigm-wired4sound="click|10">Copy</button>
+        <button class="js-copy-btn l-btn l-btn--ghost" onclick="doCopyClass('.js-copy__pwa')" data-neodigm-wired4sound="click|10">Copy</button>
     </div>
 </template>
 
