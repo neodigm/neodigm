@@ -774,5 +774,6 @@
 {"name":"CSS3 Accordion","comment":"","uri":"https://codepen.io/wesleyvanwyk1979/pen/gwIHp","cat":"tech","tags":["css"]},
 {"name":"fluid typography tool","comment":"","uri":"https://modern-fluid-typography.vercel.app/","cat":"tech","tags":["js","tool","svelte"]},
 {"name":"Adrian Bece","comment":"Award-winning developer","uri":"https://codeadrian.github.io/","cat":"blogfolio","tags":["js","svelte"]},
-{"name":"PWA on ProductHunt","comment":"","uri":"https://www.producthunt.com/search?q=pwa","cat":"ecosystem","tags":["js","pwa"]}
+{"name":"PWA on ProductHunt","comment":"","uri":"https://www.producthunt.com/search?q=pwa","cat":"ecosystem","tags":["js","pwa"]},
+{"name":"","comment":"","uri":"https://codepen.io/neodigm24/full/oNGqzyO","cat":"tech","tags":["js","1st","ux","typescript","dataviz"]}
 ]
