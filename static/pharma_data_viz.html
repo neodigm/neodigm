@@ -54,12 +54,12 @@
 
 <script>
     window.addEventListener("message", (event) => {
-    console.log( "event" )
-    console.log( event )
+        console.log("Event | ", event)
+        if( neodigmToast ) neodigmToast.q( JSON.stringify(event.data) ,"primary")
     }, false)
     setTimeout(function(){
-        if( neodigmToast ) neodigmToast.q("14,004 Physicians","info")
-    }, 6000)
+        if( neodigmToast ) neodigmToast.q("9,004 Physicians","info")
+    }, 8000)
 </script>
 
   </body>
