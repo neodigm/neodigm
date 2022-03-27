@@ -529,7 +529,7 @@ if( e3 ) { // Delay 3d call if still null
                 neodigmSodaPop.close();
             }else{
                 neodigmSodaPop.shake();
-                if( neodigmToast ){ neodigmToast.q( valMsg ); }
+                if( neodigmToast ){ neodigmToast.q( valMsg, "danger" ); }
             }
         }
     }
@@ -547,7 +547,7 @@ if( e3 ) { // Delay 3d call if still null
         if( sTxt ) sTxt += "\n<!-- (c) 2022 🗝️ www.theScottKrause.com -->"
         try {
             navigator.clipboard.writeText( sTxt );
-            neodigmToast.q("Copied to Clipboard|Paste into your document", "secondary")
+            neodigmToast.q("Copied to Clipboard|Paste into your document", "night")
         } catch (err) {
             console.warn('Failed to copy', err)
         }
