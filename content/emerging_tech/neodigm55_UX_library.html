@@ -593,6 +593,10 @@ data-n55-marquee-size="small">
             <p>Enhanced CTA Buttons command attention and have a mind of their own. The ambient and interactive animation draws the user in, driving conversions.</p>
             <p>The visual presence leaves no doubt that this is the button that needs to be clicked.</p>
 
+            <details class="js-det__cta--open">
+                <summary data-n55-wired4sound-click="8" class="h-pro-tip text-coy_2009">Animation 🍭</summary>
+                <br>
+
             <div class="h-center">
 
                 <a id="cta-ambient__emit" data-n55-enchanted-cta data-n55-wired4sound-click="10" data-n55-enchanted-cta-size="xsmall"
@@ -622,38 +626,50 @@ data-n55-marquee-size="small">
             </div>
 
             <br>
-            <details>
+            <details open>
                 <summary data-n55-wired4sound-click="8" class="h-pro-tip text-coy_2009">No JavaScript ⚡</summary>
                 <p>Neodigm 55 Enchanted CTA is “declarative”. That means that you simply add a tag to your existing HTML. No JavaScript required. You can use JavaScript if you want however it's not necessary.</p>
-                <details>
+                <details open>
                     <summary data-n55-wired4sound-click="8" class="h-pro-tip text-coy_2009">Enchanted CTA Button Usage 💡</summary>
                     <p>🔸 &nbsp; Audio feedback and scrolling animation on hover and click</p>
                     <p>🔸 &nbsp; Ambient animation makes it clear that this is the button to click</p>
                     <p>🔸 &nbsp; Random ambient animation cycles focus user attention on the next action</p>
-                    <p>🔸 &nbsp; Google Analytics / Tag Manager Trackable</p>
+                    <p>🔸 &nbsp; Google Analytics / Tag Manager <a class="h-link" target="_blank" rel="noopener" href="https://github.com/arcanus55/neodigm55/wiki/Cheat-Cheet#fire-a-google-analytics-event-when-a-popup-is-opened">Trackable</a></p>
+                    <p>🔸 &nbsp; May contain a Marquee component for verbose text</p>
+                    <p>🔸 &nbsp; May be Disabled</p>
                     <details>
                         <summary data-n55-wired4sound-click="8" class="h-pro-tip text-coy_2009">For Example 👁️</summary>
-                        <p>Simply add a tag to your button:</p>
+
+                        <article style="padding: 12px 12px;">
+                            <div id="js-copy__enchantedCTA">
 {{< highlight html >}}
 
-<button data-n55-toast="Hello World Beginner">Beginner</button>
+<a id="js-brand__xl" data-n55-enchanted-cta
+data-n55-sodapop-id="js-pop__id"
+data-n55-toast="Toast Message"
+target="_blank" rel="noopener" tabindex="0" aria-haspopup="true"
+data-n55-wired4sound-click="7"
+data-n55-enchanted-cta-size="medium"
+data-n55-enchanted-cta-ambient="emit"
+data-n55-enchanted-cta-alt="Text|Alternate"
+data-n55-theme="brand">
+<span  data-n55-wired4sound-mouseover="3">Star ⭐ on Github</span><span>⭐ ⭐ ⭐ ⭐ ⭐</span>
+</a>
 
 {{< /highlight >}}
-                        <p>Or call the Toast with JavaScript:</p>
-{{< highlight html >}}
 
-<button onClick="neodigmToast.q('Hello World|Advanced')">Advanced</button>
+                                </div>
+                                <div class="h-center">
+                                    <a id="cta-copy-3" data-n55-enchanted-cta="" onclick="doCopyClass('#js-copy__enchantedCTA')" data-n55-wired4sound-click="10" data-n55-enchanted-cta-size="small" data-n55-theme="secondary">
+                                        <span data-n55-wired4sound-mouseover="3">Copy Code</span><span>Clipboard</span>
+                                    </a>
+                                </div>
+                            </article>
 
-{{< /highlight >}}
-                        <div class="h-center">
-                            <button class="l-btn l-btn--ghost" data-n55-toast="Hello World Beginner"
-                            data-n55-wired4sound-click="10">Beginner</button>
-                            <button class="l-btn l-btn--ghost" onClick="neodigmToast.q('Hello World|Advanced','info')"
-                            data-n55-wired4sound-click="11">Advanced</button>    
-                        </div>
-                     </details>
-                 </details>
-             </details>
+                        </details>
+                    </details>
+                </details>
+            </details>
         </article>
     </div>
     <div>
@@ -661,57 +677,45 @@ data-n55-marquee-size="small">
             <div class="h-center">
                 <br>
                 <a id="js-brand__xl--marq" data-n55-enchanted-cta
-                data-n55-toast="Open a Popup or Toast on Click|Without JavaScript"
+                onclick='document.querySelectorAll(".js-det__cta--open").forEach( (e)=> e.setAttribute("open",true))'
+                data-n55-toast="Open a Popup or Toast|Without JavaScript"
                 data-n55-wired4sound-click="7" data-n55-enchanted-cta-dont-touch="true"
                 data-n55-enchanted-cta-size="medium"
                 data-n55-enchanted-cta-ambient="emit"
-                data-n55-enchanted-cta-alt="Text|Alternate"
                 data-n55-theme="night">
                     <span data-n55-wired4sound-mouseover="3">Enchanted CTA</span>
                     <span>
                         <neodigm-marquee data-n55-marquee-text=" The circadian rhythms of arousal and rest make the buttons organic and life-like. They speak to you. They engage you. You simply have to click! "
-                        data-n55-toast="Open a Popup or Toast on Click|Without JavaScript"
+                        data-n55-toast="Open a Popup or Toast|Without JavaScript"
                         data-n55-marquee-size="small"
                         data-n55-marquee-direction="false"><pre data-n55-theme="warning"></pre></neodigm-marquee>
                     </span>
                 </a>
                 <br><br>
             </div>
-            <details>
+            <details class="js-det__cta--open">
                 <summary class="h-pro-tip text-coy_2009" data-n55-wired4sound-click="4" >Button Sizes &nbsp; 💡</summary>
                 <br>
                 <div class="h-center">
-                    <a id="cta-toast-theme-1" data-n55-enchanted-cta data-n55-wired4sound-click="10" data-n55-enchanted-cta-size="small"
-                    onClick="neodigmToast.q('Brand|Custom','brand')" data-n55-theme="brand">
-                        <span data-n55-wired4sound-mouseover="3">Brand</span><span>Custom</span></a>
+                    <a id="cta-sizees__xs" data-n55-enchanted-cta-dont-touch="true" data-n55-enchanted-cta data-n55-wired4sound-click="10" data-n55-enchanted-cta-size="xsmall"
+                    onClick="neodigmToast.q('X-Small|data-n55-enchanted-cta-size=xsmall','brand')" data-n55-theme="primary">
+                        <span data-n55-wired4sound-mouseover="3">X-Small</span><span>Small Phone</span></a> <br>
 
-                    <a id="cta-toast-theme-1" data-n55-enchanted-cta data-n55-wired4sound-click="10" data-n55-enchanted-cta-size="small"
-                    onClick="neodigmToast.q('Primary|Serenity','primary')" data-n55-theme="primary">
-                        <span data-n55-wired4sound-mouseover="3">Primary</span><span>Serenity</span></a>
+                    <a id="cta-sizees__s"  data-n55-enchanted-cta-dont-touch="true" data-n55-enchanted-cta data-n55-wired4sound-click="10" data-n55-enchanted-cta-size="small"
+                    onClick="neodigmToast.q('Small|data-n55-enchanted-cta-size=small','primary')" data-n55-theme="primary">
+                        <span data-n55-wired4sound-mouseover="3">Small</span><span>Mobile</span></a> <br>
 
-                    <a id="cta-toast-theme-1" data-n55-enchanted-cta data-n55-wired4sound-click="10" data-n55-enchanted-cta-size="small"
-                    onClick="neodigmToast.q('Secondary|Sand Dollar','secondary')" data-n55-theme="secondary">
-                        <span data-n55-wired4sound-mouseover="3">Secondary</span><span>Sand Dollar</span></a>
+                    <a id="cta-sizees__m"  data-n55-enchanted-cta-dont-touch="true" data-n55-enchanted-cta data-n55-wired4sound-click="10" data-n55-enchanted-cta-size="medium"
+                    onClick="neodigmToast.q('Medium|data-n55-enchanted-cta-size=medium','secondary')" data-n55-theme="primary">
+                        <span data-n55-wired4sound-mouseover="3">Medium</span><span>Phone Tablet</span></a> <br>
 
-                    <a id="cta-toast-theme-1" data-n55-enchanted-cta data-n55-wired4sound-click="10" data-n55-enchanted-cta-size="small"
-                    onClick="neodigmToast.q('Success|Emerald','success')" data-n55-theme="success">
-                        <span data-n55-wired4sound-mouseover="3">Success</span><span>Emerald</span></a>
+                    <a id="cta-sizees__l"  data-n55-enchanted-cta-dont-touch="true" data-n55-enchanted-cta data-n55-wired4sound-click="10" data-n55-enchanted-cta-size="large"
+                    onClick="neodigmToast.q('Large|data-n55-enchanted-cta-size=large','success')" data-n55-theme="primary">
+                        <span data-n55-wired4sound-mouseover="3">Large</span><span>Laptop</span></a> <br>
 
-                    <a id="cta-toast-theme-1" data-n55-enchanted-cta data-n55-wired4sound-click="10" data-n55-enchanted-cta-size="small"
-                    onClick="neodigmToast.q('Danger|Tangerine','danger')" data-n55-theme="danger">
-                        <span data-n55-wired4sound-mouseover="3">Danger</span><span>Tangerine</span></a>
-
-                    <a id="cta-toast-theme-1" data-n55-enchanted-cta data-n55-wired4sound-click="10" data-n55-enchanted-cta-size="small"
-                    onClick="neodigmToast.q('Warning|Illuminating','warning')" data-n55-theme="warning">
-                        <span data-n55-wired4sound-mouseover="3">Warning</span><span>Illuminating</span></a>
-
-                    <a id="cta-toast-theme-1" data-n55-enchanted-cta data-n55-wired4sound-click="10" data-n55-enchanted-cta-size="small"
-                    onClick="neodigmToast.q('Info|Aqua Sky','info');neodigmEnchantedCTA.flashTheme('info')" data-n55-theme="info">
-                        <span data-n55-wired4sound-mouseover="3">Info</span><span>Aqua Sky</span></a>
-
-                    <a id="cta-toast-theme-1" data-n55-enchanted-cta data-n55-wired4sound-click="10" data-n55-enchanted-cta-size="small"
-                    onClick="neodigmToast.q('Night|Charcole Gray','night');neodigmEnchantedCTA.flashTheme('night')" data-n55-theme="night">
-                        <span data-n55-wired4sound-mouseover="3">Night</span><span>Charcole Gray</span></a>
+                    <a id="cta-sizees__xl" data-n55-enchanted-cta-dont-touch="true" data-n55-enchanted-cta data-n55-wired4sound-click="10" data-n55-enchanted-cta-size="xlarge"
+                    onClick="neodigmToast.q('X-Large|data-n55-enchanted-cta-size=xlarge','danger')" data-n55-theme="primary">
+                        <span data-n55-wired4sound-mouseover="3">X-Large</span><span>Large Display</span></a> <br>
                 </div>
             </details>
         </article>  
