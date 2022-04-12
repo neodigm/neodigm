@@ -1,14 +1,10 @@
 ---
-title: "Neodigm 55 Eclectic JavaScript UX micro-library"
+title: "Neodigm 55 JavaScript UX micro-library"
 date: 2022-02-17T18:33:52-05:00
 draft: false
 summary: "Popups, Toast, Parallax, and SFX"
-description: Neodigm 55 JavaScript UX Micro-Library
+description: Neodigm 55 Eclectic JavaScript UX Micro-Library
 slug: neodigm55_UX_library
-categories:
-- JavaScript
-- UX
-- Emerging Tech
 tags:
 - JavaScript
 - TypeScript
@@ -21,7 +17,7 @@ tags:
             <p>Neodigm 55 is an eclectic JavaScript UX micro-library. The lightweight components come together in a unique way that makes your website playful and fun.</p>
             <p>Neodigm 55 is low-code, performant, accessible, and <a class="h-link" target="_blank" rel="noopener" href="https://github.com/arcanus55/neodigm55">open source</a>. Because it’s so easy to get started it is the perfect solution for quick landing pages or event sites.</p>
             <details>
-                <summary data-n55-wired4sound-click="8" class="h-pro-tip text-coy_2009">Powerful Popups 💡</summary>
+                <summary class="h-pro-tip text-coy_2009">Powerful Popups 💡</summary>
                 <section class="pfmf-grid pfmf-grid__50_50 readable__doc">
                     <div style="display: contents;">
                         <article  class="h-bg__stripe" style="padding: 12px 12px;">
@@ -77,7 +73,7 @@ tags:
                 <br><br>
             </div>
             <details>
-                <summary data-n55-wired4sound-click="8" class="h-pro-tip text-coy_2009">Popup Sizes 💡</summary>
+                <summary class="h-pro-tip text-coy_2009">Popup Sizes 💡</summary>
                 <br>
                 <div class="h-center">
                     <a id="cta-sodapop-size-small" data-n55-enchanted-cta aria-haspopup="true"
@@ -130,9 +126,10 @@ tags:
 {{< highlight html >}}
 
 
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/arcanus55/neodigm55@gh-pages/dist/neodigm55_v1_8.min.css">
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/gh/arcanus55/neodigm55@gh-pages/dist/neodigm55_v1_9.min.css">
 
-<script src="https://cdn.jsdelivr.net/gh/arcanus55/neodigm55@gh-pages/dist/neodigm55_v1_8.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/arcanus55/neodigm55@gh-pages/dist/neodigm55_v1_9.min.js"></script>
 
 
 {{< /highlight >}}
@@ -155,7 +152,7 @@ tags:
             <p>Neodigm Toast is a super convenient way to show a quick message without disrupting the user’s flow. It just pops from the bottom of the screen, displays a message, and then animates off screen.</p>
             <p>Its unobtrusive nature makes it perfect for dynamic messages that need to be seen but do not need to occupy precious screen real-estate.</p>
             <details>
-                <summary data-n55-wired4sound-click="8" class="h-pro-tip text-coy_2009">No JavaScript ⚡</summary>
+                <summary class="h-pro-tip text-coy_2009">No JavaScript ⚡</summary>
                 <p>Neodigm 55 Toast is “declarative”. That means that you simply add a tag to your existing HTML. No JavaScript required. You can use JavaScript if you want however it's not necessary.</p>
                 <div class="h-center">
                     <a id="cta-git-star-1" data-n55-enchanted-cta
@@ -169,12 +166,12 @@ tags:
                 </div>
                 <br>
                 <details>
-                    <summary data-n55-wired4sound-click="8" class="h-pro-tip text-coy_2009">Toast Usage 💡</summary>
+                    <summary class="h-pro-tip text-coy_2009">Toast Usage 💡</summary>
                     <p>Neodigm Toast messages are queued, meaning they will be displayed for 6 seconds in the sequence in which they were called; Allowing adequate time for each message to be read and understood.</p>
                     <p>On a mobile device a Toast message will cause a slight vibration to call attention to the message.</p>
                     <p>A Toast message may contain two lines of text. The pipe character is used to break text onto multiple lines.</p>
                     <details>
-                        <summary data-n55-wired4sound-click="8" class="h-pro-tip text-coy_2009">For Example 👁️</summary>
+                        <summary class="h-pro-tip text-coy_2009">For Example 👁️</summary>
                         <p>Simply add a tag to your button:</p>
 {{< highlight html >}}
 
@@ -215,40 +212,40 @@ tags:
                 </a><br><br>
             </div>
             <details open>
-                <summary class="h-pro-tip text-coy_2009" data-n55-wired4sound-click="4" >Toast Themes &nbsp;🍰</summary>
+                <summary class="h-pro-tip text-coy_2009" >Toast Themes &nbsp;✨</summary>
                 <br>
                 <div class="h-center">
                     <a id="cta-toast-theme-1" data-n55-enchanted-cta data-n55-wired4sound-click="10" data-n55-enchanted-cta-size="small"
                     onClick="neodigmToast.q('Brand|Custom','brand')" data-n55-theme="brand">
-                        <span data-n55-wired4sound-mouseover="3">Brand</span><span>Custom</span></a>
+                        <span data-n55-wired4sound-mouseover="10">Brand</span><span>Custom</span></a>
 
                     <a id="cta-toast-theme-1" data-n55-enchanted-cta data-n55-wired4sound-click="10" data-n55-enchanted-cta-size="small"
                     onClick="neodigmToast.q('Primary|Serenity','primary')" data-n55-theme="primary">
-                        <span data-n55-wired4sound-mouseover="3">Primary</span><span>Serenity</span></a>
+                        <span data-n55-wired4sound-mouseover="10">Primary</span><span>Serenity</span></a>
 
                     <a id="cta-toast-theme-1" data-n55-enchanted-cta data-n55-wired4sound-click="10" data-n55-enchanted-cta-size="small"
                     onClick="neodigmToast.q('Secondary|Sand Dollar','secondary')" data-n55-theme="secondary">
-                        <span data-n55-wired4sound-mouseover="3">Secondary</span><span>Sand Dollar</span></a>
+                        <span data-n55-wired4sound-mouseover="10">Secondary</span><span>Sand Dollar</span></a>
 
                     <a id="cta-toast-theme-1" data-n55-enchanted-cta data-n55-wired4sound-click="10" data-n55-enchanted-cta-size="small"
                     onClick="neodigmToast.q('Success|Emerald','success')" data-n55-theme="success">
-                        <span data-n55-wired4sound-mouseover="3">Success</span><span>Emerald</span></a>
+                        <span data-n55-wired4sound-mouseover="10">Success</span><span>Emerald</span></a>
 
                     <a id="cta-toast-theme-1" data-n55-enchanted-cta data-n55-wired4sound-click="10" data-n55-enchanted-cta-size="small"
                     onClick="neodigmToast.q('Danger|Tangerine','danger')" data-n55-theme="danger">
-                        <span data-n55-wired4sound-mouseover="3">Danger</span><span>Tangerine</span></a>
+                        <span data-n55-wired4sound-mouseover="10">Danger</span><span>Tangerine</span></a>
 
                     <a id="cta-toast-theme-1" data-n55-enchanted-cta data-n55-wired4sound-click="10" data-n55-enchanted-cta-size="small"
                     onClick="neodigmToast.q('Warning|Illuminating','warning')" data-n55-theme="warning">
-                        <span data-n55-wired4sound-mouseover="3">Warning</span><span>Illuminating</span></a>
+                        <span data-n55-wired4sound-mouseover="10">Warning</span><span>Illuminating</span></a>
 
                     <a id="cta-toast-theme-1" data-n55-enchanted-cta data-n55-wired4sound-click="10" data-n55-enchanted-cta-size="small"
                     onClick="neodigmToast.q('Info|Aqua Sky','info');neodigmEnchantedCTA.flashTheme('info')" data-n55-theme="info">
-                        <span data-n55-wired4sound-mouseover="3">Info</span><span>Aqua Sky</span></a>
+                        <span data-n55-wired4sound-mouseover="10">Info</span><span>Aqua Sky</span></a>
 
                     <a id="cta-toast-theme-1" data-n55-enchanted-cta data-n55-wired4sound-click="10" data-n55-enchanted-cta-size="small"
                     onClick="neodigmToast.q('Night|Charcole Gray','night');neodigmEnchantedCTA.flashTheme('night')" data-n55-theme="night">
-                        <span data-n55-wired4sound-mouseover="3">Night</span><span>Charcole Gray</span></a>
+                        <span data-n55-wired4sound-mouseover="10">Night</span><span>Charcole Gray</span></a>
                 </div>
             </details>
         </article>  
@@ -281,7 +278,7 @@ tags:
                 <button class="js-copy-btn l-btn l-btn--ghost" data-n55-wired4sound-click="11">11</button>
             </div><br>
             <details>
-                <summary class="h-pro-tip text-coy_2009" data-n55-wired4sound-click="4" class="h-pro-tip text-coy_2009">For Example 👁️</summary>
+                <summary class="h-pro-tip text-coy_2009" class="h-pro-tip text-coy_2009">For Example 👁️</summary>
                 <p>Simply add a tag to your button:</p>
                 <aside class="js-copy__w4s">
 {{< highlight html >}}
@@ -330,7 +327,7 @@ tags:
                     </a>
                 </div>
                 <details>
-                    <summary class="h-pro-tip text-coy_2009" data-n55-wired4sound-click="4" class="h-pro-tip text-coy_2009">No JavaScript 💡</summary>
+                    <summary class="h-pro-tip text-coy_2009" class="h-pro-tip text-coy_2009">No JavaScript 💡</summary>
                     <p>Neodigm 55 Popups are “declarative”. That means that you simply add a tag to your existing HTML. No JavaScript required. You can use JavaScript if you want however it's not necessary.</p>
                     <div class="h-center">
                         <div class="h-center">
@@ -345,7 +342,7 @@ tags:
                         </div>
                     </div>     
                     <details>
-                        <summary class="h-pro-tip text-coy_2009" data-n55-wired4sound-click="4" class="h-pro-tip text-coy_2009">For Example 👁️</summary>
+                        <summary class="h-pro-tip text-coy_2009" class="h-pro-tip text-coy_2009">For Example 👁️</summary>
                         <p>Simply add a tag to your button:</p>
 <aside class="js-copy__pop">
 {{< highlight html >}}
@@ -365,7 +362,7 @@ aria-haspopup="true">Try Me</button>
 {{< /highlight >}}
 </aside>
                         <details>
-                            <summary class="h-pro-tip text-coy_2009" data-n55-wired4sound-click="4"
+                            <summary class="h-pro-tip text-coy_2009"
                             data-n55-toast="##This is the HTML template|used to make a Popup">Popup Template 🚀</summary>
                                 <aside class="js-copy__pop">
 {{< highlight html >}}
@@ -412,10 +409,10 @@ YOUR CONTENT HERE
                     </div>
                     <br>
                     <details>
-                        <summary data-n55-wired4sound-click="4" class="h-pro-tip text-coy_2009">No JavaScript 💡</summary>
+                        <summary class="h-pro-tip text-coy_2009">No JavaScript 💡</summary>
                         <p>Neodigm 55 Popups are “declarative”. That means that you simply add a tag to your existing HTML. No JavaScript required. You can use JavaScript if you want however it's not necessary.</p>
                         <details>
-                            <summary data-n55-wired4sound-click="4" class="h-pro-tip text-coy_2009">For Example 👁️</summary>
+                            <summary class="h-pro-tip text-coy_2009">For Example 👁️</summary>
                             <p>Simply add a tag to your button:</p>
 {{< highlight html >}}
 
@@ -463,10 +460,10 @@ aria-haspopup="true">Try Me</button>
                 </a>
             </div>
             <details>
-                <summary data-n55-wired4sound-click="4" class="h-pro-tip text-coy_2009">No JavaScript 💡</summary>
+                <summary class="h-pro-tip text-coy_2009">No JavaScript 💡</summary>
                 <p>Neodigm 55 Popups are “declarative”. That means that you simply add a tag to your existing HTML. No JavaScript required. You can use JavaScript if you want however it's not necessary.</p>
                 <details>
-                    <summary data-n55-wired4sound-click="4" class="h-pro-tip text-coy_2009">For Example 👁️</summary>
+                    <summary class="h-pro-tip text-coy_2009">For Example 👁️</summary>
                     <p>Simply add a tag to your button:</p>
 {{< highlight html >}}
 
@@ -539,9 +536,9 @@ data-n55-parallax-size="small">
             data-n55-enchanted-cta-size="large"
             data-n55-theme="danger"
             data-n55-enchanted-cta-ambient="radius"
-            data-n55-enchanted-cta-alt="Easy to User|Cheatsheet 👁️"
+            data-n55-enchanted-cta-alt="Easy to Use|Infographic 👁️"
             data-n55-sodapop-id="js-cheatsheet--id">
-                <span data-n55-wired4sound-mouseover="3">Cheatsheet</span><span>Infographic</span>
+                <span data-n55-wired4sound-mouseover="11">Infographic</span><span>Cheatsheet</span>
             </a>
         </aside>
     </section>
@@ -594,7 +591,7 @@ data-n55-marquee-size="small">
             <p>The visual presence leaves no doubt that this is the button that needs to be clicked.</p>
 
             <details class="js-det__cta--open">
-                <summary data-n55-wired4sound-click="8" class="h-pro-tip text-coy_2009">Animation 🍭</summary>
+                <summary class="h-pro-tip text-coy_2009">Animation 🍭</summary>
                 <br>
 
             <div class="h-center">
@@ -627,10 +624,10 @@ data-n55-marquee-size="small">
 
             <br>
             <details open>
-                <summary data-n55-wired4sound-click="8" class="h-pro-tip text-coy_2009">No JavaScript ⚡</summary>
+                <summary class="h-pro-tip text-coy_2009">No JavaScript ⚡</summary>
                 <p>Neodigm 55 Enchanted CTA is “declarative”. That means that you simply add a tag to your existing HTML. No JavaScript required. You can use JavaScript if you want however it's not necessary.</p>
                 <details open>
-                    <summary data-n55-wired4sound-click="8" class="h-pro-tip text-coy_2009">Enchanted CTA Button Usage 💡</summary>
+                    <summary class="h-pro-tip text-coy_2009">Enchanted CTA Button Usage 💡</summary>
                     <p>🔸 &nbsp; Audio feedback and scrolling animation on hover and click</p>
                     <p>🔸 &nbsp; Ambient animation makes it clear that this is the button to click</p>
                     <p>🔸 &nbsp; Random ambient animation cycles focus user attention on the next action</p>
@@ -638,7 +635,7 @@ data-n55-marquee-size="small">
                     <p>🔸 &nbsp; May contain a Marquee component for verbose text</p>
                     <p>🔸 &nbsp; May be Disabled</p>
                     <details>
-                        <summary data-n55-wired4sound-click="4" class="h-pro-tip text-coy_2009">For Example 👁️</summary>
+                        <summary class="h-pro-tip text-coy_2009">For Example 👁️</summary>
 
                         <article style="padding: 12px 12px;">
                             <div id="js-copy__enchantedCTA">
@@ -694,7 +691,7 @@ data-n55-theme="brand">
                 <br><br>
             </div>
             <details class="js-det__cta--open">
-                <summary class="h-pro-tip text-coy_2009" data-n55-wired4sound-click="4" >Button Sizes &nbsp; 💡</summary>
+                <summary class="h-pro-tip text-coy_2009">Button Sizes &nbsp; 💡</summary>
                 <br>
                 <div class="h-center">
                     <a id="cta-sizees__xs" data-n55-enchanted-cta-dont-touch="true" data-n55-enchanted-cta data-n55-wired4sound-click="10" data-n55-enchanted-cta-size="xsmall"
@@ -838,7 +835,7 @@ data-n55-theme="brand">
     setTimeout(function(){ if(neodigmToast.getQ().length==0) neodigmToast.q("Provocative Engagement ⭐|Performant and Unique","brand")}, 128880)
     setTimeout(function(){ if(neodigmToast.getQ().length==0) neodigmToast.q("Analytics Trackable|Google Tag Manager","night")}, 154880)    
     setTimeout(function(){ if(neodigmToast.getQ().length==0) neodigmToast.q("A Landing Page 🚀|Micro-interaction library","primary")}, 188000)
-    setTimeout(function(){ if(neodigmToast.getQ().length==0) neodigmToast.q("Superlatively Hip 🍰|Tweaked into Oblivion 🍭","brand")}, 228000)
+    setTimeout(function(){ if(neodigmToast.getQ().length==0) neodigmToast.q("Superlatively Hip ✨|Tweaked into Oblivion 🍭","brand")}, 228000)
     setTimeout(function(){ if(neodigmToast.getQ().length==0) neodigmToast.q("Star us on Github|Contributions welcome ⭐","brand")}, 1626000)
     setTimeout(function(){ if(neodigmToast.getQ().length==0) neodigmToast.q("Analytics Trackable|Google Friendly","brand")}, 2626000)
     setTimeout(function(){ if(neodigmToast.getQ().length==0) neodigmToast.q("Freedom, Flexibility, and Finesse|⭐ Star it!","brand")}, 3226000)
