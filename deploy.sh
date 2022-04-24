@@ -1,3 +1,4 @@
+hugo
 cp -r public/* ../../2019/interactive_resume
 cd ../../2019/interactive_resume
 git status
