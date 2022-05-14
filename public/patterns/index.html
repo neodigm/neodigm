@@ -780,14 +780,21 @@ window.addEventListener('DOMContentLoaded', (ev) => {
     setTimeout(function(){
         if( neodigmSodaPop && neodigmMarquee && neodigmEnchantedCTA ){
             neodigmSodaPop.setOnAfterOpen( function(){
-NeodigmClaire.showCanv('neodigm-sodapop').setTheme('brand').initCanv('neodigm-sodapop').waxOn('neodigm-sodapop')
-                neodigmMetronome.init()
-                    neodigmMarquee.init()
+NeodigmClaire.showCanv('neodigm-sodapop').setTheme( ['brand','warning','danger','night'] ).initCanv('neodigm-sodapop').waxOn('neodigm-sodapop')
+                neodigmMetronome.init().pause( 2400 )
+                    neodigmMarquee.init().pause( 2600 )
                         neodigmEnchantedCTA.init()
             });
             neodigmSodaPop.setOnBeforeUserExit( function(){ neodigmToast.q("Thanks for Vistiting|Bookmark, Star, and Install as PWA!", "info") } )
         }
     }, 3e3)
+    setTimeout(function(){
+        if( neodigmSodaPop && neodigmMarquee && neodigmEnchantedCTA ){
+            neodigmSodaPop.setOnClose( function(){
+NeodigmClaire.waxOff('neodigm-sodapop')
+            });
+        }
+    }, 4e3)
 });
 </script>
 
