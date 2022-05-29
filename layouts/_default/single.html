@@ -4,6 +4,7 @@
         {{ partial "megamenu.html" . }}
         <main id="a11y-skipmain" role="main">
             <picture class="hero-single" role="banner"> <!--  1280 X 720  -->
+                <div>
                 <img class="" src="../{{.Page.Slug}}_tn.webp" alt="{{ .Title }}">
                 <figcaption class="l-cat-chip">
                         {{ range (.GetTerms "categories") }}
@@ -11,6 +12,7 @@
                                 href="{{ .Permalink }}">{{ .LinkTitle }}</a>
                         {{ end }}
                 </figcaption>
+                </div>
             </picture>
 <div style="height: 8px; margin: 2px;"></div>
             <h1 class="readable__title h-center"> {{ .Title }} </h1>
