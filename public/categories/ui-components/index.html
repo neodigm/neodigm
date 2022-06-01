@@ -708,7 +708,8 @@ if( e3 ) {
 </script>
 
 
-<script>    
+<script>
+    const cbTag = "\n<!-- (c) 2022 🗝️ www.theScottKrause.com -->"
     function doCopyClass( _q ){ 
         let aTxt =[ ... document.querySelectorAll( _q )]
         let sTxt = ""
@@ -716,12 +717,24 @@ if( e3 ) {
             sTxt += sText?.innerText;
             sTxt += "\n"
         })            
-        if( sTxt ) sTxt += "\n<!-- (c) 2022 🗝️ www.theScottKrause.com -->"
+        if( sTxt ) sTxt += cbTag
         try {
             navigator.clipboard.writeText( sTxt );
             neodigmToast.q("Copied to Clipboard|Paste into your document", "night")
         } catch (err) {
             console.warn('Failed to copy', err)
+        }
+    }
+    function doCopyString( sTxt, sTheme="night" ){
+        if( sTxt ) {
+            sTxt += cbTag
+            sTxt = sTxt.replaceAll("_","'")
+            try {
+                navigator.clipboard.writeText( sTxt );
+                neodigmToast.q( sTxt+"|Copied to Clipboard", sTheme )
+            } catch (err) {
+                console.warn('Failed to copy', err)
+            }
         }
     }
 </script>
@@ -757,15 +770,15 @@ window.addEventListener('DOMContentLoaded', (ev) => {
         if( neodigmSodaPop && neodigmMarquee && neodigmEnchantedCTA ){
             neodigmSodaPop.setOnAfterOpen( function(){
 NeodigmClaire.showCanv('neodigm-sodapop').setTheme( ['brand','danger','info'] ).initCanvOn('neodigm-sodapop').waxOn('neodigm-sodapop')
-                neodigmMetronome.init().pause( 2400 )
-                    neodigmMarquee.init().pause( 2600 )
+                neodigmMetronome.init().pause( 2200 )
+                    neodigmMarquee.init().pause( 2400 )
                         neodigmEnchantedCTA.init()
             });
             neodigmSodaPop.setOnBeforeUserExit( function(){
                 neodigmToast.q("Thanks for Vistiting|Bookmark, Star, and Install as PWA!", "info")
                 NeodigmClaire.showCanv('picture.hero-single').setTheme( ['brand','danger','warning'] ).initCanvOn('picture.hero-single').waxOn('picture.hero-single')
             } )
-            NeodigmClaire.showCanv('picture.hero-single').setTheme( ['brand','danger','warning'] ).initCanvOn('picture.hero-single').waxOn('picture.hero-single')
+            NeodigmClaire.showCanv('picture.hero-single', .56).setTheme( ['brand','danger','warning'] ).initCanvOn('picture.hero-single').waxOn('picture.hero-single')
         }
     }, 3e3)
     setTimeout(function(){
