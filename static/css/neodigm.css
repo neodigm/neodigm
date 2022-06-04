@@ -468,13 +468,13 @@ section.pfmf-grid > div > article.pfmf-crd--black {
     box-sizing: border-box;
 }
 
-.megamenu .megamenu__grd--card A:nth-of-type(1) { background-color: #C74375; }
-.megamenu .megamenu__grd--card A:nth-of-type(2) { background-color: #BF1932; }
-.megamenu .megamenu__grd--card A:nth-of-type(3) { background-color: #88B04B; }
-.megamenu .megamenu__grd--card A:nth-of-type(4) { background-color: #53B0AE; }
-.megamenu .megamenu__grd--card A:nth-of-type(5) { background-color: #5A5B9F; }
-.megamenu .megamenu__grd--card A:nth-of-type(6) { background-color: #FF6F61; }
-.megamenu .megamenu__grd--card A:nth-of-type(7) { background-color: #E2583E; }
+.megamenu .megamenu__grd--card div:nth-of-type(1) a { background-color: #C74375; }
+.megamenu .megamenu__grd--card div:nth-of-type(2) a { background-color: #BF1932; }
+.megamenu .megamenu__grd--card div:nth-of-type(3) a { background-color: #88B04B; }
+.megamenu .megamenu__grd--card div:nth-of-type(4) a { background-color: #53B0AE; }
+.megamenu .megamenu__grd--card div:nth-of-type(5) a { background-color: #5A5B9F; }
+.megamenu .megamenu__grd--card div:nth-of-type(6) a { background-color: #FF6F61; }
+.megamenu .megamenu__grd--card div:nth-of-type(7) a { background-color: #E2583E; }
 .mm__link--top:link, .mm__link--top:visited, .mm__link--top:hover, .mm__link--top:focus, .mm__link--top:active,
 .mm__link--card:link, .mm__link--card:visited, .mm__link--card:hover, .mm__link--card:focus, .mm__link--card:active,
 .mm__link--bottom:link, .mm__link--bottom:visited, .mm__link--bottom:hover, .mm__link--bottom:focus, .mm__link--bottom:active
@@ -511,8 +511,8 @@ section.pfmf-grid > div > article.pfmf-crd--black {
     margin: 4px; padding: 2px;
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
-    font-size: 1.12em;
-    line-height: 1.5;
+    font-size: 1em;
+    line-height: 1.4;
 }
 .readable__doc--white {
     color: #fff;
@@ -530,7 +530,12 @@ section.pfmf-grid > div > article.pfmf-crd--black {
     margin-top: -42px;
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: 300;
-    font-size: 2.26em;
+    font-size: 1.46em; 
+}
+@media only screen and (min-width:48.1em) {/* med lg */
+    .readable__title {
+        font-size: 2.26em; 
+    }
 }
 /* type type type, and type end */
 
@@ -565,7 +570,7 @@ a.skip__main {
 
         font-family: 'Montserrat', sans-serif;
         font-weight: 400;
-        font-size: 1.12em;
+        font-size: 1.06em;
         line-height: 1.5;
     text-align: center;
 
