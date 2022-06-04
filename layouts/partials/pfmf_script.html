@@ -549,6 +549,7 @@ if( e3 ) { // Delay 3d call if still null
         try {
             navigator.clipboard.writeText( sTxt );
             neodigmToast.q("Copied to Clipboard|Paste into your document", "night")
+            //NeodigmClaire.showCanv('.l-snackbar').initCanvOff('.l-snackbar').doConfetti('.l-snackbar')
         } catch (err) {
             console.warn('Failed to copy', err)
         }
@@ -556,7 +557,7 @@ if( e3 ) { // Delay 3d call if still null
     function doCopyString( sTxt, sTheme="night" ){
         if( sTxt ) {
             sTxt += cbTag
-            sTxt = sTxt.replaceAll("_","'")
+            sTxt = sTxt.replaceAll("__","'")
             try {
                 navigator.clipboard.writeText( sTxt );
                 neodigmToast.q( sTxt+"|Copied to Clipboard", sTheme )
@@ -597,16 +598,16 @@ window.addEventListener('DOMContentLoaded', (ev) => {
     setTimeout(function(){
         if( neodigmSodaPop && neodigmMarquee && neodigmEnchantedCTA ){
             neodigmSodaPop.setOnAfterOpen( function(){
-NeodigmClaire.showCanv('neodigm-sodapop').setTheme( ['brand','danger','info'] ).initCanvOn('neodigm-sodapop').waxOn('neodigm-sodapop')
+NeodigmClaire.showCanv('neodigm-sodapop', .6).setTheme( ['brand','danger','info','marcom'] ).initCanvOn('neodigm-sodapop').waxOn('neodigm-sodapop')
                 neodigmMetronome.init().pause( 2200 )
                     neodigmMarquee.init().pause( 2400 )
                         neodigmEnchantedCTA.init()
             });
             neodigmSodaPop.setOnBeforeUserExit( function(){
-                neodigmToast.q("Thanks for Vistiting|Bookmark, Star, and Install as PWA!", "info")
-                NeodigmClaire.showCanv('picture.hero-single').setTheme( ['brand','danger','warning'] ).initCanvOn('picture.hero-single').waxOn('picture.hero-single')
+                neodigmToast.q("Thanks for Vistiting|Bookmark, Star, and Install as PWA!", "marcom")
+                NeodigmClaire.showCanv('picture.hero-single').setTheme( ['brand','danger','warning','marcom'] ).initCanvOn('picture.hero-single').waxOn('picture.hero-single')
             } )
-            NeodigmClaire.showCanv('picture.hero-single', .56).setTheme( ['brand','danger','warning'] ).initCanvOn('picture.hero-single').waxOn('picture.hero-single')
+            NeodigmClaire.showCanv('picture.hero-single', .56).setTheme( ['brand','danger','warning','marcom'] ).initCanvOn('picture.hero-single').waxOn('picture.hero-single')
         }
     }, 3e3)
     setTimeout(function(){
@@ -614,6 +615,9 @@ NeodigmClaire.showCanv('neodigm-sodapop').setTheme( ['brand','danger','info'] ).
             neodigmSodaPop.setOnClose( function(){
 NeodigmClaire.showCanv('neodigm-sodapop').initCanvOff('neodigm-sodapop').waxOff('neodigm-sodapop')
             });
+            document.querySelector("picture.hero-single").addEventListener("click", function(ev){
+                NeodigmClaire.showCanv('picture.hero-single', .56).setTheme( ['brand','danger','warning','marcom','info'] ).initCanvOn('picture.hero-single').waxOn('picture.hero-single')
+            })
         }
     }, 4e3)
 });
