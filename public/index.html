@@ -302,7 +302,7 @@ data-caro-target="3">
             data-n55-sodapop-id="js-contactPop__id"
             data-n55-wired4sound-click="7"
             data-n55-enchanted-cta-size="medium"
-            data-n55-enchanted-cta-dont-touch="true" data-n55-theme="night" data-n55-enchanted-cta-ambient="radius">
+            data-n55-enchanted-cta-dont-touch="true" data-n55-theme="night">
                 <span data-n55-wired4sound-mouseover="3">Contact</span><span>Let's Chat</span>
             </a>
         </div>
@@ -1431,6 +1431,7 @@ if( e3 ) {
         }
         oD.body.appendChild(form);
         form.submit();
+        if( rdt ) rdt('track', 'Lead', { "transactionId": Date.now() });
     }
 
     function DoForm( sElm, sOther, sToken ){
@@ -1577,6 +1578,14 @@ NeodigmClaire.showCanv('neodigm-sodapop').initCanvOff('neodigm-sodapop').waxOff(
 ;(function(o,l,a,r,k,y){if(o.olark)return; r="script";y=l.createElement(r);r=l.getElementsByTagName(r)[0]; y.async=1;y.src="//"+a;r.parentNode.insertBefore(y,r); y=o.olark=function(){k.s.push(arguments);k.t.push(+new Date)}; y.extend=function(i,j){y("extend",i,j)}; y.identify=function(i){y("identify",k.i=i)}; y.configure=function(i,j){y("configure",i,j);k.c[i]=j}; k=y._={s:[],t:[+new Date],c:{},l:a}; })(window,document,"static.olark.com/jsclient/loader.js");
 olark.identify('7233-815-10-7742');
 </script>
+
+
+<script>
+    !function(w,d){if(!w.rdt){var p=w.rdt=function(){p.sendEvent?p.sendEvent.apply(p,arguments):p.callQueue.push(arguments)};p.callQueue=[];var t=d.createElement("script");t.src="https://www.redditstatic.com/ads/pixel.js",t.async=!0;var s=d.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}}(window,document);rdt('init','t2_1zh9wtjp', {"optOut":false,"useDecimalCurrencyValues":true,"aaid":"<AAID-HERE>","email":"<EMAIL-HERE>","externalId":"<EXTERNAL-ID-HERE>","idfa":"<IDFA-HERE>"});rdt('track', 'PageVisit');
+</script>
+    
+    
+    
 
         </main>
 
