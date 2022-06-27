@@ -101,9 +101,9 @@ data-n55-sodapop-size="small">
           .then((choiceResult) => {
             if (choiceResult.outcome === "accepted") {
               if( snck ) neodigmToast.q("Wow, Now I'm an App on your Desktop|How Convenient!");
-              playAudioFile( 7 );  //  ggl tag event | User accepted the A2HS prompt
+              neodigmWired4Sound.sound( 7 );  //  ggl tag event | User accepted the A2HS prompt
             } else {
-              playAudioFile( 3 );  //  ggl tag event | User dismissed the A2HS prompt
+              neodigmWired4Sound.sound( 3 );  //  ggl tag event | User dismissed the A2HS prompt
             }
             evDefPrompt = null;
           });
