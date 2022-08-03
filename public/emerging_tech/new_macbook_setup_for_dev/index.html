@@ -120,7 +120,12 @@ href="#a11y-skipmain">Skip to Main Content</a>
 <template id="js-contactPop__id" data-n55-sodapop-modal="false" 
 data-n55-sodapop-size="small">
 <div>
-    <h4 class="h-center readable__caption">How can I help you?</h4>
+    <aside >
+    <neodigm-marquee style="border-radius: 8px;padding: 2px;" data-n55-marquee-size="small" 
+    data-n55-marquee-text="    Got questions? Start a conversation. I can help you drive engagement with a creative blend of business perspective and technical wizardry.">
+    <pre data-n55-theme="brand"></pre> 
+    </neodigm-marquee>
+    </aside>
     <section class="readable__doc" style="border-top: solid #EDBA08 1px;">
         <article style="padding: 12px 12px;">
 
@@ -136,8 +141,8 @@ data-n55-sodapop-size="small">
                     <a id="btn-contact-us" data-n55-enchanted-cta
                     onclick="valForm('tsk_contact_us', this )"
                     data-n55-enchanted-cta-size="medium" data-n55-enchanted-cta-dont-touch="true"
-                    data-n55-theme="night">
-                        <span data-n55-wired4sound-mouseover="3">Contact</span><span>Let's Chat</span>
+                    data-n55-theme="night" data-n55-flash-theme="danger">
+                        <span data-n55-wired4sound-mouseover="3">Send Message</span><span>How can I help?</span>
                     </a>
                 </div>  
             </form>
@@ -243,7 +248,9 @@ brew --version
 </code></pre>
             <details>
                 <summary class="h-pro-tip">Pro ⚡ Tips</summary>
-                <p>Follow the instructions (Next Steps) at the end of this script.</p>
+                <p>This is a single line command. It may display as two lines in your browser, but when you fire it in the terminal it needs to be one line.</p>
+                <p>I had to run this script twice, so second time is the charm.</p>
+                <p>Follow the instructions (Next Steps) at the end of this script. These are displayed in the terminal after the script has completed.</p>
             </details>
         </article>
     </div>
@@ -420,6 +427,7 @@ code .
             data-at="GitHub Home|Git Command Line|GitHub ⚡ GitLab ⚡ BitBucket">Git good at Git</p></article>
         <article style="padding: 12px 12px;">
 <pre><code class="bash">
+brew install sh
 git clone -b BRANCHNAME --single-branch REPONAME
 </code></pre>
 <pre><code class="bash">
@@ -565,7 +573,18 @@ npm install cypress --save-dev
 
 
 
-<section class="pfmf-grid pfmf-grid__50_50 readable__doc">
+<section class="pfmf-grid pfmf-grid__33_33_33 readable__doc">
+    <div>
+        <article class="pfmf-crd--black h-center"><p class="readable__doc readable__doc--white"
+            data-at="Laravel PHP|Laravel Sail|Laravel Docker">LAMP Laravel</p></article>
+        <article style="padding: 12px 12px;">
+<pre><code class="bash">
+curl -s "https://laravel.build/example-app" | bash
+cd example-app
+./vendor/bin/sail up
+</code></pre>
+        </article>
+    </div>
     <div>
         <article class="pfmf-crd--black h-center"><p class="readable__doc readable__doc--white"
             data-at="Docker|Docker zsh">Docker Desktop</p></article>
@@ -584,12 +603,11 @@ ln -s $etc/docker-compose.zsh-completion /usr/local/share/zsh/site-functions/_do
     </div>
     <div>
         <article class="pfmf-crd--black h-center"><p class="readable__doc readable__doc--white"
-            data-at="Laravel PHP|Laravel Sail|Laravel Docker">Laravel</p></article>
+            data-at="Static Website|Hugo Blog">Hugo</p></article>
         <article style="padding: 12px 12px;">
 <pre><code class="bash">
-curl -s "https://laravel.build/example-app" | bash
-cd example-app
-./vendor/bin/sail up
+brew install hugo
+hugo version
 </code></pre>
         </article>
     </div>
