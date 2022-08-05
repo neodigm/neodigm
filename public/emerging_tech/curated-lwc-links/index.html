@@ -126,7 +126,7 @@ data-n55-sodapop-size="small">
     <pre data-n55-theme="brand"></pre> 
     </neodigm-marquee>
     </aside>
-    <section class="readable__doc" style="border-top: solid #EDBA08 1px;">
+    <section class="readable__doc">
         <article style="padding: 12px 12px;">
 
             <form autocomplete="off" novalidate
@@ -141,7 +141,7 @@ data-n55-sodapop-size="small">
                     <a id="btn-contact-us" data-n55-enchanted-cta
                     onclick="valForm('tsk_contact_us', this )"
                     data-n55-enchanted-cta-size="medium" data-n55-enchanted-cta-dont-touch="true"
-                    data-n55-theme="night" data-n55-flash-theme="danger">
+                    data-n55-theme="night" data-n55-flash-theme="marcom">
                         <span data-n55-wired4sound-mouseover="3">Send Message</span><span>How can I help?</span>
                     </a>
                 </div>  
@@ -235,7 +235,7 @@ data-n55-marquee-size="small">
     data-n55-enchanted-cta onClick="clickRandom('.h-link')" data-n55-wired4sound-click="6" 
     data-n55-enchanted-cta-size="medium" data-n55-theme="night"
     data-n55-enchanted-cta-ambient="emit"> 
-        <span data-n55-wired4sound-mouseover="3">Open Random 🎲</span><span>♦️ ♣️ Try your Luck ♠️ ♥️</span>
+        <span data-n55-wired4sound-mouseover="3">♦️ ♣️ Try your Luck ♠️ ♥️</span><span>Open Random 🎲</span>
     </a>
 </div>   
 
@@ -2460,10 +2460,21 @@ href="/css/rainbow.css">
 <script src="/js/highlight.pack.js"></script>
 <script src="/js/flickity.pkgd.min.js"></script>
 
-<template rel="stylesheet" href="https://cdn.jsdelivr.net/gh/arcanus55/neodigm55@gh-pages/dist/neodigm55_v2_2.min.css"></template>
-<link rel="stylesheet" href="https://arcanus55.github.io/neodigm55/dist/neodigm55_v2_2.css">
-<template src="https://cdn.jsdelivr.net/gh/arcanus55/neodigm55@gh-pages/dist/neodigm55_v2_2.min.js"></template>
-<script src="https://arcanus55.github.io/neodigm55/dist/neodigm55_v2_2.js"></script>
+<link rel="stylesheet" href="https://arcanus55.github.io/neodigm55/dist/neodigm55_v2_3.css"></link>
+<script src="https://arcanus55.github.io/neodigm55/dist/neodigm55_v2_3.js"></script>
+
+
+
+<template rel="stylesheet" href="https://arcanus55.github.io/neodigm55/dist/neodigm55_v1_0_launchComplete.css"></template>
+<template src="https://arcanus55.github.io/neodigm55/dist/neodigm55_v1_0_launchComplete.js"></template>
+<template>
+    /*  overrides */
+    :root {
+        --m5lc-theme-brand: #edba08; --m5lc-theme-brand-alt: #915E00;
+    }
+</template>
+
+
 
 <link rel="manifest" href="/manifest.json">
 <script>
@@ -3055,16 +3066,17 @@ if( e3 ) {
         setTimeout(function(){
             if( neodigmSodaPop && neodigmMarquee && neodigmEnchantedCTA ){
                 neodigmSodaPop.setOnAfterOpen( function(){
-NeodigmClaire.showCanv('neodigm-sodapop', .6).setTheme( ['brand','danger','info'] ).initCanvOn('neodigm-sodapop').waxOn('neodigm-sodapop')
+NeodigmClaire.showCanv('neodigm-sodapop', .6).setTheme( ['brand','marcom','warning'] ).initCanvOn('neodigm-sodapop').waxOn('neodigm-sodapop')
                     neodigmMetronome.init().pause( 2400 )
                         neodigmMarquee.init().pause( 2600 )
                             neodigmEnchantedCTA.init()
                 });
                 neodigmSodaPop.setOnBeforeUserExit( function(){
                     neodigmToast.q("Thanks for Vistiting|Bookmark, Star, and Install as PWA!", "info")
-NeodigmClaire.showCanv('picture.hero-single', .6).setTheme( ['brand','danger','warning'] ).initCanvOn('picture.hero-single').waxOn('picture.hero-single')
+NeodigmClaire.showCanv('picture.hero-single', .6).setTheme( ['brand','marcom','warning'] ).initCanvOn('picture.hero-single').waxOn('picture.hero-single')
+olark('api.box.expand')
                 } )
-NeodigmClaire.showCanv('picture.hero-single', .6).setTheme( ['brand','danger','warning'] ).initCanvOn('picture.hero-single').waxOn('picture.hero-single')
+NeodigmClaire.showCanv('picture.hero-single', .6).setTheme( ['brand','marcom','warning'] ).initCanvOn('picture.hero-single').waxOn('picture.hero-single')
             }
         }, 3e3)
         setTimeout(function(){
@@ -3073,7 +3085,8 @@ NeodigmClaire.showCanv('picture.hero-single', .6).setTheme( ['brand','danger','w
 NeodigmClaire.showCanv('neodigm-sodapop').initCanvOff('neodigm-sodapop').waxOff('neodigm-sodapop')
                 });
                 document.querySelector("picture.hero-single").addEventListener("click", function(ev){
-NeodigmClaire.showCanv('picture.hero-single', .6).setTheme( ['brand','danger','warning','marcom','night','success'] ).initCanvOn('picture.hero-single').waxOn('picture.hero-single')
+NeodigmClaire.showCanv('picture.hero-single', .6).setTheme( ['brand','marcom','warning'] ).initCanvOn('picture.hero-single').waxOn('picture.hero-single')
+olark('api.box.expand')
                 })
             }
         }, 4e3)
@@ -3083,11 +3096,6 @@ NeodigmClaire.showCanv('picture.hero-single', .6).setTheme( ['brand','danger','w
 <script>
 ;(function(o,l,a,r,k,y){if(o.olark)return; r="script";y=l.createElement(r);r=l.getElementsByTagName(r)[0]; y.async=1;y.src="//"+a;r.parentNode.insertBefore(y,r); y=o.olark=function(){k.s.push(arguments);k.t.push(+new Date)}; y.extend=function(i,j){y("extend",i,j)}; y.identify=function(i){y("identify",k.i=i)}; y.configure=function(i,j){y("configure",i,j);k.c[i]=j}; k=y._={s:[],t:[+new Date],c:{},l:a}; })(window,document,"static.olark.com/jsclient/loader.js");
 olark.identify('7233-815-10-7742');
-</script>
-
-
-<script>
-    !function(w,d){if(!w.rdt){var p=w.rdt=function(){p.sendEvent?p.sendEvent.apply(p,arguments):p.callQueue.push(arguments)};p.callQueue=[];var t=d.createElement("script");t.src="https://www.redditstatic.com/ads/pixel.js",t.async=!0;var s=d.getElementsByTagName("script")[0];s.parentNode.insertBefore(t,s)}}(window,document);rdt('init','t2_1zh9wtjp', {"optOut":false,"useDecimalCurrencyValues":true,"aaid":"<AAID-HERE>","email":"<EMAIL-HERE>","externalId":"<EXTERNAL-ID-HERE>","idfa":"<IDFA-HERE>"});rdt('track', 'PageVisit');
 </script>
 
 
