@@ -1,0 +1,63 @@
+---
+title: "Capture Entire DOM State into Inline CSS Snapshot"
+date: 2021-12-16T16:33:13-06:00
+draft: false
+summary: "Save As HTML a snapshot capture of entire DOM State with inline CSS"
+slug: javascript
+categories:
+- DOM
+tags:
+- JavaScript
+- CSS
+---
+<output>
+{{< highlight JavaScript >}}
+// Desc: Save As HTML a snapshot capture of entire DOM State with inline CSS
+// Usage: Just paste this code into the console 🌴
+/*  _________             __    __     ____  __.                                  
+  /   _____/ ____  _____/  |__/  |_  |    |/ _|___________   __ __  ______ ____  
+  \_____  \_/ ___\/  _ \   __\   __\ |      < \_  __ \__  \ |  |  \/  ___// __ \ 
+  /        \  \__(  <_> )  |  |  |   |    |  \ |  | \// __ \|  |  /\___ \\  ___/ 
+ /_______  /\___  >____/|__|  |__|   |____|__ \|__|  (____  /____//____  >\___  >   ES2022*/
+
+
+function computedCSS2inline(element, options = {}) {
+    if (!element) {
+        throw new Error("No element specified.");
+    }
+
+    if (options.recursive) {
+        Array.from( element.children ).forEach(child => {
+        computedCSS2inline(child, options);
+        });
+    }
+
+    const computedStyle = getComputedStyle(element);
+    //(options.properties || computedStyle)::each(property => {
+        Array.from( computedStyle ).forEach(property => {
+        element.style[property] = computedStyle.getPropertyValue(property);
+        //element.setAttribute("class", "")
+    });
+}
+
+computedCSS2inline(document.body, {recursive: true});
+
+[ ... document.querySelectorAll("script, link, style")].forEach(function(s){ s.outerHTML = ""})
+
+async function saveToFile() {
+    const handle = await showSaveFilePicker({
+        suggestedName: 'grabbed.html',
+        types: [{
+            description: 'HTML',
+            accept: {'text/html': ['.html']},
+        }]
+    });
+    const writable = await handle.createWritable();
+    await writable.write(document.body.parentNode.innerHTML);
+    writable.close();
+};
+console.log("NOTE: Run saveToFile() in console!")
+{{< /highlight >}}
+    <span class="h-ds__none"
+    data-at="Capture the current state of any page|Save As HTML|Capture DOM Snapshot"></span>
+</output>
