@@ -53,15 +53,6 @@
     </item>
     
     <item>
-      <title>DOM</title>
-      <link>https://thescottkrause.com/categories/dom/</link>
-      <pubDate>Thu, 16 Dec 2021 16:33:13 -0600</pubDate>
-      
-      <guid>https://thescottkrause.com/categories/dom/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Vue</title>
       <link>https://thescottkrause.com/categories/vue/</link>
       <pubDate>Sat, 24 Jul 2021 19:06:14 -0500</pubDate>
@@ -148,6 +139,15 @@
       <pubDate>Sat, 24 Apr 2021 13:49:02 -0500</pubDate>
       
       <guid>https://thescottkrause.com/categories/macbook/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DOM</title>
+      <link>https://thescottkrause.com/categories/dom/</link>
+      <pubDate>Fri, 16 Apr 2021 16:33:13 -0600</pubDate>
+      
+      <guid>https://thescottkrause.com/categories/dom/</guid>
       <description></description>
     </item>
     
