@@ -35,15 +35,6 @@
     </item>
     
     <item>
-      <title>Capture Entire DOM State into Inline CSS Snapshot</title>
-      <link>https://thescottkrause.com/patterns/javascript/</link>
-      <pubDate>Thu, 16 Dec 2021 16:33:13 -0600</pubDate>
-      
-      <guid>https://thescottkrause.com/patterns/javascript/</guid>
-      <description>Save As HTML a snapshot capture of entire DOM State with inline CSS</description>
-    </item>
-    
-    <item>
       <title>Curated LWC Links</title>
       <link>https://thescottkrause.com/emerging_tech/curated-lwc-links/</link>
       <pubDate>Mon, 09 Aug 2021 12:37:14 -0500</pubDate>
@@ -104,6 +95,15 @@
       
       <guid>https://thescottkrause.com/emerging_tech/new_macbook_setup_for_dev/</guid>
       <description>New Macbook Config for Devs 2022</description>
+    </item>
+    
+    <item>
+      <title>Calculate Aspect Ratio of Viewport</title>
+      <link>https://thescottkrause.com/patterns/javascript/</link>
+      <pubDate>Fri, 16 Apr 2021 16:33:13 -0600</pubDate>
+      
+      <guid>https://thescottkrause.com/patterns/javascript/</guid>
+      <description>Calculate Aspect Ratio of Viewport</description>
     </item>
     
     <item>
@@ -320,6 +320,15 @@
       
       <guid>https://thescottkrause.com/emerging_tech/gameification-threejs-webcrypto-accelerator-blender-gltf/</guid>
       <description>Create 3D Dice with Strong Random Entropy</description>
+    </item>
+    
+    <item>
+      <title>Capture Entire DOM State into Inline CSS Snapshot</title>
+      <link>https://thescottkrause.com/patterns/javascript/</link>
+      <pubDate>Wed, 16 Sep 2020 16:33:13 -0600</pubDate>
+      
+      <guid>https://thescottkrause.com/patterns/javascript/</guid>
+      <description>Save As HTML a snapshot capture of entire DOM State with inline CSS</description>
     </item>
     
   </channel>

@@ -1,0 +1,52 @@
+---
+title: "Calculate Aspect Ratio of Viewport"
+date: 2021-04-16T16:33:13-06:00
+draft: false
+summary: "Calculate Aspect Ratio of Viewport"
+slug: javascript
+categories:
+- DOM
+tags:
+- JavaScript
+- RWD
+---
+<output>
+{{< highlight JavaScript >}}
+// Desc: Calculate Aspect Ratio of Viewport
+// Usage: Console log getDims() onresize event of body
+/*                            _     _____       _   _       
+    /\                       | |   |  __ \     | | (_)      
+   /  \   ___ _ __   ___  ___| |_  | |__) |__ _| |_ _  ___  
+  / /\ \ / __| '_ \ / _ \/ __| __| |  _  // _` | __| |/ _ \ 
+ / ____ \\__ \ |_) |  __/ (__| |_  | | \ \ (_| | |_| | (_) |
+/_/    \_\___/ .__/ \___|\___|\__| |_|  \_\__,_|\__|_|\___/ 
+             | |                                            
+             |_|  🎯 */
+
+const gcd = (a, b) => {
+    return b
+      ? gcd(b, a % b)
+      : a;
+};
+  
+const aspectRatio = (width, height)  => {
+    const divisor = gcd(width, height);
+    return `${width / divisor}:${height / divisor}`;
+};
+
+const getDims = function(){
+    if(window.innerWidth !== undefined && window.innerHeight !== undefined) { 
+      var w = Number( window.innerWidth )
+      var h = Number( window.innerHeight )
+      var a = aspectRatio( w, h )
+    } else {
+      var w = Number( document.documentElement.clientWidth )
+      var h = Number( document.documentElement.clientHeight )
+      var a = aspectRatio( w, h )
+    }
+    return {"ratio": a, "h": h, "w": w};
+}
+{{< /highlight >}}
+    <span class="h-ds__none"
+    data-at="Calculate Aspect Ratio|Relative to Media Queries|Aspect Ratio|Alternative to Orientation MQ"></span>
+</output>
