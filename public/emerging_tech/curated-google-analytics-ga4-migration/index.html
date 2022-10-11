@@ -161,10 +161,10 @@ data-n55-sodapop-size="small">
                                 href="https://thescottkrause.com/categories/links/">Links</a>
                         
                             <a class="bg-coy_1999"
-                                href="https://thescottkrause.com/categories/javascript/">JavaScript</a>
+                                href="https://thescottkrause.com/categories/analytics/">Analytics</a>
                         
                             <a class="bg-coy_1999"
-                                href="https://thescottkrause.com/categories/google-analytics-4/">Google Analytics 4</a>
+                                href="https://thescottkrause.com/categories/javascript/">JavaScript</a>
                         
                 </figcaption>
                 </div>
@@ -181,6 +181,15 @@ data-n55-sodapop-size="small">
 data-n55-marquee-size="medium">
 <pre data-n55-theme="warning"></pre>
 </neodigm-marquee>
+        </article>        
+    </div>
+</section>
+
+<section class="pfmf-grid pfmf-grid__100 readable__doc">
+    <div>
+        <article style="padding: 12px 12px;">
+<p class="readable__doc">Google has announced that Universal Analytics will stop collecting data on July 1st, 2023. That means that you have a limited time to migrate to Google Analytics 4 (GA4).</p>
+<p class="readable__doc">While one option is to flip the switch in about a year from now, that means you won't have any access to historical data in your GA4 account. Here I provide the infomation that you are going to need to ensure a smooth roll-out of the new Analytics system.</p>
         </article>        
     </div>
 </section>
@@ -334,6 +343,8 @@ data-n55-marquee-size="medium">
                 
             
                 
+            
+                
                 <a class="l-blog-crd" href="https://thescottkrause.com/emerging_tech/curated-google-analytics-ga4-migration/">
                 <section>
                     <picture>
@@ -347,8 +358,6 @@ data-n55-marquee-size="medium">
                     <p>2022-06-17</p>
                 </section>
                 </a>
-                
-            
                 
             
                 
@@ -3062,7 +3071,7 @@ NeodigmClaire.showCanv('neodigm-sodapop', .6).setTheme( ['brand','marcom','warni
                 });
                 neodigmSodaPop.setOnBeforeUserExit( function(){
                     neodigmToast.q("Got Questions?|Start a Conversation!", "brand")
-                    olark('api.box.expand')
+                    if( neodigmSodaPop && (  neodigmSodaPop.isOpen() )) olark('api.box.expand')
                     if( neodigmSodaPop && ( !neodigmSodaPop.isOpen() )) neodigmSodaPop.autoOpen('js-contactPop__id')
                 } )
             }
