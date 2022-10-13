@@ -74,7 +74,7 @@ href="#a11y-skipmain">Skip to Main Content</a>
                 <div><a class="mm__link--card" data-n55-wired4sound-click="4" href="https://www.linkedin.com/in/neodigm55/" target="_blank" rel="noopener">LinkedIn</a></div>
                 <div><a class="mm__link--card" data-n55-wired4sound-click="4" href="https://www.arcanus55.com/?trusted55=A55PV2" target="_blank" rel="noopener">Arcanus 55</a></div>
                 <div><a class="mm__link--card" data-n55-wired4sound-click="4" href="https://www.machfivemarketing.com/accelerators/google_analytics_ga4_migration/" target="_blank" rel="noopener">Mach Five</a> </div>
-                <div><a class="mm__link--card" onClick="neodigmSodaPop.autoOpen('js-contactPop__id')"
+                <div><a class="mm__link--card" onClick="neodigmSodaPop.autoOpen('js-contactPop__id')" href="#a11y-skipmain"
                 >Contact</a></div>
                 <div><a class="mm__link--card" data-n55-wired4sound-click="4" href="/Arcanus_Scott_C_Krause_2022.pdf" target="_blank" rel="noopener">Résumé PDF</a></div>
             </section>   
@@ -85,7 +85,7 @@ href="#a11y-skipmain">Skip to Main Content</a>
                 <div><a class="mm__link--bottom" data-n55-wired4sound-click="4" href="https://github.com/neodigm" target="_blank" rel="noopener">Github</a></div>
                 <div><a class="mm__link--bottom" data-n55-wired4sound-click="4" href="https://www.arcanus55.com/?trusted55=A55PV2" target="_blank" rel="noopener">Arcanus 55</a></div>
                 <div><a class="mm__link--bottom" data-n55-wired4sound-click="4" href="https://www.machfivemarketing.com/accelerators/google_analytics_ga4_migration/" target="_blank" rel="noopener">Mach Five</a></div>
-                <div><a class="mm__link--bottom" onClick="neodigmSodaPop.autoOpen('js-contactPop__id')"
+                <div><a class="mm__link--bottom" onClick="neodigmSodaPop.autoOpen('js-contactPop__id')" href="#a11y-skipmain"
                 >Contact</a></div>
                 <div><a class="mm__link--bottom" data-n55-wired4sound-click="4" href="/Arcanus_Scott_C_Krause_2022.pdf" target="_blank" rel="noopener">Résumé PDF</a></div>
             </section>
@@ -325,7 +325,7 @@ data-n55-sodapop-size="small">
 
                         <article style="padding: 12px 12px;">
                             <div id="js-copy__enchantedCTA">
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;js-open-pup--sm&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;js-open-pup--sm&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#js-open-pup--sm&#34;</span>
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">target</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;_blank&#34;</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;noopener&#34;</span> <span style="color:#a6e22e">tabindex</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;0&#34;</span> <span style="color:#a6e22e">aria-haspopup</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;true&#34;</span>
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">data-n55-enchanted-cta</span>
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">data-n55-enchanted-cta-alt</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Text|Alternate&#34;</span>
@@ -3663,6 +3663,7 @@ if( e3 ) {
                     aVivImg.every( (eVivImg) => {
                         if( !eVivImg.classList.contains("img__show")) {
                             eVivImg.classList.add("img__show")
+                            eVivImg.setAttribute("alt", "Hand Drawn Letter")
                             bDoIt = true
                             return false;
                         }
@@ -3689,7 +3690,7 @@ if( e3 ) {
                             if("abcdefghijklmnopqrstuvwxyz0123456789.,".indexOf( sChr ) === -1) sChr = "space"
                             if( sChr == "." ) sChr = "period";
                             if( sChr == "," ) sChr = "comma";
-                            sMU += "<img src='" + VIVPATH + sChr + ".svg'>";
+                            sMU += "<img src='" + VIVPATH + sChr + ".svg' alt='Letter '" + sChr + ">";
                         });
                         eVivCnt.innerHTML = sMU;
                         eVivCnt.atVivid = eVivCnt.dataset.atVivid;
