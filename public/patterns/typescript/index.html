@@ -291,6 +291,8 @@ data-at="TS Config Class|Chrome Extention TS|TypeScript Config Class|In Browser 
                 
             
                 
+            
+                
                 <a class="l-blog-crd" href="https://thescottkrause.com/emerging_tech/curated-salesforce-qlik-links/">
                 <section>
                     <picture>
@@ -304,8 +306,6 @@ data-at="TS Config Class|Chrome Extention TS|TypeScript Config Class|In Browser 
                     <p>2022-03-25</p>
                 </section>
                 </a>
-                
-            
                 
             
                 
@@ -2974,10 +2974,12 @@ NeodigmClaire.showCanv('neodigm-sodapop', .6).setTheme( ['brand','marcom','warni
                 neodigmSodaPop.setOnClose( function(){
 NeodigmClaire.showCanv('neodigm-sodapop').initCanvOff('neodigm-sodapop').waxOff('neodigm-sodapop')
                 });
-                document.querySelector("picture.hero-single").addEventListener("click", function(ev){
-NeodigmClaire.showCanv('picture.hero-single', .6).setTheme( ['brand','marcom','warning'] ).initCanvOn('picture.hero-single').waxOn('picture.hero-single')
-olark('api.box.expand')
-                })
+                let picHero = document.querySelector("picture.hero-single")
+                if( picHero ){
+                    picHero.addEventListener("click", function(ev){
+                        NeodigmClaire.showCanv('picture.hero-single', .6).setTheme( ['brand','marcom','warning'] ).initCanvOn('picture.hero-single').waxOn('picture.hero-single')
+                    })
+                }
             }
         }, 4e3)
     });
