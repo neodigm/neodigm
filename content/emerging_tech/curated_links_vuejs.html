@@ -519,10 +519,12 @@ setTimeout(()=>{  //  autoOpen if in query string
 },876)*/
 
 var sp_sample_vue_cb = function(){
-    NeodigmClaire.doWaxOn("neodigm-sodapop", ["danger", "warning", "primary"], "random", .7)
-    neodigmMetronome.init().pause( 2400 )
-        neodigmMarquee.init().pause( 2600 )
-            neodigmEnchantedCTA.init()
+    neodigmSodaPop.setOnAfterOpen( function(){
+        NeodigmClaire.doWaxOn("neodigm-sodapop", ["danger", "warning", "primary"], "random", .7)
+        neodigmMetronome.init().pause( 2400 )
+            neodigmMarquee.init().pause( 2600 )
+                neodigmEnchantedCTA.init()
+    }, "sp_sample_vue")
 }
 </script>
 

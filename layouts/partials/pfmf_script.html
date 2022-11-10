@@ -112,10 +112,11 @@
 setTimeout(()=>{  //  autoOpen if in query string
     let autoOpenParm = new URLSearchParams( document.location.search )
     autoOpenParm = autoOpenParm.get("autoOpen")
-    if( autoOpenParm && neodigmSodaPop ) {  // Callback by nameing convention
-        if (typeof window[autoOpenParm] === "function") neodigmSodaPop.setOnAfterOpen( window[autoOpenParm] )
+    if( autoOpenParm && neodigmSodaPop ) {
         neodigmSodaPop.autoOpen( autoOpenParm )
-    }
+        autoOpenParm = autoOpenParm + "_cb"  // Callback by append naming convention
+        if(typeof window[ autoOpenParm ] === "function") neodigmSodaPop.setOnAfterOpen( window[ autoOpenParm ] )
+    } // Note: Cannot open in fullscreen mode when opened via URL param
 },876)
 
 let pfmf_tagFilter = ((_d, _q)=>{  //  Dyn content filtering by tag chip
