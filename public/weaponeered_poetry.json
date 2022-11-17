@@ -780,7 +780,7 @@
 {"name":"Cosmic JS","comment":"A general purpose runtime for JavaScript and WASM.","uri":"https://www.cosmic-js.com/","cat":"tech","tags":["ts","wasm","api","pwa"]},
 {"name":"fxhash","comment":"An open platform to create and collect generative NFTs on the tezos blockchain","uri":"https://www.fxhash.xyz/explore","cat":"creative","tags":["js","creative","nft"]},
 {"name":"Generative Artistry","comment":"A range of interactive tutorials, exploring ideas and techniques used in generative art","uri":"https://generativeartistry.com/","cat":"creative","tags":["js","creative","blog","generative"]},
-{"name":"Cypress Github Actions","comment":"GitHub Action for running Cypress end-to-end tests. Includes NPM installation, custom caching and lots of configuration options","uri":"https://github.com/marketplace/actions/cypress-io","cat":"blogfolio","tags":["js","creative","blog","generative"]},
+{"name":"Cypress Github Actions","comment":"GitHub Action for running Cypress end-to-end tests. Includes NPM installation, custom caching and lots of configuration options","uri":"https://github.com/marketplace/actions/cypress-io","cat":"tech","tags":["js","git","cypress"]},
 {"name":"Interactive Quiz","comment":"brunoimbrizi","uri":"http://brunoimbrizi.com/works/db-quiz/#/","cat":"blogfolio","tags":["js","creative","blog","generative"]},
 {"name":"CORS test","comment":"Online CORS test","uri":"https://www.test-cors.org/","cat":"tech","tags":["tool","api","saas"]},
 {"name":"Localhost Public URLs","comment":"Localhost server through any NAT or firewall","uri":"https://ngrok.com/","cat":"tech","tags":["tool"]},
@@ -891,5 +891,6 @@
 {"name":"Tag Manager Community Template Gallery","comment":"Third Party Web Community Template Gallery","uri":"https://tagmanager.google.com/gallery/#/?context=web&page=1","cat":"tech","tags":["js","web","api","analytics","ga4"]},
 {"name":"WebKit Features in Safari 16.1","comment":"Web Push for macOS Ventura","uri":"https://webkit.org/blog/13399/webkit-features-in-safari-16-1/","cat":"tech","tags":["js","web","api","pwa","push","1st"]},
 {"name":"Clip Studio Content Winners","comment":"International Illustration Contest Winning Works","uri":"https://www.clipstudio.net/en/gallery/contest-01/","cat":"creative","tags":["svg","web","creative","art","1st"]},
-{"name":"A sample Vue.js and Material Design ⚡ SPA with immersive audio","comment":"Utilizing the observable power of Vue.js and the fluid Vuetify Material Design system a user can easily manage multiple addresses, unlimited phone numbers, and prioritize email addresses","uri":"https://neodigm.github.io/accucontax/dist/","cat":"tech","tags":["js","vue","typescript","1st"]}
+{"name":"A sample Vue.js and Material Design ⚡ SPA with immersive audio","comment":"Utilizing the observable power of Vue.js and the fluid Vuetify Material Design system a user can easily manage multiple addresses, unlimited phone numbers, and prioritize email addresses","uri":"https://neodigm.github.io/accucontax/dist/","cat":"tech","tags":["js","vue","typescript","1st"]},
+{"name":"Emily Short's Interactive Storytelling","comment":"Narrative in games and new media","uri":"https://emshort.blog/","cat":"blogfolio","tags":["if","gameification","ai","ml"]}
 ]
