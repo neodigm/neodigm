@@ -9,7 +9,6 @@
             </div>
             <section class="pfmf-grid pfmf-grid__100">
                 <div class="l-caro-design">
-            
                     <article class="js-art__caro h-ds__none">
                         <section class="l-caro-design__cnt"><!--  mac \ windows //  -->
                         {{ range .Pages }}
@@ -34,7 +33,7 @@
             
                 </div>
             </section>
-
+            {{ partial "carousel_patterns.html" . }}
         </main>
 
         {{ partial "pfmf_script.html" . }}
