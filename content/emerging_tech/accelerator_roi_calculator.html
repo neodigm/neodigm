@@ -1,6 +1,6 @@
 ---
 title: "Custom ROI & TCO Calculator"
-date: 2022-11-22T18:33:52-05:00
+date: 2022-12-4T18:33:52-05:00
 draft: false
 summary: "Accelerator Online ROI Calculator"
 description: Low-Code ROI Calculator Widget
@@ -63,7 +63,7 @@ data-n55-marquee-size="medium">
                             <summary class="h-pro-tip text-coy_2009"><h5 class="document__title h-ds__inline h-center">Socialized, Sticky, Contagious, and Easy to Share</h5></summary>
                             <p>It makes sense to suggest that the user share the ROI assessment. The end goal is to get the information to as many people as possible.</p>
                             <details>
-                                <summary class="h-pro-tip text-coy_2009"><h6 class="document__title h-ds__inline h-center">Advocate Touch Points and Trust Signals</h6></summary>
+                                <summary class="h-pro-tip text-coy_2009"><h6 class="document__title h-ds__inline h-center">Touch Points and Trust Signals anti-bounce and bounce resistant</h6></summary>
                                 <ul>
                                     <li>Add to Contacts (QR)</li>
                                     <li>Share Link (Copy)</li>
@@ -83,6 +83,7 @@ data-n55-marquee-size="medium">
                                     <li>Toast Messaging</li>
                                     <li>Web Notifications</li>
                                 </ul>
+                                <p>These touch-points are available now, and can make your web properties anti-bounce or at least bounce resistant.</p>
                             </details>
                         </details>
                         <details>
@@ -154,7 +155,7 @@ data-n55-marquee-size="medium">
                     setTimeout(function(){
                         if(typeof neodigmToast !== "undefined") neodigmToast.q( nCnt + " " + sInc.toLocaleUpperCase() + "|Curated Links", "night")
                     }, 2200)
-                    elVect.dataset.at = [ ... new Set(aAllTags)].join("|")
+                    if( elVect ) elVect.dataset.at = [ ... new Set(aAllTags)].join("|")
                 }
             })( document, [".js-sec__fav", ".js-vect__banner"], "ga4", "a55");
         });
@@ -217,7 +218,7 @@ data-n55-parallax-size="small">
         setTimeout(function(){
             if( eIF && trends?.embed ){
                 eIFCont.classList.remove("h-ds__none")
-                trends.embed.renderExploreWidgetTo(eIF, "TIMESERIES", {"comparisonItem":[ {"comparisonItem":[{"keyword":"Low Code Calculator","geo":"US","time":"today 12-m"},{"keyword":"Online Calculator","geo":"US","time":"today 12-m"} ],"category":0,"property":""}, {"exploreQuery":"geo=US&q=ga4,tealium,adobe%20analytics&date=today 12-m,today 12-m,today 12-m","guestPath":"https://trends.google.com:443/trends/embed/"});
+                trends.embed.renderExploreWidgetTo(eIF, "TIMESERIES", {"comparisonItem":[{"keyword":"interactive calculator","geo":"US","time":"today 12-m"},{"keyword":"marketing calculator","geo":"US","time":"today 12-m"}],"category":0,"property":""}, {"exploreQuery":"geo=US&q=interactive%20calculator,marketing%20calculator&date=today 12-m,today 12-m","guestPath":"https://trends.google.com:443/trends/embed/"});
             }
         }, 3800)
     }

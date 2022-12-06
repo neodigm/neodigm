@@ -6,13 +6,31 @@
     <description>Recent content in Tags on Scott C. Krause 🚀 neodigm 55</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 22 Nov 2022 18:33:52 -0500</lastBuildDate><atom:link href="https://www.theScottKrause.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 25 Nov 2022 13:40:22 -0600</lastBuildDate><atom:link href="https://www.theScottKrause.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Links</title>
-      <link>https://www.theScottKrause.com/tags/links/</link>
-      <pubDate>Tue, 22 Nov 2022 18:33:52 -0500</pubDate>
+      <title>Emerging Tech</title>
+      <link>https://www.theScottKrause.com/tags/emerging-tech/</link>
+      <pubDate>Fri, 25 Nov 2022 13:40:22 -0600</pubDate>
       
-      <guid>https://www.theScottKrause.com/tags/links/</guid>
+      <guid>https://www.theScottKrause.com/tags/emerging-tech/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>JavaScript</title>
+      <link>https://www.theScottKrause.com/tags/javascript/</link>
+      <pubDate>Fri, 25 Nov 2022 13:40:22 -0600</pubDate>
+      
+      <guid>https://www.theScottKrause.com/tags/javascript/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>TypeScript</title>
+      <link>https://www.theScottKrause.com/tags/typescript/</link>
+      <pubDate>Fri, 25 Nov 2022 13:40:22 -0600</pubDate>
+      
+      <guid>https://www.theScottKrause.com/tags/typescript/</guid>
       <description></description>
     </item>
     
@@ -71,33 +89,6 @@
     </item>
     
     <item>
-      <title>Emerging Tech</title>
-      <link>https://www.theScottKrause.com/tags/emerging-tech/</link>
-      <pubDate>Mon, 25 Jul 2022 13:40:22 -0600</pubDate>
-      
-      <guid>https://www.theScottKrause.com/tags/emerging-tech/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>JavaScript</title>
-      <link>https://www.theScottKrause.com/tags/javascript/</link>
-      <pubDate>Mon, 25 Jul 2022 13:40:22 -0600</pubDate>
-      
-      <guid>https://www.theScottKrause.com/tags/javascript/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>TypeScript</title>
-      <link>https://www.theScottKrause.com/tags/typescript/</link>
-      <pubDate>Mon, 25 Jul 2022 13:40:22 -0600</pubDate>
-      
-      <guid>https://www.theScottKrause.com/tags/typescript/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Curated</title>
       <link>https://www.theScottKrause.com/tags/curated/</link>
       <pubDate>Fri, 17 Jun 2022 18:33:52 -0500</pubDate>
@@ -112,6 +103,15 @@
       <pubDate>Fri, 17 Jun 2022 18:33:52 -0500</pubDate>
       
       <guid>https://www.theScottKrause.com/tags/google-analytics-4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Links</title>
+      <link>https://www.theScottKrause.com/tags/links/</link>
+      <pubDate>Fri, 17 Jun 2022 18:33:52 -0500</pubDate>
+      
+      <guid>https://www.theScottKrause.com/tags/links/</guid>
       <description></description>
     </item>
     
