@@ -186,6 +186,17 @@ data-n55-sodapop-size="small">
             
 <section class="pfmf-grid pfmf-grid__100 readable__doc">
     <div>
+        <article style="padding: 12px 12px; background-image: linear-gradient(#000, #444, #000);">
+<neodigm-marquee data-n55-marquee-text=" Digital Jump Bag - The Ironclad Clandestine USB Dead Drop.  Encrypted at Rest - Anonymity is currency in troubled times.  Privacy Paranoid - You cannot afford to leave a contact audit trail.  It is double pleasure to deceive the deceiver. "
+data-n55-marquee-size="small">
+<pre data-n55-theme="party"></pre>
+</neodigm-marquee>
+        </article>        
+    </div>
+</section>
+
+<section class="pfmf-grid pfmf-grid__100 readable__doc">
+    <div>
         <article style="padding: 12px 12px;">
             <h3 class="document__title h_ital h-center text-coy_2020">Keeping a secret is easy, communicating a secret is not.</h3>
             <p>Alice needs to get information to Bob on the down low. It's best if you don't know the what or the why.</p> 
@@ -3016,13 +3027,17 @@ if( e3 ) {
                 neodigmSodaPop.setOnAfterOpen( function(){
 NeodigmClaire.showCanv('neodigm-sodapop', .6).setTheme( ['brand','marcom','warning','party'] ).initCanvOn('neodigm-sodapop').waxOn('neodigm-sodapop')
                     neodigmMetronome.init().pause( 800 )
-                        neodigmMarquee.init().pause( 1600 )
+                        neodigmMarquee.init().pause( 1200 )
                             neodigmEnchantedCTA.init()
                 });
+                neodigmSodaPop.setOnAfterOpen( function(){ 
+                    setTimeout( ()=>{ NeodigmClaire.init().doConfetti( "main" ) }, 1600 )
+                 }, "js-contactPop__id");
                 neodigmSodaPop.setOnBeforeUserExit( function(){
                     neodigmToast.q("Got Questions?|Start a Conversation!", "brand")
                     if( neodigmSodaPop && (  neodigmSodaPop.isOpen() )) olark('api.box.expand')
                     if( neodigmSodaPop && ( !neodigmSodaPop.isOpen() )) neodigmSodaPop.autoOpen('js-contactPop__id')
+                    
                 } )
             }
         }, 3e3)

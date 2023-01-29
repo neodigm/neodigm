@@ -184,6 +184,17 @@ data-n55-sodapop-size="small">
             <p class="readable__doc h-center">Scott C. Krause | Saturday, Feb 20, 2021</p>
 
             
+<section class="pfmf-grid pfmf-grid__100 readable__doc">
+    <div>
+        <article style="padding: 12px 12px; background-image: linear-gradient(#000, #444, #000);">
+<neodigm-marquee data-n55-marquee-text="  Cytoscape is a platform for visualizing complex networks that makes it easy to build discoverable and interactive infographics. The intelligent layout options allow the viewer to understand the data at an intuitive depth that is not possible with other data visualizations. Data storytelling is about translating data into provocative visuals in order to facilitate  a decision, action, or emotion.  "
+data-n55-marquee-size="medium">
+<pre data-n55-theme="brand"></pre>
+</neodigm-marquee>
+        </article>        
+    </div>
+</section>
+
 <script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
 <script src="https://unpkg.com/layout-base/layout-base.js"></script>
 <script src="https://unpkg.com/cose-base/cose-base.js"></script>
@@ -2464,10 +2475,6 @@ data-at="TS Config Class|Chrome Extention TS|TypeScript Config Class|In Browser 
                 
                     <a class="bg-coy_1999" data-at="bg-coy_1999|bg-coy_2000|bg-coy_2001|bg-coy_2002|bg-coy_2003|bg-coy_2004|bg-coy_2005|bg-coy_2006|bg-coy_2007|bg-coy_2008|bg-coy_2009"
                         data-at-change="class"
-                        href="https://www.theScottKrause.com/tags/javascript/">JavaScript</a>
-                
-                    <a class="bg-coy_1999" data-at="bg-coy_1999|bg-coy_2000|bg-coy_2001|bg-coy_2002|bg-coy_2003|bg-coy_2004|bg-coy_2005|bg-coy_2006|bg-coy_2007|bg-coy_2008|bg-coy_2009"
-                        data-at-change="class"
                         href="https://www.theScottKrause.com/tags/emerging-tech/">Emerging Tech</a>
                 
                     <a class="bg-coy_1999" data-at="bg-coy_1999|bg-coy_2000|bg-coy_2001|bg-coy_2002|bg-coy_2003|bg-coy_2004|bg-coy_2005|bg-coy_2006|bg-coy_2007|bg-coy_2008|bg-coy_2009"
@@ -3187,13 +3194,17 @@ if( e3 ) {
                 neodigmSodaPop.setOnAfterOpen( function(){
 NeodigmClaire.showCanv('neodigm-sodapop', .6).setTheme( ['brand','marcom','warning','party'] ).initCanvOn('neodigm-sodapop').waxOn('neodigm-sodapop')
                     neodigmMetronome.init().pause( 800 )
-                        neodigmMarquee.init().pause( 1600 )
+                        neodigmMarquee.init().pause( 1200 )
                             neodigmEnchantedCTA.init()
                 });
+                neodigmSodaPop.setOnAfterOpen( function(){ 
+                    setTimeout( ()=>{ NeodigmClaire.init().doConfetti( "main" ) }, 1600 )
+                 }, "js-contactPop__id");
                 neodigmSodaPop.setOnBeforeUserExit( function(){
                     neodigmToast.q("Got Questions?|Start a Conversation!", "brand")
                     if( neodigmSodaPop && (  neodigmSodaPop.isOpen() )) olark('api.box.expand')
                     if( neodigmSodaPop && ( !neodigmSodaPop.isOpen() )) neodigmSodaPop.autoOpen('js-contactPop__id')
+                    
                 } )
             }
         }, 3e3)
