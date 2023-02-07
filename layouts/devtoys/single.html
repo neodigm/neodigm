@@ -1,0 +1,70 @@
+{{ partial "head.html" . }}
+    <body>
+        <div class="l-mega-place-holder"></div>
+        {{ partial "megamenu.html" . }}
+        <main id="a11y-skipmain" role="main">
+            <picture class="hero-single" role="banner" data-n55-wired4sound-click="5"> <!--  1280 X 720  -->
+                <div>
+                <img class="" src="../devtoys_1280_tn.webp" alt="{{ .Title }}" data-n55-wired4sound-click="5">
+                <figcaption class="l-cat-chip">
+                        {{ range (.GetTerms "categories") }}
+                            <a class="bg-coy_1999"
+                                href="{{ .Permalink }}">{{ .LinkTitle }}</a>
+                        {{ end }}
+                </figcaption>
+                </div>
+            </picture>
+<div style="height: 8px; margin: 2px;"></div>
+            <h1 class="readable__title h-center"> {{ .Title }} </h1>
+            <p class="readable__doc h-center">Scott C. Krause | {{ dateFormat "Monday, Jan 2, 2006" .Date }}</p>
+
+            {{ .Content }}  
+<br>
+            {{ partial "carousel_emerging_tech.html" . }}
+<br>
+            {{ partial "carousel_patterns.html" . }}
+
+            <section class="l-tag-chip">
+                {{ range (.GetTerms "tags") }}
+                    <a class="bg-coy_1999" data-at="bg-coy_1999|bg-coy_2000|bg-coy_2001|bg-coy_2002|bg-coy_2003|bg-coy_2004|bg-coy_2005|bg-coy_2006|bg-coy_2007|bg-coy_2008|bg-coy_2009"
+                        data-at-change="class"
+                        href="{{ .Permalink }}">{{ .LinkTitle }}</a>
+                {{ end }}
+            </section>
+
+        </main>
+
+<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400|Roboto+Slab:300,400" rel="stylesheet" type="text/css">
+
+{{ partial "jsonld_self.html" . }}
+{{ partial "pfmf_script.html" . }}
+
+
+<script type="application/ld+json">
+    { "@context": "https://schema.org", 
+     "@type": "BlogPosting",
+     "headline": "{{ .Title }}",
+     "alternativeHeadline": "{{ .Summary }}",
+     "image": "../{{.Page.Slug}}_tn.webp",
+     "award": "Best of the Independent Web",
+     "editor": "Scott C. Krause", 
+     "genre": "Emerging Tech", 
+     "keywords": "Data Visualization LWC PWA Three.js TypeScript WASM Vue.js UX Laravel", 
+     "wordcount": "1648",
+     "publisher": "Arcanus 55",
+     "url": "{{ .Permalink }}",
+     "datePublished": "{{ dateFormat "2022-01-02" .Date }}",
+     "dateCreated": "{{ dateFormat "2022-01-02" .Date }}",
+     "dateModified": "{{ dateFormat "2022-01-02" .Date }}",
+     "description": "{{ .Title }}",
+     "articleBody": "{{ .Summary }} {{ .Description }}",
+       "author": {
+        "@type": "Person",
+        "url": "https://www.theScottKrause.com/",
+        "name": "Scott C. Krause"
+      }
+     }
+    </script>
+
+    </body>
+</html>

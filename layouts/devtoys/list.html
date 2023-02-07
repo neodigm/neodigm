@@ -1,0 +1,49 @@
+{{ partial "head.html" . }}
+    <body>
+        <div class="l-mega-place-holder"></div>
+        {{ partial "megamenu.html" . }}
+        <main id="a11y-skipmain" role="main">
+            <div class="vvs-cont">
+                <p class="readable__caption h-center l-capt__vect"
+                data-at-vivid="{{ .Title }}" data-at-rnd-gt="0" data-at-change="data-at-vivid" data-at="{{ .Title }}|Recommended|Related|See Also"></p>
+            </div>
+            <section class="pfmf-grid pfmf-grid__100">
+                <div class="l-caro-design">
+                    <article class="js-art__caro h-ds__none">
+                        <section class="l-caro-design__cnt"><!--  mac \ windows //  -->
+                        {{ range .Pages }}
+                            {{ if (eq .File.Dir "devtoys/" ) }}
+                            <a class="l-blog-crd" href="{{.Permalink}}">
+                            <section>
+                                <picture>
+                                    <!--  1280 X 720  -->
+                                    <img src="/devtoys/{{ .Slug}}_tn.webp" alt="{{ .Title}}">
+                                </picture>
+                                <p>Emerging Tech</p>
+                                <!-- {{.Title}} | {{.File.Dir}} -->
+                                <h5> {{ .Title}} </h5>
+                                <h6> {{ .Summary}} </h6>
+                                <p>{{.Date.Format "2006-01-02"}}</p>
+                            </section>
+                            </a>
+                            {{ end }}
+                        {{ end }}
+                        </section>
+                    </article>
+            
+                </div>
+            </section>
+            {{ partial "carousel_patterns.html" . }}
+        </main>
+
+        {{ partial "pfmf_script.html" . }}
+
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400|Roboto+Slab:300,400" rel="stylesheet" type="text/css">
+
+        <script>
+            document.addEventListener( "contextmenu", function(e) { neodigmWired4Sound.sound( 7 ) });  //  On right-click
+            console.log("%c Scott C. Krause ⚡ Problem Solver and Visual Storyteller", "background: #000; color: #f4dc5e; font-size: 28px");
+        </script>
+        {{ partial "jsonld_self.html" . }}
+    </body>
+</html>
