@@ -2,8 +2,8 @@
 title: "JSON / String Compress"
 date: 2023-02-06T16:51:55-06:00
 draft: false
-summary: "Make JSON Smaller"
-description: DevToy JSON String Compress
+summary: "Make JSON and Text String Compressed"
+description: Online DevToy JSON and Text String Compress
 slug: compress_json
 ---
 
@@ -18,9 +18,41 @@ data-n55-marquee-size="medium">
     </div>
 </section>
 
+<section class="pfmf-grid pfmf-grid__50_50 readable__doc">
+    <aside>
+        <article class="h-bg__stripe" style="padding: 12px; margin: 12px;">
+            <h4 class="document__title h-center">Compress Strings with JavaScript</h4>
+            <p>Make any text smaller and compact by simply pasting it on this page then clicking the button.</p>
+            <details>
+                <summary class="h-pro-tip text-coy_2009"><h5 class="document__title h-ds__inline h-center">Easy Online Tool to Compress Text and strings</h5></summary>
+                <p>The text is made smaller at which point you can copy or download.</p>
+                <details>
+                    <summary class="h-pro-tip text-coy_2009"><h6 class="document__title h-ds__inline h-center">LZW UTF16 String Compression</h6></summary>
+                    <p>The compression is LZW UTF16 which generally achieves a good compression ratio on text strings, JSON, and specific text within the JSON.</p>
+                </details>
+            </details>
+        </article>        
+    </aside>
+
+    <aside>
+        <article class="h-bg__stripe" style="padding: 12px; margin: 12px;">
+            <h4 class="document__title h-center">Make JSON Smaller with JavaScript</h4>
+            <p>There are lots of reasons to want to store JSON compressed at rest. For example, saving space in the browser cache.</p>
+            <details>
+                <summary class="h-pro-tip text-coy_2009"><h5 class="document__title h-ds__inline h-center">Good for use with LocalStorage or IndexedDB.</h5></summary>
+                <p>A service worker script could compress JSON before persisting it into localStorage</p>
+                <details>
+                    <summary class="h-pro-tip text-coy_2009"><h6 class="document__title h-ds__inline h-center">Low Code Generator</h6></summary>
+                    <p>You can copy the code snippet here and use it in your project.</p>
+                </details>
+            </details>
+        </article>        
+    </aside>
+</section>
+
 <section class="pfmf-grid pfmf-grid__33_33_33 readable__doc">
     <div>
-        <article class="pfmf-crd--black h-center"><p class="readable__doc readable__doc--white" data-at="FROM Uncompressed|FROM Paste Text">FROM Uncompressed</p></article>
+        <article class="pfmf-crd--black h-center"><p class="readable__doc readable__doc--white">FROM - Uncompressed</p></article>
         <article style="padding: 12px 12px;">
             <textarea id="l-term-from" class="l-term" rows="24"></textarea>
             <nav class="h-center">
@@ -110,7 +142,7 @@ data-n55-marquee-size="medium">
         </article>            
     </div>
     <div>
-        <article class="pfmf-crd--black h-center"><p class="readable__doc readable__doc--white" data-at="TO Compressed|TO Copy Text">TO Compressed</p></article>
+        <article class="pfmf-crd--black h-center"><p class="readable__doc readable__doc--white" >TO - Compressed</p></article>
         <article style="padding: 12px 12px;">
             <textarea id="l-term-to" class="l-term" rows="24"></textarea>
             <nav class="h-center">
@@ -190,6 +222,7 @@ let doAction = function( sAct ){
                 }
             }else{
                 neodigmToast.q("Please put some text in|the FROM box.", "danger")
+                neodigmUtils.robinTheme("danger");
             }
         }
         if( sAct == "d16" ){
@@ -201,6 +234,7 @@ let doAction = function( sAct ){
                 }
             }else{
                 neodigmToast.q("Please put some compressed text in|the TO box.", "danger")
+                neodigmUtils.robinTheme("danger");
             }
         }
         if( sAct == "fromCopy" ){
@@ -213,6 +247,7 @@ let doAction = function( sAct ){
                 }
             }else{
                 neodigmToast.q("There is no text to copy.", "danger")
+                neodigmUtils.robinTheme("danger");
             }
         }
         if( sAct == "fromPaste" ){
@@ -237,6 +272,7 @@ let doAction = function( sAct ){
                 }
             }else{
                 neodigmToast.q("There is no text to copy.", "danger")
+                neodigmUtils.robinTheme("danger");
             }
         }
         if( sAct == "toPaste" ){
@@ -256,3 +292,42 @@ let doAction = function( sAct ){
     return false;
 }
 </script>
+
+<script type="application/ld+json">
+    {
+        "@context": "http://schema.org/",
+        "@type": "HowTo",
+        "name": "Compress JSON",
+        "description": "Compress the strings within a JSON file",
+        "image": "https://www.thescottkrause.com/devtoys/devtoys_1280_tn.webp",
+        "totalTime": "PT4M",
+        "estimatedCost": {
+            "@type": "MonetaryAmount",
+            "currency": "USD",
+            "value": "0"
+        },
+        "step": [
+            {
+                "@type": "HowToStep",
+                "name": "Source JSON",
+                "text": "Paste or Upload an uncompressed file.",
+                "image": "",
+                "url": "https://www.thescottkrause.com/devtoys/compress_json/#"
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Compress Strings",
+                "text": "Click the Compress UTF16 button",
+                "image": "",
+                "url": "https://www.thescottkrause.com/devtoys/compress_json/#"
+            },
+            {
+                "@type": "HowToStep",
+                "name": "Copy Compressed JSON",
+                "text": "Copy or Download a Compressed JSON File",
+                "image": "",
+                "url": "https://www.thescottkrause.com/devtoys/compress_json/#"
+            }
+        ]
+    }
+    </script>
