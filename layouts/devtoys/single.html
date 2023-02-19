@@ -18,6 +18,8 @@
             <h1 class="readable__title h-center"> {{ .Title }} </h1>
             <p class="readable__doc h-center">Scott C. Krause | {{ dateFormat "Monday, Jan 2, 2006" .Date }}</p>
 
+            {{ partial "marquee.html" .}}
+<br>
             {{ .Content }}  
 <br>
             {{ partial "carousel_devtoys.html" . }}

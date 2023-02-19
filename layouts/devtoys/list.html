@@ -7,32 +7,8 @@
                 <p class="readable__caption h-center l-capt__vect"
                 data-at-vivid="{{ .Title }}" data-at-rnd-gt="0" data-at-change="data-at-vivid" data-at="{{ .Title }}|Recommended|Related|See Also"></p>
             </div>
-            <section class="pfmf-grid pfmf-grid__100">
-                <div class="l-caro-design">
-                    <article class="js-art__caro h-ds__none">
-                        <section class="l-caro-design__cnt"><!--  mac \ windows //  -->
-                        {{ range .Pages }}
-                            {{ if (eq .File.Dir "devtoys/" ) }}
-                            <a class="l-blog-crd" href="{{.Permalink}}">
-                            <section>
-                                <picture>
-                                    <!--  1280 X 720  -->
-                                    <img src="/devtoys/{{ .Slug}}_tn.webp" alt="{{ .Title}}">
-                                </picture>
-                                <p>Emerging Tech</p>
-                                <!-- {{.Title}} | {{.File.Dir}} -->
-                                <h5> {{ .Title}} </h5>
-                                <h6> {{ .Summary}} </h6>
-                                <p>{{.Date.Format "2006-01-02"}}</p>
-                            </section>
-                            </a>
-                            {{ end }}
-                        {{ end }}
-                        </section>
-                    </article>
-            
-                </div>
-            </section>
+            {{ partial "carousel_devtoys.html" . }}
+            {{ partial "carousel_emerging_tech.html" . }}
             {{ partial "carousel_patterns.html" . }}
         </main>
 

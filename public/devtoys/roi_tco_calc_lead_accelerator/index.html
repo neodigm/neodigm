@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         
-<title>Scott Krause | Vue.js double tap Microinteraction</title>
+<title>Scott Krause | ROI TCO calculator Lead Accelerator</title>
 
 
 <meta charset="utf-8">
@@ -65,7 +65,7 @@ href="#a11y-skipmain">Skip to Main Content</a>
                     <svg class="mm__vect mm__vect--close" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M13.89 8.7L12 10.59 10.11 8.7a.996.996 0 10-1.41 1.41L10.59 12 8.7 13.89a.996.996 0 101.41 1.41L12 13.41l1.89 1.89a.996.996 0 101.41-1.41L13.41 12l1.89-1.89a.996.996 0 000-1.41c-.39-.38-1.03-.38-1.41 0zM12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
                 </nav>
                 <div>
-<a class="mm__link--top" href="/" aria-label="Vue.js double tap Microinteraction" data-at="Scott C. Krause|Interactive ⚡ infographics|Vue Svelte ThreeJS|theScottKrause.com|Neodigm ✨ UX|Portfolio|Emerging Tech Blog|Radio Free Chicago|UX ⚡ PWA ⚡ Typescript|3D ✨ Infographics">Scott C. Krause</a>
+<a class="mm__link--top" href="/" aria-label="ROI TCO calculator Lead Accelerator" data-at="Scott C. Krause|Interactive ⚡ infographics|Vue Svelte ThreeJS|theScottKrause.com|Neodigm ✨ UX|Portfolio|Emerging Tech Blog|Radio Free Chicago|UX ⚡ PWA ⚡ Typescript|3D ✨ Infographics">Scott C. Krause</a>
                 </div>
                 <nav>
                     <svg class="scheme__vect scheme__vect--dark"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black" width="18px" height="18px"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M12.43 2.3c-2.38-.59-4.68-.27-6.63.64-.35.16-.41.64-.1.86C8.3 5.6 10 8.6 10 12c0 3.4-1.7 6.4-4.3 8.2-.32.22-.26.7.09.86 1.28.6 2.71.94 4.21.94 6.05 0 10.85-5.38 9.87-11.6-.61-3.92-3.59-7.16-7.44-8.1z"/></svg>
@@ -164,61 +164,542 @@ data-n55-sodapop-size="small">
         <main id="a11y-skipmain" role="main">
             <picture class="hero-single" role="banner" data-n55-wired4sound-click="5"> 
                 <div>
-                <img class="" src="../vue_tn.webp" alt="Vue.js double tap Microinteraction" data-n55-wired4sound-click="5">
+                <img class="" src="../devtoys_1280_tn.webp" alt="ROI TCO calculator Lead Accelerator" data-n55-wired4sound-click="5">
                 <figcaption class="l-cat-chip">
                         
                 </figcaption>
                 </div>
             </picture>
-<div style="height: 8px; margin: 2px;"></div>
-            <h1 class="readable__title h-center"> Vue.js double tap Microinteraction </h1>
-            <p class="readable__doc h-center">Scott C. Krause | Tuesday, Dec 15, 2020</p>
+            <div style="height: 8px; margin: 2px;"></div>
+            <h1 class="readable__title h-center"> ROI TCO calculator Lead Accelerator </h1>
+            <p class="readable__doc h-center">Scott C. Krause | Saturday, Feb 18, 2023</p>
 
-            <output>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-JavaScript" data-lang="JavaScript"><span style="display:flex;"><span><span style="color:#75715e">//  A Vue.js snippet that shows how to capture both a tap and
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">//  a double-tap on the same element within the template.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">//
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">//  Canonical Use Case: Double-Tap to zoom into a hero image
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e">//  and single-tap to zoom out.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e">/*    ____   ____                      __        
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> *    \   \ /   /_ __   ____          |__| ______
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> *     \   Y   /  |  \_/ __ \         |  |/  ___/
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> *      \     /|  |  /\  ___/         |  |\___ \ 
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> *       \___/ |____/  \___  &gt; /\ /\__|  /____  &gt;
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> *                         \/  \/ \______|    \/ */</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span> <span style="color:#a6e22e">methods</span><span style="color:#f92672">:</span> {
-</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;doHeroMobMouseUp&#34;</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span>( <span style="color:#a6e22e">ev</span> ){ <span style="color:#75715e">// Double Tap
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">oHro</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">oHeroZmMob</span>;
-</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">if</span>( <span style="color:#a6e22e">oHro</span>.<span style="color:#a6e22e">isInit</span> ){
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span>( <span style="color:#a6e22e">oHro</span>.<span style="color:#a6e22e">doubleTap</span> ){ <span style="color:#75715e">// Zoom In
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>          <span style="color:#a6e22e">oHro</span>.<span style="color:#a6e22e">doubleTap</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
-</span></span><span style="display:flex;"><span>          <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">doHeroMobScale</span>( .<span style="color:#ae81ff">5</span> ); <span style="color:#75715e">// Double Tap
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        }<span style="color:#66d9ef">else</span>{
-</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">oHro</span>.<span style="color:#a6e22e">doubleTap</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">true</span>;
-</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">setTimeout</span>(<span style="color:#66d9ef">function</span>(){ <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">doHeroMobMouseUp_expire</span>() }, <span style="color:#ae81ff">380</span>);
-</span></span><span style="display:flex;"><span>        }
-</span></span><span style="display:flex;"><span>      }
-</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">oHeroZmMob</span>.<span style="color:#a6e22e">isDown</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
-</span></span><span style="display:flex;"><span>    },
-</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;doHeroMobMouseUp_expire&#34;</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">function</span>(){ <span style="color:#75715e">// Single Tap
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>      <span style="color:#66d9ef">var</span> <span style="color:#a6e22e">oHro</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">oHeroZmMob</span>;
-</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">if</span>( <span style="color:#a6e22e">oHro</span>.<span style="color:#a6e22e">isInit</span> ){ <span style="color:#75715e">// Zoom Out
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span>( <span style="color:#a6e22e">oHro</span>.<span style="color:#a6e22e">doubleTap</span> ) <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">doHeroMobScale</span>( <span style="color:#f92672">-</span>.<span style="color:#ae81ff">5</span> ); <span style="color:#75715e">// Single Tap
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>        <span style="color:#a6e22e">oHro</span>.<span style="color:#a6e22e">doubleTap</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>;
-</span></span><span style="display:flex;"><span>      } 
-</span></span><span style="display:flex;"><span>    }
-</span></span><span style="display:flex;"><span> }
-</span></span><span style="display:flex;"><span> <span style="color:#75715e">/*
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> This is only part of a larger Vue gesture implementation supporting
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> Pinch 🤏, Zoom, Pan, and Swipe. Reach out to me if you want to learn more.
-</span></span></span><span style="display:flex;"><span><span style="color:#75715e"> */</span></span></span></code></pre></div>
-<span class="h-ds__none"
-data-at="Vue.js Double-Tap Logic|Process both Tap and Double-Tap|Vue.js Methods"></span>
-</output>
+            <section class="pfmf-grid pfmf-grid__100 readable__doc">
+    <div>
+        <article style="padding: 12px 12px; background-image: linear-gradient(#000, #444, #000);">
+<neodigm-marquee data-n55-marquee-text="  Tools you can use!  I created this tool because I needed this tool.  You can put this tool on your own website.  Identify opportunities for improving your strategies and maximizing the impact your time and effort. Gain insight and perspective into how your organization is performing. This type of analysis can help you determine important next steps.  "
+data-n55-marquee-size="medium">
+<pre data-n55-theme="brand"></pre>
+</neodigm-marquee>
+        </article>        
+    </div>
+</section>
+<br>
+            
+<section class="pfmf-grid pfmf-grid__50_50 readable__doc">
+    <aside>
+        <article class="h-bg__stripe" style="padding: 12px; margin: 12px;">
+            <h4 class="document__title h-center">Understand the Impact of Your Marketing Efforts</h4>
+            <p>Identify opportunities for improving your strategies and maximizing the impact your time and effort.</p>
+            <details>
+                <summary class="h-pro-tip text-coy_2009"><h5 class="document__title h-ds__inline h-center">How do your lead conversion compare with others in the same industry? </h5></summary>
+                <p>Gain insight and perspective into how your organization is performing. This type of analysis can help you determine important next steps.</p>
+                <details>
+                    <summary class="h-pro-tip text-coy_2009"><h6 class="document__title h-ds__inline h-center">Don’t just collect leads. Convert them into customers.</h6></summary>
+                    <p>Gaining CPL intelligence is the first step to strategizing, how to resonate with those leads and make more of them convert.</p>
+                </details>
+            </details>
+        </article>        
+    </aside>
 
+    <aside>
+        <article class="h-bg__stripe" style="padding: 12px; margin: 12px;">
+            <h4 class="document__title h-center">What Is Cost per Lead (CPL) in Marketing?</h4>
+            <p>Cost per lead, or CPL, is the amount of money that is spent to acquire one new lead from a marketing campaign.</p>
+            <details>
+                <summary class="h-pro-tip text-coy_2009"><h5 class="document__title h-ds__inline h-center">Cost per Lead (CPL) Measurement</h5></summary>
+                <p>Cost per lead, is a KPI that measures the cost-effectiveness of marketing campaigns that generate new leads.</p>
+                <details>
+                    <summary class="h-pro-tip text-coy_2009"><h6 class="document__title h-ds__inline h-center">Are you tracking leads?</h6></summary>
+                    <p>There are many differnt ways that a visitor might convert. Leads could convert via phone, web form submission, email, or live chat. Are you tracking all of those interactions?</p>
+                </details>
+            </details>
+        </article>        
+    </aside>
+</section>
+
+<neodigm-widget data-n55-widget-id="calc_roi_lead"></neodigm-widget>
   
+<br>
+            <section class="pfmf-grid pfmf-grid__100">
+    <div class="l-caro-design">
+
+        <article class="js-art__caro h-ds__none">
+            <section class="l-caro-design__cnt">
+            
+                
+            
+                
+                    <div class="h-center">
+                        <a data-n55-enchanted-cta href="https://www.theScottKrause.com/devtoys/roi_tco_calc_lead_accelerator/"  QQQhref="/devtoys/compress_json/"
+                        data-n55-enchanted-cta-dont-touch="false"
+                        data-n55-enchanted-cta-shape-off="false"
+                        data-n55-enchanted-cta-hover-an="true"
+                        data-n55-enchanted-cta-size="small"
+                        data-n55-flash-theme="marcom"
+                        data-n55-theme="night"
+                        data-n55-wired4sound-click="7"
+                        ><span data-n55-wired4sound-mouseover="3">ROI TCO calculator Lead Accelerator</span><span>
+                            <neodigm-marquee data-n55-marquee-text='   Tools you can use!  I created this tool because I needed this tool.  You can put this tool on your own website.  Identify opportunities for improving your strategies and maximizing the impact your time and effort. Gain insight and perspective into how your organization is performing. This type of analysis can help you determine important next steps.   2023-02-18  '
+                            data-n55-flash-theme="brand"
+                            data-n55-wired4sound-click="5" data-n55-wired4sound-mouseover="3"
+                            data-n55-marquee-size="xsmall" data-n55-marquee-direction="false"><pre data-n55-theme="brand"></pre></neodigm-marquee>
+                            </span>
+                        </a>
+                    </div>
+                
+            
+                
+            
+                
+                    <div class="h-center">
+                        <a data-n55-enchanted-cta href="https://www.theScottKrause.com/devtoys/audit_duplicate_ids/"  QQQhref="/devtoys/compress_json/"
+                        data-n55-enchanted-cta-dont-touch="false"
+                        data-n55-enchanted-cta-shape-off="false"
+                        data-n55-enchanted-cta-hover-an="true"
+                        data-n55-enchanted-cta-size="small"
+                        data-n55-flash-theme="marcom"
+                        data-n55-theme="night"
+                        data-n55-wired4sound-click="7"
+                        ><span data-n55-wired4sound-mouseover="3">Audit Duplicate Ids</span><span>
+                            <neodigm-marquee data-n55-marquee-text='   Tools you can use!  I created this tool because I needed this tool.  You can put this tool on your own website.  2023-02-06  '
+                            data-n55-flash-theme="brand"
+                            data-n55-wired4sound-click="5" data-n55-wired4sound-mouseover="3"
+                            data-n55-marquee-size="xsmall" data-n55-marquee-direction="false"><pre data-n55-theme="brand"></pre></neodigm-marquee>
+                            </span>
+                        </a>
+                    </div>
+                
+            
+                
+                    <div class="h-center">
+                        <a data-n55-enchanted-cta href="https://www.theScottKrause.com/devtoys/audit_duplicate_ids/"  QQQhref="/devtoys/compress_json/"
+                        data-n55-enchanted-cta-dont-touch="false"
+                        data-n55-enchanted-cta-shape-off="false"
+                        data-n55-enchanted-cta-hover-an="true"
+                        data-n55-enchanted-cta-size="small"
+                        data-n55-flash-theme="marcom"
+                        data-n55-theme="night"
+                        data-n55-wired4sound-click="7"
+                        ><span data-n55-wired4sound-mouseover="3">Audit Mixed Content</span><span>
+                            <neodigm-marquee data-n55-marquee-text='   Tools you can use!  I created this tool because I needed this tool.  You can put this tool on your own website.  2023-02-06  '
+                            data-n55-flash-theme="brand"
+                            data-n55-wired4sound-click="5" data-n55-wired4sound-mouseover="3"
+                            data-n55-marquee-size="xsmall" data-n55-marquee-direction="false"><pre data-n55-theme="brand"></pre></neodigm-marquee>
+                            </span>
+                        </a>
+                    </div>
+                
+            
+                
+                    <div class="h-center">
+                        <a data-n55-enchanted-cta href="https://www.theScottKrause.com/devtoys/audit_duplicate_ids/"  QQQhref="/devtoys/compress_json/"
+                        data-n55-enchanted-cta-dont-touch="false"
+                        data-n55-enchanted-cta-shape-off="false"
+                        data-n55-enchanted-cta-hover-an="true"
+                        data-n55-enchanted-cta-size="small"
+                        data-n55-flash-theme="marcom"
+                        data-n55-theme="night"
+                        data-n55-wired4sound-click="7"
+                        ><span data-n55-wired4sound-mouseover="3">Audit Robot.txt</span><span>
+                            <neodigm-marquee data-n55-marquee-text='   Tools you can use!  I created this tool because I needed this tool.  You can put this tool on your own website.  2023-02-06  '
+                            data-n55-flash-theme="brand"
+                            data-n55-wired4sound-click="5" data-n55-wired4sound-mouseover="3"
+                            data-n55-marquee-size="xsmall" data-n55-marquee-direction="false"><pre data-n55-theme="brand"></pre></neodigm-marquee>
+                            </span>
+                        </a>
+                    </div>
+                
+            
+                
+                    <div class="h-center">
+                        <a data-n55-enchanted-cta href="https://www.theScottKrause.com/devtoys/audit_sitemap/"  QQQhref="/devtoys/compress_json/"
+                        data-n55-enchanted-cta-dont-touch="false"
+                        data-n55-enchanted-cta-shape-off="false"
+                        data-n55-enchanted-cta-hover-an="true"
+                        data-n55-enchanted-cta-size="small"
+                        data-n55-flash-theme="marcom"
+                        data-n55-theme="night"
+                        data-n55-wired4sound-click="7"
+                        ><span data-n55-wired4sound-mouseover="3">Audit SiteMap XML</span><span>
+                            <neodigm-marquee data-n55-marquee-text='   Tools you can use!  I created this tool because I needed this tool.  You can put this tool on your own website.  2023-02-06  '
+                            data-n55-flash-theme="brand"
+                            data-n55-wired4sound-click="5" data-n55-wired4sound-mouseover="3"
+                            data-n55-marquee-size="xsmall" data-n55-marquee-direction="false"><pre data-n55-theme="brand"></pre></neodigm-marquee>
+                            </span>
+                        </a>
+                    </div>
+                
+            
+                
+                    <div class="h-center">
+                        <a data-n55-enchanted-cta href="https://www.theScottKrause.com/devtoys/find_naics/"  QQQhref="/devtoys/compress_json/"
+                        data-n55-enchanted-cta-dont-touch="false"
+                        data-n55-enchanted-cta-shape-off="false"
+                        data-n55-enchanted-cta-hover-an="true"
+                        data-n55-enchanted-cta-size="small"
+                        data-n55-flash-theme="marcom"
+                        data-n55-theme="night"
+                        data-n55-wired4sound-click="7"
+                        ><span data-n55-wired4sound-mouseover="3">Find NAICS codes</span><span>
+                            <neodigm-marquee data-n55-marquee-text='   Tools you can use!  I created this tool because I needed this tool.  You can put this tool on your own website.  2023-02-06  '
+                            data-n55-flash-theme="brand"
+                            data-n55-wired4sound-click="5" data-n55-wired4sound-mouseover="3"
+                            data-n55-marquee-size="xsmall" data-n55-marquee-direction="false"><pre data-n55-theme="brand"></pre></neodigm-marquee>
+                            </span>
+                        </a>
+                    </div>
+                
+            
+                
+                    <div class="h-center">
+                        <a data-n55-enchanted-cta href="https://www.theScottKrause.com/devtoys/generate_faq/"  QQQhref="/devtoys/compress_json/"
+                        data-n55-enchanted-cta-dont-touch="false"
+                        data-n55-enchanted-cta-shape-off="false"
+                        data-n55-enchanted-cta-hover-an="true"
+                        data-n55-enchanted-cta-size="small"
+                        data-n55-flash-theme="marcom"
+                        data-n55-theme="night"
+                        data-n55-wired4sound-click="7"
+                        ><span data-n55-wired4sound-mouseover="3">Generate FAQ</span><span>
+                            <neodigm-marquee data-n55-marquee-text='   Tools you can use!  I created this tool because I needed this tool.  You can put this tool on your own website.  2023-02-06  '
+                            data-n55-flash-theme="brand"
+                            data-n55-wired4sound-click="5" data-n55-wired4sound-mouseover="3"
+                            data-n55-marquee-size="xsmall" data-n55-marquee-direction="false"><pre data-n55-theme="brand"></pre></neodigm-marquee>
+                            </span>
+                        </a>
+                    </div>
+                
+            
+                
+                    <div class="h-center">
+                        <a data-n55-enchanted-cta href="https://www.theScottKrause.com/devtoys/generate_uuid/"  QQQhref="/devtoys/compress_json/"
+                        data-n55-enchanted-cta-dont-touch="false"
+                        data-n55-enchanted-cta-shape-off="false"
+                        data-n55-enchanted-cta-hover-an="true"
+                        data-n55-enchanted-cta-size="small"
+                        data-n55-flash-theme="marcom"
+                        data-n55-theme="night"
+                        data-n55-wired4sound-click="7"
+                        ><span data-n55-wired4sound-mouseover="3">Generate UUID</span><span>
+                            <neodigm-marquee data-n55-marquee-text='   Tools you can use!  I created this tool because I needed this tool.  You can put this tool on your own website.  2023-02-06  '
+                            data-n55-flash-theme="brand"
+                            data-n55-wired4sound-click="5" data-n55-wired4sound-mouseover="3"
+                            data-n55-marquee-size="xsmall" data-n55-marquee-direction="false"><pre data-n55-theme="brand"></pre></neodigm-marquee>
+                            </span>
+                        </a>
+                    </div>
+                
+            
+                
+                    <div class="h-center">
+                        <a data-n55-enchanted-cta href="https://www.theScottKrause.com/devtoys/generate_vcard/"  QQQhref="/devtoys/compress_json/"
+                        data-n55-enchanted-cta-dont-touch="false"
+                        data-n55-enchanted-cta-shape-off="false"
+                        data-n55-enchanted-cta-hover-an="true"
+                        data-n55-enchanted-cta-size="small"
+                        data-n55-flash-theme="marcom"
+                        data-n55-theme="night"
+                        data-n55-wired4sound-click="7"
+                        ><span data-n55-wired4sound-mouseover="3">Generate VCard</span><span>
+                            <neodigm-marquee data-n55-marquee-text='   Tools you can use!  I created this tool because I needed this tool.  You can put this tool on your own website.  2023-02-06  '
+                            data-n55-flash-theme="brand"
+                            data-n55-wired4sound-click="5" data-n55-wired4sound-mouseover="3"
+                            data-n55-marquee-size="xsmall" data-n55-marquee-direction="false"><pre data-n55-theme="brand"></pre></neodigm-marquee>
+                            </span>
+                        </a>
+                    </div>
+                
+            
+                
+                    <div class="h-center">
+                        <a data-n55-enchanted-cta href="https://www.theScottKrause.com/devtoys/view_responsive/"  QQQhref="/devtoys/compress_json/"
+                        data-n55-enchanted-cta-dont-touch="false"
+                        data-n55-enchanted-cta-shape-off="false"
+                        data-n55-enchanted-cta-hover-an="true"
+                        data-n55-enchanted-cta-size="small"
+                        data-n55-flash-theme="marcom"
+                        data-n55-theme="night"
+                        data-n55-wired4sound-click="7"
+                        ><span data-n55-wired4sound-mouseover="3">Responsive Viewer</span><span>
+                            <neodigm-marquee data-n55-marquee-text='   Tools you can use!  I created this tool because I needed this tool.  You can put this tool on your own website.  2023-02-06  '
+                            data-n55-flash-theme="brand"
+                            data-n55-wired4sound-click="5" data-n55-wired4sound-mouseover="3"
+                            data-n55-marquee-size="xsmall" data-n55-marquee-direction="false"><pre data-n55-theme="brand"></pre></neodigm-marquee>
+                            </span>
+                        </a>
+                    </div>
+                
+            
+                
+                    <div class="h-center">
+                        <a data-n55-enchanted-cta href="https://www.theScottKrause.com/devtoys/compress_json/"  QQQhref="/devtoys/compress_json/"
+                        data-n55-enchanted-cta-dont-touch="false"
+                        data-n55-enchanted-cta-shape-off="false"
+                        data-n55-enchanted-cta-hover-an="true"
+                        data-n55-enchanted-cta-size="small"
+                        data-n55-flash-theme="marcom"
+                        data-n55-theme="night"
+                        data-n55-wired4sound-click="7"
+                        ><span data-n55-wired4sound-mouseover="3">JSON / String Compress</span><span>
+                            <neodigm-marquee data-n55-marquee-text='   Utilize a LZW string compress to make your JSON files smaller and easier to transfer. This tool allows you to compress and decompress strings and strings within JSON. You can then copy or download the results. Optionally you can generate the code to perform the compression / decompression in your own web app. I created this tool because I needed this tool.   2023-02-06  '
+                            data-n55-flash-theme="brand"
+                            data-n55-wired4sound-click="5" data-n55-wired4sound-mouseover="3"
+                            data-n55-marquee-size="xsmall" data-n55-marquee-direction="false"><pre data-n55-theme="brand"></pre></neodigm-marquee>
+                            </span>
+                        </a>
+                    </div>
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+                
+            
+            </section>
+        </article>
+
+    </div>
+</section>
 <br>
             <section class="pfmf-grid pfmf-grid__100">
     <div class="l-caro-design">
@@ -746,486 +1227,6 @@ data-at="Vue.js Double-Tap Logic|Process both Tap and Double-Tap|Vue.js Methods"
                     <p>2020-11-02</p>
                 </section>
                 </a>
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-            </section>
-        </article>
-
-    </div>
-</section>
-<br>
-            <section class="pfmf-grid pfmf-grid__100">
-    <div class="l-caro-design">
-
-        <article class="js-art__caro h-ds__none">
-            <section class="l-caro-design__cnt">
-            
-                
-            
-                
-                    <div class="h-center">
-                        <a data-n55-enchanted-cta href="https://www.theScottKrause.com/devtoys/roi_tco_calc_lead_accelerator/"  QQQhref="/devtoys/compress_json/"
-                        data-n55-enchanted-cta-dont-touch="false"
-                        data-n55-enchanted-cta-shape-off="false"
-                        data-n55-enchanted-cta-hover-an="true"
-                        data-n55-enchanted-cta-size="small"
-                        data-n55-flash-theme="marcom"
-                        data-n55-theme="night"
-                        data-n55-wired4sound-click="7"
-                        ><span data-n55-wired4sound-mouseover="3">ROI TCO calculator Lead Accelerator</span><span>
-                            <neodigm-marquee data-n55-marquee-text='   Tools you can use!  I created this tool because I needed this tool.  You can put this tool on your own website.  Identify opportunities for improving your strategies and maximizing the impact your time and effort. Gain insight and perspective into how your organization is performing. This type of analysis can help you determine important next steps.   2023-02-18  '
-                            data-n55-flash-theme="brand"
-                            data-n55-wired4sound-click="5" data-n55-wired4sound-mouseover="3"
-                            data-n55-marquee-size="xsmall" data-n55-marquee-direction="false"><pre data-n55-theme="brand"></pre></neodigm-marquee>
-                            </span>
-                        </a>
-                    </div>
-                
-            
-                
-            
-                
-                    <div class="h-center">
-                        <a data-n55-enchanted-cta href="https://www.theScottKrause.com/devtoys/audit_duplicate_ids/"  QQQhref="/devtoys/compress_json/"
-                        data-n55-enchanted-cta-dont-touch="false"
-                        data-n55-enchanted-cta-shape-off="false"
-                        data-n55-enchanted-cta-hover-an="true"
-                        data-n55-enchanted-cta-size="small"
-                        data-n55-flash-theme="marcom"
-                        data-n55-theme="night"
-                        data-n55-wired4sound-click="7"
-                        ><span data-n55-wired4sound-mouseover="3">Audit Duplicate Ids</span><span>
-                            <neodigm-marquee data-n55-marquee-text='   Tools you can use!  I created this tool because I needed this tool.  You can put this tool on your own website.  2023-02-06  '
-                            data-n55-flash-theme="brand"
-                            data-n55-wired4sound-click="5" data-n55-wired4sound-mouseover="3"
-                            data-n55-marquee-size="xsmall" data-n55-marquee-direction="false"><pre data-n55-theme="brand"></pre></neodigm-marquee>
-                            </span>
-                        </a>
-                    </div>
-                
-            
-                
-                    <div class="h-center">
-                        <a data-n55-enchanted-cta href="https://www.theScottKrause.com/devtoys/audit_duplicate_ids/"  QQQhref="/devtoys/compress_json/"
-                        data-n55-enchanted-cta-dont-touch="false"
-                        data-n55-enchanted-cta-shape-off="false"
-                        data-n55-enchanted-cta-hover-an="true"
-                        data-n55-enchanted-cta-size="small"
-                        data-n55-flash-theme="marcom"
-                        data-n55-theme="night"
-                        data-n55-wired4sound-click="7"
-                        ><span data-n55-wired4sound-mouseover="3">Audit Mixed Content</span><span>
-                            <neodigm-marquee data-n55-marquee-text='   Tools you can use!  I created this tool because I needed this tool.  You can put this tool on your own website.  2023-02-06  '
-                            data-n55-flash-theme="brand"
-                            data-n55-wired4sound-click="5" data-n55-wired4sound-mouseover="3"
-                            data-n55-marquee-size="xsmall" data-n55-marquee-direction="false"><pre data-n55-theme="brand"></pre></neodigm-marquee>
-                            </span>
-                        </a>
-                    </div>
-                
-            
-                
-                    <div class="h-center">
-                        <a data-n55-enchanted-cta href="https://www.theScottKrause.com/devtoys/audit_duplicate_ids/"  QQQhref="/devtoys/compress_json/"
-                        data-n55-enchanted-cta-dont-touch="false"
-                        data-n55-enchanted-cta-shape-off="false"
-                        data-n55-enchanted-cta-hover-an="true"
-                        data-n55-enchanted-cta-size="small"
-                        data-n55-flash-theme="marcom"
-                        data-n55-theme="night"
-                        data-n55-wired4sound-click="7"
-                        ><span data-n55-wired4sound-mouseover="3">Audit Robot.txt</span><span>
-                            <neodigm-marquee data-n55-marquee-text='   Tools you can use!  I created this tool because I needed this tool.  You can put this tool on your own website.  2023-02-06  '
-                            data-n55-flash-theme="brand"
-                            data-n55-wired4sound-click="5" data-n55-wired4sound-mouseover="3"
-                            data-n55-marquee-size="xsmall" data-n55-marquee-direction="false"><pre data-n55-theme="brand"></pre></neodigm-marquee>
-                            </span>
-                        </a>
-                    </div>
-                
-            
-                
-                    <div class="h-center">
-                        <a data-n55-enchanted-cta href="https://www.theScottKrause.com/devtoys/audit_sitemap/"  QQQhref="/devtoys/compress_json/"
-                        data-n55-enchanted-cta-dont-touch="false"
-                        data-n55-enchanted-cta-shape-off="false"
-                        data-n55-enchanted-cta-hover-an="true"
-                        data-n55-enchanted-cta-size="small"
-                        data-n55-flash-theme="marcom"
-                        data-n55-theme="night"
-                        data-n55-wired4sound-click="7"
-                        ><span data-n55-wired4sound-mouseover="3">Audit SiteMap XML</span><span>
-                            <neodigm-marquee data-n55-marquee-text='   Tools you can use!  I created this tool because I needed this tool.  You can put this tool on your own website.  2023-02-06  '
-                            data-n55-flash-theme="brand"
-                            data-n55-wired4sound-click="5" data-n55-wired4sound-mouseover="3"
-                            data-n55-marquee-size="xsmall" data-n55-marquee-direction="false"><pre data-n55-theme="brand"></pre></neodigm-marquee>
-                            </span>
-                        </a>
-                    </div>
-                
-            
-                
-                    <div class="h-center">
-                        <a data-n55-enchanted-cta href="https://www.theScottKrause.com/devtoys/find_naics/"  QQQhref="/devtoys/compress_json/"
-                        data-n55-enchanted-cta-dont-touch="false"
-                        data-n55-enchanted-cta-shape-off="false"
-                        data-n55-enchanted-cta-hover-an="true"
-                        data-n55-enchanted-cta-size="small"
-                        data-n55-flash-theme="marcom"
-                        data-n55-theme="night"
-                        data-n55-wired4sound-click="7"
-                        ><span data-n55-wired4sound-mouseover="3">Find NAICS codes</span><span>
-                            <neodigm-marquee data-n55-marquee-text='   Tools you can use!  I created this tool because I needed this tool.  You can put this tool on your own website.  2023-02-06  '
-                            data-n55-flash-theme="brand"
-                            data-n55-wired4sound-click="5" data-n55-wired4sound-mouseover="3"
-                            data-n55-marquee-size="xsmall" data-n55-marquee-direction="false"><pre data-n55-theme="brand"></pre></neodigm-marquee>
-                            </span>
-                        </a>
-                    </div>
-                
-            
-                
-                    <div class="h-center">
-                        <a data-n55-enchanted-cta href="https://www.theScottKrause.com/devtoys/generate_faq/"  QQQhref="/devtoys/compress_json/"
-                        data-n55-enchanted-cta-dont-touch="false"
-                        data-n55-enchanted-cta-shape-off="false"
-                        data-n55-enchanted-cta-hover-an="true"
-                        data-n55-enchanted-cta-size="small"
-                        data-n55-flash-theme="marcom"
-                        data-n55-theme="night"
-                        data-n55-wired4sound-click="7"
-                        ><span data-n55-wired4sound-mouseover="3">Generate FAQ</span><span>
-                            <neodigm-marquee data-n55-marquee-text='   Tools you can use!  I created this tool because I needed this tool.  You can put this tool on your own website.  2023-02-06  '
-                            data-n55-flash-theme="brand"
-                            data-n55-wired4sound-click="5" data-n55-wired4sound-mouseover="3"
-                            data-n55-marquee-size="xsmall" data-n55-marquee-direction="false"><pre data-n55-theme="brand"></pre></neodigm-marquee>
-                            </span>
-                        </a>
-                    </div>
-                
-            
-                
-                    <div class="h-center">
-                        <a data-n55-enchanted-cta href="https://www.theScottKrause.com/devtoys/generate_uuid/"  QQQhref="/devtoys/compress_json/"
-                        data-n55-enchanted-cta-dont-touch="false"
-                        data-n55-enchanted-cta-shape-off="false"
-                        data-n55-enchanted-cta-hover-an="true"
-                        data-n55-enchanted-cta-size="small"
-                        data-n55-flash-theme="marcom"
-                        data-n55-theme="night"
-                        data-n55-wired4sound-click="7"
-                        ><span data-n55-wired4sound-mouseover="3">Generate UUID</span><span>
-                            <neodigm-marquee data-n55-marquee-text='   Tools you can use!  I created this tool because I needed this tool.  You can put this tool on your own website.  2023-02-06  '
-                            data-n55-flash-theme="brand"
-                            data-n55-wired4sound-click="5" data-n55-wired4sound-mouseover="3"
-                            data-n55-marquee-size="xsmall" data-n55-marquee-direction="false"><pre data-n55-theme="brand"></pre></neodigm-marquee>
-                            </span>
-                        </a>
-                    </div>
-                
-            
-                
-                    <div class="h-center">
-                        <a data-n55-enchanted-cta href="https://www.theScottKrause.com/devtoys/generate_vcard/"  QQQhref="/devtoys/compress_json/"
-                        data-n55-enchanted-cta-dont-touch="false"
-                        data-n55-enchanted-cta-shape-off="false"
-                        data-n55-enchanted-cta-hover-an="true"
-                        data-n55-enchanted-cta-size="small"
-                        data-n55-flash-theme="marcom"
-                        data-n55-theme="night"
-                        data-n55-wired4sound-click="7"
-                        ><span data-n55-wired4sound-mouseover="3">Generate VCard</span><span>
-                            <neodigm-marquee data-n55-marquee-text='   Tools you can use!  I created this tool because I needed this tool.  You can put this tool on your own website.  2023-02-06  '
-                            data-n55-flash-theme="brand"
-                            data-n55-wired4sound-click="5" data-n55-wired4sound-mouseover="3"
-                            data-n55-marquee-size="xsmall" data-n55-marquee-direction="false"><pre data-n55-theme="brand"></pre></neodigm-marquee>
-                            </span>
-                        </a>
-                    </div>
-                
-            
-                
-                    <div class="h-center">
-                        <a data-n55-enchanted-cta href="https://www.theScottKrause.com/devtoys/view_responsive/"  QQQhref="/devtoys/compress_json/"
-                        data-n55-enchanted-cta-dont-touch="false"
-                        data-n55-enchanted-cta-shape-off="false"
-                        data-n55-enchanted-cta-hover-an="true"
-                        data-n55-enchanted-cta-size="small"
-                        data-n55-flash-theme="marcom"
-                        data-n55-theme="night"
-                        data-n55-wired4sound-click="7"
-                        ><span data-n55-wired4sound-mouseover="3">Responsive Viewer</span><span>
-                            <neodigm-marquee data-n55-marquee-text='   Tools you can use!  I created this tool because I needed this tool.  You can put this tool on your own website.  2023-02-06  '
-                            data-n55-flash-theme="brand"
-                            data-n55-wired4sound-click="5" data-n55-wired4sound-mouseover="3"
-                            data-n55-marquee-size="xsmall" data-n55-marquee-direction="false"><pre data-n55-theme="brand"></pre></neodigm-marquee>
-                            </span>
-                        </a>
-                    </div>
-                
-            
-                
-                    <div class="h-center">
-                        <a data-n55-enchanted-cta href="https://www.theScottKrause.com/devtoys/compress_json/"  QQQhref="/devtoys/compress_json/"
-                        data-n55-enchanted-cta-dont-touch="false"
-                        data-n55-enchanted-cta-shape-off="false"
-                        data-n55-enchanted-cta-hover-an="true"
-                        data-n55-enchanted-cta-size="small"
-                        data-n55-flash-theme="marcom"
-                        data-n55-theme="night"
-                        data-n55-wired4sound-click="7"
-                        ><span data-n55-wired4sound-mouseover="3">JSON / String Compress</span><span>
-                            <neodigm-marquee data-n55-marquee-text='   Utilize a LZW string compress to make your JSON files smaller and easier to transfer. This tool allows you to compress and decompress strings and strings within JSON. You can then copy or download the results. Optionally you can generate the code to perform the compression / decompression in your own web app. I created this tool because I needed this tool.   2023-02-06  '
-                            data-n55-flash-theme="brand"
-                            data-n55-wired4sound-click="5" data-n55-wired4sound-mouseover="3"
-                            data-n55-marquee-size="xsmall" data-n55-marquee-direction="false"><pre data-n55-theme="brand"></pre></neodigm-marquee>
-                            </span>
-                        </a>
-                    </div>
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
-                
-            
                 
             
                 
@@ -3584,21 +3585,21 @@ if( eFavs ) {
 <script type="application/ld+json">
     { "@context": "https://schema.org", 
      "@type": "BlogPosting",
-     "headline": "Vue.js double tap Microinteraction",
-     "alternativeHeadline": "Firing both a tap and a double-tap on the same element",
-     "image": "../vue_tn.webp",
+     "headline": "ROI TCO calculator Lead Accelerator",
+     "alternativeHeadline": "ROI TCO calculator Lead Accelerator",
+     "image": "../Roi_tco_calc_lead_accelerator_tn.webp",
      "award": "Best of the Independent Web",
      "editor": "Scott C. Krause", 
      "genre": "Emerging Tech", 
      "keywords": "Data Visualization LWC PWA Three.js TypeScript WASM Vue.js UX Laravel", 
      "wordcount": "1648",
      "publisher": "Arcanus 55",
-     "url": "https:\/\/www.theScottKrause.com\/patterns\/vue\/",
-     "datePublished": "151515-12-15",
-     "dateCreated": "151515-12-15",
-     "dateModified": "151515-12-15",
-     "description": "Vue.js double tap Microinteraction",
-     "articleBody": "Firing both a tap and a double-tap on the same element ",
+     "url": "https:\/\/www.theScottKrause.com\/devtoys\/roi_tco_calc_lead_accelerator\/",
+     "datePublished": "181818-02-18",
+     "dateCreated": "181818-02-18",
+     "dateModified": "181818-02-18",
+     "description": "ROI TCO calculator Lead Accelerator",
+     "articleBody": "ROI TCO calculator Lead Accelerator Online DevToy ROI TCO calculator Lead Accelerator",
        "author": {
         "@type": "Person",
         "url": "https://www.theScottKrause.com/",
