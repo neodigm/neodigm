@@ -1,3 +1,0 @@
-User-agent: *
-Disallow: 
-Sitemap: https://www.theScottKrause.com/sitemap.xml
