@@ -1,9 +1,9 @@
 <section class="pfmf-grid pfmf-grid__100 readable__doc">
     <div>
         <article style="padding: 12px 12px; background-image: linear-gradient(#000, #444, #000);">
-<neodigm-marquee data-n55-marquee-text=" {{ .Params.Marquee }} "
+<neodigm-marquee data-n55-marquee-text="{{ .Params.Marquee }}"
 data-n55-marquee-size="medium">
-<pre data-n55-theme="brand"></pre>
+<pre data-n55-theme="{{ .Params.Theme }}"></pre>
 </neodigm-marquee>
         </article>        
     </div>
