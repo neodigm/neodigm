@@ -12,34 +12,48 @@ slug: generate_faq
 <section class="pfmf-grid pfmf-grid__50_50 readable__doc">
     <aside>
         <article class="h-bg__stripe" style="padding: 12px; margin: 12px;">
-            <h4 class="document__title h-center">H4</h4>
-            <p>Q</p>
+            <h4 class="document__title h-center">Why publish a FAQ?</h4>
+            <p>A frequently asked questions page on your website will help the visitor find answers quickly thereby improving the overall experience in complex user journeys. It’s also cost efficient. It can save time spent on the phone or answering email.</p>
             <details>
-                <summary class="h-pro-tip text-coy_2009"><h5 class="document__title h-ds__inline h-center">H5</h5></summary>
-                <p>Q</p>
+                <summary class="h-pro-tip text-coy_2009"><h5 class="document__title h-ds__inline h-center">Answer common questions</h5></summary>
+                <p>It’s a good idea to provide helpful content, not just marketing speak. Answer questions that have been asked by actual users if you can. Otherwise anticipate common questions based on user <a class="h-link" target="_blank" rel="noopener" href="https://neodigm.github.io/Next-Generation-Storefront-NGS/NGS_VUE_UML_Scott_C_Krause_2020.pdf">personas</a>.</p>
                 <details>
-                    <summary class="h-pro-tip text-coy_2009"><h6 class="document__title h-ds__inline h-center">H6</h6></summary>
-                    <p>Q</p>
+                    <summary class="h-pro-tip text-coy_2009"><h6 class="document__title h-ds__inline h-center">Search Engine Optimization FAQ SEO</h6></summary>
+                    <p>A well written FAQ is a good first step toward a Search Engine Optimized website. Consider that when people search something, that something is often described in terms of a question. You simply provide the answer to that question.</p>
                 </details>
             </details>
         </article>        
-    </aside>
-
+    </aside>    
     <aside>
         <article class="h-bg__stripe" style="padding: 12px; margin: 12px;">
-            <h4 class="document__title h-center">H4</h4>
-            <p>Q</p>
+            <h4 class="document__title h-center">FAQ Structured Data</h4>
+            <p>Structured data is invisible to human visitors but helps search engine bots understand your site’s FAQ.</p>
             <details>
-                <summary class="h-pro-tip text-coy_2009"><h5 class="document__title h-ds__inline h-center">H5</h5></summary>
-                <p>Q</p>
+                <summary class="h-pro-tip text-coy_2009"><h5 class="document__title h-ds__inline h-center">Frequently Asked Questions JSON-LD</h5></summary>
+                <p>A rich-text snippet is a semantic structure that, in this case, describes the FAQ questions and answers in a way that the search bot can easily understand. The search engine can then present your answer directly on the SERP (Search Engine Results Page) whenever that question is asked.</p>
                 <details>
-                    <summary class="h-pro-tip text-coy_2009"><h6 class="document__title h-ds__inline h-center">H6</h6></summary>
-                    <p>Q</p>
+                    <summary class="h-pro-tip text-coy_2009"><h6 class="document__title h-ds__inline h-center">JSON Linked Data for SEO</h6></summary>
+                    <p>A rich-text snippet is really just a special kind of JSON. So, it looks just like JavaScript, but it is static. It is meant to be read, not executed.</p>
                 </details>
             </details>
         </article>        
     </aside>
 </section>
 
-
-
+{{< highlight javascript >}}
+    //  This snippet when executed in the browser will log a valid JSON-LD FAQ rich snippet
+    //  derived from the existing HTML FAQ.
+    //  www.theScottKrause.com
+    
+    const jOut = {"@context": "https://schema.org", "@type": "FAQPage","mainEntity": []}
+    const aelQs = [ ... document.querySelectorAll(".l-faq") ]
+    aelQs.forEach(function( elFAQ ){
+        let elQ = elFAQ.querySelector("summary")
+        let elA = elFAQ.querySelector("p")
+        let oOut = {"@type": "Question", "name": "##Q##", "acceptedAnswer": {"@type": "Answer", "text": "##A##" }}
+        oOut.name = elQ.textContent
+        oOut.acceptedAnswer.text = elA.textContent
+        jOut.mainEntity.push( oOut )
+    })
+    console.warn( JSON.stringify( jOut ) )
+{{< /highlight >}}
