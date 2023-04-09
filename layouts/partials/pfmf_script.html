@@ -644,7 +644,7 @@ if( e3 ) { // Delay 3d call if still null
     }
     function doCopyString( sTxt, sTheme="night" ){
         if( sTxt ) {  //  Do not append branded comment if a simple URL
-            if( sTheme.indexOf("https") == -1) sTxt += cbTag
+            if( sTxt.indexOf("https") == -1) sTxt += cbTag
             sTxt = sTxt.replaceAll("__","'")
             try {
                 navigator.clipboard.writeText( sTxt );
