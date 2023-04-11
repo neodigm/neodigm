@@ -87,11 +87,15 @@ slug: view_responsive
                 let sMsg = ""
                 switch( sAct ){
                     case "flip" :
-                        let eIfrm = document.querySelector(".l-iframe");
-                        if( eIfrm ){
-                            let sTmp = eIfrm.style.height
-                            eIfrm.style.height = eIfrm.style.width
-                            eIfrm.style.width = sTmp
+                        let elIFrm = document.querySelector(".l-iframe");
+                        if( elIFrm ){
+                            let sTmp = elIFrm.style.height
+                            if( sTmp ){
+                                elIFrm.style.height = elIFrm.style.width
+                                elIFrm.style.width = sTmp                                
+                            }else{
+                                elIFrm.style.height = "414px"; elIFrm.style.width = "736px";      
+                            }
                         }
                     break;
                     case "url" :
