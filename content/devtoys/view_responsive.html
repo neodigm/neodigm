@@ -95,17 +95,18 @@ slug: view_responsive
                         }
                     break;
                     case "url" :
+                        let eIf = document.querySelector(".l-iframe");
                         let elURL = document.getElementById("js-rwd-pup__uri--address")
                         neodigmSodaPop.close()
-                        if( elURL && elURL.value && eIfrm ){
-                            eIfrm.src = elURL.value
+                        if( elURL && elURL.value && eIf ){
+                            eIf.src = elURL.value
                             let oSrch = (new URL(document.location)).searchParams
                             oSrch.set("uri", elURL.value )
                             document.location.search = oSrch.toString()
                         }
                     break;
                     case "share" :
-                        doCopyString( document.location.href ,'marcom')
+                        doCopyString( document.location.href , 'marcom')
                     break;
                     case "m" :
                         var oSrch = (new URL(document.location)).searchParams
@@ -151,7 +152,7 @@ slug: view_responsive
                     } 
                     eIfrm.src = sURI;
                     if( eFB ) eFB.innerHTML = sMsg;
-                    if( neodigmToast ) neodigmToast.q( sMsg );
+                    //if( neodigmToast ) neodigmToast.q( sMsg );
                 }                   
             }
 
