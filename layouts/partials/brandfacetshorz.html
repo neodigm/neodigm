@@ -89,7 +89,7 @@ let oN55Leaves = ( function( _d, _q ){  //  Anima Vector Palm Leave Shadows
 window.addEventListener("DOMContentLoaded", (event) => {
     oN55Leaves.init()
     oN55Leaves.gen( 4 )
-    setInterval( function(){ oN55Leaves.wind( 4 ) }, 2800)
+    setInterval( function(){ oN55Leaves.wind( 4 ) }, 2680)
 });
 
 </script>
@@ -105,26 +105,31 @@ window.addEventListener("DOMContentLoaded", (event) => {
     [data-n55-wdg-leaves] .n55-wdg-leave.in__0 {
         top: -370px; left: 100px;
         transform: rotate(176deg);
+        transition: all 1s ease-in-out;
         max-width: 1200px;
     }
     [data-n55-wdg-leaves] .n55-wdg-leave.in__1 {
         top: -200px; left: 160px;
         transform: rotate(140deg);
+        transition: all 1s ease-in-out;
         max-width: 800px;
     }
     [data-n55-wdg-leaves] .n55-wdg-leave.in__2 {
         top: -300px; left: 450px;
         transform: rotate(200deg);
+        transition: all 1s ease-in-out;
         max-width: 800px;
     }
     [data-n55-wdg-leaves] .n55-wdg-leave.in__3 {
         top: -400px; left: 550px;
         transform: rotate(240deg);
+        transition: all 1s ease-in-out;
         max-width: 800px;
     }
     [data-n55-wdg-leaves] .n55-wdg-leave.in__4 {
         top: -250px; left: 650px;
         transform: rotate(220deg);
+        transition: all 1s ease-in-out;
         max-width: 900px;
     }
     [data-n55-wdg-leaves] .n55-wdg-leave.wind__0 { animation: wind__0 2.4s forwards ease; }
@@ -138,19 +143,19 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
     @keyframes wind__0{
         0%{ opacity: .04;}
-        40%{ opacity: .14;}
-        100%{ opacity: .04;}
+        40%{ opacity: .11;}
+        100%{ opacity: .08; filter:blur(3px); }
     }
     @keyframes wind__1{
         0%{ filter:blur(3px); }
         20%{ filter:blur(1px); }
         40%{ filter:blur(0); }
-        100%{ filter:blur(2px); }
+        100%{ filter:blur(1px); opacity: .04;}
     }
     @keyframes wind__2{
         0%{ max-width: 1200px; transform: rotate(176deg); }
-        20%{ max-width: 1290px; transform: rotate(175deg); }
-        90%{ max-width: 1194px; transform: rotate(177deg); }
+        20%{ max-width: 1280px; transform: rotate(175deg); }
+        80%{ max-width: 1188px; transform: rotate(177deg); }
         100%{ max-width: 1200px; transform: rotate(176deg); }
     }
     @keyframes wind__3{
