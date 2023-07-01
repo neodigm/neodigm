@@ -6,7 +6,6 @@
     --wp-dark-mode-border: #394654;
 }
 
-
 /* Doc helpers begin */
 *::-webkit-scrollbar
 {
@@ -509,12 +508,12 @@ section.pfmf-grid > div > article.pfmf-crd--black {
 
 /* type type type, and type begin */
 .readable__doc {
-    color: #484848;
+    color: #464646;
     margin: 4px; padding: 2px;
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: 300;
-    font-size: 1.28em;
-    line-height: 1.2;
+    font-size: 1.30em;
+    line-height: 1.24;
 }
 .readable__doc--white {
     color: #fff;
@@ -524,7 +523,7 @@ section.pfmf-grid > div > article.pfmf-crd--black {
     margin: 4px; padding: 2px;
     font-family: 'Roboto Condensed', sans-serif;
     font-weight: 300;
-    font-size: 1.26em;
+    font-size: 1.3em;
 }
 .readable__caption_white {
     color: #fafafa;
@@ -547,7 +546,7 @@ section.pfmf-grid > div > article.pfmf-crd--black {
         font-size: 2.26em; 
     }
     .readable__doc {
-        font-size: 1.18em;
+        font-size: 1.22em;
     }
 }
 /* type type type, and type end */
@@ -610,7 +609,7 @@ body[data-n55-ampm-theme='light']  .l-favs article:hover div a { filter: brightn
     overflow: hidden;
 }
 .l-favs article div p.fav-cat {
-    color: #484848;
+    color: #464646;
     position: relative;
     top: 4px; left: 4px;
     margin: 2px 4px 8px;
