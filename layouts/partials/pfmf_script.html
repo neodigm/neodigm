@@ -533,14 +533,14 @@ if( e3 ) { // Delay 3d call if still null
 
     doPrefersReducedMotion( (mqPrefReducedMotion && mqPrefReducedMotion.matches) );
     //  doPrefersColorScheme( (mqPrefColorScheme && mqPrefColorScheme.matches), false );
-    doPrefersColorScheme( false, false );
+    //doPrefersColorScheme( false, false );
 
     // listen to changes in the media query's value NOT USED
     mqPrefReducedMotion.addEventListener("change", () => {
         doPrefersReducedMotion( mqPrefReducedMotion.matches );
     });
     mqPrefColorScheme.addEventListener("change", () => {
-        doPrefersColorScheme( mqPrefColorScheme.matches, true );
+        //doPrefersColorScheme( mqPrefColorScheme.matches, true );
     });
 
 </script>
@@ -629,7 +629,7 @@ if( e3 ) { // Delay 3d call if still null
 <!--  SFDC form validation and sub end  -->
 
 <script>
-    const cbTag = "\n<!-- (c) 2023 🗝️ www.theScottKrause.com -->"
+    const cbTag = "\n<!-- (c) 1994-2025 🗝️ www.theScottKrause.com -->"
     function doCopyClass( _q ){ // Copy PRE - Cannot prebind to element within detail
         let aTxt =[ ... document.querySelectorAll( _q )]
         let sTxt = ""
