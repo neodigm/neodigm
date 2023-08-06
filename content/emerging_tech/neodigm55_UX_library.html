@@ -3,7 +3,7 @@ title: "Neodigm 55 Low Code UX micro-library"
 date: 2022-11-25T13:40:22-06:00
 draft: false
 summary: "Popups, Toast, Parallax, and SFX"
-marquee: " Neodigm 55 is different.  It's an eclectic UX micro-library.  The lightweight components come together in a unique way that makes your website playful, fun, and bounce-proof.  Because it’s so easy to get started it is the perfect solution for quick landing pages, business accelerators, and event sites.  Enhanced CTA Buttons command attention and have a mind of their own.  They drive conversions with ambient and interactive animation.  Neodigm Toast is a super convenient way to show a quick message without disrupting the user’s flow.  It just pops from the bottom of the screen, displays a message, and then animates off.  Parallax scrolling is a web design technique in which the website background remains fixed while the foreground moves.  This results in a 3D effect as visitors scroll down the site, adding a sense of depth and creating a more immersive browsing experience.  Neodigm 55 is a small, fast, batteries included, HTML first, low code, responsive, analytics friendly, opinionated, accessible, tweaked to oblivion, future-proof, business accelerating, UX solution.  "
+marquee: " Neodigm 55 is different.  It's an eclectic UX micro-library.  The lightweight components come together in a unique way that makes your website playful, fun, and bounce-proof.  Because it’s so easy to get started its the perfect solution for quick landing pages, business accelerators, and event sites.  Enhanced CTA Buttons command attention and have a mind of their own.  They drive conversions with ambient and interactive animation.  Neodigm Toast is a super convenient way to show a quick message without disrupting the user’s flow.  It just pops from the bottom of the screen, displays a message, and then animates off.  Parallax scrolling is a web design technique in which the website background remains fixed while the foreground moves.  This results in a 3D effect as visitors scroll down the site, adding a sense of depth and creating a more immersive browsing experience.  Neodigm 55 is a small, fast, batteries included, HTML first, low code, responsive, analytics friendly, opinionated, accessible, tweaked to oblivion, future-proof, business accelerating, UX solution.  "
 theme: "brand"
 Ampm: "dark"
 description: Neodigm 55 Eclectic JavaScript UX Micro-Library
@@ -92,7 +92,7 @@ tags:
             <div class="h-center">
                 <br>
                 <a id="tryme-sodapop-simple-id" aria-haspopup="true"
-                data-n55-toast="Analytics Trackable!|Google Tag Manager"
+                data-n55-toast="Adobe and Google Analytics|Trackable!"
                 onclick='document.querySelector("#js-det__pop-sizes--open").setAttribute("open", true)'
                 data-n55-flash-theme="marcom"
                 data-n55-enchanted-cta data-n55-sodapop-id="js-basic--id"
@@ -187,7 +187,7 @@ tags:
                     <p>🔸 &nbsp; Audio feedback and scrolling animation on hover and click</p>
                     <p>🔸 &nbsp; Ambient animation makes it clear that this is the button to click</p>
                     <p>🔸 &nbsp; Random ambient animation cycles, focus user attention on the next action</p>
-                    <p>🔸 &nbsp; Google Analytics / Tag Manager <a class="h-link" target="_blank" rel="noopener" href="https://github.com/arcanus55/neodigm55/wiki/Cheat-Sheet#fire-a-google-analytics-event-when-a-popup-is-opened">Trackable</a></p>
+                    <p>🔸 &nbsp; Adobe Analytics / Google Analytics<a class="h-link" target="_blank" rel="noopener" href="https://github.com/arcanus55/neodigm55/wiki/Cheat-Sheet#fire-a-google-analytics-event-when-a-popup-is-opened">Trackable</a></p>
                     <p>🔸 &nbsp; May contain a Marquee component for verbose text</p>
                     <p>🔸 &nbsp; May be <a class="h-link" target="_blank" rel="noopener" href="https://github.com/arcanus55/neodigm55/wiki/Cheat-Sheet#when-an-enchanted-cta-button-has-a-theme-of-disabled">Disabled</a></p>
                     <details>
@@ -352,7 +352,7 @@ data-n55-wired4sound-click="7"
                         <p>Or call the Toast with JavaScript:</p>
 {{< highlight html >}}
 
-<button onClick="neodigmToast.q('Hello World|Advanced')">Advanced</button>
+<button onClick="neodigmToast.q('Hello World|Advanced','primary')">Advanced</button>
 
 {{< /highlight >}}
                         <div class="h-center">
@@ -454,6 +454,10 @@ data-n55-wired4sound-click="7"
                     onClick="neodigmEnchantedCTA.flashTheme('night')"
                     data-n55-theme="night" data-n55-toast="Night|Charcole Gray #868686">
                         <span data-n55-wired4sound-mouseover="10">Night</span><span>Charcole Gray</span></a>
+
+                    <a id="cta-toast-theme-11" data-n55-enchanted-cta="" data-n55-wired4sound-click="10" data-n55-enchanted-cta-size="small"
+                    data-n55-theme="ghost" data-n55-toast="Ghost|White  #FFFFFF" data-n55-enchanted-cta-ambient="">
+                        <span data-n55-wired4sound-mouseover="10">Ghost</span><span>Black or White</span></a>
                 </div>
             </details>
         </article>  
@@ -697,7 +701,16 @@ aria-haspopup="true">Try Me</button>
         </article>
 </template>
 
-<template id="js-basic-lg--id" data-n55-sodapop-modal="false" data-n55-sodapop-size="large" data-n55-sodapop-fullscreen="true">
+<neodigm-template id="js-popover-vid--id" data-n55-poptart='{"w": 256, "position":"bottom", "arrow": true, "offset":{"x":0,"y":0,"w":0}}'>
+    <video preload="auto" autoplay="" loop="" muted="" poster="" style="background-color: transparent; width: 100%;outline: none;">
+        <source src="/video/neodigm55_palm.mp4" type="video/mp4">
+    </video>
+    <neodigm-marquee data-n55-marquee-text="  Here is an example of a video preview inside of a Poptart. Tap anywhere outside of the Poptart to close it. "
+    data-n55-marquee-size="xsmall">
+        <pre data-n55-theme="party"></pre>
+    </neodigm-marquee>
+</neodigm-template>
+<neodigm-template id="js-basic-lg--id" data-n55-sodapop-modal="false" data-n55-sodapop-size="large" data-n55-sodapop-fullscreen="true">
     <article>
         <neodigm-marquee data-n55-marquee-size="large" 
         data-n55-marquee-text=" Popups that Pop! Easy to Use JavaScript UX Library. Small and Fast. Star on Github! The current state of the Web is the bland leading the bland. Remember when the Web was Fun? The Audio can be toggled ON and OFF. Analytics Trackable. ">
@@ -759,7 +772,7 @@ aria-haspopup="true">Try Me</button>
         </article>    
     </section>
     </article>
-</template>
+</neodigm-template>
 
 <br>
 
@@ -995,7 +1008,7 @@ data-n55-wired4sound-click="5"
                         <p>The BEST feature of the carousel is how easy it is to configure. Easily add a simple tag to any button to control the carousel navigation. For example, you could create Next / Previous buttons that would advance the carousel without JavaScript.</p>
                     </section> 
                     <section>
-                        <p>Carousel usage events are easily tracked with Google Analytics.</p>
+                        <p>Carousel usage events are easily tracked with Adobe Analytics / Google Analytics.</p>
                     </section> 
                     <section>
                         <p>You can put a carousel inside of another carousel, or inside of a Popup (soda pop).</p>
@@ -1179,6 +1192,88 @@ data-n55-wired4sound-click="5"
 </section>
 
 <br>
+
+<br>
+
+<section class="l-masn__caption h-ds-b__desktop--only h-right"><p class="big_and_bold">POPTART</p></section>
+<section class="pfmf-grid pfmf-grid__40_60 readable__doc">
+
+    <div>
+        <article class="pfmf-crd--black h-center">
+            <neodigm-marquee data-n55-marquee-text="  The Neodigm Poptart component (Popover) is a transient view that shows on a content screen when a user clicks or hovers a button or within any defined region of interaction. "
+            data-n55-marquee-size="small">
+                <pre data-n55-theme="party"></pre>
+            </neodigm-marquee>
+        </article>
+        <article class="h-bg__stripe" style="padding: 16px 16px;">
+            <div id="js-copy__popover">
+{{< highlight html >}}
+
+<neodigm-template id="js-myPoptart--id" data-n55-poptart='{"x": 176, "y": 176, "z": 176, "h": 176, "w": 176, "position":"bottom", "arrow": false, "offset":{"x":0,"y":0,"w":0}}'>
+    YOUR CONTENT HERE
+</neodigm-template>
+
+<neodigm-acticon data-n55-theme="ghost" data-n55-size="medium" data-n55-wired4sound-click='5'
+data-n55-tulip='My Poptart' data-n55-poptart-click="js-myPoptart--id"
+><neodigm-icon class="material-symbols-outlined" data-n55-wired4sound-mouseover='3'>movie</neodigm-icon></neodigm-acticon>
+
+{{< /highlight >}}
+            </div>
+            <div class="h-center">
+                <a id="cta-copy-3" data-n55-enchanted-cta data-do-copy 
+                onclick="doCopyClass('#js-copy__popover'); NeodigmClaire.doConfetti('#popover__intro')"
+                data-n55-enchanted-cta-size="xsmall" data-n55-wired4sound-click="10"
+                data-n55-theme="ghost">
+                    <span data-n55-wired4sound-mouseover="3">Copy Code</span><span>Clipboard <neodigm-icon class="material-symbols-outlined">content_copy</neodigm-icon></span>
+                </a>
+            </div>
+        </article>
+    </div>
+
+    <div id="popover__intro">
+        <article style="padding: 16px 16px;">
+
+            <neodigm-carousel id="js-popover-desc" class="h-just">
+                <section>
+                    <section>
+                        <p class="h-just">A Poptart displays content in a scrollable region on top of your page. It can be dismissed by simply tapping anywhere outside of the Poptart. It can be set to open on <span class="h-ital">hover</span> or <span class="h-ital">click</span> of any button without JavaScript. Poptart will automatically position and size itself, or you can tell it exactly where to display.</p>
+                        <p class="h-just">Poptart is easy to set-up, intuitive to use, and looks fantastic on a phone.</p>
+                        <nav class="h-center">
+                            <neodigm-acticon data-n55-theme="ghost" data-n55-size="medium" data-n55-wired4sound-click='5'
+                            data-n55-tulip='{"msg":" Preview Video ","mrq":false,"tmpt":"","theme":"party","size":"small","position":"top","icon":""}'
+                            data-n55-poptart-click="js-popover-vid--id"
+                            ><neodigm-icon class="material-symbols-outlined" data-n55-wired4sound-mouseover='3'>movie</neodigm-icon></neodigm-acticon>
+                        </nav>
+             <!--
+                        <p class="h-ital h-center">Click the Continue button below.</p>
+             -->
+                    </section>
+                    <section>
+                        <p class="h-just"></p>
+                        <p class="h-just"></p>
+                        <p class="h-just"></p>
+                        <br>
+                    </section>
+                    <section>
+                        <p class="h-just"></p>
+                        <p class="h-just"></p>
+                        <p class="h-just"></p>
+                        <br>
+                    </section>
+                </section>
+             </neodigm-carousel>
+             <!--
+                <neodigm-acticon data-n55-theme="ghost" data-n55-size="xsmall"
+                data-n55-wired4sound-click="10"
+                data-n55-carousel-nav='{"id": "js-popover-desc", "nav": "loop"}'
+                data-n55-tulip='{"msg":"Continue Play Next","mrq":false,"tmpt":"","theme":"ghost","size":"small","position":"bottom","icon":""}'>
+                <neodigm-icon class="material-symbols-outlined">play_arrow</neodigm-icon>
+                </neodigm-acticon>
+            -->
+        </article>
+    </div>
+
+</section>
 
 <div class="h-center">
     <a id="cta-git-star-2" data-n55-enchanted-cta
@@ -1392,7 +1487,7 @@ setTimeout(function(){ if(neodigmToast.getQ().length==0) neodigmToast.q("Swiss A
 neodigmUtils.f02x( 580000 ) )
 setTimeout(function(){ if(neodigmToast.getQ().length==0) neodigmToast.q("Provocative Engagement ⭐|Performant and Unique","marcom")},
 neodigmUtils.f02x( 580000 ) )
-setTimeout(function(){ if(neodigmToast.getQ().length==0) neodigmToast.q("Analytics Trackable 🚀|Google Tag Manager","night")},
+setTimeout(function(){ if(neodigmToast.getQ().length==0) neodigmToast.q("Adobe Analytics / Google Analytics ✅|Google Tag Manager","success")},
 neodigmUtils.f02x( 580000 ) )
 setTimeout(function(){ if(neodigmToast.getQ().length==0) neodigmToast.q("A Landing Page 🚀|Micro-interaction library","party")},
 neodigmUtils.f02x( 580000 ) )
@@ -1402,7 +1497,7 @@ setTimeout(function(){ if(neodigmToast.getQ().length==0) neodigmToast.q("Superla
 neodigmUtils.f02x( 580000 ) )
 setTimeout(function(){ if(neodigmToast.getQ().length==0) neodigmToast.q("Star us on Github|Contributions welcome ⭐","marcom")},
 neodigmUtils.f02x( 580000 ) )
-setTimeout(function(){ if(neodigmToast.getQ().length==0) neodigmToast.q("Analytics Trackable 🚀|Google Friendly","night")},
+setTimeout(function(){ if(neodigmToast.getQ().length==0) neodigmToast.q("Adobe Analytics Trackable 🚀","night")},
 neodigmUtils.f02x( 580000 ) )
 setTimeout(function(){ if(neodigmToast.getQ().length==0) neodigmToast.q("Freedom, Flexibility, and Finesse|⭐ Star it!","brand")},
 neodigmUtils.f02x( 580000 ) )
