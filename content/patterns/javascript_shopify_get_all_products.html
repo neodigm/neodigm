@@ -1,0 +1,68 @@
+---
+title: "Get all products from Any Shopify Site"
+date: 2023-08-10T19:18:55-05:00
+draft: false
+summary: "Fetch all Products and Images from any Shopify site."
+marquee: ""
+theme: "brand"
+slug: javascript
+categories:
+tags:
+---
+<output>
+{{< highlight JavaScript >}}
+//  Fetch all Products and Images from any Shopify site.
+/* _____ __ __   ___   ____ ____  _____  __ __ 
+  / ___/|  |  | /   \ |    \    ||     ||  |  |
+ (   \_ |  |  ||     ||  o  )  | |   __||  |  |
+  \__  ||  _  ||  O  ||   _/|  | |  |_  |  ~  |
+  /  \ ||  |  ||     ||  |  |  | |   _] |___, |
+  \    ||  |  ||     ||  |  |  | |  |   |     |
+   \___||__|__| \___/ |__| |____||__|   |____/  😎 */
+
+    var aP = [];
+
+    const neodigmMU = `
+<textarea id="elT" rows=8></textarea>`;  //  Universal Templs
+    let eMU = document.createElement("textarea");
+    document.body.appendChild(eMU);
+    eMU.outerHTML = neodigmMU;
+
+(function getProducts(url = 'https://SHOPIFY-SITE.com/admin/api/2019-07/products.json?limit=250&fields=id,images') {
+        fetch(url).then(res => {
+                const headerLink = res.headers.get('link');
+                const match = headerLink?.match(/<[^;]+\/(\w+\.json[^;]+)>;\srel="next"/);
+                const url = match ? match[1] : false;
+                if(url){
+                    res.json().then((data) => {
+                    data.products.map((el) => {
+                        //console.log( JSON.stringify( el ) )
+                        aP.push( JSON.stringify( el ) )
+                    })
+                })
+                getProducts(url)
+                } else {
+                    res.json().then((data) => {
+                    data.products.map((el) => {
+                        //console.log( JSON.stringify( el ) )
+                        aP.push( JSON.stringify( el ) )
+                    })
+                        doTextArea()
+                })
+        }
+    })
+})()
+
+function doTextArea(){
+        let elTA = document.getElementById("elT")
+        
+        aP.forEach( (p) =>{
+            // console.log( " ~~~ | " + p );
+            elTA.textContent = elTA.textContent + p + "\n"  }
+        )
+}   
+{{< /highlight >}}
+<span class="h-ds__none"
+data-at="Get All Products|Grab Shopify Products|Without API Issues|Shopify Snippet"></span>
+</output>
+
