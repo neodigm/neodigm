@@ -1,0 +1,129 @@
+---
+title: "Javascript GA4 Intersection Observer"
+date: 2023-08-14T13:24:44-05:00
+draft: false
+summary: "Heatmap: Track content visibility time in Google Analytics or Adobe Analytics"
+marquee: ""
+theme: "brand"
+slug: javascript
+categories:
+tags:
+---
+<output>
+{{< highlight JavaScript >}}
+//  Track content visibility time with Intersection Observer in Adobe Analytics or Google Analytics
+/*
+  /\  /\___  __ _| |_ _ __ ___   __ _ _ __  
+ / /_/ / _ \/ _` | __| '_ ` _ \ / _` | '_ \ 
+/ __  /  __/ (_| | |_| | | | | | (_| | |_) |
+\/ /_/ \___|\__,_|\__|_| |_| |_|\__,_| .__/ 
+                                   |_| 🌶️ 🔥
+*/
+
+class SyHeatmap {  //  Neodigm 55 Heatmap Begin
+    static oObserved = {}; static aObservedEl = []; static aQryContext = []
+    static oIntObserver = null; static NTHRESH_SECS = 3; static bIsInit = false;
+    static reInit ( _q, _c = document ){  //  DOM bind to context element
+        if( _q && _c ){
+            this.aQryContext = [ _q, _c ]
+            this.oObserved = {};
+            this.aObservedEl = [ ... _c.querySelectorAll( _q[ 0 ] ) ];
+            this.aObservedEl.forEach( ( elO )=>{
+                let elOsib = elO.nextElementSibling
+                const sCap = elOsib.heatmapCaption = elO.innerHTML
+                this.oObserved[ sCap ] = elOsib
+                this.oObserved[ sCap ].heatmapTime = []
+            } )
+            this.oIntObserver = new IntersectionObserver( ( entries )=>{
+                entries.forEach( ( oEnt )=>{
+                    if( oEnt.target?.heatmapCaption ){
+                        const sCap = oEnt.target.heatmapCaption
+                        if( this.oObserved[ sCap ].heatmapTime.length ){
+                            this.oObserved[ sCap ].heatmapTime.push( {"state": oEnt.isIntersecting, "ts": new Date().getTime() })
+                        }else{  //  No first time false (vis when page loads)
+                            if( oEnt.isIntersecting ){
+                                this.oObserved[ sCap ].heatmapTime.push( {"state": oEnt.isIntersecting, "ts": new Date().getTime() })
+                            }
+                        }
+                        if( oEnt.isIntersecting ){
+                            oEnt.heatmapTotal = SyHeatmap.totalHeatmapTime( this.oObserved[ sCap ].heatmapTime );  //  Sum and dif array vals
+                            console.log( " ~~~ tot | " + oEnt.target.heatmapCaption + " | " + oEnt.heatmapTotal )
+                        }
+                    }
+                } )
+            } )
+            //SyHeatmap.resetHeatMap()
+            this.aObservedEl.forEach( ( elObs )=>{
+                let sCap = this.oObserved[ elObs?.innerHTML ]
+                if( sCap ) this.oIntObserver.observe( sCap )
+            } )
+            if( !this.bIsInit ){
+                this.bIsInit = true;
+                setInterval( ()=>{ SyHeatmap.tick() }, 3e3 )
+            }
+            return this;
+        }
+    }
+    static totalHeatmapTime ( aHeatmapTime ){  //  Return total time on component in secs
+        let nTotStart = 0; let nTotEnd = 0;  //  Note: IntrSec Observ will fire FALSE once upon page load for each entry not visible
+        if( aHeatmapTime.length ){  //  Append a FALSE as NOW if the last item is not FALSE (currently in viewport)
+            let aDTO = [ ... aHeatmapTime ]
+            if( aDTO[ aDTO.length - 1 ].state == true ) aDTO.push( {"state": false, "ts": new Date().getTime() } )
+            aDTO.forEach( ( oHMTimes )=>{ 
+                if(  oHMTimes.state ) nTotStart = nTotStart + oHMTimes.ts
+                if( !oHMTimes.state ) nTotEnd = nTotEnd + oHMTimes.ts
+            } )
+        }
+        return ( nTotEnd - nTotStart ) / 1000;  //  in seconds
+    }
+    static genHeatmap ( nThresh = this.NTHRESH_SECS ){  //  Return a simple arry of current hm usage filt threshold
+        let aCurHM = []
+        if( this.aObservedEl.length ){
+            for ( const sCap in this.oObserved ) {
+                let nTotal = SyHeatmap.totalHeatmapTime( this.oObserved[ sCap ].heatmapTime )
+                if( nTotal && ( nTotal >= nThresh ) ) aCurHM.push( {"caption": sCap, "secs": nTotal } )
+            }
+        }
+        return aCurHM;
+    }
+    static resetHeatMap(){
+        this.aObservedEl.forEach( ( elObs )=>{
+            let sCap = this.oObserved[ elObs?.innerHTML ]
+            if( sCap ) this.oIntObserver.unobserve( sCap )
+        } )
+    }
+    static appendDataLayer (){  //  Iterate filtered heatmap and add to DL - return count
+        let iCnt = 0
+        if( window.dataLayer ) {
+            SyHeatmap.genHeatmap().forEach( ( oHMSum )=>{
+                let sMsg = oHMSum.caption + " | " + oHMSum.secs + " | " + Neodigm 55.salesforceGlobal.franchiseconfig.Name + " | " + Neodigm 55.salesforceGlobal.loginuser.UserRole.Name
+                window.dataLayer.push( { "event": "Neodigm 55_heatmap",  "msg": sMsg, "hm_secs": oHMSum.secs, "hm_fran": Neodigm 55.salesforceGlobal.franchiseconfig.Name, "hm_role": Neodigm 55.salesforceGlobal.loginuser.UserRole.Name } )
+                iCnt++;
+            })            
+        }
+        SyHeatmap.resetHeatMap()  //  Reset and Rebind
+        SyHeatmap.reInit( this.aQryContext[ 0 ], this.aQryContext[ 1 ])
+        return iCnt;
+    }
+    static tick (){
+        if( this.aQryContext.length ){  //  Must have already been fired
+            let elSame = this.aQryContext[ 1 ].querySelector( this.aQryContext[ 0 ] );
+            if( elSame ){
+                if( elSame.innerHTML != this.aObservedEl[0]?.innerHTML ){ SyHeatmap.appendDataLayer() }
+            }else{ SyHeatmap.appendDataLayer() }
+        }
+    }
+}  //  Neodigm 55 Heatmap End
+
+document.addEventListener("DOMContentLoaded", (ev)=>{
+    setTimeout( ()=>{
+        SyHeatmap.reInit( [ "DIV>H2" ], document.querySelector("#app > div.v-application--wrap > div.container.Neodigm 55-main-container.pa-0.ma-0.pt-0 > div > div") )
+    }, 3e3 )
+})
+   
+{{< /highlight >}}
+<span class="h-ds__none"
+data-at="Track Content Visibility Time|Adobe or Google Analytics 4|Intersection Observer API|Tag Manager Friendly"></span>
+</output>
+
+
