@@ -735,17 +735,24 @@ aria-haspopup="true">Try Me</button>
         data-n55-wired4sound-click='9'
         onclick="neodigmTulip.close();neodigmPopTart.close()"><neodigm-icon class="material-symbols-outlined">close</neodigm-icon></neodigm-acticon>
     </nav>
-    <br>
-    <neodigm-juicebar role="progressbar" data-n55-theme="marcom" data-n55-size="xsmall"><div></div></neodigm-juicebar>
-    <br>
-    <neodigm-juicebar role="progressbar" data-n55-theme="danger" data-n55-size="small"><div></div></neodigm-juicebar>
-    <br>
-    <neodigm-juicebar role="progressbar" data-n55-theme="brand" data-n55-size="medium"><div></div></neodigm-juicebar>
-    <br>
-    <neodigm-juicebar role="progressbar" data-n55-theme="warning" data-n55-size="xlarge"><div></div></neodigm-juicebar>
-    <br>
-
-    <neodigm-marquee data-n55-marquee-text="  Here is an example of Progress Bars inside of a Poptart opned on Hover. Tap the close button, hit the ESC key, or tap outside the Poptart to exit. "
+    <div>
+        <br>
+        <neodigm-juicebar role="progressbar" data-n55-theme="marcom" data-n55-size="xsmall"><div></div></neodigm-juicebar>
+        <br>
+        <neodigm-juicebar role="progressbar" data-n55-theme="danger" data-n55-size="small"><div></div></neodigm-juicebar>
+        <br>
+        <neodigm-juicebar role="progressbar" data-n55-theme="brand" data-n55-size="medium"><div></div></neodigm-juicebar>
+        <br>
+        <neodigm-juicebar role="progressbar" data-n55-theme="warning" data-n55-size="xlarge"><div></div></neodigm-juicebar>
+        <br>
+    </div>
+    <div class="h-center">
+        <a id="cta-poptart-shake-1" data-n55-enchanted-cta data-n55-enchanted-cta-size="xsmall" data-n55-enchanted-cta-ambient="emit"
+        onclick="neodigmUtils.robinTheme('party'); neodigmPopTart.shake();" data-n55-theme="brand">
+            <span data-n55-wired4sound-hover="3">Shake <neodigm-icon class="material-symbols-outlined">vibration</neodigm-icon></span><span>Vibrate <neodigm-icon class="material-symbols-outlined">edgesensor_high</neodigm-icon></span>
+        </a>
+    </div>
+    <neodigm-marquee data-n55-marquee-text="  Example of Progress Bars inside of a Poptart opned on Click event. You can cause the Poptart to shake, calling attention to it. Tap the close button, hit the ESC key, or tap outside the Poptart to exit. "
     data-n55-marquee-size="xsmall">
         <pre data-n55-theme="white"></pre>
     </neodigm-marquee>
@@ -1096,6 +1103,7 @@ data-n55-wired4sound-click="5"
  <a data-n55-carousel-nav='{"id": "js-carousel-inpup", "nav": "next"}'>Next</a>
  <a data-n55-carousel-nav='{"id": "js-carousel-inpup", "nav": "prev"}'>Prev</a>
  <a data-n55-carousel-nav='{"id": "js-carousel-inpup", "nav": "random"}'>Random</a>
+ <a data-n55-carousel-nav='{"id": "js-carousel-inpup", "nav": "1"}'>Page One</a>
  <a data-n55-carousel-nav='{"id": "js-carousel-inpup", "nav": "PageTwo"}'>Page Two</a>
 
 
@@ -1263,7 +1271,7 @@ data-n55-wired4sound-click="5"
             <div id="js-copy__popover">
 {{< highlight html >}}
 
-<neodigm-template id="js-myPoptart--id" data-n55-poptart='{"x": 176, "y": 176, "z": 176, "h": 176, "w": 176, "position":"bottom", "arrow": false, "offset":{"x":0,"y":0,"w":0}}'>
+<neodigm-template id="js-myPoptart--id" data-n55-poptart='{"x": 176, "y": 176, "z": 176, "h": 176, "w": 176, "position":"bottom", "arrow": false, "offset":{"x":0,"y":0,"w":0}, "dismiss":"hover"}'>
     YOUR CONTENT HERE
 </neodigm-template>
 
@@ -1290,12 +1298,11 @@ data-n55-tulip='My Poptart' data-n55-poptart-click="js-myPoptart--id"
             <neodigm-carousel id="js-popover-desc" class="h-just">
                 <section>
                     <section>
-                        <p class="h-just">A Poptart displays content in a scrollable region on top of your page. It can be dismissed by simply tapping anywhere outside of the Poptart. It can be set to open on <span class="h-ital">hover</span> or <span class="h-ital">click</span> of any button without JavaScript. Poptart will automatically position and size itself, or you can tell it exactly where to display.</p>
+                        <p class="h-just">A Poptart displays content in a scrollable region on top of your page. It can be dismissed by simply tapping or hovering anywhere outside of the Poptart. It can be set to open on <span class="h-ital">hover</span> or <span class="h-ital">click</span> of any button without JavaScript. Poptart will automatically position and size itself, or you can tell it exactly where to display.</p>
                         <p class="h-just">Poptart is easy to set-up, intuitive to use, and looks fantastic on a phone.</p>
                         <nav class="h-center">
                             <neodigm-acticon class="h-ds-ib__desktop--only" data-n55-theme="ghost" data-n55-size="medium" data-n55-wired4sound-click='5'
                             data-n55-tulip='{"msg":"Hover Example|Preview Video","mrq":false,"tmpt":"","theme":"ghost","size":"small","position":"top","icon":""}'
-                            onClick='neodigmTulip.autoOpen("#act-poptart__loop--id")'
                             ><neodigm-icon class="material-symbols-outlined" data-n55-wired4sound-hover='3'
                             data-n55-poptart-hover="js-popover-vid--id">arrow_selector_tool</neodigm-icon></neodigm-acticon>
                         </nav>
@@ -1308,7 +1315,6 @@ data-n55-tulip='My Poptart' data-n55-poptart-click="js-myPoptart--id"
                         <nav class="h-center">
                             <neodigm-acticon data-n55-theme="ghost" data-n55-size="medium" data-n55-wired4sound-click='5'
                             data-n55-tulip='{"msg":"Click Example|Progress Bars","mrq":false,"tmpt":"","theme":"ghost","size":"small","position":"top","icon":""}'
-                            onClick='neodigmTulip.autoOpen("#act-poptart__loop--id")'
                             data-n55-poptart-click="js-popover-wait--id"
                             ><neodigm-icon class="material-symbols-outlined" data-n55-wired4sound-hover='3'>ads_click</neodigm-icon></neodigm-acticon>
                         </nav>
@@ -1575,7 +1581,13 @@ neodigmUtils.f02x( 580000 ) )
 setTimeout(function(){ if(neodigmToast.getQ().length==0) neodigmToast.q("Canvas Animation 👁️🍭","night")},
 neodigmUtils.f02x( 580000 ) )
 //  Caro CB
-neodigmPopTart.setOnClose( function(){ neodigmTulip.autoOpen("#act-poptart__loop--id") },"js-popover-vid--id")
-
+    neodigmPopTart.setOnClose( function(){ neodigmTulip.autoOpen("#act-poptart__loop--id") }, "js-popover-vid--id")
+    neodigmPopTart.setOnClose( function(){ neodigmTulip.autoOpen("#act-poptart__loop--id") }, "js-popover-wait--id")
+    /* POPTART CONFETTI AND WAXON
+    neodigmPopTart.setOnAfterOpen(  function(){ NeodigmClaire.init().doConfetti( '#js-popover-wait--id div' ) }, "js-popover-wait--id")
+    neodigmPopTart.setOnAfterOpen( function(){ 
+        NeodigmClaire.doWaxOn("#js-popover-wait--id div", ["brand","danger","party","marcom"], "circle", .6)
+    }, "js-popover-wait--id")
+    */    
 }, 3600)
 </script>
