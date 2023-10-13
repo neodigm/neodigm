@@ -164,7 +164,7 @@ const oLinks = {links:[
                         })
                     });
                     neodigmToast.q( aOut.length + " Links|Generated", "primary")
-                    elTerm.textContent = JSON.stringify( aOut )
+                    elTerm.textContent = JSON.stringify( aOut ).replaceAll("},{","},\n{")
                 }else{ neodigmToast.q("Please Enter All|Required Fields", "danger") }
             break;
             case "js-cta__term--copy":
