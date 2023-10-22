@@ -9,7 +9,9 @@ theme: "brand"
 description: In-depth and indispensable curated Ionic Capacitor links
 slug: html-form-validation-patterns
 categories:
+- A11y
 - JavaScript
+- Tutorials
 - UX
 tags:
 - A11y
@@ -21,13 +23,14 @@ tags:
     <div>
         <article style="padding: 12px;">
             <h3 class="hd3 h-center">Modern Web Form Validation Patterns</h3>
-            <p>Ensuring that valid data is  entered into a form on a web page has been a fundamental requirement since the inception of the web. While web forms have evolved over the years the goal remains the same: <span class="h-ital">Capture valid data while gently guiding the user through correcting errors.</span> As web pages have grown into web apps it is no longer acceptable to refresh the entire page every time a form is submitted. It’s also no longer acceptable to make a round trip to the server only to notify the end user that some required data is missing.</p>
+            <p>Ensuring that valid data is  entered into a form on a web page has been a fundamental requirement since the inception of the web. While web forms have evolved over the years the goal remains the same: <span class="h-ital">Capture valid data while gently guiding the user through correcting errors.</span></p>
+            <p>As web pages have grown into web apps it is no longer acceptable to refresh the entire page every time a form is submitted. It’s also no longer acceptable to make a round trip to the server only to notify the end user that some required data is missing.</p>
             <p>In this article, I will introduce a few simple patterns to passively enforce data integrity with a delightful user experience using only vanilla JavaScript.</p>
             <p>You will learn <span class="h-ital">why</span> the passive validation model works well in modern, semantic, mobile first single-page web apps (SPA).</p>
             <br>
 
             <h3 class="hd3 h-center">Client Data Validation vs. Server Data Integrity</h3>
-            <p>Because our focus is client-side validation, we do this in the browser / native app, primarily to make the user experience smooth. However there is still a need for server-side integrity checks. Lets conceptually separate concerns between the client’s data validation logic and the server’s data integrity logic. One reason to maintain server-side data integrity checks is that the browser can be tampered with. Meaning that a bad actor can easily modify the page to circumvent our validation logic and send bad data to the server.</p>
+            <p>Because our focus is client-side validation, we do this in the browser / native app, primarily to make the user experience smooth. However there is still a need for server-side integrity checks. We should strive to conceptually separate concerns between the client’s data validation logic and the server’s data integrity logic. One reason to maintain server-side data integrity checks is that the browser can be tampered with. Meaning that a bad actor can easily modify the page to circumvent our validation logic and send bad data to the server.  Server application data verification is a good thing, and while it may seem redundant, it is necessary.</p>
             <br>
 
             <h3 class="hd3 h-center">A Brief History of Web Form Validation</h3>
@@ -36,12 +39,12 @@ tags:
 
             <h3 class="hd3 h-center">The Form Validation UX / Micro-copy Objective</h3>
             <p>Iterating through a form and determining which fields are invalid is the easy part. Communicating that information to the end user in a way that is actionable, predictable, and not overwhelming is the real success metric.</p>
-            <p>Understand that filling out a form is often the end of a long user journey. It may be the onboarding call-to-action that converts a visitor to a customer. It may be the result of tens of thousands of dollars invested  in omni-channel targeted marketing. It would be a catastrophic waste to lose a conversion simply because the visitor became frustrated while filling out the form. For example if you are onboarding a new user to a SaaS product; If this form is submitted successfully then you have a new customer. If it is not successful then you do not have a new customer. It’s a high stakes endeavor.</p>
+            <p>Understand that filling out a form is often the end of a long user journey. It may be the onboarding call-to-action that converts a visitor to a customer. It may be the result of tens of thousands of dollars invested in targeted omni-channel marketing. It would be a catastrophic waste to lose a conversion simply because the visitor became frustrated while filling out the form. For example if you are onboarding a new user to a SaaS product; If this form is submitted successfully then you have a new customer. If it is not successful then you do not have a new customer. It’s a high stakes endeavor.</p>
             <p>Micro-copy is the text content that exists within the UI elements, such as labels, button captions, tooltips, placeholders, and toast pop ups. It’s important to utilize micro-copy to set the tone of the engagement as one that is calm, forgiving, helpful, and conversational. Speaking in the voice that one would talk to a friend can make a stressful form easier to use.</p>
             <table border="1" class="h-center" style="border: 1 solid; width: 100%;">
                 <tr style="background-color: #aaa;">
-                    <td><p class="">Cold and Robotic</p></td>
-                    <td><p class="">Conversational Friendly</p></td>
+                    <td><p class="">Cold & Robotic</p></td>
+                    <td><p class="">Friendly & Conversational</p></td>
                 </tr>
                 <tr>
                     <td><p class="h-ital "> Invalid Email Address</p></td>
@@ -59,11 +62,162 @@ tags:
                 <li><p>Input fields that are required should be adorned in a way that it is conspicuous. Utilize the placeholder attribute, and / or an red asterisk in the label (if ever-present), and / or a red left border. A <a class="h-link" target="_blank" rel="noopener" href="https://github.com/arcanus55/neodigm55/wiki/Cheat-Sheet#the-tulip-component-tooltip-will-display-a-temporal-floating-text-tip-in-the-proximity-of-an-element-when-hovered-not-on-mobile-or-when-actuated-via-javascript-works-on-mobile-this-behavior-is-triggered-by-the-existence-of-the-data-n55-tulip-attribute-this-attribute-can-contain-simple-text-like-hello-world-or-for-advanced-configuration-a-json-string-up-to-two-lines-of-text-are-allowed-delimited-by-the-pipe-character--when-opened-declaratively-the-tulip-is-dismissed-upon-click-mouse-exit-scroll-resize-or-reorientate">tooltip</a> can reinforce this message, however be aware that hover will not work on mobile devices. Also be aware that not all users can distinguish color, so the red adornments should also be heavy (bolded).</p></li>
                 <li><p>A longer form is more difficult to manage than a short form. Longer forms can be incrementally validated per slide or region. Consider a linear <a class="h-link" target="_blank" rel="noopener" href="https://www.thescottkrause.com/emerging_tech/neodigm55_ux_library/#neodigm55_carousel">carousel</a> with pagination and a <span class="h-ital">Percent Complete Infographic.</span></p></li>
                 <li><p>Ideally a form can be navigated with the keyboard. It should act upon tab, shift-tab, enter, and escape keystrokes. Perhaps consider a <a class="h-link" target="_blank" rel="noopener" href="https://github.com/arcanus55/neodigm55/wiki/Cheat-Sheet#neodigm-carousel---create-a-page-level-keyboard-trap-that-prevents-the-user-from-tabbing-outside-the-page-carousel-panel">keyboard trap</a> for extra accessibility coverage.</p></li>
-                <li><p>Feedback messaging should be visible in the current viewport. Avoid binding an error message to an INPUT elements X/Y coordinates because that INPUT element might not be in view. Also avoid showing multiple error description messages at the same time for the same reason.  The problem with displaying error description text inline with the associated INPUT element is that it could cause the browser to repaint the form, causing some disorientation. Consider an unobtrusive medium such as a <a class="h-link" target="_blank" rel="noopener" href="https://www.thescottkrause.com/emerging_tech/neodigm55_ux_library/#neodigm55_toast">Toast</a> message.</p></li>
+                <li><p>Feedback messaging should be visible in the current viewport. Avoid binding an error message to an INPUT element's X/Y coordinates because that INPUT element might not be in view. Also avoid showing multiple error description messages at the same time for the same reason.  The problem with displaying error description text inline with the associated INPUT element is that it could cause the browser to repaint the form, causing some disorientation. Consider an unobtrusive medium such as a <a class="h-link" target="_blank" rel="noopener" href="https://www.thescottkrause.com/emerging_tech/neodigm55_ux_library/#neodigm55_toast">Toast</a> message.</p></li>
                 <li><p>Undoubtedly you will want to change the display of an INPUT element to denote that it is in an error state. Whatever visual cue that you decide upon, keep in mind that this change needs to be temporal. Imagine a big red square around an INPUT box that contains an invalid email address. This is going to be both confusing and distracting once the end user corrects the data. The user will be staring at a big red square suggesting that the data is incorrect, while knowing that it is in fact correct. That's a credibility issue. Ideally the error state will display for about two seconds then return to its original state.</p></li>
                 <li><p>Use the various HTML INPUT types, such as email, number, tel, and password. These will allow the user agent to assist the end user in entering data. For example, if the field is an email then a smart phone can display a virtual keyboard that is optimized for entering email addresses.</p></li>
             </ol>
             <br>
+
+            <h3 class="hd3 h-center"></h3>
+            <p>Let’s start with a simple HTML form. It’s vintage old school, but a good starting point.</p>
+            <p>You’ll notice that the form has the NOVALIDATE attribute, because we will be providing the validation. Also none of the INPUT elements have the REQUIRED attribute, again because we will be doing the validation.</p>
+{{< highlight html >}}
+
+<form id="contact-us__input" class="l-form" action="#" method="post" novalidate aria-label="Contact information">
+    <fieldset>
+        <legend>Your Info:</legend>
+        <label for="fName">First Name</label>
+        <input id="fName" name="fName" placeholder="First Name"
+        autocapitalize="off" autocorrect="off" spellcheck="false" type="text">
+        <label for="lName">Last Name</label>
+        <input id="lName" name="lName" placeholder="Last Name"
+        autocapitalize="off" autocorrect="off" spellcheck="false" type="text">
+        <label for="eMail">Email Address</label>
+        <input id="eMail" name="eMail" placeholder="address@domain.com"
+        autocapitalize="off" autocorrect="off" spellcheck="false" type="email">
+        <nav>
+            <button type="submit">Contact Us</button>
+        </nav>
+    </fieldset>
+</form>
+
+{{< /highlight >}}
+
+<p>Here we have some simple Mobile First CSS to help layout the form.</p>
+{{< highlight html >}}
+
+<style>
+    .l-form {font-family: Arial, Helvetica, sans-serif;}
+    .l-form fieldset * { font-size: 18px; }
+    .l-form input, .l-form button { margin: 4px; padding: 4px; border: solid 3px #888; border-radius: 6px;}
+    .l-form nav { text-align: center; }
+    .l-form .l-form__inp--invalid { border-left: solid 3px #FF0000;}
+    @media only screen and (min-width:48.1em){/* med *//* lg */
+
+    }
+</style>
+
+{{< /highlight >}}
+
+<p>The JavaScript logic is implemented as a singleton object that expects the id of a form and a configuration object that defines the validation.</p>
+<p>There are polymorphic validation functions, all of which will return true if valid or an error description if invalid.</p>
+{{< highlight html >}}
+
+<script>
+    class InputValidation {
+        constructor() {
+            this.elForm = this.aConfig = this.invalidCount = this.sErrorMsg = null
+        }
+        init( sId, aConfig ){
+            this.elForm = document.getElementById( sId ); this.aConfig = aConfig;
+            this.elForm.addEventListener( "submit", ( ev )=>{
+                ev.preventDefault()
+                this.invalidCount = 0; this.sErrorMsg = "";
+                Array.from( ev.target?.elements ).forEach( ( el )=>{  //  Iterate Form INP
+                    if( el?.tagName == "INPUT" ){
+                        const aVal = this.aConfig.filter( ( aCnf )=>{ return ( aCnf[0] == el.id ) } )[0]  //  Get first Config by ID
+                        if( aVal ){
+                            aVal.forEach( ( sfValConvert, nDx )=>{
+                                if( nDx ){
+                                    let sMsg = InputValidation[ sfValConvert ]( el )
+                                    if( sMsg !== true ){
+                                        InputValidation.showInvalid( el )
+                                        this.invalidCount++
+                                        this.sErrorMsg = this.sErrorMsg + " - " + sMsg
+                                        if( neodigmToast ) neodigmToast.q( sMsg, "danger")
+                                    }
+                                }
+                            } )
+                        }
+                    }
+                } )
+                if( this.invalidCount == 0 ) this.elForm.submit()
+            } )
+        }
+        static isEmail( elInp ){ return ( (elInp.value.indexOf( "@" ) != -1 ) && (elInp.value.indexOf( "." ) != -1 ) ) ? true : "Please Enter Valid Email Address" }
+        static isRequired( elInp ){ return (elInp.value.length) ? true : "Please Enter Required Information"  }
+        static convertCap( elInp ){
+            if( elInp.value ){
+                elInp.value = elInp.value.charAt( 0 ).toUpperCase() + elInp.value.slice( 1 ).toLowerCase()
+            }
+            return true
+        }
+        static showInvalid( el ){
+            el.classList.add("l-form__inp--invalid")
+            setTimeout( ()=>{ el.classList.remove("l-form__inp--invalid")}, 2e3 )
+        }
+    }
+</script>
+
+{{< /highlight >}}
+
+<p>Usage:</p>
+{{< highlight html >}}
+
+<script>
+    let inputVal = {}
+    document.addEventListener("DOMContentLoaded", ()=>{
+        inputVal = new InputValidation()
+        inputVal.init( "contact-us__input", [["fName", "isRequired", "convertCap"], ["lName", "isRequired", "convertCap"], ["eMail", "isRequired", "isEmail"]] )
+    });
+</script>
+
+{{< /highlight >}}
+
+<p>Lets understand the configuration object. It's just an array of arrays with the first value being the ID of INPUT element, the subsequent values are the method names that represent the types of validation functions that we need to check for this element.</p>
+{{< highlight html >}}
+
+<script>
+[
+  [
+    "fName",
+    "isRequired",
+    "convertCap"
+  ],
+  [
+    "lName",
+    "isRequired",
+    "convertCap"
+  ],
+  [
+    "eMail",
+    "isRequired",
+    "isEmail"
+  ]
+]
+</script>
+
+{{< /highlight >}}
+
+            
+
+            <h3 class="hd3 h-center"></h3>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+
+            <h3 class="hd3 h-center"></h3>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
+
+            <h3 class="hd3 h-center"></h3>
+            <p></p>
+            <p></p>
+            <p></p>
+            <p></p>
 
             <h3 class="hd3 h-center"></h3>
             <p></p>
@@ -75,7 +229,7 @@ tags:
 </section>
 
 <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Best up-to-date resource for HTML and JavaScript Form Validation patterns?","acceptedAnswer":{"@type":"Answer","text":"Bookmark JavaScript Web Form Validation for code examples and tutorials of client-side Form validation."}},{"@type":"Question","name":"What is an accessibility keyboard trap?","acceptedAnswer":{"@type":"Answer","text":"A keyboard trap is a restriction on navigation that prevents an end user from exiting a form via the Tab or Shift-Tab keystrokes. It is implemented to assist users who rely on the keyboard to stay focused on the form that they are filling out."}},{"@type":"Question","name":"What is Micro-copy and how do I use it to help fill out a form?","acceptedAnswer":{"@type":"Answer","text":"Micro-copy is the text content that exists within the UI elements, such as labels, button captions, tooltips, placeholders, and toast pop ups. It’s important to utilize micro-copy to set the tone of the engagement as one that is calm, forgiving, helpful, and conversational. Speaking in the voice that one would talk to a friend can make a stressful form easier to use."}}]}
+    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Best up-to-date resource for HTML and JavaScript Form Validation patterns?","acceptedAnswer":{"@type":"Answer","text":"Bookmark JavaScript Web Form Validation for code examples and tutorials of client-side Form validation."}},{"@type":"Question","name":"What is an accessibility keyboard trap?","acceptedAnswer":{"@type":"Answer","text":"A keyboard trap is a restriction on navigation that prevents an end user from exiting a form via the Tab or Shift-Tab keystrokes. It is implemented to assist users who rely on the keyboard to stay focused on the form that they are filling out."}},{"@type":"Question","name":"What is Micro-copy and how do I use it to help fill out a form?","acceptedAnswer":{"@type":"Answer","text":"Micro-copy is the text content that exists within the UI elements, such as labels, button captions, tooltips, placeholders, and toast pop ups. It’s important to utilize micro-copy to set the tone of the engagement as one that is calm, forgiving, helpful, and conversational. Speaking in the voice that one would talk to a friend can make a stressful form easier to use."}},{"@type":"Question","name":"Is JavaScript form validation better than HTML form validation?","acceptedAnswer":{"@type":"Answer","text":"Yes. JavaScript can provide a better UX and test for more complex types of errors than HTML alone. For example testing whether two password fields are the same. Or that a new password is sufficiently complex (password strength test)."}},{"@type":"Question","name":"Is client-side JavaScript sufficient to protect FORM data integrity?","acceptedAnswer":{"@type":"Answer","text":"No. Server-side data integrity checks are still important because the client can be compromised and changed in a way to submit bad data. Modern APIs may accept posts from web clients or other APIs (webhooks). This is a good argument for always performing data integrity checks because the source may change over time. Server application data verification is a good thing, and while it may seem redundant, it is necessary."}}]}
 </script>
 
 
@@ -89,6 +243,12 @@ tags:
         </details></section>
         <section class="l-faq"><details>
         <summary class="hd5">What is Micro-copy and how do I use it to help fill out a form?</summary><p>Micro-copy is the text content that exists within the UI elements, such as labels, button captions, tooltips, placeholders, and toast pop ups. It’s important to utilize micro-copy to set the tone of the engagement as one that is calm, forgiving, helpful, and conversational. Speaking in the voice that one would talk to a friend can make a stressful form easier to use.</p>
+        </details></section>
+        <section class="l-faq"><details>
+        <summary class="hd5">Is JavaScript form validation better than HTML form validation?</summary><p>Yes. JavaScript can provide a better UX and test for more complex types of errors than HTML alone. For example testing whether two password fields are the same. Or that a new password is sufficiently complex (password strength test).</p>
+        </details></section>
+        <section class="l-faq"><details>
+        <summary class="hd5">Is client-side JavaScript sufficient to protect FORM data integrity?</summary><p>No. Server-side data integrity checks are still important because the client can be compromised and changed in a way to submit bad data. Modern APIs may accept posts from web clients or other APIs (webhooks). This is a good argument for always performing data integrity checks because the source may change over time. Server application data verification is a good thing, and while it may seem redundant, it is necessary.</p>
         </details></section>
     </div>
 </section>
