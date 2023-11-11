@@ -1,0 +1,64 @@
+---
+title: "Flickity Carousel A11y Observer"
+date: 2023-10-08T23:55:57-06:00
+draft: false
+summary: "Observe and listen for changes in the Flickity carousel"
+marquee: ""
+theme: "brand"
+slug: javascript
+categories:
+tags:
+---
+
+<output>
+{{< highlight JavaScript >}}
+// Desc: This patch will observe and listen for changes in the Flickity carousel, and when triggered will remove aria-hidden from the carousel child elements. It will observe every carousel instance that exists on the page. This logic utilizes the mutation observer to watch all carousels for changes. The changes may be user initiated or actuated via autoplay configuration.
+// Usage: flickPatch = new FlickPatch( document, ".flickity-slider" ); flickPatch.init();
+
+/* ___ _                                  
+  /___\ |__  ___  ___ _ ____   _____ _ __ 
+ //  // '_ \/ __|/ _ \ '__\ \ / / _ \ '__|
+/ \_//| |_) \__ \  __/ |   \ V /  __/ |   
+\___/ |_.__/|___/\___|_|    \_/ \___|_|   👁️👁️ */
+
+ class FlickPatch {  //  Flickity Carousel ARIA-HIDDEN observer
+    constructor(_d, _sQ) {
+        this._d = _d; this._sQ = _sQ;
+        this.aF = []; this.aObs = [];
+    }
+    init() {  //
+        this.aF = Array.from( this._d.querySelectorAll( this._sQ ))
+        if( this.aF.length ){
+            this.aObs = []
+            this.aF.forEach( ( eF )=>{
+                const oObs = new MutationObserver( flickPatch.removeAttr );
+                oObs.observe( eF, { attributes: true, childList: true, subtree: true } );
+                this.aObs.push( oObs )
+            })            
+        }
+        return this;
+    }
+    removeAttr( aObs ){  //
+        if( aObs.length ){
+            aObs.forEach( ( elO )=>{
+                if( elO?.target ){
+                    [ ... elO.target.querySelectorAll( "[aria-hidden='true']" )].forEach( ( eH )=>{
+                        eH.removeAttribute("aria-hidden")
+                    })
+                }
+            })
+        }
+    }
+}
+//. Usage
+let flickPatch = {}
+document.addEventListener("DOMContentLoaded", ( ev )=>{
+    setTimeout( ()=>{
+        flickPatch = new FlickPatch( document, ".flickity-slider" )
+        flickPatch.init()   
+    }, 8e3 )
+})
+{{< /highlight >}}
+<span class="h-ds__none"
+data-at="Lighthouse Audit|Remove aria-hidden|Mutation Observer A11y|Flickity Carousel Patch"></span>
+</output>
