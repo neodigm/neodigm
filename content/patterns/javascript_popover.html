@@ -19,179 +19,169 @@ tags:
      \ \_____\  \ \_\        \ \_____\   /\_\/\_\ 
       \/_____/   \/_/         \/_____/   \/_/\/_/   */
 
-      class NeodigmPopTart {
-        constructor(_d, _aQ) {  //  Orthogonal Diagonalizer 🌶️ Protomolecule
-            this._d = _d; this._aQ = _aQ; this.oPopTmpls = {}
-            this.elBound = null; this.sBoundTheme = neodigmOpt.N55_THEME_DEFAULT
-            this.fOnBeforeOpen = {}; this.fOnAfterOpen = {}; this.fOnClose = {}
-            this.bIsOpen = this.bIsInit = false
-        }
-        init() {
-          if( !this.bIsInit ){  //  once
-              this._d[ neodigmOpt.N55_APP_STATE.CONTEXT ].addEventListener("mouseover", ( ev ) => {  //  data-n55-poptart-hover
-                  if( ev.target?.dataset?.n55PoptartHover ){
-                      const sAttrEv = ev.target?.dataset?.n55PoptartHover // || ev?.srcElement?.parentNode?.dataset?.n55PoptartHover
-                      this.sBoundTheme = ev.target.n55Theme || ev.target?.dataset?.n55Theme || ev.target?.parentNode?.dataset?.n55Theme || neodigmOpt.N55_THEME_DEFAULT
-                      if( this.sBoundTheme != "disabled" ) {
-                          let elPopTmpl = this._d[ neodigmOpt.N55_APP_STATE.CONTEXT ].querySelector( "#" + sAttrEv )
-                          if( elPopTmpl?.dataset?.n55Poptart ){
-                              this.elBound = ev.target
-                              this.sBoundTheme = this.elBound ||neodigmOpt.N55_THEME_DEFAULT
-                              ev.preventDefault()
-                              neodigmPopTart.open( this.oPopTmpls[ sAttrEv ] = elPopTmpl, JSON.parse( elPopTmpl.dataset.n55Poptart ) )
-                          }
-                      }
-                  }
-              }, false)
-              /* ADVANCED HOVER PATTERNS
-              this._d[ neodigmOpt.N55_APP_STATE.CONTEXT ].addEventListener("mouseout", ( ev ) => {  //  data-n55-poptart-hover
-                  console.log( " ~~~ ev.target?.dataset?.n55PoptartHover | " + ev.target?.dataset?.n55PoptartHover )
-                  let sPTCont = neodigmUtils.walkDOM3( ev?.target, "n55PoptartHover" )
-                  console.log( " ~~~ sPTCont | " + sPTCont )
-                  if( sPTCont ){
-                      this.close()
-                  }
-              } )
-              */
-              this._d[ neodigmOpt.N55_APP_STATE.CONTEXT ].addEventListener("contextmenu", ( ev ) => {  //  data-n55-poptart-rightclick
-                if( ev.target?.dataset?.n55PoptartRightclick || ev.target?.parentNode?.dataset?.n55PoptartRightclick ){
-                  const sAttrEv = ev.target?.dataset?.n55PoptartRightclick || ev.target?.parentNode?.dataset?.n55PoptartRightclick
-                  neodigmPopTart.click_and_right_click( ev, sAttrEv )
-                }
-              }, false)
-      
-              this._d[ neodigmOpt.N55_APP_STATE.CONTEXT ].addEventListener("click", ( ev ) => {  //  👁️ Outside Click
-                  if( this.bIsOpen ){
-                      let eTarget = ev.target, bInside = false;
-                      while( eTarget.tagName !== "HTML" ){
-                          if( eTarget.dataset.n55PoptartOpen ){ bInside = true; break; }
-                          eTarget = eTarget.parentNode;
-                      }
-                      if( !bInside ){ neodigmPopTart.close() }
-                  }else{  //  data-n55-poptart-click
-                    if( ev.target?.dataset?.n55PoptartClick || ev.target?.parentNode?.dataset?.n55PoptartClick ){
-                      const sAttrEv = ev.target?.dataset?.n55PoptartClick || ev.target?.parentNode?.dataset?.n55PoptartClick
-                      neodigmPopTart.click_and_right_click( ev, sAttrEv )
+class NeodigmPopTart {
+constructor(_d, _aQ) {  //  Orthogonal Diagonalizer 🌶️ Protomolecule
+    this._d = _d; this._aQ = _aQ; this.oPopTmpls = {}
+    this.elBound = null; this.sBoundTheme = neodigmOpt.N55_THEME_DEFAULT
+    this.fOnBeforeOpen = {}; this.fOnAfterOpen = {}; this.fOnClose = {}
+    this.bIsOpen = this.bIsInit = false
+}
+init() {
+    if( !this.bIsInit ){  //  once
+        this._d[ neodigmOpt.N55_APP_STATE.CONTEXT ].addEventListener("mouseover", ( ev ) => {  //  data-n55-poptart-hover
+            if( ev.target?.dataset?.n55PoptartHover ){
+                const sAttrEv = ev.target?.dataset?.n55PoptartHover // || ev?.srcElement?.parentNode?.dataset?.n55PoptartHover
+                this.sBoundTheme = ev.target.n55Theme || ev.target?.dataset?.n55Theme || ev.target?.parentNode?.dataset?.n55Theme || neodigmOpt.N55_THEME_DEFAULT
+                if( this.sBoundTheme != "disabled" ) {
+                    let elPopTmpl = this._d[ neodigmOpt.N55_APP_STATE.CONTEXT ].querySelector( "#" + sAttrEv )
+                    if( elPopTmpl?.dataset?.n55Poptart ){
+                        this.elBound = ev.target
+                        this.sBoundTheme = this.elBound ||neodigmOpt.N55_THEME_DEFAULT
+                        ev.preventDefault()
+                        neodigmPopTart.open( this.oPopTmpls[ sAttrEv ] = elPopTmpl, JSON.parse( elPopTmpl.dataset.n55Poptart ) )
                     }
-                  }
-              }, true)
-              this._d[ neodigmOpt.N55_APP_STATE.CONTEXT ].addEventListener("keydown", ( ev ) => {  //  Close on Esc Key
-                  if ( ev.key == "Escape" ){ if( this.bIsOpen ) this.close() }
-              }, true)
-              this.bIsInit = true
-          }
-          return this;
-        }
-        click_and_right_click( ev, sAttrEv, bPrevDef=true ){
-            this.sBoundTheme = ev.target.n55Theme || ev.target?.dataset.n55Theme || ev.target?.parentNode?.dataset.n55Theme || neodigmOpt.N55_THEME_DEFAULT
-            if( this.sBoundTheme != "disabled" ) {
-            let elPopTmpl = this._d[ neodigmOpt.N55_APP_STATE.CONTEXT ].querySelector( "#" + sAttrEv )
-            if( elPopTmpl?.dataset?.n55Poptart ){
-              this.elBound = ev.target
-              if( bPrevDef ) ev.preventDefault()
-              neodigmPopTart.open( this.oPopTmpls[ sAttrEv ] = elPopTmpl, JSON.parse( elPopTmpl.dataset.n55Poptart ) )
+                }
             }
-          }
+        }, false)
+        this._d[ neodigmOpt.N55_APP_STATE.CONTEXT ].addEventListener("contextmenu", ( ev ) => {  //  data-n55-poptart-rightclick
+        if( ev.target?.dataset?.n55PoptartRightclick || ev.target?.parentNode?.dataset?.n55PoptartRightclick ){
+            const sAttrEv = ev.target?.dataset?.n55PoptartRightclick || ev.target?.parentNode?.dataset?.n55PoptartRightclick
+            neodigmPopTart.click_and_right_click( ev, sAttrEv )
         }
-        open( elPop, oPos ) {
-          if( this.bIsInit && !this.bIsPause && elPop.id && !elPop.dataset?.n55PoptartOpen ) {
-              let nOffSetT, nOffSetL, nOffSetH, nOffSetW;  //  oPos offset conf
-              nOffSetT = nOffSetL = nOffSetH = nOffSetW = 0;
-              if( oPos?.offset ){
-                nOffSetH = oPos?.offset?.h || 0
-                nOffSetL = oPos?.offset?.l || 0
-                nOffSetT = oPos?.offset?.t || 0
-                nOffSetW = oPos?.offset?.w || 0
-              }
-              let oRctBound = this.elBound.getBoundingClientRect()
-              let pxLft  = window.pageXOffset || this._d.documentElement.scrollLeft
-              let pxTop = window.pageYOffset || this._d.documentElement.scrollTop
-              const NOFFSET = 10
-                //  Allow pre CB to cancel open
-              if( this.fOnBeforeOpen[ elPop.id ] ){ if( !this.fOnBeforeOpen[ elPop.id ]() ) return false; }
-              if( this.fOnBeforeOpen[ "def" ] ){ if( !this.fOnBeforeOpen[ "def" ]() ) return false; }
-      
-              elPop.dataset.n55PoptartOpen = Date.now()
-              let oRctPopCt = elPop.getBoundingClientRect()
-              oPos.w = ( ( oPos.w ) ? oPos.w : ( oRctBound.width + nOffSetW ) )  //  W
-              oPos.x = ( ( oPos.x ) ? oPos.x : ( ( oRctBound.left + (oRctBound.width / 2) ) - ( oPos.w / 2) + pxLft + nOffSetL ) )  //  X  //  TODO calc and align x center of bound elm
-              oPos.y = ( ( oPos.y ) ? oPos.y : ( oRctBound.top  + pxTop - nOffSetT ) )  //  Y
-              oPos.z = ( ( oPos.z ) ? oPos.z : neodigmOpt.N55_ZIND.PopTart )  //  Z
-              oPos.h = ( ( oPos.h ) ? (oPos.h + nOffSetH) : "auto" )  //  H
-              oPos.position = ( ( oPos.position ) ? oPos.position : "bottom" )  //  P
-              switch( oPos.position ){
-                  case "top":
-                      oPos.y = ( oPos.y - ( oRctBound.height + oRctPopCt.height ) + NOFFSET )
-                  break
-                  case "right":
-                      oPos.x = ( oPos.x + oRctBound.width )
-                  break
-                  case "bottom":
-                      oPos.y = ( oPos.y + oRctBound.height ) + NOFFSET
-                  break
-                  case "left":
-                      oPos.x = ( oPos.x - oRctBound.width )
-                  break
-              }
-              elPop.style.left = oPos.x + "px"; elPop.style.top = oPos.y + "px"; elPop.style.width = oPos.w + "px"
-              elPop.style.height = ( oPos.h == "auto" ) ? "auto" : oPos.h + "px";
-              //elPop.style.position = "absolute";
-              elPop.style.zIndex = oPos.z;
-              if( !elPop.dataset?.n55Theme ) elPop.dataset.n55Theme = this.sBoundTheme  //  Inherit Theme from Bound El, may be flash theme
-              if( neodigmOpt.N55_GTM_DL_POPTRT ) neodigmUtils.doDataLayer( neodigmOpt.N55_GTM_DL_POPTRT, elPop.id )
-              this.bIsOpen = true
-              if( this.fOnAfterOpen[ elPop.id ] ) this.fOnAfterOpen[ elPop.id ]()
-              if( this.fOnAfterOpen["def"] ) this.fOnAfterOpen["def"]()
-          }
-          return this;
+        }, false)
+
+        this._d[ neodigmOpt.N55_APP_STATE.CONTEXT ].addEventListener("click", ( ev ) => {  //  👁️ Outside Click
+            if( this.bIsOpen ){
+                let eTarget = ev.target, bInside = false;
+                while( eTarget.tagName !== "HTML" ){
+                    if( eTarget.dataset.n55PoptartOpen ){ bInside = true; break; }
+                    eTarget = eTarget.parentNode;
+                }
+                if( !bInside ){ neodigmPopTart.close() }
+            }else{  //  data-n55-poptart-click
+            if( ev.target?.dataset?.n55PoptartClick || ev.target?.parentNode?.dataset?.n55PoptartClick ){
+                const sAttrEv = ev.target?.dataset?.n55PoptartClick || ev.target?.parentNode?.dataset?.n55PoptartClick
+                neodigmPopTart.click_and_right_click( ev, sAttrEv )
+            }
+            }
+        }, true)
+        this._d[ neodigmOpt.N55_APP_STATE.CONTEXT ].addEventListener("keydown", ( ev ) => {  //  Close on Esc Key
+            if ( ev.key == "Escape" ){ if( this.bIsOpen ) this.close() }
+        }, true)
+        this.bIsInit = true
+    }
+    return this;
+}
+click_and_right_click( ev, sAttrEv, bPrevDef=true ){
+    this.sBoundTheme = ev.target.n55Theme || ev.target?.dataset.n55Theme || ev.target?.parentNode?.dataset.n55Theme || neodigmOpt.N55_THEME_DEFAULT
+    if( this.sBoundTheme != "disabled" ) {
+    let elPopTmpl = this._d[ neodigmOpt.N55_APP_STATE.CONTEXT ].querySelector( "#" + sAttrEv )
+    if( elPopTmpl?.dataset?.n55Poptart ){
+        this.elBound = ev.target
+        if( bPrevDef ) ev.preventDefault()
+        neodigmPopTart.open( this.oPopTmpls[ sAttrEv ] = elPopTmpl, JSON.parse( elPopTmpl.dataset.n55Poptart ) )
+    }
+    }
+}
+open( elPop, oPos ) {
+    if( this.bIsInit && !this.bIsPause && elPop.id && !elPop.dataset?.n55PoptartOpen ) {
+        let nOffSetT, nOffSetL, nOffSetH, nOffSetW;  //  oPos offset conf
+        nOffSetT = nOffSetL = nOffSetH = nOffSetW = 0;
+        if( oPos?.offset ){
+        nOffSetH = oPos?.offset?.h || 0
+        nOffSetL = oPos?.offset?.l || 0
+        nOffSetT = oPos?.offset?.t || 0
+        nOffSetW = oPos?.offset?.w || 0
         }
-        close() {
-          for( let e in this.oPopTmpls ){
-              if( this.oPopTmpls[ e ]?.dataset?.n55PoptartOpen ){
-                  let sId = this.oPopTmpls[ e ]?.id
-                  let bOkClose = true  //  CBs must explicitly return false to prevent closing
-                  if( neodigmOpt.N55_DEBUG_lOG ) console.log( "~Poptart Close | " + sId, this.fOnClose[ sId ] )
-                  if( this.fOnClose[ sId ] ) bOkClose = !(this.fOnClose[ sId ]( sId ) === false)  //  The specific can cancel the generic
-                  if( bOkClose && this.fOnClose["def"] ) bOkClose = !(this.fOnClose["def"]( sId ) === false)
-                  if( bOkClose ){
-                      delete this.oPopTmpls[ e ].dataset.n55PoptartOpen;
-                      this.bIsOpen = false
-                  }
-              }
-          }
-          return this;
+        let oRctBound = this.elBound.getBoundingClientRect()
+        let pxLft  = window.pageXOffset || this._d.documentElement.scrollLeft
+        let pxTop = window.pageYOffset || this._d.documentElement.scrollTop
+        const NOFFSET = 10
+        //  Allow pre CB to cancel open
+        if( this.fOnBeforeOpen[ elPop.id ] ){ if( !this.fOnBeforeOpen[ elPop.id ]() ) return false; }
+        if( this.fOnBeforeOpen[ "def" ] ){ if( !this.fOnBeforeOpen[ "def" ]() ) return false; }
+
+        elPop.dataset.n55PoptartOpen = Date.now()
+        let oRctPopCt = elPop.getBoundingClientRect()
+        oPos.w = ( ( oPos.w ) ? oPos.w : ( oRctBound.width + nOffSetW ) )  //  W
+        oPos.x = ( ( oPos.x ) ? oPos.x : ( ( oRctBound.left + (oRctBound.width / 2) ) - ( oPos.w / 2) + pxLft + nOffSetL ) )  //  X  //  TODO calc and align x center of bound elm
+        oPos.y = ( ( oPos.y ) ? oPos.y : ( oRctBound.top  + pxTop - nOffSetT ) )  //  Y
+        oPos.z = ( ( oPos.z ) ? oPos.z : neodigmOpt.N55_ZIND.PopTart )  //  Z
+        oPos.h = ( ( oPos.h ) ? (oPos.h + nOffSetH) : "auto" )  //  H
+        oPos.position = ( ( oPos.position ) ? oPos.position : "bottom" )  //  P
+        switch( oPos.position ){
+            case "top":
+                oPos.y = ( oPos.y - ( oRctBound.height + oRctPopCt.height ) + NOFFSET )
+            break
+            case "right":
+                oPos.x = ( oPos.x + oRctBound.width )
+            break
+            case "bottom":
+                oPos.y = ( oPos.y + oRctBound.height ) + NOFFSET
+            break
+            case "left":
+                oPos.x = ( oPos.x - oRctBound.width )
+            break
         }
-        pause ( nT ){
-          if( this.bIsInit ){
-            if( nT ) setTimeout( () =>{neodigmPopTart.play()}, nT )
-            this.bIsPause = true;  return this;
-          }
+        elPop.style.left = oPos.x + "px"; elPop.style.top = oPos.y + "px"; elPop.style.width = oPos.w + "px"
+        elPop.style.height = ( oPos.h == "auto" ) ? "auto" : oPos.h + "px";
+        //elPop.style.position = "absolute";
+        elPop.style.zIndex = oPos.z;
+        if( !elPop.dataset?.n55Theme ) elPop.dataset.n55Theme = this.sBoundTheme  //  Inherit Theme from Bound El, may be flash theme
+        if( neodigmOpt.N55_GTM_DL_POPTRT ) neodigmUtils.doDataLayer( neodigmOpt.N55_GTM_DL_POPTRT, elPop.id )
+        this.bIsOpen = true
+        if( this.fOnAfterOpen[ elPop.id ] ) this.fOnAfterOpen[ elPop.id ]()
+        if( this.fOnAfterOpen["def"] ) this.fOnAfterOpen["def"]()
+    }
+    return this;
+}
+close() {
+    for( let e in this.oPopTmpls ){
+        if( this.oPopTmpls[ e ]?.dataset?.n55PoptartOpen ){
+            let sId = this.oPopTmpls[ e ]?.id
+            let bOkClose = true  //  CBs must explicitly return false to prevent closing
+            if( neodigmOpt.N55_DEBUG_lOG ) console.log( "~Poptart Close | " + sId, this.fOnClose[ sId ] )
+            if( this.fOnClose[ sId ] ) bOkClose = !(this.fOnClose[ sId ]( sId ) === false)  //  The specific can cancel the generic
+            if( bOkClose && this.fOnClose["def"] ) bOkClose = !(this.fOnClose["def"]( sId ) === false)
+            if( bOkClose ){
+                delete this.oPopTmpls[ e ].dataset.n55PoptartOpen;
+                this.bIsOpen = false
+            }
         }
-        play (){
-          this.bIsPause = false;
-          return this;
+    }
+    return this;
+}
+pause ( nT ){
+    if( this.bIsInit ){
+    if( nT ) setTimeout( () =>{neodigmPopTart.play()}, nT )
+    this.bIsPause = true;  return this;
+    }
+}
+play (){
+    this.bIsPause = false;
+    return this;
+}
+shake( bSound = true) {  //  Shake All Open
+    if(this.bIsInit && this.bIsOpen) {
+        if( neodigmOpt.neodigmWired4Sound ) neodigmWired4Sound.doHaptic([8, 32, 48])
+        for( let e in this.oPopTmpls ){
+            if( this.oPopTmpls[ e ]?.dataset?.n55PoptartOpen ){
+                this.oPopTmpls[ e ].classList.add("ndsp__opened--shake1");
+                setTimeout(function(){
+                    neodigmPopTart.oPopTmpls[ e ].classList.remove("ndsp__opened--shake1");
+                }, 460)
+            }
         }
-        shake( bSound = true) {  //  Shake All Open
-          if(this.bIsInit && this.bIsOpen) {
-              if( neodigmOpt.neodigmWired4Sound ) neodigmWired4Sound.doHaptic([8, 32, 48])
-              for( let e in this.oPopTmpls ){
-                  if( this.oPopTmpls[ e ]?.dataset?.n55PoptartOpen ){
-                      this.oPopTmpls[ e ].classList.add("ndsp__opened--shake1");
-                      setTimeout(function(){
-                          neodigmPopTart.oPopTmpls[ e ].classList.remove("ndsp__opened--shake1");
-                      }, 460)
-                  }
-              }
-              if( bSound && neodigmOpt.neodigmWired4Sound && neodigmOpt.EVENT_SOUNDS ) neodigmWired4Sound.sound( 13, "QUITE" )
-              if( neodigmOpt.neodigmWired4Sound ) neodigmWired4Sound.doHaptic([48, 32, 8])
-          }
-          return this
-      }
-        isOpen(){ return this.bIsOpen }
-        setOnBeforeOpen( _f, id="def"){ this.fOnBeforeOpen[ id ] = _f }
-        setOnAfterOpen( _f, id="def"){ this.fOnAfterOpen[ id ] = _f }
-        setOnClose( _f, id="def"){ this.fOnClose[ id ] = _f }
-      }
+        if( bSound && neodigmOpt.neodigmWired4Sound && neodigmOpt.EVENT_SOUNDS ) neodigmWired4Sound.sound( 13, "QUITE" )
+        if( neodigmOpt.neodigmWired4Sound ) neodigmWired4Sound.doHaptic([48, 32, 8])
+    }
+    return this
+}
+isOpen(){ return this.bIsOpen }
+setOnBeforeOpen( _f, id="def"){ this.fOnBeforeOpen[ id ] = _f }
+setOnAfterOpen( _f, id="def"){ this.fOnAfterOpen[ id ] = _f }
+setOnClose( _f, id="def"){ this.fOnClose[ id ] = _f }
+}
 
 {{< /highlight >}}
 <span class="h-ds__none"
