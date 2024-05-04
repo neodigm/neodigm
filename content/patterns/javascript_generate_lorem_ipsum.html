@@ -1,0 +1,41 @@
+---
+title: "Generate Lorem Ipsum Text"
+date: 2023-10-07T18:26:54-06:00
+draft: false
+summary: "JavaScript Generate Lorem Ipsum from original Latin De finibus."
+marquee: ""
+theme: "brand"
+slug: javascript
+categories:
+tags:
+---
+<output>
+{{< highlight JavaScript >}}
+/*
+,--.                                   ,--.                                 
+|  | ,---. ,--.--. ,---. ,--,--,--.    `--' ,---.  ,---. ,--.,--.,--,--,--. 
+|  || .-. ||  .--'| .-. :|        |    ,--.| .-. |(  .-' |  ||  ||        | 
+|  |' '-' '|  |   \   --.|  |  |  |    |  || '-' '.-'  `)'  ''  '|  |  |  | 
+`--' `---' `--'    `----'`--`--`--'    `--'|  |-' `----'  `----' `--`--`--' 
+                                           `--'  🌶️ 🌴 🍰 🔥 🗝️ 🎲   */
+
+const genLoremIpsum = ( Sentences=1 )=>{  //  Generate Lorem Ipsum | Orig Latin De finibus
+    if( Sentences == -1 ) Sentences = Math.floor(Math.random() * 5) + 1  //  If -1 gen rnd num sentences 1-5
+    const aLI = "lorem ipsum a ab accusamus accusantium ad adipiscing alias aliquam aliquid amet animi aperiam architecto asperiores aspernatur assumenda at atque aut autem beatae blanditiis commodi consectetur consequatur consequuntur corporis corrupti culpa cum cumque cupiditate debitis delectus deleniti deserunt dicta dignissimos distinctio do dolor dolore dolorem doloremque dolores doloribus dolorem dquis ducimus ea eaque earum eius eligendi enim eos error ert esse est et eum eveniet ex excepturi exercitationem expedita explicabo facere facilis fuga fugiat fugit harum hic id illo illum impedit in incididunt inventore ipsa ipsam irure iste itaque iusto labore laboriosam laborum laudantium libero magnam magni maiores maxime minima minus modi molestiae molestias mollitia nam natus necessitatibus nemo neque nesciunt nihil nisi nobis non nostrumd nulla numquam obcaecati odio odit officia officiis omnis optio pariatur perferendis perspiciatis placeat porro possimus praesentium provident quae quaerat quam quas quasi qui quia quibusdam quidem quis quisquam quo quod quos ratione recusandae reiciendis rem repellat repellendaus reprehenderit repudiandae rerudum rerum saepe sapiente sed sequi similique sint sit soluta sunt suscipit tempora tempore temporibus tenetur totam ullam unde ut vel velit veniam veritatis vero vitae voluptas voluptate voluptatem voluptates voluptatibus voluptatum".split(" ")
+    let sOut = ""
+    for( let nS = 0; nS <= Sentences; nS++){
+      let nWc = Math.floor(Math.random() * 6) + 3  //  Word count per sentence rnd 3-8
+      for( let nW = 0; nW <= nWc; nW++){
+        let sWrd = aLI[ Math.floor(Math.random() * aLI.length) ]
+        if( !nW ) sWrd = sWrd[0].toUpperCase() + sWrd.slice(1)  //  Cap first
+        if( sOut.indexOf( sWrd ) == -1 ) sOut += " " + sWrd  //  Dedupe
+      }
+      sOut += "."
+    }
+    return sOut.trim();
+  }
+  // USAGE: console.log( genLoremIpsum( -1 ) )
+{{< /highlight >}}
+    <span class="h-ds__none"
+    data-at="Generate Lorem|Random Sentences|Mock Placeholder Text|Original Latin"></span>
+</output>

@@ -1,0 +1,29 @@
+---
+title: "Simple valid JSON test"
+date: 2023-12-07T20:26:54-06:00
+draft: false
+summary: "A simple JavaScript function that can determine if a given JSON is valid."
+marquee: ""
+theme: "brand"
+slug: javascript
+categories:
+tags:
+---
+<output>
+{{< highlight JavaScript >}}
+/* 🏖️ 🌶️ 🔥 🧲 
+  ,--.                       
+  `--' ,---.  ,---. ,--,--,  
+  ,--.(  .-' | .-. ||      \ 
+  |  |.-'  `)' '-' '|  ||  | 
+.-'  /`----'  `---' `--''--' 
+'---'                        */
+isJSON( sIn ){
+    let isVal = false
+    try { isVal = typeof (JSON.parse( sIn )) } catch ( er ) { }
+    return ( isVal == "object" )
+}
+{{< /highlight >}}
+    <span class="h-ds__none"
+    data-at="Verify JSON|Server or Client|Simple Expression"></span>
+</output>
