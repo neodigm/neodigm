@@ -1,7 +1,7 @@
 # hugo
 public/
-# Logs
 hugo
+# Logs
 logs
 *.log
 npm-debug.log*
